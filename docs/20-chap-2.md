@@ -16,13 +16,35 @@
 ## 2.2. Entrevistas
 ### 2.2.1. Diseño de entrevistas
 
-#### Segmento objetivo 1: [Nombre del segmento]
+Para el diseño de entrevistas se plantearon preguntas semiestructuradas orientadas a comprender cómo los potenciales usuarios relacionados al proceso de tratamiento psicológico de los usuarios, qué problemas enfrentan a la hora de registrar sus inseguridades y qué expectativas tendrían frente a una solución como SafeDiary.
 
+#### Segmento objetivo 1: Pacientes de psicologos de entre 18 y 30 años de edad 
 
+#####
 
-#### Segmento objetivo 2: [Nombre del segmento]
+1. ¿Cuanto tiempo llevas tomando sesiones psicologicas y porque las tomas?
+2. ¿De qué manera sueles registrar tus emociones? Tanto refiriendome a emociones del día a día como aquellas después de terminar tus sesiones psicológicas
+3. ¿Qué tan común son las ocasiones en las que has querido recurrir a tu psicólogo pero, por algún motivo externo, no has podido? Hablanos de estas ocasiones
+4. ¿Qué recursos alternativos a la terapia utilizas para calmar y/o lidiar con tus emociones?
+5. ¿Cuál es el efecto que tiene en ti no poder desahogar tus emociones con alguien en el momento que las sientes?
+6. Para usted ¿Cuál es elemento más importante de las sesiones psicológicas que toma?
+7. ¿Qué dificultades cree que hay en la actualidad en la relación entre paciente y psicólogo?
+8. ¿Tiene preocupaciones respecto al manejo de datos personales por parte de los sistemas de inteligencia artificial generativa actuales? Si es así, hableme de ellos
+9. ¿Qué opina de un asistente de inteligencia artificial como método alternativo para recibir consejos de salud emocional?
+10. Si una aplicación con herramientas de este tipo pudiera detectar y/o registrar tus problemas, ¿qué tipo de respuesta o ayuda específica esperarías recibir de ella?
 
+#### Segmento objetivo 2: Psicologos profesionales con un minimo 5 años de experiencia
 
+1. ¿?
+2. ¿?
+3. ¿?
+4. ¿?
+5. ¿?
+6. ¿?
+7. ¿?
+8. ¿?
+9. ¿?
+10. ¿?
 
 ### 2.2.2. Registro de entrevistas
 
