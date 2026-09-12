@@ -36,7 +36,7 @@
 | [Insertar foto] | U202412316 | Diaz Martinez, Alexther Kamil | [Carrera] | [Resumen de conocimientos, experiencia y habilidades que aporta al equipo] |
 | [Insertar foto] | U202312557 | Torres Lavandera, Andres Rodrigo | [Carrera] | [Resumen de conocimientos, experiencia y habilidades que aporta al equipo] |
 | [Insertar foto] | U202416706 | Vargas Alarcon, Santiago Enrique | [Carrera] | [Resumen de conocimientos, experiencia y habilidades que aporta al equipo] |
-| [Insertar foto] | U202318609 | Wang Chen, Juan Sung Jau | [Carrera] | [Resumen de conocimientos, experiencia y habilidades que aporta al equipo] |
+| ![ Juan ](../assets/images/team-members/juan.png) | U202318609 | Wang Chen, Juan Sung Jau | Ing. de Software | Soy Juan Wang, estudiante de Ingeniería de Software en la UPC. Me considero alguien amigable y sociable, puedo adaptarme sin problemas a cualquier entorno, tengo experiencia en organización de equipos y conocimientos de C++, python, html, css, javascript y recientemente he adquirido experiencia creando aplicaciones web siguiendo DDD con frameworks frontend como Vue.js y Angular y backend con lenguajes como Java y C#. |
 
 ## 1.2. Solution Profile
 
