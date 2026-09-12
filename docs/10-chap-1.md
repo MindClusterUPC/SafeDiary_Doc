@@ -1,7 +1,7 @@
 # Capítulo I: Presentación 
 ## 1.1. Startup Profile
 ### 1.1.1. Descripción de la Startup
-**Nombre de la startup:** [Nombre de la startup]
+**Nombre de la startup:** MindCluster
 
 **Descripción:**
 
@@ -32,7 +32,7 @@
 
 | Foto | Código | Apellidos y nombres | Carrera | Conocimientos técnicos y habilidades |
 |------|--------|---------------------|---------|--------------------------------------|
-| [Insertar foto] | U202422890 | Cuadros Villanueva, Marcelo Fabio | [Carrera] | [Resumen de conocimientos, experiencia y habilidades que aporta al equipo] |
+| ![ Marcelo ](../assets/images/team-members/Marcelo.png) | U202422890 | Cuadros Villanueva, Marcelo Fabio | Ing. Software | Soy Marcelo Cuadros, estudiante de Ingeniería de Software en la UPC actualmente cursando mi cuarto ciclo academico. Me considero una persona proactiva, sociable y con gran capacidad de trabajo en equipo; con conocimientos en c++, python, java, html, css y javascript. |
 | [Insertar foto] | U202412316 | Diaz Martinez, Alexther Kamil | [Carrera] | [Resumen de conocimientos, experiencia y habilidades que aporta al equipo] |
 | [Insertar foto] | U202312557 | Torres Lavandera, Andres Rodrigo | [Carrera] | [Resumen de conocimientos, experiencia y habilidades que aporta al equipo] |
 | [Insertar foto] | U202416706 | Vargas Alarcon, Santiago Enrique | [Carrera] | [Resumen de conocimientos, experiencia y habilidades que aporta al equipo] |

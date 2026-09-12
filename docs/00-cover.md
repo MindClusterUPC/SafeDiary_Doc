@@ -77,7 +77,9 @@ Proyecto
 
 | Versión | Fecha | Autor(es) | Descripción de la modificación |
 |:-------:|:-----:|-----------|--------------------------------|
-| [V0.1] | [DD/MM/AAAA] | [Apellidos y nombres] | [Descripción de los cambios realizados] |
+| [X.Y.Z] | [DD/MM/AAAA] | [Apellidos y nombres] | [Descripción de los cambios realizados] |
+| 0.0.1 | 11/09/2026 | Kamil Diaz | Creación del repositorio y estructura inicial, adición de contenido en el capitulo 1 |
+| 0.0.2 | 11/02/2026 | Marcelo Cuadros | Añadir nombre de startup, imagen y contenido en la presentación de integrante |
 
 # Project Report Collaboration Insights
 
