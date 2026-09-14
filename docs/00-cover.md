@@ -81,6 +81,7 @@ Proyecto
 | 0.0.1 | 11/09/2026 | Kamil Diaz | Creación del repositorio y estructura inicial, adición de contenido en el capitulo 1 |
 | 0.0.2 | 11/02/2026 | Marcelo Cuadros | Añadir nombre de startup, imagen y contenido en la presentación de integrante |
 | 0.0.3 | 13/09/2026 | Juan Wang | Redacción de la sección 1.1.1. Descripción de la Startup: descripción, misión, visión, propuesta de valor y características principales |
+| 0.0.4 | 13/09/2026 | Juan Wang | Redacción completa del Lean UX Process: sección 1.2.2 (introducción), 1.2.2.1 (Problem Statement con template brand new initiative), 1.2.2.2 (Assumptions: Business, Business Outcome, User, User Outcome and Benefit, Feature) y 1.2.2.3 (Hypothesis Statements) |
 
 # Project Report Collaboration Insights
 

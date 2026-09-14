@@ -69,17 +69,103 @@ SafeDiary elimina la brecha de información entre las personas que necesitan apo
 
 ### 1.2.2. Lean UX Process
 
-[Explicar cómo se aplicó Lean UX para transformar el problema identificado en assumptions, hipótesis comprobables y una propuesta inicial de producto.]
+Para SafeDiary se aplicó el proceso de Lean UX con el objetivo de transformar la problemática identificada en assumptions explícitos, hypothesis statements comprobables y una propuesta inicial de producto. El proceso se articuló a través del Lean UX Canvas, recorriendo secuencialmente sus boxes para definir el problema de negocio, declarar los resultados esperados, identificar a los usuarios, establecer los beneficios que estos obtendrían, idear las soluciones y formular las hipótesis. A continuación se presentan los artefactos resultantes.
 
 #### 1.2.2.1. Lean UX Problem Statements
 
+Se elaboró un único Problem Statement para todo el proyecto, considerando ambos segmentos objetivo. Se utilizó la plantilla correspondiente a **iniciativas nuevas** (brand new initiative):
 
+El estado actual del **bienestar emocional y la salud mental digital** se ha enfocado principalmente en **dos extremos: por un lado, aplicaciones de registro emocional (diarios de ánimo, trackers de hábitos) orientadas a usuarios que buscan autoconocimiento sin conexión con un profesional; y por otro, plataformas de terapia online que conectan directamente con psicólogos pero inician cada relación terapéutica sin contexto previo sobre la situación emocional del paciente. Ambos enfoques atienden a personas que experimentan malestar emocional, estrés, ansiedad o dificultades para gestionar sus emociones, pero lo hacen de manera aislada.**
+
+Lo que los productos y servicios existentes no logran abordar es **la transición gradual y contextualizada entre el registro emocional personal y el acompañamiento profesional. Las personas que registran sus emociones en diarios digitales no cuentan con un puente que las conecte con expertos cuando estén listas para dar ese paso, y los profesionales de salud mental que reciben nuevos pacientes carecen de un historial emocional previo que les permita comprender la situación del paciente desde la primera sesión.**
+
+ Nuestro producto abordará esta brecha al **ofrecer un espacio digital seguro donde los usuarios puedan registrar sus emociones de forma continua — ya sea mediante notas escritas o conversaciones con un asistente de IA — y, cuando se sientan preparados, conectar con profesionales de salud mental que reciban, con el consentimiento del usuario, el contexto emocional registrado previamente.**
+
+ Nuestro enfoque inicial será **personas que desean un espacio seguro para desahogar y gestionar sus emociones, y profesionales de salud mental que buscan herramientas para obtener contexto previo de sus nuevos pacientes.**
+
+ Sabremos que tenemos éxito cuando veamos **que los usuarios registran sus emociones de forma recurrente (al menos 3 entradas por semana), que un porcentaje significativo de usuarios activos decide contactar a un profesional a través de la plataforma, y que los profesionales reportan una reducción en el tiempo necesario para comprender la situación emocional del paciente en las primeras sesiones.**
 
 #### 1.2.2.2. Lean UX Assumptions
 
+Los assumptions representan las creencias del equipo sobre el negocio, los usuarios y la solución propuesta. Se declaran de forma explícita para poder convertirlos posteriormente en hypothesis statements comprobables. Se presentan cinco tipos de assumptions:
 
+**Business Assumptions:**
+
+1. Creemos que existe una demanda creciente de herramientas digitales para el bienestar emocional, impulsada por la mayor conciencia sobre la importancia de la salud mental en la sociedad actual.
+2. Creemos que los usuarios están dispuestos a utilizar una aplicación móvil como espacio seguro para registrar sus emociones, siempre que se garantice la confidencialidad de su información.
+3. Creemos que la integración entre el registro emocional personal y la conexión con profesionales de salud mental representa un diferenciador competitivo frente a las soluciones existentes en el mercado.
+4. Creemos que los profesionales de salud mental valorarán una herramienta que les brinde contexto emocional previo de sus pacientes, ya que esto optimiza el proceso terapéutico.
+5. Creemos que un modelo de negocio sostenible puede construirse a partir de la conexión entre usuarios y profesionales de salud mental dentro de la plataforma.
+
+**Business Outcome Assumptions:**
+
+1. Creemos que lograremos un incremento en la retención de usuarios activos mensuales si estos encuentran valor en el registro emocional recurrente.
+2. Creemos que aumentará la frecuencia de interacción diaria con la aplicación si los usuarios perciben acompañamiento emocional inmediato.
+3. Creemos que se incrementará la tasa de conversión de usuarios que contactan a un profesional de salud mental por primera vez a través de la plataforma.
+4. Creemos que los profesionales experimentarán una reducción en el tiempo necesario para comprender la situación emocional de nuevos pacientes.
+5. Creemos que la tasa de registro y adopción inicial de la aplicación será mayor si los usuarios perciben un control total sobre la privacidad de sus datos.
+
+**User Assumptions:**
+
+1. Creemos que nuestro usuario principal es una persona que experimenta malestar emocional cotidiano (estrés, ansiedad, tristeza) y busca un espacio seguro para expresarse, sin necesariamente estar en tratamiento psicológico.
+2. Creemos que nuestro segundo usuario clave es un profesional de salud mental (psicólogo o psiquiatra) que busca herramientas digitales para complementar y mejorar la eficacia de su práctica clínica.
+3. Creemos que los usuarios del segmento principal suelen desahogarse con herramientas no especializadas (notas del celular, redes sociales, chats de IA genéricos como ChatGPT) por falta de una alternativa diseñada específicamente para este propósito.
+4. Creemos que los usuarios enfrentan barreras emocionales, económicas o de tiempo para acceder a un profesional de salud mental, y que una transición gradual dentro de un entorno familiar reduce estas barreras.
+
+**User Outcome and Benefit Assumptions:**
+
+1. Creemos que los usuarios desean poder expresar libremente sus pensamientos y emociones en un entorno privado y sin juicios.
+2. Creemos que los usuarios valorarán una sensación de acompañamiento emocional inmediato y accesible en cualquier momento del día.
+3. Creemos que los usuarios se beneficiarán de la confianza que genera acceder a un directorio de profesionales verificados dentro de un entorno que ya conocen y en el que confían.
+4. Creemos que los profesionales de salud mental se beneficiarán de contar con un contexto emocional previo y estructurado del paciente desde la primera sesión.
+5. Creemos que los usuarios necesitan la tranquilidad de saber que tienen control total sobre sus datos y que ninguna información se comparte sin su autorización explícita.
+
+**Feature Assumptions:**
+
+1. Creemos que una funcionalidad de diario personal digital que permita registrar entradas emocionales en formato de notas con texto libre satisfará la necesidad de expresión del usuario.
+2. Creemos que un chat conversacional con un asistente de inteligencia artificial que guíe al usuario a explorar y comprender sus emociones proporcionará acompañamiento emocional inmediato.
+3. Creemos que una funcionalidad de conexión con expertos que presente un directorio de psicólogos y psiquiatras verificados facilitará la transición hacia el acompañamiento profesional.
+4. Creemos que una funcionalidad de contexto compartido que permita al usuario autorizar el acceso del profesional a su historial emocional y conversaciones registradas optimizará las primeras sesiones terapéuticas.
+5. Creemos que un sistema de gestión de privacidad que otorgue al usuario control granular sobre qué información comparte, con quién y en qué momento incrementará la confianza y adopción de la aplicación.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
+
+Los hypothesis statements se elaboran a partir de los feature assumptions identificados, conectando cada funcionalidad propuesta con un resultado de negocio esperado, un segmento de usuarios y un beneficio concreto para el usuario. Se presenta un hypothesis statement por cada feature assumption:
+
+**Hypothesis Statement 1 – Diario personal digital**
+
+Creemos que lograremos un incremento en la retención de usuarios activos mensuales
+si las personas que buscan un espacio para gestionar sus emociones
+obtienen la capacidad de expresar libremente sus pensamientos y emociones en un entorno privado y sin juicios
+con una funcionalidad de diario personal digital que permita registrar entradas emocionales en formato de notas con texto libre.
+
+**Hypothesis Statement 2 – Chat con asistente de IA**
+
+Creemos que lograremos una mayor frecuencia de interacción diaria con la aplicación
+si las personas que necesitan desahogarse emocionalmente pero no cuentan con alguien disponible en el momento
+obtienen una sensación de acompañamiento emocional inmediato y accesible en cualquier momento del día
+con un chat conversacional con un asistente de inteligencia artificial que guíe al usuario a explorar y comprender sus emociones.
+
+**Hypothesis Statement 3 – Conexión con expertos en salud mental**
+
+Creemos que lograremos un incremento en la conversión de usuarios que contactan a un profesional de salud mental por primera vez
+si las personas que reconocen la necesidad de apoyo profesional pero enfrentan barreras para dar el primer paso
+obtienen la confianza de acceder a un directorio de profesionales verificados dentro de un entorno familiar y seguro
+con una funcionalidad de conexión con expertos que presente un directorio de psicólogos y psiquiatras verificados, accesible cuando el usuario se sienta preparado.
+
+**Hypothesis Statement 4 – Contexto compartido con consentimiento**
+
+Creemos que lograremos una reducción en el tiempo necesario para que el profesional comprenda la situación emocional del paciente
+si los profesionales de salud mental que atienden nuevos pacientes provenientes de la plataforma
+obtienen un contexto emocional previo y estructurado del paciente desde la primera sesión, sin depender exclusivamente del relato inicial
+con una funcionalidad de contexto compartido que permita al usuario autorizar el acceso del profesional a su historial emocional y conversaciones registradas en SafeDiary.
+
+**Hypothesis Statement 5 – Privacidad y control del usuario**
+
+Creemos que lograremos un incremento en la tasa de registro y adopción inicial de la aplicación
+si las personas interesadas en registrar sus emociones digitalmente pero preocupadas por la privacidad de su información sensible
+obtienen la tranquilidad de saber que tienen control total sobre sus datos y que ninguna información se comparte sin su autorización explícita
+con un sistema de gestión de privacidad que otorgue al usuario control granular sobre qué información comparte, con quién y en qué momento.
 
 
 
