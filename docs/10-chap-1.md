@@ -45,26 +45,49 @@ SafeDiary elimina la brecha de información entre las personas que necesitan apo
 
 **Antecedentes:**
 
-[Describir el contexto actual del dominio y los antecedentes relevantes, respaldados con fuentes confiables.]
+La salud mental forma parte del bienestar general y permite que las personas afronten el estrés de la vida, desarrollen sus capacidades y se integren en su entorno. Sin embargo, la necesidad de atención continúa siendo mayor que la capacidad de respuesta de los servicios disponibles. La Organización Mundial de la Salud (OMS, 2025) estima que casi una de cada siete personas en el mundo vivía con un trastorno mental en 2021 y señala que la mayoría de las personas no tiene acceso a una atención eficaz. Además, la estigmatización, la discriminación, el costo, la falta de información y la disponibilidad limitada de profesionales pueden dificultar que una persona busque ayuda.
+
+En este contexto, las herramientas digitales pueden servir como un primer punto de contacto de bajo umbral para el autoconocimiento y la orientación hacia servicios de apoyo. No obstante, una aplicación de bienestar emocional debe diferenciar claramente el acompañamiento automatizado de la atención clínica: el análisis de inteligencia artificial puede ayudar a organizar y reflejar lo que el usuario expresa, pero no debe presentarse como diagnóstico ni sustituir a un profesional.
+
+Actualmente, las alternativas suelen concentrarse en funciones separadas: diarios digitales para registrar el estado de ánimo, asistentes conversacionales que ofrecen acompañamiento general, comunidades virtuales y plataformas de terapia que conectan directamente con especialistas. Esta fragmentación deja una oportunidad para integrar, dentro de una experiencia gradual y privada, el registro emocional, el apoyo comunitario y el acceso voluntario a psicólogos verificados.
 
 **Problemática:**
 
-[Explicar el problema central, sus causas, consecuencias y las personas u organizaciones afectadas.]
+Las personas que experimentan estrés, ansiedad, tristeza u otras formas de malestar emocional no siempre cuentan con un espacio seguro y estructurado para expresar lo que sienten, reconocer patrones en el tiempo o encontrar ayuda profesional cuando están preparadas para solicitarla. Muchas pueden guardar sus pensamientos en aplicaciones genéricas, notas personales o conversaciones aisladas, sin herramientas especializadas para organizar ese contexto ni una ruta clara hacia una atención confiable.
 
-**Objetivos preliminares de la solución:**
+El problema se origina por la combinación de barreras emocionales y prácticas: miedo al juicio, estigma, desconocimiento sobre dónde buscar ayuda, falta de tiempo o recursos, dificultad para identificar al profesional adecuado y temor a perder el control sobre información sensible. Por otro lado, los psicólogos que reciben nuevos pacientes pueden iniciar la atención con información limitada sobre el contexto emocional previo, debido a que el usuario no siempre recuerda o puede explicar con claridad la evolución de sus experiencias.
 
-- [Objetivo 1]
-- [Objetivo 2]
-- [Objetivo 3]
-
-**Restricciones y alcance:**
-
-- [Restricción o límite 1]
-- [Restricción o límite 2]
-- [Restricción o límite 3]
+Como consecuencia, algunas personas postergan la búsqueda de apoyo, abandonan el registro de sus emociones o recurren a espacios digitales que no fueron diseñados para proteger información de salud mental. También se pierde la oportunidad de que el primer contacto con un profesional sea más informado. SafeDiary aborda esta brecha proponiendo una transición gradual: primero un diario privado, luego insights y apoyo anónimo, y finalmente una conexión con profesionales verificados, siempre con autorización explícita del usuario.
 
 **Análisis 5W2H:**
 
+1. **¿Quiénes están involucrados o afectados? (Who?)**
+
+   Los principales usuarios son personas que experimentan malestar emocional cotidiano y buscan expresarse sin juicios, aunque no necesariamente se encuentren en terapia. El segundo segmento está conformado por psicólogos y otros profesionales autorizados que requieren herramientas digitales para gestionar su disponibilidad y recibir contexto compartido por sus pacientes. También intervienen moderadores de la comunidad y administradores responsables de la verificación, seguridad, pagos y auditoría de la plataforma.
+
+2. **¿Qué problema se presenta? (What?)**
+
+   Existe una brecha entre el registro personal de emociones, el apoyo social seguro y el acceso a atención psicológica. Las soluciones suelen estar aisladas, mientras que los usuarios carecen de una ruta gradual y controlada para pasar de la reflexión privada a la ayuda profesional.
+
+3. **¿Cuándo se presenta el problema? (When?)**
+
+   Se presenta cuando una persona necesita desahogarse, intenta comprender cambios en su estado emocional, busca apoyo fuera de su entorno cercano o decide contactar por primera vez a un profesional. También aparece durante el inicio de una relación terapéutica, cuando el profesional aún no cuenta con contexto previo autorizado.
+
+4. **¿Dónde ocurre? (Where?)**
+
+   Ocurre en la vida diaria y en distintos canales digitales: notas del celular, redes sociales, chats genéricos, comunidades en línea y plataformas de terapia. SafeDiary concentra estos recorridos en una aplicación móvil con espacios diferenciados para diario, insights, soporte profesional y comunidad.
+
+5. **¿Por qué ocurre? (Why?)**
+
+   Ocurre por el estigma asociado a la salud mental, el temor a ser juzgado, la falta de información, las limitaciones económicas o de tiempo, la dificultad para identificar profesionales confiables y la preocupación por la privacidad de los datos emocionales. La OMS (2025) también identifica la estigmatización y las brechas de acceso como obstáculos relevantes para recibir atención eficaz.
+
+6. **¿Cómo se manifiesta el problema? (How?)**
+
+   Se manifiesta mediante el abandono del registro emocional, la búsqueda de ayuda en espacios no especializados, la dificultad para reconocer patrones en el tiempo, la participación insegura en comunidades anónimas y el inicio de sesiones psicológicas sin suficiente contexto. La información puede quedar dispersa, sin controles claros de acceso, consentimiento o eliminación.
+
+7. **¿Cuál es la magnitud del problema? (How much?)**
+
+   La OMS (2025) reporta que casi una de cada siete personas en el mundo tenía un trastorno mental en 2021 y que la mayoría no accedía a una atención eficaz. Estas cifras muestran que la necesidad es amplia; sin embargo, para validar el alcance específico de SafeDiary será necesario realizar entrevistas, pruebas de usabilidad y mediciones del MVP con los segmentos definidos. Las métricas iniciales pueden incluir frecuencia de entradas, finalización del primer registro, uso de salas, solicitudes de contacto profesional y porcentaje de usuarios que comparten información de forma explícitamente autorizada.
 
 
 ### 1.2.2. Lean UX Process
