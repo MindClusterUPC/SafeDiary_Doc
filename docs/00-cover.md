@@ -80,6 +80,7 @@ Proyecto
 | [X.Y.Z] | [DD/MM/AAAA] | [Apellidos y nombres] | [Descripción de los cambios realizados] |
 | 0.0.1 | 11/09/2026 | Kamil Diaz | Creación del repositorio y estructura inicial, adición de contenido en el capitulo 1 |
 | 0.0.2 | 11/02/2026 | Marcelo Cuadros | Añadir nombre de startup, imagen y contenido en la presentación de integrante |
+| 0.0.3 | 13/09/2026 | Juan Wang | Redacción de la sección 1.1.1. Descripción de la Startup: descripción, misión, visión, propuesta de valor y características principales |
 
 # Project Report Collaboration Insights
 

@@ -5,26 +5,27 @@
 
 **Descripción:**
 
-[Describir qué tipo de organización es, qué problema busca abordar y qué productos o servicios digitales propone desarrollar.]
+MindCluster es una startup de tecnología en salud mental conformada por estudiantes de Ingeniería de Software de la Universidad Peruana de Ciencias Aplicadas (UPC). La organización nace con el propósito de abordar una problemática latente en la sociedad actual: la dificultad que enfrentan las personas para gestionar sus emociones en el día a día y la barrera que existe entre reconocer la necesidad de apoyo profesional y dar el paso de contactar a un experto en salud mental. Para ello, MindCluster propone el desarrollo de SafeDiary, una aplicación móvil que funciona como un diario personal digital seguro, donde los usuarios pueden registrar libremente sus pensamientos y emociones, ya sea mediante notas escritas o a través de conversaciones con un asistente de inteligencia artificial. La información registrada, con el consentimiento explícito del usuario, puede compartirse con profesionales de salud mental como psicólogos o psiquiatras al momento en que el usuario decida buscar ayuda, brindando al experto contexto valioso sobre la situación emocional del paciente desde el primer contacto.
 
 **Misión:**
 
-[Redactar la misión de la startup.]
+Empoderar a las personas para que puedan expresar, comprender y gestionar sus emociones a través de herramientas digitales accesibles y seguras, facilitando la transición hacia el acompañamiento profesional en salud mental cuando el usuario lo considere necesario.
 
 **Visión:**
 
-[Redactar la visión de la startup.]
+Convertirnos en la plataforma de referencia para el bienestar emocional digital, donde cualquier persona pueda encontrar un espacio seguro para procesar sus emociones y conectar de manera informada con profesionales de salud mental que comprendan su contexto desde el primer momento.
 
 **Propuesta de valor:**
 
-[Explicar el valor diferencial que la startup ofrece a sus segmentos objetivo.]
+SafeDiary elimina la brecha de información entre las personas que necesitan apoyo emocional y los profesionales de salud mental. A diferencia de los diarios emocionales tradicionales, que se limitan al registro personal, y de las plataformas de terapia online, que inician desde cero sin contexto previo, SafeDiary integra ambos mundos: permite al usuario registrar sus emociones de manera continua y, cuando esté listo para buscar ayuda profesional, transfiere ese historial emocional al experto con su consentimiento. Esto garantiza sesiones más productivas desde el inicio, reduce el tiempo de diagnóstico y ofrece al usuario el control total sobre su información personal.
 
 **Características principales:**
 
-- [Característica principal 1]
-- [Característica principal 2]
-- [Característica principal 3]
-- [Característica principal 4]
+- **Diario personal digital:** Registro libre de pensamientos y emociones en formato de notas, brindando un espacio privado e íntimo donde el usuario puede desahogarse sin juicios ni restricciones.
+- **Chat con asistente de IA:** Conversación interactiva con un asistente de inteligencia artificial que permite al usuario hablar de sus problemas y emociones de manera natural, recibiendo orientación y acompañamiento emocional en cualquier momento.
+- **Conexión con expertos en salud mental:** Directorio de profesionales verificados (psicólogos, psiquiatras y otros especialistas) a quienes el usuario puede contactar cuando se sienta preparado para dar el paso hacia el acompañamiento profesional.
+- **Contexto compartido con consentimiento:** Cuando el usuario decide contactar a un experto, este puede acceder al historial emocional y las conversaciones previas del usuario, siempre bajo el consentimiento explícito del mismo, permitiendo un abordaje terapéutico más informado y eficiente.
+- **Privacidad y control del usuario:** Toda la información almacenada en SafeDiary es confidencial. El usuario mantiene el control total sobre sus datos y decide qué información comparte, con quién y en qué momento.
 
 ### 1.1.2. Perfiles de integrantes del equipo
 
