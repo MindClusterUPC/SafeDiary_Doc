@@ -22,9 +22,9 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 
 #####
 
-1. ¿Cuanto tiempo llevas tomando sesiones psicologicas y porque las tomas?
-2. ¿De qué manera sueles registrar tus emociones? Tanto refiriendome a emociones del día a día como aquellas después de terminar tus sesiones psicológicas
-3. ¿Qué tan común son las ocasiones en las que has querido recurrir a tu psicólogo pero, por algún motivo externo, no has podido? Hablanos de estas ocasiones
+1. ¿Cuánto tiempo llevas tomando sesiones psicológicas y porque las tomas?
+2. ¿De qué manera sueles registrar tus emociones? Tanto refiriéndome a emociones del día a día como aquellas después de terminar tus sesiones psicológicas
+3. ¿Qué tan común son las ocasiones en las que has querido recurrir a tu psicólogo, pero, por algún motivo externo, no has podido? Háblanos de estas ocasiones
 4. ¿Qué recursos alternativos a la terapia utilizas para calmar y/o lidiar con tus emociones?
 5. ¿Cuál es el efecto que tiene en ti no poder desahogar tus emociones con alguien en el momento que las sientes?
 6. Para usted ¿Cuál es elemento más importante de las sesiones psicológicas que toma?
