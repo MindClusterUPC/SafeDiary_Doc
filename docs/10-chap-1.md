@@ -213,8 +213,6 @@ Los segmentos objetivo se definieron a partir del problema central de SafeDiary:
 
 ### Segmento objetivo 1: Pacientes de psicólogos de entre 18 y 30 años
 
-
-
 Este segmento está conformado por jóvenes adultos que reciben atención psicológica y necesitan expresar, ordenar y dar seguimiento a sus emociones fuera del horario de consulta. Son usuarios directos del diario emocional, el registro por voz o texto, la reflexión asistida y el compartir información con un profesional mediante consentimiento explícito.
 
 *Características demográficas y de contexto*
@@ -237,7 +235,7 @@ Este segmento está conformado por jóvenes adultos que reciben atención psicol
 
 *Justificación del segmento*
 
-La entrevista al paciente muestra que ya intenta registrar sus emociones, pero utiliza herramientas dispersas y pierde detalles entre sesiones. También expresa preocupación por la exposición de audios íntimos y solicita un espacio seguro, un reporte cifrado y control sobre el envío al psicólogo. Por ello, este segmento permite validar el diario emocional, el acompañamiento inmediato, la privacidad y el contexto compartido de SafeDiary.
+La entrevista al paciente muestra que ya intenta registrar sus emociones, pero utiliza herramientas dispersas y pierde detalles entre sesiones. También expresa preocupación por la exposición de audios íntimos y solicita un espacio seguro, un reporte cifrado y control sobre el envío al psicólogo. Esta necesidad individual se alinea estrechamente con la realidad epidemiológica de la juventud peruana: según reporta la Secretaría Nacional de la Juventud (Senaju, 2023)[^1] a partir de los registros de la ENDES, el 32.3% de los jóvenes en el Perú ha padecido algún problema de salud mental o emocional en los últimos doce meses, existiendo una marcada brecha asistencial donde alrededor del 80% no busca ni recibe atención profesional oportuna debido a barreras económicas, escasez de tiempo y estigmas socioculturales. Asimismo, datos del Ministerio de Salud (MINSA, 2024)[^2] evidencian que este grupo etario concentra una de las mayores demandas de atención por cuadros afectivos y trastornos de ansiedad a nivel nacional, recurriendo de manera prioritaria a canales remotos y confidenciales en busca de orientación desestigmatizada. Por ello, este segmento no solo permite validar el diario emocional, el acompañamiento inmediato, la privacidad y el contexto compartido de SafeDiary, sino que responde directamente a una necesidad estructural: contar con un puente digital seguro y empático que articule el autoconocimiento cotidiano con el soporte clínico informado.
 
 ### Segmento objetivo 2: Psicólogos profesionales con un mínimo de 5 años de experiencia
 
@@ -261,6 +259,15 @@ Este segmento está conformado por psicólogos que atienden a adolescentes y adu
 
 *Justificación del segmento*
 
-La entrevista al psicólogo indica que el registro puede mejorar la continuidad terapéutica sin sustituir el criterio profesional. Propone resúmenes visuales, cifrado, anonimato, borrado de datos y ejercicios de apoyo ante expresiones de malestar. Por ello, este segmento permite validar el contexto compartido, los requisitos de privacidad y el diseño de SafeDiary como herramienta complementaria, no como diagnóstico.
+La entrevista al psicólogo indica que el registro puede mejorar la continuidad terapéutica sin sustituir el criterio profesional. Propone resúmenes visuales, cifrado, anonimato, borrado de datos y ejercicios de apoyo ante expresiones de malestar. Este requerimiento práctico concuerda plenamente con las directrices profesionales e institucionales en el Perú: el Colegio de Psicólogos del Perú (CPSP, 2021)[^3] subraya en sus lineamientos sobre telepsicología que la incorporación de herramientas tecnológicas debe salvaguardar rigurosamente la confidencialidad, el consentimiento explícito y la seguridad informática de los datos clínicos, enfatizando que cualquier soporte automatizado debe actuar como coadyuvante sin vulnerar el criterio ni la alianza terapéutica. De forma análoga, el Instituto Nacional de Salud Mental (INSM, 2022)[^4] destaca que el acceso a registros estructurados e información longitudinal previa optimiza significativamente los tiempos de evaluación clínica y permite un seguimiento más preciso de la evolución afectiva del paciente. Por consiguiente, este segmento resulta estratégico para validar el valor del contexto compartido, los estándares éticos de privacidad y el posicionamiento de SafeDiary como un ecosistema complementario de soporte a la labor profesional, alejado de cualquier pretensión de autodiagnóstico.
 
+***
 
+### Notas al pie
+[^1]: Secretaría Nacional de la Juventud. (2023). *Juventudes Perú: Reporte de datos e indicadores 2017–2023*. Ministerio de Educación. https://juventud.gob.pe
+
+[^2]: Ministerio de Salud. (2024). *Situación de la salud mental y atenciones por problemas afectivos y de ansiedad a nivel nacional*. Plataforma Digital Única del Estado Peruano. https://www.gob.pe/minsa
+
+[^3]: Colegio de Psicólogos del Perú. (2021). *Guía orientativa para el ejercicio de la telepsicología en el Perú*. Consejo Directivo Nacional. https://www.cpsp.pe
+
+[^4]: Instituto Nacional de Salud Mental. (2022). *Directiva sanitaria para la implementación de servicios de telesalud y teleinterconsulta en salud mental*. Ministerio de Salud. https://www.insm.gob.pe

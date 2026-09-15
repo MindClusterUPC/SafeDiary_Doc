@@ -83,6 +83,7 @@ Proyecto
 | 0.0.3 | 13/09/2026 | Juan Wang | Redacción de la sección 1.1.1. Descripción de la Startup: descripción, misión, visión, propuesta de valor y características principales |
 | 0.0.4 | 13/09/2026 | Juan Wang | Redacción completa del Lean UX Process: sección 1.2.2 (introducción), 1.2.2.1 (Problem Statement con template brand new initiative), 1.2.2.2 (Assumptions: Business, Business Outcome, User, User Outcome and Benefit, Feature) y 1.2.2.3 (Hypothesis Statements) |
 | 0.0.5 | 13/09/2026 | Juan Wang | Creación y formateo de la sección 1.2.2.4 (Lean UX Canvas) en formato de tabla (3x3 grid) según lineamientos de Lean UX v2 |
+| 0.0.6 | 15/09/2026 | Marcelo Cuadros | Complementar contenido de los segmentos objetivos, segmento 1.3, añadiendo fuentes en la bibliografia tambien para el registro de fuentes. |
 
 # Project Report Collaboration Insights
 
