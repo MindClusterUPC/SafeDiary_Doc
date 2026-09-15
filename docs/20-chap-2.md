@@ -96,7 +96,7 @@ Presentar las reflexiones automáticas como apoyo para organizar lo expresado, p
 
 Para el diseño de entrevistas se plantearon preguntas semiestructuradas orientadas a comprender cómo los potenciales usuarios relacionados al proceso de tratamiento psicológico de los usuarios, qué problemas enfrentan a la hora de registrar sus inseguridades y qué expectativas tendrían frente a una solución como SafeDiary.
 
-#### Segmento objetivo 1: Pacientes de psicologos de entre 18 y 30 años de edad 
+#### Segmento objetivo 1: Pacientes jóvenes
 
 #####
 
@@ -111,7 +111,7 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 9. ¿Qué opina de un asistente de inteligencia artificial como método alternativo para recibir consejos de salud emocional?
 10. Si una aplicación con herramientas de este tipo pudiera detectar y/o registrar tus problemas, ¿qué tipo de respuesta o ayuda específica esperarías recibir de ella?
 
-#### Segmento objetivo 2: Psicologos profesionales con un minimo 5 años de experiencia
+#### Segmento objetivo 2: Psicólogos profesionales
 
 1. Pensando en sus pacientes de entre 14 y 30 años, ¿qué papel juega la escritura expresiva o el registro de emociones en su tratamiento y qué impacto real suele observar cuando lo practican?
 2. Cuando usted asigna tareas de auto-observación o les pide llevar un diario emocional entre sesiones, ¿cuáles son los principales obstáculos o motivos por los que los jóvenes no logran mantener este hábito a diario?
@@ -126,7 +126,7 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 
 ### 2.2.2. Registro de entrevistas
 
-#### Segmento objetivo 1: Pacientes de psicólogos de entre 18 y 30 años de edad
+#### Segmento objetivo 1: Pacientes jóvenes
 
 ##### Entrevista 1
 
@@ -146,7 +146,7 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 | Resumen | Mauricio refiere llevar aproximadamente seis meses en terapia por la ansiedad asociada a sus estudios y trabajo. Registra lo que siente en notas del celular o mediante audios a un amigo y utiliza música para desconectarse. Señala que su terapeuta no está disponible cuando necesita apoyo de madrugada y que la frustración afecta su concentración. Valora sentirse escuchado sin juicios y recibir herramientas prácticas. Identifica una pérdida de contexto entre sesiones, pues el relato posterior no conserva todos los detalles ni el tono de voz del momento. Le preocupa que sus audios se filtren o se utilicen para entrenar modelos públicos. Considera útil la IA como complemento del acompañamiento profesional. Esperaría un espacio de audio anónimo y un reporte cifrado que pudiera compartir con su psicólogo únicamente por decisión propia. |
 
 
-#### Segmento objetivo 2: Psicólogos profesionales con un mínimo de 5 años de experiencia
+#### Segmento objetivo 2: Psicólogos profesionales
 
 ##### Entrevista 1
 
@@ -163,7 +163,6 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 | Nombre completo | Rodrigo Velázquez |
 | Edad | 25 |
 | Distrito | San Miguel |
-| Experiencia profesional | Años de ejercicio no indicados en la entrevista. |
 | Resumen | Rodrigo sostiene que escribir ayuda a los jóvenes a ordenar sus pensamientos y procesar emociones. Identifica como barreras el tiempo y esfuerzo percibidos, la preocupación por la privacidad y el perfeccionismo. Describe conductas de evasión ante el malestar y destaca la importancia de contar con estrategias y personas de confianza. Advierte sobre la desinformación, los autodiagnósticos y las promesas de resultados rápidos en redes sociales. Propone un trato empático que dé al paciente libertad para expresarse. Para aprovechar la consulta, prefiere gráficos y resúmenes con emociones predominantes, detonantes y episodios de ansiedad. Considera esenciales el cifrado, el anonimato y la posibilidad de borrar información. Sugiere una herramienta móvil de registro que ofrezca ejercicios de apoyo ante expresiones de malestar y genere contexto útil para personalizar las sesiones. |
 
 ### 2.2.3. Análisis de entrevistas

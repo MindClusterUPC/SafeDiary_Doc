@@ -211,7 +211,7 @@ El Lean UX Canvas es una herramienta de facilitación que consolida en un solo a
 
 Los segmentos objetivo se definieron a partir del problema central de SafeDiary: existe una brecha entre la expresión emocional cotidiana y el acompañamiento psicológico informado. Se seleccionaron los dos lados de esa brecha: jóvenes que necesitan registrar y gestionar lo que sienten entre sesiones, y psicólogos que necesitan comprender mejor el contexto de sus pacientes. Esta selección permite validar el flujo completo del producto, desde el registro privado hasta el uso voluntario de esa información en terapia.
 
-### Segmento objetivo 1: Pacientes de psicólogos de entre 18 y 30 años
+### Segmento objetivo 1: Pacientes jóvenes
 
 Este segmento está conformado por jóvenes adultos que reciben atención psicológica y necesitan expresar, ordenar y dar seguimiento a sus emociones fuera del horario de consulta. Son usuarios directos del diario emocional, el registro por voz o texto, la reflexión asistida y el compartir información con un profesional mediante consentimiento explícito.
 
@@ -237,7 +237,7 @@ Este segmento está conformado por jóvenes adultos que reciben atención psicol
 
 La entrevista al paciente muestra que ya intenta registrar sus emociones, pero utiliza herramientas dispersas y pierde detalles entre sesiones. También expresa preocupación por la exposición de audios íntimos y solicita un espacio seguro, un reporte cifrado y control sobre el envío al psicólogo. Esta necesidad individual se alinea estrechamente con la realidad epidemiológica de la juventud peruana: según reporta la Secretaría Nacional de la Juventud (Senaju, 2023)[^1] a partir de los registros de la ENDES, el 32.3% de los jóvenes en el Perú ha padecido algún problema de salud mental o emocional en los últimos doce meses, existiendo una marcada brecha asistencial donde alrededor del 80% no busca ni recibe atención profesional oportuna debido a barreras económicas, escasez de tiempo y estigmas socioculturales. Asimismo, datos del Ministerio de Salud (MINSA, 2024)[^2] evidencian que este grupo etario concentra una de las mayores demandas de atención por cuadros afectivos y trastornos de ansiedad a nivel nacional, recurriendo de manera prioritaria a canales remotos y confidenciales en busca de orientación desestigmatizada. Por ello, este segmento no solo permite validar el diario emocional, el acompañamiento inmediato, la privacidad y el contexto compartido de SafeDiary, sino que responde directamente a una necesidad estructural: contar con un puente digital seguro y empático que articule el autoconocimiento cotidiano con el soporte clínico informado.
 
-### Segmento objetivo 2: Psicólogos profesionales con un mínimo de 5 años de experiencia
+### Segmento objetivo 2: Psicólogos profesionales
 
 Este segmento está conformado por psicólogos que atienden a adolescentes y adultos jóvenes y pueden utilizar información emocional registrada por sus pacientes como contexto complementario para la consulta. Son usuarios directos de la revisión de resúmenes, la visualización de patrones y la recepción de información compartida con autorización.
 
@@ -245,7 +245,7 @@ Este segmento está conformado por psicólogos que atienden a adolescentes y adu
 
 | Pregunta | Respuesta |
 | --- | --- |
-| ¿Qué experiencia tienen? | Mínimo cinco años de experiencia profesional |
+| ¿Qué experiencia tienen? | 1 año de experiencia profesional |
 | ¿A qué población atienden? | Adolescentes y adultos jóvenes de 14 a 30 años |
 | ¿Qué información les resulta útil? | Cambios de ánimo, emociones predominantes, detonantes, picos de ansiedad y un resumen breve. |
 | ¿Qué condiciones de uso requieren? | Información estructurada, segura y compartida únicamente con autorización del paciente. |
