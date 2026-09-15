@@ -48,14 +48,31 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 
 ### 2.2.2. Registro de entrevistas
 
+Las entrevistas se organizan por segmento objetivo mediante fichas de registro con el enlace a la grabación, el tiempo de inicio, la duración, los datos de los participantes y el resumen, siguiendo la estructura de referencia de [Vitalia](https://github.com/kinetia-upc/vitalia-docs/blob/main/docs/20-chap-2.md#222-registro-de-entrevistas).
 
+Las fichas y los resúmenes se elaboraron a partir de las transcripciones automáticas de YouTube. Los nombres de los entrevistados se registran como aparecen en ellas y requieren confirmación ortográfica; el nombre del entrevistador se contrastó con los perfiles del equipo de la sección 1.1.2. La edad, el distrito y los años de experiencia que no se mencionan se indican expresamente. La clasificación se basa en el rol presentado en cada entrevista; queda pendiente verificar los criterios de edad y experiencia de los segmentos.
 
-#### Segmento objetivo 1: [Nombre del segmento]
+#### Segmento objetivo 1: Pacientes de psicólogos de entre 18 y 30 años de edad
 
 ##### Entrevista 1
 
-#### Segmento objetivo 2: [Nombre del segmento]
+**Enlace de la entrevista:** [Ver entrevista al paciente](https://youtu.be/9WebzTJ97Tg)
 
+[![Miniatura del video de la entrevista al paciente](https://i.ytimg.com/vi/9WebzTJ97Tg/hqdefault.jpg)](https://youtu.be/9WebzTJ97Tg)
+
+| Campo | Registro |
+| --- | --- |
+| Entrevistado | Mauricio Pajés, paciente de atención psicológica. |
+| Entrevistador | Alexther Kamil Diaz Martinez. |
+| Inicia | [0:00](https://www.youtube.com/watch?v=9WebzTJ97Tg&t=0s), inicio de la grabación. |
+| Duración del video | 6:06 |
+| Nombre completo | Mauricio Pajés Léon |
+| Edad | 20 |
+| Distrito | La molina |
+| Resumen | Mauricio refiere llevar aproximadamente seis meses en terapia por la ansiedad asociada a sus estudios y trabajo. Registra lo que siente en notas del celular o mediante audios a un amigo y utiliza música para desconectarse. Señala que su terapeuta no está disponible cuando necesita apoyo de madrugada y que la frustración afecta su concentración. Valora sentirse escuchado sin juicios y recibir herramientas prácticas. Identifica una pérdida de contexto entre sesiones, pues el relato posterior no conserva todos los detalles ni el tono de voz del momento. Le preocupa que sus audios se filtren o se utilicen para entrenar modelos públicos. Considera útil la IA como complemento del acompañamiento profesional. Esperaría un espacio de audio anónimo y un reporte cifrado que pudiera compartir con su psicólogo únicamente por decisión propia. |
+
+
+#### Segmento objetivo 2: [Nombre del segmento]
 
 ### 2.2.3. Análisis de entrevistas
 
