@@ -209,12 +209,58 @@ El Lean UX Canvas es una herramienta de facilitación que consolida en un solo a
 
 ## 1.3. Segmentos objetivo
 
-[Introducir los segmentos relacionados con el dominio del problema y justificar por qué fueron seleccionados.]
+Los segmentos objetivo se definieron a partir del problema central de SafeDiary: existe una brecha entre la expresión emocional cotidiana y el acompañamiento psicológico informado. Se seleccionaron los dos lados de esa brecha: jóvenes que necesitan registrar y gestionar lo que sienten entre sesiones, y psicólogos que necesitan comprender mejor el contexto de sus pacientes. Esta selección permite validar el flujo completo del producto, desde el registro privado hasta el uso voluntario de esa información en terapia.
 
-### Segmento objetivo 1: [Nombre del segmento]
+### Segmento objetivo 1: Pacientes de psicólogos de entre 18 y 30 años
 
 
 
-### Segmento objetivo 2: [Nombre del segmento]
+Este segmento está conformado por jóvenes adultos que reciben atención psicológica y necesitan expresar, ordenar y dar seguimiento a sus emociones fuera del horario de consulta. Son usuarios directos del diario emocional, el registro por voz o texto, la reflexión asistida y el compartir información con un profesional mediante consentimiento explícito.
+
+*Características demográficas y de contexto*
+
+| Pregunta | Respuesta |
+| --- | --- |
+| ¿Qué rango de edad tienen? | Entre 18 y 30 años. |
+| ¿Qué relación tienen con la terapia? | Pueden estar en terapia, haber iniciado recientemente sus sesiones o necesitar apoyo entre consultas. |
+| ¿Qué situaciones suelen afrontar? | Ansiedad, estrés académico o laboral, frustración y dificultad para concentrarse. Estas situaciones no constituyen diagnósticos. |
+| ¿Qué acceso tecnológico poseen? | Utilizan teléfonos inteligentes, notas digitales, grabaciones de audio, mensajería y servicios de música o redes sociales. |
+| ¿Qué condición de privacidad requieren? | Necesitan controlar qué registran, dónde se almacena, quién puede verlo y cuándo compartirlo. |
+
+*Hábitos y motivaciones*
+
+- Registran sus emociones mediante notas sueltas o audios, especialmente cuando aumenta el malestar.
+- Pueden necesitar apoyo fuera del horario de consulta, incluso durante la madrugada.
+- Buscan ser escuchados sin juicios y recibir herramientas prácticas.
+- Valoran un espacio anónimo o privado para expresarse sin sentirse expuestos.
+- Están dispuestos a compartir un resumen con su psicólogo si la decisión es voluntaria y reversible.
+
+*Justificación del segmento*
+
+La entrevista al paciente muestra que ya intenta registrar sus emociones, pero utiliza herramientas dispersas y pierde detalles entre sesiones. También expresa preocupación por la exposición de audios íntimos y solicita un espacio seguro, un reporte cifrado y control sobre el envío al psicólogo. Por ello, este segmento permite validar el diario emocional, el acompañamiento inmediato, la privacidad y el contexto compartido de SafeDiary.
+
+### Segmento objetivo 2: Psicólogos profesionales con un mínimo de 5 años de experiencia
+
+Este segmento está conformado por psicólogos que atienden a adolescentes y adultos jóvenes y pueden utilizar información emocional registrada por sus pacientes como contexto complementario para la consulta. Son usuarios directos de la revisión de resúmenes, la visualización de patrones y la recepción de información compartida con autorización.
+
+*Características demográficas y profesionales*
+
+| Pregunta | Respuesta |
+| --- | --- |
+| ¿Qué experiencia tienen? | Mínimo cinco años de experiencia profesional |
+| ¿A qué población atienden? | Adolescentes y adultos jóvenes de 14 a 30 años |
+| ¿Qué información les resulta útil? | Cambios de ánimo, emociones predominantes, detonantes, picos de ansiedad y un resumen breve. |
+| ¿Qué condiciones de uso requieren? | Información estructurada, segura y compartida únicamente con autorización del paciente. |
+
+*Hábitos y motivaciones*
+
+- Buscan que el registro ayude al paciente a pasar de un estado reactivo a uno más analítico.
+- Identifican como barreras la falta de tiempo, la fatiga, el temor a perder privacidad y el perfeccionismo.
+- Necesitan revisar patrones y detonantes rápidamente mediante gráficos, etiquetas o resúmenes visuales.
+- Prefieren un acercamiento empático y advierten contra la desinformación, los autodiagnósticos y las promesas de resultados inmediatos.
+
+*Justificación del segmento*
+
+La entrevista al psicólogo indica que el registro puede mejorar la continuidad terapéutica sin sustituir el criterio profesional. Propone resúmenes visuales, cifrado, anonimato, borrado de datos y ejercicios de apoyo ante expresiones de malestar. Por ello, este segmento permite validar el contexto compartido, los requisitos de privacidad y el diseño de SafeDiary como herramienta complementaria, no como diagnóstico.
 
 
