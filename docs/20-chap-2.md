@@ -183,12 +183,15 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 ### 2.3.1. User Personas
 
 
-#### User Persona 1: [Nombre del arquetipo]
+#### User Persona 1: María
 
+**Primer Segmento Objetivo (Pacientes Jovenes)**
+*Figura 1: User Persona 1 (María)*
+![User Persona 1: María](../assets/images/chap2/María_UserPersona.png)
 
-
-#### User Persona 2: [Nombre del arquetipo]
-
+**Segundo Segmento Objetivo (Psicólogos Profesionales)**
+*Figura 2: User Persona 2 (Dra. Laura Gómez)*
+![User Persona 2: Dra. Laura Gómez](../assets/images/chap2/Dra.%20Laura%20Gómez_UserPersona.png)
 
 
 ### 2.3.2. User Task Matrix
