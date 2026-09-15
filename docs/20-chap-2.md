@@ -72,7 +72,25 @@ Las fichas y los resúmenes se elaboraron a partir de las transcripciones autom�
 | Resumen | Mauricio refiere llevar aproximadamente seis meses en terapia por la ansiedad asociada a sus estudios y trabajo. Registra lo que siente en notas del celular o mediante audios a un amigo y utiliza música para desconectarse. Señala que su terapeuta no está disponible cuando necesita apoyo de madrugada y que la frustración afecta su concentración. Valora sentirse escuchado sin juicios y recibir herramientas prácticas. Identifica una pérdida de contexto entre sesiones, pues el relato posterior no conserva todos los detalles ni el tono de voz del momento. Le preocupa que sus audios se filtren o se utilicen para entrenar modelos públicos. Considera útil la IA como complemento del acompañamiento profesional. Esperaría un espacio de audio anónimo y un reporte cifrado que pudiera compartir con su psicólogo únicamente por decisión propia. |
 
 
-#### Segmento objetivo 2: [Nombre del segmento]
+#### Segmento objetivo 2: Psicólogos profesionales con un mínimo de 5 años de experiencia
+
+##### Entrevista 1
+
+**Enlace de la entrevista:** [Ver entrevista al psicólogo](https://youtu.be/dEfn2xG_mbk)
+
+[![Miniatura del video de la entrevista al psicólogo](https://i.ytimg.com/vi/dEfn2xG_mbk/hqdefault.jpg)](https://youtu.be/dEfn2xG_mbk)
+
+| Campo | Registro |
+| --- | --- |
+| Entrevistado | Rodrigo Velázquez, presentado como psicólogo especialista. |
+| Entrevistador | Alexther Kamil Diaz Martinez. |
+| Inicia | [0:00](https://www.youtube.com/watch?v=dEfn2xG_mbk&t=0s), inicio de la grabación. |
+| Duración del video | 14:44 |
+| Nombre completo | Rodrigo Velázquez, según la presentación inicial; confirmar escritura y apellidos completos. |
+| Edad | 25 |
+| Distrito | San Miguel |
+| Experiencia profesional | No se especifican los años de ejercicio; pendiente de verificar el mínimo de 5 años. |
+| Resumen | Rodrigo sostiene que escribir ayuda a los jóvenes a ordenar sus pensamientos y procesar emociones. Identifica como barreras el tiempo y esfuerzo percibidos, la preocupación por la privacidad y el perfeccionismo. Describe conductas de evasión ante el malestar y destaca la importancia de contar con estrategias y personas de confianza. Advierte sobre la desinformación, los autodiagnósticos y las promesas de resultados rápidos en redes sociales. Propone un trato empático que dé al paciente libertad para expresarse. Para aprovechar la consulta, prefiere gráficos y resúmenes con emociones predominantes, detonantes y episodios de ansiedad. Considera esenciales el cifrado, el anonimato y la posibilidad de borrar información. Sugiere una herramienta móvil de registro que ofrezca ejercicios de apoyo ante expresiones de malestar y genere contexto útil para personalizar las sesiones. |
 
 ### 2.2.3. Análisis de entrevistas
 
