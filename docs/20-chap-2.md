@@ -48,10 +48,6 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 
 ### 2.2.2. Registro de entrevistas
 
-Las entrevistas se organizan por segmento objetivo mediante fichas de registro con el enlace a la grabación, el tiempo de inicio, la duración, los datos de los participantes y el resumen, siguiendo la estructura de referencia de [Vitalia](https://github.com/kinetia-upc/vitalia-docs/blob/main/docs/20-chap-2.md#222-registro-de-entrevistas).
-
-Las fichas y los resúmenes se elaboraron a partir de las transcripciones automáticas de YouTube. Los nombres de los entrevistados se registran como aparecen en ellas y requieren confirmación ortográfica; el nombre del entrevistador se contrastó con los perfiles del equipo de la sección 1.1.2. La edad, el distrito y los años de experiencia que no se mencionan se indican expresamente. La clasificación se basa en el rol presentado en cada entrevista; queda pendiente verificar los criterios de edad y experiencia de los segmentos.
-
 #### Segmento objetivo 1: Pacientes de psicólogos de entre 18 y 30 años de edad
 
 ##### Entrevista 1
@@ -86,10 +82,10 @@ Las fichas y los resúmenes se elaboraron a partir de las transcripciones autom�
 | Entrevistador | Alexther Kamil Diaz Martinez. |
 | Inicia | [0:00](https://www.youtube.com/watch?v=dEfn2xG_mbk&t=0s), inicio de la grabación. |
 | Duración del video | 14:44 |
-| Nombre completo | Rodrigo Velázquez, según la presentación inicial; confirmar escritura y apellidos completos. |
+| Nombre completo | Rodrigo Velázquez |
 | Edad | 25 |
 | Distrito | San Miguel |
-| Experiencia profesional | No se especifican los años de ejercicio; pendiente de verificar el mínimo de 5 años. |
+| Experiencia profesional | Años de ejercicio no indicados en la entrevista. |
 | Resumen | Rodrigo sostiene que escribir ayuda a los jóvenes a ordenar sus pensamientos y procesar emociones. Identifica como barreras el tiempo y esfuerzo percibidos, la preocupación por la privacidad y el perfeccionismo. Describe conductas de evasión ante el malestar y destaca la importancia de contar con estrategias y personas de confianza. Advierte sobre la desinformación, los autodiagnósticos y las promesas de resultados rápidos en redes sociales. Propone un trato empático que dé al paciente libertad para expresarse. Para aprovechar la consulta, prefiere gráficos y resúmenes con emociones predominantes, detonantes y episodios de ansiedad. Considera esenciales el cifrado, el anonimato y la posibilidad de borrar información. Sugiere una herramienta móvil de registro que ofrezca ejercicios de apoyo ante expresiones de malestar y genere contexto útil para personalizar las sesiones. |
 
 ### 2.2.3. Análisis de entrevistas
