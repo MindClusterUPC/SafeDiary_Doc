@@ -218,13 +218,13 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 
 
 
-#### User Journey Map 1: [Nombre del User Persona]
+#### User Journey Map 1: Maria
 
-
+![journey_map_maria.png](../assets/images/chap2/needfinding/journey_map_maria.png)
 
 #### User Journey Map 2: [Nombre del User Persona]
 
-
+![journey_map_maria.png](../assets/images/chap2/needfinding/journey_map_dra_laura.png)
 
 ### 2.3.4. Empathy Mapping
 
