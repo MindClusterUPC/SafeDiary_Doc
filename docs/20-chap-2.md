@@ -145,6 +145,22 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 | Distrito | La molina |
 | Resumen | Mauricio refiere llevar aproximadamente seis meses en terapia por la ansiedad asociada a sus estudios y trabajo. Registra lo que siente en notas del celular o mediante audios a un amigo y utiliza música para desconectarse. Señala que su terapeuta no está disponible cuando necesita apoyo de madrugada y que la frustración afecta su concentración. Valora sentirse escuchado sin juicios y recibir herramientas prácticas. Identifica una pérdida de contexto entre sesiones, pues el relato posterior no conserva todos los detalles ni el tono de voz del momento. Le preocupa que sus audios se filtren o se utilicen para entrenar modelos públicos. Considera útil la IA como complemento del acompañamiento profesional. Esperaría un espacio de audio anónimo y un reporte cifrado que pudiera compartir con su psicólogo únicamente por decisión propia. |
 
+##### Entrevista 2
+
+**Enlace de la entrevista:** [Ver entrevista del paciente](https://youtu.be/cNd4CfIMUJM)
+
+[![Miniatura del video de la entrevista al paciente](https://i.ytimg.com/vi/cNd4CfIMUJM/hqdefault.jpg)](https://youtu.be/cNd4CfIMUJM)
+
+| Campo | Registro |
+| --- | --- |
+| Entrevistado | Piero Taype, paciente de atención psicológica |
+| Entrevistador | Marcelo Fabio Cuadros Villanueva |
+| Inicia | [0:00](https://www.youtube.com/watch?v=cNd4CfIMUJM&t=0s), inicio de la grabación. |
+| Duración del video | 9:42 |
+| Nombre completo | Piero Mario Taype Orihuela |
+| Edad | 21 |
+| Distrito | San Miguel |
+| Resumen | Piero refiere llevar entre un año y año y medio en terapia psicológica debido al estrés y al cambio abrupto de ritmo tras mudarse de Ayacucho a Lima para iniciar la universidad. Registra sus emociones mediante notas en el celular, audios de WhatsApp o notas adhesivas, y recurre a la música, los videojuegos y el modelado 3D cuando la carga de exámenes le impide asistir a consulta. Señala que reprimir lo que siente le genera irritabilidad, problemas de concentración y dolor físico por tensión en hombros y cuello. Valora el desahogo guiado con un profesional para gestionar sus miedos y pensamientos negativos, aunque percibe que las sesiones resultan cortas y apresuradas. Asimismo, le preocupa la vulnerabilidad y filtración de sus datos personales y de salud en plataformas tecnológicas. Considera que la inteligencia artificial puede ser un complemento útil y disponible a toda hora sin llegar a sustituir la atención humana, esperando de esta herramientas prácticas que ayuden a identificar problemas concretos para agilizar la labor de su terapeuta. |
 
 #### Segmento objetivo 2: Psicólogos profesionales
 
