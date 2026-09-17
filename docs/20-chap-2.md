@@ -229,11 +229,11 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 ### 2.3.4. Empathy Mapping
 
 
-#### Empathy Map 1: [Nombre del User Persona]
+#### Empathy Map 1: Maria
 
 
 
-#### Empathy Map 2: [Nombre del User Persona]
+#### Empathy Map 2: Dra. Laura Gómez
 
 
 ### 2.3.5. Big Picture EventStorming
