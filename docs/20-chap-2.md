@@ -568,25 +568,9 @@ Trelo con el backlog: [Trello SafeDiary](https://trello.com/b/Q2UsNz3t/product-b
 
 #### 2.5.1.3. Bounded Context Canvases
 
-En esta sección se detallan los Bounded Context Canvases elaborados para los contextos candidatos del sistema, siguiendo el proceso iterativo recomendado por Domain-Driven Design: Context Overview Definition, Business Rules Distillation & Ubiquitous Language Capture, Capability Analysis, Dependencies Capture y Design Critique.
-
 ##### Bounded Context Canvas: AssistantAI
 
-El Bounded Context de **AssistantAI** constituye el núcleo diferenciador e innovador de SafeDiary, proveyendo al usuario un acompañamiento reflexivo mediante modelos de lenguaje, clasificación emocional y mecanismos de seguridad clínica.
-
-**Tabla 3. Bounded Context Canvas de AssistantAI**
-
-| Sección del Canvas | Detalle y Especificación |
-| --- | --- |
-| **Name** | **AssistantAI** (AI Emotional Companion) |
-| **Description** | Proporcionar acompañamiento emocional interactivo mediante inteligencia artificial, clasificando emociones predominantes, detectando distorsiones de pensamiento, activando protocolos de emergencia ante crisis y generando resúmenes estructurados para el soporte profesional. |
-| **Strategic Classification** | • **Domain:** Core Domain *(capacidad diferenciadora y estratégica del negocio)*.<br>• **Business Model:** Engagement & Retention *(fomenta la reflexión diaria y la recurrencia)*.<br>• **Evolution:** Custom Built *(desarrollado a medida integrando modelos fundacionales de LLM mediante APIs externas)*. |
-| **Domain Roles** | • **Analysis Context:** Analiza el texto y lenguaje natural de las conversaciones para clasificar estados afectivos y distorsiones cognitivas.<br>• **Execution Context:** Genera respuestas empáticas y resúmenes clínicos estructurados. |
-| **Inbound Communication** | • **Mobile App (Frontend - 📱):**<br>  - `[Command] IniciarConversacion`<br>  - `[Command] EnviarMensajeTexto`<br>  - `[Command] CambiarPersonalidadIA`<br>• **Diary Context (Bounded Context - ☁️):**<br>  - `[Query] ConsultarEntradasSemanales`<br>• **Gemini LLM API (External System - ⚙️):**<br>  - `[Event] RespuestaIAGenerada` |
-| **Ubiquitous Language** | • **AI Companion:** Asistente conversacional automatizado de soporte reflexivo sin emisión de diagnósticos médicos.<br>• **Emotional Reflection:** Mensaje empático y orientador generado por la IA para asistir la autorregulación emocional del paciente.<br>• **Cognitive Distortion:** Patrón de pensamiento desadaptativo detectado en el texto (ej. catastrofismo, sobregeneralización).<br>• **Crisis Protocol:** Flujo de contención y asistencia inmediata activado ante expresiones de riesgo autolesivo o desesperanza crítica.<br>• **Personality Tone:** Parámetro que calibra el estilo y calidez del lenguaje de la IA (empático, reflexivo, analítico).<br>• **Clinical Summary:** Reporte estructurado que compila emociones predominantes y episodios relevantes para la consulta del psicólogo. |
-| **Business Decisions & Policies** | 1. **Protocolo de Seguridad en Crisis:** Si la evaluación de riesgo arroja una puntuación crítica de autoagresión o desesperanza total, se suspende la conversación estándar y se activa de inmediato el protocolo de crisis con la línea 988.<br>2. **Límite No Diagnóstico:** La IA tiene estrictamente prohibido prescribir fármacos o emitir diagnósticos clínicos patológicos; su función es únicamente de escucha reflexiva y síntesis de contexto.<br>3. **Adaptabilidad del Tono:** Toda reflexión generada debe apegarse al tono de personalidad seleccionado por el usuario en sus preferencias.<br>4. **Consolidación Semanal:** El resumen clínico se procesa automáticamente al corte de la semana agrupando exclusivamente las entradas autorizadas por el usuario. |
-| **Outbound Communication** | • **Crisis Support Context (Bounded Context - ☁️ / Línea 988 - ⚙️):**<br>  - `[Event] ProtocoloDeCrisisActivado`<br>• **Professional Care Context (Bounded Context - ☁️):**<br>  - `[Event] ResumenClinicoSemanalGenerado`<br>• **Diary / Journaling Context (Bounded Context - ☁️):**<br>  - `[Event] ReflexionIAGenerada`<br>• **Gemini API (External System - ⚙️):**<br>  - `[Command] SolicitarAnalisisEmocional`<br>  - `[Command] SolicitarGeneracionTexto` |
-
+![assisntant_bcc](../assets/images/chap2/boundedcontexts/assistantai-bcc.png)
 
 ### 2.5.2. Context Mapping
 
