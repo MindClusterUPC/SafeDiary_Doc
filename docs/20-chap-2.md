@@ -184,7 +184,7 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 ##### Entrevista 2
 ** Enlace de la entrevista: ** https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318609_upc_edu_pe/IQCgMq1wK-e7Sa2HCA_52zEDAcGhACzYzChzn0sMqHF4-aA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=ZGQ1G5
 
-![Captura de entrevista](assets/images/chap2/entrevista-psicologo-josue.png)
+![Captura de entrevista](../assets/images/chap2/entrevista-psicologo-josue.png)
 
 | Campo | Registro |
 | --- | --- |
@@ -270,7 +270,7 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 
 ![journey_map_maria.png](../assets/images/chap2/needfinding/journey_map_maria.png)
 
-#### User Journey Map 2: [Nombre del User Persona]
+#### User Journey Map 2: Dra. Laura
 
 ![journey_map_maria.png](../assets/images/chap2/needfinding/journey_map_dra_laura.png)
 
