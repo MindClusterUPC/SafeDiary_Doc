@@ -596,57 +596,636 @@ Trelo con el backlog: [Trello SafeDiary](https://trello.com/b/Q2UsNz3t/product-b
 
 ### 2.6.1. Bounded Context: IAM
 
+**IAM (Identity & Access Management)** es el contexto que sostiene la seguridad y el consentimiento de SafeDiary: administra la cuenta, la autenticación (correo, biometría, Google/Apple), la recuperación y eliminación de cuenta, la bóveda privada y, sobre todo, el consentimiento explícito y revocable que un paciente otorga a un especialista para acceder a su historial (US-001, US-003, US-009, US-015, US-016, US-023, US-025, US-033, US-045, US-046, TS-001, TS-002, TS-007). Ningún otro bounded context almacena credenciales, permisos de compartición o el registro de auditoría: todos consultan a IAM a través de su API para validar identidad o alcance de consentimiento (patrón Open Host Service / Published Language descrito en la futura sección 2.5.2 de Context Mapping).
 
 #### 2.6.1.1. Domain Layer
 
+**Entities y Aggregates**
+- **Account (Aggregate Root):** id, email, passwordHash (nulo si el acceso es federado), status (active, suspended, pending_deletion), biometricEnabled, createdAt. La pantalla de acceso (mockup) confirma que `biometricEnabled` habilita dos flujos: el ingreso rápido a la sesión ("FaceID Quick Unlock") y, cuando el usuario abre una entrada protegida, la validación de `PrivateVault.verifyAccess()` ("Instant biometric entry to your vault") — es la misma credencial biométrica del dispositivo, pero IAM la evalúa en dos puntos de control distintos.
+- **AuthProvider:** proveedor federado vinculado a una cuenta (Google, Apple) con su identificador externo.
+- **Consent (Aggregate Root):** autorización otorgada por un paciente (ownerId) a un especialista (granteeId), con estado (active, revoked, expired) y su vigencia.
+- **SharingPermission:** alcance concreto de un Consent (periodo y entradas autorizadas del diario).
+- **PrivateVault (Aggregate Root):** espacio protegido por PIN o biometría que referencia entradas sensibles del diario sin almacenar su contenido.
+- **AuditEvent (Aggregate Root, append-only):** registro trazable de un acceso, consentimiento, revocación o intento denegado.
+
+**Value Objects**
+- **AccountId, ConsentId, AuditEventId:** identificadores únicos del dominio.
+- **AccountStatus:** ACTIVE, SUSPENDED, PENDING_DELETION.
+- **ConsentStatus:** ACTIVE, REVOKED, EXPIRED.
+- **AuditAction:** ACCESS_GRANTED, ACCESS_DENIED, CONSENT_GRANTED, CONSENT_REVOKED, VAULT_UNLOCKED.
+- **AuthProviderType:** EMAIL, GOOGLE, APPLE.
+
+**Domain Events**
+- AccountRegistered, AccountAuthenticated, BiometricUnlockEnabled, PasswordResetRequested, AccountDeletionRequested, AccountDeleted, ConsentGranted, ConsentRevoked, VaultEntryProtected, AccessAudited.
+
+**Commands**
+- RegisterAccountCommand, AuthenticateWithProviderCommand, RequestPasswordResetCommand, ResetPasswordCommand, EnableBiometricUnlockCommand, RequestAccountDeletionCommand, GrantConsentCommand, RevokeConsentCommand, ProtectEntryInVaultCommand.
+
+**Queries**
+- GetAccountByIdQuery, GetActiveConsentsByOwnerQuery, GetConsentScopeForSpecialistQuery, GetAuditTrailByOwnerQuery.
+
+**Domain Services (Contratos)**
+- AccountAuthenticationService, ConsentAuthorizationService (verifica si una consulta de un especialista cae dentro del alcance vigente; es el contrato que consumen otros bounded contexts), VaultAccessService, AuditLogger.
 
 #### 2.6.1.2. Interface Layer
 
+**Controllers**
+- **AccountsController:** registro, autenticación federada, biometría, recuperación de contraseña y eliminación de cuenta (US-001, US-003, US-015, US-016, US-033).
+- **ConsentsController:** otorga, lista y revoca permisos de compartición (US-009, US-023).
+- **VaultController:** protege y valida el acceso a entradas de la bóveda privada (US-025).
+- **AuditController:** expone al especialista el alcance vigente de su consentimiento (US-045, US-046) y permite al paciente auditar sus accesos concedidos.
+
+**Resources (Request/Response DTOs)**
+- **Account:** RegisterAccountResource, AuthenticateResource, ResetPasswordResource, DeleteAccountResource.
+- **Consent:** GrantConsentResource, RevokeConsentResource, ConsentScopeResource.
+- **Vault:** ProtectEntryResource, VerifyVaultAccessResource.
+- **Audit:** AuditEventResource, ConsentAuditTrailResource.
 
 #### 2.6.1.3. Application Layer
 
+**Command Handlers**
+- **AccountCommandServiceImpl:** RegisterAccountCommand, AuthenticateWithProviderCommand, ResetPasswordCommand, RequestAccountDeletionCommand.
+- **ConsentCommandServiceImpl:** GrantConsentCommand, RevokeConsentCommand.
+- **VaultCommandServiceImpl:** ProtectEntryInVaultCommand.
+
+**Query Handlers**
+- **AccountQueryServiceImpl:** GetAccountByIdQuery.
+- **ConsentQueryServiceImpl:** GetActiveConsentsByOwnerQuery, GetConsentScopeForSpecialistQuery (usada por otros contextos para validar acceso).
+- **AuditQueryServiceImpl:** GetAuditTrailByOwnerQuery.
 
 #### 2.6.1.4. Infrastructure Layer
 
+**Repositories**
+- **AccountRepository:** búsqueda por email y por proveedor federado + id externo; valida unicidad de correo.
+- **ConsentRepository:** consultas de consentimientos activos por owner o por grantee; filtra por vigencia.
+- **PrivateVaultRepository:** persistencia de la bóveda y sus referencias protegidas.
+- **AuditEventRepository:** repositorio append-only, indexado por actor, objetivo y fecha.
+
+**Adaptadores externos**
+- **SecretsManagerAdapter:** gestiona claves de cifrado y credenciales fuera del código fuente (TS-002).
+- **FederatedAuthAdapter:** integra Google Sign-In y Apple Sign-In.
+- **EmailNotificationAdapter:** envía el enlace seguro de recuperación de contraseña (US-016).
 
 #### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
 
+El siguiente código en **Structurizr DSL (C4 Model)** puede pegarse en [structurizr.com/dsl](https://structurizr.com/dsl) o en el [Structurizr Lite](https://docs.structurizr.com/lite) para generar el diagrama de componentes de IAM:
+
+```text
+workspace "SafeDiary - IAM (Component Diagram)" "C4 Component Diagram del bounded context IAM" {
+    model {
+        patient    = person "Paciente" "Administra su cuenta, biometría y consentimiento."
+        specialist = person "Especialista Verificado" "Consulta el alcance de su consentimiento vigente."
+
+        safeDiary = softwareSystem "SafeDiary" {
+
+            iamApi = container "IAM API" "Gestiona cuentas, consentimiento, bóveda privada y auditoría." "ASP.NET Core / Node.js Web API" {
+                accountsController = component "AccountsController" "Registro, login federado, biometría, recuperación y eliminación de cuenta." "REST Controller"
+                consentsController = component "ConsentsController" "Otorga, consulta y revoca permisos de compartición." "REST Controller"
+                vaultController    = component "VaultController" "Protege y consulta entradas en la bóveda privada." "REST Controller"
+                auditController    = component "AuditController" "Expone el alcance vigente del consentimiento." "REST Controller"
+
+                accountCmdService = component "AccountCommandServiceImpl" "Casos de uso de registro, autenticación y baja de cuenta." "Application Service"
+                accountQryService = component "AccountQueryServiceImpl"   "Consultas de cuenta."                                   "Application Service"
+                consentCmdService = component "ConsentCommandServiceImpl" "Otorga y revoca consentimiento."                        "Application Service"
+                consentQryService = component "ConsentQueryServiceImpl"   "Consulta el alcance vigente."                           "Application Service"
+                vaultService      = component "VaultCommandServiceImpl"   "Protege entradas sensibles."                            "Application Service"
+
+                accountAggregate   = component "Account Aggregate"          "Invariantes de identidad y credenciales."               "Domain Model (DDD)"
+                consentAggregate   = component "Consent Aggregate"          "Invariantes de autorización y revocación."              "Domain Model (DDD)"
+                vaultAggregate     = component "PrivateVault Aggregate"     "Invariantes de acceso a la bóveda."                      "Domain Model (DDD)"
+                consentAuthService = component "ConsentAuthorizationService" "Valida si un acceso está dentro del alcance autorizado." "Domain Service"
+                auditLogger         = component "AuditLogger"               "Registra eventos sensibles sin duplicar contenido emocional." "Domain Service"
+
+                accountRepo = component "AccountRepository"      "Persistencia de cuentas y proveedores federados." "Repository"
+                consentRepo = component "ConsentRepository"      "Persistencia de consentimientos y su vigencia."   "Repository"
+                vaultRepo   = component "PrivateVaultRepository" "Persistencia de la bóveda privada."               "Repository"
+                auditRepo   = component "AuditEventRepository"  "Persistencia append-only de auditoría."           "Repository"
+
+                secretsAdapter = component "SecretsManagerAdapter"    "Gestiona claves y credenciales fuera del código." "Infrastructure Adapter"
+                oauthAdapter   = component "FederatedAuthAdapter"     "Integra Google y Apple Sign-In."                  "Infrastructure Adapter"
+                mailAdapter    = component "EmailNotificationAdapter" "Envía enlaces de recuperación de contraseña."     "Infrastructure Adapter"
+            }
+
+            postgres = container "IAM Database" "Persistencia transaccional de identidad y consentimiento." "PostgreSQL 15"
+            eventBus = container "Event Bus"    "Publica ConsentGranted, ConsentRevoked, AccountDeleted."   "RabbitMQ / Kafka"
+        }
+
+        profilesContext = softwareSystem "Profiles (Bounded Context externo)" "Valida el AccountId y el consentimiento antes de exponer perfiles y el directorio."
+
+        patient    -> iamApi "Se autentica y administra su consentimiento" "HTTPS/JSON"
+        specialist -> iamApi "Consulta el alcance de su consentimiento"    "HTTPS/JSON"
+
+        accountsController -> accountCmdService "Envía comandos"
+        accountsController -> accountQryService "Envía queries"
+        consentsController -> consentCmdService "Envía comandos"
+        consentsController -> consentQryService "Envía queries"
+        vaultController    -> vaultService      "Envía comandos"
+        auditController     -> consentQryService "Consulta alcance vigente"
+
+        accountCmdService -> accountAggregate   "Orquesta"
+        consentCmdService -> consentAggregate   "Orquesta"
+        vaultService       -> vaultAggregate     "Orquesta"
+        consentQryService  -> consentAuthService "Valida alcance"
+
+        accountCmdService -> secretsAdapter "Cifra credenciales"
+        accountCmdService -> oauthAdapter   "Valida identidad federada"
+        accountCmdService -> mailAdapter    "Envía enlace de recuperación"
+
+        accountCmdService -> accountRepo "Persiste"
+        accountQryService -> accountRepo "Consulta"
+        consentCmdService -> consentRepo "Persiste"
+        consentQryService -> consentRepo "Consulta"
+        vaultService       -> vaultRepo   "Persiste"
+        auditLogger         -> auditRepo   "Persiste"
+
+        accountRepo -> postgres "CRUD" "SQL/TCP"
+        consentRepo -> postgres "CRUD" "SQL/TCP"
+        vaultRepo   -> postgres "CRUD" "SQL/TCP"
+        auditRepo   -> postgres "CRUD" "SQL/TCP"
+
+        consentAggregate -> eventBus "Publica ConsentGranted / ConsentRevoked"
+        accountAggregate -> eventBus "Publica AccountDeleted"
+
+        profilesContext -> iamApi "Valida AccountId y consentimiento" "HTTPS/JSON"
+    }
+
+    views {
+        component iamApi "IAM_Components" {
+            include *
+            autoLayout
+        }
+        styles {
+            element "Person"          { shape Person background #08427b color #ffffff }
+            element "Software System" { background #1168bd color #ffffff }
+            element "Container"       { background #438dd5 color #ffffff }
+            element "Component"       { background #85bbf0 color #000000 }
+        }
+    }
+}
+```
 
 #### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
 
-
 ##### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
 
+Código en **Mermaid** (puede pegarse en [mermaid.live](https://mermaid.live) para visualizarlo):
+
+```mermaid
+classDiagram
+    class Account {
+        +String id
+        +String email
+        +String passwordHash
+        +AccountStatus status
+        +Boolean biometricEnabled
+        +DateTime createdAt
+        +register()
+        +authenticate()
+        +enableBiometricUnlock()
+        +requestDeletion()
+    }
+    class AuthProvider {
+        +String id
+        +AuthProviderType type
+        +String externalId
+    }
+    class Consent {
+        +String id
+        +String ownerAccountId
+        +String granteeAccountId
+        +ConsentStatus status
+        +DateTime grantedAt
+        +DateTime revokedAt
+        +grant()
+        +revoke()
+    }
+    class SharingPermission {
+        +String id
+        +Date periodStart
+        +Date periodEnd
+        +List~String~ entryIds
+    }
+    class PrivateVault {
+        +String id
+        +String accountId
+        +String pinHash
+        +protectEntry()
+        +verifyAccess()
+    }
+    class AuditEvent {
+        +String id
+        +String actorAccountId
+        +String targetAccountId
+        +AuditAction action
+        +DateTime occurredAt
+    }
+    class ConsentAuthorizationService {
+        +isWithinScope(specialistId, entryId) Boolean
+    }
+
+    Account "1" --> "0..*" AuthProvider : tiene
+    Account "1" --> "0..*" Consent : otorga como owner
+    Consent "1" --> "1..*" SharingPermission : define alcance
+    Account "1" --> "0..1" PrivateVault : posee
+    Consent "1" --> "0..*" AuditEvent : genera
+    ConsentAuthorizationService ..> Consent : valida
+```
 
 ##### 2.6.1.6.2. Bounded Context Database Design Diagram
+
+Código en **Mermaid ER Diagram** (también puede importarse en [dbdiagram.io](https://dbdiagram.io) adaptando la sintaxis):
+
+```mermaid
+erDiagram
+    ACCOUNTS {
+        uuid id PK
+        string email
+        string password_hash
+        string status
+        boolean biometric_enabled
+        datetime created_at
+    }
+    AUTH_PROVIDERS {
+        uuid id PK
+        uuid account_id FK
+        string provider_type
+        string external_id
+    }
+    CONSENTS {
+        uuid id PK
+        uuid owner_account_id FK
+        uuid grantee_account_id FK
+        string status
+        datetime granted_at
+        datetime revoked_at
+    }
+    SHARING_PERMISSIONS {
+        uuid id PK
+        uuid consent_id FK
+        date period_start
+        date period_end
+    }
+    PRIVATE_VAULTS {
+        uuid id PK
+        uuid account_id FK
+        string pin_hash
+    }
+    VAULT_ENTRIES {
+        uuid id PK
+        uuid vault_id FK
+        uuid diary_entry_id
+    }
+    AUDIT_EVENTS {
+        uuid id PK
+        uuid actor_account_id FK
+        uuid target_account_id FK
+        uuid consent_id FK
+        string action
+        datetime occurred_at
+    }
+
+    ACCOUNTS ||--o{ AUTH_PROVIDERS : "has providers"
+    ACCOUNTS ||--o{ CONSENTS : "grants as owner"
+    ACCOUNTS ||--o{ CONSENTS : "receives as grantee"
+    CONSENTS ||--o{ SHARING_PERMISSIONS : "has scope"
+    ACCOUNTS ||--o| PRIVATE_VAULTS : "owns"
+    PRIVATE_VAULTS ||--o{ VAULT_ENTRIES : "protects"
+    ACCOUNTS ||--o{ AUDIT_EVENTS : "acts as actor"
+    CONSENTS ||--o{ AUDIT_EVENTS : "audited by"
+```
 
 
 
 ### 2.6.2. Bounded Context: Profiles
 
+**Profiles** administra las distintas "caras" con las que un mismo Account (definido en IAM) se presenta dentro de SafeDiary: el perfil personal del paciente, su alias comunitario anónimo y la ficha profesional del especialista, incluyendo su solicitud de verificación (US-002, US-006, US-036, US-041, US-042). Profiles **no** almacena credenciales ni consentimiento —eso es responsabilidad exclusiva de IAM—; solo referencia el `accountId` y confía en IAM para validar la identidad. De igual forma, Profiles publica los datos de la ficha profesional (especialidades, tarifa, disponibilidad declarada) pero no gestiona la reserva transaccional de una cita, que corresponde a un futuro contexto de agendamiento.
+
+Los mockups de la aplicación confirman y afinan tres detalles del modelo: (1) la pantalla *Home* muestra el `displayName` en el saludo ("Good morning, Elena") y el `avatarUrl` en la cabecera, tal como se modeló en `PersonalProfile`; (2) la pantalla *Support* expone en cada tarjeta de especialista credencial académica, título profesional, años de experiencia, la etiqueta "Accepts Insurance", un resumen de calificación (p. ej. "4.9 (140+)") y un ícono de marcador/favorito, información que **no** estaba en la primera versión del `ClinicianProfile` y que se incorpora a continuación; y (3) la pantalla *Community* indica "Voice Masking Active: Pitch Shift: Soft Whisper", confirmando que el `CommunityAlias` necesita una preferencia de enmascaramiento de voz que Rooms aplicará en tiempo real.
 
 #### 2.6.2.1. Domain Layer
 
+**Entities y Aggregates**
+- **PersonalProfile (Aggregate Root):** id, accountId, displayName, avatarUrl, aiTonePreference, proactiveFollowUpEnabled, savedClinicianProfileIds[] (especialistas guardados/marcados desde el directorio — ícono de marcador en *Support*).
+- **CommunityAlias (Aggregate Root):** id, accountId, aliasHandle, active, rotatedAt, voiceMaskPreset — identidad seudónima usada en Communities/Rooms, separada de la identidad clínica (ver Ubiquitous Language, sección 2.3.6). El `voiceMaskPreset` (p. ej. "Soft Whisper") es la preferencia que Rooms consulta para aplicar el efecto de voz sin exponer el tono real del usuario.
+- **ClinicianProfile (Aggregate Root):** id, accountId, credential, title, specialties[], yearsOfExperience, bio, hourlyRate, currency, sessionDurationMinutes, insuranceAccepted, verificationStatus, publishedInDirectory, ratingAverage, reviewCount. Los dos últimos campos son un **read model** cacheado: Profiles no calcula reseñas ni confianza (eso pertenece a un futuro contexto de Pagos/Reseñas, ver Ubiquitous Language "Payments, Reviews & Trust"), solo los refleja en la ficha para no depender de una llamada síncrona cada vez que se lista el directorio.
+- **AvailabilityWindow:** bloque recurrente (día, hora de inicio/fin, zona horaria) que el especialista publica como disponible. La "próxima disponibilidad" que muestra la tarjeta del directorio ("Next available: Today, 4:30 PM") es un valor compuesto a partir de estas ventanas y de los horarios ya reservados en el futuro contexto de agendamiento, no un campo propio de Profiles.
+- **ClinicianVerification:** solicitud de verificación con sus documentos de credencial y su estado (PENDING, APPROVED, REJECTED).
+
+**Value Objects**
+- **DisplayName, AvatarUrl, AliasHandle:** identificadores de presentación.
+- **Specialty, HourlyRate (Money), Timezone:** datos de la ficha profesional.
+- **Credential, ProfessionalTitle:** p. ej. "Psy.D.", "LMFT", "MD" y "Licensed Clinical Psychologist" respectivamente.
+- **RatingSummary:** ratingAverage + reviewCount, recibido por evento de integración.
+- **VoiceMaskPreset:** NONE, SOFT_WHISPER, DEEP_TONE, ROBOTIC.
+- **VerificationStatus:** PENDING, APPROVED, REJECTED.
+
+**Domain Events**
+- PersonalProfileUpdated, SpecialistSaved, SpecialistUnsaved, CommunityAliasRotated, VoiceMaskPresetUpdated, ClinicianVerificationRequested, ClinicianVerificationApproved, ClinicianVerificationRejected, ClinicianProfilePublished, ClinicianAvailabilityPublished.
+
+**Commands**
+- UpdatePersonalProfileCommand, SaveSpecialistCommand, RemoveSavedSpecialistCommand, RotateCommunityAliasCommand, UpdateVoiceMaskPresetCommand, SubmitClinicianVerificationCommand, ReviewClinicianVerificationCommand, UpdateClinicianProfileCommand, PublishAvailabilityWindowsCommand, ApplyClinicianRatingSummaryCommand (interna, disparada al recibir el evento de integración del contexto de Reseñas).
+
+**Queries**
+- GetPersonalProfileByAccountIdQuery, GetSavedSpecialistsByAccountIdQuery, GetCommunityAliasByAccountIdQuery, SearchClinicianProfilesQuery (por especialidad, tarifa, seguro y disponibilidad — soporta US-002), GetClinicianProfileByIdQuery, GetClinicianVerificationStatusQuery.
+
+**Domain Services (Contratos)**
+- **ClinicianDirectoryPublicationService:** decide si `publishedInDirectory = true` (requiere verificación aprobada y al menos una disponibilidad publicada).
+- **AliasGenerationService:** genera y rota alias sin exponer la identidad clínica.
 
 #### 2.6.2.2. Interface Layer
 
+**Controllers**
+- **PersonalProfilesController:** edición de nombre, foto y preferencias (US-006, US-026).
+- **SpecialistBookmarksController:** guarda y elimina especialistas marcados desde el directorio (ícono de marcador en *Support*).
+- **CommunityAliasesController:** genera, rota el alias comunitario y actualiza su preferencia de enmascaramiento de voz (pantalla *Community*).
+- **ClinicianProfilesController:** publica y busca fichas profesionales (US-002, US-036, US-042).
+- **ClinicianVerificationsController:** recibe y consulta solicitudes de verificación (US-041).
+
+**Resources (Request/Response DTOs)**
+- **PersonalProfile:** UpdatePersonalProfileResource, AiTonePreferenceResource.
+- **SpecialistBookmark:** SaveSpecialistResource, SavedSpecialistListResource.
+- **CommunityAlias:** CommunityAliasResource, VoiceMaskPresetResource.
+- **ClinicianProfile:** UpdateClinicianProfileResource, ClinicianSearchResource, ClinicianProfileResource (incluye credential, title, yearsOfExperience, insuranceAccepted, ratingAverage, reviewCount), AvailabilityWindowResource.
+- **ClinicianVerification:** SubmitVerificationResource, VerificationStatusResource.
 
 #### 2.6.2.3. Application Layer
 
+**Command Handlers**
+- **PersonalProfileCommandServiceImpl:** UpdatePersonalProfileCommand.
+- **SpecialistBookmarkCommandServiceImpl:** SaveSpecialistCommand, RemoveSavedSpecialistCommand.
+- **CommunityAliasCommandServiceImpl:** RotateCommunityAliasCommand, UpdateVoiceMaskPresetCommand.
+- **ClinicianProfileCommandServiceImpl:** UpdateClinicianProfileCommand, PublishAvailabilityWindowsCommand.
+- **ClinicianVerificationServiceImpl:** SubmitClinicianVerificationCommand, ReviewClinicianVerificationCommand.
+- **ClinicianRatingSyncServiceImpl:** ApplyClinicianRatingSummaryCommand, ejecutado al consumir el evento de integración `ClinicianRatingSummaryUpdated` publicado por el futuro contexto de Reseñas.
+
+**Query Handlers**
+- **PersonalProfileQueryServiceImpl:** GetPersonalProfileByAccountIdQuery, GetSavedSpecialistsByAccountIdQuery.
+- **ClinicianDirectoryQueryServiceImpl:** SearchClinicianProfilesQuery, GetClinicianProfileByIdQuery, GetClinicianVerificationStatusQuery.
 
 #### 2.6.2.4. Infrastructure Layer
 
+**Repositories**
+- **PersonalProfileRepository:** consultas por accountId.
+- **SavedSpecialistRepository:** consultas de especialistas guardados por accountId; valida duplicados.
+- **CommunityAliasRepository:** consultas por accountId; valida unicidad del alias activo.
+- **ClinicianProfileRepository:** búsqueda por especialidad, tarifa, seguro y disponibilidad; filtra solo fichas publicadas para el directorio; ordena por calificación cacheada.
+- **ClinicianVerificationRepository:** consultas por estado y por clinicianProfileId.
+
+**Adaptadores externos**
+- **DocumentStorageAdapter:** almacena las credenciales de verificación cifradas (bucket privado, acceso restringido a revisión administrativa).
+- **ImageStorageAdapter:** almacena fotos de perfil y avatares.
+- **ReviewsIntegrationEventListener:** consume `ClinicianRatingSummaryUpdated` desde el Event Bus y actualiza el read model de calificación de `ClinicianProfile` (Profiles solo lee este dato, nunca lo calcula).
 
 #### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
 
+Código en **Structurizr DSL (C4 Model)**:
+
+```text
+workspace "SafeDiary - Profiles (Component Diagram)" "C4 Component Diagram del bounded context Profiles" {
+    model {
+        patient    = person "Paciente"    "Personaliza su perfil personal y su alias comunitario."
+        specialist = person "Especialista" "Solicita verificación y publica su ficha profesional."
+        visitor    = person "Usuario de la app" "Busca especialistas verificados en el directorio."
+
+        safeDiary = softwareSystem "SafeDiary" {
+
+            profilesApi = container "Profiles API" "Gestiona perfiles personales, alias comunitarios y fichas profesionales." "ASP.NET Core / Node.js Web API" {
+                personalProfilesController       = component "PersonalProfilesController"       "Edición de nombre, foto y preferencias."         "REST Controller"
+                bookmarksController              = component "SpecialistBookmarksController"    "Guarda y elimina especialistas marcados."        "REST Controller"
+                communityAliasesController       = component "CommunityAliasesController"        "Genera, rota el alias y su enmascaramiento de voz." "REST Controller"
+                clinicianProfilesController      = component "ClinicianProfilesController"       "Publica y busca fichas profesionales."           "REST Controller"
+                clinicianVerificationsController = component "ClinicianVerificationsController"  "Recibe solicitudes de verificación."             "REST Controller"
+
+                personalProfileCmdService    = component "PersonalProfileCommandServiceImpl"  "Actualiza el perfil personal."                          "Application Service"
+                bookmarkCmdService           = component "SpecialistBookmarkCommandServiceImpl" "Guarda y elimina especialistas marcados."             "Application Service"
+                aliasCmdService              = component "CommunityAliasCommandServiceImpl"   "Genera, rota el alias y su voiceMaskPreset."            "Application Service"
+                clinicianCmdService          = component "ClinicianProfileCommandServiceImpl" "Actualiza especialidades, tarifa y disponibilidad."     "Application Service"
+                verificationCmdService       = component "ClinicianVerificationServiceImpl"   "Procesa solicitudes de verificación."                   "Application Service"
+                clinicianDirectoryQryService = component "ClinicianDirectoryQueryServiceImpl" "Busca especialistas por especialidad y disponibilidad." "Application Service"
+                ratingSyncService            = component "ClinicianRatingSyncServiceImpl"     "Aplica el read model de calificación recibido por evento." "Application Service"
+
+                personalProfileAggregate = component "PersonalProfile Aggregate" "Invariantes del perfil personal, incluye especialistas guardados." "Domain Model (DDD)"
+                aliasAggregate           = component "CommunityAlias Aggregate"  "Invariantes del alias comunitario y su voiceMaskPreset."            "Domain Model (DDD)"
+                clinicianAggregate       = component "ClinicianProfile Aggregate" "Invariantes de la ficha profesional."      "Domain Model (DDD)"
+                publicationService       = component "ClinicianDirectoryPublicationService" "Determina si la ficha aparece en el directorio." "Domain Service"
+
+                personalProfileRepo = component "PersonalProfileRepository"      "Persistencia de perfiles personales."             "Repository"
+                savedSpecialistRepo = component "SavedSpecialistRepository"      "Persistencia de especialistas guardados."         "Repository"
+                aliasRepo           = component "CommunityAliasRepository"       "Persistencia de alias comunitarios."              "Repository"
+                clinicianRepo       = component "ClinicianProfileRepository"     "Persistencia y búsqueda de fichas profesionales." "Repository"
+                verificationRepo    = component "ClinicianVerificationRepository" "Persistencia de solicitudes de verificación."    "Repository"
+
+                docStorageAdapter    = component "DocumentStorageAdapter"          "Almacena credenciales de verificación cifradas." "Infrastructure Adapter"
+                imageStorageAdapter  = component "ImageStorageAdapter"             "Almacena fotos de perfil y avatares."            "Infrastructure Adapter"
+                reviewsEventListener = component "ReviewsIntegrationEventListener" "Consume ClinicianRatingSummaryUpdated."          "Infrastructure Adapter"
+            }
+
+            postgres = container "Profiles Database" "Persistencia de perfiles, alias y fichas profesionales."     "PostgreSQL 15"
+            eventBus = container "Event Bus"        "Publica ClinicianVerificationApproved, ClinicianProfilePublished; transporta ClinicianRatingSummaryUpdated." "RabbitMQ / Kafka"
+        }
+
+        iamContext     = softwareSystem "IAM (Bounded Context externo)"    "Provee el AccountId autenticado y valida identidad antes de exponer un perfil."
+        reviewsContext = softwareSystem "Reviews (Bounded Context futuro)" "Calcula reseñas y puntaje de confianza; publica ClinicianRatingSummaryUpdated."
+
+        patient    -> profilesApi "Edita su perfil y alias"          "HTTPS/JSON"
+        specialist -> profilesApi "Gestiona su ficha y verificación" "HTTPS/JSON"
+        visitor    -> profilesApi "Busca especialistas verificados"  "HTTPS/JSON"
+
+        personalProfilesController       -> personalProfileCmdService "Envía comandos"
+        bookmarksController               -> bookmarkCmdService "Envía comandos"
+        communityAliasesController       -> aliasCmdService "Envía comandos"
+        clinicianProfilesController      -> clinicianCmdService "Envía comandos"
+        clinicianProfilesController      -> clinicianDirectoryQryService "Envía queries"
+        clinicianVerificationsController -> verificationCmdService "Envía comandos"
+
+        personalProfileCmdService -> personalProfileAggregate "Orquesta"
+        bookmarkCmdService          -> personalProfileAggregate "Agrega/quita especialista guardado"
+        aliasCmdService             -> aliasAggregate "Orquesta"
+        clinicianCmdService         -> clinicianAggregate "Orquesta"
+        verificationCmdService      -> clinicianAggregate "Actualiza estado de verificación"
+        clinicianCmdService         -> publicationService "Evalúa publicación"
+        ratingSyncService            -> clinicianAggregate "Aplica ratingAverage / reviewCount"
+
+        clinicianCmdService       -> docStorageAdapter "Almacena credenciales"
+        personalProfileCmdService -> imageStorageAdapter "Almacena avatar"
+        reviewsEventListener      -> ratingSyncService "Despacha ApplyClinicianRatingSummaryCommand"
+
+        personalProfileCmdService    -> personalProfileRepo "Persiste"
+        bookmarkCmdService              -> savedSpecialistRepo "Persiste"
+        aliasCmdService                -> aliasRepo "Persiste"
+        clinicianCmdService            -> clinicianRepo "Persiste"
+        verificationCmdService         -> verificationRepo "Persiste"
+        clinicianDirectoryQryService   -> clinicianRepo "Consulta"
+        ratingSyncService               -> clinicianRepo "Persiste"
+
+        personalProfileRepo -> postgres "CRUD" "SQL/TCP"
+        savedSpecialistRepo -> postgres "CRUD" "SQL/TCP"
+        aliasRepo           -> postgres "CRUD" "SQL/TCP"
+        clinicianRepo       -> postgres "CRUD" "SQL/TCP"
+        verificationRepo    -> postgres "CRUD" "SQL/TCP"
+
+        clinicianAggregate -> eventBus "Publica ClinicianVerificationApproved / ClinicianProfilePublished"
+        reviewsContext     -> eventBus "Publica ClinicianRatingSummaryUpdated"
+        eventBus            -> reviewsEventListener "Entrega ClinicianRatingSummaryUpdated"
+
+        profilesApi -> iamContext "Valida AccountId autenticado" "HTTPS/JSON"
+    }
+
+    views {
+        component profilesApi "Profiles_Components" {
+            include *
+            autoLayout
+        }
+        styles {
+            element "Person"          { shape Person background #08427b color #ffffff }
+            element "Software System" { background #1168bd color #ffffff }
+            element "Container"       { background #438dd5 color #ffffff }
+            element "Component"       { background #85bbf0 color #000000 }
+        }
+    }
+}
+```
 
 #### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
 
-
 ##### 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams
 
+```mermaid
+classDiagram
+    class PersonalProfile {
+        +String id
+        +String accountId
+        +String displayName
+        +String avatarUrl
+        +String aiTonePreference
+        +Boolean proactiveFollowUpEnabled
+        +List~String~ savedClinicianProfileIds
+        +update()
+        +saveSpecialist(clinicianProfileId)
+        +removeSavedSpecialist(clinicianProfileId)
+    }
+    class CommunityAlias {
+        +String id
+        +String accountId
+        +String aliasHandle
+        +Boolean active
+        +VoiceMaskPreset voiceMaskPreset
+        +rotate()
+        +updateVoiceMaskPreset(preset)
+    }
+    class ClinicianProfile {
+        +String id
+        +String accountId
+        +String credential
+        +String title
+        +List~String~ specialties
+        +Int yearsOfExperience
+        +String bio
+        +Money hourlyRate
+        +Int sessionDurationMinutes
+        +Boolean insuranceAccepted
+        +VerificationStatus verificationStatus
+        +Boolean publishedInDirectory
+        +Decimal ratingAverage
+        +Int reviewCount
+        +updateProfile()
+        +publishAvailability()
+        +applyRatingSummary(ratingAverage, reviewCount)
+    }
+    class AvailabilityWindow {
+        +String id
+        +String dayOfWeek
+        +Time startTime
+        +Time endTime
+        +String timezone
+    }
+    class ClinicianVerification {
+        +String id
+        +String clinicianProfileId
+        +List~String~ documentRefs
+        +VerificationStatus status
+        +submit()
+        +review()
+    }
+    class ClinicianDirectoryPublicationService {
+        +evaluate(ClinicianProfile) Boolean
+    }
+
+    ClinicianProfile "1" --> "0..*" AvailabilityWindow : publica
+    ClinicianProfile "1" --> "1" ClinicianVerification : requiere
+    PersonalProfile "0..*" ..> ClinicianProfile : guarda como favorito
+    ClinicianDirectoryPublicationService ..> ClinicianProfile : evalúa
+```
 
 ##### 2.6.2.6.2. Bounded Context Database Design Diagram
+
+```mermaid
+erDiagram
+    PERSONAL_PROFILES {
+        uuid id PK
+        uuid account_id FK
+        string display_name
+        string avatar_url
+        string ai_tone_preference
+        boolean proactive_follow_up_enabled
+    }
+    SAVED_SPECIALISTS {
+        uuid id PK
+        uuid personal_profile_id FK
+        uuid clinician_profile_id FK
+        datetime saved_at
+    }
+    COMMUNITY_ALIASES {
+        uuid id PK
+        uuid account_id FK
+        string alias_handle
+        boolean active
+        string voice_mask_preset
+        datetime rotated_at
+    }
+    CLINICIAN_PROFILES {
+        uuid id PK
+        uuid account_id FK
+        string credential
+        string title
+        int years_of_experience
+        string bio
+        float hourly_rate
+        string currency
+        int session_duration_minutes
+        boolean insurance_accepted
+        string verification_status
+        boolean published_in_directory
+        float rating_average
+        int review_count
+    }
+    CLINICIAN_SPECIALTIES {
+        uuid id PK
+        uuid clinician_profile_id FK
+        string specialty_name
+    }
+    CLINICIAN_AVAILABILITY_WINDOWS {
+        uuid id PK
+        uuid clinician_profile_id FK
+        string day_of_week
+        time start_time
+        time end_time
+        string timezone
+    }
+    CLINICIAN_VERIFICATIONS {
+        uuid id PK
+        uuid clinician_profile_id FK
+        string status
+        datetime submitted_at
+        datetime reviewed_at
+    }
+
+    PERSONAL_PROFILES ||--o{ SAVED_SPECIALISTS : "bookmarks"
+    CLINICIAN_PROFILES ||--o{ SAVED_SPECIALISTS : "is bookmarked in"
+    CLINICIAN_PROFILES ||--o{ CLINICIAN_SPECIALTIES : "has specialties"
+    CLINICIAN_PROFILES ||--o{ CLINICIAN_AVAILABILITY_WINDOWS : "publishes"
+    CLINICIAN_PROFILES ||--|| CLINICIAN_VERIFICATIONS : "requires"
+```
 
 
 
