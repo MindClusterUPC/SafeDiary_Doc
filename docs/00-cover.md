@@ -90,6 +90,8 @@ Proyecto
 | 0.0.10 | 18/09/2026 | Andrés Torres | Añadir Product Backlog |
 | 0.0.11 | 18/09/2026 | Marcelo Cuadros | Añadir Analisis de entrevistas del primer segmento objetivo |
 | 0.0.12 | 18/09/2026 | Marcelo Cuadros | Añadir Analisis de entrevistas del segundo segmento objetivo |
+| 0.0.13 | 18/09/2026 | Andrés Torres | Añadir Encabezados por Bounded Context |
+| 0.0.14 | 18/09/2026 | Marcelo Cuadros | Completado del indice en el README.md | 
 
 # Project Report Collaboration Insights
 
