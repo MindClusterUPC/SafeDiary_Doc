@@ -90,8 +90,10 @@ Proyecto
 | 0.0.10 | 18/09/2026 | Andrés Torres | Añadir Product Backlog |
 | 0.0.11 | 18/09/2026 | Marcelo Cuadros | Añadir Analisis de entrevistas del primer segmento objetivo |
 | 0.0.12 | 18/09/2026 | Marcelo Cuadros | Añadir Analisis de entrevistas del segundo segmento objetivo |
-| 0.0.13 | 18/09/2026 | Andrés Torres | Añadir Encabezados por Bounded Context |
-| 0.0.14 | 18/09/2026 | Marcelo Cuadros | Completado del indice en el README.md | 
+| 0.0.13 | 18/09/2026 | Juan Wang | Elaboración del User Journey Mapping (sección 2.3.3) para los segmentos de Pacientes Jóvenes (María) y Psicólogos (Dra. Laura Gómez) integrando la rueda de emociones de Plutchik y artefactos para UXPressia |
+| 0.0.14 | 18/09/2026 | Juan Wang | Modelado de Big Picture EventStorming (Fases 1 y 2) y definición del Bounded Context Canvas para AssistantAI; y configuración de importación del Product Backlog para Trello con clasificación por épicas |
+| 0.0.15 | 18/09/2026 | Andrés Torres | Añadir Encabezados por Bounded Context |
+| 0.0.16 | 18/09/2026 | Marcelo Cuadros | Completado del indice en el README.md | 
 
 # Project Report Collaboration Insights
 
