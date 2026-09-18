@@ -329,7 +329,9 @@ La matriz reúne las seis tareas más importantes de cada segmento y las prioriz
 
 ### 2.3.5. Big Picture EventStorming
 
+![Event storming](../assets/images/chap2/event-storming/big-event-storming.png)
 
+<em>Organización del Big Picture Event Storming tras discutir en grupo los factores más importantes involucrados en la experiencia de usuario</em>
 
 ### 2.3.6. Ubiquitous Language
 
