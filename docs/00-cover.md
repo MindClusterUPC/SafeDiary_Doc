@@ -89,6 +89,7 @@ Proyecto
 | 0.0.9 | 18/09/2026 | Santiago Vargas | Añadir entrevista psicologo 3 y corrección de intregrantes de equipo |
 | 0.0.10 | 18/09/2026 | Andrés Torres | Añadir Product Backlog |
 | 0.0.11 | 18/09/2026 | Marcelo Cuadros | Añadir Analisis de entrevistas del primer segmento objetivo |
+| 0.0.12 | 18/09/2026 | Marcelo Cuadros | Añadir Analisis de entrevistas del segundo segmento objetivo |
 
 # Project Report Collaboration Insights
 
