@@ -1315,29 +1315,377 @@ erDiagram
 
 ### 2.6.6. Bounded Context: Diary
 
+**Diary (Diario Emocional)** es el contexto nuclear (*core domain*) que administra el registro personal, confidencial y cronológico de los pacientes en SafeDiary. Modela la experiencia clásica de un diario íntimo enriquecida para el entorno móvil, permitiendo al usuario capturar sus vivencias cotidianas mediante **texto libre o notas de voz** grabadas directamente desde el frontend (US-008). Asimismo, gobierna el registro rápido del estado anímico (*Mood Check-In*, US-010), la asociación de factores contextuales externos como sueño, energía y estrés (US-031), la configuración de recordatorios de escritura (US-024), el cálculo de rachas e insignias por constancia emocional (US-029), la selección de recuerdos retrospectivos (US-032) y la exportación estructurada del historial a formato PDF (US-028). 
+
+Para salvaguardar la intimidad del paciente y mantener una separación de responsabilidades estricta, Diary opera bajo los siguientes límites arquitectónicos:
+1. **Identidad y Bóveda Privada:** Diary no gestiona credenciales ni evalúa biometría; referencia el `accountId` provisto por IAM. Las entradas que el usuario traslada a su "Bóveda Privada" (US-025) son marcadas como protegidas (`isVaulted = true`), excluyéndose automáticamente de las consultas y vistas ordinarias del historial; la autorización de apertura y el PIN secundario residen exclusivamente en IAM.
+2. **Consentimiento para Especialistas:** Cuando un psicólogo verificado consulta las entradas autorizadas de un paciente (US-045, US-046), Diary no evalúa reglas de acceso por sí mismo, sino que valida el alcance vigente a través del contrato `ConsentAuthorizationService` provisto por IAM.
+3. **Audio e Inteligencia Artificial:** Diary recibe y almacena las referencias al archivo de audio crudo (`audioUrl`, duración, formato) generado desde el dispositivo móvil. Sin embargo, **no** realiza la transcripción fonética, ni el análisis de sentimientos, ni la generación de reflexiones terapéuticas asistidas; cuando una entrada de voz o texto se crea, Diary publica el evento `DiaryEntryCreated`, el cual es consumido de forma asíncrona por el contexto **AssistantAI** para procesar la transcripción y sugerir etiquetas emocionales sin bloquear la persistencia del diario clásico.
+4. **Coherencia con los Mockups Móviles:** La interfaz de SafeDiary refleja este modelo en tres componentes clave: la pantalla *Home* (selector rápido de emociones de 1 toque con escala de valencia), la pantalla *Diary* (línea de tiempo cronológica, filtros por etiquetas, reproductor embebido de notas de voz y botón flotante de grabación), y la ventana modal de *Exportación* (que permite seleccionar rangos temporales y excluye por defecto entradas sensibles).
 
 #### 2.6.6.1. Domain Layer
 
+**Entities y Aggregates**
+- **DiaryEntry (Aggregate Root):** id, accountId, title, content (cuerpo textual o transcripción final), entryType (TEXT, AUDIO, HYBRID), audioMetadata (referencia al archivo de voz grabado en el dispositivo), primaryEmotion, emotionalIntensity (escala 1-5), tags[], externalFactors, status (DRAFT, PUBLISHED, ARCHIVED), isSensitive, isVaulted, createdAt, updatedAt. Invariantes del agregado: una entrada debe contener obligatoriamente texto significativo o una referencia de audio válida (US-008); las entradas marcadas como `isVaulted = true` solo son legibles si la consulta incluye un token de autorización emitido por IAM.
+- **MoodCheckIn (Aggregate Root):** id, accountId, emotion, valenceScore (-2 a +2), energyScore (1 a 5), loggedAt. Permite el registro rápido de un toque desde el *Home* sin exigir la redacción de una entrada completa (US-010).
+- **DiaryReminder (Aggregate Root):** id, accountId, reminderTime (Time), daysOfWeek (arreglo de días activos), isEnabled, lastTriggeredAt. Modela las alarmas programadas para cultivar el hábito de registro diario (US-024).
+- **DiaryStreak (Aggregate Root):** id, accountId, currentStreakDays, longestStreakDays, lastLogDate, freezeTokensAvailable. Mantiene la trazabilidad de la constancia del usuario; se actualiza de forma idempotente con cada entrada o check-in realizado en el día (US-029).
+
+**Value Objects**
+- **EntryId, MoodCheckInId, ReminderId, StreakId:** identificadores únicos fuertemente tipados.
+- **EntryType:** TEXT, AUDIO, HYBRID.
+- **EmotionType:** JOY, SADNESS, ANXIETY, ANGER, CALM, FEAR, SURPRISE, DISGUST (alineado con la rueda de Plutchik).
+- **AudioMetadata:** audioUrl, durationSeconds, format (m4a/aac/wav), fileSizeBytes.
+- **ExternalFactors:** sleepHours, energyLevel (LOW, MEDIUM, HIGH), stressLevel (LOW, MEDIUM, HIGH), caffeineIntake (NONE, MODERATE, HIGH) (US-031).
+- **DateRange:** startDate, endDate.
+- **EntryStatus:** DRAFT, PUBLISHED, ARCHIVED.
+
+**Domain Events**
+- **DiaryEntryCreated:** publicado cuando el usuario guarda una entrada (notifica a AssistantAI para transcripción/análisis y a Rutines/Streaks para registrar avance).
+- **DiaryEntryUpdated:** publicado tras editar título, cuerpo o etiquetas de una entrada.
+- **DiaryEntryDeleted:** publicado al descartar un registro.
+- **DiaryEntryVaulted / DiaryEntryUnvaulted:** publicado cuando una entrada se traslada hacia o desde la bóveda privada.
+- **MoodCheckInLogged:** emitido al marcar el estado anímico rápido en la pantalla principal.
+- **DiaryStreakIncremented:** emitido cuando la racha de días consecutivos de registro aumenta.
+- **DiaryStreakReset:** emitido cuando transcurre más de un día calendario sin actividad.
+
+**Commands**
+- CreateTextDiaryEntryCommand, CreateVoiceDiaryEntryCommand, UpdateDiaryEntryCommand, DeleteDiaryEntryCommand, ToggleEntryVaultStatusCommand, LogMoodCheckInCommand, ConfigureDiaryReminderCommand, ExportDiaryToPdfCommand.
+
+**Queries**
+- GetDiaryEntryByIdQuery, GetDiaryEntriesByAccountQuery (soporta filtros por rango de fechas, emoción predominante y etiquetas), GetMoodCheckInsByRangeQuery, GetDiaryStreakByAccountQuery, GetDiaryRemindersByAccountQuery, GetAuthorizedDiaryEntriesForSpecialistQuery (valida permisos de IAM), GetRetrospectiveMemoryQuery (US-032).
+
+**Domain Services (Contratos)**
+- **StreakCalculationService:** evalúa las fechas de los registros diarios del usuario; si la fecha corresponde al día siguiente de `lastLogDate`, incrementa `currentStreakDays`; si corresponde al mismo día, no altera la racha; si hay una brecha mayor a 24 horas y no hay fichas de congelamiento, reinicia el contador.
+- **RetrospectiveMemoryService:** recupera entradas pasadas significativas (p. ej. de hace 30, 90 o 365 días) garantizando que ninguna entrada marcada como `isSensitive` o `isVaulted` sea expuesta en recordatorios automáticos (US-032).
+- **DiaryExportPreparationService:** filtra, sanitiza y compila las entradas seleccionadas por el paciente para generar el informe PDF, excluyendo rigurosamente el material protegido en bóveda (US-028).
 
 #### 2.6.6.2. Interface Layer
 
+**Controllers**
+- **DiaryEntriesController:** expone los endpoints REST para registrar entradas de texto y notas de voz (`multipart/form-data` o URL de blob pre-cargado), listar el historial cronológico con filtros paginados, actualizar y eliminar entradas (US-008, US-025).
+- **MoodCheckInsController:** endpoint optimizado y de baja latencia para capturar el estado emocional rápido desde la pantalla de inicio (US-010).
+- **DiaryRemindersController:** administración de horarios y días de recordatorios locales/push (US-024).
+- **DiaryStreaksController:** consulta de la racha actual, récord histórico e insignias obtenidas (US-029).
+- **DiaryExportsController:** solicita la generación y descarga segura del reporte en PDF con el resumen gráfico y cronológico (US-028).
+- **SpecialistSharedDiaryController:** endpoint especializado que permite a un terapeuta con sesión activa consultar las entradas que el paciente le autorizó explícitamente compartir (US-045, US-046).
+
+**Resources (Request/Response DTOs)**
+- **DiaryEntry:** CreateTextDiaryEntryResource, CreateVoiceDiaryEntryResource, UpdateDiaryEntryResource, DiaryEntryResource, DiaryEntrySummaryResource (optimizado para feeds móviles).
+- **MoodCheckIn:** LogMoodCheckInResource, MoodCheckInResource, MoodTimelineResource.
+- **DiaryReminder:** ConfigureReminderResource, DiaryReminderResource.
+- **DiaryStreak:** DiaryStreakResource.
+- **DiaryExport:** RequestPdfExportResource, ExportStatusResource, ExportDownloadResource.
+- **SpecialistShared:** SharedEntryResource, SharedHistoryScopeResource.
 
 #### 2.6.6.3. Application Layer
 
+**Command Handlers**
+- **DiaryEntryCommandServiceImpl:** orquesta `CreateTextDiaryEntryCommand`, `CreateVoiceDiaryEntryCommand`, `UpdateDiaryEntryCommand`, `DeleteDiaryEntryCommand` y `ToggleEntryVaultStatusCommand`. Valida la no vacuidad del contenido, gestiona la subida de audio al repositorio de infraestructura y despacha `DiaryEntryCreated`.
+- **MoodCheckInCommandServiceImpl:** maneja `LogMoodCheckInCommand`, persiste el check-in e invoca la actualización de racha.
+- **DiaryReminderCommandServiceImpl:** gestiona `ConfigureDiaryReminderCommand` y sincroniza las reglas con el planificador de notificaciones.
+- **DiaryExportCommandServiceImpl:** orquesta `ExportDiaryToPdfCommand`, consume `DiaryExportPreparationService` y delega la renderización visual al adaptador de PDF.
+- **DiaryStreakCommandServiceImpl:** procesa la actualización de rachas en base al consumo de eventos internos.
+
+**Query Handlers**
+- **DiaryEntryQueryServiceImpl:** resuelve `GetDiaryEntryByIdQuery`, `GetDiaryEntriesByAccountQuery` y `GetRetrospectiveMemoryQuery`.
+- **MoodCheckInQueryServiceImpl:** resuelve `GetMoodCheckInsByRangeQuery`.
+- **DiaryStreakQueryServiceImpl:** resuelve `GetDiaryStreakByAccountQuery`.
+- **SpecialistSharedDiaryQueryServiceImpl:** resuelve `GetAuthorizedDiaryEntriesForSpecialistQuery`, invocando previamente al adaptador de IAM para corroborar que el especialista solicitante cuenta con un `Consent` vigente.
 
 #### 2.6.6.4. Infrastructure Layer
 
+**Repositories**
+- **DiaryEntryRepository:** implementación en PostgreSQL / EF Core o TypeORM. Indexado por `account_id` y `created_at` descendente; soporte de búsquedas por texto completo y etiquetas (`JSONB` o tabla relacional indexada).
+- **MoodCheckInRepository:** persistencia optimizada para series temporales de estados de ánimo y agregaciones por semana/mes.
+- **DiaryReminderRepository:** persistencia relacional de horarios y banderas de activación.
+- **DiaryStreakRepository:** persistencia del estado de rachas e historial de días completados.
+
+**Adaptadores externos**
+- **AudioStorageAdapter:** almacena los audios crudos en un bucket privado de objetos (AWS S3 o Google Cloud Storage) mediante URLs presignadas y cifrado en reposo AES-256 (TS-002).
+- **PdfGeneratorAdapter:** compila las entradas seleccionadas, gráficos de evolución y factores externos en un documento PDF protegido y visualmente profesional (US-028).
+- **NotificationSchedulingAdapter:** se comunica con el servicio de mensajería push móvil (Firebase Cloud Messaging / Apple APNs) para despachar recordatorios configurados (US-024).
+- **IamConsentClientAdapter:** cliente HTTP/gRPC que consulta la API de IAM para validar si una solicitud de especialista cumple las condiciones de `SharingPermission` (US-045, US-046).
 
 #### 2.6.6.5. Bounded Context Software Architecture Component Level Diagrams
 
+El siguiente código en **Structurizr DSL (C4 Model)** puede pegarse en [structurizr.com/dsl](https://structurizr.com/dsl) o en el [Structurizr Lite](https://docs.structurizr.com/lite) para generar el diagrama de componentes de Diary:
+
+```text
+workspace "SafeDiary - Diary (Component Diagram)" "C4 Component Diagram del bounded context Diary" {
+    model {
+        patient    = person "Paciente" "Registra vivencias por texto/voz, mood check-in y consulta su diario."
+        specialist = person "Especialista Verificado" "Consulta las entradas autorizadas del diario de su consultante."
+
+        safeDiary = softwareSystem "SafeDiary" {
+
+            diaryApi = container "Diary API" "Gestiona entradas de texto/voz, check-in emocional, rachas y exportación." "ASP.NET Core / Node.js Web API" {
+                entriesController     = component "DiaryEntriesController"          "Registro y gestión de entradas de texto y voz."       "REST Controller"
+                moodController        = component "MoodCheckInsController"          "Captura rápida de estado de ánimo en 1 toque."       "REST Controller"
+                remindersController   = component "DiaryRemindersController"        "Configura recordatorios de escritura."                "REST Controller"
+                streaksController     = component "DiaryStreaksController"          "Consulta racha y constancia de registro."             "REST Controller"
+                exportsController     = component "DiaryExportsController"          "Genera reportes descargables en PDF."                 "REST Controller"
+                sharedController      = component "SpecialistSharedDiaryController" "Expone entradas autorizadas a especialistas."         "REST Controller"
+
+                entryCmdService       = component "DiaryEntryCommandServiceImpl"     "Casos de uso de creación y edición de entradas."     "Application Service"
+                entryQryService       = component "DiaryEntryQueryServiceImpl"       "Consultas del historial y recuerdos retrospectivos."  "Application Service"
+                moodCmdService        = component "MoodCheckInCommandServiceImpl"    "Casos de uso de registro de humor."                   "Application Service"
+                moodQryService        = component "MoodCheckInQueryServiceImpl"      "Consultas de serie temporal de humor."                "Application Service"
+                reminderCmdService    = component "DiaryReminderCommandServiceImpl"  "Casos de uso de recordatorios."                       "Application Service"
+                streakCmdService      = component "DiaryStreakCommandServiceImpl"    "Orquestación y actualización de rachas."              "Application Service"
+                streakQryService      = component "DiaryStreakQueryServiceImpl"      "Consulta de días consecutivos de actividad."          "Application Service"
+                exportCmdService      = component "DiaryExportCommandServiceImpl"    "Orquesta la compilación y renderizado de PDF."        "Application Service"
+                sharedQryService      = component "SpecialistSharedDiaryQueryService" "Consulta entradas autorizadas validando consentimiento." "Application Service"
+
+                entryAggregate        = component "DiaryEntry Aggregate"            "Invariantes de contenido, audio, emoción y bóveda."   "Domain Model (DDD)"
+                moodAggregate         = component "MoodCheckIn Aggregate"           "Invariantes del check-in rápido."                     "Domain Model (DDD)"
+                streakAggregate       = component "DiaryStreak Aggregate"           "Invariantes de racha y constancia."                   "Domain Model (DDD)"
+                reminderAggregate     = component "DiaryReminder Aggregate"         "Invariantes de alarmas y frecuencias."                "Domain Model (DDD)"
+                streakDomainService   = component "StreakCalculationService"        "Calcula avance o reseteo de rachas diarias."          "Domain Service"
+                memoryDomainService   = component "RetrospectiveMemoryService"      "Selecciona vivencias pasadas no sensibles."           "Domain Service"
+                exportDomainService   = component "DiaryExportPreparationService"   "Filtra y sanea datos para exportación."               "Domain Service"
+
+                entryRepo             = component "DiaryEntryRepository"            "Persistencia y filtrado de entradas del diario."      "Repository"
+                moodRepo              = component "MoodCheckInRepository"           "Persistencia de check-ins anímicos."                  "Repository"
+                streakRepo            = component "DiaryStreakRepository"           "Persistencia de rachas de constancia."                "Repository"
+                reminderRepo          = component "DiaryReminderRepository"         "Persistencia de recordatorios."                       "Repository"
+
+                audioAdapter          = component "AudioStorageAdapter"             "Sube notas de voz con URLs presignadas (S3/GCS)."     "Infrastructure Adapter"
+                pdfAdapter            = component "PdfGeneratorAdapter"             "Renderiza el historial seleccionado en PDF."          "Infrastructure Adapter"
+                pushAdapter           = component "NotificationSchedulingAdapter"   "Programa avisos locales y notificaciones push."       "Infrastructure Adapter"
+                iamClientAdapter      = component "IamConsentClientAdapter"         "Consulta contratos de consentimiento a IAM."          "Infrastructure Adapter"
+            }
+
+            postgres = container "Diary Database" "Persistencia relacional de entradas, estados y rachas." "PostgreSQL 15"
+            eventBus = container "Event Bus"      "Publica DiaryEntryCreated, MoodCheckInLogged, DiaryStreakUpdated." "RabbitMQ / Kafka"
+            storage  = container "Object Storage" "Almacenamiento cifrado de notas de voz en audio." "AWS S3 / GCS"
+        }
+
+        iamContext         = softwareSystem "IAM (Bounded Context externo)"         "Valida AccountId y autorizaciones de consentimiento de especialistas."
+        assistantAiContext = softwareSystem "AssistantAI (Bounded Context externo)" "Consume DiaryEntryCreated para transcribir y generar reflexiones terapéuticas."
+
+        patient    -> diaryApi "Registra pensamientos, notas de voz y estado de ánimo" "HTTPS/JSON & Audio Stream"
+        specialist -> diaryApi "Consulta entradas autorizadas de sus consultantes"      "HTTPS/JSON"
+
+        entriesController   -> entryCmdService     "Envía comandos"
+        entriesController   -> entryQryService     "Envía queries"
+        moodController      -> moodCmdService      "Envía comandos"
+        moodController      -> moodQryService      "Envía queries"
+        remindersController -> reminderCmdService  "Envía comandos"
+        streaksController   -> streakQryService    "Envía queries"
+        exportsController   -> exportCmdService    "Envía comandos"
+        sharedController    -> sharedQryService    "Envía queries"
+
+        entryCmdService   -> entryAggregate       "Orquesta"
+        entryCmdService   -> audioAdapter         "Almacena nota de voz"
+        entryCmdService   -> streakCmdService     "Notifica actividad de registro"
+        entryQryService   -> memoryDomainService  "Aplica filtros retrospectivos"
+        moodCmdService    -> moodAggregate        "Orquesta"
+        moodCmdService    -> streakCmdService     "Notifica actividad de registro"
+        streakCmdService  -> streakDomainService  "Calcula racha"
+        streakCmdService  -> streakAggregate      "Actualiza racha"
+        exportCmdService  -> exportDomainService  "Prepara datos"
+        exportCmdService  -> pdfAdapter           "Genera documento"
+        reminderCmdService-> pushAdapter          "Programa notificación"
+        sharedQryService  -> iamClientAdapter     "Verifica alcance de Consent"
+
+        entryCmdService   -> entryRepo            "Persiste"
+        entryQryService   -> entryRepo            "Consulta"
+        moodCmdService    -> moodRepo             "Persiste"
+        moodQryService    -> moodRepo             "Consulta"
+        streakCmdService  -> streakRepo           "Persiste"
+        streakQryService  -> streakRepo           "Consulta"
+        reminderCmdService-> reminderRepo         "Persiste"
+
+        entryRepo    -> postgres "CRUD" "SQL/TCP"
+        moodRepo     -> postgres "CRUD" "SQL/TCP"
+        streakRepo   -> postgres "CRUD" "SQL/TCP"
+        reminderRepo -> postgres "CRUD" "SQL/TCP"
+        audioAdapter -> storage  "Guarda audio cifrado" "HTTPS/S3 API"
+
+        entryAggregate  -> eventBus "Publica DiaryEntryCreated"
+        moodAggregate   -> eventBus "Publica MoodCheckInLogged"
+        streakAggregate -> eventBus "Publica DiaryStreakIncremented"
+
+        eventBus         -> assistantAiContext "Entrega DiaryEntryCreated para transcripción e inferencia"
+        iamClientAdapter -> iamContext         "Consulta ConsentScope" "HTTPS/JSON"
+    }
+
+    views {
+        component diaryApi "Diary_Components" {
+            include *
+            autoLayout
+        }
+        styles {
+            element "Person"          { shape Person background #08427b color #ffffff }
+            element "Software System" { background #1168bd color #ffffff }
+            element "Container"       { background #438dd5 color #ffffff }
+            element "Component"       { background #85bbf0 color #000000 }
+        }
+    }
+}
+```
+
+![Diary Components](../assets/images/bounded-context/diary/diary-c4-diagramDiaryComponents.png)
 
 #### 2.6.6.6. Bounded Context Software Architecture Code Level Diagrams
 
-
 ##### 2.6.6.6.1. Bounded Context Domain Layer Class Diagrams
 
+Código en **Mermaid** (puede pegarse en [mermaid.live](https://mermaid.live) para visualizarlo):
+
+```mermaid
+classDiagram
+    class DiaryEntry {
+        +String id
+        +String accountId
+        +String title
+        +String content
+        +EntryType entryType
+        +AudioMetadata audioMetadata
+        +EmotionType primaryEmotion
+        +Int emotionalIntensity
+        +List~String~ tags
+        +ExternalFactors externalFactors
+        +EntryStatus status
+        +Boolean isSensitive
+        +Boolean isVaulted
+        +DateTime createdAt
+        +DateTime updatedAt
+        +create()
+        +update()
+        +markAsSensitive()
+        +moveToVault()
+        +removeFromVault()
+        +attachExternalFactors(factors)
+    }
+    class AudioMetadata {
+        +String audioUrl
+        +Int durationSeconds
+        +String format
+        +Long fileSizeBytes
+    }
+    class ExternalFactors {
+        +Float sleepHours
+        +String energyLevel
+        +String stressLevel
+        +String caffeineIntake
+    }
+    class MoodCheckIn {
+        +String id
+        +String accountId
+        +EmotionType emotion
+        +Int valenceScore
+        +Int energyScore
+        +DateTime loggedAt
+        +record()
+    }
+    class DiaryReminder {
+        +String id
+        +String accountId
+        +Time reminderTime
+        +List~Int~ daysOfWeek
+        +Boolean isEnabled
+        +configure()
+        +toggle()
+    }
+    class DiaryStreak {
+        +String id
+        +String accountId
+        +Int currentStreakDays
+        +Int longestStreakDays
+        +Date lastLogDate
+        +Int freezeTokensAvailable
+        +registerDailyActivity(Date logDate)
+        +resetStreak()
+    }
+    class StreakCalculationService {
+        +evaluateStreak(DiaryStreak, Date currentDate) Int
+    }
+    class RetrospectiveMemoryService {
+        +findMemories(accountId, List~DiaryEntry~) List~DiaryEntry~
+    }
+    class DiaryExportPreparationService {
+        +prepareExportData(List~DiaryEntry~, DateRange) List~DiaryEntry~
+    }
+
+    DiaryEntry "1" *-- "0..1" AudioMetadata : contiene
+    DiaryEntry "1" *-- "0..1" ExternalFactors : asocia
+    DiaryStreak ..> StreakCalculationService : utiliza
+    RetrospectiveMemoryService ..> DiaryEntry : evalúa
+    DiaryExportPreparationService ..> DiaryEntry : filtra
+```
+
+![Class Diagram](../assets/images/bounded-context/diary/diary-class-diagram.png)
 
 ##### 2.6.6.6.2. Bounded Context Database Design Diagram
+
+Código en **Mermaid ER Diagram** (también puede importarse en [dbdiagram.io](https://dbdiagram.io) adaptando la sintaxis):
+
+```mermaid
+erDiagram
+    DIARY_ENTRIES {
+        uuid id PK
+        uuid account_id FK
+        string title
+        text content
+        string entry_type
+        string audio_url
+        int audio_duration_seconds
+        string primary_emotion
+        int emotional_intensity
+        string status
+        boolean is_sensitive
+        boolean is_vaulted
+        datetime created_at
+        datetime updated_at
+    }
+    DIARY_ENTRY_TAGS {
+        uuid id PK
+        uuid diary_entry_id FK
+        string tag_name
+    }
+    DIARY_EXTERNAL_FACTORS {
+        uuid id PK
+        uuid diary_entry_id FK
+        float sleep_hours
+        string energy_level
+        string stress_level
+        string caffeine_intake
+    }
+    MOOD_CHECK_INS {
+        uuid id PK
+        uuid account_id FK
+        string emotion
+        int valence_score
+        int energy_score
+        datetime logged_at
+    }
+    DIARY_REMINDERS {
+        uuid id PK
+        uuid account_id FK
+        time reminder_time
+        string days_of_week
+        boolean is_enabled
+        datetime updated_at
+    }
+    DIARY_STREAKS {
+        uuid id PK
+        uuid account_id FK
+        int current_streak_days
+        int longest_streak_days
+        date last_log_date
+        int freeze_tokens_available
+        datetime updated_at
+    }
+
+    DIARY_ENTRIES ||--o{ DIARY_ENTRY_TAGS : "categorized by"
+    DIARY_ENTRIES ||--o| DIARY_EXTERNAL_FACTORS : "contextualized by"
+    DIARY_ENTRIES }o--|| MOOD_CHECK_INS : "shares account"
+    DIARY_ENTRIES }o--|| DIARY_STREAKS : "increments"
+```
+
+![ER Diagram](../assets/images/bounded-context/diary/diary-database-diagram.png)
 
 
 
