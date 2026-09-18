@@ -1707,29 +1707,425 @@ erDiagram
 
 ### 2.6.4. Bounded Context: Communities
 
+**Communities** es el contexto nuclear que gobierna la experiencia de apoyo comunitario anónimo de SafeDiary: administra la programación y el ciclo de vida de las salas, el ingreso como oyente, las solicitudes de turno de palabra, las reacciones de apoyo y las decisiones de moderación, reporte y bloqueo (US-004, US-005, US-034, US-035, TS-004, TS-005). Su objetivo es que una persona pueda recibir compañía o participar en una conversación sin revelar su identidad personal, clínica ni el contenido de su diario.
+
+La frontera del contexto separa deliberadamente tres responsabilidades. **Profiles** es dueño de `CommunityAlias` y de la preferencia de enmascaramiento de voz; **IAM** valida la cuenta y las restricciones de acceso; **Rooms** establece y finaliza la conexión WebRTC. Communities consume esos contratos mediante puertos, pero es el único responsable de decidir si una sala puede abrirse, quién puede entrar, cuándo un oyente puede convertirse en orador y qué acción de moderación corresponde. El audio crudo no forma parte del modelo de Communities y no se conserva por defecto.
+
+La máquina de estados de participación es `BROWSING -> JOINED_AS_LISTENER -> REQUESTING_SPEAKER -> SPEAKING -> LEFT`, con ramas excepcionales `MUTED`, `REMOVED` y `BLOCKED`. Un fallo de WebRTC no modifica por sí solo el estado del agregado: la operación puede reintentarse o compensarse sin duplicar participantes ni acciones de moderación.
 
 #### 2.6.4.1. Domain Layer
 
+**Entities y Aggregates**
+- **CommunitySession (Aggregate Root):** id, topic, description, tags[], moderatorAliasId, scheduledAt, openedAt, closedAt, lifecycle (SCHEDULED, OPEN, CLOSED, CANCELLED), participationMode, capacity, participants[], speakerRequests[] y version. Representa la sesión social de apoyo y protege las invariantes de aforo, ciclo de vida y roles. Expone los comportamientos `schedule()`, `open()`, `joinAsListener()`, `leave()`, `requestSpeaker()`, `approveSpeaker()`, `rejectSpeaker()`, `sendReaction()`, `muteParticipant()`, `removeParticipant()` y `close()`.
+- **ParticipantSession:** id, communitySessionId, communityAliasId, role (LISTENER, SPEAKER, MODERATOR), status (ACTIVE, MUTED, REMOVED, LEFT), joinedAt, leftAt. La identidad visible es exclusivamente el alias; `accountId`, nombre, correo y datos clínicos nunca ingresan al agregado.
+- **SpeakerRequest:** id, communitySessionId, participantSessionId, requestedAt, resolvedAt, status (PENDING, APPROVED, REJECTED, CANCELLED), resolvedByAliasId. Solo puede existir una solicitud pendiente por participante y únicamente el moderador puede resolverla.
+- **ModerationCase (Aggregate Root):** id, communitySessionId, reporterAliasId, reportedAliasId, reason, description, status (OPEN, UNDER_REVIEW, RESOLVED, DISMISSED), action, createdAt, resolvedAt. Conserva la trazabilidad del incidente sin almacenar audio crudo ni revelar el denunciante a la comunidad.
+- **BlockRelation (Aggregate Root):** id, blockerAliasId, blockedAliasId, createdAt, active. Impide nuevas interacciones entre ambos alias y permite aplicar el bloqueo más allá de una sala concreta.
+
+**Value Objects**
+- **CommunitySessionId, ParticipantSessionId, SpeakerRequestId, ModerationCaseId, BlockRelationId:** identificadores fuertemente tipados.
+- **CommunityAliasRef:** referencia opaca al alias validado por Profiles; no contiene datos personales ni clínicos.
+- **SessionTopic:** título, descripción y etiquetas normalizadas; rechaza títulos vacíos o fuera de los límites permitidos.
+- **SessionCapacity:** límite positivo de participantes y operación `hasAvailableSlot(currentParticipants)`.
+- **SessionLifecycle:** SCHEDULED, OPEN, CLOSED, CANCELLED.
+- **ParticipantRole:** LISTENER, SPEAKER, MODERATOR.
+- **ParticipationStatus:** BROWSING, JOINED_AS_LISTENER, REQUESTING_SPEAKER, SPEAKING, MUTED, REMOVED, BLOCKED, LEFT.
+- **ReactionType:** HUG, SUPPORT, THANKS, EMPATHY; restringe las reacciones a un catálogo seguro, sin texto libre.
+- **ReportReason:** HARASSMENT, HATE_SPEECH, SEXUAL_CONTENT, SELF_HARM_RISK, SPAM, OTHER.
+- **ModerationAction:** NONE, MUTE, REMOVE, BLOCK.
+
+**Invariantes y reglas de negocio**
+- Una sala solo acepta participantes cuando está `OPEN`, tiene capacidad disponible y el alias no está bloqueado.
+- Toda incorporación comienza con el rol `LISTENER` y el micrófono silenciado; hablar requiere una `SpeakerRequest` aprobada.
+- Solo el moderador de la sala puede aprobar turnos, silenciar, retirar participantes o cerrar la sala.
+- Los comandos repetidos de unión, salida, bloqueo o cierre son idempotentes y no duplican sesiones ni eventos.
+- Reportes, bloqueos y acciones de moderación producen un registro auditable; nunca exponen el alias del denunciante a otros participantes.
+- El cierre de una sala finaliza todas las participaciones activas y solicita a Rooms liberar las sesiones de audio.
+- Communities no persiste audio, transcripciones, emociones inferidas, nombres reales, credenciales ni contenido del diario.
+
+**Domain Events**
+- CommunitySessionScheduled, CommunitySessionOpened, CommunitySessionClosed, CommunitySessionCancelled.
+- ParticipantJoinedAsListener, ParticipantLeft, SpeakerRequested, SpeakerRequestApproved, SpeakerRequestRejected, ParticipantPromotedToSpeaker.
+- ReactionSent, ModerationCaseOpened, ParticipantMuted, ParticipantRemoved, ParticipantBlocked, ModerationCaseResolved.
+
+**Commands**
+- ScheduleCommunitySessionCommand, OpenCommunitySessionCommand, JoinCommunitySessionAsListenerCommand, LeaveCommunitySessionCommand.
+- RequestSpeakerTurnCommand, ApproveSpeakerTurnCommand, RejectSpeakerTurnCommand, SendSupportReactionCommand.
+- ReportParticipantCommand, MuteParticipantCommand, RemoveParticipantCommand, BlockParticipantCommand, ResolveModerationCaseCommand, CloseCommunitySessionCommand.
+
+**Queries**
+- GetOpenCommunitySessionsQuery, GetCommunitySessionByIdQuery, GetSessionParticipantsQuery, GetPendingSpeakerRequestsQuery.
+- GetParticipantStateQuery, GetModerationCasesQuery, GetModerationCaseByIdQuery, IsAliasBlockedQuery.
+
+**Domain Services (Contratos)**
+- **CommunitySessionAccessPolicy:** decide si un alias puede entrar considerando vigencia, estado de la sesión, capacidad, bloqueos y una participación activa previa.
+- **SpeakerTurnPolicy:** garantiza que la promoción a orador respete el orden de solicitud, el estado del participante y la autorización del moderador.
+- **ModerationPolicy:** determina qué acciones están permitidas para cada rol y exige motivo y auditoría para retirar o bloquear.
+- **CommunityModerationService:** coordina la apertura de un caso, la aplicación idempotente de la acción y la publicación de eventos cuando la decisión involucra más de un agregado.
 
 #### 2.6.4.2. Interface Layer
 
+**Controllers**
+- **CommunitySessionsController:** programa, abre, consulta y cierra sesiones comunitarias; expone el listado de sesiones abiertas y su capacidad (US-004).
+- **CommunityParticipationController:** permite entrar como oyente, salir, consultar el estado de participación, solicitar turno y enviar reacciones (US-005).
+- **SpeakerQueueController:** permite al moderador consultar y resolver solicitudes pendientes de palabra.
+- **CommunityModerationController:** registra reportes y bloqueos y permite silenciar o retirar participantes (US-034, US-035).
+
+**Resources (Request/Response DTOs)**
+- **Sessions:** ScheduleCommunitySessionResource, OpenCommunitySessionResource, CommunitySessionResource, CommunitySessionSummaryResource, SessionCapacityResource.
+- **Participation:** JoinAsListenerResource, ParticipantSessionResource, RequestSpeakerTurnResource, SpeakerRequestResource, SendReactionResource.
+- **Moderation:** ReportParticipantResource, ApplyModerationActionResource, ModerationCaseResource, BlockRelationResource.
+
+Los recursos públicos solo incluyen `communityAlias`, rol y estado comunitario. Los identificadores internos de cuenta, datos clínicos y detalles de auditoría permanecen fuera de las respuestas dirigidas a participantes.
 
 #### 2.6.4.3. Application Layer
 
+**Command Handlers**
+- **CommunitySessionCommandServiceImpl:** ScheduleCommunitySessionCommand, OpenCommunitySessionCommand y CloseCommunitySessionCommand.
+- **CommunityParticipationCommandServiceImpl:** JoinCommunitySessionAsListenerCommand, LeaveCommunitySessionCommand, RequestSpeakerTurnCommand y SendSupportReactionCommand.
+- **SpeakerQueueCommandServiceImpl:** ApproveSpeakerTurnCommand y RejectSpeakerTurnCommand.
+- **CommunityModerationCommandServiceImpl:** ReportParticipantCommand, MuteParticipantCommand, RemoveParticipantCommand, BlockParticipantCommand y ResolveModerationCaseCommand.
+
+**Query Handlers**
+- **CommunitySessionQueryServiceImpl:** GetOpenCommunitySessionsQuery y GetCommunitySessionByIdQuery.
+- **CommunityParticipationQueryServiceImpl:** GetSessionParticipantsQuery, GetParticipantStateQuery y GetPendingSpeakerRequestsQuery.
+- **CommunityModerationQueryServiceImpl:** GetModerationCasesQuery, GetModerationCaseByIdQuery e IsAliasBlockedQuery.
+
+**Event Handlers**
+- **CommunitySessionOpenedEventHandler:** solicita a Rooms la creación de la sesión WebRTC y publica la disponibilidad de la sala.
+- **ParticipantPromotedToSpeakerEventHandler:** concede temporalmente capacidad de publicación de audio mediante `AudioSessionPort`.
+- **ParticipantRemovedEventHandler:** revoca el permiso de audio, actualiza la presencia y registra la acción en auditoría.
+- **CommunitySessionClosedEventHandler:** finaliza conexiones activas y notifica a los participantes sin reabrir el agregado si la notificación falla.
+- **ModerationCaseOpenedEventHandler:** remite el caso al servicio de Audit/Moderation para revisión asíncrona.
+
+Cada handler utiliza claves de idempotencia compuestas por `commandId`, `communitySessionId` y `aliasId`. La persistencia del agregado y del evento saliente se realiza mediante el patrón Transactional Outbox para evitar estados confirmados sin notificación o eventos duplicados.
 
 #### 2.6.4.4. Infrastructure Layer
 
+**Repositories**
+- **CommunitySessionRepository:** persistencia optimista del agregado y búsqueda por estado, horario y etiquetas.
+- **ModerationCaseRepository:** persistencia append-friendly de reportes, decisiones y evidencias estructuradas.
+- **BlockRelationRepository:** consulta eficiente de bloqueos activos entre alias.
+- **CommunityOutboxRepository:** almacena eventos pendientes de publicación en el Event Bus.
+
+**Adaptadores externos**
+- **ProfilesAliasAdapter:** valida que `CommunityAliasRef` exista, esté activo y obtiene el `voiceMaskPreset` sin recuperar la identidad clínica.
+- **IamEligibilityAdapter:** confirma que la cuenta asociada pueda usar la comunidad y no esté suspendida; la respuesta se reduce a un resultado de elegibilidad opaco.
+- **RoomsAudioSessionAdapter:** implementa `AudioSessionPort` para crear/cerrar sesiones WebRTC, mantener el micrófono silenciado por defecto y conceder o revocar el rol de orador (TS-004).
+- **AuditModerationAdapter:** registra reportes y acciones sensibles para revisión y cumplimiento, sin copiar audio ni datos clínicos (TS-005).
+- **CommunityNotificationAdapter:** envía avisos de apertura, aprobación de turno, moderación y cierre.
+
+Los adaptadores aplican timeout, reintento acotado y circuit breaker. Si Rooms no responde durante una apertura, la sala permanece `SCHEDULED` o se marca como apertura fallida; si falla una notificación, el evento queda en Outbox sin revertir una decisión de dominio ya confirmada.
 
 #### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
 
+![structurizr-Communities-BC](../assets/images/chap2/boundedcontexts/Communities_Components.svg)
+
+Código en **Structurizr DSL (C4 Model)** para el componente Communities:
+
+```text
+workspace "SafeDiary - Communities (Component Diagram)" "C4 Component Diagram del bounded context Communities" {
+    model {
+        participant = person "Participante" "Escucha, solicita turno, reacciona, reporta o bloquea mediante su alias comunitario."
+        moderator   = person "Moderador / Anfitrión" "Conduce la sala y aplica acciones de seguridad autorizadas."
+
+        safeDiary = softwareSystem "SafeDiary" {
+            communitiesApi = container "Communities API" "Gobierna salas comunitarias, participación, turnos y moderación." "ASP.NET Core" {
+                sessionsController      = component "CommunitySessionsController" "Endpoints del ciclo de vida y consulta de sesiones comunitarias." "REST Controller"
+                participationController = component "CommunityParticipationController" "Endpoints de ingreso, salida, turno y reacciones." "REST Controller"
+                speakerQueueController  = component "SpeakerQueueController" "Endpoints de la cola de solicitudes de palabra." "REST Controller"
+                moderationController    = component "CommunityModerationController" "Endpoints de reporte, bloqueo, silencio y retiro." "REST Controller"
+
+                sessionCmdService       = component "CommunitySessionCommandServiceImpl" "Orquesta programación, apertura y cierre." "Application Service"
+                sessionQryService       = component "CommunitySessionQueryServiceImpl" "Consulta sesiones abiertas y detalle." "Application Service"
+                participationCmdService = component "CommunityParticipationCommandServiceImpl" "Orquesta ingreso, salida, turno y reacciones." "Application Service"
+                participationQryService = component "CommunityParticipationQueryServiceImpl" "Consulta presencia y cola de turnos." "Application Service"
+                moderationCmdService    = component "CommunityModerationCommandServiceImpl" "Coordina reportes y acciones de seguridad." "Application Service"
+
+                communitySessionAggregate = component "CommunitySession Aggregate" "Invariantes de ciclo de vida, aforo, roles y turnos." "Domain Model (DDD)"
+                moderationCaseAggregate = component "ModerationCase Aggregate" "Ciclo auditable de un reporte comunitario." "Domain Model (DDD)"
+                blockRelationAggregate  = component "BlockRelation Aggregate" "Restricción persistente entre alias." "Domain Model (DDD)"
+                sessionAccessPolicy     = component "CommunitySessionAccessPolicy" "Valida alias, capacidad, estado y bloqueos." "Domain Service"
+                moderationPolicy        = component "ModerationPolicy" "Autoriza y limita acciones del moderador." "Domain Service"
+
+                sessionRepo         = component "CommunitySessionRepository" "Persistencia del agregado de sesión comunitaria." "Repository"
+                moderationRepo      = component "ModerationCaseRepository" "Persistencia de casos de moderación." "Repository"
+                blockRepo           = component "BlockRelationRepository" "Persistencia y consulta de bloqueos." "Repository"
+                profilesAdapter     = component "ProfilesAliasAdapter" "Valida alias y preferencia de máscara." "Infrastructure Adapter"
+                iamAdapter          = component "IamEligibilityAdapter" "Valida elegibilidad sin exponer identidad." "Infrastructure Adapter"
+                roomsAdapter        = component "RoomsAudioSessionAdapter" "Administra permisos de sesión WebRTC." "Infrastructure Adapter"
+                auditAdapter        = component "AuditModerationAdapter" "Registra decisiones y casos auditables." "Infrastructure Adapter"
+                notificationAdapter = component "CommunityNotificationAdapter" "Envía avisos comunitarios." "Infrastructure Adapter"
+            }
+
+            postgres = container "Communities Database" "Salas, participaciones, turnos, reportes, bloqueos y Outbox." "PostgreSQL 15"
+            eventBus = container "Event Bus" "Distribuye eventos comunitarios y de moderación." "RabbitMQ / Kafka"
+        }
+
+        profilesContext = softwareSystem "Profiles (Bounded Context externo)" "Es dueño de CommunityAlias y voiceMaskPreset."
+        iamContext      = softwareSystem "IAM (Bounded Context externo)" "Valida cuenta y restricciones de acceso."
+        roomsContext    = softwareSystem "Rooms (Bounded Context externo)" "Provee transporte de audio WebRTC en tiempo real."
+        auditContext    = softwareSystem "Audit & Moderation" "Conserva trazabilidad y soporta revisión de incidentes."
+        notifications   = softwareSystem "Notifications" "Entrega avisos push e in-app."
+
+        participant -> sessionsController      "Consulta y crea sesiones comunitarias" "HTTPS/JSON"
+        participant -> participationController "Entra, sale, solicita turno y reacciona" "HTTPS/JSON"
+        participant -> moderationController    "Reporta o bloquea" "HTTPS/JSON"
+        moderator   -> speakerQueueController  "Resuelve solicitudes de palabra" "HTTPS/JSON"
+        moderator   -> moderationController    "Silencia o retira participantes" "HTTPS/JSON"
+
+        sessionsController      -> sessionCmdService       "Envía comandos"
+        sessionsController      -> sessionQryService       "Envía queries"
+        participationController -> participationCmdService "Envía comandos"
+        participationController -> participationQryService "Envía queries"
+        speakerQueueController  -> participationCmdService "Resuelve turnos"
+        moderationController    -> moderationCmdService    "Envía comandos"
+
+        sessionCmdService       -> communitySessionAggregate "Modifica ciclo de vida"
+        participationCmdService -> communitySessionAggregate "Modifica participantes y turnos"
+        participationCmdService -> sessionAccessPolicy       "Valida acceso"
+        moderationCmdService    -> moderationCaseAggregate "Abre y resuelve casos"
+        moderationCmdService    -> blockRelationAggregate  "Aplica bloqueos"
+        moderationCmdService    -> moderationPolicy        "Autoriza acción"
+
+        sessionCmdService       -> sessionRepo    "Persiste"
+        sessionQryService       -> sessionRepo    "Consulta"
+        participationCmdService -> sessionRepo    "Persiste"
+        moderationCmdService    -> moderationRepo "Persiste"
+        moderationCmdService    -> blockRepo      "Persiste/consulta"
+        sessionRepo    -> postgres "CRUD" "SQL/TCP"
+        moderationRepo -> postgres "CRUD" "SQL/TCP"
+        blockRepo      -> postgres "CRUD" "SQL/TCP"
+
+        participationCmdService -> profilesAdapter "Valida CommunityAliasRef"
+        participationCmdService -> iamAdapter      "Valida elegibilidad"
+        sessionCmdService       -> roomsAdapter    "Crea o cierra sesión de audio"
+        participationCmdService -> roomsAdapter    "Concede o revoca publicación de audio"
+        moderationCmdService    -> auditAdapter    "Registra caso y acción"
+
+        profilesAdapter -> profilesContext "Consulta alias activo" "HTTPS/JSON"
+        iamAdapter      -> iamContext      "Consulta elegibilidad" "HTTPS/JSON"
+        roomsAdapter    -> roomsContext    "Administra sesión WebRTC" "HTTPS/gRPC"
+        auditAdapter    -> auditContext    "Publica registro auditable" "Event/HTTPS"
+
+        communitySessionAggregate -> eventBus "Publica eventos de sesión comunitaria y participación"
+        moderationCaseAggregate -> eventBus "Publica eventos de moderación"
+        eventBus -> notifications "Entrega eventos notificables"
+    }
+
+    views {
+        component communitiesApi "Communities_Components" {
+            include *
+            autoLayout
+        }
+        styles {
+            element "Person" {
+                shape Person
+                background #08427b
+                color #ffffff
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "Container" {
+                background #438dd5
+                color #ffffff
+            }
+            element "Component" {
+                background #85bbf0
+                color #000000
+            }
+        }
+    }
+}
+```
 
 #### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
 
 
 ##### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
 
+Código en **Mermaid Class Diagram**:
+
+```mermaid
+classDiagram
+    class CommunitySession {
+        +UUID id
+        +SessionTopic topic
+        +CommunityAliasRef moderatorAliasId
+        +DateTime scheduledAt
+        +SessionLifecycle lifecycle
+        +SessionCapacity capacity
+        +int version
+        +schedule()
+        +open()
+        +joinAsListener(alias)
+        +leave(participantId)
+        +requestSpeaker(participantId)
+        +approveSpeaker(requestId, moderatorAlias)
+        +sendReaction(participantId, reaction)
+        +muteParticipant(participantId)
+        +removeParticipant(participantId)
+        +close()
+    }
+    class ParticipantSession {
+        +UUID id
+        +UUID communitySessionId
+        +CommunityAliasRef aliasId
+        +ParticipantRole role
+        +ParticipationStatus status
+        +DateTime joinedAt
+        +DateTime leftAt
+        +promoteToSpeaker()
+        +mute()
+        +leave()
+    }
+    class SpeakerRequest {
+        +UUID id
+        +UUID participantSessionId
+        +DateTime requestedAt
+        +SpeakerRequestStatus status
+        +approve(moderatorAlias)
+        +reject(moderatorAlias)
+    }
+    class ModerationCase {
+        +UUID id
+        +UUID communitySessionId
+        +CommunityAliasRef reporterAliasId
+        +CommunityAliasRef reportedAliasId
+        +ReportReason reason
+        +ModerationCaseStatus status
+        +ModerationAction action
+        +DateTime createdAt
+        +resolve(action)
+        +dismiss()
+    }
+    class BlockRelation {
+        +UUID id
+        +CommunityAliasRef blockerAliasId
+        +CommunityAliasRef blockedAliasId
+        +Boolean active
+        +DateTime createdAt
+        +deactivate()
+    }
+    class CommunitySessionAccessPolicy {
+        +canJoin(alias, room, blocks) Boolean
+    }
+    class SpeakerTurnPolicy {
+        +canApprove(request, moderator, room) Boolean
+    }
+    class ModerationPolicy {
+        +canApply(actor, target, action) Boolean
+    }
+    class AudioSessionPort {
+        <<interface>>
+        +createSession(communitySessionId)
+        +grantSpeaker(communitySessionId, participantId)
+        +revokeSpeaker(communitySessionId, participantId)
+        +closeSession(communitySessionId)
+    }
+
+    CommunitySession "1" *-- "0..*" ParticipantSession : contiene
+    CommunitySession "1" *-- "0..*" SpeakerRequest : gestiona
+    ParticipantSession "1" --> "0..1" SpeakerRequest : solicita
+    CommunitySession "1" --> "0..*" ModerationCase : origina
+    ModerationCase "0..*" --> "0..1" BlockRelation : puede crear
+    CommunitySessionAccessPolicy ..> CommunitySession : valida
+    CommunitySessionAccessPolicy ..> BlockRelation : consulta
+    SpeakerTurnPolicy ..> SpeakerRequest : valida
+    ModerationPolicy ..> ModerationCase : gobierna
+    CommunitySession ..> AudioSessionPort : usa
+```
+
 
 ##### 2.6.4.6.2. Bounded Context Database Design Diagram
+
+Código en **Mermaid ER Diagram** para la base de datos relacional de Communities:
+
+```mermaid
+erDiagram
+    COMMUNITY_SESSIONS {
+        uuid id PK
+        uuid moderator_alias_id
+        string title
+        text description
+        string participation_mode
+        string lifecycle
+        int max_participants
+        datetime scheduled_at
+        datetime opened_at
+        datetime closed_at
+        int version
+    }
+    COMMUNITY_SESSION_TAGS {
+        uuid community_session_id FK
+        string tag
+    }
+    PARTICIPANT_SESSIONS {
+        uuid id PK
+        uuid community_session_id FK
+        uuid community_alias_id
+        string role
+        string status
+        datetime joined_at
+        datetime left_at
+    }
+    SPEAKER_REQUESTS {
+        uuid id PK
+        uuid community_session_id FK
+        uuid participant_session_id FK
+        uuid resolved_by_alias_id
+        string status
+        datetime requested_at
+        datetime resolved_at
+    }
+    SUPPORT_REACTIONS {
+        uuid id PK
+        uuid community_session_id FK
+        uuid participant_session_id FK
+        string reaction_type
+        datetime sent_at
+    }
+    MODERATION_CASES {
+        uuid id PK
+        uuid community_session_id FK
+        uuid reporter_alias_id
+        uuid reported_alias_id
+        string reason
+        text description
+        string status
+        string action
+        datetime created_at
+        datetime resolved_at
+    }
+    BLOCK_RELATIONS {
+        uuid id PK
+        uuid blocker_alias_id
+        uuid blocked_alias_id
+        boolean active
+        datetime created_at
+        datetime deactivated_at
+    }
+    COMMUNITY_OUTBOX {
+        uuid id PK
+        string aggregate_type
+        uuid aggregate_id
+        string event_type
+        text payload
+        datetime occurred_at
+        datetime published_at
+    }
+
+    COMMUNITY_SESSIONS ||--o{ COMMUNITY_SESSION_TAGS : "classified by"
+    COMMUNITY_SESSIONS ||--o{ PARTICIPANT_SESSIONS : "contains"
+    COMMUNITY_SESSIONS ||--o{ SPEAKER_REQUESTS : "manages"
+    PARTICIPANT_SESSIONS ||--o{ SPEAKER_REQUESTS : "creates"
+    COMMUNITY_SESSIONS ||--o{ SUPPORT_REACTIONS : "receives"
+    PARTICIPANT_SESSIONS ||--o{ SUPPORT_REACTIONS : "sends"
+    COMMUNITY_SESSIONS ||--o{ MODERATION_CASES : "originates"
+    MODERATION_CASES }o--o| BLOCK_RELATIONS : "may produce"
+```
 
 
 
