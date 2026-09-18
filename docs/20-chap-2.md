@@ -266,8 +266,6 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 
 ### 2.3.3. User Journey Mapping
 
-
-
 #### User Journey Map 1: Maria
 
 ![journey_map_maria.png](../assets/images/chap2/needfinding/journey_map_maria.png)
@@ -348,8 +346,6 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 
 ## 2.4. Requirements specification
 
-
-
 ### 2.4.1. User Stories
 
 **Epics**
@@ -429,6 +425,21 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 
 ### 2.4.2. Impact Mapping
 
+#### Impact Map 1: María
+
+**Primer Segmento Objetivo (Pacientes Jóvenes)**
+
+*Figura: Impact Map de María*
+
+<img src="../assets/images/chap2/impact_mapping/impact_map_maria.png" alt="Impact Map de María" style="width: 100%;">
+
+#### Impact Map 2: Dra. Laura Gómez
+
+**Segundo Segmento Objetivo (Psicólogos Profesionales)**
+
+*Figura: Impact Map de la Dra. Laura Gómez*
+
+<img src="../assets/images/chap2/impact_mapping/impact_map_dra_laura_gomez.png" alt="Impact Map de la Dra. Laura Gómez" style="width: 100%;">
 
 
 ### 2.4.3. Product Backlog
@@ -510,4 +521,3 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 
 
 ##### 2.6.x.6.2. Bounded Context Database Design Diagram
-
