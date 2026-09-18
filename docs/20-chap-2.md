@@ -293,7 +293,58 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 
 ### 2.3.6. Ubiquitous Language
 
+**Identidad, Privacidad y Consentimiento (Identity, Privacy & Consent)**
 
+* **User (Usuario):** Persona que utiliza SafeDiary para registrar su estado emocional, participar en la comunidad o acceder a atención profesional. Es propietaria de sus entradas y decide qué información comparte.
+* **Account (Cuenta):** Identidad interna utilizada para autenticación, preferencias, seguridad y gestión del ciclo de vida de los datos del usuario.
+* **Clinical Identity (Identidad Clínica):** Información real necesaria para la relación con un especialista, las citas y los pagos. No se muestra dentro de la comunidad anónima.
+* **Community Alias (Alias Comunitario):** Identidad seudónima utilizada en las salas de voz para participar sin revelar la identidad clínica o los datos personales del usuario.
+* **Consent (Consentimiento):** Autorización explícita, informada, específica y revocable mediante la cual el usuario permite una finalidad concreta sobre sus datos emocionales.
+* **Sharing Permission (Permiso de Compartición):** Alcance concedido por el usuario que define qué entradas puede consultar un especialista, durante qué periodo y dentro de qué relación de atención.
+* **Revocation (Revocación):** Acción mediante la cual el usuario retira un permiso vigente. Desde ese momento se bloquean nuevos accesos, sin eliminar los eventos históricos de auditoría.
+* **Private Vault (Bóveda Privada):** Espacio protegido mediante un PIN secundario o biometría para entradas especialmente sensibles, excluidas por defecto de vistas y exportaciones generales.
+* **Audit Event (Evento de Auditoría):** Registro trazable de una acción sensible, como un acceso, consentimiento, revocación, reserva, pago o moderación, sin copiar innecesariamente el contenido emocional involucrado.
+
+**Diario Emocional e Inteligencia Artificial (Emotional Diary & AI)**
+
+* **Emotional Diary (Diario Emocional):** Espacio privado donde el usuario conserva reflexiones, notas de voz, estados emocionales y contexto personal en orden cronológico.
+* **Diary Entry (Entrada de Diario):** Registro individual de texto o audio cuyo propietario es el usuario. Puede incluir etiquetas, factores externos y permisos de compartición propios.
+* **Voice Note (Nota de Voz):** Audio privado creado como contenido de una entrada de diario y utilizado, con autorización, como fuente para la transcripción y el análisis.
+* **Transcription (Transcripción):** Representación textual generada a partir de una nota de voz. Puede ser revisada por el usuario y no reemplaza el audio original mientras este se conserve.
+* **Emotional Check-in (Registro Emocional Rápido):** Selección breve de una emoción actual, asociada con fecha y hora, que no requiere crear una entrada completa.
+* **Emotion Tag (Etiqueta Emocional):** Palabra o categoría que ayuda a organizar una entrada. Puede ser elegida por el usuario o sugerida por la IA antes de ser confirmada.
+* **AI Analysis (Análisis de IA):** Resultado estructurado asociado a una entrada que contiene señales emocionales, palabras clave, confianza, versión del modelo y banderas de seguridad. No constituye un diagnóstico clínico.
+* **AI Reflection (Reflexión de IA):** Respuesta de apoyo que ayuda al usuario a ordenar lo expresado y fomenta la reflexión sin prescribir tratamientos ni afirmar conclusiones clínicas.
+* **Insight (Insight Emocional):** Tendencia o resumen derivado del historial autorizado del usuario, presentado con su periodo y contexto para evitar interpretaciones engañosas.
+* **Processing State (Estado de Procesamiento):** Etapa técnica de una entrada: draft, uploading, transcribing, analyzing, ready, retryable, failed o deleted.
+* **Safety Flag (Bandera de Seguridad):** Indicador interno de que una interacción puede requerir mostrar recursos de ayuda. No equivale a una evaluación clínica ni confirma una situación de emergencia.
+
+**Comunidad Anónima y Moderación (Anonymous Community & Moderation)**
+
+* **Community Room (Sala Comunitaria):** Espacio de audio en tiempo real donde los usuarios interactúan mediante alias y bajo una política de participación y moderación definida.
+* **Host (Anfitrión):** Participante responsable de conducir una sala y aplicar acciones básicas de moderación durante su sesión.
+* **Listener (Oyente):** Participante conectado con el micrófono silenciado que puede escuchar sin intervenir verbalmente.
+* **Speaker (Participante de Voz):** Usuario autorizado a activar su micrófono y hablar dentro de una sala comunitaria.
+* **Report (Reporte):** Comunicación confidencial enviada a moderación sobre una conducta que podría incumplir las reglas de la comunidad.
+* **Block (Bloqueo):** Restricción personal que impide nuevas interacciones entre dos alias sin revelar a la comunidad la identidad de quien la aplicó.
+* **Moderation Action (Acción de Moderación):** Medida trazable como silenciar, expulsar o restringir a un participante para proteger la seguridad de una sala.
+
+**Atención Profesional y Agendamiento (Professional Care & Scheduling)**
+
+* **Verified Specialist (Especialista Verificado):** Psicólogo cuya identidad y credenciales fueron revisadas antes de aparecer como profesional disponible en SafeDiary.
+* **Clinician Profile (Perfil Profesional):** Ficha pública autorizada que reúne especialidades, biografía, tarifa, disponibilidad, verificación, reseñas y elementos del puntaje de confianza.
+* **Availability Slot (Horario Disponible):** Bloque de fecha, hora y zona horaria publicado por un especialista que puede reservarse una sola vez.
+* **Appointment (Cita):** Acuerdo entre un usuario y un especialista para una atención en un horario determinado, con estados requested, held, confirmed, completed, cancelled, expired, no_show o refunded.
+* **Video Session (Videollamada):** Canal privado asociado a una cita confirmada al que solo pueden ingresar sus participantes autorizados dentro de la ventana permitida.
+* **Care Relationship (Relación de Atención):** Vínculo entre un usuario y un especialista originado por una cita. No concede acceso automático al diario; todo acceso requiere un permiso de compartición explícito.
+
+**Pagos, Reseñas y Confianza (Payments, Reviews & Trust)**
+
+* **Payment (Pago):** Transacción asociada a una cita que se procesa de forma idempotente para evitar cobros duplicados y mantener un estado verificable.
+* **Receipt (Comprobante):** Constancia digital emitida después de un pago aprobado y disponible para consulta del usuario.
+* **Review (Reseña):** Valoración vinculada a una cita completada que puede incluir una puntuación y un comentario opcional, sin revelar información emocional del paciente.
+* **Trust Score (Puntaje de Confianza):** Indicador explicable construido con criterios como horas de atención, continuidad de pacientes y reseñas válidas, evitando premiar únicamente el volumen de consultas.
+* **Refund (Reembolso):** Devolución total o parcial de un pago que actualiza de forma trazable el estado financiero de la cita.
 
 ## 2.4. Requirements specification
 
@@ -452,5 +503,4 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 
 
 ##### 2.6.x.6.2. Bounded Context Database Design Diagram
-
 
