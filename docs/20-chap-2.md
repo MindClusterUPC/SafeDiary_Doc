@@ -444,6 +444,65 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 
 ### 2.4.3. Product Backlog
 
+El Product Backlog reúne y prioriza las historias de usuario (US) y las historias técnicas (TS) definidas en la sección 2.4.1, ordenándolas según el valor que aportan al negocio y la complejidad técnica que implica su desarrollo. La priorización combina dos criterios:
+
+* **Valor de negocio por Épica:** siguiendo el Business Problem Statement y el Lean UX Canvas del Capítulo I, EP-01 (cuenta, seguridad, privacidad y consentimiento) y EP-02 (diario emocional, IA e insights) constituyen la base de la propuesta de valor y se priorizan primero, ya que sin identidad segura ni registro emocional no existe producto que ofrecer. EP-04 (atención profesional, citas, pagos y confianza) sigue en prioridad porque sostiene el modelo de ingresos descrito en la sección 2.1 (freemium, comisión por cita y convenios institucionales). EP-03 (comunidad segura y ayuda inmediata) se ubica como complemento de seguridad y contención. EP-05 (landing page) se distribuye en distintos momentos por tratarse de contenido de adquisición de menor complejidad técnica.
+* **Estimación de esfuerzo:** cada historia fue estimada mediante Planning Poker utilizando la escala de Fibonacci (1, 2, 3, 5, 8 puntos), reflejando la complejidad técnica, el riesgo y las dependencias identificadas en las historias técnicas (TS) asociadas.
+
+El orden resultante del backlog agrupa primero los elementos de mayor puntaje —correspondientes a la infraestructura crítica de seguridad, IA, pagos y tiempo real— y distribuye el resto según su aporte al MVP. Esta priorización alimenta directamente la planificación de los tres sprints que se detallarán en el Capítulo IV.
+
+**Tabla 2. Product Backlog de SafeDiary**
+
+| #Orden | Story ID | Título | Story Points (1/2/3/5/8) | Sprint |
+| --- | --- | --- | --- | --- |
+| 1 | TS-001 | Arquitectura modular y contratos de API | 8 | 1 |
+| 2 | TS-002 | Cifrado y gestión segura de secretos | 8 | 1 |
+| 3 | TS-003 | Pipeline privado de voz y análisis de IA | 8 | 1 |
+| 4 | US-011 | Reflexión guiada por voz con IA | 8 | 1 |
+| 5 | TS-004 | Infraestructura de audio anónimo en tiempo real | 8 | 2 |
+| 6 | TS-006 | Orquestación idempotente de citas y pagos | 8 | 2 |
+| 7 | US-037 | Pago seguro de una sesión | 8 | 2 |
+| 8 | US-040 | Escalamiento seguro ante señales de crisis | 8 | 2 |
+| 9 | US-002 | Exploración del directorio de especialistas | 5 | 2 |
+| 10 | US-009 | Consentimiento para compartir historial | 5 | 2 |
+| 11 | US-013 | Acceso inmediato a ayuda de crisis | 5 | 2 |
+| 12 | US-014 | Reserva de videollamada profesional | 5 | 2 |
+| 13 | US-036 | Gestión del perfil profesional y disponibilidad | 5 | 2 |
+| 14 | US-038 | Acceso a la videollamada programada | 5 | 2 |
+| 15 | US-039 | Calificación del especialista | 5 | 2 |
+| 16 | TS-005 | Servicios de moderación y escalamiento seguro | 5 | 3 |
+| 17 | TS-007 | Auditoría de accesos y consentimientos | 5 | 3 |
+| 18 | TS-008 | Despliegue, observabilidad y recuperación segura | 5 | 3 |
+| 19 | US-012 | Consulta de estadísticas emocionales | 5 | 3 |
+| 20 | US-023 | Revocación del acceso al historial | 5 | 3 |
+| 21 | US-025 | Protección de entradas en bóveda privada | 5 | 3 |
+| 22 | US-033 | Eliminación de cuenta y datos personales | 5 | 3 |
+| 23 | US-001 | Registro de cuenta | 3 | 1 |
+| 24 | US-003 | Acceso con Google o Apple | 3 | 1 |
+| 25 | US-008 | Registro de entrada de diario | 3 | 1 |
+| 26 | US-010 | Registro rápido del estado emocional | 3 | 1 |
+| 27 | US-015 | Desbloqueo biométrico | 3 | 1 |
+| 28 | US-016 | Recuperación de contraseña | 3 | 1 |
+| 29 | US-004 | Creación de sala de voz | 3 | 2 |
+| 30 | US-005 | Participación en sala de voz | 3 | 2 |
+| 31 | US-034 | Reporte y bloqueo en la comunidad | 3 | 2 |
+| 32 | US-035 | Moderación de salas de voz | 3 | 2 |
+| 33 | US-024 | Recordatorios de registro emocional | 3 | 3 |
+| 34 | US-027 | Seguimiento emocional proactivo | 3 | 3 |
+| 35 | US-028 | Exportación del progreso en PDF | 3 | 3 |
+| 36 | US-031 | Registro de factores externos | 3 | 3 |
+| 37 | US-006 | Edición del perfil personal | 2 | 1 |
+| 38 | US-021 | Preguntas frecuentes y contacto | 2 | 2 |
+| 39 | US-022 | Presentación de MindCluster | 2 | 2 |
+| 40 | US-007 | Gestión de rutinas de autocuidado | 2 | 3 |
+| 41 | US-026 | Personalización del tono de la IA | 2 | 3 |
+| 42 | US-029 | Insignias por constancia emocional | 2 | 3 |
+| 43 | US-030 | Ejercicios rápidos de regulación | 2 | 3 |
+| 44 | US-032 | Recuerdos de evolución emocional | 2 | 3 |
+| 45 | US-017 | Presentación de la propuesta de valor | 1 | 1 |
+| 46 | US-018 | Presentación de funcionalidades principales | 1 | 1 |
+| 47 | US-019 | Consulta de testimonios | 1 | 1 |
+| 48 | US-020 | Consulta de planes y precios | 1 | 1 |
 
 ## 2.5. Strategic-Level Domain-Driven Design
 
