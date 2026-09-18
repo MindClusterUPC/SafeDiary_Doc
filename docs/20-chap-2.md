@@ -261,6 +261,33 @@ Para el diseño de entrevistas se plantearon preguntas semiestructuradas orienta
 
 ### 2.3.2. User Task Matrix
 
+La matriz reúne las seis tareas más importantes de cada segmento y las prioriza según su frecuencia estimada e importancia dentro del recorrido principal.
+
+#### User Task Matrix 1: María
+
+**Primer Segmento Objetivo (Pacientes Jóvenes)**
+
+| Tarea prioritaria | Frecuencia | Importancia |
+| --- | :---: | :---: |
+| Registrar emociones por texto o voz | Alta | Crítica |
+| Consultar insights y evolución emocional | Media | Alta |
+| Controlar el acceso a su información | Baja | Crítica |
+| Participar de forma segura en la comunidad | Media | Alta |
+| Acceder a ejercicios y ayuda urgente | Media | Crítica |
+| Encontrar y recibir atención profesional | Baja | Crítica |
+
+#### User Task Matrix 2: Dra. Laura Gómez
+
+**Segundo Segmento Objetivo (Psicólogos Profesionales)**
+
+| Tarea prioritaria | Frecuencia | Importancia |
+| --- | :---: | :---: |
+| Solicitar la verificación profesional | Baja | Crítica |
+| Gestionar su perfil y reputación | Media | Alta |
+| Administrar disponibilidad y solicitudes de cita | Alta | Crítica |
+| Revisar información emocional autorizada | Alta | Crítica |
+| Realizar y registrar una atención | Alta | Crítica |
+| Consultar pagos e ingresos | Media | Alta |
 
 
 
