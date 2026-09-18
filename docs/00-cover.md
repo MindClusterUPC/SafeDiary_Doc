@@ -84,6 +84,8 @@ Proyecto
 | 0.0.4 | 13/09/2026 | Juan Wang | Redacción completa del Lean UX Process: sección 1.2.2 (introducción), 1.2.2.1 (Problem Statement con template brand new initiative), 1.2.2.2 (Assumptions: Business, Business Outcome, User, User Outcome and Benefit, Feature) y 1.2.2.3 (Hypothesis Statements) |
 | 0.0.5 | 13/09/2026 | Juan Wang | Creación y formateo de la sección 1.2.2.4 (Lean UX Canvas) en formato de tabla (3x3 grid) según lineamientos de Lean UX v2 |
 | 0.0.6 | 15/09/2026 | Marcelo Cuadros | Complementar contenido de los segmentos objetivos, segmento 1.3, añadiendo fuentes en la bibliografia tambien para el registro de fuentes. |
+| 0.0.7 | 17/09/2026 | Marcelo Cuadros | Añadir entrevista paciente 2 |
+| 0.0.8 | 18/09/2026 | Santiago Vargas | Añadir entrevista psicologo 3 y corrección de intregrantes de equipo |
 
 # Project Report Collaboration Insights
 
