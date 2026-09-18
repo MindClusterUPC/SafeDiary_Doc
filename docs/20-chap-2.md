@@ -576,6 +576,160 @@ Trelo con el backlog: [Trello SafeDiary](https://trello.com/b/Q2UsNz3t/product-b
 
 ### 2.5.2. Context Mapping
 
+##### Resumen del Proceso
+
+El Context Mapping evidencia el proceso mediante el cual el equipo revisó la información recolectada en las secciones previas —Ubiquitous Language (2.3.6), User Stories (2.4.1), EventStorming (2.5.1) y el diseño táctico ya construido (2.6)— para producir un conjunto de diseños candidatos de relación entre Bounded Contexts, discutirlos con las preguntas guía recomendadas ("¿qué pasaría si...?") y converger en la mejor aproximación. El análisis parte de los siete contextos ya desarrollados en el diseño táctico: **IAM**, **Profiles**, **AssistantAI**, **Diary**, **Communities**, **Rooms** y **Rutines**; e incorpora dos contextos que ya son referenciados como sistemas externos por el diseño de Profiles y AssistantAI, pero que todavía no se han modelado tácticamente — **Professional Care & Scheduling** (reservas, videollamadas y pagos, EP-04) y **Reviews & Trust** (reseñas y puntaje de confianza) — y que se documentan aquí únicamente como contextos futuros para no dejar relaciones "colgando". El objetivo del análisis fue maximizar la autonomía de cada contexto, proteger su lenguaje ubicuo y, sobre todo, preservar el principio de privacidad que sostiene el Business Problem Statement de SafeDiary: **ningún contexto valida su propio acceso a datos sensibles sin consultar primero a IAM**.
+
+Como resultado del proceso se elaboraron **dos context maps**: un mapa candidato inicial, más acoplado, que sirvió para hacer explícitos los riesgos de un diseño ingenuo (Shared Kernel + Conformist); y el mapa final aprobado, que aplica los patrones de relación de Domain-Driven Design (Anticorruption Layer, Customer/Supplier, Open Host Service, Published Language, Partnership, Separate Ways) para resolver esos riesgos. Ambos se presentan en la sección "Mapa de Contextos" más abajo.
+
+##### Análisis de Alternativas (Exploración de Diseño)
+
+Siguiendo la guía recomendada, cada pregunta se respondió sobre una capability real ya identificada en el diseño táctico de SafeDiary, no de forma abstracta:
+
+###### 1. ¿Qué pasaría si movemos este capability a otro bounded context? — mover el `CommunityAlias` de Profiles a Communities
+
+* **Análisis:** El alias comunitario (`aliasHandle`, `voiceMaskPreset`) es consumido principalmente por Communities y Rooms, lo que sugiere moverlo a Communities para reducir un salto de contexto. Sin embargo, esto obligaría a Communities a asumir también la generación y rotación de identidades, duplicando una responsabilidad de identidad que ya está centralizada en Profiles junto con el perfil personal y la ficha profesional.
+* **Decisión:** No mover. `CommunityAlias` permanece en Profiles porque agrupa, bajo una sola responsabilidad cohesiva, las distintas "caras" de un mismo `Account` (perfil personal, alias, ficha profesional). Communities y Rooms lo consumen como Published Language (relación D).
+
+###### 2. ¿Qué pasaría si descomponemos este capability y movemos uno de los sub-capabilities a otro bounded context? — separar "disponibilidad publicada" de "reserva transaccional" dentro de `ClinicianProfile`
+
+* **Análisis:** `ClinicianProfile` (Profiles) incluye hoy tanto la publicación declarativa de horarios (`AvailabilityWindow`, bajo cambio, mayormente de lectura) como, potencialmente, la reserva transaccional de una cita concreta (alta contención, requiere idempotencia ante reservas simultáneas — TS-006). Mezclar ambas responsabilidades en un mismo contexto forzaría a un modelo de consistencia único para dos necesidades muy distintas.
+* **Decisión:** Descomponer. La publicación de disponibilidad se queda en Profiles (sub-capability de bajo cambio); la reserva, el pago y la videollamada se mueven al futuro contexto **Professional Care & Scheduling**, que solo lee la disponibilidad publicada por Profiles (relación G) sin duplicarla.
+
+###### 3. ¿Qué pasaría si partimos el bounded context en múltiples bounded contexts?
+
+* **Caso A — Diary (rechazado):** se evaluó partir Diary en "Diary" (registro) y "Diary Insights" (rachas, insignias, recuerdos retrospectivos). **Análisis:** hoy `DiaryStreak` se recalcula de forma síncrona e idempotente en cada entrada (US-029); partirlo introduciría latencia de sincronización sin un beneficio de escalabilidad independiente demostrado. **Decisión:** no partir; Diary permanece como un único Bounded Context cohesivo.
+* **Caso B — Communities/Rooms (aceptado):** se evaluó la partición inversa, es decir, si convenía **no** partir y mantener un único contexto "Comunidad". **Análisis:** Rooms exige infraestructura de audio en tiempo real de baja latencia (TS-004: WebRTC/SFU, enmascaramiento de voz, escalado por sala activa), mientras que Communities es, en esencia, un catálogo CRUD de salas, categorías y políticas de moderación (US-004, US-034, US-035); fusionarlos forzaría a escalar y desplegar el catálogo administrativo cada vez que crece la demanda de audio en vivo. **Decisión:** mantenerlos partidos en dos Bounded Contexts (relación E).
+
+###### 4. ¿Qué pasaría si tomamos este capability de estos 3 contexts y lo usamos para formar un nuevo context? — extraer "detección y respuesta a crisis" de AssistantAI, Diary y Rooms
+
+* **Análisis:** la capability de seguridad ante riesgo aparece triplicada con distinto vocabulario: `RiskAssessment`/`CrisisProtocolActivated` en AssistantAI, `isSensitive`/acceso a ayuda inmediata en Diary (US-013), y `Report`/`Block`/`ModerationAction` en Communities-Rooms. Consolidarlas en un nuevo contexto **Crisis & Safety** evitaría triplicar la lógica de "qué constituye una señal de riesgo" y centralizaría el catálogo de recursos de emergencia (988/113 Minsa), hoy solo disponible dentro del `CrisisHotlineAdapter` de AssistantAI.
+* **Decisión:** Es una alternativa válida para una iteración futura del producto, pero se descarta para el alcance actual: cada contexto conserva su propia detección local, ya que separarla introduciría una dependencia síncrona crítica (evaluar riesgo) para tres contextos distintos, aumentando el radio de impacto de una sola falla. En su lugar, se centraliza únicamente el catálogo de recursos de emergencia como **shared service** (ver pregunta 6), sin fusionar la lógica de negocio de riesgo.
+
+###### 5. ¿Qué pasaría si duplicamos una funcionalidad para romper la dependencia?
+
+* **Caso A — Consentimiento en Diary (rechazado):** se evaluó que Diary mantuviera una copia local cacheada del `Consent` vigente, en lugar de consultar a IAM en cada lectura, para reducir el acoplamiento síncrono. **Análisis:** una revocación (`ConsentRevoked`) no se reflejaría de inmediato, permitiendo que un especialista siga leyendo entradas después de que el paciente revocó el acceso — inaceptable frente al requisito de privacidad no negociable (US-023). **Decisión:** rechazado; se prioriza la consistencia fuerte sobre la disponibilidad para este caso (relación B).
+* **Caso B — Calificación de especialistas en Profiles (aceptado):** Profiles duplica (cachea) el `ratingAverage`/`reviewCount` calculado por el futuro contexto Reviews & Trust en vez de consultarlo en cada búsqueda del directorio. **Análisis:** un retraso de segundos en reflejar una nueva reseña no compromete la privacidad ni la seguridad del paciente, y sí evita una llamada síncrona costosa cada vez que se lista el directorio de especialistas (US-002). **Decisión:** aceptado como read model (relación H).
+
+###### 6. ¿Qué pasaría si creamos un shared service para reducir la duplicación entre múltiples bounded contexts? — un servicio de Notificaciones
+
+* **Análisis:** Diary (recordatorios, US-024), AssistantAI (alertas de crisis), Rooms (avisos de moderación) y Rutines (recordatorios de rutina) necesitan enviar notificaciones push. Sin un servicio compartido, cada contexto implementaría su propio cliente de Firebase Cloud Messaging/Apple APNs, duplicando código de integración y credenciales.
+* **Decisión:** Crear un **shared service** de Notificaciones (subdominio genérico, no un Bounded Context de negocio). Cada contexto sigue siendo dueño de su propia decisión de "cuándo notificar" y publica su propio evento de dominio (`DiaryReminderDue`, `CrisisProtocolActivated`, etc.); el servicio compartido solo traduce esos eventos a push notifications, evitando duplicar la integración con FCM/APNs.
+
+###### 7. ¿Qué pasaría si aislamos los core capabilities y movemos los otros a un context aparte?
+
+* **Análisis:** Diary y AssistantAI concentran la propuesta de valor diferencial de SafeDiary —el puente entre el registro privado y la atención profesional, descrito en el Business Problem Statement del Capítulo I—; IAM, Profiles, Communities, Rooms y Rutines son necesarios pero replicables con soluciones de mercado (auth-as-a-service, CRUD de perfiles, salas de audio genéricas).
+* **Decisión:** Adoptado como principio rector de todo el mapa: **Diary** y **AssistantAI** se clasifican como *Core Domain*; **Communities**, **Rooms** y **Rutines** como *Supporting Subdomain*; **IAM** como *Generic Subdomain* (Open Host Service reutilizable) y **Profiles** como subdominio de soporte que depende de IAM. Esto permite invertir el mayor esfuerzo de ingeniería propio en Diary y AssistantAI.
+
+###### 8. ¿Qué pasaría si creáramos un Shared Kernel entre IAM y Profiles para el concepto de "identidad de usuario"?
+
+* **Análisis:** Ambos contextos giran en torno al mismo `accountId`, pero con propósitos distintos: IAM protege credenciales, biometría y consentimiento (superficie de alta sensibilidad y cumplimiento normativo); Profiles expone datos de presentación pública (nombre, alias, ficha profesional). Compartir un mismo modelo obligaría a desplegar y versionar ambos contextos de forma acoplada, y ampliaría innecesariamente la superficie de ataque sobre los datos de seguridad.
+* **Decisión:** Rechazado. IAM se mantiene como **Open Host Service**, exponiendo únicamente el `accountId` autenticado y los contratos de validación (`ConsentAuthorizationService`). Profiles —y el resto de contextos— solo referencian ese identificador, sin acceso directo al modelo interno de cuentas.
+
+##### Patrones de Relación y Mapa de Contextos
+
+SafeDiary adopta una arquitectura orientada a eventos (EDA) para las relaciones asíncronas y contratos HTTP explícitos para las validaciones síncronas de identidad. A continuación se detallan los patrones DDD aplicados entre contextos:
+
+###### A. IAM (Upstream) -> Profiles, AssistantAI, Communities, Rooms, Rutines (Downstream)
+
+* **Patrón:** **Open Host Service (OHS) / Published Language (PL)**.
+* **Motivo:** Todos los contextos necesitan un `accountId` autenticado, pero ninguno debe conocer cómo IAM valida credenciales, biometría o proveedores federados. IAM expone un contrato estable (identidad + estado de sesión) que el resto simplemente consume, sin acoplarse a su modelo interno.
+
+###### B. IAM (Upstream) -> Diary (Downstream)
+
+* **Patrón:** **Open Host Service + Anticorruption Layer (ACL) del lado del consumidor**.
+* **Motivo:** Diary necesita algo más específico que la identidad: necesita saber si un especialista concreto puede leer una entrada concreta. Consume el contrato `ConsentAuthorizationService` de IAM a través de `IamConsentClientAdapter`, una capa que traduce la respuesta de IAM al lenguaje propio de Diary sin filtrar su modelo de `Consent` o `SharingPermission` hacia el dominio del diario.
+
+###### C. Diary (Upstream) <-> AssistantAI (Downstream / Upstream)
+
+* **Patrón:** **Partnership vía Published Language**.
+* **Motivo:** La relación es bidireccional y de igual jerarquía: Diary publica `DiaryEntryCreated` para que AssistantAI transcriba y analice; AssistantAI publica `ReflectionGenerated` para que Diary la asocie a la entrada original. Ninguno de los dos puede evolucionar su contrato de eventos sin coordinar con el otro, por lo que se trata como una sociedad (Partnership) y no como un simple Customer-Supplier unidireccional.
+
+###### D. Profiles (Upstream) -> Rooms (Downstream)
+
+* **Patrón:** **Customer-Supplier / Published Language**.
+* **Motivo:** Rooms necesita el `aliasHandle` y el `voiceMaskPreset` del `CommunityAlias` (Profiles) para identificar a los participantes de una sala sin exponer su identidad clínica. Profiles publica estos datos como lenguaje compartido; Rooms los consume en tiempo real al iniciar una sesión de audio.
+
+###### E. Communities (Upstream) -> Rooms (Downstream)
+
+* **Patrón:** **Partnership / Open Host Service**.
+* **Motivo:** Communities define el catálogo de categorías, el listado público de salas y las políticas de moderación (host, oyente, reporte, bloqueo). Rooms hereda esas reglas al abrir una sesión de audio, pero ambos equipos deben coordinar cambios en la política de moderación, ya que Rooms es quien las ejecuta en tiempo real (TS-005).
+
+###### F. AssistantAI (Upstream) -> Professional Care & Scheduling *(futuro)* (Downstream)
+
+* **Patrón:** **Customer-Supplier / Anticorruption Layer**.
+* **Motivo:** El resumen clínico generado por AssistantAI (`ClinicalSummaryGenerated`) es consumido por el contexto de agendamiento profesional para preparar la consulta (US-045). Al no existir aún tácticamente, se documenta como relación planeada; cuando se construya, deberá incorporar una ACL para no acoplar su modelo de citas al modelo conversacional de AssistantAI.
+
+###### G. Profiles (Upstream) -> Professional Care & Scheduling *(futuro)* (Downstream)
+
+* **Patrón:** **Customer-Supplier**.
+* **Motivo:** El agendamiento necesita las `AvailabilityWindow` publicadas y el `verificationStatus` de `ClinicianProfile` para permitir reservar una cita, pero no gestiona ni duplica esa información: siempre la consulta a Profiles (ver el límite explícito documentado en 2.6.2, "Profiles no gestiona la reserva transaccional de una cita").
+
+###### H. Reviews & Trust *(futuro)* (Upstream) -> Profiles (Downstream)
+
+* **Patrón:** **Published Language**.
+* **Motivo:** Profiles no calcula reseñas ni confianza; solo cachea un read model (`ratingAverage`, `reviewCount`) que actualiza al consumir el evento `ClinicianRatingSummaryUpdated` mediante `ReviewsIntegrationEventListener` (ver 2.6.2.4). Esta relación ya está resuelta en el diseño táctico de Profiles.
+
+###### I. Diary (Bounded Context) — Rutines (Bounded Context)
+
+* **Patrón:** **Separate Ways**.
+* **Motivo:** Aunque ambos tocan el autocuidado emocional, Diary ya resuelve su propia gamificación (`DiaryStreak`, sección 2.6.6.1) y Rutines administra actividades independientes de bienestar (US-007). No existe hoy una necesidad de negocio validada que justifique acoplarlos; de surgir en el futuro (p. ej. que completar una rutina cuente como factor externo de una entrada), se abordaría mediante un evento de integración explícito y no mediante acceso directo a datos.
+
+##### Mapa de Contextos (diagrama)
+
+**Candidato inicial (descartado).** Este primer diseño surge de responder ingenuamente a la presión de "simplificar" la integración: fusiona IAM y Profiles mediante un Shared Kernel y hace que el resto de contextos actúen como Conformist del modelo de IAM. Se descarta por las razones expuestas en las preguntas 7 y 8: acopla el despliegue de todos los contextos a los cambios de seguridad de IAM y elimina la autonomía de cada equipo.
+
+```mermaid
+graph LR
+    IAMProfiles["IAM + Profiles<br/>(Shared Kernel)"]
+    Diary0["Diary"]
+    AssistantAI0["AssistantAI"]
+    Communities0["Communities"]
+    Rooms0["Rooms"]
+    Rutines0["Rutines"]
+
+    IAMProfiles -->|"Conformist"| Diary0
+    IAMProfiles -->|"Conformist"| AssistantAI0
+    IAMProfiles -->|"Conformist"| Communities0
+    IAMProfiles -->|"Conformist"| Rooms0
+    IAMProfiles -->|"Conformist"| Rutines0
+```
+
+**Mapa final aprobado.** Resultado de aplicar las decisiones de las preguntas 1 a 8: IAM queda como Open Host Service independiente de Profiles, se introduce Anticorruption Layer donde hay validación de consentimiento, Published Language donde la integración es asíncrona, y Separate Ways donde no hay necesidad de negocio validada.
+
+```mermaid
+graph LR
+    IAM["IAM<br/>(Generic Subdomain)"]
+    Profiles["Profiles<br/>(Supporting Subdomain)"]
+    Diary["Diary<br/>(Core Domain)"]
+    AssistantAI["AssistantAI<br/>(Core Domain)"]
+    Communities["Communities<br/>(Supporting Subdomain)"]
+    Rooms["Rooms<br/>(Supporting Subdomain)"]
+    Rutines["Rutines<br/>(Supporting Subdomain)"]
+    ProfessionalCare["Professional Care & Scheduling<br/>(futuro / fuera de alcance)"]
+    Reviews["Reviews & Trust<br/>(futuro / fuera de alcance)"]
+
+    IAM -->|"A: OHS/PL AccountId"| Profiles
+    IAM -->|"B: OHS + ACL ConsentAuthorizationService"| Diary
+    IAM -.->|"A: OHS AccountId"| AssistantAI
+    IAM -.->|"A: OHS AccountId"| Communities
+    IAM -.->|"A: OHS AccountId"| Rooms
+    IAM -.->|"A: OHS AccountId"| Rutines
+
+    Diary <-->|"C: Partnership/PL DiaryEntryCreated ⇄ ReflectionGenerated"| AssistantAI
+    Profiles -->|"D: CS/PL CommunityAlias, voiceMaskPreset"| Rooms
+    Communities -->|"E: Partnership/OHS catálogo y políticas"| Rooms
+    AssistantAI -.->|"F: CS/ACL ClinicalSummaryGenerated"| ProfessionalCare
+    Profiles -.->|"G: CS disponibilidad publicada"| ProfessionalCare
+    Reviews -.->|"H: PL ClinicianRatingSummaryUpdated"| Profiles
+    Diary -.-|"I: Separate Ways"| Rutines
+```
+
+*Nota:* las flechas punteadas representan relaciones con un contexto todavía no desarrollado tácticamente (Professional Care & Scheduling, Reviews & Trust) o de acoplamiento deliberadamente bajo (IAM hacia los contextos que solo consumen `accountId`); las flechas continuas representan relaciones con un contrato ya implementado en el diseño táctico (sección 2.6).
+
+##### Discusión de Alternativas y Conclusión
+
+De las ocho preguntas exploradas, cinco decisiones ya están reflejadas en el diseño táctico existente (2, 3-B, 5-A, 5-B, 8) y tres quedan documentadas como trabajo futuro explícito (2 como frontera hacia Professional Care & Scheduling, 4 y 6 como candidatos a revisar en la siguiente iteración del producto). El hilo conductor de todas las decisiones fue rechazar los patrones que maximizan la velocidad de integración a corto plazo a costa del acoplamiento —**Shared Kernel** entre IAM y Profiles (pregunta 8) y **Conformist** generalizado de todos los contextos hacia el modelo de IAM (mapa candidato inicial)— porque habrían obligado a todos los contextos a evolucionar en sincronía con los cambios de seguridad e identidad de IAM, contradiciendo el principio de autonomía por contexto que exige el negocio (equipos y despliegues independientes por Bounded Context, según TS-001). La combinación elegida —**Open Host Service** para la identidad transversal (relación A), **Anticorruption Layer** en los consumidores de contratos sensibles (relaciones B y F), **Customer/Supplier** donde un contexto consume capacidades de otro sin alterarlas (relaciones D, G), **Published Language** para la integración asíncrona (relaciones C, H) y **Separate Ways** donde no hay una necesidad de negocio validada (relación I)— permite que cada contexto evolucione de forma independiente sin comprometer la privacidad ni la disponibilidad del registro emocional, que es el valor central de SafeDiary.
 
 ### 2.5.3. Software Architecture
 
