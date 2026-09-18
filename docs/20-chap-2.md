@@ -733,13 +733,201 @@ De las ocho preguntas exploradas, cinco decisiones ya están reflejadas en el di
 
 ### 2.5.3. Software Architecture
 
+La arquitectura de software de **SafeDiary** se estructura siguiendo las directrices del **C4 Model** (Context, Containers, Components, Code), propuesto por Simon Brown. Este modelo arquitectónico proporciona una abstracción jerárquica y coherente del sistema, permitiendo visualizar desde las fronteras organizacionales y las interacciones con actores y sistemas externos (Nivel 1: Contexto), hasta la descomposición en unidades de ejecución y tecnologías de persistencia (Nivel 2: Contenedores), la estructura modular interna de cada servicio (Nivel 3: Componentes) y los modelos de clases y esquemas relacionales (Nivel 4: Código).
+
+La solución ha sido concebida bajo un paradigma de **arquitectura orientada a servicios desacoplados (Service-Oriented / Microservices Architecture)** alineada estrictamente con los principios del diseño táctico de Domain-Driven Design (DDD). Cada Bounded Context opera como una unidad de despliegue y persistencia independiente, comunicándose de manera síncrona mediante APIs REST a través de un API Gateway centralizado y de manera asíncrona mediante un Message Broker para la propagación reactiva de eventos de dominio.
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
+![SafeDiary - System Context Diagram](../assets/images/chap2/architecture/context-diagram.png)
+
+Código en **Structurizr DSL (C4 Model)**:
+
+```text
+workspace "SafeDiary - System Context" "C4 System Context Diagram de la solución SafeDiary" {
+
+    model {
+        patient    = person "Paciente" "Usuario principal que registra su diario emocional, interactúa con el asistente de IA por texto, participa en comunidades anónimas y gestiona su consentimiento."
+        specialist = person "Especialista en Salud Mental" "Psicólogo o psiquiatra verificado que consulta el historial autorizado de sus consultantes y publica su perfil profesional."
+        visitor    = person "Usuario de la App / Visitante" "Persona que busca especialistas verificados en el directorio y explora recursos públicos de bienestar emocional."
+
+        safeDiary = softwareSystem "SafeDiary" "Plataforma móvil integral para el registro de vivencias, soporte reflexivo con IA basada en texto, comunidades seguras de apoyo y vinculación terapéutica controlada por consentimiento."
+
+        oauthProvider = softwareSystem "Google / Apple Identity Providers" "Servicios de autenticación federada OpenID Connect / OAuth2 para inicio de sesión seguro." "External System"
+        vertexAi      = softwareSystem "Google Cloud Vertex AI (Gemini API)" "Modelo fundacional de lenguaje natural para inferencia de distorsiones cognitivas, resúmenes clínicos y moderación de contenido." "External System"
+        pushService   = softwareSystem "Firebase Cloud Messaging (FCM) / APNs" "Infraestructura de mensajería push para despachar recordatorios de diario, hábitos y alertas en tiempo real." "External System"
+        crisisHotline = softwareSystem "Línea Nacional de Emergencia (Línea 113 / 988)" "Servicio telefónico y telemático de intervención en crisis e ideación suicida." "External System"
+        objectStorage = softwareSystem "Cloud Object Storage (AWS S3 / GCS)" "Almacenamiento en la nube cifrado en reposo para notas de voz del diario y archivos adjuntos." "External System"
+
+        patient    -> safeDiary     "Registra diario, conversa con AssistantAI por texto, hace check-in, participa en comunidades y gestiona consentimiento" "HTTPS / WSS"
+        specialist -> safeDiary     "Publica ficha profesional y consulta historial clínico autorizado de pacientes" "HTTPS"
+        visitor    -> safeDiary     "Explora directorio público de especialistas y recursos de bienestar" "HTTPS"
+
+        safeDiary  -> oauthProvider "Autentica identidad federada e intercambia tokens OAuth2/OIDC" "HTTPS/JSON"
+        safeDiary  -> vertexAi      "Envía prompts de texto sanitizados para inferencia reflexiva y detección de riesgos" "HTTPS/gRPC"
+        safeDiary  -> pushService   "Solicita el envío de notificaciones push programadas y eventos urgentes" "HTTPS/JSON"
+        safeDiary  -> crisisHotline "Deriva llamadas y suministra enlaces de contacto inmediato ante riesgo crítico" "Teléfono / HTTPS"
+        safeDiary  -> objectStorage "Almacena y recupera notas de voz cifradas en reposo" "HTTPS / Presigned URLs"
+    }
+
+    views {
+        systemContext safeDiary "SystemContext" {
+            include *
+            autoLayout
+        }
+
+        styles {
+            element "Person" {
+                shape Person
+                background #08427b
+                color #ffffff
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "External System" {
+                background #6c757d
+                color #ffffff
+            }
+        }
+    }
+}
+```
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
+![SafeDiary - Container Level Diagram](../assets/images/chap2/architecture/container-diagram.png)
 
+Código en **Structurizr DSL (C4 Model)**:
+
+```text
+workspace "SafeDiary - Containers" "C4 Container Diagram de la plataforma SafeDiary" {
+
+    model {
+        patient    = person "Paciente" "Interactúa con la app móvil para escribir en su diario, chatear con la IA por texto y participar en comunidades."
+        specialist = person "Especialista Verificado" "Accede a su perfil y consulta historial autorizado de sus consultantes."
+        visitor    = person "Visitante" "Consulta el directorio de especialistas y recursos informativos."
+
+        safeDiary = softwareSystem "SafeDiary" {
+
+            mobileApp = container "SafeDiary Mobile App" "Interfaz cliente nativa multiplataforma para registro emocional, interacción reflexiva por texto y participación social." "Flutter / Dart (iOS & Android)"
+            apiGateway = container "API Gateway" "Punto único de entrada inverso, terminación TLS, validación inicial de JWT, rate limiting y enrutamiento hacia microservicios." "Reverse Proxy / Envoy / Ocelot"
+
+            iamApi = container "IAM Service" "Gestiona cuentas de usuario, biometría, contratos de consentimiento y auditoría de accesos." "ASP.NET Core / Node.js Web API"
+            profilesApi = container "Profiles Service" "Gestiona perfiles personales, alias comunitarios anónimos y fichas profesionales de especialistas." "ASP.NET Core / Node.js Web API"
+            assistantAiApi = container "AssistantAI Service" "Motor de soporte conversacional 100% texto, detección de distorsiones cognitivas, evaluación de riesgo de crisis y resúmenes clínicos." "ASP.NET Core / Python Web API"
+            diaryApi = container "Diary Service" "Core domain: gestiona entradas íntimas de texto/voz, mood check-ins de 1 toque, recordatorios, rachas y exportación PDF." "ASP.NET Core / Node.js Web API"
+            communitiesApi = container "Communities Service" "Gestiona foros de apoyo anónimos, moderación de posts, hilos de desahogo y reacciones empáticas." "ASP.NET Core / Node.js Web API"
+            roomsApi = container "Rooms Service" "Gestiona salas efímeras de apoyo mutuo en tiempo real, señalización WebRTC y moderación en vivo." "Node.js / WebSockets / WebRTC Signaling"
+            rutinesApi = container "Rutines Service" "Gestiona catálogo de hábitos de bienestar, micro-desafíos emocionales y seguimiento de cumplimiento." "ASP.NET Core / Node.js Web API"
+
+            iamDb         = container "IAM Database" "Persiste cuentas, credenciales cifradas, tokens biométricos y directivas de consentimiento." "PostgreSQL 15" "Database"
+            profilesDb    = container "Profiles Database" "Persiste datos de perfil, alias anónimos y directorio de terapeutas con geolocalización." "PostgreSQL 15" "Database"
+            assistantAiDb = container "AssistantAI Database" "Persiste sesiones de conversación en texto, mensajes, distorsiones detectadas y evaluaciones de riesgo." "PostgreSQL 15" "Database"
+            diaryDb       = container "Diary Database" "Persiste entradas de diario, factores externos, series temporales de humor y rachas." "PostgreSQL 15" "Database"
+            communitiesDb = container "Communities Database" "Persiste hilos comunitarios, comentarios, votos empáticos y reportes de moderación." "PostgreSQL 15" "Database"
+            roomsDb       = container "Rooms Database & Cache" "Mantiene estado en memoria de salas activas, participantes conectados y señalización." "Redis 7 / PostgreSQL" "Database"
+            rutinesDb     = container "Rutines Database" "Persiste catálogo de ejercicios de respiración, hábitos programados e historial de cumplimiento." "PostgreSQL 15" "Database"
+
+            eventBus      = container "Event Bus" "Broker de eventos asíncrono para publicar y suscribir eventos de dominio de forma desacoplada." "RabbitMQ / Apache Kafka" "Queue"
+            objectStorage = container "Cloud Object Storage" "Almacenamiento de blobs cifrado en reposo para archivos crudos de notas de voz." "AWS S3 / Google Cloud Storage" "Storage"
+        }
+
+        oauthProvider = softwareSystem "Google / Apple Identity Providers" "Autenticación federada OpenID Connect." "External System"
+        vertexAi      = softwareSystem "Google Cloud Vertex AI (Gemini API)" "Inferencia de modelos fundacionales de LLM." "External System"
+        pushService   = softwareSystem "Firebase Cloud Messaging (FCM)" "Servicio push para dispositivos móviles." "External System"
+        crisisHotline = softwareSystem "Línea de Crisis 113 / 988" "Atención telefónica de emergencia." "External System"
+
+        # Relaciones de Actores con Contenedores
+        patient    -> mobileApp "Interactúa con la interfaz nativa táctil" "UI / Gestos"
+        specialist -> mobileApp "Gestiona perfil y consulta historial compartido" "UI / Gestos"
+        visitor    -> mobileApp "Explora directorio y recomendaciones" "UI / Gestos"
+
+        # Relaciones del Cliente Móvil con Gateway
+        mobileApp  -> apiGateway "Realiza peticiones seguras de API y abre canales en vivo" "HTTPS / WSS"
+
+        # Enrutamiento de Gateway a Microservicios
+        apiGateway -> iamApi         "Enruta /api/v1/iam/*" "HTTPS/JSON"
+        apiGateway -> profilesApi    "Enruta /api/v1/profiles/*" "HTTPS/JSON"
+        apiGateway -> assistantAiApi "Enruta /api/v1/assistant/*" "HTTPS/JSON"
+        apiGateway -> diaryApi       "Enruta /api/v1/diary/*" "HTTPS/JSON"
+        apiGateway -> communitiesApi "Enruta /api/v1/communities/*" "HTTPS/JSON"
+        apiGateway -> roomsApi       "Enruta /api/v1/rooms/* y /ws/rooms" "WSS / HTTPS"
+        apiGateway -> rutinesApi     "Enruta /api/v1/rutines/*" "HTTPS/JSON"
+
+        # Persistencia en Bases de Datos
+        iamApi         -> iamDb         "Lee y escribe cuentas y consentimientos" "SQL/TCP"
+        profilesApi    -> profilesDb    "Lee y escribe perfiles y especialistas" "SQL/TCP"
+        assistantAiApi -> assistantAiDb "Lee y escribe sesiones de texto y distorsiones" "SQL/TCP"
+        diaryApi       -> diaryDb       "Lee y escribe entradas de texto y check-ins" "SQL/TCP"
+        communitiesApi -> communitiesDb "Lee y escribe publicaciones y reportes" "SQL/TCP"
+        roomsApi       -> roomsDb       "Lee y actualiza sesiones de salas efímeras" "Redis RESP / SQL"
+        rutinesApi     -> rutinesDb     "Lee y escribe hábitos y cumplimiento" "SQL/TCP"
+
+        # Integración Asíncrona con Event Bus (Publish / Subscribe)
+        diaryApi       -> eventBus "Publica DiaryEntryCreated, MoodCheckInLogged" "AMQP"
+        assistantAiApi -> eventBus "Publica RiskLevelCriticalDetected, ClinicalSummaryGenerated" "AMQP"
+        iamApi         -> eventBus "Publica ConsentGranted, ConsentRevoked, AccountDeactivated" "AMQP"
+        communitiesApi -> eventBus "Publica CommunityPostReported" "AMQP"
+
+        eventBus -> assistantAiApi "Consume DiaryEntryCreated para inferencia de reflexiones" "AMQP"
+        eventBus -> rutinesApi     "Consume MoodCheckInLogged para sugerir hábitos adaptativos" "AMQP"
+
+        # Integraciones con Sistemas Externos y Storage
+        iamApi         -> oauthProvider "Valida tokens federados OAuth2" "HTTPS/JSON"
+        assistantAiApi -> vertexAi      "Invoca inferencia de texto (Gemini)" "HTTPS/gRPC"
+        assistantAiApi -> crisisHotline "Ofrece canal de contacto directo si hay crisis" "Teléfono / Deep link"
+        diaryApi       -> objectStorage "Almacena y recupera audios crudos" "HTTPS / Presigned URLs"
+        diaryApi       -> pushService   "Programa recordatorios push" "HTTPS/JSON"
+        rutinesApi     -> pushService   "Programa alertas de hábitos diarios" "HTTPS/JSON"
+    }
+
+    views {
+        container safeDiary "Containers" {
+            include *
+            autoLayout
+        }
+
+        styles {
+            element "Person" {
+                shape Person
+                background #08427b
+                color #ffffff
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "Container" {
+                background #438dd5
+                color #ffffff
+            }
+            element "Database" {
+                shape Cylinder
+                background #2a6f97
+                color #ffffff
+            }
+            element "Queue" {
+                shape Pipe
+                background #014f86
+                color #ffffff
+            }
+            element "Storage" {
+                shape Folder
+                background #2a6f97
+                color #ffffff
+            }
+            element "External System" {
+                background #6c757d
+                color #ffffff
+            }
+        }
+    }
+}
+```
+
+---
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
