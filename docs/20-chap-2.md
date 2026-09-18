@@ -1113,8 +1113,9 @@ AssistantAI actúa estrictamente bajo un principio ético de **no intervención 
 
 #### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
 
-Código en **Structurizr DSL (C4 Model)** para el componente de AssistantAI:
+![structurizr-AssistantAI-BC](../assets/images/bounded-context/ai/container-assistantai.png)
 
+Código en **Structurizr DSL (C4 Model)** para el componente de AssistantAI:
 ```text
 workspace "SafeDiary - AssistantAI (Component Diagram)" "C4 Component Diagram del bounded context AssistantAI" {
     model {
@@ -1238,6 +1239,8 @@ workspace "SafeDiary - AssistantAI (Component Diagram)" "C4 Component Diagram de
 
 ##### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
 
+![structurizr-AssistantAI-BC](../assets/images/bounded-context/ai/class-diagram-ai.png)
+
 Código en **Mermaid Class Diagram**:
 
 ```mermaid
@@ -1303,6 +1306,8 @@ classDiagram
 ```
 
 ##### 2.6.3.6.2. Bounded Context Database Design Diagram
+
+![structurizr-AssistantAI-BC](../assets/images/bounded-context/ai/ai-database-diagram.png)
 
 Código en **Mermaid ER Diagram** para la base de datos relacional de AssistantAI:
 
