@@ -568,9 +568,24 @@ Trelo con el backlog: [Trello SafeDiary](https://trello.com/b/Q2UsNz3t/product-b
 
 #### 2.5.1.3. Bounded Context Canvases
 
+En esta sección se detallan los Bounded Context Canvases elaborados para los contextos candidatos del sistema, siguiendo el proceso iterativo recomendado por Domain-Driven Design: Context Overview Definition, Business Rules Distillation & Ubiquitous Language Capture, Capability Analysis, Dependencies Capture y Design Critique.
 
+##### Bounded Context Canvas: AssistantAI
 
-##### Bounded Context Canvas: [Context Name]
+El Bounded Context de **AssistantAI** constituye el núcleo diferenciador e innovador de SafeDiary, proveyendo al usuario un acompañamiento reflexivo mediante modelos de lenguaje, clasificación emocional y mecanismos de seguridad clínica.
+
+**Tabla 3. Bounded Context Canvas de AssistantAI**
+
+| Sección del Canvas | Detalle y Especificación |
+| --- | --- |
+| **Name** | **AssistantAI** (AI Emotional Companion) |
+| **Description** | Proporcionar acompañamiento emocional interactivo mediante inteligencia artificial, clasificando emociones predominantes, detectando distorsiones de pensamiento, activando protocolos de emergencia ante crisis y generando resúmenes estructurados para el soporte profesional. |
+| **Strategic Classification** | • **Domain:** Core Domain *(capacidad diferenciadora y estratégica del negocio)*.<br>• **Business Model:** Engagement & Retention *(fomenta la reflexión diaria y la recurrencia)*.<br>• **Evolution:** Custom Built *(desarrollado a medida integrando modelos fundacionales de LLM mediante APIs externas)*. |
+| **Domain Roles** | • **Analysis Context:** Analiza el texto y lenguaje natural de las conversaciones para clasificar estados afectivos y distorsiones cognitivas.<br>• **Execution Context:** Genera respuestas empáticas y resúmenes clínicos estructurados. |
+| **Inbound Communication** | • **Mobile App (Frontend - 📱):**<br>  - `[Command] IniciarConversacion`<br>  - `[Command] EnviarMensajeTexto`<br>  - `[Command] CambiarPersonalidadIA`<br>• **Diary Context (Bounded Context - ☁️):**<br>  - `[Query] ConsultarEntradasSemanales`<br>• **Gemini LLM API (External System - ⚙️):**<br>  - `[Event] RespuestaIAGenerada` |
+| **Ubiquitous Language** | • **AI Companion:** Asistente conversacional automatizado de soporte reflexivo sin emisión de diagnósticos médicos.<br>• **Emotional Reflection:** Mensaje empático y orientador generado por la IA para asistir la autorregulación emocional del paciente.<br>• **Cognitive Distortion:** Patrón de pensamiento desadaptativo detectado en el texto (ej. catastrofismo, sobregeneralización).<br>• **Crisis Protocol:** Flujo de contención y asistencia inmediata activado ante expresiones de riesgo autolesivo o desesperanza crítica.<br>• **Personality Tone:** Parámetro que calibra el estilo y calidez del lenguaje de la IA (empático, reflexivo, analítico).<br>• **Clinical Summary:** Reporte estructurado que compila emociones predominantes y episodios relevantes para la consulta del psicólogo. |
+| **Business Decisions & Policies** | 1. **Protocolo de Seguridad en Crisis:** Si la evaluación de riesgo arroja una puntuación crítica de autoagresión o desesperanza total, se suspende la conversación estándar y se activa de inmediato el protocolo de crisis con la línea 988.<br>2. **Límite No Diagnóstico:** La IA tiene estrictamente prohibido prescribir fármacos o emitir diagnósticos clínicos patológicos; su función es únicamente de escucha reflexiva y síntesis de contexto.<br>3. **Adaptabilidad del Tono:** Toda reflexión generada debe apegarse al tono de personalidad seleccionado por el usuario en sus preferencias.<br>4. **Consolidación Semanal:** El resumen clínico se procesa automáticamente al corte de la semana agrupando exclusivamente las entradas autorizadas por el usuario. |
+| **Outbound Communication** | • **Crisis Support Context (Bounded Context - ☁️ / Línea 988 - ⚙️):**<br>  - `[Event] ProtocoloDeCrisisActivado`<br>• **Professional Care Context (Bounded Context - ☁️):**<br>  - `[Event] ResumenClinicoSemanalGenerado`<br>• **Diary / Journaling Context (Bounded Context - ☁️):**<br>  - `[Event] ReflexionIAGenerada`<br>• **Gemini API (External System - ⚙️):**<br>  - `[Command] SolicitarAnalisisEmocional`<br>  - `[Command] SolicitarGeneracionTexto` |
 
 
 ### 2.5.2. Context Mapping
@@ -1229,31 +1244,331 @@ erDiagram
 
 
 
-### 2.6.3. Bounded Context: AsistantAI
+### 2.6.3. Bounded Context: AssistantAI
 
+**AssistantAI** es el contexto nuclear que provee las capacidades de inteligencia artificial emocional de SafeDiary: orquesta sesiones conversacionales reflexivas mediante mensajes de texto, clasifica emociones predominantes alineadas a la rueda de Plutchik, detecta patrones de distorsión cognitiva, evalúa de forma preventiva el riesgo autolesivo para activar protocolos de crisis e integra resúmenes estructurados para enriquecer la atención clínica de los psicólogos (US-011, US-026, US-027, US-040, TS-003).
+
+La interacción con el asistente se realiza **exclusivamente por vía textual**, reconociendo que para personas con ansiedad, depresión o sobrecarga emocional, hablar en voz alta representa una barrera psicológica intimidante; la escritura ofrece un ritmo propio de introspección y desahogo sin presión inmediata. 
+
+AssistantAI actúa estrictamente bajo un principio ético de **no intervención diagnóstica**: la IA no emite juicios patológicos ni formula planes terapéuticos, sino que ofrece una escucha activa estructurada, validación emocional y destilación contextual. Para evitar el acoplamiento directo con proveedores comerciales de LLM, el contexto implementa un **Anti-Corruption Layer (ACL)** que traduce los contratos de OpenAI/Gemini al modelo de dominio de SafeDiary.
 
 #### 2.6.3.1. Domain Layer
 
+**Entities y Aggregates**
+- **ConversationSession (Aggregate Root):** id, accountId, startedAt, endedAt, status (ACTIVE, CLOSED, CRISIS_TRIGGERED), currentTone, messages[]. Representa una interacción continua de diálogo reflexivo entre el usuario y el asistente de IA.
+- **ConversationMessage:** id, sessionId, sender (USER, AI), content (texto de la reflexión o respuesta), sentAt, emotionTag (etiqueta normalizada según la rueda de Plutchik).
+- **CognitiveDistortion:** distorsión de pensamiento detectada en el mensaje del paciente (ej. catastrofismo, pensamiento todo-o-nada, sobregeneralización), con su nivel de certeza y fragmento de evidencia.
+- **RiskAssessment (Aggregate Root / Entity de seguridad):** id, sessionId, assessedAt, riskScore, riskLevel (LOW, MODERATE, CRITICAL), triggerKeywords[], crisisProtocolActivated. Registro inmutable de la evaluación de riesgo de la sesión.
+- **ClinicalSummary (Aggregate Root):** id, accountId, periodStart, periodEnd, dominantEmotions[], keyTriggers[], synthesisNarrative, highlights[], generatedAt. Síntesis periódica generada para que el psicólogo prepare la sesión sin sobrecarga de lectura.
+
+**Value Objects**
+- **SessionId, MessageId, AssessmentId, SummaryId:** identificadores fuertemente tipados.
+- **PersonalityTone:** EMPATHIC, REFLECTIVE, ANALYTICAL, CALM (calibra el estilo lingüístico del LLM).
+- **RiskLevel:** LOW, MODERATE, CRITICAL.
+- **PlutchikEmotionTag:** APPREHENSION, ACCEPTANCE, ANNOYANCE, VIGILANCE, PENSIVENESS, SERENITY, JOY, SADNESS, FEAR.
+- **DistortionType:** CATASTROPHIZING, OVERGENERALIZATION, ALL_OR_NOTHING, EMOTIONAL_REASONING, MENTAL_FILTER.
+- **SessionStatus:** ACTIVE, CLOSED, CRISIS_TRIGGERED.
+
+**Domain Events**
+- ConversationSessionStarted, UserMessageReceived, EmotionClassified, CognitiveDistortionDetected, RiskEvaluated, CrisisProtocolActivated, ReflectionGenerated, ClinicalSummaryGenerated, PersonalityToneUpdated.
+
+**Commands**
+- StartConversationCommand, SendTextMessageCommand, EvaluateRiskCommand, ActivateCrisisProtocolCommand, GenerateReflectionCommand, GenerateWeeklyClinicalSummaryCommand, ChangePersonalityToneCommand.
+
+**Queries**
+- GetActiveConversationSessionQuery, GetSessionHistoryByAccountQuery, GetWeeklyClinicalSummaryQuery, GetCurrentRiskAssessmentQuery.
+
+**Domain Services (Contratos)**
+- **RiskPolicyService:** determina si los indicadores y puntajes de riesgo exigen interrumpir la conversación estándar y disparar la alerta de emergencia (línea 988).
+- **EmotionClassifierService:** normaliza los resultados de inferencia afectiva hacia los vectores estandarizados de Plutchik.
+- **ClinicalSummarySynthesizerService:** procesa el historial semanal de reflexiones para compilar detonantes y patrones clave sin exponer transcripciones literales no autorizadas.
 
 #### 2.6.3.2. Interface Layer
 
+**Controllers**
+- **AiConversationsController:** inicia sesiones de diálogo, recibe mensajes de texto reflexivos, expone las respuestas generadas y el historial de interacción (US-011, US-027).
+- **AiPreferencesController:** consulta y actualiza el tono de personalidad y las preferencias del asistente para la cuenta (US-026).
+- **CrisisAlertController:** expone el estado de seguridad de la sesión, desencadenando recursos de emergencia y enlaces con líneas de ayuda locales (US-040).
+- **ClinicalSummariesController:** expone al psicólogo el resumen emocional autorizado y permite la generación bajo demanda de reportes de periodo (US-045).
+
+**Resources (Request/Response DTOs)**
+- **Conversation:** StartSessionResource, SendTextMessageResource, ConversationSessionResource, MessageResource, ReflectionResponseResource.
+- **Preferences:** PersonalityToneResource, UpdateAiToneResource.
+- **Crisis:** CrisisEvaluationResource, EmergencyHotlineResource.
+- **ClinicalSummary:** ClinicalSummaryResource, WeeklyEmotionalOverviewResource.
 
 #### 2.6.3.3. Application Layer
 
+**Command Handlers**
+- **ConversationCommandServiceImpl:** StartConversationCommand, SendTextMessageCommand, GenerateReflectionCommand.
+- **CrisisCommandServiceImpl:** EvaluateRiskCommand, ActivateCrisisProtocolCommand.
+- **ClinicalSummaryCommandServiceImpl:** GenerateWeeklyClinicalSummaryCommand.
+- **AiPreferencesCommandServiceImpl:** ChangePersonalityToneCommand.
+
+**Query Handlers**
+- **ConversationQueryServiceImpl:** GetActiveConversationSessionQuery, GetSessionHistoryByAccountQuery.
+- **ClinicalSummaryQueryServiceImpl:** GetWeeklyClinicalSummaryQuery.
+- **CrisisQueryServiceImpl:** GetCurrentRiskAssessmentQuery.
+
+**Event Handlers**
+- **CriticalRiskDetectedEventHandler:** reacciona al evento `RiskEvaluated` para activar la política de contención y notificar al bus de eventos.
+- **WeeklySummaryTriggerEventHandler:** procesa la tarea programada de cierre semanal para sintetizar las reflexiones del paciente.
 
 #### 2.6.3.4. Infrastructure Layer
 
+**Repositories**
+- **ConversationSessionRepository:** persistencia relacional de sesiones y mensajes cronológicos.
+- **RiskAssessmentRepository:** persistencia append-only de evaluaciones de riesgo clínico.
+- **ClinicalSummaryRepository:** persistencia y consulta indexada por cuenta y rango de fechas de resúmenes clínicos.
+
+**Adaptadores externos**
+- **GeminiLlmAdapter (ACL):** Anti-Corruption Layer que encapsula los llamados HTTP/gRPC a Google Gemini API para extracción de entidades, clasificación de emociones y síntesis textual empática.
+- **CrisisHotlineAdapter:** directorio de integración con servicios y marcadores de líneas de emergencia (Línea 988 / 113 Minsa en Perú).
 
 #### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
 
+Código en **Structurizr DSL (C4 Model)** para el componente de AssistantAI:
+
+```text
+workspace "SafeDiary - AssistantAI (Component Diagram)" "C4 Component Diagram del bounded context AssistantAI" {
+    model {
+        patient = person "Paciente" "Interactúa mediante texto reflexivo con la IA, consulta reflexiones y ajusta el tono."
+
+        safeDiary = softwareSystem "SafeDiary" {
+            assistantAiApi = container "AssistantAI API" "Procesa conversaciones por texto, clasifica emociones, evalúa riesgos y genera resúmenes." "ASP.NET Core / Python FastAPI" {
+                conversationsController     = component "AiConversationsController" "Endpoints para iniciar chats, enviar mensajes de texto y recibir reflexiones." "REST Controller"
+                aiPreferencesController     = component "AiPreferencesController" "Endpoints para consultar y actualizar el tono de personalidad de la IA." "REST Controller"
+                clinicalSummariesController = component "ClinicalSummariesController" "Endpoints para generar y consultar resúmenes estructurados para especialistas." "REST Controller"
+                crisisAlertController       = component "CrisisAlertController" "Endpoints de consulta de estado de emergencia y líneas de ayuda." "REST Controller"
+
+                conversationCmdService  = component "ConversationCommandServiceImpl" "Orquesta el procesamiento de mensajes de texto y reflexiones." "Application Service"
+                conversationQryService  = component "ConversationQueryServiceImpl" "Consultas de historial de interacciones con la IA." "Application Service"
+                summaryCmdService       = component "ClinicalSummaryCommandServiceImpl" "Compila y sintetiza resúmenes clínicos periódicos." "Application Service"
+                crisisEvaluationService = component "CrisisEvaluationServiceImpl" "Aplica políticas de detección de riesgo y activación de protocolos." "Application Service"
+
+                conversationAggregate    = component "ConversationSession Aggregate" "Invariantes de la sesión de diálogo, mensajes y turnos." "Domain Model (DDD)"
+                riskAssessmentEntity     = component "RiskAssessment Entity" "Invariantes de evaluación de riesgo e indicadores críticos." "Domain Model (DDD)"
+                clinicalSummaryAggregate = component "ClinicalSummary Aggregate" "Invariantes de la síntesis semanal de emociones y detonantes." "Domain Model (DDD)"
+                riskPolicyService        = component "RiskPolicyService" "Valida si el puntaje de riesgo exige activación de protocolo de emergencia." "Domain Service"
+                emotionClassifierService = component "EmotionClassifierService" "Normaliza etiquetas emocionales hacia la rueda de Plutchik." "Domain Service"
+
+                conversationRepo    = component "ConversationSessionRepository" "Persistencia de sesiones de conversación y mensajes." "Repository"
+                clinicalSummaryRepo = component "ClinicalSummaryRepository" "Persistencia de resúmenes clínicos semanales." "Repository"
+                riskAssessmentRepo  = component "RiskAssessmentRepository" "Persistencia de auditoría de evaluaciones de riesgo." "Repository"
+
+                geminiLlmAdapter     = component "GeminiLlmAdapter" "Cliente Anti-Corruption Layer hacia Google Gemini API." "Infrastructure Adapter"
+                crisisHotlineAdapter = component "CrisisHotlineAdapter" "Conecta con catálogos y protocolos de líneas de emergencia (988)." "Infrastructure Adapter"
+            }
+
+            postgres = container "AssistantAI Database" "Persistencia de conversaciones, evaluaciones de riesgo y resúmenes." "PostgreSQL 15"
+            eventBus = container "Event Bus" "Publica CrisisProtocolActivated, ClinicalSummaryGenerated, ReflectionGenerated." "RabbitMQ / Kafka"
+        }
+
+        diaryContext    = softwareSystem "Diary (Bounded Context externo)" "Provee entradas de diario y recibe reflexiones generadas."
+        clinicalContext = softwareSystem "Professional Care (Bounded Context externo)" "Recibe resúmenes clínicos para la preparación de consultas."
+        geminiApi       = softwareSystem "Google Gemini API (External System)" "Modelo fundacional LLM para análisis de lenguaje natural y generación."
+        crisisService   = softwareSystem "Línea de Crisis 988 (External System)" "Servicio telefónico y digital de emergencia y contención humana."
+
+        # Interacciones del paciente con controladores
+        patient -> conversationsController "Envía mensajes de texto reflexivos" "HTTPS/JSON"
+        patient -> aiPreferencesController "Configura tono de personalidad" "HTTPS/JSON"
+        patient -> crisisAlertController   "Consulta recursos y líneas de emergencia" "HTTPS/JSON"
+
+        # Controladores a servicios de aplicación
+        conversationsController     -> conversationCmdService  "Envía comandos de conversación"
+        conversationsController     -> conversationQryService  "Envía queries de historial"
+        aiPreferencesController     -> conversationCmdService  "Envía comandos de personalización"
+        clinicalSummariesController -> summaryCmdService       "Dispara generación de resumen"
+        crisisAlertController       -> crisisEvaluationService "Consulta estado de riesgo"
+
+        # Servicios de aplicación a dominio
+        conversationCmdService  -> conversationAggregate    "Orquesta mensajes"
+        conversationCmdService  -> riskPolicyService        "Evalúa riesgo de contenido"
+        conversationCmdService  -> emotionClassifierService "Clasifica emociones"
+        crisisEvaluationService -> riskAssessmentEntity     "Registra evaluación"
+        summaryCmdService       -> clinicalSummaryAggregate "Genera resumen"
+
+        # Servicios de aplicación a adaptadores externos
+        conversationCmdService  -> geminiLlmAdapter     "Genera reflexión y analiza distorsiones"
+        crisisEvaluationService -> crisisHotlineAdapter "Obtiene recursos locales"
+        summaryCmdService       -> geminiLlmAdapter     "Sintetiza tendencias semanales"
+
+        # Adaptadores a sistemas externos
+        geminiLlmAdapter     -> geminiApi       "Solicita inferencia LLM" "HTTPS/gRPC"
+        crisisHotlineAdapter -> crisisService   "Enlaza con protocolo 988" "Tel/HTTPS"
+
+        # Servicios de aplicación a repositorios
+        conversationCmdService  -> conversationRepo    "Persiste"
+        conversationQryService  -> conversationRepo    "Consulta"
+        crisisEvaluationService -> riskAssessmentRepo  "Persiste"
+        summaryCmdService       -> clinicalSummaryRepo "Persiste"
+
+        # Repositorios a base de datos
+        conversationRepo    -> postgres "CRUD" "SQL/TCP"
+        clinicalSummaryRepo -> postgres "CRUD" "SQL/TCP"
+        riskAssessmentRepo  -> postgres "CRUD" "SQL/TCP"
+
+        # Eventos al Event Bus
+        conversationAggregate    -> eventBus "Publica ReflectionGenerated"
+        riskAssessmentEntity     -> eventBus "Publica CrisisProtocolActivated"
+        clinicalSummaryAggregate -> eventBus "Publica ClinicalSummaryGenerated"
+
+        # Integraciones entre bounded contexts
+        eventBus     -> clinicalContext         "Entrega ClinicalSummaryGenerated"
+        eventBus     -> diaryContext            "Entrega ReflectionGenerated"
+        diaryContext -> conversationsController "Sincroniza entradas para contexto" "HTTPS/JSON"
+    }
+
+    views {
+        component assistantAiApi "AssistantAI_Components" {
+            include *
+            autoLayout
+        }
+
+        styles {
+            element "Person" {
+                shape Person
+                background #08427b
+                color #ffffff
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "Container" {
+                background #438dd5
+                color #ffffff
+            }
+            element "Component" {
+                background #85bbf0
+                color #000000
+            }
+        }
+    }
+}
+```
 
 #### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
 
-
 ##### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
 
+Código en **Mermaid Class Diagram**:
+
+```mermaid
+classDiagram
+    class ConversationSession {
+        +UUID id
+        +UUID accountId
+        +DateTime startedAt
+        +DateTime endedAt
+        +SessionStatus status
+        +PersonalityTone currentTone
+        +addMessage(content, sender)
+        +close()
+        +flagForCrisis()
+    }
+    class ConversationMessage {
+        +UUID id
+        +UUID sessionId
+        +MessageSender sender
+        +String content
+        +String emotionTag
+        +DateTime sentAt
+    }
+    class CognitiveDistortion {
+        +UUID id
+        +UUID messageId
+        +DistortionType type
+        +String evidence
+        +Float confidence
+    }
+    class RiskAssessment {
+        +UUID id
+        +UUID sessionId
+        +Float riskScore
+        +RiskLevel riskLevel
+        +Boolean crisisTriggered
+        +DateTime assessedAt
+        +evaluateRisk()
+    }
+    class ClinicalSummary {
+        +UUID id
+        +UUID accountId
+        +Date periodStart
+        +Date periodEnd
+        +List~String~ dominantEmotions
+        +List~String~ keyTriggers
+        +String synthesisNarrative
+        +DateTime generatedAt
+    }
+    class RiskPolicyService {
+        +isCriticalRisk(riskScore) Boolean
+    }
+    class EmotionClassifierService {
+        +normalizeToPlutchik(rawTag) String
+    }
+
+    ConversationSession "1" --> "0..*" ConversationMessage : contiene
+    ConversationMessage "1" --> "0..*" CognitiveDistortion : identifica
+    ConversationSession "1" --> "0..1" RiskAssessment : evalua
+    ConversationSession "0..*" ..> ClinicalSummary : sintetizado en
+    RiskPolicyService ..> RiskAssessment : valida
+    EmotionClassifierService ..> ConversationMessage : clasifica
+```
 
 ##### 2.6.3.6.2. Bounded Context Database Design Diagram
+
+Código en **Mermaid ER Diagram** para la base de datos relacional de AssistantAI:
+
+```mermaid
+erDiagram
+    CONVERSATION_SESSIONS {
+        uuid id PK
+        uuid account_id FK
+        datetime started_at
+        datetime ended_at
+        string status
+        string current_tone
+    }
+    CONVERSATION_MESSAGES {
+        uuid id PK
+        uuid session_id FK
+        string sender
+        text content
+        string emotion_tag
+        datetime sent_at
+    }
+    COGNITIVE_DISTORTIONS {
+        uuid id PK
+        uuid message_id FK
+        string distortion_type
+        string evidence
+        float confidence
+    }
+    RISK_ASSESSMENTS {
+        uuid id PK
+        uuid session_id FK
+        float risk_score
+        string risk_level
+        boolean crisis_triggered
+        datetime assessed_at
+    }
+    CLINICAL_SUMMARIES {
+        uuid id PK
+        uuid account_id FK
+        date period_start
+        date period_end
+        text dominant_emotions
+        text key_triggers
+        text synthesis_narrative
+        datetime generated_at
+    }
+
+    CONVERSATION_SESSIONS ||--o{ CONVERSATION_MESSAGES : "contains"
+    CONVERSATION_MESSAGES ||--o{ COGNITIVE_DISTORTIONS : "identifies"
+    CONVERSATION_SESSIONS ||--o| RISK_ASSESSMENTS : "evaluated by"
+    CONVERSATION_SESSIONS ||--o{ CLINICAL_SUMMARIES : "synthesized into"
+```
 
 
 
