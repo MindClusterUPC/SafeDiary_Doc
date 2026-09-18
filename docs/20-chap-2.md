@@ -486,6 +486,8 @@ El Product Backlog reúne y prioriza las historias de usuario (US) y las histori
 
 El orden resultante del backlog agrupa primero los elementos de mayor puntaje —correspondientes a la infraestructura crítica de seguridad, IA, pagos y tiempo real— y distribuye el resto según su aporte al MVP. Esta priorización alimenta directamente la planificación de los tres sprints que se detallarán en el Capítulo IV.
 
+Enlace de trello: https://trello.com/invite/b/6aad90c13f858f04fc63f833/ATTI8fd9a76bec0c79fa8a7f8195257de3fcD372B969/product-backlog 
+
 **Tabla 2. Product Backlog de SafeDiary**
 
 | #Orden | Story ID | Título | Story Points (1/2/3/5/8) | Sprint |
