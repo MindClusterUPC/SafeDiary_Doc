@@ -562,6 +562,9 @@ Trelo con el backlog: [Trello SafeDiary](https://trello.com/b/Q2UsNz3t/product-b
 
 #### 2.5.1.1. Candidate Context Discovery
 
+![diary-hp](../assets/images/bounded-context/diary/diary-es-hp.png)
+
+EL Bounded Context de Diary es responsable de registrar la entrada de los diarios de los usuarios, en esta imagen se visualiza el Happy Path de la funcionalidad de registro de diarios.
 
 
 #### 2.5.1.2. Domain Message Flows Modeling
@@ -573,6 +576,11 @@ Trelo con el backlog: [Trello SafeDiary](https://trello.com/b/Q2UsNz3t/product-b
 ##### Bounded Context Canvas: AssistantAI
 
 ![assisntant_bcc](../assets/images/chap2/boundedcontexts/assistantai-bcc.png)
+
+
+![diary-bcc](../assets/images/bounded-context/diary/diary-bcc.png)
+
+En esta imagen represantamos el Bounded Context de Diary, dentro del dominio de SafeDiary. Este Bounded Context es responsable de gestionar las entradas de diario de los usuarios, lo que incluye la creacion, edicion, eliminacion y consulta de las entradas de diario, así como la gestion de los estados emocionales de los usuarios. Ademas permite gestionar el acceso a esta información por parte de otros Bounded Contexts, como el AssistantAI.
 
 ### 2.5.2. Context Mapping
 

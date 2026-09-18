@@ -96,6 +96,7 @@ Proyecto
 | 0.0.16 | 18/09/2026 | Marcelo Cuadros | Completado del indice en el README.md | 
 | 0.0.17 | 18/09/2026 | Marcelo Cuadros | Completado bounded context diary | 
 | 0.0.18 | 18/09/2026 | Juan Wang | Elaboración de la arquitectura de software C4: System Context Diagram (2.5.3.1) y Container Level Diagram (2.5.3.2) con especificaciones Structurizr DSL, diagramas Mermaid y placeholders de imagen |
+| 0.0.19 | 18/09/2026 | Marcelo Cuadros | Añadir el BC Diary Canvas |
 
 
 # Project Report Collaboration Insights
