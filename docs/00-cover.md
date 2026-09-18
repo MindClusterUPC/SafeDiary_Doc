@@ -94,6 +94,8 @@ Proyecto
 | 0.0.14 | 18/09/2026 | Juan Wang | Modelado de Big Picture EventStorming (Fases 1 y 2) y definición del Bounded Context Canvas para AssistantAI; y configuración de importación del Product Backlog para Trello con clasificación por épicas |
 | 0.0.15 | 18/09/2026 | Andrés Torres | Añadir Encabezados por Bounded Context |
 | 0.0.16 | 18/09/2026 | Marcelo Cuadros | Completado del indice en el README.md | 
+| 0.0.17 | 18/09/2026 | Marcelo Cuadros | Completado bounded context diary | 
+
 
 # Project Report Collaboration Insights
 
