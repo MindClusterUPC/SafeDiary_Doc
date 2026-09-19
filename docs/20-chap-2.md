@@ -2675,7 +2675,7 @@ erDiagram
 
 
 
-### 2.6.6. Bounded Context: DailyCare (Routines)
+### 2.6.7. Bounded Context: DailyCare (Routines)
 
 **DailyCare (Routines)** es el contexto que apoya el bienestar constante del usuario: administra la configuración de rutinas diarias personalizadas, la asignación y respuesta de prompts de escritura reflexiva, el inicio de ejercicios de regulación rápida (SOS / Respiración) y el envío autónomo de recordatorios. Su objetivo es fomentar hábitos de autocuidado y proporcionar herramientas de contención inmediata, interactuando con el usuario mediante un motor de notificaciones en horarios que respeten su conveniencia temporal.
 
@@ -2683,7 +2683,7 @@ La frontera del contexto separa la gestión de hábitos diarios del historial cl
 
 La máquina de estados de una notificación programada es `PENDING` -> `SENT` o `FAILED`. La máquina de estados de un prompt de escritura es `ASSIGNED` -> `COMPLETED`. Si una notificación falla por problemas de red externos, el sistema registra el fallo sin corromper la rutina base, la cual sigue activa para el día siguiente.
 
-#### 2.6.6.1. Domain Layer
+#### 2.6.7.1. Domain Layer
 
 **Entities y Aggregates**
 
@@ -2717,7 +2717,7 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 
 * **UserConvenienceSchedulePolicy:** valida y determina el momento exacto (`DateTime`) del envío de notificaciones evaluando la hora objetivo (`targetTime`) contra la zona horaria del usuario (`preferredTimezone`), garantizando que los recordatorios se programen a conveniencia y no generen intrusión.
 
-#### 2.6.6.2. Interface Layer
+#### 2.6.7.2. Interface Layer
 
 **Controllers**
 
@@ -2731,7 +2731,7 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 * **Prompts:** AnswerPromptResource, WritingPromptResource.
 * **Exercises:** InitiateExerciseResource, SosExerciseLogResource.
 
-#### 2.6.6.3. Application Layer
+#### 2.6.7.3. Application Layer
 
 **Command Handlers**
 
@@ -2751,12 +2751,13 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 * **RoutineCreatedEventHandler:** reacciona a la creación de una nueva rutina para calcular e insertar en la base de datos la primera instancia de `ScheduledNotification` utilizando la política de husos horarios.
 * **NotificationTriggeredEventHandler:** solicita al adaptador de infraestructura el formateo y despacho del payload hacia el dispositivo móvil del usuario.
 
-#### 2.6.6.4. Infrastructure Layer
+#### 2.6.7.4. Infrastructure Layer
 
 **Repositories**
 
 * **RoutineRepository:** persistencia relacional de rutinas configuradas, la preferencia de huso horario y el calendario de notificaciones (`ScheduledNotification`).
 * **DailyActivityRepository:** persistencia append-friendly de prompts completados y registros de auditoría de los ejercicios SOS ejecutados.
+
 
 **Adaptadores externos**
 

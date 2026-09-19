@@ -100,10 +100,29 @@ Proyecto
 | 0.0.20 | 18/09/2026 | Andrés Torres | Añadir el Bounded Context de IAM y Profiles y el Context Mapping |
 | 0.0.21 | 18/09/2026 | Juan Wang | Añadir Candidate Context Discovery para los 7 Bounded Contexts |
 | 0.0.22 | 18/09/2026 | Juan Wang | Añadir Domain Message Flows Modeling (flujos 1, 2 y 3) |
+| 0.0.23 | 18/09/2026 | Juan Wang | Añadir Project Report Collaboration Insights |
 
 
 # Project Report Collaboration Insights
 
+A continuación, se detalla el enlace al repositorio oficial del proyecto en GitHub, la metodología de trabajo colaborativo adoptada y la evidencia de las contribuciones realizadas durante la elaboración del informe:
+
+- **Repositorio en GitHub:** [https://github.com/MindClusterUPC/SafeDiary_Doc](https://github.com/MindClusterUPC/SafeDiary_Doc)
+
+![img_1.png](img_1.png)
+![img.png](img.png)
+
+### Resumen Consolidado de Contribuciones
+
+| Integrante | Rol / Especialidad | Principales Aportes en el Informe |
+| :--- | :--- | :--- |
+| **Cuadros Villanueva, Marcelo Fabio** | Product & Domain Specialist | Segmentos objetivo, entrevistas a pacientes, análisis de entrevistas, Bounded Context Diary (DDD táctico, diagramas de clases, base de datos y componentes C4). |
+| **Diaz Martinez, Alexther Kamil** | DevOps & Documentation Lead | Estructura del repositorio y configuración inicial, redacción de perfiles de startup, introducción y antecedentes. |
+| **Torres Lavandera, Andres Rodrigo** | Systems Architect & Backend Dev | Entrevistas y empathy map de psicólogos, Product Backlog inicial, Bounded Contexts IAM & Profiles, Context Mapping DDD. |
+| **Vargas Alarcon, Santiago Enrique** | Domain Specialist & QA | Entrevistas a psicólogos, refinamiento de perfiles de integrantes, Bounded Context Rutines (DailyCare). |
+| **Wang Chen, Juan Sung Jau** | Lead Architect & UX Analyst | Lean UX Process (Problem Statements, Assumptions, Hypotheses, Lean UX Canvas), Journey Maps, Big Picture EventStorming, Arquitectura C4 (Context y Container Diagrams), Candidate Context Discovery y Domain Message Flows. |
+
+---
 
 # Tabla de contenidos
 
