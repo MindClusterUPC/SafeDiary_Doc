@@ -582,6 +582,10 @@ EL Bounded Context de Diary es responsable de registrar la entrada de los diario
 
 En esta imagen represantamos el Bounded Context de Diary, dentro del dominio de SafeDiary. Este Bounded Context es responsable de gestionar las entradas de diario de los usuarios, lo que incluye la creacion, edicion, eliminacion y consulta de las entradas de diario, así como la gestion de los estados emocionales de los usuarios. Ademas permite gestionar el acceso a esta información por parte de otros Bounded Contexts, como el AssistantAI.
 
+![rooms-bcc](../assets/images/bounded-context/rooms/rooms-bcc.png)
+
+![rutines-bcc](../assets/images/bounded-context/rutines/rutines-bcc.png)
+
 ### 2.5.2. Context Mapping
 
 ##### Resumen del Proceso
@@ -2139,20 +2143,87 @@ erDiagram
 
 ### 2.6.5. Bounded Context: Rooms
 
+**Rooms** es el contexto técnico que encapsula la infraestructura de comunicación de voz en tiempo real dentro de SafeDiary: administra la inicialización de las sesiones en el servidor de medios, la emisión de tokens de acceso, la negociación de señalización WebRTC y el control de los flujos de audio (silenciar/activar micrófono) (US-005, TS-004). Su objetivo es garantizar una conexión de audio estable, de baja latencia y segura, aislando la complejidad técnica del manejo de streams del resto de los flujos de negocio. La frontera del contexto es puramente técnica; delega todas las decisiones lógicas al contexto de *Communities*. El audio crudo nunca se graba ni se persiste en disco, actuando exclusivamente como un puente de transporte efímero.
+
+La máquina de estados de un participante de medios es `DISCONNECTED` -> `CONNECTING` -> `CONNECTED` -> `DISCONNECTED`, con los sub-estados de flujo de audio `AUDIO_MUTED` y `AUDIO_UNMUTED`. Un fallo de conexión dispara mecanismos de reconexión ICE sin alterar el estado del participante en el dominio superior de *Communities*.
 
 #### 2.6.5.1. Domain Layer
 
+**Entities y Aggregates**
+
+* **MediaRoom (Aggregate Root):** id, externalCommunitySessionId, status (INITIALIZED, ACTIVE, CLOSED), maxCapacity, activePeers[], createdAt, closedAt, version. Representa la sesión física alojada en el servidor WebRTC. Protege las invariantes de aforo técnico y ciclo de vida del socket (ej. solo acepta peers si está ACTIVE y tiene capacidad; se cierra por inactividad tras un periodo de gracia). Expone los comportamientos `initialize()`, `registerPeer()`, `mutePeerAudio()`, `unmutePeerAudio()` y `close()`.
+* **MediaPeer:** id, mediaRoomId, externalParticipantId, connectionState (DISCONNECTED, CONNECTING, CONNECTED), audioState (MUTED, UNMUTED), joinedAt. La identidad es un identificador opaco proporcionado por *Communities*; no almacena alias, roles ni datos personales. Ingresa por defecto con el `audioState` en MUTED para proteger la privacidad (TS-004).
+
+**Value Objects**
+
+* **MediaRoomId, MediaPeerId:** identificadores únicos del dominio.
+* **AudioToken:** JWT o credencial segura generada temporalmente para el handshake.
+* **SignalingPayload:** estructuras de datos para `SdpOffer`, `SdpAnswer` y `IceCandidate`.
+* **MediaRoomStatus:** INITIALIZED, ACTIVE, CLOSED.
+* **PeerConnectionState:** DISCONNECTED, CONNECTING, CONNECTED.
+
+**Domain Events**
+
+* MediaRoomInitialized, MediaRoomClosed, PeerConnected, PeerDisconnected, PeerAudioMuted, PeerAudioUnmuted, AudioTokenIssued.
+
+**Commands**
+
+* InitializeMediaRoomCommand, CloseMediaRoomCommand, GenerateAudioTokenCommand, MutePeerAudioCommand, UnmutePeerAudioCommand.
+
+**Queries**
+
+* GetMediaRoomHealthStatusQuery, GetActivePeersQuery, GetPeerConnectionStateQuery.
+
+**Domain Services (Contratos)**
+
+* **MediaTokenIssuerPolicy:** orquesta la generación y firma criptográfica de los tokens de un solo uso que el cliente móvil presentará al servidor WebRTC para unirse.
+* **ConnectionLifecycleService:** evalúa los *heartbeats* (latidos de conexión) para limpiar peers caídos (zombie peers) y mantener la precisión de la métrica de capacidad.
 
 #### 2.6.5.2. Interface Layer
 
+**Controllers**
+
+* **MediaRoomController:** recibe llamadas S2S (Server-to-Server) internas para inicializar y destruir las sesiones de medios cuando el dominio lo requiere.
+* **MediaTokenController:** expone endpoints seguros para emitir el token de acceso de medios una vez que *Communities* autorizó al participante (US-005).
+* **SignalingController:** mantiene la conexión WebSocket y expone APIs REST para el intercambio inicial de candidatos ICE y negociación SDP entre el cliente y el servidor de medios.
+
+**Resources (Request/Response DTOs)**
+
+* **Media Management:** InitializeMediaRoomResource, MediaRoomHealthResource.
+* **Signaling & Auth:** AudioTokenResource, SignalingPayloadResource, PeerStateResource. (Los recursos devueltos son estrictamente técnicos; omiten cualquier detalle clínico, de moderación o de identidad comunitaria).
 
 #### 2.6.5.3. Application Layer
 
+**Command Handlers**
+
+* **MediaRoomCommandServiceImpl:** InitializeMediaRoomCommand, CloseMediaRoomCommand.
+* **MediaPeerCommandServiceImpl:** GenerateAudioTokenCommand, MutePeerAudioCommand, UnmutePeerAudioCommand.
+
+**Query Handlers**
+
+* **MediaRoomQueryServiceImpl:** GetMediaRoomHealthStatusQuery, GetActivePeersQuery.
+
+**Event Handlers**
+
+* **CommunitySessionClosedEventHandler:** escucha el evento externo proveniente de *Communities* y dispara reactivamente el `CloseMediaRoomCommand` para tumbar la infraestructura asociada y evitar fugas de recursos (resource leaks).
+* **PeerDroppedEventHandler:** detecta la pérdida de paquetes o caída de WebSocket y actualiza el agregado `MediaPeer` a DISCONNECTED.
 
 #### 2.6.5.4. Infrastructure Layer
 
+**Repositories**
+
+* **MediaRoomRepository:** utiliza almacenamiento en memoria de acceso ultra-rápido (Redis) para persistir el estado transitorio del agregado y la lista de `activePeers`. Los datos de la sesión de red son efímeros y se descartan tras el cierre.
+* **MediaOutboxRepository:** almacena eventos técnicos temporalmente mediante el patrón *Transactional Outbox* antes de ser despachados al Event Bus, empleando claves de idempotencia para evitar crear la sala WebRTC dos veces.
+
+**Adaptadores externos**
+
+* **WebRtcMediaServerAdapter (ACL):** traduce los comandos del dominio a llamadas propietarias del proveedor de infraestructura WebRTC (ej. LiveKit SDK, Agora o un servidor nativo Mediasoup). Administra el enrutamiento SFU y la asignación de pistas de audio, aplicando circuit breakers ante fallos externos (TS-004).
+* **SignalingWebsocketAdapter:** gestiona el pool de conexiones WebSocket entrantes de los clientes móviles.
+
 
 #### 2.6.5.5. Bounded Context Software Architecture Component Level Diagrams
+
+![ROOMS_COMPONENT](../assets/images/bounded-context/rooms/rooms-components.png)
 
 
 #### 2.6.5.6. Bounded Context Software Architecture Code Level Diagrams
@@ -2160,10 +2231,11 @@ erDiagram
 
 ##### 2.6.5.6.1. Bounded Context Domain Layer Class Diagrams
 
+![ROOMS_CLASS](../assets/images/bounded-context/rooms/rooms-class-diagram.png)
 
 ##### 2.6.5.6.2. Bounded Context Database Design Diagram
 
-
+![ROOMS_CLASS](../assets/images/bounded-context/rooms/rooms-class-diagram.png)
 
 ### 2.6.6. Bounded Context: Diary
 
@@ -2541,28 +2613,106 @@ erDiagram
 
 
 
-### 2.6.7. Bounded Context: Rutines
+### 2.6.6. Bounded Context: DailyCare (Routines)
 
+**DailyCare (Routines)** es el contexto que apoya el bienestar constante del usuario: administra la configuración de rutinas diarias personalizadas, la asignación y respuesta de prompts de escritura reflexiva, el inicio de ejercicios de regulación rápida (SOS / Respiración) y el envío autónomo de recordatorios. Su objetivo es fomentar hábitos de autocuidado y proporcionar herramientas de contención inmediata, interactuando con el usuario mediante un motor de notificaciones en horarios que respeten su conveniencia temporal.
 
-#### 2.6.7.1. Domain Layer
+La frontera del contexto separa la gestión de hábitos diarios del historial clínico estructurado o del diario emocional principal. Un ejercicio SOS o un prompt completado pertenecen al ámbito del cuidado diario, y su orquestación es en gran medida autónoma a través de un *Scheduler* interno.
 
+La máquina de estados de una notificación programada es `PENDING` -> `SENT` o `FAILED`. La máquina de estados de un prompt de escritura es `ASSIGNED` -> `COMPLETED`. Si una notificación falla por problemas de red externos, el sistema registra el fallo sin corromper la rutina base, la cual sigue activa para el día siguiente.
 
-#### 2.6.7.2. Interface Layer
+#### 2.6.6.1. Domain Layer
 
+**Entities y Aggregates**
 
-#### 2.6.7.3. Application Layer
+* **User (Aggregate Root):** id, devicePushToken, preferredTimezone. Orquesta la configuración de rutinas y centraliza las preferencias necesarias para que el sistema respete los husos horarios del usuario al interactuar.
+* **DailyRoutine (Aggregate Root):** id, userId, title, targetTime, isActive, createdAt. Representa el hábito o actividad programada. Protege las invariantes de creación y expone los comportamientos `updateTargetTime()`, `deactivate()` y `generateNextNotification()`.
+* **ScheduledNotification (Entity):** id, routineId, scheduledFor, status (PENDING, SENT, FAILED), sentAt. Es la instancia transaccional individual del recordatorio que se disparará.
+* **WritingPrompt (Aggregate Root):** id, userId, question, answerText, status (ASSIGNED, COMPLETED), assignedAt, answeredAt. Ejercicio guiado asignado al usuario que este debe responder y guardar en el sistema.
+* **SosExercise (Aggregate Root):** id, userId, exerciseType (BREATHING, GROUNDING), durationSeconds, initiatedAt. Registro inmutable (log) de la herramienta de contención inmediata seleccionada y ejecutada de forma voluntaria.
 
+**Value Objects**
 
-#### 2.6.7.4. Infrastructure Layer
+* **RoutineId, NotificationId, PromptId, ExerciseId:** identificadores únicos del dominio.
+* **TargetTime:** hora local sin fecha estricta (LocalTime) configurada para la rutina.
+* **NotificationStatus:** PENDING, SENT, FAILED.
+* **PromptStatus:** ASSIGNED, COMPLETED.
+* **ExerciseType:** BREATHING, GROUNDING.
+
+**Domain Events**
+
+* DailyRoutineCreated, RoutineReminderSent, WritingPromptCompleted, SosExerciseInitiated.
+
+**Commands**
+
+* ConfigureDailyRoutineCommand, TriggerScheduledNotificationCommand, AnswerWritingPromptCommand, InitiateSosExerciseCommand.
+
+**Queries**
+
+* GetActiveRoutinesByUserQuery, GetPendingPromptsQuery, GetUserExerciseHistoryQuery.
+
+**Domain Services (Contratos)**
+
+* **UserConvenienceSchedulePolicy:** valida y determina el momento exacto (`DateTime`) del envío de notificaciones evaluando la hora objetivo (`targetTime`) contra la zona horaria del usuario (`preferredTimezone`), garantizando que los recordatorios se programen a conveniencia y no generen intrusión.
+
+#### 2.6.6.2. Interface Layer
+
+**Controllers**
+
+* **RoutineManagementController:** expone endpoints para configurar, guardar, pausar y consultar nuevas actividades o rutinas diarias.
+* **WritingPromptController:** expone los prompts pendientes asignados al usuario y permite enviar y guardar el texto de respuesta.
+* **SosExerciseController:** permite seleccionar e iniciar un ejercicio de regulación rápida (SOS / Respiración), registrando la duración y el tipo de intervención.
+
+**Resources (Request/Response DTOs)**
+
+* **Routines:** ConfigureRoutineResource, DailyRoutineResource.
+* **Prompts:** AnswerPromptResource, WritingPromptResource.
+* **Exercises:** InitiateExerciseResource, SosExerciseLogResource.
+
+#### 2.6.6.3. Application Layer
+
+**Command Handlers**
+
+* **RoutineCommandServiceImpl:** ConfigureDailyRoutineCommand.
+* **NotificationTriggerServiceImpl:** TriggerScheduledNotificationCommand (comando interno invocado de forma autónoma por el Scheduler).
+* **PromptCommandServiceImpl:** AnswerWritingPromptCommand.
+* **SosExerciseCommandServiceImpl:** InitiateSosExerciseCommand.
+
+**Query Handlers**
+
+* **RoutineQueryServiceImpl:** GetActiveRoutinesByUserQuery.
+* **PromptQueryServiceImpl:** GetPendingPromptsQuery.
+* **ExerciseQueryServiceImpl:** GetUserExerciseHistoryQuery.
+
+**Event Handlers**
+
+* **RoutineCreatedEventHandler:** reacciona a la creación de una nueva rutina para calcular e insertar en la base de datos la primera instancia de `ScheduledNotification` utilizando la política de husos horarios.
+* **NotificationTriggeredEventHandler:** solicita al adaptador de infraestructura el formateo y despacho del payload hacia el dispositivo móvil del usuario.
+
+#### 2.6.6.4. Infrastructure Layer
+
+**Repositories**
+
+* **RoutineRepository:** persistencia relacional de rutinas configuradas, la preferencia de huso horario y el calendario de notificaciones (`ScheduledNotification`).
+* **DailyActivityRepository:** persistencia append-friendly de prompts completados y registros de auditoría de los ejercicios SOS ejecutados.
+
+**Adaptadores externos**
+
+* **BackgroundSchedulerAdapter:** representa al actor autónomo interno ("SafeDiary Scheduler", construido sobre herramientas como Hangfire, Quartz o Node Cron). Se encarga de evaluar constantemente los registros `PENDING` en base al reloj del sistema y despachar los comandos de trigger correspondientes.
+* **PushNotificationAdapter (ACL):** adaptador para formatear y enviar payloads al "Servicio de Notificaciones Push" externo (ej. Firebase Cloud Messaging - FCM o APNs). Traduce las respuestas técnicas, gestiona reintentos en caso de indisponibilidad temporal del proveedor y actualiza el estado de la notificación a `FAILED` si los tokens del dispositivo ya no son válidos.
 
 
 #### 2.6.7.5. Bounded Context Software Architecture Component Level Diagrams
 
+![RUTINES_COMPONENT](../assets/images/bounded-context/rutines/rutines-components.png)
 
 #### 2.6.7.6. Bounded Context Software Architecture Code Level Diagrams
 
 
 ##### 2.6.7.6.1. Bounded Context Domain Layer Class Diagrams
 
+![RUTINES_CLASS](../assets/images/bounded-context/rutines/rutines-class-diagram.png)
 
 ##### 2.6.7.6.2. Bounded Context Database Design Diagram
+
+![RUTINES_DATABASE](../assets/images/bounded-context/rutines/rutines-database-diagram.png)
