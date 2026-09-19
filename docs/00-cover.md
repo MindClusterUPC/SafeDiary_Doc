@@ -102,6 +102,7 @@ Proyecto
 | 0.0.22 | 18/09/2026 | Juan Wang | Añadir Domain Message Flows Modeling (flujos 1, 2 y 3) |
 | 0.0.23 | 18/09/2026 | Juan Wang | Añadir Project Report Collaboration Insights |
 | 0.0.24 | 18/09/2026 | Juan Wang | Añadir arquitectura de software C4 (Deployment Diagram) |
+| 0.0.25 | 18/09/2026 | Juan Wang | Redacción de Conclusiones y Recomendaciones del proyecto |
 
 
 # Project Report Collaboration Insights
@@ -178,6 +179,10 @@ A continuación, se detalla el enlace al repositorio oficial del proyecto en Git
       - 2.6.x.6. Bounded Context Software Architecture Code Level Diagrams
         - 2.6.x.6.1. Bounded Context Domain Layer Class Diagrams
         - 2.6.x.6.2. Bounded Context Database Design Diagram
+- Conclusiones
+- Recomendaciones
+- Bibliografía
+- Anexos
 
 # Student Outcome
 

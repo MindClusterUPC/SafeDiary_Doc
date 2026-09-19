@@ -2520,7 +2520,7 @@ La máquina de estados de un participante de medios es `DISCONNECTED` -> `CONNEC
 
 ##### 2.6.5.6.2. Bounded Context Database Design Diagram
 
-![ROOMS_CLASS](../assets/images/bounded-context/rooms/rooms-class-diagram.png)
+![ROOMS_DATABASE](../assets/images/bounded-context/rooms/rooms-database-diagram.png)
 
 ### 2.6.6. Bounded Context: Diary
 
