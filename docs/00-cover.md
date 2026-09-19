@@ -80,9 +80,9 @@ Proyecto
 | [X.Y.Z] | [DD/MM/AAAA] | [Apellidos y nombres] | [Descripción de los cambios realizados] |
 | 0.0.1 | 11/09/2026 | Kamil Diaz | Creación del repositorio y estructura inicial, adición de contenido en el capitulo 1 |
 | 0.0.2 | 11/02/2026 | Marcelo Cuadros | Añadir nombre de startup, imagen y contenido en la presentación de integrante |
-| 0.0.3 | 13/09/2026 | Juan Wang | Redacción de la sección 1.1.1. Descripción de la Startup: descripción, misión, visión, propuesta de valor y características principales |
-| 0.0.4 | 13/09/2026 | Juan Wang | Redacción completa del Lean UX Process: sección 1.2.2 (introducción), 1.2.2.1 (Problem Statement con template brand new initiative), 1.2.2.2 (Assumptions: Business, Business Outcome, User, User Outcome and Benefit, Feature) y 1.2.2.3 (Hypothesis Statements) |
-| 0.0.5 | 13/09/2026 | Juan Wang | Creación y formateo de la sección 1.2.2.4 (Lean UX Canvas) en formato de tabla (3x3 grid) según lineamientos de Lean UX v2 |
+| 0.0.3 | 13/09/2026 | Juan Wang | Redacción de la sección 1.1.1 Descripción de la Startup |
+| 0.0.4 | 13/09/2026 | Juan Wang | Redacción de Lean UX Process (Problem Statement, Assumptions e Hypotheses) |
+| 0.0.5 | 13/09/2026 | Juan Wang | Creación y formato de tabla para Lean UX Canvas |
 | 0.0.6 | 15/09/2026 | Marcelo Cuadros | Complementar contenido de los segmentos objetivos, segmento 1.3, añadiendo fuentes en la bibliografia tambien para el registro de fuentes. |
 | 0.0.7 | 17/09/2026 | Marcelo Cuadros | Añadir entrevista paciente 2 |
 | 0.0.8 | 18/09/2026 | Andrés Torres | Añadir entrevista psicólogo 2 y empathy map |
@@ -90,14 +90,16 @@ Proyecto
 | 0.0.10 | 18/09/2026 | Andrés Torres | Añadir Product Backlog |
 | 0.0.11 | 18/09/2026 | Marcelo Cuadros | Añadir Analisis de entrevistas del primer segmento objetivo |
 | 0.0.12 | 18/09/2026 | Marcelo Cuadros | Añadir Analisis de entrevistas del segundo segmento objetivo |
-| 0.0.13 | 18/09/2026 | Juan Wang | Elaboración del User Journey Mapping (sección 2.3.3) para los segmentos de Pacientes Jóvenes (María) y Psicólogos (Dra. Laura Gómez) integrando la rueda de emociones de Plutchik y artefactos para UXPressia |
-| 0.0.14 | 18/09/2026 | Juan Wang | Modelado de Big Picture EventStorming (Fases 1 y 2) y definición del Bounded Context Canvas para AssistantAI; y configuración de importación del Product Backlog para Trello con clasificación por épicas |
+| 0.0.13 | 18/09/2026 | Juan Wang | Añadir User Journey Mapping de Pacientes y Psicólogos |
+| 0.0.14 | 18/09/2026 | Juan Wang | Añadir Big Picture EventStorming, AssistantAI Canvas y Product Backlog de Trello |
 | 0.0.15 | 18/09/2026 | Andrés Torres | Añadir Encabezados por Bounded Context |
 | 0.0.16 | 18/09/2026 | Marcelo Cuadros | Completado del indice en el README.md | 
 | 0.0.17 | 18/09/2026 | Marcelo Cuadros | Completado bounded context diary | 
-| 0.0.18 | 18/09/2026 | Juan Wang | Elaboración de la arquitectura de software C4: System Context Diagram (2.5.3.1) y Container Level Diagram (2.5.3.2) con especificaciones Structurizr DSL, diagramas Mermaid y placeholders de imagen |
+| 0.0.18 | 18/09/2026 | Juan Wang | Añadir arquitectura de software C4 (Context y Container Diagrams) |
 | 0.0.19 | 18/09/2026 | Marcelo Cuadros | Añadir el BC Diary Canvas |
 | 0.0.20 | 18/09/2026 | Andrés Torres | Añadir el Bounded Context de IAM y Profiles y el Context Mapping |
+| 0.0.21 | 18/09/2026 | Juan Wang | Añadir Candidate Context Discovery para los 7 Bounded Contexts |
+| 0.0.22 | 18/09/2026 | Juan Wang | Añadir Domain Message Flows Modeling (flujos 1, 2 y 3) |
 
 
 # Project Report Collaboration Insights

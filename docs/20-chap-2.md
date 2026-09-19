@@ -562,14 +562,71 @@ Trelo con el backlog: [Trello SafeDiary](https://trello.com/b/Q2UsNz3t/product-b
 
 #### 2.5.1.1. Candidate Context Discovery
 
-![diary-hp](../assets/images/bounded-context/diary/diary-es-hp.png)
+La Candidate Context Discovery es el proceso colaborativo mediante el cual identificamos y delimitamos las fronteras de los bounded contexts del dominio de SafeDiary. A partir del análisis de la línea de tiempo del Big Picture EventStorming y la identificación de eventos pivote de negocio, se descubrieron los siguientes 7 bounded contexts:
 
-EL Bounded Context de Diary es responsable de registrar la entrada de los diarios de los usuarios, en esta imagen se visualiza el Happy Path de la funcionalidad de registro de diarios.
+##### IAM (Identity & Access Management)
 
+![Candidate Context - IAM](../assets/images/chap2/candidate-contexts/candidate-iam.png)
+
+Define el límite de seguridad, identidad y gobernanza del consentimiento. El flujo muestra al Paciente y al Especialista autenticándose mediante credenciales o biometría segura, culminando en la generación de tokens de acceso. Asimismo, delimita la frontera crítica donde el paciente otorga o revoca el consentimiento de acceso a su historial clínico para especialistas autorizados mediante el evento pivotal **Consentimiento Otorgado a Especialista**.
+
+##### Profiles
+
+![Candidate Context - Profiles](../assets/images/chap2/candidate-contexts/candidate-profiles.png)
+
+Delimita la gestión de identidades y presentación de los usuarios dentro de la plataforma. Muestra al Paciente configurando su información de perfil personal y recibiendo automáticamente un alias comunitario anónimo con máscara de voz. Por otro lado, ilustra al Psicólogo solicitando su validación profesional ante registros oficiales y publicando su disponibilidad horaria, marcando como evento clave **Ficha Profesional Publicada en Directorio**.
+
+##### Diary
+
+![Candidate Context - Diary](../assets/images/chap2/candidate-contexts/candidate-diary.png)
+
+Representa el núcleo transaccional confidencial de SafeDiary. Modela al Paciente redactando entradas íntimas de texto o registrando notas de voz en su dispositivo móvil, asociando factores de contexto (sueño, energía, estrés) y registrando su estado anímico diario en un solo toque, desencadenando el evento pivotal de negocio **Entrada de Diario Guardada** y la actualización automática de su racha de constancia.
+
+##### AssistantAI
+
+![Candidate Context - AssistantAI](../assets/images/chap2/candidate-contexts/candidate-assistantai.png)
+
+Aísla el motor de soporte reflexivo y procesamiento cognitivo 100% en texto asistido por IA. El flujo detalla la interacción dialógica del Paciente con el asistente, la detección de distorsiones de pensamiento y la evaluación preventiva de riesgo. El evento pivotal en este contexto es **Riesgo Crítico Autolítico Detectado**, el cual actúa como detonante automático para activar protocolos de emergencia y derivación inmediata a líneas de crisis.
+
+##### Communities
+
+![Candidate Context - Communities](../assets/images/chap2/candidate-contexts/candidate-communities.png)
+
+Gobierna la experiencia social y comunitaria de apoyo mutuo bajo estricto anonimato. El flujo expone al Participante ingresando a salas de escucha con su alias seudónimo, enviando reacciones empáticas y solicitando turno de palabra. Delimita las reglas de moderación donde el anfitrión aprueba oradores y gestiona incidentes de seguridad, culminando en eventos pivote como **Participante Promovido a Orador** y **Caso de Moderación Abierto**.
+
+##### Rooms
+
+![Candidate Context - Rooms](../assets/images/chap2/candidate-contexts/candidate-rooms.png)
+
+Agrupa la infraestructura y transporte de audio de baja latencia en tiempo real. Modela la negociación y señalización WebRTC para salas efímeras, aplicando el preset de enmascaramiento de voz configurado en el alias del usuario para proteger su privacidad acústica, estableciendo el evento pivotal **Canal de Audio WebRTC Establecido**.
+
+##### Rutines
+
+![Candidate Context - Rutines](../assets/images/chap2/candidate-contexts/candidate-rutines.png)
+
+Enmarca el módulo de bienestar proactivo y hábitos saludables. Muestra al Paciente explorando el catálogo de ejercicios de respiración guiada, programando recordatorios de autocuidado y completando micro-desafíos emocionales, lo que produce el evento de dominio **Micro-Hábito de Bienestar Completado** para el seguimiento de progreso.
 
 #### 2.5.1.2. Domain Message Flows Modeling
 
+El Domain Message Flows Modeling mapea cómo los mensajes (eventos de integración y comandos) fluyen entre los diferentes bounded contexts identificados para resolver los casos de uso esenciales del negocio. Este modelado es crucial para entender las dependencias dinámicas, los límites de consistencia eventual y los patrones de comunicación asíncrona del sistema.
 
+##### Flujo 1: Registro en Diario y Generación de Reflexión Asistida por IA (Diary ⇄ AssistantAI)
+
+![Flujo 1 - Registro y Reflexión](../assets/images/chap2/message-flows/flow-1-diary-assistantai.png)
+
+Este diagrama ilustra el flujo de análisis emocional y reflexión asistida. Comienza cuando el **Paciente** ejecuta el comando síncrono **Guardar Entrada de Diario** dentro del contexto **Diary**. La persistencia de la vivencia detona el evento asíncrono **DiaryEntryCreated Integration**, el cual viaja a través del Message Broker hacia el contexto **AssistantAI**. Este último procesa el contenido textual mediante el comando **Generar Reflexión Terapéutica** utilizando modelos de lenguaje natural, culminando con la emisión del evento **ReflectionGenerated Integration** que retorna hacia **Diary** para vincular la retroalimentación empática al historial del usuario sin mutar su redacción original.
+
+##### Flujo 2: Detección Preventiva de Crisis y Activación de Protocolo de Emergencia (AssistantAI ⇄ IAM / Línea de Emergencia)
+
+![Flujo 2 - Detección de Crisis](../assets/images/chap2/message-flows/flow-2-crisis-detection.png)
+
+Muestra el protocolo de contención y seguridad ante emergencias psicológicas. Se inicia cuando el **Paciente** interactúa mediante el comando **Enviar Mensaje de Texto** dentro de **AssistantAI**. El motor cognitivo ejecuta internamente el comando **Evaluar Nivel de Riesgo** identificando indicadores autolíticos severos, lo que dispara el evento pivotal **RiskLevelCriticalDetected Integration**. Este evento es consumido de forma concurrente por **IAM** para asentar una traza inmutable en auditoría y por la pasarela de **Línea de Crisis Externa**, activando el evento **CrisisDerivationTriggered** para desplegar en el frontend móvil la derivación telefónica inmediata hacia la Línea 113 Minsa / 988.
+
+##### Flujo 3: Compartición Terapéutica bajo Consentimiento Explícito (IAM ⇄ Profiles ⇄ Diary)
+
+![Flujo 3 - Consentimiento Clínico](../assets/images/chap2/message-flows/flow-3-clinical-consent.png)
+
+Modela el mecanismo de interoperabilidad y gobierno de la privacidad de SafeDiary. El **Paciente** emite el comando **Otorgar Consentimiento a Psicólogo** en **IAM**, definiendo un alcance temporal explícito y generando el evento **ConsentGranted Integration**. Posteriormente, cuando el **Psicólogo Verificado** ejecuta **Consultar Historial Autorizado** en **Diary**, este último valida síncronamente los permisos con **IAM**. Al confirmar la vigencia del contrato, se despacha el evento **AuthorizedEntriesShared Integration**, proporcionando exclusivamente las vivencias aprobadas y garantizando que las notas alojadas en la Bóveda Privada permanezcan estrictamente inaccesibles.
 
 #### 2.5.1.3. Bounded Context Canvases
 
@@ -577,8 +634,13 @@ EL Bounded Context de Diary es responsable de registrar la entrada de los diario
 
 ![assisntant_bcc](../assets/images/chap2/boundedcontexts/assistantai-bcc.png)
 
-
 ![diary-bcc](../assets/images/bounded-context/diary/diary-bcc.png)
+
+![communities-bcc](../assets/images/chap2/boundedcontexts/communities-bcc.png)
+
+![rooms-bcc](../assets/images/chap2/boundedcontexts/rooms-bcc.png)
+
+![rutines-bcc](../assets/images/chap2/boundedcontexts/rutines-bcc.png)
 
 En esta imagen represantamos el Bounded Context de Diary, dentro del dominio de SafeDiary. Este Bounded Context es responsable de gestionar las entradas de diario de los usuarios, lo que incluye la creacion, edicion, eliminacion y consulta de las entradas de diario, así como la gestion de los estados emocionales de los usuarios. Ademas permite gestionar el acceso a esta información por parte de otros Bounded Contexts, como el AssistantAI.
 
