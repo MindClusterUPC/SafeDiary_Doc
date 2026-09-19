@@ -103,6 +103,7 @@ Proyecto
 | 0.0.23 | 18/09/2026 | Juan Wang | Añadir Project Report Collaboration Insights |
 | 0.0.24 | 18/09/2026 | Juan Wang | Añadir arquitectura de software C4 (Deployment Diagram) |
 | 0.0.25 | 18/09/2026 | Juan Wang | Redacción de Conclusiones y Recomendaciones del proyecto |
+| 0.0.26 | 18/09/2026 | Andrés Torres | Reestructuración de User Stories |
 
 
 # Project Report Collaboration Insights
