@@ -1005,11 +1005,234 @@ workspace "SafeDiary - Containers" "C4 Container Diagram de la plataforma SafeDi
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
+El siguiente diagrama de despliegue muestra cómo los diferentes componentes del sistema SafeDiary se distribuyen en la infraestructura, tanto en el cliente como en la nube. Este tipo de diagrama permite entender dónde se ejecuta cada parte del sistema, cómo se comunican entre sí y qué tecnologías o servicios se utilizan en el entorno real de producción.
 
+![SafeDiary - Deployment Diagram](../assets/images/chap2/architecture/deployment-diagram.png)
+
+**Descripción del Deployment Diagram**
+
+El sistema SafeDiary está organizado en varias capas de despliegue que separan claramente los clientes, el frontend, el backend y la capa de datos:
+
+**Client Tier (Clientes):**
+
+* **Web Clients (Browser):** Representa a los usuarios y visitantes que acceden desde un navegador web (Chrome, Safari, Firefox, Edge). Aquí se carga la Landing Page informativa, permitiendo conocer la propuesta de valor, términos de privacidad y directorio de especialistas sin necesidad de instalar software adicional.
+* **Mobile Clients (Mobile Device):** Incluye los dispositivos móviles (Google Android 12+ / Apple iOS 16+) donde se ejecuta SafeDiary Mobile App (Flutter), permitiendo a los pacientes y especialistas registrar diarios íntimos, realizar check-ins emocionales, interactuar con el asistente reflexivo por texto, unirse a salas efímeras y gestionar sus hábitos diarios desde cualquier lugar.
+
+**Cloud Tier (Infraestructura en la Nube):**
+
+* **Frontend Hosting:**
+  * **GitHub Pages / Vercel:** Plataforma de alojamiento estático y distribución mediante CDN optimizada para alta disponibilidad, donde se despliega la Landing Page institucional.
+* **Backend Layer:**
+  * **API Gateway Node:** Servidor perimetral en contenedor Docker (Envoy Proxy) que gestiona la terminación TLS, autenticación preliminar de JWT, rate limiting y el enrutamiento inteligente de solicitudes HTTP/REST y canales WebSocket hacia los microservicios correspondientes.
+  * **Application Server (Docker Containers):** Clúster de contenedores independientes y portátiles que ejecutan los microservicios backend de cada Bounded Context (IAM, Profiles, AssistantAI, Diary, Communities, Rooms, Rutines), garantizando escalabilidad horizontal, aislamiento de fallos y facilidad de despliegue continuo.
+* **Data Layer:**
+  * **Database Server (Managed PostgreSQL 15):** Instancia administrada de base de datos relacional (Google Cloud SQL / AWS RDS) con esquemas aislados por contexto, alta disponibilidad y políticas de respaldos automatizados.
+  * **In-Memory Cache & Message Broker (Redis 7 & RabbitMQ):** Servidores administrados de caché volátil y colas de mensajería para mantener el estado en tiempo real de las salas efímeras (Rooms) y procesar eventos de dominio de forma asíncrona y desacoplada.
+  * **Cloud Object Storage (AWS S3 / Google Cloud Storage):** Almacenamiento seguro de objetos cifrado en reposo para notas de voz crudas y contenido multimedia del diario.
+
+**External Services Tier (Servicios Externos):**
+
+* **Google / Apple Identity Providers:** Proveedores de autenticación federada bajo protocolo OAuth2 y OpenID Connect.
+* **Google Cloud Vertex AI (Gemini API):** Infraestructura de inferencia de modelos fundacionales de lenguaje (LLM) para soporte reflexivo y detección de riesgo de crisis.
+* **Firebase Cloud Messaging (FCM):** Servicio de infraestructura de notificaciones push para dispositivos móviles.
+* **Línea de Crisis Nacional (113 / 988):** Canal telefónico y telemático de atención de urgencias de salud mental.
+
+Código en **Structurizr DSL (C4 Model)**:
+
+```text
+workspace "SafeDiary - Deployment" "C4 Deployment Diagram de la plataforma SafeDiary" {
+
+    model {
+        safeDiary = softwareSystem "SafeDiary" {
+            landingPage    = container "Landing Page" "Sitio web informativo y de captación pública." "HTML5 / TailwindCSS / Vercel"
+            mobileApp      = container "SafeDiary Mobile App" "Interfaz cliente nativa multiplataforma para registro emocional, interacción reflexiva por texto y participación social." "Flutter / Dart (iOS & Android)"
+            apiGateway     = container "API Gateway" "Punto único de entrada inverso, terminación TLS, validación inicial de JWT, rate limiting y enrutamiento hacia microservicios." "Reverse Proxy / Envoy"
+
+            iamApi         = container "IAM Service" "Gestiona cuentas, biometría, contratos de consentimiento y auditoría de accesos." "ASP.NET Core / Node.js Web API"
+            profilesApi    = container "Profiles Service" "Gestiona perfiles personales, alias anónimos y directorio de especialistas." "ASP.NET Core / Node.js Web API"
+            assistantAiApi = container "AssistantAI Service" "Soporte conversacional en texto, detección de distorsiones cognitivas y alertas de riesgo." "ASP.NET Core / Python Web API"
+            diaryApi       = container "Diary Service" "Core domain: entradas de texto/voz, mood check-ins, recordatorios y rachas." "ASP.NET Core / Node.js Web API"
+            communitiesApi = container "Communities Service" "Gestiona foros de apoyo anónimos, publicaciones y moderación." "ASP.NET Core / Node.js Web API"
+            roomsApi       = container "Rooms Service" "Salas efímeras de apoyo en tiempo real, señalización WebRTC y moderación." "Node.js / WebSockets / WebRTC"
+            rutinesApi     = container "Rutines Service" "Catálogo de hábitos de bienestar, ejercicios de regulación y seguimiento." "ASP.NET Core / Node.js Web API"
+
+            iamDb          = container "IAM Database" "Persiste cuentas, tokens y consentimientos." "PostgreSQL 15" "Database"
+            profilesDb     = container "Profiles Database" "Persiste perfiles y directorio de terapeutas." "PostgreSQL 15" "Database"
+            assistantAiDb  = container "AssistantAI Database" "Persiste sesiones de texto y evaluaciones de riesgo." "PostgreSQL 15" "Database"
+            diaryDb        = container "Diary Database" "Persiste entradas de diario, factores y rachas." "PostgreSQL 15" "Database"
+            communitiesDb  = container "Communities Database" "Persiste hilos comunitarios y comentarios." "PostgreSQL 15" "Database"
+            roomsDb        = container "Rooms Database & Cache" "Estado en memoria de salas activas y señalización." "Redis 7 / PostgreSQL" "Database"
+            rutinesDb      = container "Rutines Database" "Persiste hábitos programados y cumplimiento." "PostgreSQL 15" "Database"
+
+            eventBus       = container "Event Bus" "Broker de eventos asíncrono para publicar y suscribir eventos de dominio." "RabbitMQ / Apache Kafka" "Queue"
+            objectStorage  = container "Cloud Object Storage" "Almacenamiento de blobs cifrado en reposo para notas de voz." "AWS S3 / Google Cloud Storage" "Storage"
+        }
+
+        oauthProvider = softwareSystem "Google / Apple Identity Providers" "Autenticación federada OpenID Connect." "External System"
+        vertexAi      = softwareSystem "Google Cloud Vertex AI (Gemini API)" "Inferencia de modelos fundacionales de LLM." "External System"
+        pushService   = softwareSystem "Firebase Cloud Messaging (FCM)" "Servicio push para dispositivos móviles." "External System"
+        crisisHotline = softwareSystem "Línea de Crisis 113 / 988" "Atención telefónica de emergencia." "External System"
+
+        # Relaciones del Software System
+        mobileApp      -> apiGateway     "Peticiones de API REST y canales WebSocket" "HTTPS / WSS"
+        apiGateway     -> iamApi         "Enruta /api/v1/iam/*" "HTTPS/JSON"
+        apiGateway     -> profilesApi    "Enruta /api/v1/profiles/*" "HTTPS/JSON"
+        apiGateway     -> assistantAiApi "Enruta /api/v1/assistant/*" "HTTPS/JSON"
+        apiGateway     -> diaryApi       "Enruta /api/v1/diary/*" "HTTPS/JSON"
+        apiGateway     -> communitiesApi "Enruta /api/v1/communities/*" "HTTPS/JSON"
+        apiGateway     -> roomsApi       "Enruta /api/v1/rooms/*" "WSS / HTTPS"
+        apiGateway     -> rutinesApi     "Enruta /api/v1/rutines/*" "HTTPS/JSON"
+
+        iamApi         -> iamDb          "Lee y escribe cuentas" "SQL/TCP"
+        profilesApi    -> profilesDb     "Lee y escribe perfiles" "SQL/TCP"
+        assistantAiApi -> assistantAiDb  "Lee y escribe sesiones" "SQL/TCP"
+        diaryApi       -> diaryDb        "Lee y escribe entradas" "SQL/TCP"
+        communitiesApi -> communitiesDb  "Lee y escribe foros" "SQL/TCP"
+        roomsApi       -> roomsDb        "Lee y escribe estado de salas" "Redis RESP / SQL"
+        rutinesApi     -> rutinesDb      "Lee y escribe hábitos" "SQL/TCP"
+
+        diaryApi       -> eventBus       "Publica DiaryEntryCreated, MoodCheckInLogged" "AMQP"
+        assistantAiApi -> eventBus       "Publica RiskLevelCriticalDetected" "AMQP"
+        iamApi         -> eventBus       "Publica ConsentGranted, AccountDeactivated" "AMQP"
+        eventBus       -> assistantAiApi "Consume DiaryEntryCreated" "AMQP"
+        eventBus       -> rutinesApi     "Consume MoodCheckInLogged" "AMQP"
+
+        iamApi         -> oauthProvider  "Valida tokens federados OAuth2" "HTTPS/JSON"
+        assistantAiApi -> vertexAi       "Invoca inferencia de texto (Gemini)" "HTTPS/gRPC"
+        assistantAiApi -> crisisHotline  "Deriva atención ante ideación suicida" "Teléfono / Deep link"
+        diaryApi       -> objectStorage  "Guarda notas de voz cifradas" "HTTPS / S3 API"
+        diaryApi       -> pushService    "Programa recordatorios push" "HTTPS/JSON"
+        rutinesApi     -> pushService    "Programa alertas de hábitos" "HTTPS/JSON"
+
+        # Deployment Environment
+        production = deploymentEnvironment "Production" {
+            deploymentNode "Client Tier" "Dispositivos y clientes finales de usuario" {
+                deploymentNode "Mobile Device" "Dispositivo móvil inteligente del usuario" "Google Android 12+ / Apple iOS 16+" {
+                    containerInstance mobileApp
+                }
+                deploymentNode "User Web Browser" "Navegador web del usuario" "Chrome, Safari, Edge, Firefox" {
+                    containerInstance landingPage
+                }
+            }
+
+            deploymentNode "Cloud Tier" "Infraestructura Cloud de alta disponibilidad" "Google Cloud Platform / AWS" {
+                deploymentNode "Frontend Hosting" "Servicio de distribución de contenido estático y CDN" "GitHub Pages / Vercel CDN" {
+                    containerInstance landingPage
+                }
+
+                deploymentNode "Backend Layer" "Clúster de contenedores de aplicación" "Managed Kubernetes / Cloud Run" {
+                    deploymentNode "API Gateway Container" "Proxy inverso perimetral con terminación TLS" "Envoy Proxy / Docker" {
+                        containerInstance apiGateway
+                    }
+                    deploymentNode "Microservices Containers" "Contenedores Docker independientes por Bounded Context" "Docker Engine / Linux Alpine" {
+                        containerInstance iamApi
+                        containerInstance profilesApi
+                        containerInstance assistantAiApi
+                        containerInstance diaryApi
+                        containerInstance communitiesApi
+                        containerInstance roomsApi
+                        containerInstance rutinesApi
+                    }
+                }
+
+                deploymentNode "Data Layer" "Capa de persistencia administrada y almacenamiento de alta disponibilidad" "Cloud Managed Services" {
+                    deploymentNode "Relational Database Server" "Servidor de base de datos relacional administrada" "Google Cloud SQL / AWS RDS (PostgreSQL 15)" {
+                        containerInstance iamDb
+                        containerInstance profilesDb
+                        containerInstance assistantAiDb
+                        containerInstance diaryDb
+                        containerInstance communitiesDb
+                        containerInstance rutinesDb
+                    }
+                    deploymentNode "In-Memory & Cache Server" "Servidor de caché volátil y broker de mensajería" "Cloud Memorystore (Redis 7) & CloudAMQP (RabbitMQ)" {
+                        containerInstance roomsDb
+                        containerInstance eventBus
+                    }
+                    deploymentNode "Cloud Storage Service" "Almacenamiento de objetos cifrado en reposo" "Google Cloud Storage / AWS S3" {
+                        containerInstance objectStorage
+                    }
+                }
+            }
+
+            deploymentNode "External Services Tier" "Plataformas y servicios externos integrados" "Third-Party Cloud APIs" {
+                deploymentNode "OAuth Identity Provider" "Servidores de autenticación federada" "Google & Apple OAuth2" {
+                    softwareSystemInstance oauthProvider
+                }
+                deploymentNode "AI Cloud Platform" "Plataforma de modelos fundacionales" "Google Cloud Vertex AI" {
+                    softwareSystemInstance vertexAi
+                }
+                deploymentNode "Push Notification Gateway" "Infraestructura de mensajería push" "Firebase Cloud Messaging" {
+                    softwareSystemInstance pushService
+                }
+                deploymentNode "Emergency Contact Service" "Central telefónica y telemática de urgencias" "Línea 113 / 988" {
+                    softwareSystemInstance crisisHotline
+                }
+            }
+        }
+    }
+
+    views {
+        deployment safeDiary "Production" "SafeDiaryDeployment" "Diagrama de despliegue en entorno de producción de SafeDiary" {
+            include *
+            autoLayout
+        }
+
+        styles {
+            element "Person" {
+                shape Person
+                background #08427b
+                color #ffffff
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "Container" {
+                background #438dd5
+                color #ffffff
+            }
+            element "Database" {
+                shape Cylinder
+                background #2a6f97
+                color #ffffff
+            }
+            element "Queue" {
+                shape Pipe
+                background #014f86
+                color #ffffff
+            }
+            element "Storage" {
+                shape Folder
+                background #2a6f97
+                color #ffffff
+            }
+            element "External System" {
+                background #6c757d
+                color #ffffff
+            }
+        }
+    }
+}
+```
+
+---
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
+El diseño a nivel táctico de Domain-Driven Design (DDD) traduce las decisiones estratégicas, los límites de contexto y los flujos de mensajería analizados en las secciones previas en modelos de software concretos, desacoplados y altamente cohesivos. Para garantizar una separación estricta de responsabilidades, independencia tecnológica y alta mantenibilidad, cada uno de los siete Bounded Contexts identificados en SafeDiary se estructura siguiendo los principios de la Arquitectura Limpia (Clean / Onion Architecture), complementada con el patrón CQRS (Command Query Responsibility Segregation) para la orquestación de operaciones transaccionales y de consulta.
 
+A nivel de diseño e implementación, cada Bounded Context se desarrolla de manera uniforme bajo los siguientes seis apartados:
+
+1. **Domain Layer:** Núcleo puro del dominio, completamente agnóstico de frameworks y tecnologías de persistencia. Define las Raíces de Agregado (`Aggregate Roots`), Entidades (`Entities`), Objetos de Valor inmutables (`Value Objects`), Eventos de Dominio (`Domain Events`), Comandos (`Commands`), Consultas (`Queries`) y Contratos de Servicios de Dominio (`Domain Services`).
+2. **Interface Layer:** Capa perimetral de exposición y comunicación. Contiene los Controladores (`Controllers`) HTTP/REST y canales WebSocket para la interacción con el cliente móvil y el API Gateway, así como los Recursos de Transferencia (`Resources / DTOs`) para modelar payloads de solicitud y respuesta.
+3. **Application Layer:** Orquestador de la lógica de aplicación y coordinación de casos de uso. Implementa los manejadores de comandos (`Command Handlers`), manejadores de consultas (`Query Handlers`) y manejadores de eventos (`Event Handlers`), asegurando la integridad transaccional y la propagación de eventos hacia el bus de mensajería.
+4. **Infrastructure Layer:** Adaptadores tecnológicos hacia recursos externos. Implementa los Repositorios (`Repositories`) de persistencia relacional o en memoria mediante mapeadores objeto-relacional (ORM), además de adaptadores especializados hacia proveedores en la nube, storage de objetos, mensajería push y APIs externas.
+5. **Bounded Context Software Architecture Component Level Diagrams (C4 Nivel 3):** Representación arquitectónica modular que detalla la organización interna de los componentes del servicio.
+6. **Bounded Context Software Architecture Code Level Diagrams (C4 Nivel 4):** Modelos detallados de clases del dominio (`Domain Layer Class Diagrams`) en notación Mermaid y modelos de bases de datos relacionales (`Database Design Diagrams`).
+
+A continuación, se detalla la especificación táctica completa para cada uno de los Bounded Contexts de la plataforma SafeDiary:
+
+---
 
 ### 2.6.1. Bounded Context: IAM
 

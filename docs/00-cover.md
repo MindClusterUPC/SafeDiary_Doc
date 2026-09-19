@@ -101,6 +101,7 @@ Proyecto
 | 0.0.21 | 18/09/2026 | Juan Wang | Añadir Candidate Context Discovery para los 7 Bounded Contexts |
 | 0.0.22 | 18/09/2026 | Juan Wang | Añadir Domain Message Flows Modeling (flujos 1, 2 y 3) |
 | 0.0.23 | 18/09/2026 | Juan Wang | Añadir Project Report Collaboration Insights |
+| 0.0.24 | 18/09/2026 | Juan Wang | Añadir arquitectura de software C4 (Deployment Diagram) |
 
 
 # Project Report Collaboration Insights
