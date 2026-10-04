@@ -85,8 +85,18 @@ Haga clic en cualquiera de las secciones para navegar directamente al contenido 
 
 ---
 
+### [Capítulo IV: Product Implementation & Validation](docs/40-chap-4.md#capítulo-iv-product-implementation--validation)
+- [4.1. Software Configuration Management](docs/40-chap-4.md#41-software-configuration-management)
+  - [4.1.1. Software Development Environment Configuration](docs/40-chap-4.md#411-software-development-environment-configuration)
+  - [4.1.2. Source Code Management](docs/40-chap-4.md#412-source-code-management)
+  - [4.1.3. Source Code Style Guide & Conventions](docs/40-chap-4.md#413-source-code-style-guide--conventions)
+  - [4.1.4. Software Deployment Configuration](docs/40-chap-4.md#414-software-deployment-configuration)
+
+---
+
 ### Secciones Finales
 - [Conclusiones](docs/80-conclusions.md)
 - [Recomendaciones](docs/81-recommendations.md)
 - [Bibliografía](docs/90-bibliography.md)
 - [Anexos](docs/99-annexes.md)
+
