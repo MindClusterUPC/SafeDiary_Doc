@@ -77,11 +77,32 @@ Haga clic en cualquiera de las secciones para navegar directamente al contenido 
 - [2.6. Tactical-Level Domain-Driven Design](docs/20-chap-2.md#26-tactical-level-domain-driven-design)
   - [2.6.1. Bounded Context: IAM](docs/20-chap-2.md#261-bounded-context-iam)
   - [2.6.2. Bounded Context: Profiles](docs/20-chap-2.md#262-bounded-context-profiles)
-  - [2.6.3. Bounded Context: AsistantAI](docs/20-chap-2.md#263-bounded-context-asistantai)
-  - [2.6.4. Bounded Context: Communities](docs/20-chap-2.md#264-bounded-context-communities)
-  - [2.6.5. Bounded Context: Rooms](docs/20-chap-2.md#265-bounded-context-rooms)
-  - [2.6.6. Bounded Context: Diary](docs/20-chap-2.md#266-bounded-context-diary)
-  - [2.6.7. Bounded Context: Rutines](docs/20-chap-2.md#267-bounded-context-rutines)
+  - [2.6.3. Bounded Context: AssistantAI](docs/20-chap-2.md#263-bounded-context-assistantai)
+  - [2.6.4. Bounded Context: Diary](docs/20-chap-2.md#264-bounded-context-diary)
+  - [2.6.5. Bounded Context: DailyCare (Routines)](docs/20-chap-2.md#265-bounded-context-dailycare-routines)
+  - [2.6.6. Bounded Context: Professional Care & Scheduling](docs/20-chap-2.md#266-bounded-context-professional-care--scheduling)
+
+---
+
+### [Capítulo III: Solution UI/UX Design](docs/30-chap-3.md#capítulo-iii-solution-uiux-design)
+- [3.1. Product design](docs/30-chap-3.md#31-product-design)
+  - [3.1.1. Style Guidelines](docs/30-chap-3.md#311-style-guidelines)
+    - [3.1.1.1. General Style Guidelines](docs/30-chap-3.md#3111-general-style-guidelines)
+  - [3.1.2. Information Architecture](docs/30-chap-3.md#312-information-architecture)
+    - [3.1.2.1. Organization Systems](docs/30-chap-3.md#3121-organization-systems)
+    - [3.1.2.2. Labelling Systems](docs/30-chap-3.md#3122-labelling-systems)
+    - [3.1.2.3. SEO Tags and Meta Tags](docs/30-chap-3.md#3123-seo-tags-and-meta-tags)
+    - [3.1.2.4. Searching Systems](docs/30-chap-3.md#3124-searching-systems)
+    - [3.1.2.5. Navigation Systems](docs/30-chap-3.md#3125-navigation-systems)
+  - [3.1.3. Landing Page UI Design](docs/30-chap-3.md#313-landing-page-ui-design)
+    - [3.1.3.1. Landing Page Wireframe](docs/30-chap-3.md#3131-landing-page-wireframe)
+    - [3.1.3.2. Landing Page Mock-up](docs/30-chap-3.md#3132-landing-page-mock-up)
+  - [3.1.4. Mobile Applications UX/UI Design](docs/30-chap-3.md#314-mobile-applications-uxui-design)
+    - [3.1.4.1. Mobile Applications Wireframes](docs/30-chap-3.md#3141-mobile-applications-wireframes)
+    - [3.1.4.2. Mobile Applications Wireflow Diagrams](docs/30-chap-3.md#3142-mobile-applications-wireflow-diagrams)
+    - [3.1.4.3. Mobile Applications Mock-ups](docs/30-chap-3.md#3143-mobile-applications-mock-ups)
+    - [3.1.4.4. Mobile Applications User Flow Diagrams](docs/30-chap-3.md#3144-mobile-applications-user-flow-diagrams)
+    - [3.1.4.5. Mobile Applications Prototyping](docs/30-chap-3.md#3145-mobile-applications-prototyping)
 
 ---
 
@@ -91,6 +112,8 @@ Haga clic en cualquiera de las secciones para navegar directamente al contenido 
   - [4.1.2. Source Code Management](docs/40-chap-4.md#412-source-code-management)
   - [4.1.3. Source Code Style Guide & Conventions](docs/40-chap-4.md#413-source-code-style-guide--conventions)
   - [4.1.4. Software Deployment Configuration](docs/40-chap-4.md#414-software-deployment-configuration)
+  - [4.2. Landing Page & Mobile Application Implementation](docs/40-chap-4.md#42-landing-page--mobile-application-implementation)
+  - [4.3. Validation Interviews](docs/40-chap-4.md#43-validation-interviews)
 
 ---
 

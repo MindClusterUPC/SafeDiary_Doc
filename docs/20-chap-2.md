@@ -25,8 +25,8 @@ El análisis permite comprender cómo las soluciones existentes acompañan a las
 
 | Criterio | SafeDiary | BetterHelp | Headspace | terapIA |
 | --- | --- | --- | --- | --- |
-| Overview | Aplicación móvil de bienestar emocional que integra un diario inteligente, una comunidad anónima de apoyo y la conexión con psicólogos verificados. Su propuesta permite expresar pensamientos mediante texto o voz, comprender cambios emocionales y conservar un historial privado. El usuario puede avanzar a su propio ritmo desde la reflexión personal hasta una consulta profesional, compartiendo únicamente la información que autorice. | Plataforma de terapia online con sesiones y mensajería con el terapeuta. | Plataforma de bienestar con meditación, recursos para dormir y Ebb, su acompañante de IA; también ofrece terapia sujeta a elegibilidad. | Aplicación de apoyo emocional en español centrada en Pía, una IA con la que se puede conversar por texto o voz. Integra herramientas de autoconocimiento y bienestar personal. |
-| Ventaja competitiva ¿Que valor ofrece a los clientes? | Conecta el registro cotidiano con el acompañamiento humano. Para el paciente, ofrece un espacio donde desahogarse, reconocer patrones y encontrar apoyo sin perder el control de su información. Para el psicólogo, propone resúmenes y registros autorizados que aportan contexto entre consultas. La combinación de diario, comunidad y atención profesional busca dar continuidad al cuidado emocional dentro de una misma aplicación. | Combina atención profesional con herramientas de seguimiento, incluido un diario que puede compartirse con el terapeuta. | Facilita prácticas de autocuidado y reflexión con recomendaciones de meditaciones y actividades mediante Ebb. | Acompañamiento automatizado sin cita y continuidad entre conversaciones, junto con herramientas para reflexionar y organizar metas personales. |
+| Overview | Aplicación móvil de bienestar emocional que integra un diario inteligente, la conexión con psicólogos verificados. Su propuesta permite expresar pensamientos mediante texto o voz, comprender cambios emocionales y conservar un historial privado. El usuario puede avanzar a su propio ritmo desde la reflexión personal hasta una consulta profesional, compartiendo únicamente la información que autorice. | Plataforma de terapia online con sesiones y mensajería con el terapeuta. | Plataforma de bienestar con meditación, recursos para dormir y Ebb, su acompañante de IA; también ofrece terapia sujeta a elegibilidad. | Aplicación de apoyo emocional en español centrada en Pía, una IA con la que se puede conversar por texto o voz. Integra herramientas de autoconocimiento y bienestar personal. |
+| Ventaja competitiva ¿Que valor ofrece a los clientes? | Conecta el registro cotidiano con el acompañamiento humano. Para el paciente, ofrece un espacio donde desahogarse, reconocer patrones y encontrar apoyo sin perder el control de su información. Para el psicólogo, propone resúmenes y registros autorizados que aportan contexto entre consultas. La combinación de diario, rutinas y atención profesional busca dar continuidad al cuidado emocional dentro de una misma aplicación. | Combina atención profesional con herramientas de seguimiento, incluido un diario que puede compartirse con el terapeuta. | Facilita prácticas de autocuidado y reflexión con recomendaciones de meditaciones y actividades mediante Ebb. | Acompañamiento automatizado sin cita y continuidad entre conversaciones, junto con herramientas para reflexionar y organizar metas personales. |
 
 
 #### Perfil de marketing
@@ -34,15 +34,15 @@ El análisis permite comprender cómo las soluciones existentes acompañan a las
 | Criterio | SafeDiary | BetterHelp | Headspace | terapIA |
 | --- | --- | --- | --- | --- |
 | Mercado objetivo | Pacientes jóvenes que desean expresar y comprender sus emociones entre consultas, especialmente cuando el estrés académico o laboral dificulta ordenar lo que sienten. También se dirige a psicólogos profesionales que necesitan información contextual clara para preparar y personalizar la atención. El diseño contempla a usuarios preocupados por el juicio social, la privacidad y la dificultad de pedir apoyo. | Personas que buscan terapia online y comunicación con un terapeuta. | Usuarios interesados en bienestar cotidiano; su servicio de terapia está dirigido a adultos residentes en Estados Unidos y se ofrece en inglés. | Personas de habla hispana que buscan expresarse, conocerse mejor y construir hábitos de bienestar, con o sin experiencia previa de atención psicológica. |
-| Estrategias y recursos de marketing | Demostraciones del recorrido completo: registrar una emoción, revisar un resumen y decidir si compartirlo. Contenido educativo en español sobre expresión emocional, privacidad y uso responsable de la IA; difusión de la comunidad como espacio de escucha y apoyo. Pilotos y colaboración con psicólogos para acercar la aplicación a pacientes jóvenes y comunicar su valor con experiencias de uso concretas. | Contenido informativo sobre terapia, explicación de costos y acceso al registro desde sus páginas. | Prueba de suscripción, presentación de Ebb y testimonios de usuarios como recursos de captación. | Presentación de Pía, testimonios, blog y contenidos sobre acompañamiento emocional; promoción de la descarga y del acceso al chat. |
+| Estrategias y recursos de marketing | Demostraciones del recorrido completo: registrar una emoción, revisar un resumen y decidir si compartirlo. Contenido educativo en español sobre expresión emocional, privacidad y uso responsable de la IA; difusión de las rutinas y del directorio profesional. Pilotos y colaboración con psicólogos para acercar la aplicación a pacientes jóvenes y comunicar su valor con experiencias de uso concretas. | Contenido informativo sobre terapia, explicación de costos y acceso al registro desde sus páginas. | Prueba de suscripción, presentación de Ebb y testimonios de usuarios como recursos de captación. | Presentación de Pía, testimonios, blog y contenidos sobre acompañamiento emocional; promoción de la descarga y del acceso al chat. |
 
 #### Perfil de producto
 
 | Criterio | SafeDiary | BetterHelp | Headspace | terapIA |
 | --- | --- | --- | --- | --- |
-| Productos y servicios | Diario por texto o voz con transcripción, reflexión asistida, etiquetas emocionales y extracción de palabras clave; historial confidencial, gráficos de evolución y resúmenes por período. Salas de audio anónimas para escuchar o participar. Directorio de psicólogos verificados con especialidad, disponibilidad y tarifa; reserva de citas, videollamadas y pago de sesiones. Sistema de confianza con reseñas y criterios transparentes sobre la actividad profesional. | Sesión semanal, mensajería, grupos de apoyo, herramientas de hábitos y diario. | Meditaciones, recursos de sueño, ejercicios y Ebb; sesiones con profesionales mediante su oferta de terapia. | Chat con Pía, diario con texto, imágenes y notas de voz, cuestionarios de autoexploración, objetivos, hábitos, cartas al futuro y logros. |
-| Registro y continuidad entre sesiones | Conserva experiencias cuando ocurren, incluyendo detalles que pueden olvidarse al llegar a consulta. Propone organizar entradas por período y mostrar emociones predominantes, posibles detonantes y variaciones a lo largo del tiempo. El paciente revisa el resumen, elige qué compartir y puede revocar el acceso. El psicólogo recibe contexto complementario para la conversación clínica, mientras la identidad de la comunidad permanece separada de la atención profesional. | Permite escribir y compartir entradas del diario con el terapeuta, además de actualizar objetivos y hábitos. | Conversación y reflexión mediante Ebb. Disponibilidad de un diario por voz con resumen compartible: por confirmar. | Historial de conversaciones y diario para revisar experiencias y avances. Integración de resúmenes autorizados con un psicólogo: por confirmar. |
-| Precios y costos | Modelo freemium con una versión gratuita y planes de pago que amplían las funcionalidades disponibles. Se cobrará a los psicólogos una pequeña comisión por las citas gestionadas a través de la plataforma. Como vía adicional de comercialización, se contempla ofrecer convenios y planes institucionales a universidades, colegios, clínicas, empresas y otras organizaciones para facilitar el acceso de sus comunidades a SafeDiary. | En Estados Unidos: **US$70–100 por semana** sin seguro, variable según ubicación y condiciones. No constituye una tarifa para Perú. | Suscripción de autocuidado con Ebb: **US$69.99 al año** después de la prueba. La terapia tiene costos separados según cobertura y ubicación. | Compras dentro de la aplicación. Pía Plus ofrece suscripción mensual o anual; importe vigente por confirmar. |
+| Productos y servicios | Diario por texto o voz con transcripción, reflexión asistida, etiquetas emocionales y extracción de palabras clave; historial confidencial, gráficos de evolución y resúmenes por período. Directorio de psicólogos verificados con especialidad, disponibilidad y tarifa; reserva de citas, videollamadas y pago de sesiones. Sistema de confianza con reseñas y criterios transparentes sobre la actividad profesional. | Sesión semanal, mensajería, grupos de apoyo, herramientas de hábitos y diario. | Meditaciones, recursos de sueño, ejercicios y Ebb; sesiones con profesionales mediante su oferta de terapia. | Chat con Pía, diario con texto, imágenes y notas de voz, cuestionarios de autoexploración, objetivos, hábitos, cartas al futuro y logros. |
+| Registro y continuidad entre sesiones | Conserva experiencias cuando ocurren, incluyendo detalles que pueden olvidarse al llegar a consulta. Propone organizar entradas por período y mostrar emociones predominantes, posibles detonantes y variaciones a lo largo del tiempo. El paciente revisa el resumen, elige qué compartir y puede revocar el acceso. El psicólogo recibe contexto complementario para la conversación clínica, sin exponer el resto del diario. | Permite escribir y compartir entradas del diario con el terapeuta, además de actualizar objetivos y hábitos. | Conversación y reflexión mediante Ebb. Disponibilidad de un diario por voz con resumen compartible: por confirmar. | Historial de conversaciones y diario para revisar experiencias y avances. Integración de resúmenes autorizados con un psicólogo: por confirmar. |
+| Precios y costos | Modelo freemium con una versión gratuita y planes de pago que amplían las funcionalidades disponibles. Se cobrará a los psicólogos una pequeña comisión por las citas gestionadas a través de la plataforma. Como vía adicional de comercialización, se contempla ofrecer convenios y planes institucionales a universidades, colegios, clínicas, empresas y otras organizaciones para facilitar el acceso de sus estudiantes y colaboradores a SafeDiary. | En Estados Unidos: **US$70–100 por semana** sin seguro, variable según ubicación y condiciones. No constituye una tarifa para Perú. | Suscripción de autocuidado con Ebb: **US$69.99 al año** después de la prueba. La terapia tiene costos separados según cobertura y ubicación. | Compras dentro de la aplicación. Pía Plus ofrece suscripción mensual o anual; importe vigente por confirmar. |
 | Canales de distribución | Distribución prevista mediante App Store para iOS, Google Play Store para Android y acceso web desde el navegador. | Servicio online mediante web y aplicación. | Aplicación Headspace y sitio web de suscripción y acceso a terapia. | Aplicaciones para Android e iOS y acceso web al chat con Pía. |
 
 
@@ -52,13 +52,13 @@ El análisis permite comprender cómo las soluciones existentes acompañan a las
 | Criterio | SafeDiary | BetterHelp | Headspace | terapIA |
 | --- | --- | --- | --- | --- |
 | Fortalezas | Propuesta integrada que combina expresión privada, apoyo comunitario y atención profesional. Registro flexible por voz o texto, visualización de patrones y resúmenes orientados a la consulta. El consentimiento explícito y revocable, el cifrado de información sensible y la separación de identidades forman parte del diseño. Su enfoque en pacientes jóvenes y psicólogos permite atender necesidades de ambos lados de la relación terapéutica. | Atención profesional y herramientas de diario y seguimiento dentro de un mismo servicio. | Combina recursos de autocuidado, acompañamiento con IA y una oferta de terapia. | Experiencia en español que reúne IA conversacional y herramientas de reflexión personal, con acceso sin citas. |
-| Debilidades | Necesita validar la precisión y utilidad de sus resúmenes, la constancia del registro y la adopción por parte de los psicólogos. Integrar audio, IA, comunidad y consultas exige recursos técnicos y operativos, especialmente para moderación y protección de datos. El valor del directorio depende de contar con profesionales verificados y disponibilidad suficiente. | El costo recurrente puede dificultar la adopción por jóvenes con presupuesto limitado; su costo final para usuarios en Perú está por confirmar. | Su oferta de terapia tiene restricciones de país e idioma que limitan su ajuste al público peruano. | El acompañamiento automatizado no brinda evaluación ni tratamiento clínico; su utilidad depende de la adecuación de las respuestas al contexto personal. |
+| Debilidades | Necesita validar la precisión y utilidad de sus resúmenes, la constancia del registro y la adopción por parte de los psicólogos. Integrar audio, IA y consultas exige recursos técnicos y operativos, especialmente para protección de datos. El valor del directorio depende de contar con profesionales verificados y disponibilidad suficiente. | El costo recurrente puede dificultar la adopción por jóvenes con presupuesto limitado; su costo final para usuarios en Perú está por confirmar. | Su oferta de terapia tiene restricciones de país e idioma que limitan su ajuste al público peruano. | El acompañamiento automatizado no brinda evaluación ni tratamiento clínico; su utilidad depende de la adecuación de las respuestas al contexto personal. |
 | Oportunidades | Atender la pérdida de contexto entre consultas y la dispersión de notas y audios personales. Facilitar que pacientes jóvenes del entorno peruano encuentren un espacio de escucha y una ruta clara hacia el profesional. Trabajar con psicólogos para ajustar los resúmenes a sus necesidades y fortalecer la continuidad del registro, el apoyo social y la preparación de las sesiones. | Mejorar la organización del diario para facilitar la revisión de experiencias entre sesiones. | Profundizar la conexión entre reflexión cotidiana y atención profesional en más idiomas y mercados. | Desarrollar formas de conectar la reflexión personal con el apoyo profesional y mejorar la continuidad de los hábitos. |
-| Amenazas | Competidores que incorporen funciones similares, abandono del hábito de registro y preferencia por herramientas que el usuario ya conoce. Errores de interpretación de la IA, incidentes de privacidad o interacciones dañinas en la comunidad podrían afectar la confianza. La disponibilidad limitada de psicólogos y los costos de operación pueden dificultar el crecimiento del servicio. | Alternativas locales ajustadas al presupuesto y usuarios que prefieran mantener atención presencial con su psicólogo. | Competencia de recursos gratuitos de autocuidado y herramientas especializadas en continuidad terapéutica. | Otras aplicaciones de bienestar e IA conversacional, pérdida de confianza por respuestas inadecuadas y preferencia por acompañamiento humano. |
+| Amenazas | Competidores que incorporen funciones similares, abandono del hábito de registro y preferencia por herramientas que el usuario ya conoce. Errores de interpretación de la IA, incidentes de privacidad o fallos en pagos y acceso clínico podrían afectar la confianza. La disponibilidad limitada de psicólogos y los costos de operación pueden dificultar el crecimiento del servicio. | Alternativas locales ajustadas al presupuesto y usuarios que prefieran mantener atención presencial con su psicólogo. | Competencia de recursos gratuitos de autocuidado y herramientas especializadas en continuidad terapéutica. | Otras aplicaciones de bienestar e IA conversacional, pérdida de confianza por respuestas inadecuadas y preferencia por acompañamiento humano. |
 
 **Conclusión del análisis**
 
-SafeDiary orienta su diferenciación a la continuidad del cuidado emocional: expresar lo que ocurre, comprenderlo con ayuda del diario, encontrar escucha en una comunidad y acceder a un psicólogo verificado cuando la persona lo decida. BetterHelp combina terapia con herramientas de seguimiento; Headspace reúne autocuidado, IA y atención profesional; terapIA se centra en el acompañamiento automatizado y la reflexión personal. Frente a estas propuestas, SafeDiary busca ofrecer una experiencia adaptada a pacientes jóvenes y psicólogos del contexto peruano, con registro por voz o texto, apoyo anónimo y contexto compartido bajo control del paciente. Su valor deberá reflejarse en registros fáciles de mantener, resúmenes útiles para la consulta y una transición clara hacia el apoyo humano.
+SafeDiary orienta su diferenciación a la continuidad del cuidado emocional: expresar lo que ocurre, comprenderlo con ayuda del diario, acceder a un psicólogo verificado cuando la persona lo decida. BetterHelp combina terapia con herramientas de seguimiento; Headspace reúne autocuidado, IA y atención profesional; terapIA se centra en el acompañamiento automatizado y la reflexión personal. Frente a estas propuestas, SafeDiary busca ofrecer una experiencia adaptada a pacientes jóvenes y psicólogos del contexto peruano, con registro por voz o texto, rutinas de autocuidado y contexto compartido bajo control del paciente. Su valor deberá reflejarse en registros fáciles de mantener, resúmenes útiles para la consulta y una transición clara hacia el apoyo humano.
 
 ### 2.1.2. Estrategias y tácticas frente a competidores
 
@@ -73,10 +73,6 @@ Ofrecer texto y voz, indicaciones sencillas y recordatorios opcionales. Evaluar 
 **Confianza mediante decisiones de privacidad comprensibles**
 
 Mostrar qué información se comparte, quién la recibe y cómo revocar su acceso. Incorporar opciones de eliminación y explicar el uso de los datos emocionales con lenguaje claro. En los pilotos, comprobar que el paciente comprende estas decisiones y puede realizarlas sin ayuda.
-
-**Comunidad anónima como espacio de escucha**
-
-Integrar salas de audio donde el usuario pueda comenzar escuchando y participar cuando se sienta preparado. Utilizar alias, separar la identidad comunitaria de la clínica e incorporar moderación, reporte y bloqueo. Este espacio busca ampliar las posibilidades de apoyo entre consultas y ofrecer contacto humano a quienes necesitan compartir experiencias. El diario y las grabaciones personales permanecen privados y no se publican en la comunidad.
 
 **Acceso a profesionales y confianza para elegir**
 
@@ -282,13 +278,12 @@ La matriz reúne las seis tareas más importantes de cada segmento y las prioriz
 
 **Primer Segmento Objetivo (Pacientes Jóvenes)**
 
-| Tarea prioritaria | Frecuencia | Importancia |
-| --- | :---: | :---: |
-| Registrar emociones por texto o voz | Alta | Crítica |
-| Consultar insights y evolución emocional | Media | Alta |
-| Controlar el acceso a su información | Baja | Crítica |
-| Participar de forma segura en la comunidad | Media | Alta |
-| Acceder a ejercicios y ayuda urgente | Media | Crítica |
+| Tarea prioritaria                        | Frecuencia | Importancia |
+|------------------------------------------| :---: | :---: |
+| Registrar emociones por texto o voz      | Alta | Crítica |
+| Crear Rutinas diarias para alcanzar objetivos     | Media | Alta |
+| Controlar el acceso a su información     | Baja | Crítica |
+| Visualizar un calendario de citas con profesionales    | Media | Crítica |
 | Encontrar y recibir atención profesional | Baja | Crítica |
 
 #### User Task Matrix 2: Dra. Laura Gómez
@@ -329,23 +324,21 @@ La matriz reúne las seis tareas más importantes de cada segmento y las prioriz
 
 ### 2.3.5. Big Picture EventStorming
 
-![Event storming](../assets/images/chap2/event-storming/big-event-storming.png)
+![Big Picture EventStorming actualizado de SafeDiary](../assets/images/chap2/event-storming/big-event-storming.jpg)
 
-<em>Organización del Big Picture Event Storming tras discutir en grupo los factores más importantes involucrados en la experiencia de usuario</em>
 
 ### 2.3.6. Ubiquitous Language
 
 **Identidad, Privacidad y Consentimiento (Identity, Privacy & Consent)**
 
-* **User (Usuario):** Persona que utiliza SafeDiary para registrar su estado emocional, participar en la comunidad o acceder a atención profesional. Es propietaria de sus entradas y decide qué información comparte.
+* **User (Usuario):** Persona que utiliza SafeDiary para registrar su estado emocional, acceder a atención profesional. Es propietaria de sus entradas y decide qué información comparte.
 * **Account (Cuenta):** Identidad interna utilizada para autenticación, preferencias, seguridad y gestión del ciclo de vida de los datos del usuario.
-* **Clinical Identity (Identidad Clínica):** Información real necesaria para la relación con un especialista, las citas y los pagos. No se muestra dentro de la comunidad anónima.
-* **Community Alias (Alias Comunitario):** Identidad seudónima utilizada en las salas de voz para participar sin revelar la identidad clínica o los datos personales del usuario.
+* **Clinical Identity (Identidad Clínica):** Información real necesaria para la relación con un especialista, las citas y los pagos.
 * **Consent (Consentimiento):** Autorización explícita, informada, específica y revocable mediante la cual el usuario permite una finalidad concreta sobre sus datos emocionales.
 * **Sharing Permission (Permiso de Compartición):** Alcance concedido por el usuario que define qué entradas puede consultar un especialista, durante qué periodo y dentro de qué relación de atención.
 * **Revocation (Revocación):** Acción mediante la cual el usuario retira un permiso vigente. Desde ese momento se bloquean nuevos accesos, sin eliminar los eventos históricos de auditoría.
 * **Private Vault (Bóveda Privada):** Espacio protegido mediante un PIN secundario o biometría para entradas especialmente sensibles, excluidas por defecto de vistas y exportaciones generales.
-* **Audit Event (Evento de Auditoría):** Registro trazable de una acción sensible, como un acceso, consentimiento, revocación, reserva, pago o moderación, sin copiar innecesariamente el contenido emocional involucrado.
+* **Audit Event (Evento de Auditoría):** Registro trazable de una acción sensible, como un acceso, consentimiento, revocación, reserva o pago, sin copiar innecesariamente el contenido emocional involucrado.
 
 **Diario Emocional e Inteligencia Artificial (Emotional Diary & AI)**
 
@@ -361,31 +354,27 @@ La matriz reúne las seis tareas más importantes de cada segmento y las prioriz
 * **Processing State (Estado de Procesamiento):** Etapa técnica de una entrada: draft, uploading, transcribing, analyzing, ready, retryable, failed o deleted.
 * **Safety Flag (Bandera de Seguridad):** Indicador interno de que una interacción puede requerir mostrar recursos de ayuda. No equivale a una evaluación clínica ni confirma una situación de emergencia.
 
-**Comunidad Anónima y Moderación (Anonymous Community & Moderation)**
-
-* **Community Room (Sala Comunitaria):** Espacio de audio en tiempo real donde los usuarios interactúan mediante alias y bajo una política de participación y moderación definida.
-* **Host (Anfitrión):** Participante responsable de conducir una sala y aplicar acciones básicas de moderación durante su sesión.
-* **Listener (Oyente):** Participante conectado con el micrófono silenciado que puede escuchar sin intervenir verbalmente.
-* **Speaker (Participante de Voz):** Usuario autorizado a activar su micrófono y hablar dentro de una sala comunitaria.
-* **Report (Reporte):** Comunicación confidencial enviada a moderación sobre una conducta que podría incumplir las reglas de la comunidad.
-* **Block (Bloqueo):** Restricción personal que impide nuevas interacciones entre dos alias sin revelar a la comunidad la identidad de quien la aplicó.
-* **Moderation Action (Acción de Moderación):** Medida trazable como silenciar, expulsar o restringir a un participante para proteger la seguridad de una sala.
-
-**Atención Profesional y Agendamiento (Professional Care & Scheduling)**
+**Directorio Profesional (Clinician Directory)**
 
 * **Verified Specialist (Especialista Verificado):** Psicólogo cuya identidad y credenciales fueron revisadas antes de aparecer como profesional disponible en SafeDiary.
-* **Clinician Profile (Perfil Profesional):** Ficha pública autorizada que reúne especialidades, biografía, tarifa, disponibilidad, verificación, reseñas y elementos del puntaje de confianza.
-* **Availability Slot (Horario Disponible):** Bloque de fecha, hora y zona horaria publicado por un especialista que puede reservarse una sola vez.
+* **Clinician Profile (Perfil Profesional):** Ficha pública autorizada que reúne especialidades, biografía, tarifa, verificación y reseñas. La disponibilidad reservable se consulta desde Care Scheduling.
+* **Review (Reseña):** Valoración vinculada a una cita completada que puede incluir una puntuación y un comentario opcional, sin revelar información emocional del paciente.
+* **Trust Score (Puntaje de Confianza):** Indicador explicable construido con criterios como horas de atención, continuidad de pacientes y reseñas válidas, evitando premiar únicamente el volumen de consultas.
+
+**Coordinación de Atención (Care Scheduling)**
+
+* **Availability Slot (Horario Disponible):** Bloque de fecha, hora y zona horaria que el especialista ofrece y que puede reservarse una sola vez.
+* **Temporary Hold (Reserva Temporal):** Retención exclusiva de un horario durante una hora mientras el paciente completa el pago.
 * **Appointment (Cita):** Acuerdo entre un usuario y un especialista para una atención en un horario determinado, con estados requested, held, confirmed, completed, cancelled, expired, no_show o refunded.
 * **Video Session (Videollamada):** Canal privado asociado a una cita confirmada al que solo pueden ingresar sus participantes autorizados dentro de la ventana permitida.
 * **Care Relationship (Relación de Atención):** Vínculo entre un usuario y un especialista originado por una cita. No concede acceso automático al diario; todo acceso requiere un permiso de compartición explícito.
 
-**Pagos, Reseñas y Confianza (Payments, Reviews & Trust)**
+**Pagos y Retiros (Payments & Payouts)**
 
-* **Payment (Pago):** Transacción asociada a una cita que se procesa de forma idempotente para evitar cobros duplicados y mantener un estado verificable.
+* **Payment (Pago):** Transacción asociada a una cita o una suscripción; cada propósito se procesa de forma idempotente y conserva su estado verificable.
 * **Receipt (Comprobante):** Constancia digital emitida después de un pago aprobado y disponible para consulta del usuario.
-* **Review (Reseña):** Valoración vinculada a una cita completada que puede incluir una puntuación y un comentario opcional, sin revelar información emocional del paciente.
-* **Trust Score (Puntaje de Confianza):** Indicador explicable construido con criterios como horas de atención, continuidad de pacientes y reseñas válidas, evitando premiar únicamente el volumen de consultas.
+* **Subscription (Suscripción):** Derecho temporal al plan Premium que se activa solo tras un pago confirmado y se gestiona por separado del pago de una cita.
+* **Payout (Retiro):** Transferencia de saldo profesional disponible hacia el método de retiro verificado del psicólogo.
 * **Refund (Reembolso):** Devolución total o parcial de un pago que actualiza de forma trazable el estado financiero de la cita.
 
 ## 2.4. Requirements specification
@@ -398,9 +387,11 @@ La matriz reúne las seis tareas más importantes de cada segmento y las prioriz
 | --- | --- | --- |
 | EP-01 | Cuenta, seguridad, privacidad y consentimiento | **Como** usuario de SafeDiary,<br>**Quiero** administrar mi identidad, accesos y permisos sobre mis datos,<br>**Para** utilizar la aplicación con seguridad y mantener el control de mi información sensible. |
 | EP-02 | Diario emocional, IA, hábitos e insights | **Como** usuario de SafeDiary,<br>**Quiero** registrar mis emociones, recibir apoyo reflexivo y consultar mi evolución,<br>**Para** desarrollar hábitos de autocuidado y comprender mejor mis patrones emocionales. |
-| EP-03 | Comunidad segura, autorregulación y ayuda inmediata | **Como** miembro de SafeDiary,<br>**Quiero** participar en espacios comunitarios moderados y acceder a recursos de regulación y crisis,<br>**Para** recibir apoyo manteniendo protegida mi identidad y seguridad. |
-| EP-04 | Atención profesional, citas, pagos y confianza | **Como** usuario de SafeDiary,<br>**Quiero** encontrar especialistas verificados y gestionar citas, pagos y sesiones,<br>**Para** acceder a atención profesional confiable desde la aplicación. |
+| EP-04 | Directorio de psicólogos verificados y reputación | **Como** paciente que busca atención profesional,<br>**Quiero** encontrar fichas verificadas con tarifas y reseñas confiables,<br>**Para** elegir a quién contactar con información transparente. Incluye la verificación y publicación de la ficha por el psicólogo y la revisión de credenciales por administración; no gestiona citas ni cobros. |
 | EP-05 | Landing page, comunicación y adquisición | **Como** visitante,<br>**Quiero** conocer la propuesta, funcionalidades, precios y equipo de SafeDiary,<br>**Para** evaluar el producto antes de registrarme o descargarlo. |
+| EP-06 | Contacto, agenda y sesiones profesionales | **Como** paciente y psicólogo verificado,<br>**Quiero** coordinar por chat, acordar un horario, retenerlo temporalmente y acceder a la sesión solo tras la confirmación del pago,<br>**Para** evitar conflictos de agenda y realizar la atención de forma segura. Care Scheduling no procesa el cobro. |
+| EP-07 | Pagos de sesiones, suscripciones y retiros | **Como** paciente o psicólogo,<br>**Quiero** pagar sesiones o un plan Premium y consultar ingresos o retiros según mi rol,<br>**Para** contar con operaciones trazables, comprobantes y saldos correctos. El pago de sesión y la suscripción son propósitos distintos; Premium no forma parte del saldo retirable del psicólogo. |
+
 
 **User Stories**
 
@@ -418,12 +409,12 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-002</td><td style="text-align:center">Usuario</td><td style="text-align:center">Media</td><td style="text-align:center">EP-04</td></tr>
-<tr><td><strong>Title</strong></td><td colspan="3">Exploración del directorio de especialistas</td></tr>
+<tr><td style="text-align:center">US-002</td><td style="text-align:center">Paciente</td><td style="text-align:center">Media</td><td style="text-align:center">EP-04</td></tr>
+<tr><td><strong>Title</strong></td><td colspan="3">Búsqueda y consulta de psicólogos verificados</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
-<tr><td colspan="4"><strong>Como</strong> usuario de SafeDiary,<br><strong>Quiero</strong> buscar especialistas verificados y filtrarlos por especialidad y disponibilidad,<br><strong>Para</strong> seleccionar al profesional que mejor se ajuste a mis necesidades.</td></tr>
+<tr><td colspan="4"><strong>Como</strong> paciente de SafeDiary,<br><strong>Quiero</strong> buscar y filtrar psicólogos verificados y consultar sus fichas y reseñas,<br><strong>Para</strong> elegir a quién solicitar contacto con información suficiente.</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Filtrado con resultados</strong><br><strong>Given</strong> que el usuario se encuentra en el directorio de soporte profesional<br><strong>When</strong> aplica un filtro de especialidad o disponibilidad<br><strong>Then</strong> el sistema muestra únicamente los especialistas coincidentes<br><strong>And</strong> cada resultado presenta credenciales, tarifa, calificación y próxima disponibilidad<br><br><strong>Scenario 2: Búsqueda sin coincidencias</strong><br><strong>Given</strong> que el usuario ha aplicado criterios de búsqueda<br><strong>When</strong> ningún especialista cumple con los filtros seleccionados<br><strong>Then</strong> el sistema muestra un estado sin resultados<br><strong>And</strong> ofrece una opción para limpiar los filtros</td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Búsqueda y ficha disponibles</strong><br><strong>Given</strong> que existen fichas verificadas y publicadas<br><strong>When</strong> el paciente busca por nombre o especialidad, filtra y abre una ficha<br><strong>Then</strong> Clinician Directory muestra solo psicólogos elegibles con credenciales, descripción, tarifa y valoración vigente<br><strong>And</strong> presenta la disponibilidad consultada desde Care Scheduling sin tratarla como propiedad del directorio<br><br><strong>Scenario 2: Sin coincidencias o ficha retirada</strong><br><strong>Given</strong> que ningún psicólogo coincide o una ficha perdió su verificación<br><strong>When</strong> el paciente consulta el directorio<br><strong>Then</strong> el sistema no muestra la ficha no elegible y presenta un estado sin resultados cuando corresponda<br><strong>And</strong> permite limpiar filtros o continuar buscando sin crear una solicitud de contacto</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
@@ -434,26 +425,6 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 <tr><td colspan="4"><strong>Como</strong> usuario nuevo o recurrente de SafeDiary,<br><strong>Quiero</strong> registrarme o iniciar sesión con mi cuenta de Google o Apple,<br><strong>Para</strong> acceder de forma rápida sin administrar una contraseña adicional.</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
 <tr><td colspan="4"><strong>Scenario 1: Autenticación federada exitosa</strong><br><strong>Given</strong> que el usuario se encuentra en la pantalla de autenticación<br><strong>When</strong> selecciona Google o Apple y autoriza el acceso con el proveedor<br><strong>Then</strong> el sistema valida la identidad y crea o recupera la cuenta correspondiente<br><strong>And</strong> redirige al usuario a la pantalla principal con la sesión iniciada<br><br><strong>Scenario 2: Autenticación cancelada o fallida</strong><br><strong>Given</strong> que el usuario inició el flujo de acceso con Google o Apple<br><strong>When</strong> cancela la autorización o el proveedor devuelve un error<br><strong>Then</strong> el sistema mantiene al usuario en la pantalla de autenticación<br><strong>And</strong> muestra un mensaje de error cuando la causa es técnica</td></tr>
-</table>
-
-<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
-<tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-004</td><td style="text-align:center">Usuario</td><td style="text-align:center">Media</td><td style="text-align:center">EP-03</td></tr>
-<tr><td><strong>Title</strong></td><td colspan="3">Creación de sala de voz</td></tr>
-<tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
-<tr><td colspan="4"><strong>Como</strong> usuario de SafeDiary,<br><strong>Quiero</strong> crear una sala de voz temática con título, etiquetas y modo de participación,<br><strong>Para</strong> abrir un espacio anónimo y seguro de conversación en tiempo real.</td></tr>
-<tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Sala creada correctamente</strong><br><strong>Given</strong> que el usuario se encuentra en la sección Comunidad<br><strong>When</strong> completa un título válido, selecciona etiquetas y confirma la creación<br><strong>Then</strong> el sistema abre la sala y asigna al creador como anfitrión<br><strong>And</strong> publica la sala en el listado comunitario<br><br><strong>Scenario 2: Título inválido</strong><br><strong>Given</strong> que el usuario tiene abierto el formulario de creación<br><strong>When</strong> intenta confirmar con un título vacío o menor a la longitud permitida<br><strong>Then</strong> el sistema no crea la sala<br><strong>And</strong> indica cómo corregir el campo de título</td></tr>
-</table>
-
-<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
-<tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-005</td><td style="text-align:center">Usuario</td><td style="text-align:center">Media</td><td style="text-align:center">EP-03</td></tr>
-<tr><td><strong>Title</strong></td><td colspan="3">Participación en sala de voz</td></tr>
-<tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
-<tr><td colspan="4"><strong>Como</strong> usuario de SafeDiary,<br><strong>Quiero</strong> unirme a una sala de voz como oyente o participante,<br><strong>Para</strong> recibir apoyo o conversar manteniendo protegida mi identidad.</td></tr>
-<tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Ingreso exitoso como oyente</strong><br><strong>Given</strong> que existe una sala activa con capacidad disponible<br><strong>When</strong> el usuario selecciona la opción de unirse<br><strong>Then</strong> el sistema conecta el audio con el micrófono silenciado por defecto<br><strong>And</strong> incrementa el contador de participantes<br><br><strong>Scenario 2: Sala cerrada o no disponible</strong><br><strong>Given</strong> que la sala seleccionada acaba de finalizar o alcanzó su capacidad<br><strong>When</strong> el usuario intenta ingresar<br><strong>Then</strong> el sistema rechaza la conexión de forma controlada<br><strong>And</strong> informa la causa y actualiza el listado de salas</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
@@ -528,7 +499,7 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-013</td><td style="text-align:center">Usuario en crisis</td><td style="text-align:center">Media</td><td style="text-align:center">EP-03</td></tr>
+<tr><td style="text-align:center">US-013</td><td style="text-align:center">Usuario en crisis</td><td style="text-align:center">Media</td><td style="text-align:center">EP-02</td></tr>
 <tr><td><strong>Title</strong></td><td colspan="3">Acceso inmediato a ayuda de crisis</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
 <tr><td colspan="4"><strong>Como</strong> usuario de SafeDiary que necesita ayuda urgente,<br><strong>Quiero</strong> contactar rápidamente una línea de crisis desde la sección de soporte,<br><strong>Para</strong> obtener asistencia humana inmediata cuando la necesite.</td></tr>
@@ -538,12 +509,12 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-014</td><td style="text-align:center">Usuario</td><td style="text-align:center">Media</td><td style="text-align:center">EP-04</td></tr>
-<tr><td><strong>Title</strong></td><td colspan="3">Reserva de videollamada profesional</td></tr>
+<tr><td style="text-align:center">US-014</td><td style="text-align:center">Paciente</td><td style="text-align:center">Media</td><td style="text-align:center">EP-06</td></tr>
+<tr><td><strong>Title</strong></td><td colspan="3">Reserva temporal del horario acordado</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
-<tr><td colspan="4"><strong>Como</strong> usuario de SafeDiary,<br><strong>Quiero</strong> reservar un horario disponible con un especialista verificado,<br><strong>Para</strong> programar una consulta profesional según mi disponibilidad.</td></tr>
+<tr><td colspan="4"><strong>Como</strong> paciente que aceptó el horario propuesto por un psicólogo verificado,<br><strong>Quiero</strong> que el horario quede reservado temporalmente durante una hora,<br><strong>Para</strong> completar el pago sin perderlo mientras esté vigente.</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Cita reservada</strong><br><strong>Given</strong> que el usuario visualiza un horario disponible de un especialista<br><strong>When</strong> selecciona el horario y confirma los datos de la cita<br><strong>Then</strong> el sistema registra la reserva y bloquea el horario<br><strong>And</strong> muestra la confirmación y programa un recordatorio<br><br><strong>Scenario 2: Horario ocupado durante la reserva</strong><br><strong>Given</strong> que otro usuario reservó el mismo horario antes de la confirmación<br><strong>When</strong> el usuario intenta finalizar la reserva<br><strong>Then</strong> el sistema evita la doble asignación<br><strong>And</strong> informa la indisponibilidad y muestra horarios alternativos</td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Retención creada</strong><br><strong>Given</strong> que el paciente y el psicólogo acordaron un horario y este sigue libre<br><strong>When</strong> el paciente acepta la propuesta<br><strong>Then</strong> Care Scheduling crea una sola reserva temporal con vencimiento en una hora y bloquea ese horario para otras solicitudes<br><strong>And</strong> muestra el tiempo restante y el importe a pagar sin presentar aún la cita como confirmada<br><br><strong>Scenario 2: Horario ocupado o reserva vencida</strong><br><strong>Given</strong> que el horario dejó de estar libre o venció la hora de retención sin pago aprobado<br><strong>When</strong> el paciente intenta continuar<br><strong>Then</strong> el sistema no confirma la cita y libera o conserva libre el horario según corresponda<br><strong>And</strong> informa que debe acordarse un nuevo horario sin crear una segunda reserva</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
@@ -581,7 +552,7 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 <tr><td style="text-align:center">US-018</td><td style="text-align:center">Visitante</td><td style="text-align:center">Alta</td><td style="text-align:center">EP-05</td></tr>
 <tr><td><strong>Title</strong></td><td colspan="3">Presentación de funcionalidades principales</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
-<tr><td colspan="4"><strong>Como</strong> visitante de la landing page,<br><strong>Quiero</strong> consultar las funciones principales de SafeDiary,<br><strong>Para</strong> conocer el alcance del diario, la IA, la comunidad y el soporte profesional.</td></tr>
+<tr><td colspan="4"><strong>Como</strong> visitante de la landing page,<br><strong>Quiero</strong> consultar las funciones principales de SafeDiary,<br><strong>Para</strong> conocer el alcance del diario, la IA, las rutinas y el soporte profesional.</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
 <tr><td colspan="4"><strong>Scenario 1: Funciones visibles</strong><br><strong>Given</strong> que el visitante navega a la sección de funcionalidades<br><strong>When</strong> la sección aparece en pantalla<br><strong>Then</strong> el sistema presenta bloques con título, descripción e identificación visual<br><strong>And</strong> incluye las capacidades principales del producto<br><br><strong>Scenario 2: Navegación desde el menú</strong><br><strong>Given</strong> que el visitante se encuentra en otra sección de la landing page<br><strong>When</strong> selecciona el enlace de funcionalidades<br><strong>Then</strong> la página lo desplaza a la sección correspondiente<br><strong>And</strong> mantiene visible el encabezado de la sección</td></tr>
 </table>
@@ -698,7 +669,7 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-030</td><td style="text-align:center">Usuario</td><td style="text-align:center">Baja</td><td style="text-align:center">EP-03</td></tr>
+<tr><td style="text-align:center">US-030</td><td style="text-align:center">Usuario</td><td style="text-align:center">Baja</td><td style="text-align:center">EP-02</td></tr>
 <tr><td><strong>Title</strong></td><td colspan="3">Ejercicios rápidos de regulación</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
 <tr><td colspan="4"><strong>Como</strong> usuario que experimenta ansiedad,<br><strong>Quiero</strong> acceder a ejercicios breves de respiración y regulación,<br><strong>Para</strong> reducir la intensidad de mis síntomas antes de continuar con el diario.</td></tr>
@@ -738,47 +709,27 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-034</td><td style="text-align:center">Participante</td><td style="text-align:center">Media</td><td style="text-align:center">EP-03</td></tr>
-<tr><td><strong>Title</strong></td><td colspan="3">Reporte y bloqueo en la comunidad</td></tr>
+<tr><td style="text-align:center">US-036</td><td style="text-align:center">Psicólogo verificado</td><td style="text-align:center">Media</td><td style="text-align:center">EP-04</td></tr>
+<tr><td><strong>Title</strong></td><td colspan="3">Publicación y edición de la ficha profesional</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
-<tr><td colspan="4"><strong>Como</strong> participante de una sala de voz,<br><strong>Quiero</strong> reportar y bloquear a una persona con comportamiento inapropiado,<br><strong>Para</strong> protegerme sin revelar mi identidad comunitaria.</td></tr>
+<tr><td colspan="4"><strong>Como</strong> psicólogo con credenciales aprobadas,<br><strong>Quiero</strong> publicar y editar mi ficha, banner, especialidades, descripción y tarifas,<br><strong>Para</strong> que los pacientes conozcan mi oferta profesional antes de contactarme.</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Reporte enviado y usuario bloqueado</strong><br><strong>Given</strong> que el usuario participa en una sala de voz<br><strong>When</strong> selecciona a un participante, elige un motivo y confirma el reporte y bloqueo<br><strong>Then</strong> el sistema impide nuevas interacciones entre ambas identidades<br><strong>And</strong> envía el caso a moderación sin revelar la identidad del denunciante<br><br><strong>Scenario 2: Cancelación del reporte</strong><br><strong>Given</strong> que el usuario abrió el formulario de reporte<br><strong>When</strong> cierra el formulario antes de confirmar<br><strong>Then</strong> el sistema no registra el reporte<br><strong>And</strong> mantiene disponible la opción de bloquear por separado</td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Ficha publicada o actualizada</strong><br><strong>Given</strong> que la verificación del psicólogo está aprobada<br><strong>When</strong> completa los campos obligatorios y publica o edita su ficha y tarifas<br><strong>Then</strong> Clinician Directory muestra una única ficha pública vigente con los cambios guardados<br><strong>And</strong> no modifica las citas ni los precios ya aceptados para reservas existentes<br><br><strong>Scenario 2: Psicólogo no verificado o datos inválidos</strong><br><strong>Given</strong> que la verificación está pendiente, fue rechazada o faltan campos obligatorios<br><strong>When</strong> intenta publicar la ficha<br><strong>Then</strong> el sistema mantiene la ficha fuera del directorio<br><strong>And</strong> informa qué requisito debe corregirse sin mostrar documentos privados</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-035</td><td style="text-align:center">Anfitrión</td><td style="text-align:center">Media</td><td style="text-align:center">EP-03</td></tr>
-<tr><td><strong>Title</strong></td><td colspan="3">Moderación de salas de voz</td></tr>
-<tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
-<tr><td colspan="4"><strong>Como</strong> anfitrión de una sala de voz,<br><strong>Quiero</strong> silenciar o expulsar a participantes que incumplan las reglas,<br><strong>Para</strong> mantener una conversación segura para la comunidad.</td></tr>
-<tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Participante expulsado</strong><br><strong>Given</strong> que el anfitrión detecta una conducta que incumple las reglas<br><strong>When</strong> selecciona expulsar y confirma la acción<br><strong>Then</strong> el sistema retira al participante de la sala<br><strong>And</strong> impide que vuelva a ingresar durante esa sesión y registra la acción<br><br><strong>Scenario 2: Participante silenciado</strong><br><strong>Given</strong> que un participante genera ruido o interrumpe la conversación<br><strong>When</strong> el anfitrión selecciona silenciar<br><strong>Then</strong> el sistema desactiva el micrófono del participante<br><strong>And</strong> le informa de forma privada el cambio de estado</td></tr>
-</table>
-
-<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
-<tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-036</td><td style="text-align:center">Especialista</td><td style="text-align:center">Media</td><td style="text-align:center">EP-04</td></tr>
-<tr><td><strong>Title</strong></td><td colspan="3">Gestión del perfil profesional y disponibilidad</td></tr>
-<tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
-<tr><td colspan="4"><strong>Como</strong> especialista verificado en SafeDiary,<br><strong>Quiero</strong> actualizar mi perfil, especialidades, tarifa y horarios disponibles,<br><strong>Para</strong> ofrecer información correcta y recibir reservas compatibles con mi agenda.</td></tr>
-<tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Perfil y disponibilidad actualizados</strong><br><strong>Given</strong> que el especialista tiene una verificación vigente<br><strong>When</strong> modifica datos válidos y publica nuevos horarios<br><strong>Then</strong> el sistema actualiza su ficha en el directorio<br><strong>And</strong> habilita los horarios libres para reserva<br><br><strong>Scenario 2: Conflicto de horario o perfil no verificado</strong><br><strong>Given</strong> que existe una cita en el horario seleccionado o la verificación no está vigente<br><strong>When</strong> el especialista intenta publicar la disponibilidad<br><strong>Then</strong> el sistema bloquea el cambio incompatible<br><strong>And</strong> explica la condición que debe resolver</td></tr>
-</table>
-
-<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
-<tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-037</td><td style="text-align:center">Usuario</td><td style="text-align:center">Alta</td><td style="text-align:center">EP-04</td></tr>
+<tr><td style="text-align:center">US-037</td><td style="text-align:center">Paciente</td><td style="text-align:center">Alta</td><td style="text-align:center">EP-07</td></tr>
 <tr><td><strong>Title</strong></td><td colspan="3">Pago seguro de una sesión</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
-<tr><td colspan="4"><strong>Como</strong> usuario con una cita seleccionada,<br><strong>Quiero</strong> pagar la sesión dentro de SafeDiary y recibir un comprobante,<br><strong>Para</strong> confirmar mi reserva mediante una transacción trazable.</td></tr>
+<tr><td colspan="4"><strong>Como</strong> paciente con una reserva temporal vigente,<br><strong>Quiero</strong> pagar la sesión dentro de SafeDiary y recibir un comprobante,<br><strong>Para</strong> confirmar la cita acordada mediante una transacción trazable.</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Pago aprobado</strong><br><strong>Given</strong> que el usuario seleccionó una cita y un medio de pago válido<br><strong>When</strong> confirma el cobro y la pasarela aprueba la operación<br><strong>Then</strong> el sistema registra el pago una sola vez y confirma la cita<br><strong>And</strong> genera un comprobante consultable por el usuario<br><br><strong>Scenario 2: Pago rechazado o interrumpido</strong><br><strong>Given</strong> que el usuario intenta pagar una sesión<br><strong>When</strong> la pasarela rechaza la operación o se pierde la conexión<br><strong>Then</strong> el sistema no marca la cita como pagada ni duplica cargos<br><strong>And</strong> informa el estado y permite reintentar de forma segura</td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Cobro aprobado dentro del plazo</strong><br><strong>Given</strong> que la reserva temporal sigue vigente y existe un importe aceptado<br><strong>When</strong> la pasarela confirma un pago aprobado para esa reserva<br><strong>Then</strong> Payments &amp; Payouts registra un solo cobro, emite un comprobante y comunica el resultado a Care Scheduling<br><strong>And</strong> Care Scheduling confirma la cita una sola vez y habilita sus recordatorios y acceso programado<br><br><strong>Scenario 2: Fallo, duplicado o aprobación tardía</strong><br><strong>Given</strong> que el cobro falla, se repite su notificación o vence la reserva antes de confirmarse<br><strong>When</strong> se procesa el resultado<br><strong>Then</strong> el sistema evita cargos y citas duplicados y no confirma una cita sobre un horario liberado<br><strong>And</strong> muestra el estado real; si hubo un cobro aprobado tardíamente, inicia su conciliación o devolución sin prometer una cita inexistente</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-038</td><td style="text-align:center">Usuario</td><td style="text-align:center">Media</td><td style="text-align:center">EP-04</td></tr>
+<tr><td style="text-align:center">US-038</td><td style="text-align:center">Paciente</td><td style="text-align:center">Media</td><td style="text-align:center">EP-06</td></tr>
 <tr><td><strong>Title</strong></td><td colspan="3">Acceso a la videollamada programada</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
 <tr><td colspan="4"><strong>Como</strong> usuario con una cita confirmada,<br><strong>Quiero</strong> ingresar a una videollamada segura desde SafeDiary,<br><strong>Para</strong> recibir atención profesional en el horario reservado.</td></tr>
@@ -788,17 +739,17 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-039</td><td style="text-align:center">Usuario</td><td style="text-align:center">Media</td><td style="text-align:center">EP-04</td></tr>
+<tr><td style="text-align:center">US-039</td><td style="text-align:center">Paciente</td><td style="text-align:center">Media</td><td style="text-align:center">EP-04</td></tr>
 <tr><td><strong>Title</strong></td><td colspan="3">Calificación del especialista</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
 <tr><td colspan="4"><strong>Como</strong> usuario que completó una sesión,<br><strong>Quiero</strong> calificar al especialista y escribir una reseña opcional,<br><strong>Para</strong> compartir mi experiencia y contribuir a una puntuación de confianza transparente.</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Reseña registrada</strong><br><strong>Given</strong> que la cita figura como completada y aún no fue calificada<br><strong>When</strong> el usuario selecciona una puntuación y confirma su reseña<br><strong>Then</strong> el sistema vincula la calificación con la cita<br><strong>And</strong> actualiza el indicador agregado sin revelar datos del paciente<br><br><strong>Scenario 2: Calificación no permitida</strong><br><strong>Given</strong> que la cita no se completó o ya tiene una calificación<br><strong>When</strong> el usuario intenta enviar otra reseña<br><strong>Then</strong> el sistema rechaza la duplicación<br><strong>And</strong> permite editar la reseña existente cuando corresponda</td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Reseña válida publicada</strong><br><strong>Given</strong> que Care Scheduling notificó la sesión completada y el paciente aún no reseñó esa cita<br><strong>When</strong> publica una puntuación y un comentario opcional<br><strong>Then</strong> Clinician Directory vincula una sola reseña a esa cita y recalcula la valoración agregada del psicólogo<br><strong>And</strong> actualiza la ficha pública sin revelar la identidad ni información clínica del paciente<br><br><strong>Scenario 2: Reseña no elegible</strong><br><strong>Given</strong> que la sesión no se completó o ya existe una reseña para la misma cita<br><strong>When</strong> el paciente intenta publicar otra<br><strong>Then</strong> el sistema impide la publicación duplicada<br><strong>And</strong> explica la condición sin exponer detalles de la atención</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-040</td><td style="text-align:center">Usuario</td><td style="text-align:center">Alta</td><td style="text-align:center">EP-03</td></tr>
+<tr><td style="text-align:center">US-040</td><td style="text-align:center">Usuario</td><td style="text-align:center">Alta</td><td style="text-align:center">EP-02</td></tr>
 <tr><td><strong>Title</strong></td><td colspan="3">Escalamiento seguro ante señales de crisis</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
 <tr><td colspan="4"><strong>Como</strong> usuario cuya interacción contiene posibles señales de peligro inmediato,<br><strong>Quiero</strong> recibir recursos locales de emergencia y opciones de ayuda humana,<br><strong>Para</strong> buscar apoyo oportuno sin interpretar la respuesta de la IA como un diagnóstico.</td></tr>
@@ -813,7 +764,7 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
 <tr><td colspan="4"><strong>Como</strong> psicólogo interesado en ofrecer atención mediante SafeDiary,<br><strong>Quiero</strong> enviar mis credenciales y consultar el estado de su verificación,<br><strong>Para</strong> demostrar mi habilitación antes de aparecer en el directorio.</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Solicitud enviada</strong><br><strong>Given</strong> que el psicólogo completó sus datos y adjuntó credenciales válidas<br><strong>When</strong> confirma la solicitud de verificación<br><strong>Then</strong> el sistema registra la solicitud con estado pendiente<br><strong>And</strong> mantiene el perfil fuera del directorio hasta que sea aprobado<br><br><strong>Scenario 2: Información incompleta o rechazada</strong><br><strong>Given</strong> que faltan documentos obligatorios o una credencial no puede validarse<br><strong>When</strong> se revisa la solicitud<br><strong>Then</strong> el sistema no habilita el perfil profesional<br><strong>And</strong> informa qué requisito debe corregirse sin exponer los documentos públicamente</td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Solicitud enviada</strong><br><strong>Given</strong> que el psicólogo tiene una cuenta y rol válidos en IAM y adjuntó las credenciales exigidas<br><strong>When</strong> confirma la solicitud<br><strong>Then</strong> Clinician Directory registra la verificación como pendiente de revisión<br><strong>And</strong> mantiene la ficha fuera de los resultados públicos hasta la aprobación<br><br><strong>Scenario 2: Solicitud incompleta o resultado rechazado</strong><br><strong>Given</strong> que faltan documentos obligatorios o la revisión rechazó las credenciales<br><strong>When</strong> el psicólogo consulta el estado<br><strong>Then</strong> el sistema no permite publicar la ficha<br><strong>And</strong> explica qué debe corregirse sin hacer públicos sus documentos</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
@@ -828,22 +779,22 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-043</td><td style="text-align:center">Especialista</td><td style="text-align:center">Alta</td><td style="text-align:center">EP-04</td></tr>
+<tr><td style="text-align:center">US-043</td><td style="text-align:center">Psicólogo verificado</td><td style="text-align:center">Alta</td><td style="text-align:center">EP-06</td></tr>
 <tr><td><strong>Title</strong></td><td colspan="3">Gestión de solicitudes y agenda profesional</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
-<tr><td colspan="4"><strong>Como</strong> especialista verificado,<br><strong>Quiero</strong> aceptar, rechazar o proponer un nuevo horario para una solicitud de cita,<br><strong>Para</strong> mantener mi agenda actualizada y evitar conflictos.</td></tr>
+<tr><td colspan="4"><strong>Como</strong> psicólogo verificado que recibió una solicitud de contacto,<br><strong>Quiero</strong> conversar con el paciente y proponer o rechazar horarios desde mi agenda,<br><strong>Para</strong> acordar una sesión sin conflictos de disponibilidad.</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Solicitud aceptada</strong><br><strong>Given</strong> que existe una solicitud sobre un horario todavía disponible<br><strong>When</strong> el especialista la acepta<br><strong>Then</strong> el sistema confirma la cita y bloquea el horario en su agenda<br><strong>And</strong> notifica al usuario sobre la confirmación<br><br><strong>Scenario 2: Horario en conflicto</strong><br><strong>Given</strong> que el horario solicitado dejó de estar disponible<br><strong>When</strong> el especialista intenta aceptar o propone una alternativa<br><strong>Then</strong> el sistema evita una doble asignación<br><strong>And</strong> permite enviar al usuario un nuevo horario disponible</td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Horario propuesto</strong><br><strong>Given</strong> que el psicólogo está verificado, recibió la solicitud y su agenda muestra un horario libre<br><strong>When</strong> propone ese horario por el chat privado<br><strong>Then</strong> Care Scheduling registra la propuesta y la muestra al paciente para que la acepte o negocie otra<br><strong>And</strong> no crea todavía una reserva ni confirma una cita<br><br><strong>Scenario 2: Conflicto o rechazo</strong><br><strong>Given</strong> que el horario ya está ocupado o el psicólogo decide rechazar la solicitud<br><strong>When</strong> intenta proponerlo o comunica su decisión<br><strong>Then</strong> el sistema evita el conflicto o cierra la solicitud según corresponda<br><strong>And</strong> informa al paciente sin generar un cobro</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-044</td><td style="text-align:center">Especialista</td><td style="text-align:center">Alta</td><td style="text-align:center">EP-04</td></tr>
+<tr><td style="text-align:center">US-044</td><td style="text-align:center">Psicólogo</td><td style="text-align:center">Alta</td><td style="text-align:center">EP-06</td></tr>
 <tr><td><strong>Title</strong></td><td colspan="3">Gestión de la atención profesional</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
 <tr><td colspan="4"><strong>Como</strong> especialista con una cita confirmada,<br><strong>Quiero</strong> ingresar a la videollamada y registrar el resultado operativo de la cita,<br><strong>Para</strong> mantener actualizado el historial de atención.</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Atención completada</strong><br><strong>Given</strong> que la cita está confirmada y se encuentra dentro de la ventana de acceso<br><strong>When</strong> el especialista ingresa, realiza la sesión y la marca como completada<br><strong>Then</strong> el sistema registra el estado y la hora de finalización<br><strong>And</strong> habilita la calificación del usuario sin publicar información de la consulta<br><br><strong>Scenario 2: Cita no realizada</strong><br><strong>Given</strong> que la consulta no pudo realizarse por cancelación o inasistencia<br><strong>When</strong> el especialista selecciona el estado correspondiente<br><strong>Then</strong> el sistema actualiza la cita de forma auditable<br><strong>And</strong> aplica únicamente las reglas de pago o reprogramación que correspondan</td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Atención completada</strong><br><strong>Given</strong> que la cita fue confirmada tras el pago y se encuentra dentro de la ventana de acceso<br><strong>When</strong> el psicólogo autorizado ingresa, realiza la sesión y la cierra<br><strong>Then</strong> Care Scheduling registra el inicio, la finalización y el estado completado<br><strong>And</strong> notifica a Clinician Directory que la cita puede ser reseñada sin publicar información clínica<br><br><strong>Scenario 2: Cita no realizada</strong><br><strong>Given</strong> que la consulta no pudo realizarse por cancelación o inasistencia<br><strong>When</strong> el psicólogo registra el resultado operativo<br><strong>Then</strong> Care Scheduling actualiza la cita de forma auditable sin marcarla como completada<br><strong>And</strong> comunica a Payments &amp; Payouts solo los datos necesarios para aplicar la política de devolución definida</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
@@ -868,24 +819,93 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
 <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
-<tr><td style="text-align:center">US-047</td><td style="text-align:center">Especialista</td><td style="text-align:center">Media</td><td style="text-align:center">EP-04</td></tr>
+<tr><td style="text-align:center">US-047</td><td style="text-align:center">Psicólogo</td><td style="text-align:center">Media</td><td style="text-align:center">EP-07</td></tr>
 <tr><td><strong>Title</strong></td><td colspan="3">Consulta de pagos e ingresos profesionales</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
-<tr><td colspan="4"><strong>Como</strong> especialista verificado,<br><strong>Quiero</strong> consultar los pagos de mis sesiones, las comisiones aplicadas y los montos pendientes,<br><strong>Para</strong> llevar un control transparente de mis ingresos.</td></tr>
+<tr><td colspan="4"><strong>Como</strong> psicólogo verificado,<br><strong>Quiero</strong> consultar el saldo disponible, los pagos de sesiones, las comisiones y los retiros pendientes,<br><strong>Para</strong> controlar mis ingresos antes de solicitar un retiro.</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Pago liquidado visible</strong><br><strong>Given</strong> que una sesión completada tiene un pago aprobado<br><strong>When</strong> el especialista abre el detalle financiero<br><strong>Then</strong> el sistema muestra el importe bruto, la comisión, el importe neto y el estado de liquidación<br><strong>And</strong> vincula el movimiento con la cita correspondiente sin mostrar datos de pago sensibles<br><br><strong>Scenario 2: Pago pendiente o reembolsado</strong><br><strong>Given</strong> que una transacción todavía está pendiente o fue reembolsada<br><strong>When</strong> el especialista consulta sus ingresos<br><strong>Then</strong> el sistema muestra el estado actualizado y el monto afectado<br><strong>And</strong> evita contabilizarlo como ingreso disponible hasta que corresponda</td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Balance y movimientos visibles</strong><br><strong>Given</strong> que existen pagos de sesiones y comisiones registradas<br><strong>When</strong> el psicólogo abre Payments &amp; Payouts<br><strong>Then</strong> el sistema muestra importes brutos, comisiones, netos, saldo disponible y retiros en proceso<br><strong>And</strong> relaciona cada ingreso con su cita sin mostrar datos financieros sensibles del paciente<br><br><strong>Scenario 2: Importe no disponible</strong><br><strong>Given</strong> que un cobro está pendiente, reembolsado o ya comprometido para retiro<br><strong>When</strong> se calcula el balance<br><strong>Then</strong> el sistema excluye ese importe del saldo retirable<br><strong>And</strong> nunca incorpora ingresos de suscripciones Premium de pacientes al balance del psicólogo</td></tr>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
+<tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+<tr><td style="text-align:center">US-048</td><td style="text-align:center">Paciente</td><td style="text-align:center">Alta</td><td style="text-align:center">EP-06</td></tr>
+<tr><td><strong>Title</strong></td><td colspan="3">Solicitud de contacto y chat de coordinación</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
+<tr><td colspan="4"><strong>Como</strong> paciente que encontró una ficha profesional verificada,<br><strong>Quiero</strong> solicitar contacto y conversar de forma privada con el psicólogo,<br><strong>Para</strong> acordar una posible fecha sin crear ni pagar una cita prematuramente.</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Contacto y coordinación</strong><br><strong>Given</strong> que Clinician Directory muestra una ficha publicada y verificada<br><strong>When</strong> el paciente solicita contacto y envía un mensaje<br><strong>Then</strong> Care Scheduling abre una solicitud y un chat accesible solo a ambos participantes<br><strong>And</strong> no crea una cita, un cargo ni acceso al diario del paciente<br><br><strong>Scenario 2: Ficha no elegible o solicitud duplicada</strong><br><strong>Given</strong> que la ficha ya no está verificada o existe una solicitud abierta equivalente<br><strong>When</strong> el paciente intenta contactar de nuevo<br><strong>Then</strong> el sistema impide contactar una ficha no elegible o reutiliza la conversación vigente<br><strong>And</strong> explica el estado sin duplicar solicitudes</td></tr>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
+<tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+<tr><td style="text-align:center">US-049</td><td style="text-align:center">Paciente</td><td style="text-align:center">Alta</td><td style="text-align:center">EP-06</td></tr>
+<tr><td><strong>Title</strong></td><td colspan="3">Aceptación del horario propuesto</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
+<tr><td colspan="4"><strong>Como</strong> paciente que acordó una fecha por chat,<br><strong>Quiero</strong> aceptar expresamente la propuesta del psicólogo,<br><strong>Para</strong> iniciar la retención temporal de ese horario antes de pagar.</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Horario aceptado</strong><br><strong>Given</strong> que el psicólogo envió una propuesta vigente y el horario sigue disponible<br><strong>When</strong> el paciente la acepta<br><strong>Then</strong> Care Scheduling registra el acuerdo e inicia la reserva temporal definida en US-014<br><strong>And</strong> muestra la tarifa acordada, el vencimiento y la indicación de que la cita aún no está confirmada<br><br><strong>Scenario 2: Propuesta vencida o cambiada</strong><br><strong>Given</strong> que la propuesta fue retirada, venció o el horario se ocupó<br><strong>When</strong> el paciente intenta aceptarla<br><strong>Then</strong> el sistema no crea una reserva ni solicita un cobro<br><strong>And</strong> permite continuar la coordinación por chat</td></tr>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
+<tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+<tr><td style="text-align:center">US-050</td><td style="text-align:center">Paciente</td><td style="text-align:center">Media</td><td style="text-align:center">EP-06</td></tr>
+<tr><td><strong>Title</strong></td><td colspan="3">Cancelación de reserva o cita y liberación del horario</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
+<tr><td colspan="4"><strong>Como</strong> paciente con una reserva temporal o cita confirmada,<br><strong>Quiero</strong> cancelar cuando corresponda y conocer el efecto sobre mi pago,<br><strong>Para</strong> liberar el horario y evitar confusiones sobre mi atención.</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Reserva sin pago cancelada o vencida</strong><br><strong>Given</strong> que existe una retención temporal sin pago aprobado<br><strong>When</strong> el paciente cancela o transcurre una hora<br><strong>Then</strong> Care Scheduling libera el horario y marca la reserva cancelada o expirada<br><strong>And</strong> no muestra una cita confirmada ni registra ingresos del psicólogo<br><br><strong>Scenario 2: Cita pagada cancelada</strong><br><strong>Given</strong> que la cita ya está confirmada y tiene un cobro aprobado<br><strong>When</strong> una parte solicita cancelarla<br><strong>Then</strong> Care Scheduling registra el cambio y libera el horario según la política aplicable<br><strong>And</strong> Payments &amp; Payouts refleja el estado del cobro y la devolución que corresponda a esa cancelación</td></tr>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
+<tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+<tr><td style="text-align:center">US-051</td><td style="text-align:center">Paciente</td><td style="text-align:center">Media</td><td style="text-align:center">EP-07</td></tr>
+<tr><td><strong>Title</strong></td><td colspan="3">Suscripción al plan Premium</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
+<tr><td colspan="4"><strong>Como</strong> paciente con plan Básico,<br><strong>Quiero</strong> consultar el precio vigente y contratar Premium dentro de la aplicación,<br><strong>Para</strong> acceder a los beneficios del plan después de un pago aprobado.</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Suscripción aprobada</strong><br><strong>Given</strong> que el paciente eligió Premium y aceptó su precio y condiciones vigentes<br><strong>When</strong> la pasarela confirma el pago de la suscripción<br><strong>Then</strong> Payments &amp; Payouts activa Premium una sola vez y emite un comprobante<br><strong>And</strong> publica el estado del plan a Profiles y AssistantAI sin crear una cita ni ingreso retirable del psicólogo<br><br><strong>Scenario 2: Pago fallido o pendiente</strong><br><strong>Given</strong> que el paciente inició el cambio de plan<br><strong>When</strong> el pago falla, queda pendiente o se recibe una notificación duplicada<br><strong>Then</strong> el sistema conserva el plan anterior hasta confirmar el cobro y evita cargos duplicados<br><strong>And</strong> mantiene disponibles las funciones gratuitas y los recursos de crisis</td></tr>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
+<tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+<tr><td style="text-align:center">US-052</td><td style="text-align:center">Psicólogo verificado</td><td style="text-align:center">Media</td><td style="text-align:center">EP-07</td></tr>
+<tr><td><strong>Title</strong></td><td colspan="3">Registro del método de retiro</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
+<tr><td colspan="4"><strong>Como</strong> psicólogo verificado,<br><strong>Quiero</strong> registrar o actualizar mi método de retiro,<br><strong>Para</strong> recibir mis ingresos profesionales en una cuenta autorizada.</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Método válido registrado</strong><br><strong>Given</strong> que el psicólogo tiene una sesión autenticada y aporta los datos requeridos por la pasarela de retiro<br><strong>When</strong> confirma el método<br><strong>Then</strong> Payments &amp; Payouts conserva únicamente una referencia segura y los datos enmascarados necesarios para mostrarlo<br><strong>And</strong> permite seleccionarlo para futuros retiros tras las validaciones de la pasarela<br><br><strong>Scenario 2: Método inválido</strong><br><strong>Given</strong> que el método está incompleto o la pasarela lo rechaza<br><strong>When</strong> el psicólogo intenta guardarlo<br><strong>Then</strong> el sistema no lo habilita para retiros<br><strong>And</strong> comunica el error sin exponer datos bancarios completos</td></tr>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
+<tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+<tr><td style="text-align:center">US-053</td><td style="text-align:center">Psicólogo verificado</td><td style="text-align:center">Media</td><td style="text-align:center">EP-07</td></tr>
+<tr><td><strong>Title</strong></td><td colspan="3">Solicitud y seguimiento de retiro</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
+<tr><td colspan="4"><strong>Como</strong> psicólogo con saldo disponible,<br><strong>Quiero</strong> solicitar un retiro y consultar su resultado,<br><strong>Para</strong> transferir mis ingresos sin exceder el balance retirable.</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Retiro solicitado y completado</strong><br><strong>Given</strong> que existe un método válido y el importe solicitado no supera el saldo disponible<br><strong>When</strong> el psicólogo confirma el retiro y la pasarela confirma su ejecución<br><strong>Then</strong> Payments &amp; Payouts registra primero la solicitud y después el resultado completado<br><strong>And</strong> descuenta el importe una sola vez y muestra el movimiento en el balance<br><br><strong>Scenario 2: Retiro rechazado o saldo insuficiente</strong><br><strong>Given</strong> que no hay saldo suficiente o la pasarela rechaza el retiro<br><strong>When</strong> se procesa la solicitud o su resultado<br><strong>Then</strong> el sistema impide un saldo negativo y registra el estado rechazado cuando corresponda<br><strong>And</strong> libera cualquier importe retenido sin duplicar movimientos</td></tr>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
+<tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+<tr><td style="text-align:center">US-054</td><td style="text-align:center">Administrador de verificación</td><td style="text-align:center">Alta</td><td style="text-align:center">EP-04</td></tr>
+<tr><td><strong>Title</strong></td><td colspan="3">Revisión de credenciales del psicólogo</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
+<tr><td colspan="4"><strong>Como</strong> administrador autorizado,<br><strong>Quiero</strong> revisar las credenciales presentadas por un psicólogo,<br><strong>Para</strong> aprobar o rechazar su verificación antes de publicar su ficha.</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Credenciales aprobadas</strong><br><strong>Given</strong> que existe una solicitud pendiente con documentos accesibles solo al personal autorizado<br><strong>When</strong> el administrador valida las credenciales y aprueba la solicitud<br><strong>Then</strong> Clinician Directory registra el resultado, el revisor y la fecha, y marca al psicólogo como verificado<br><strong>And</strong> habilita la publicación de su ficha sin publicar los documentos<br><br><strong>Scenario 2: Credenciales rechazadas</strong><br><strong>Given</strong> que la solicitud tiene documentos inválidos o incompletos<br><strong>When</strong> el administrador la rechaza con un motivo<br><strong>Then</strong> Clinician Directory mantiene la ficha fuera del directorio y notifica la corrección necesaria<br><strong>And</strong> conserva una traza auditable sin exponer documentación privada</td></tr>
 </table>
 
 **Technical Stories**
 
 | Story ID | Título | Descripción | Criterios de aceptación | Relacionado con Epic ID |
 | --- | --- | --- | --- | --- |
-| TS-001 | Arquitectura modular y contratos de API | **Como** equipo de desarrollo,<br>**Quiero** organizar el backend por módulos de dominio y documentar sus contratos mediante OpenAPI,<br>**Para** evolucionar las capacidades de SafeDiary sin acoplar datos sensibles ni romper las integraciones móviles. | **Scenario 1: Límites modulares validados**<br>**Given** que existen módulos para identidad y consentimiento, diario, análisis de IA, comunidad, especialistas, citas, pagos, confianza y auditoría<br>**When** se ejecutan las validaciones de arquitectura y los contratos de API<br>**Then** cada módulo accede a otros contextos únicamente mediante interfaces declaradas<br>**And** la documentación expone rutas, esquemas, códigos de respuesta y versiones compatibles<br><br>**Scenario 2: Cambio incompatible**<br>**Given** que una modificación altera un contrato publicado<br>**When** la integración continua compara la nueva especificación con la versión vigente<br>**Then** el proceso de validación falla<br>**And** exige versionar el contrato o mantener compatibilidad | EP-01 |
+| TS-001 | Arquitectura modular y contratos de API | **Como** equipo de desarrollo,<br>**Quiero** organizar el backend por módulos de dominio y documentar sus contratos mediante OpenAPI,<br>**Para** evolucionar las capacidades de SafeDiary sin acoplar datos sensibles ni romper las integraciones móviles. | **Scenario 1: Límites modulares validados**<br>**Given** que existen módulos para identidad y consentimiento, diario, análisis de IA, especialistas, citas, pagos, confianza y auditoría<br>**When** se ejecutan las validaciones de arquitectura y los contratos de API<br>**Then** cada módulo accede a otros contextos únicamente mediante interfaces declaradas<br>**And** la documentación expone rutas, esquemas, códigos de respuesta y versiones compatibles<br><br>**Scenario 2: Cambio incompatible**<br>**Given** que una modificación altera un contrato publicado<br>**When** la integración continua compara la nueva especificación con la versión vigente<br>**Then** el proceso de validación falla<br>**And** exige versionar el contrato o mantener compatibilidad | EP-01 |
 | TS-002 | Cifrado y gestión segura de secretos | **Como** equipo de seguridad,<br>**Quiero** cifrar la información emocional en tránsito y en reposo y mantener las credenciales fuera del código,<br>**Para** reducir el riesgo de exposición de datos sensibles. | **Scenario 1: Protección de datos sensibles**<br>**Given** que una entrada de diario, audio, transcripción o permiso se almacena o transmite<br>**When** la plataforma procesa la información<br>**Then** utiliza canales cifrados y almacenamiento con claves administradas de forma segura<br>**And** evita registrar contenido emocional, tokens o secretos en logs<br><br>**Scenario 2: Secreto ausente o inválido**<br>**Given** que un servicio no puede recuperar una credencial requerida<br>**When** intenta iniciar o consumir una integración protegida<br>**Then** el servicio rechaza la operación de forma segura<br>**And** genera una alerta técnica sin revelar el valor del secreto | EP-01 |
 | TS-003 | Pipeline privado de voz y análisis de IA | **Como** equipo de desarrollo,<br>**Quiero** implementar un pipeline trazable para cargar, transcribir y analizar entradas de voz,<br>**Para** producir reflexiones no diagnósticas sin perder el control sobre el audio y sus resultados. | **Scenario 1: Procesamiento trazable**<br>**Given** que el usuario envía una nota de voz válida<br>**When** el pipeline completa la carga, transcripción y análisis<br>**Then** registra el estado de procesamiento, la versión del modelo, las señales obtenidas y su nivel de confianza<br>**And** vincula el resultado únicamente con la entrada y el propietario autorizados<br><br>**Scenario 2: Procesamiento fallido**<br>**Given** que la transcripción o el análisis no puede completarse<br>**When** el servicio alcanza un error recuperable o definitivo<br>**Then** conserva un estado retryable o failed sin inventar resultados<br>**And** permite reintentar o continuar mediante texto | EP-02 |
-| TS-004 | Infraestructura de audio anónimo en tiempo real | **Como** equipo de desarrollo,<br>**Quiero** habilitar comunicación de audio en tiempo real con identidades comunitarias separadas,<br>**Para** soportar salas anónimas sin exponer la identidad clínica ni conservar audio por defecto. | **Scenario 1: Conexión anónima segura**<br>**Given** que un usuario autorizado se une a una sala con capacidad disponible<br>**When** se establece la sesión de audio<br>**Then** la infraestructura utiliza su alias comunitario y activa el micrófono silenciado por defecto<br>**And** no entrega al resto de participantes identificadores clínicos o personales<br><br>**Scenario 2: Finalización de la sala**<br>**Given** que una sala termina o un participante se retira<br>**When** se cierra su conexión en tiempo real<br>**Then** el sistema libera los recursos de sesión<br>**And** no almacena el audio crudo salvo que exista una política y un consentimiento independiente | EP-03 |
-| TS-005 | Servicios de moderación y escalamiento seguro | **Como** equipo de confianza y seguridad,<br>**Quiero** centralizar reportes, bloqueos, acciones de moderación y recursos locales de crisis,<br>**Para** responder a incidentes de forma trazable sin prometer monitoreo permanente. | **Scenario 1: Incidente comunitario registrado**<br>**Given** que un usuario reporta o bloquea a otro participante<br>**When** el servicio valida la solicitud<br>**Then** aplica la restricción correspondiente y crea un evento auditable para moderación<br>**And** protege la identidad del denunciante frente a la comunidad<br><br>**Scenario 2: Señal de posible peligro inmediato**<br>**Given** que el análisis detecta una señal configurada de alto riesgo<br>**When** solicita los recursos asociados a la ubicación del usuario<br>**Then** devuelve opciones vigentes de ayuda humana y emergencia<br>**And** no realiza contactos automáticos ni afirma que SafeDiary garantiza la seguridad | EP-03 |
-| TS-006 | Orquestación idempotente de citas y pagos | **Como** equipo de desarrollo,<br>**Quiero** coordinar la reserva de horarios, los pagos y la creación de videollamadas mediante operaciones idempotentes,<br>**Para** evitar citas duplicadas, cobros repetidos y accesos inconsistentes. | **Scenario 1: Reserva y pago confirmados**<br>**Given** que existe un horario libre y la pasarela aprueba una transacción válida<br>**When** el sistema procesa la confirmación<br>**Then** registra una sola cita y un solo pago asociados<br>**And** genera el acceso a la videollamada únicamente para sus participantes autorizados<br><br>**Scenario 2: Reintento o fallo parcial**<br>**Given** que se repite un callback o falla una etapa del proceso<br>**When** la orquestación recibe nuevamente la misma clave de idempotencia<br>**Then** no duplica el cargo ni la reserva<br>**And** mantiene un estado recuperable y auditable para completar o compensar la operación | EP-04 |
+| TS-005 | Recursos de crisis y escalamiento seguro | **Como** equipo de seguridad,<br>**Quiero** mantener recursos locales de ayuda humana y emergencia para señales de alto riesgo,<br>**Para** orientar al usuario sin prometer monitoreo permanente. | **Scenario 1: Señal de riesgo**<br>**Given** que AssistantAI detecta una señal configurada de peligro inmediato<br>**When** solicita recursos para la ubicación del usuario<br>**Then** devuelve opciones de ayuda humana vigentes<br>**And** no realiza contactos automáticos ni afirma que SafeDiary garantiza la seguridad | EP-02 |
+| TS-006 | Orquestación idempotente de reservas y cobros | **Como** equipo de desarrollo,<br>**Quiero** integrar Care Scheduling y Payments &amp; Payouts mediante identificadores de reserva y operaciones idempotentes,<br>**Para** evitar citas o cargos duplicados y resolver pagos aprobados después de vencer una retención. | **Scenario 1: Cobro dentro de la retención**<br>**Given** que el horario acordado está retenido por una hora y la pasarela confirma un pago válido antes de su vencimiento<br>**When** Care Scheduling recibe el resultado verificado<br>**Then** confirma una sola cita vinculada a un solo cobro<br>**And** habilita el acceso programado únicamente para sus participantes<br><br>**Scenario 2: Reintento o aprobación tardía**<br>**Given** que se repite una notificación, ocurre un fallo parcial o la retención ya expiró<br>**When** los contextos concilian el resultado<br>**Then** no duplican cargos ni reservas ni confirman una cita sobre un horario liberado<br>**And** registran un estado auditable y gestionan la devolución si hubo cobro tardío | EP-06 / EP-07 |
 | TS-007 | Auditoría de accesos y consentimientos | **Como** responsable de privacidad,<br>**Quiero** registrar los accesos a información sensible y los cambios de consentimiento,<br>**Para** demostrar quién consultó qué datos, con qué autorización y durante qué periodo. | **Scenario 1: Acceso autorizado registrado**<br>**Given** que un usuario comparte entradas específicas con un especialista verificado<br>**When** el especialista consulta la información autorizada<br>**Then** el sistema registra actor, alcance, fecha, propósito y referencia del consentimiento<br>**And** evita incluir el contenido emocional completo en el evento de auditoría<br><br>**Scenario 2: Consentimiento revocado**<br>**Given** que el usuario revoca un permiso vigente<br>**When** el especialista intenta acceder nuevamente<br>**Then** el sistema deniega la consulta de inmediato<br>**And** conserva la revocación y el intento denegado en el historial auditable | EP-01 |
 | TS-008 | Despliegue, observabilidad y recuperación segura | **Como** equipo de operaciones,<br>**Quiero** automatizar pruebas y despliegues, supervisar la salud de los servicios y verificar respaldos restaurables,<br>**Para** mantener SafeDiary disponible sin comprometer la confidencialidad de sus usuarios. | **Scenario 1: Entrega continua validada**<br>**Given** que se propone un cambio en el repositorio<br>**When** la integración continua ejecuta pruebas, análisis de seguridad y validaciones de contratos<br>**Then** solo permite desplegar una versión que supera los controles definidos<br>**And** conserva una estrategia de reversión hacia la última versión estable<br><br>**Scenario 2: Recuperación ante una falla**<br>**Given** que un servicio crítico deja de responder o se requiere restaurar información<br>**When** se activa el procedimiento de recuperación<br>**Then** las alertas utilizan métricas y metadatos sin contenido emocional sensible<br>**And** el respaldo cifrado puede restaurarse dentro de los objetivos operativos definidos | EP-01 |
 
@@ -897,7 +917,7 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 
 *Figura: Impact Map de María*
 
-<img src="../assets/images/chap2/impact_mapping/impact_map_maria.png" alt="Impact Map de María" style="width: 100%;">
+![Impact Map de María](../assets/images/chap2/impact_mapping/impact_map_maria.png)
 
 #### Impact Map 2: Dra. Laura Gómez
 
@@ -912,65 +932,74 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 
 El Product Backlog reúne y prioriza las historias de usuario (US) y las historias técnicas (TS) definidas en la sección 2.4.1, ordenándolas según el valor que aportan al negocio y la complejidad técnica que implica su desarrollo. La priorización combina dos criterios:
 
-* **Valor de negocio por Épica:** siguiendo el Business Problem Statement y el Lean UX Canvas del Capítulo I, EP-01 (cuenta, seguridad, privacidad y consentimiento) y EP-02 (diario emocional, IA e insights) constituyen la base de la propuesta de valor y se priorizan primero, ya que sin identidad segura ni registro emocional no existe producto que ofrecer. EP-04 (atención profesional, citas, pagos y confianza) sigue en prioridad porque sostiene el modelo de ingresos descrito en la sección 2.1 (freemium, comisión por cita y convenios institucionales). EP-03 (comunidad segura y ayuda inmediata) se ubica como complemento de seguridad y contención. EP-05 (landing page) se distribuye en distintos momentos por tratarse de contenido de adquisición de menor complejidad técnica.
-* **Estimación de esfuerzo:** cada historia fue estimada mediante Planning Poker utilizando la escala de Fibonacci (1, 2, 3, 5, 8 puntos), reflejando la complejidad técnica, el riesgo y las dependencias identificadas en las historias técnicas (TS) asociadas.
+* **Valor de negocio por Épica:** EP-01 (identidad y privacidad) y EP-02 (diario, IA y autocuidado) constituyen la base del producto. EP-04 (directorio verificado), EP-06 (contacto, agenda y sesiones) y EP-07 (cobros, Premium y retiros) forman el recorrido de atención profesional y monetización. EP-05 (landing page) apoya la adquisición.
+* **Estimación de esfuerzo:** los Story Points siguen la escala de Fibonacci (1, 2, 3, 5, 8) y reflejan complejidad, riesgo y dependencias.
 
-El orden resultante del backlog agrupa primero los elementos de mayor puntaje —correspondientes a la infraestructura crítica de seguridad, IA, pagos y tiempo real— y distribuye el resto según su aporte al MVP. Esta priorización alimenta directamente la planificación de los tres sprints que se detallarán en el Capítulo IV.
+El orden de la tabla sigue las dependencias de registro, directorio, contacto, propuesta, reserva, pago y sesión.
 
 Enlace de trello: https://trello.com/invite/b/6aad90c13f858f04fc63f833/ATTI8fd9a76bec0c79fa8a7f8195257de3fcD372B969/product-backlog 
 
 **Tabla 2. Product Backlog de SafeDiary**
 
-| #Orden | Story ID | Título | Story Points (1/2/3/5/8) | Sprint |
-| --- | --- | --- | --- | --- |
-| 1 | TS-001 | Arquitectura modular y contratos de API | 8 | 1 |
-| 2 | TS-002 | Cifrado y gestión segura de secretos | 8 | 1 |
-| 3 | TS-003 | Pipeline privado de voz y análisis de IA | 8 | 1 |
-| 4 | US-011 | Reflexión guiada por voz con IA | 8 | 1 |
-| 5 | TS-004 | Infraestructura de audio anónimo en tiempo real | 8 | 2 |
-| 6 | TS-006 | Orquestación idempotente de citas y pagos | 8 | 2 |
-| 7 | US-037 | Pago seguro de una sesión | 8 | 2 |
-| 8 | US-040 | Escalamiento seguro ante señales de crisis | 8 | 2 |
-| 9 | US-002 | Exploración del directorio de especialistas | 5 | 2 |
-| 10 | US-009 | Consentimiento para compartir historial | 5 | 2 |
-| 11 | US-013 | Acceso inmediato a ayuda de crisis | 5 | 2 |
-| 12 | US-014 | Reserva de videollamada profesional | 5 | 2 |
-| 13 | US-036 | Gestión del perfil profesional y disponibilidad | 5 | 2 |
-| 14 | US-038 | Acceso a la videollamada programada | 5 | 2 |
-| 15 | US-039 | Calificación del especialista | 5 | 2 |
-| 16 | TS-005 | Servicios de moderación y escalamiento seguro | 5 | 3 |
-| 17 | TS-007 | Auditoría de accesos y consentimientos | 5 | 3 |
-| 18 | TS-008 | Despliegue, observabilidad y recuperación segura | 5 | 3 |
-| 19 | US-012 | Consulta de estadísticas emocionales | 5 | 3 |
-| 20 | US-023 | Revocación del acceso al historial | 5 | 3 |
-| 21 | US-025 | Protección de entradas en bóveda privada | 5 | 3 |
-| 22 | US-033 | Eliminación de cuenta y datos personales | 5 | 3 |
-| 23 | US-001 | Registro de cuenta | 3 | 1 |
-| 24 | US-003 | Acceso con Google o Apple | 3 | 1 |
-| 25 | US-008 | Registro de entrada de diario | 3 | 1 |
-| 26 | US-010 | Registro rápido del estado emocional | 3 | 1 |
-| 27 | US-015 | Desbloqueo biométrico | 3 | 1 |
-| 28 | US-016 | Recuperación de contraseña | 3 | 1 |
-| 29 | US-004 | Creación de sala de voz | 3 | 2 |
-| 30 | US-005 | Participación en sala de voz | 3 | 2 |
-| 31 | US-034 | Reporte y bloqueo en la comunidad | 3 | 2 |
-| 32 | US-035 | Moderación de salas de voz | 3 | 2 |
-| 33 | US-024 | Recordatorios de registro emocional | 3 | 3 |
-| 34 | US-027 | Seguimiento emocional proactivo | 3 | 3 |
-| 35 | US-028 | Exportación del progreso en PDF | 3 | 3 |
-| 36 | US-031 | Registro de factores externos | 3 | 3 |
-| 37 | US-006 | Edición del perfil personal | 2 | 1 |
-| 38 | US-021 | Preguntas frecuentes y contacto | 2 | 2 |
-| 39 | US-022 | Presentación de MindCluster | 2 | 2 |
-| 40 | US-007 | Gestión de rutinas de autocuidado | 2 | 3 |
-| 41 | US-026 | Personalización del tono de la IA | 2 | 3 |
-| 42 | US-029 | Insignias por constancia emocional | 2 | 3 |
-| 43 | US-030 | Ejercicios rápidos de regulación | 2 | 3 |
-| 44 | US-032 | Recuerdos de evolución emocional | 2 | 3 |
-| 45 | US-017 | Presentación de la propuesta de valor | 1 | 1 |
-| 46 | US-018 | Presentación de funcionalidades principales | 1 | 1 |
-| 47 | US-019 | Consulta de testimonios | 1 | 1 |
-| 48 | US-020 | Consulta de planes y precios | 1 | 1 |
+| #Orden | Story ID | Épica | Título | Story Points | Sprint |
+| --- | --- | --- | --- | --- | --- |
+| 1 | TS-001 | EP-01 | Arquitectura modular y contratos de API | 8 | 1 |
+| 2 | TS-002 | EP-01 | Cifrado y gestión segura de secretos | 8 | 1 |
+| 3 | US-001 | EP-01 | Registro de cuenta | 3 | 1 |
+| 4 | US-003 | EP-01 | Acceso con Google o Apple | 3 | 1 |
+| 5 | US-006 | EP-01 | Edición del perfil personal | 2 | 1 |
+| 6 | US-015 | EP-01 | Desbloqueo biométrico | 3 | 1 |
+| 7 | US-016 | EP-01 | Recuperación de contraseña | 3 | 1 |
+| 8 | US-008 | EP-02 | Registro de entrada de diario | 3 | 1 |
+| 9 | US-010 | EP-02 | Registro rápido del estado emocional | 3 | 1 |
+| 10 | TS-003 | EP-02 | Pipeline privado de voz y análisis de IA | 8 | 1 |
+| 11 | US-011 | EP-02 | Reflexión guiada por voz con IA | 8 | 1 |
+| 12 | US-017 | EP-05 | Presentación de la propuesta de valor | 1 | 1 |
+| 13 | US-018 | EP-05 | Presentación de funcionalidades principales | 1 | 1 |
+| 14 | US-019 | EP-05 | Consulta de testimonios | 1 | 1 |
+| 15 | US-020 | EP-05 | Consulta de planes y precios | 1 | 1 |
+| 16 | US-041 | EP-04 | Solicitud de verificación profesional | 5 | 2 |
+| 17 | US-054 | EP-04 | Revisión de credenciales del psicólogo | 5 | 2 |
+| 18 | US-036 | EP-04 | Publicación y edición de la ficha profesional | 5 | 2 |
+| 19 | US-002 | EP-04 | Búsqueda y consulta de psicólogos verificados | 5 | 2 |
+| 20 | US-048 | EP-06 | Solicitud de contacto y chat de coordinación | 8 | 2 |
+| 21 | US-043 | EP-06 | Gestión de solicitudes y agenda profesional | 5 | 2 |
+| 22 | US-049 | EP-06 | Aceptación del horario propuesto | 3 | 2 |
+| 23 | US-014 | EP-06 | Reserva temporal del horario acordado | 5 | 2 |
+| 24 | TS-006 | EP-06 / EP-07 | Orquestación idempotente de reservas y cobros | 8 | 2 |
+| 25 | US-037 | EP-07 | Pago seguro de una sesión | 8 | 2 |
+| 26 | TS-007 | EP-01 | Auditoría de accesos y consentimientos | 5 | 2 |
+| 27 | US-009 | EP-01 | Consentimiento para compartir historial | 5 | 2 |
+| 28 | US-023 | EP-01 | Revocación del acceso al historial | 5 | 2 |
+| 29 | TS-005 | EP-02 | Recursos de crisis y escalamiento seguro | 5 | 2 |
+| 30 | US-040 | EP-02 | Escalamiento seguro ante señales de crisis | 8 | 2 |
+| 31 | US-013 | EP-02 | Acceso inmediato a ayuda de crisis | 5 | 2 |
+| 32 | US-021 | EP-05 | Preguntas frecuentes y contacto | 2 | 2 |
+| 33 | US-022 | EP-05 | Presentación de MindCluster | 2 | 2 |
+| 34 | US-038 | EP-06 | Acceso a la videollamada programada | 5 | 3 |
+| 35 | US-044 | EP-06 | Gestión de la atención profesional | 5 | 3 |
+| 36 | US-039 | EP-04 | Calificación del especialista | 5 | 3 |
+| 37 | US-042 | EP-04 | Transparencia del puntaje de confianza | 3 | 3 |
+| 38 | US-045 | EP-01 | Consulta del resumen emocional autorizado | 5 | 3 |
+| 39 | US-046 | EP-01 | Consulta del alcance del consentimiento | 3 | 3 |
+| 40 | US-050 | EP-06 | Cancelación de reserva o cita y liberación del horario | 5 | 3 |
+| 41 | US-047 | EP-07 | Consulta de pagos e ingresos profesionales | 3 | 3 |
+| 42 | US-052 | EP-07 | Registro del método de retiro | 3 | 3 |
+| 43 | US-053 | EP-07 | Solicitud y seguimiento de retiro | 5 | 3 |
+| 44 | US-051 | EP-07 | Suscripción al plan Premium | 5 | 3 |
+| 45 | TS-008 | EP-01 | Despliegue, observabilidad y recuperación segura | 5 | 3 |
+| 46 | US-012 | EP-02 | Consulta de estadísticas emocionales | 5 | 3 |
+| 47 | US-025 | EP-01 | Protección de entradas en bóveda privada | 5 | 3 |
+| 48 | US-033 | EP-01 | Eliminación de cuenta y datos personales | 5 | 3 |
+| 49 | US-024 | EP-02 | Recordatorios de registro emocional | 3 | 3 |
+| 50 | US-027 | EP-02 | Seguimiento emocional proactivo | 3 | 3 |
+| 51 | US-028 | EP-02 | Exportación del progreso en PDF | 3 | 3 |
+| 52 | US-031 | EP-02 | Registro de factores externos | 3 | 3 |
+| 53 | US-007 | EP-02 | Gestión de rutinas de autocuidado | 2 | 3 |
+| 54 | US-026 | EP-02 | Personalización del tono de la IA | 2 | 3 |
+| 55 | US-029 | EP-02 | Insignias por constancia emocional | 2 | 3 |
+| 56 | US-030 | EP-02 | Ejercicios rápidos de regulación | 2 | 3 |
+| 57 | US-032 | EP-02 | Recuerdos de evolución emocional | 2 | 3 |
 
 
 Trelo con el backlog: [Trello SafeDiary](https://trello.com/b/Q2UsNz3t/product-backlog)
@@ -984,7 +1013,7 @@ Trelo con el backlog: [Trello SafeDiary](https://trello.com/b/Q2UsNz3t/product-b
 
 #### 2.5.1.1. Candidate Context Discovery
 
-La Candidate Context Discovery es el proceso colaborativo mediante el cual identificamos y delimitamos las fronteras de los bounded contexts del dominio de SafeDiary. A partir del análisis de la línea de tiempo del Big Picture EventStorming y la identificación de eventos pivote de negocio, se descubrieron los siguientes 7 bounded contexts:
+La Candidate Context Discovery es el proceso colaborativo mediante el cual identificamos las fronteras de los bounded contexts del dominio de SafeDiary. El Big Picture EventStorming y los tableros de fase 1 identifican **ocho contextos**: IAM, Profiles, Diary, AssistantAI, Rutines, Clinician Directory, Care Scheduling y Payments & Payouts. La ficha pública, verificación, reseñas y tarifas profesionales pertenecen a Clinician Directory; la cita y el horario reservado pertenecen a Care Scheduling; el cobro, la suscripción, la comisión y el retiro pertenecen a Payments & Payouts.
 
 ##### IAM (Identity & Access Management)
 
@@ -996,7 +1025,25 @@ Define el límite de seguridad, identidad y gobernanza del consentimiento. El fl
 
 ![Candidate Context - Profiles](../assets/images/chap2/candidate-contexts/candidate-profiles.png)
 
-Delimita la gestión de identidades y presentación de los usuarios dentro de la plataforma. Muestra al Paciente configurando su información de perfil personal y recibiendo automáticamente un alias comunitario anónimo con máscara de voz. Por otro lado, ilustra al Psicólogo solicitando su validación profesional ante registros oficiales y publicando su disponibilidad horaria, marcando como evento clave **Ficha Profesional Publicada en Directorio**.
+Delimita los datos personales y preferencias de presentación de cada usuario dentro de la plataforma. Muestra al paciente configurando su información y preferencias. La verificación de credenciales, la ficha pública, el banner y las tarifas del psicólogo se trasladan a **Clinician Directory**, para evitar dos fuentes de verdad.
+
+##### Clinician Directory
+
+![Candidate Context Discovery, fase 1: Clinician Directory](../assets/images/chap2/candidate-contexts/candidate-clinician-directory.jpg)
+
+Gestiona la solicitud y revisión de credenciales del psicólogo, su ficha profesional pública, el banner y las tarifas; permite buscar y filtrar especialistas, consultar su ficha y publicar reseñas. La solicitud de contacto inicia un flujo de **Care Scheduling**, no una reserva dentro del directorio. La elegibilidad de una reseña debe verificarse contra una sesión completada, sin exponer datos clínicos.
+
+##### Care Scheduling
+
+![Candidate Context Discovery, fase 1: Care Scheduling](../assets/images/chap2/candidate-contexts/candidate-care-scheduling.jpg)
+
+Coordina la solicitud de contacto, la conversación para acordar el horario, la propuesta y aceptación del psicólogo y el paciente, la retención temporal de una hora, la cita, el acceso de sus participantes a la reunión y el cierre de la sesión. Es dueño de la disponibilidad reservable y libera el horario al cancelarse o expirar la reserva. Solo confirma la cita al recibir de **Payments & Payouts** un pago aprobado para esa reserva. El chat de coordinación no concede acceso al diario.
+
+##### Payments & Payouts
+
+![Candidate Context Discovery, fase 1: Payments & Payouts](../assets/images/chap2/candidate-contexts/candidate-payments-payouts.jpg)
+
+Gestiona dos cobros distintos: la sesión profesional y la suscripción de la aplicación (Básico a Premium). Crea intentos de pago idempotentes, registra el resultado confirmado por la pasarela y emite comprobantes. Tras el cobro de una sesión registra el ingreso profesional y la comisión de la plataforma; el psicólogo puede solicitar un retiro sujeto al saldo disponible y a la confirmación de la pasarela de retiro. Una suscripción Premium se activa únicamente después de confirmarse su pago y no aumenta el saldo retirable del psicólogo. El contexto no almacena contenido del diario ni datos completos de tarjetas.
 
 ##### Diary
 
@@ -1009,18 +1056,6 @@ Representa el núcleo transaccional confidencial de SafeDiary. Modela al Pacient
 ![Candidate Context - AssistantAI](../assets/images/chap2/candidate-contexts/candidate-assistantai.png)
 
 Aísla el motor de soporte reflexivo y procesamiento cognitivo 100% en texto asistido por IA. El flujo detalla la interacción dialógica del Paciente con el asistente, la detección de distorsiones de pensamiento y la evaluación preventiva de riesgo. El evento pivotal en este contexto es **Riesgo Crítico Autolítico Detectado**, el cual actúa como detonante automático para activar protocolos de emergencia y derivación inmediata a líneas de crisis.
-
-##### Communities
-
-![Candidate Context - Communities](../assets/images/chap2/candidate-contexts/candidate-communities.png)
-
-Gobierna la experiencia social y comunitaria de apoyo mutuo bajo estricto anonimato. El flujo expone al Participante ingresando a salas de escucha con su alias seudónimo, enviando reacciones empáticas y solicitando turno de palabra. Delimita las reglas de moderación donde el anfitrión aprueba oradores y gestiona incidentes de seguridad, culminando en eventos pivote como **Participante Promovido a Orador** y **Caso de Moderación Abierto**.
-
-##### Rooms
-
-![Candidate Context - Rooms](../assets/images/chap2/candidate-contexts/candidate-rooms.png)
-
-Agrupa la infraestructura y transporte de audio de baja latencia en tiempo real. Modela la negociación y señalización WebRTC para salas efímeras, aplicando el preset de enmascaramiento de voz configurado en el alias del usuario para proteger su privacidad acústica, estableciendo el evento pivotal **Canal de Audio WebRTC Establecido**.
 
 ##### Rutines
 
@@ -1050,220 +1085,182 @@ Muestra el protocolo de contención y seguridad ante emergencias psicológicas. 
 
 Modela el mecanismo de interoperabilidad y gobierno de la privacidad de SafeDiary. El **Paciente** emite el comando **Otorgar Consentimiento a Psicólogo** en **IAM**, definiendo un alcance temporal explícito y generando el evento **ConsentGranted Integration**. Posteriormente, cuando el **Psicólogo Verificado** ejecuta **Consultar Historial Autorizado** en **Diary**, este último valida síncronamente los permisos con **IAM**. Al confirmar la vigencia del contrato, se despacha el evento **AuthorizedEntriesShared Integration**, proporcionando exclusivamente las vivencias aprobadas y garantizando que las notas alojadas en la Bóveda Privada permanezcan estrictamente inaccesibles.
 
+##### Flujo 4: Directorio, reserva, pago y preparación de atención profesional (Clinician Directory ⇄ Care Scheduling ⇄ Payments & Payouts)
+
+![Flujo 4 - Directorio, reserva, pago y cita profesional](../assets/images/chap2/message-flows/flow-4-directory-scheduling-payments.png)
+
+El **Paciente** encuentra un **Psicólogo Verificado** en Clinician Directory y solicita contacto. En Care Scheduling ambas partes acuerdan un horario; el sistema crea una reserva temporal de una hora y solicita a Payments & Payouts el cobro identificado por esa reserva. Solo una aprobación de pago confirmada permite a Care Scheduling emitir **AppointmentConfirmed** y habilitar el acceso temporal de los participantes a la reunión. Si el pago falla o la reserva vence, el horario se libera; reintentos y notificaciones duplicadas no deben generar cargos ni citas dobles. Antes de compartir cualquier resumen emocional, se valida en IAM el consentimiento vigente y se solicita a Diary o AssistantAI únicamente la información autorizada.
+
 #### 2.5.1.3. Bounded Context Canvases
 
 ##### Bounded Context Canvas: AssistantAI
 
 ![assisntant_bcc](../assets/images/chap2/boundedcontexts/assistantai-bcc.png)
 
+AssistantAI procesa la conversación reflexiva, identifica emociones y señales de riesgo, y genera respuestas y resúmenes emocionales. No administra entradas del diario ni concede acceso a información clínica.
+
+##### Bounded Context Canvas: Diary
+
 ![diary-bcc](../assets/images/bounded-context/diary/diary-bcc.png)
 
-![communities-bcc](../assets/images/chap2/boundedcontexts/communities-bcc.png)
+Diary conserva las entradas escritas o de voz, los estados de ánimo y la evolución emocional del paciente. Antes de compartir información con un psicólogo, valida en IAM el consentimiento y su alcance vigente.
 
-![rooms-bcc](../assets/images/chap2/boundedcontexts/rooms-bcc.png)
+##### Bounded Context Canvas: Rutines
 
 ![rutines-bcc](../assets/images/chap2/boundedcontexts/rutines-bcc.png)
 
-En esta imagen represantamos el Bounded Context de Diary, dentro del dominio de SafeDiary. Este Bounded Context es responsable de gestionar las entradas de diario de los usuarios, lo que incluye la creacion, edicion, eliminacion y consulta de las entradas de diario, así como la gestion de los estados emocionales de los usuarios. Ademas permite gestionar el acceso a esta información por parte de otros Bounded Contexts, como el AssistantAI.
+Rutines gestiona las actividades de autocuidado, los ejercicios breves y sus recordatorios. Registra el cumplimiento de hábitos sin acceder al contenido privado del diario.
 
-![rooms-bcc](../assets/images/bounded-context/rooms/rooms-bcc.png)
+##### Bounded Context Canvas: Clinician Directory
 
-![rutines-bcc](../assets/images/bounded-context/rutines/rutines-bcc.png)
+![cliniciandirectory-bcc](../assets/images/chap2/boundedcontexts/cliniciandirectory-bcc.png)
+
+Clinician Directory verifica credenciales y administra las fichas públicas, especialidades, tarifas y reseñas de los psicólogos. Permite buscarlos y consultarlos, pero no reserva citas.
+
+##### Bounded Context Canvas: Care Scheduling
+
+![carescheduling-bcc](../assets/images/chap2/boundedcontexts/carescheduling-bcc.png)
+
+Care Scheduling coordina el contacto, el acuerdo de horario, la reserva temporal y la atención por videollamada. Controla la agenda reservable y confirma la cita únicamente tras recibir el pago aprobado.
+
+##### Bounded Context Canvas: Payments & Payouts
+
+![paymentspayouts-bcc](../assets/images/chap2/boundedcontexts/paymentspayouts-bcc.png)
+
+Payments & Payouts procesa por separado los pagos de citas y suscripciones Premium, emite comprobantes y registra ingresos y comisiones. También administra el saldo y los retiros del psicólogo sin mezclar los ingresos por suscripciones.
 
 ### 2.5.2. Context Mapping
 
-##### Resumen del Proceso
+#### Resumen del Proceso
 
-El Context Mapping evidencia el proceso mediante el cual el equipo revisó la información recolectada en las secciones previas —Ubiquitous Language (2.3.6), User Stories (2.4.1), EventStorming (2.5.1) y el diseño táctico ya construido (2.6)— para producir un conjunto de diseños candidatos de relación entre Bounded Contexts, discutirlos con las preguntas guía recomendadas ("¿qué pasaría si...?") y converger en la mejor aproximación. El análisis parte de los siete contextos ya desarrollados en el diseño táctico: **IAM**, **Profiles**, **AssistantAI**, **Diary**, **Communities**, **Rooms** y **Rutines**; e incorpora dos contextos que ya son referenciados como sistemas externos por el diseño de Profiles y AssistantAI, pero que todavía no se han modelado tácticamente — **Professional Care & Scheduling** (reservas, videollamadas y pagos, EP-04) y **Reviews & Trust** (reseñas y puntaje de confianza) — y que se documentan aquí únicamente como contextos futuros para no dejar relaciones "colgando". El objetivo del análisis fue maximizar la autonomía de cada contexto, proteger su lenguaje ubicuo y, sobre todo, preservar el principio de privacidad que sostiene el Business Problem Statement de SafeDiary: **ningún contexto valida su propio acceso a datos sensibles sin consultar primero a IAM**.
+El Context Mapping reúne la información del Ubiquitous Language (2.3.6), las User Stories (2.4.1), el EventStorming (2.5.1) y los límites de cada Bounded Context Canvas para comparar diseños de integración. El análisis comprende ocho bounded contexts: IAM, Profiles, AssistantAI, Diary, Rutines, Clinician Directory, Care Scheduling y Payments & Payouts. Clinician Directory es dueño de la verificación y la ficha pública; Care Scheduling, del contacto, la agenda reservable y la cita; Payments & Payouts, del cobro, la suscripción y los retiros. El acceso del psicólogo a información emocional depende del consentimiento vigente administrado por IAM.
 
-Como resultado del proceso se elaboraron **dos context maps**: un mapa candidato inicial, más acoplado, que sirvió para hacer explícitos los riesgos de un diseño ingenuo (Shared Kernel + Conformist); y el mapa final aprobado, que aplica los patrones de relación de Domain-Driven Design (Anticorruption Layer, Customer/Supplier, Open Host Service, Published Language, Partnership, Separate Ways) para resolver esos riesgos. Ambos se presentan en la sección "Mapa de Contextos" más abajo.
+Se elaboraron dos mapas: un candidato inicial que concentra responsabilidades y acopla modelos de identidad, y un mapa final que delimita las relaciones mediante Open Host Service, Published Language, Anticorruption Layer, Customer/Supplier, Partnership y Separate Ways.
 
-##### Análisis de Alternativas (Exploración de Diseño)
+#### Análisis de Alternativas (Exploración de Diseño)
 
-Siguiendo la guía recomendada, cada pregunta se respondió sobre una capability real ya identificada en el diseño táctico de SafeDiary, no de forma abstracta:
+1. **¿Qué pasaría si trasladamos la ficha profesional de Clinician Directory a Profiles?** Profiles ya contiene los datos personales y preferencias de presentación, pero la verificación de credenciales, la publicación de tarifas y las reseñas obedecen reglas propias del directorio. **Decisión:** la ficha profesional pública y su estado de verificación permanecen en Clinician Directory; Profiles conserva los datos personales y las preferencias del usuario. Ambos referencian el `accountId` emitido por IAM, sin compartir un modelo de persistencia.
 
-###### 1. ¿Qué pasaría si movemos este capability a otro bounded context? — mover el `CommunityAlias` de Profiles a Communities
+2. **¿Qué pasaría si unificamos la disponibilidad publicada con la reserva de una cita?** La tarifa y la ficha del psicólogo son datos de consulta, mientras que la agenda reservable exige controlar conflictos, expiración y aceptación del horario. **Decisión:** Clinician Directory publica la identidad profesional, la ficha y la tarifa vigente; Care Scheduling es dueño del horario disponible, la retención temporal de una hora y la cita. La reserva guarda el importe acordado para que un cambio posterior de tarifa no modifique su cobro.
 
-* **Análisis:** El alias comunitario (`aliasHandle`, `voiceMaskPreset`) es consumido principalmente por Communities y Rooms, lo que sugiere moverlo a Communities para reducir un salto de contexto. Sin embargo, esto obligaría a Communities a asumir también la generación y rotación de identidades, duplicando una responsabilidad de identidad que ya está centralizada en Profiles junto con el perfil personal y la ficha profesional.
-* **Decisión:** No mover. `CommunityAlias` permanece en Profiles porque agrupa, bajo una sola responsabilidad cohesiva, las distintas "caras" de un mismo `Account` (perfil personal, alias, ficha profesional). Communities y Rooms lo consumen como Published Language (relación D).
+3. **¿Qué pasaría si fusionamos Clinician Directory, Care Scheduling y Payments & Payouts?** La búsqueda y las reseñas, la concurrencia de reservas y la conciliación financiera requieren reglas y ciclos de cambio diferentes. Una sola frontera haría que la publicación de una ficha dependiera de operaciones de agenda o de pasarela. **Decisión:** mantener los tres bounded contexts separados. La solicitud de contacto inicia el flujo de Care Scheduling; la reserva temporal solicita el cobro a Payments & Payouts; únicamente el pago aprobado confirma la cita.
 
-###### 2. ¿Qué pasaría si descomponemos este capability y movemos uno de los sub-capabilities a otro bounded context? — separar "disponibilidad publicada" de "reserva transaccional" dentro de `ClinicianProfile`
+4. **¿Qué pasaría si movemos el cobro de la cita a Care Scheduling?** El agendamiento conocería intentos de pago, comprobantes, comisiones y retiros, además de sus propias reglas de disponibilidad. **Decisión:** Payments & Payouts es dueño de los intentos idempotentes y del resultado de la pasarela. Care Scheduling solo conserva la referencia de la reserva y el estado necesario para confirmar o liberar el horario. El cobro Premium constituye otra operación y no confirma citas ni incrementa el saldo retirable del psicólogo.
 
-* **Análisis:** `ClinicianProfile` (Profiles) incluye hoy tanto la publicación declarativa de horarios (`AvailabilityWindow`, bajo cambio, mayormente de lectura) como, potencialmente, la reserva transaccional de una cita concreta (alta contención, requiere idempotencia ante reservas simultáneas — TS-006). Mezclar ambas responsabilidades en un mismo contexto forzaría a un modelo de consistencia único para dos necesidades muy distintas.
-* **Decisión:** Descomponer. La publicación de disponibilidad se queda en Profiles (sub-capability de bajo cambio); la reserva, el pago y la videollamada se mueven al futuro contexto **Professional Care & Scheduling**, que solo lee la disponibilidad publicada por Profiles (relación G) sin duplicarla.
+5. **¿Qué pasaría si duplicamos información para reducir dependencias?** Una copia local del consentimiento en Diary o Care Scheduling permitiría lecturas posteriores a una revocación. En cambio, una proyección del estado Básico/Premium en Profiles o AssistantAI puede actualizarse por evento, pues el pago y la vigencia siguen siendo propiedad de Payments & Payouts. **Decisión:** no duplicar el consentimiento como fuente de autorización; validar su vigencia en IAM antes de compartir información sensible. Distribuir el estado de plan solo como proyección de lectura, sin conceder beneficios hasta la confirmación del cobro.
 
-###### 3. ¿Qué pasaría si partimos el bounded context en múltiples bounded contexts?
+6. **¿Qué pasaría si usamos un servicio compartido para las notificaciones?** Rutines envía recordatorios, Care Scheduling informa cambios de cita y AssistantAI presenta avisos vinculados con sus flujos. Replicar la integración de envío en cada contexto duplicaría infraestructura. **Decisión:** utilizar un servicio genérico de notificaciones: cada bounded context decide cuándo emitir su aviso y el servicio únicamente lo entrega. Las decisiones de negocio no pasan al servicio compartido.
 
-* **Caso A — Diary (rechazado):** se evaluó partir Diary en "Diary" (registro) y "Diary Insights" (rachas, insignias, recuerdos retrospectivos). **Análisis:** hoy `DiaryStreak` se recalcula de forma síncrona e idempotente en cada entrada (US-029); partirlo introduciría latencia de sincronización sin un beneficio de escalabilidad independiente demostrado. **Decisión:** no partir; Diary permanece como un único Bounded Context cohesivo.
-* **Caso B — Communities/Rooms (aceptado):** se evaluó la partición inversa, es decir, si convenía **no** partir y mantener un único contexto "Comunidad". **Análisis:** Rooms exige infraestructura de audio en tiempo real de baja latencia (TS-004: WebRTC/SFU, enmascaramiento de voz, escalado por sala activa), mientras que Communities es, en esencia, un catálogo CRUD de salas, categorías y políticas de moderación (US-004, US-034, US-035); fusionarlos forzaría a escalar y desplegar el catálogo administrativo cada vez que crece la demanda de audio en vivo. **Decisión:** mantenerlos partidos en dos Bounded Contexts (relación E).
+7. **¿Qué pasaría si trasladamos la preparación clínica a Care Scheduling?** Ese contexto necesita mostrar al psicólogo un resumen emocional, pero no debe almacenar el diario completo ni asumir el modelo conversacional de AssistantAI. **Decisión:** Diary y AssistantAI conservan sus datos y generan únicamente información autorizada. Care Scheduling consume una vista mínima para la cita después de validar en IAM el consentimiento vigente y utiliza una Anticorruption Layer para traducirla a su propio lenguaje.
 
-###### 4. ¿Qué pasaría si tomamos este capability de estos 3 contexts y lo usamos para formar un nuevo context? — extraer "detección y respuesta a crisis" de AssistantAI, Diary y Rooms
+8. **¿Qué pasaría si creamos un Shared Kernel entre IAM y Profiles?** Ambos utilizan `accountId`, pero IAM administra credenciales, sesiones y consentimiento, mientras Profiles administra datos de presentación. Compartir entidades internas acoplaría cambios de perfil con reglas de seguridad. **Decisión:** rechazar el Shared Kernel. IAM expone identidad y autorización mediante contratos estables; Profiles y los demás contextos solo consumen esos contratos.
 
-* **Análisis:** la capability de seguridad ante riesgo aparece triplicada con distinto vocabulario: `RiskAssessment`/`CrisisProtocolActivated` en AssistantAI, `isSensitive`/acceso a ayuda inmediata en Diary (US-013), y `Report`/`Block`/`ModerationAction` en Communities-Rooms. Consolidarlas en un nuevo contexto **Crisis & Safety** evitaría triplicar la lógica de "qué constituye una señal de riesgo" y centralizaría el catálogo de recursos de emergencia (988/113 Minsa), hoy solo disponible dentro del `CrisisHotlineAdapter` de AssistantAI.
-* **Decisión:** Es una alternativa válida para una iteración futura del producto, pero se descarta para el alcance actual: cada contexto conserva su propia detección local, ya que separarla introduciría una dependencia síncrona crítica (evaluar riesgo) para tres contextos distintos, aumentando el radio de impacto de una sola falla. En su lugar, se centraliza únicamente el catálogo de recursos de emergencia como **shared service** (ver pregunta 6), sin fusionar la lógica de negocio de riesgo.
+#### Patrones de Relación y Mapa de Contextos
 
-###### 5. ¿Qué pasaría si duplicamos una funcionalidad para romper la dependencia?
+Las consultas de identidad y consentimiento son síncronas cuando una decisión de acceso requiere el estado vigente. Los hechos de negocio que no requieren esa validación inmediata se intercambian mediante eventos de integración publicados con contratos explícitos.
 
-* **Caso A — Consentimiento en Diary (rechazado):** se evaluó que Diary mantuviera una copia local cacheada del `Consent` vigente, en lugar de consultar a IAM en cada lectura, para reducir el acoplamiento síncrono. **Análisis:** una revocación (`ConsentRevoked`) no se reflejaría de inmediato, permitiendo que un especialista siga leyendo entradas después de que el paciente revocó el acceso — inaceptable frente al requisito de privacidad no negociable (US-023). **Decisión:** rechazado; se prioriza la consistencia fuerte sobre la disponibilidad para este caso (relación B).
-* **Caso B — Calificación de especialistas en Profiles (aceptado):** Profiles duplica (cachea) el `ratingAverage`/`reviewCount` calculado por el futuro contexto Reviews & Trust en vez de consultarlo en cada búsqueda del directorio. **Análisis:** un retraso de segundos en reflejar una nueva reseña no compromete la privacidad ni la seguridad del paciente, y sí evita una llamada síncrona costosa cada vez que se lista el directorio de especialistas (US-002). **Decisión:** aceptado como read model (relación H).
+**A. IAM (upstream) → Profiles, Clinician Directory, Care Scheduling, Payments & Payouts, AssistantAI y Rutines (downstream).** Patrón: **Open Host Service / Published Language**. IAM publica `accountId`, rol y estado de sesión mediante un contrato de identidad; ningún consumidor accede a credenciales ni reproduce su modelo interno. Clinician Directory verifica las credenciales profesionales como regla propia, distinta de la autenticación de IAM.
 
-###### 6. ¿Qué pasaría si creamos un shared service para reducir la duplicación entre múltiples bounded contexts? — un servicio de Notificaciones
+**B. IAM (upstream) → Diary, AssistantAI y Care Scheduling (downstream).** Patrón: **Open Host Service + Anticorruption Layer** en los consumidores. Ante una consulta de un psicólogo, cada consumidor traduce la respuesta de autorización de IAM a su caso de uso y respeta el alcance y la vigencia del consentimiento. Un evento de revocación puede actualizar proyecciones, pero no sustituye la validación vigente antes de entregar datos sensibles.
 
-* **Análisis:** Diary (recordatorios, US-024), AssistantAI (alertas de crisis), Rooms (avisos de moderación) y Rutines (recordatorios de rutina) necesitan enviar notificaciones push. Sin un servicio compartido, cada contexto implementaría su propio cliente de Firebase Cloud Messaging/Apple APNs, duplicando código de integración y credenciales.
-* **Decisión:** Crear un **shared service** de Notificaciones (subdominio genérico, no un Bounded Context de negocio). Cada contexto sigue siendo dueño de su propia decisión de "cuándo notificar" y publica su propio evento de dominio (`DiaryReminderDue`, `CrisisProtocolActivated`, etc.); el servicio compartido solo traduce esos eventos a push notifications, evitando duplicar la integración con FCM/APNs.
+**C. Diary ↔ AssistantAI.** Patrón: **Partnership / Published Language**. Diary publica la entrada autorizada para análisis y AssistantAI devuelve la reflexión generada. Cada uno conserva su modelo y ambos coordinan la evolución del contrato de integración.
 
-###### 7. ¿Qué pasaría si aislamos los core capabilities y movemos los otros a un context aparte?
+**D. Clinician Directory (upstream) → Care Scheduling (downstream).** Patrón: **Customer/Supplier / Published Language**. El directorio provee identificador del psicólogo, verificación, ficha y tarifa; Care Scheduling consume esos datos para iniciar una solicitud y fijar el importe de la reserva. El directorio no decide si el horario está libre.
 
-* **Análisis:** Diary y AssistantAI concentran la propuesta de valor diferencial de SafeDiary —el puente entre el registro privado y la atención profesional, descrito en el Business Problem Statement del Capítulo I—; IAM, Profiles, Communities, Rooms y Rutines son necesarios pero replicables con soluciones de mercado (auth-as-a-service, CRUD de perfiles, salas de audio genéricas).
-* **Decisión:** Adoptado como principio rector de todo el mapa: **Diary** y **AssistantAI** se clasifican como *Core Domain*; **Communities**, **Rooms** y **Rutines** como *Supporting Subdomain*; **IAM** como *Generic Subdomain* (Open Host Service reutilizable) y **Profiles** como subdominio de soporte que depende de IAM. Esto permite invertir el mayor esfuerzo de ingeniería propio en Diary y AssistantAI.
+**E. Care Scheduling (upstream) → Clinician Directory (downstream).** Patrón: **Published Language**. El evento de sesión completada habilita al directorio para comprobar la elegibilidad de una reseña, limitada a una por cita y paciente. No se publica contenido de la sesión.
 
-###### 8. ¿Qué pasaría si creáramos un Shared Kernel entre IAM y Profiles para el concepto de "identidad de usuario"?
+**F. Care Scheduling ↔ Payments & Payouts.** Patrón: **Customer/Supplier / Published Language** con contratos en ambos sentidos. Care Scheduling envía la referencia, el importe y el vencimiento de la reserva; Payments & Payouts gestiona un único intento de cobro por clave idempotente y publica su resultado. Care Scheduling confirma la cita solo ante un pago aprobado para una reserva vigente; si falla o expira, libera el horario. Un pago tardío se concilia o devuelve sin recrear una cita sobre un horario liberado.
 
-* **Análisis:** Ambos contextos giran en torno al mismo `accountId`, pero con propósitos distintos: IAM protege credenciales, biometría y consentimiento (superficie de alta sensibilidad y cumplimiento normativo); Profiles expone datos de presentación pública (nombre, alias, ficha profesional). Compartir un mismo modelo obligaría a desplegar y versionar ambos contextos de forma acoplada, y ampliaría innecesariamente la superficie de ataque sobre los datos de seguridad.
-* **Decisión:** Rechazado. IAM se mantiene como **Open Host Service**, exponiendo únicamente el `accountId` autenticado y los contratos de validación (`ConsentAuthorizationService`). Profiles —y el resto de contextos— solo referencian ese identificador, sin acceso directo al modelo interno de cuentas.
+**G. Payments & Payouts (upstream) → Profiles y AssistantAI (downstream).** Patrón: **Published Language**. El evento de suscripción confirmada actualiza las proyecciones de plan en ambos consumidores. La pasarela, el comprobante y la vigencia de Premium permanecen en Payments & Payouts; la suscripción no forma parte del flujo de confirmación de citas.
 
-##### Patrones de Relación y Mapa de Contextos
+**H. AssistantAI (upstream) → Care Scheduling (downstream).** Patrón: **Customer/Supplier + Anticorruption Layer**. Care Scheduling consume solo el resumen emocional necesario para la preparación de una atención, después de comprobar el consentimiento con IAM; no recibe la conversación completa ni modifica el modelo de AssistantAI.
 
-SafeDiary adopta una arquitectura orientada a eventos (EDA) para las relaciones asíncronas y contratos HTTP explícitos para las validaciones síncronas de identidad. A continuación se detallan los patrones DDD aplicados entre contextos:
+**I. Diary — Rutines.** Patrón: **Separate Ways**. Los hábitos y ejercicios se administran sin leer ni modificar entradas privadas del diario. Cada contexto mantiene su propio historial y sus reglas.
 
-###### A. IAM (Upstream) -> Profiles, AssistantAI, Communities, Rooms, Rutines (Downstream)
+#### Mapa de Contextos (diagramas)
 
-* **Patrón:** **Open Host Service (OHS) / Published Language (PL)**.
-* **Motivo:** Todos los contextos necesitan un `accountId` autenticado, pero ninguno debe conocer cómo IAM valida credenciales, biometría o proveedores federados. IAM expone un contrato estable (identidad + estado de sesión) que el resto simplemente consume, sin acoplarse a su modelo interno.
-
-###### B. IAM (Upstream) -> Diary (Downstream)
-
-* **Patrón:** **Open Host Service + Anticorruption Layer (ACL) del lado del consumidor**.
-* **Motivo:** Diary necesita algo más específico que la identidad: necesita saber si un especialista concreto puede leer una entrada concreta. Consume el contrato `ConsentAuthorizationService` de IAM a través de `IamConsentClientAdapter`, una capa que traduce la respuesta de IAM al lenguaje propio de Diary sin filtrar su modelo de `Consent` o `SharingPermission` hacia el dominio del diario.
-
-###### C. Diary (Upstream) <-> AssistantAI (Downstream / Upstream)
-
-* **Patrón:** **Partnership vía Published Language**.
-* **Motivo:** La relación es bidireccional y de igual jerarquía: Diary publica `DiaryEntryCreated` para que AssistantAI transcriba y analice; AssistantAI publica `ReflectionGenerated` para que Diary la asocie a la entrada original. Ninguno de los dos puede evolucionar su contrato de eventos sin coordinar con el otro, por lo que se trata como una sociedad (Partnership) y no como un simple Customer-Supplier unidireccional.
-
-###### D. Profiles (Upstream) -> Rooms (Downstream)
-
-* **Patrón:** **Customer-Supplier / Published Language**.
-* **Motivo:** Rooms necesita el `aliasHandle` y el `voiceMaskPreset` del `CommunityAlias` (Profiles) para identificar a los participantes de una sala sin exponer su identidad clínica. Profiles publica estos datos como lenguaje compartido; Rooms los consume en tiempo real al iniciar una sesión de audio.
-
-###### E. Communities (Upstream) -> Rooms (Downstream)
-
-* **Patrón:** **Partnership / Open Host Service**.
-* **Motivo:** Communities define el catálogo de categorías, el listado público de salas y las políticas de moderación (host, oyente, reporte, bloqueo). Rooms hereda esas reglas al abrir una sesión de audio, pero ambos equipos deben coordinar cambios en la política de moderación, ya que Rooms es quien las ejecuta en tiempo real (TS-005).
-
-###### F. AssistantAI (Upstream) -> Professional Care & Scheduling *(futuro)* (Downstream)
-
-* **Patrón:** **Customer-Supplier / Anticorruption Layer**.
-* **Motivo:** El resumen clínico generado por AssistantAI (`ClinicalSummaryGenerated`) es consumido por el contexto de agendamiento profesional para preparar la consulta (US-045). Al no existir aún tácticamente, se documenta como relación planeada; cuando se construya, deberá incorporar una ACL para no acoplar su modelo de citas al modelo conversacional de AssistantAI.
-
-###### G. Profiles (Upstream) -> Professional Care & Scheduling *(futuro)* (Downstream)
-
-* **Patrón:** **Customer-Supplier**.
-* **Motivo:** El agendamiento necesita las `AvailabilityWindow` publicadas y el `verificationStatus` de `ClinicianProfile` para permitir reservar una cita, pero no gestiona ni duplica esa información: siempre la consulta a Profiles (ver el límite explícito documentado en 2.6.2, "Profiles no gestiona la reserva transaccional de una cita").
-
-###### H. Reviews & Trust *(futuro)* (Upstream) -> Profiles (Downstream)
-
-* **Patrón:** **Published Language**.
-* **Motivo:** Profiles no calcula reseñas ni confianza; solo cachea un read model (`ratingAverage`, `reviewCount`) que actualiza al consumir el evento `ClinicianRatingSummaryUpdated` mediante `ReviewsIntegrationEventListener` (ver 2.6.2.4). Esta relación ya está resuelta en el diseño táctico de Profiles.
-
-###### I. Diary (Bounded Context) — Rutines (Bounded Context)
-
-* **Patrón:** **Separate Ways**.
-* **Motivo:** Aunque ambos tocan el autocuidado emocional, Diary ya resuelve su propia gamificación (`DiaryStreak`, sección 2.6.6.1) y Rutines administra actividades independientes de bienestar (US-007). No existe hoy una necesidad de negocio validada que justifique acoplarlos; de surgir en el futuro (p. ej. que completar una rutina cuente como factor externo de una entrada), se abordaría mediante un evento de integración explícito y no mediante acceso directo a datos.
-
-##### Mapa de Contextos (diagrama)
-
-**Candidato inicial (descartado).** Este primer diseño surge de responder ingenuamente a la presión de "simplificar" la integración: fusiona IAM y Profiles mediante un Shared Kernel y hace que el resto de contextos actúen como Conformist del modelo de IAM. Se descarta por las razones expuestas en las preguntas 7 y 8: acopla el despliegue de todos los contextos a los cambios de seguridad de IAM y elimina la autonomía de cada equipo.
+**Candidato inicial (descartado).** Agrupa las funciones profesionales en un solo contexto, comparte el modelo interno de IAM con Profiles y hace que los consumidores adopten directamente su lenguaje de identidad. Esta alternativa mezcla reglas de publicación, reserva y finanzas y amplía el acoplamiento de los datos sensibles.
 
 ```mermaid
-graph LR
-    IAMProfiles["IAM + Profiles<br/>(Shared Kernel)"]
-    Diary0["Diary"]
-    AssistantAI0["AssistantAI"]
-    Communities0["Communities"]
-    Rooms0["Rooms"]
-    Rutines0["Rutines"]
-
-    IAMProfiles -->|"Conformist"| Diary0
-    IAMProfiles -->|"Conformist"| AssistantAI0
-    IAMProfiles -->|"Conformist"| Communities0
-    IAMProfiles -->|"Conformist"| Rooms0
-    IAMProfiles -->|"Conformist"| Rutines0
+flowchart LR
+    IAM0["IAM"] <-->|"Shared Kernel"| Profiles0["Profiles"]
+    IAM0 -->|"Conformist"| Diary0["Diary"]
+    IAM0 -->|"Conformist"| AI0["AssistantAI"]
+    IAM0 -->|"Conformist"| Rutines0["Rutines"]
+    Profiles0 --> Professional0["Directorio + agenda + pagos"]
+    Diary0 <--> AI0
+    Professional0 -->|"lectura directa de datos"| Diary0
 ```
 
-**Mapa final aprobado.** Resultado de aplicar las decisiones de las preguntas 1 a 8: IAM queda como Open Host Service independiente de Profiles, se introduce Anticorruption Layer donde hay validación de consentimiento, Published Language donde la integración es asíncrona, y Separate Ways donde no hay necesidad de negocio validada.
+**Mapa final aprobado.** Distingue identidad, datos emocionales, directorio, agenda y pagos. Las flechas etiquetan el contrato o patrón que cruza cada frontera; la línea discontinua indica ausencia deliberada de integración entre Diary y Rutines.
 
 ```mermaid
-graph LR
-    IAM["IAM<br/>(Generic Subdomain)"]
-    Profiles["Profiles<br/>(Supporting Subdomain)"]
-    Diary["Diary<br/>(Core Domain)"]
-    AssistantAI["AssistantAI<br/>(Core Domain)"]
-    Communities["Communities<br/>(Supporting Subdomain)"]
-    Rooms["Rooms<br/>(Supporting Subdomain)"]
-    Rutines["Rutines<br/>(Supporting Subdomain)"]
-    ProfessionalCare["Professional Care & Scheduling<br/>(futuro / fuera de alcance)"]
-    Reviews["Reviews & Trust<br/>(futuro / fuera de alcance)"]
-
-    IAM -->|"A: OHS/PL AccountId"| Profiles
-    IAM -->|"B: OHS + ACL ConsentAuthorizationService"| Diary
-    IAM -.->|"A: OHS AccountId"| AssistantAI
-    IAM -.->|"A: OHS AccountId"| Communities
-    IAM -.->|"A: OHS AccountId"| Rooms
-    IAM -.->|"A: OHS AccountId"| Rutines
-
-    Diary <-->|"C: Partnership/PL DiaryEntryCreated ⇄ ReflectionGenerated"| AssistantAI
-    Profiles -->|"D: CS/PL CommunityAlias, voiceMaskPreset"| Rooms
-    Communities -->|"E: Partnership/OHS catálogo y políticas"| Rooms
-    AssistantAI -.->|"F: CS/ACL ClinicalSummaryGenerated"| ProfessionalCare
-    Profiles -.->|"G: CS disponibilidad publicada"| ProfessionalCare
-    Reviews -.->|"H: PL ClinicianRatingSummaryUpdated"| Profiles
-    Diary -.-|"I: Separate Ways"| Rutines
+flowchart LR
+    IAM["IAM"] -->|"OHS / identidad"| Profiles["Profiles"]
+    IAM -->|"OHS / identidad"| Directory["Clinician Directory"]
+    IAM -->|"OHS / identidad"| Care["Care Scheduling"]
+    IAM -->|"OHS / identidad"| Payments["Payments & Payouts"]
+    IAM -->|"OHS / identidad"| Rutines["Rutines"]
+    IAM -->|"OHS / consentimiento + ACL"| Diary["Diary"]
+    IAM -->|"OHS / consentimiento + ACL"| AI["AssistantAI"]
+    IAM -->|"OHS / consentimiento + ACL"| Care
+    Diary <-->|"Partnership / eventos"| AI
+    Directory -->|"ficha verificada y tarifa"| Care
+    Care -->|"sesión completada"| Directory
+    Care <-->|"reserva / resultado de cobro"| Payments
+    AI -->|"resumen autorizado + ACL"| Care
+    Payments -->|"estado de plan"| Profiles
+    Payments -->|"estado de plan"| AI
+    Diary -.-|"Separate Ways"| Rutines
 ```
 
-*Nota:* las flechas punteadas representan relaciones con un contexto todavía no desarrollado tácticamente (Professional Care & Scheduling, Reviews & Trust) o de acoplamiento deliberadamente bajo (IAM hacia los contextos que solo consumen `accountId`); las flechas continuas representan relaciones con un contrato ya implementado en el diseño táctico (sección 2.6).
+#### Discusión de Alternativas y Conclusión
 
-##### Discusión de Alternativas y Conclusión
-
-De las ocho preguntas exploradas, cinco decisiones ya están reflejadas en el diseño táctico existente (2, 3-B, 5-A, 5-B, 8) y tres quedan documentadas como trabajo futuro explícito (2 como frontera hacia Professional Care & Scheduling, 4 y 6 como candidatos a revisar en la siguiente iteración del producto). El hilo conductor de todas las decisiones fue rechazar los patrones que maximizan la velocidad de integración a corto plazo a costa del acoplamiento —**Shared Kernel** entre IAM y Profiles (pregunta 8) y **Conformist** generalizado de todos los contextos hacia el modelo de IAM (mapa candidato inicial)— porque habrían obligado a todos los contextos a evolucionar en sincronía con los cambios de seguridad e identidad de IAM, contradiciendo el principio de autonomía por contexto que exige el negocio (equipos y despliegues independientes por Bounded Context, según TS-001). La combinación elegida —**Open Host Service** para la identidad transversal (relación A), **Anticorruption Layer** en los consumidores de contratos sensibles (relaciones B y F), **Customer/Supplier** donde un contexto consume capacidades de otro sin alterarlas (relaciones D, G), **Published Language** para la integración asíncrona (relaciones C, H) y **Separate Ways** donde no hay una necesidad de negocio validada (relación I)— permite que cada contexto evolucione de forma independiente sin comprometer la privacidad ni la disponibilidad del registro emocional, que es el valor central de SafeDiary.
+La comparación descarta el Shared Kernel entre IAM y Profiles, la fusión de directorio, agenda y pagos, y la duplicación del consentimiento. El mapa final mantiene a IAM como autoridad de identidad y acceso; a Diary y AssistantAI como propietarios de la información emocional; a Clinician Directory como dueño de la ficha, verificación y reseñas; a Care Scheduling como dueño de la disponibilidad reservable y la cita; y a Payments & Payouts como dueño de pagos, suscripciones e ingresos profesionales. Los contratos de integración permiten completar el recorrido desde la búsqueda del psicólogo hasta la atención pagada sin transferir contenido clínico o responsabilidad financiera a contextos que no los gobiernan.
 
 ### 2.5.3. Software Architecture
 
 La arquitectura de software de **SafeDiary** se estructura siguiendo las directrices del **C4 Model** (Context, Containers, Components, Code), propuesto por Simon Brown. Este modelo arquitectónico proporciona una abstracción jerárquica y coherente del sistema, permitiendo visualizar desde las fronteras organizacionales y las interacciones con actores y sistemas externos (Nivel 1: Contexto), hasta la descomposición en unidades de ejecución y tecnologías de persistencia (Nivel 2: Contenedores), la estructura modular interna de cada servicio (Nivel 3: Componentes) y los modelos de clases y esquemas relacionales (Nivel 4: Código).
 
-La solución ha sido concebida bajo un paradigma de **arquitectura orientada a servicios desacoplados (Service-Oriented / Microservices Architecture)** alineada estrictamente con los principios del diseño táctico de Domain-Driven Design (DDD). Cada Bounded Context opera como una unidad de despliegue y persistencia independiente, comunicándose de manera síncrona mediante APIs REST a través de un API Gateway centralizado y de manera asíncrona mediante un Message Broker para la propagación reactiva de eventos de dominio.
+La solución sigue una **arquitectura de servicios desacoplados** alineada con los ocho bounded contexts vigentes: IAM, Profiles, AssistantAI, Diary, Rutines, Clinician Directory, Care Scheduling y Payments & Payouts. La aplicación móvil se comunica con sus servicios mediante un API Gateway; las consultas que requieren identidad o consentimiento vigente son síncronas y los cambios de estado se publican mediante un bus de eventos.
 
 #### 2.5.3.1. Software Architecture Context Level Diagrams
 
-![SafeDiary - System Context Diagram](../assets/images/chap2/architecture/context-diagram.png)
+![Diagrama C4 de contexto de SafeDiary](../assets/images/chap2/software-architecture/SystemContext.png)
 
 Código en **Structurizr DSL (C4 Model)**:
 
 ```text
-workspace "SafeDiary - System Context" "C4 System Context Diagram de la solución SafeDiary" {
+workspace "SafeDiary - System Context" "C4 System Context de SafeDiary" {
 
     model {
-        patient    = person "Paciente" "Usuario principal que registra su diario emocional, interactúa con el asistente de IA por texto, participa en comunidades anónimas y gestiona su consentimiento."
-        specialist = person "Especialista en Salud Mental" "Psicólogo o psiquiatra verificado que consulta el historial autorizado de sus consultantes y publica su perfil profesional."
-        visitor    = person "Usuario de la App / Visitante" "Persona que busca especialistas verificados en el directorio y explora recursos públicos de bienestar emocional."
+        patient = person "Paciente" "Registra emociones, usa el diario y las rutinas, busca psicólogos, reserva y paga citas, y gestiona su consentimiento y suscripción."
+        psychologist = person "Psicólogo" "Solicita verificación, publica su ficha y tarifas, coordina y atiende citas, consulta únicamente información autorizada y gestiona retiros."
 
-        safeDiary = softwareSystem "SafeDiary" "Plataforma móvil integral para el registro de vivencias, soporte reflexivo con IA basada en texto, comunidades seguras de apoyo y vinculación terapéutica controlada por consentimiento."
+        safeDiary = softwareSystem "SafeDiary" "Aplicación móvil de apoyo emocional y atención profesional con diario privado, IA, directorio, agenda y pagos."
 
-        oauthProvider = softwareSystem "Google / Apple Identity Providers" "Servicios de autenticación federada OpenID Connect / OAuth2 para inicio de sesión seguro." "External System"
-        vertexAi      = softwareSystem "Google Cloud Vertex AI (Gemini API)" "Modelo fundacional de lenguaje natural para inferencia de distorsiones cognitivas, resúmenes clínicos y moderación de contenido." "External System"
-        pushService   = softwareSystem "Firebase Cloud Messaging (FCM) / APNs" "Infraestructura de mensajería push para despachar recordatorios de diario, hábitos y alertas en tiempo real." "External System"
-        crisisHotline = softwareSystem "Línea Nacional de Emergencia (Línea 113 / 988)" "Servicio telefónico y telemático de intervención en crisis e ideación suicida." "External System"
-        objectStorage = softwareSystem "Cloud Object Storage (AWS S3 / GCS)" "Almacenamiento en la nube cifrado en reposo para notas de voz del diario y archivos adjuntos." "External System"
+        identityProvider = softwareSystem "Google / Apple Identity Providers" "Autenticación federada opcional." "External System"
+        gemini = softwareSystem "Gemini API" "Procesamiento de lenguaje para reflexiones y resúmenes emocionales." "External System"
+        notifications = softwareSystem "FCM / APNs" "Entrega notificaciones push a dispositivos móviles." "External System"
+        calendars = softwareSystem "Google Calendar / Outlook Calendar" "Sincronización opcional de la agenda del psicólogo." "External System"
+        paymentGateway = softwareSystem "Pasarela de pago" "Confirma cobros de citas y suscripciones Premium." "External System"
+        payoutGateway = softwareSystem "Pasarela de retiro" "Confirma retiros solicitados por el psicólogo." "External System"
+        videoProvider = softwareSystem "Proveedor de videollamadas" "Crea reuniones privadas y accesos temporales para citas confirmadas." "External System"
+        crisisResources = softwareSystem "Recursos de ayuda en crisis" "Canales externos de ayuda mostrados al paciente; SafeDiary no presta atención de emergencia." "External System"
 
-        patient    -> safeDiary     "Registra diario, conversa con AssistantAI por texto, hace check-in, participa en comunidades y gestiona consentimiento" "HTTPS / WSS"
-        specialist -> safeDiary     "Publica ficha profesional y consulta historial clínico autorizado de pacientes" "HTTPS"
-        visitor    -> safeDiary     "Explora directorio público de especialistas y recursos de bienestar" "HTTPS"
+        patient -> safeDiary "Usa diario, IA y rutinas; busca, agenda y paga atención; administra consentimiento y plan" "Aplicación móvil"
+        psychologist -> safeDiary "Publica ficha, coordina y atiende citas, consulta datos autorizados y solicita retiros" "Aplicación móvil"
 
-        safeDiary  -> oauthProvider "Autentica identidad federada e intercambia tokens OAuth2/OIDC" "HTTPS/JSON"
-        safeDiary  -> vertexAi      "Envía prompts de texto sanitizados para inferencia reflexiva y detección de riesgos" "HTTPS/gRPC"
-        safeDiary  -> pushService   "Solicita el envío de notificaciones push programadas y eventos urgentes" "HTTPS/JSON"
-        safeDiary  -> crisisHotline "Deriva llamadas y suministra enlaces de contacto inmediato ante riesgo crítico" "Teléfono / HTTPS"
-        safeDiary  -> objectStorage "Almacena y recupera notas de voz cifradas en reposo" "HTTPS / Presigned URLs"
+        safeDiary -> identityProvider "Autenticación federada opcional" "OIDC / HTTPS"
+        safeDiary -> gemini "Solicita análisis y generación de respuestas" "HTTPS"
+        safeDiary -> notifications "Envía recordatorios y avisos" "HTTPS"
+        safeDiary -> calendars "Sincroniza citas autorizadas" "HTTPS"
+        safeDiary -> paymentGateway "Solicita cobros de citas y Premium" "HTTPS"
+        paymentGateway -> safeDiary "Confirma el resultado del cobro" "Notificación firmada"
+        safeDiary -> payoutGateway "Solicita retiros profesionales" "HTTPS"
+        payoutGateway -> safeDiary "Confirma el resultado del retiro" "Notificación firmada"
+        safeDiary -> videoProvider "Genera enlaces y accesos de reunión" "HTTPS"
+        safeDiary -> crisisResources "Muestra canales externos de contacto" "Enlace / teléfono"
     }
 
     views {
@@ -1293,90 +1290,107 @@ workspace "SafeDiary - System Context" "C4 System Context Diagram de la solució
 
 #### 2.5.3.2. Software Architecture Container Level Diagrams
 
-![SafeDiary - Container Level Diagram](../assets/images/chap2/architecture/container-diagram.png)
+![Diagrama C4 de contenedores de SafeDiary](../assets/images/chap2/software-architecture/Containers.png)
 
 Código en **Structurizr DSL (C4 Model)**:
 
 ```text
-workspace "SafeDiary - Containers" "C4 Container Diagram de la plataforma SafeDiary" {
+workspace "SafeDiary - Containers" "C4 Container Diagram de SafeDiary" {
 
     model {
-        patient    = person "Paciente" "Interactúa con la app móvil para escribir en su diario, chatear con la IA por texto y participar en comunidades."
-        specialist = person "Especialista Verificado" "Accede a su perfil y consulta historial autorizado de sus consultantes."
-        visitor    = person "Visitante" "Consulta el directorio de especialistas y recursos informativos."
+        patient = person "Paciente" "Usa diario, IA y rutinas; busca psicólogos, agenda y paga citas y administra su plan."
+        psychologist = person "Psicólogo" "Publica su ficha, coordina citas, atiende sesiones y gestiona ingresos y retiros."
 
         safeDiary = softwareSystem "SafeDiary" {
 
-            mobileApp = container "SafeDiary Mobile App" "Interfaz cliente nativa multiplataforma para registro emocional, interacción reflexiva por texto y participación social." "Flutter / Dart (iOS & Android)"
-            apiGateway = container "API Gateway" "Punto único de entrada inverso, terminación TLS, validación inicial de JWT, rate limiting y enrutamiento hacia microservicios." "Reverse Proxy / Envoy / Ocelot"
+            mobileApp = container "SafeDiary Mobile App" "Única interfaz para paciente y psicólogo." "Flutter / Dart (iOS y Android)"
+            apiGateway = container "API Gateway" "Termina TLS, valida tokens, limita tráfico y enruta solicitudes móviles." "Proxy inverso"
 
-            iamApi = container "IAM Service" "Gestiona cuentas de usuario, biometría, contratos de consentimiento y auditoría de accesos." "ASP.NET Core / Node.js Web API"
-            profilesApi = container "Profiles Service" "Gestiona perfiles personales, alias comunitarios anónimos y fichas profesionales de especialistas." "ASP.NET Core / Node.js Web API"
-            assistantAiApi = container "AssistantAI Service" "Motor de soporte conversacional 100% texto, detección de distorsiones cognitivas, evaluación de riesgo de crisis y resúmenes clínicos." "ASP.NET Core / Python Web API"
-            diaryApi = container "Diary Service" "Core domain: gestiona entradas íntimas de texto/voz, mood check-ins de 1 toque, recordatorios, rachas y exportación PDF." "ASP.NET Core / Node.js Web API"
-            communitiesApi = container "Communities Service" "Gestiona foros de apoyo anónimos, moderación de posts, hilos de desahogo y reacciones empáticas." "ASP.NET Core / Node.js Web API"
-            roomsApi = container "Rooms Service" "Gestiona salas efímeras de apoyo mutuo en tiempo real, señalización WebRTC y moderación en vivo." "Node.js / WebSockets / WebRTC Signaling"
-            rutinesApi = container "Rutines Service" "Gestiona catálogo de hábitos de bienestar, micro-desafíos emocionales y seguimiento de cumplimiento." "ASP.NET Core / Node.js Web API"
+            iamApi = container "IAM Service" "Cuentas, autenticación, roles, consentimiento y auditoría." "Servicio de API"
+            profilesApi = container "Profiles Service" "Datos personales y preferencias de aplicación; no almacena fichas profesionales." "Servicio de API"
+            assistantAiApi = container "AssistantAI Service" "Conversación reflexiva, análisis emocional, señales de riesgo y resúmenes autorizados." "Servicio de API"
+            diaryApi = container "Diary Service" "Entradas privadas de texto y voz, estado de ánimo y evolución emocional." "Servicio de API"
+            rutinesApi = container "Rutines Service" "Actividades de autocuidado, ejercicios y recordatorios." "Servicio de API"
+            directoryApi = container "Clinician Directory Service" "Verificación de psicólogos, fichas, tarifas, búsquedas y reseñas." "Servicio de API"
+            schedulingApi = container "Care Scheduling Service" "Contacto, agenda reservable, retenciones de una hora, citas y acceso a reuniones." "Servicio de API"
+            paymentsApi = container "Payments & Payouts Service" "Cobros idempotentes de citas y Premium, comprobantes, comisiones y retiros." "Servicio de API"
 
-            iamDb         = container "IAM Database" "Persiste cuentas, credenciales cifradas, tokens biométricos y directivas de consentimiento." "PostgreSQL 15" "Database"
-            profilesDb    = container "Profiles Database" "Persiste datos de perfil, alias anónimos y directorio de terapeutas con geolocalización." "PostgreSQL 15" "Database"
-            assistantAiDb = container "AssistantAI Database" "Persiste sesiones de conversación en texto, mensajes, distorsiones detectadas y evaluaciones de riesgo." "PostgreSQL 15" "Database"
-            diaryDb       = container "Diary Database" "Persiste entradas de diario, factores externos, series temporales de humor y rachas." "PostgreSQL 15" "Database"
-            communitiesDb = container "Communities Database" "Persiste hilos comunitarios, comentarios, votos empáticos y reportes de moderación." "PostgreSQL 15" "Database"
-            roomsDb       = container "Rooms Database & Cache" "Mantiene estado en memoria de salas activas, participantes conectados y señalización." "Redis 7 / PostgreSQL" "Database"
-            rutinesDb     = container "Rutines Database" "Persiste catálogo de ejercicios de respiración, hábitos programados e historial de cumplimiento." "PostgreSQL 15" "Database"
+            iamDb = container "IAM Database" "Cuentas, roles, consentimientos y auditoría." "PostgreSQL" "Database"
+            profilesDb = container "Profiles Database" "Datos personales y preferencias." "PostgreSQL" "Database"
+            assistantAiDb = container "AssistantAI Database" "Conversaciones, análisis y resúmenes." "PostgreSQL" "Database"
+            diaryDb = container "Diary Database" "Entradas, estados de ánimo y metadatos de acceso." "PostgreSQL" "Database"
+            rutinesDb = container "Rutines Database" "Actividades, recordatorios y cumplimiento." "PostgreSQL" "Database"
+            directoryDb = container "Clinician Directory Database" "Verificaciones, fichas, tarifas y reseñas." "PostgreSQL" "Database"
+            schedulingDb = container "Care Scheduling Database" "Solicitudes, mensajes de coordinación, reservas, citas y sesiones." "PostgreSQL" "Database"
+            paymentsDb = container "Payments & Payouts Database" "Intentos, cobros, suscripciones, comprobantes, saldos y retiros." "PostgreSQL" "Database"
 
-            eventBus      = container "Event Bus" "Broker de eventos asíncrono para publicar y suscribir eventos de dominio de forma desacoplada." "RabbitMQ / Apache Kafka" "Queue"
-            objectStorage = container "Cloud Object Storage" "Almacenamiento de blobs cifrado en reposo para archivos crudos de notas de voz." "AWS S3 / Google Cloud Storage" "Storage"
+            eventBus = container "Event Bus" "Distribuye eventos de integración entre contextos." "RabbitMQ" "Queue"
+            objectStorage = container "Object Storage" "Conserva notas de voz y archivos autorizados cifrados." "Almacenamiento de objetos" "Storage"
         }
 
-        oauthProvider = softwareSystem "Google / Apple Identity Providers" "Autenticación federada OpenID Connect." "External System"
-        vertexAi      = softwareSystem "Google Cloud Vertex AI (Gemini API)" "Inferencia de modelos fundacionales de LLM." "External System"
-        pushService   = softwareSystem "Firebase Cloud Messaging (FCM)" "Servicio push para dispositivos móviles." "External System"
-        crisisHotline = softwareSystem "Línea de Crisis 113 / 988" "Atención telefónica de emergencia." "External System"
+        identityProvider = softwareSystem "Google / Apple Identity Providers" "Autenticación federada opcional." "External System"
+        gemini = softwareSystem "Gemini API" "Procesamiento de lenguaje." "External System"
+        notifications = softwareSystem "FCM / APNs" "Entrega de notificaciones móviles." "External System"
+        calendars = softwareSystem "Google Calendar / Outlook Calendar" "Sincronización opcional de citas." "External System"
+        paymentGateway = softwareSystem "Pasarela de pago" "Cobros de citas y Premium." "External System"
+        payoutGateway = softwareSystem "Pasarela de retiro" "Transferencias al psicólogo." "External System"
+        videoProvider = softwareSystem "Proveedor de videollamadas" "Reuniones privadas y accesos temporales." "External System"
+        crisisResources = softwareSystem "Recursos de ayuda en crisis" "Canales externos de contacto." "External System"
 
-        # Relaciones de Actores con Contenedores
-        patient    -> mobileApp "Interactúa con la interfaz nativa táctil" "UI / Gestos"
-        specialist -> mobileApp "Gestiona perfil y consulta historial compartido" "UI / Gestos"
-        visitor    -> mobileApp "Explora directorio y recomendaciones" "UI / Gestos"
+        patient -> mobileApp "Usa las funciones del paciente" "Interfaz móvil"
+        psychologist -> mobileApp "Usa las funciones del psicólogo" "Interfaz móvil"
+        mobileApp -> apiGateway "Solicitudes autenticadas" "HTTPS"
 
-        # Relaciones del Cliente Móvil con Gateway
-        mobileApp  -> apiGateway "Realiza peticiones seguras de API y abre canales en vivo" "HTTPS / WSS"
+        apiGateway -> iamApi "Identidad y consentimiento" "HTTPS"
+        apiGateway -> profilesApi "Perfil y preferencias" "HTTPS"
+        apiGateway -> assistantAiApi "Asistente emocional" "HTTPS"
+        apiGateway -> diaryApi "Diario privado" "HTTPS"
+        apiGateway -> rutinesApi "Rutinas" "HTTPS"
+        apiGateway -> directoryApi "Directorio y reseñas" "HTTPS"
+        apiGateway -> schedulingApi "Contacto, reservas y citas" "HTTPS"
+        apiGateway -> paymentsApi "Cobros, plan y retiros" "HTTPS"
 
-        # Enrutamiento de Gateway a Microservicios
-        apiGateway -> iamApi         "Enruta /api/v1/iam/*" "HTTPS/JSON"
-        apiGateway -> profilesApi    "Enruta /api/v1/profiles/*" "HTTPS/JSON"
-        apiGateway -> assistantAiApi "Enruta /api/v1/assistant/*" "HTTPS/JSON"
-        apiGateway -> diaryApi       "Enruta /api/v1/diary/*" "HTTPS/JSON"
-        apiGateway -> communitiesApi "Enruta /api/v1/communities/*" "HTTPS/JSON"
-        apiGateway -> roomsApi       "Enruta /api/v1/rooms/* y /ws/rooms" "WSS / HTTPS"
-        apiGateway -> rutinesApi     "Enruta /api/v1/rutines/*" "HTTPS/JSON"
+        iamApi -> iamDb "Identidad, permisos y auditoría" "SQL"
+        profilesApi -> profilesDb "Perfil y preferencias" "SQL"
+        assistantAiApi -> assistantAiDb "Conversaciones y análisis" "SQL"
+        diaryApi -> diaryDb "Entradas y estados de ánimo" "SQL"
+        rutinesApi -> rutinesDb "Hábitos" "SQL"
+        directoryApi -> directoryDb "Fichas, tarifas y reseñas" "SQL"
+        schedulingApi -> schedulingDb "Reservas, citas y sesiones" "SQL"
+        paymentsApi -> paymentsDb "Cobros, planes y retiros" "SQL"
 
-        # Persistencia en Bases de Datos
-        iamApi         -> iamDb         "Lee y escribe cuentas y consentimientos" "SQL/TCP"
-        profilesApi    -> profilesDb    "Lee y escribe perfiles y especialistas" "SQL/TCP"
-        assistantAiApi -> assistantAiDb "Lee y escribe sesiones de texto y distorsiones" "SQL/TCP"
-        diaryApi       -> diaryDb       "Lee y escribe entradas de texto y check-ins" "SQL/TCP"
-        communitiesApi -> communitiesDb "Lee y escribe publicaciones y reportes" "SQL/TCP"
-        roomsApi       -> roomsDb       "Lee y actualiza sesiones de salas efímeras" "Redis RESP / SQL"
-        rutinesApi     -> rutinesDb     "Lee y escribe hábitos y cumplimiento" "SQL/TCP"
+        directoryApi -> iamApi "Valida identidad y rol" "HTTPS"
+        schedulingApi -> directoryApi "Consulta psicólogo verificado y tarifa" "HTTPS"
+        schedulingApi -> iamApi "Valida consentimiento para datos emocionales" "HTTPS"
+        diaryApi -> iamApi "Valida autorización de lectura" "HTTPS"
+        assistantAiApi -> iamApi "Valida acceso a resúmenes" "HTTPS"
+        schedulingApi -> paymentsApi "Solicita cobro de reserva vigente" "HTTPS"
+        schedulingApi -> assistantAiApi "Consulta resumen mínimo autorizado" "HTTPS"
 
-        # Integración Asíncrona con Event Bus (Publish / Subscribe)
-        diaryApi       -> eventBus "Publica DiaryEntryCreated, MoodCheckInLogged" "AMQP"
-        assistantAiApi -> eventBus "Publica RiskLevelCriticalDetected, ClinicalSummaryGenerated" "AMQP"
-        iamApi         -> eventBus "Publica ConsentGranted, ConsentRevoked, AccountDeactivated" "AMQP"
-        communitiesApi -> eventBus "Publica CommunityPostReported" "AMQP"
+        diaryApi -> eventBus "DiaryEntryCreated" "AMQP"
+        assistantAiApi -> eventBus "ReflectionGenerated, ClinicalSummaryGenerated" "AMQP"
+        iamApi -> eventBus "ConsentRevoked" "AMQP"
+        schedulingApi -> eventBus "ReservationHeld, AppointmentConfirmed, SessionCompleted" "AMQP"
+        paymentsApi -> eventBus "PaymentApproved, PaymentFailed, SubscriptionActivated, PayoutCompleted" "AMQP"
+        eventBus -> assistantAiApi "Procesa entradas autorizadas y cambios de plan" "AMQP"
+        eventBus -> diaryApi "Asocia reflexión a entrada" "AMQP"
+        eventBus -> schedulingApi "Aplica resultado de pago y revocación" "AMQP"
+        eventBus -> directoryApi "Habilita reseña tras sesión completada" "AMQP"
+        eventBus -> profilesApi "Actualiza estado de plan" "AMQP"
 
-        eventBus -> assistantAiApi "Consume DiaryEntryCreated para inferencia de reflexiones" "AMQP"
-        eventBus -> rutinesApi     "Consume MoodCheckInLogged para sugerir hábitos adaptativos" "AMQP"
-
-        # Integraciones con Sistemas Externos y Storage
-        iamApi         -> oauthProvider "Valida tokens federados OAuth2" "HTTPS/JSON"
-        assistantAiApi -> vertexAi      "Invoca inferencia de texto (Gemini)" "HTTPS/gRPC"
-        assistantAiApi -> crisisHotline "Ofrece canal de contacto directo si hay crisis" "Teléfono / Deep link"
-        diaryApi       -> objectStorage "Almacena y recupera audios crudos" "HTTPS / Presigned URLs"
-        diaryApi       -> pushService   "Programa recordatorios push" "HTTPS/JSON"
-        rutinesApi     -> pushService   "Programa alertas de hábitos diarios" "HTTPS/JSON"
+        iamApi -> identityProvider "Autenticación federada opcional" "HTTPS"
+        assistantAiApi -> gemini "Genera análisis y reflexiones" "HTTPS"
+        mobileApp -> crisisResources "Muestra contacto externo de ayuda" "Enlace / teléfono"
+        rutinesApi -> notifications "Solicita recordatorios" "HTTPS"
+        schedulingApi -> notifications "Solicita avisos de cita" "HTTPS"
+        schedulingApi -> calendars "Sincroniza citas autorizadas" "HTTPS"
+        schedulingApi -> videoProvider "Crea acceso a reunión confirmada" "HTTPS"
+        paymentsApi -> paymentGateway "Solicita cobros de citas y Premium" "HTTPS"
+        paymentGateway -> paymentsApi "Confirma cobro firmado" "HTTPS"
+        paymentsApi -> payoutGateway "Solicita retiros" "HTTPS"
+        payoutGateway -> paymentsApi "Confirma retiro firmado" "HTTPS"
+        diaryApi -> objectStorage "Guarda notas de voz cifradas" "HTTPS"
+        schedulingApi -> objectStorage "Guarda archivos autorizados de la cita" "HTTPS"
     }
 
     views {
@@ -1427,167 +1441,205 @@ workspace "SafeDiary - Containers" "C4 Container Diagram de la plataforma SafeDi
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
-El siguiente diagrama de despliegue muestra cómo los diferentes componentes del sistema SafeDiary se distribuyen en la infraestructura, tanto en el cliente como en la nube. Este tipo de diagrama permite entender dónde se ejecuta cada parte del sistema, cómo se comunican entre sí y qué tecnologías o servicios se utilizan en el entorno real de producción.
-
-![SafeDiary - Deployment Diagram](../assets/images/chap2/architecture/deployment-diagram.png)
+El diagrama de despliegue ubica la aplicación móvil, los ocho servicios de dominio, sus almacenes de datos y las integraciones externas en un entorno de producción. Paciente y Psicólogo acceden mediante la misma aplicación móvil, con funciones diferenciadas por rol.
 
 **Descripción del Deployment Diagram**
 
-El sistema SafeDiary está organizado en varias capas de despliegue que separan claramente los clientes, el frontend, el backend y la capa de datos:
+El sistema SafeDiary separa el dispositivo móvil, los servicios de aplicación, la persistencia y los proveedores externos:
 
 **Client Tier (Clientes):**
 
-* **Web Clients (Browser):** Representa a los usuarios y visitantes que acceden desde un navegador web (Chrome, Safari, Firefox, Edge). Aquí se carga la Landing Page informativa, permitiendo conocer la propuesta de valor, términos de privacidad y directorio de especialistas sin necesidad de instalar software adicional.
-* **Mobile Clients (Mobile Device):** Incluye los dispositivos móviles (Google Android 12+ / Apple iOS 16+) donde se ejecuta SafeDiary Mobile App (Flutter), permitiendo a los pacientes y especialistas registrar diarios íntimos, realizar check-ins emocionales, interactuar con el asistente reflexivo por texto, unirse a salas efímeras y gestionar sus hábitos diarios desde cualquier lugar.
+* **Mobile Device:** dispositivo Android o iOS donde Paciente y Psicólogo utilizan SafeDiary Mobile App (Flutter). El rol determina las funciones disponibles dentro de la misma aplicación.
 
 **Cloud Tier (Infraestructura en la Nube):**
 
-* **Frontend Hosting:**
-  * **GitHub Pages / Vercel:** Plataforma de alojamiento estático y distribución mediante CDN optimizada para alta disponibilidad, donde se despliega la Landing Page institucional.
 * **Backend Layer:**
-  * **API Gateway Node:** Servidor perimetral en contenedor Docker (Envoy Proxy) que gestiona la terminación TLS, autenticación preliminar de JWT, rate limiting y el enrutamiento inteligente de solicitudes HTTP/REST y canales WebSocket hacia los microservicios correspondientes.
-  * **Application Server (Docker Containers):** Clúster de contenedores independientes y portátiles que ejecutan los microservicios backend de cada Bounded Context (IAM, Profiles, AssistantAI, Diary, Communities, Rooms, Rutines), garantizando escalabilidad horizontal, aislamiento de fallos y facilidad de despliegue continuo.
+  * **API Gateway Node:** termina TLS, valida el token de acceso, limita el tráfico y enruta las solicitudes de la aplicación móvil.
+  * **Application Server:** ejecuta los ocho servicios IAM, Profiles, AssistantAI, Diary, Rutines, Clinician Directory, Care Scheduling y Payments & Payouts, cada uno con su responsabilidad de dominio.
 * **Data Layer:**
-  * **Database Server (Managed PostgreSQL 15):** Instancia administrada de base de datos relacional (Google Cloud SQL / AWS RDS) con esquemas aislados por contexto, alta disponibilidad y políticas de respaldos automatizados.
-  * **In-Memory Cache & Message Broker (Redis 7 & RabbitMQ):** Servidores administrados de caché volátil y colas de mensajería para mantener el estado en tiempo real de las salas efímeras (Rooms) y procesar eventos de dominio de forma asíncrona y desacoplada.
-  * **Cloud Object Storage (AWS S3 / Google Cloud Storage):** Almacenamiento seguro de objetos cifrado en reposo para notas de voz crudas y contenido multimedia del diario.
+  * **Managed PostgreSQL:** ocho bases lógicamente aisladas, una por bounded context, con respaldos y controles de acceso independientes.
+  * **Event Bus:** transporta eventos de integración entre servicios sin compartir sus bases de datos.
+  * **Object Storage:** conserva notas de voz y archivos autorizados cifrados, separados de las tablas transaccionales.
 
 **External Services Tier (Servicios Externos):**
 
-* **Google / Apple Identity Providers:** Proveedores de autenticación federada bajo protocolo OAuth2 y OpenID Connect.
-* **Google Cloud Vertex AI (Gemini API):** Infraestructura de inferencia de modelos fundacionales de lenguaje (LLM) para soporte reflexivo y detección de riesgo de crisis.
-* **Firebase Cloud Messaging (FCM):** Servicio de infraestructura de notificaciones push para dispositivos móviles.
-* **Línea de Crisis Nacional (113 / 988):** Canal telefónico y telemático de atención de urgencias de salud mental.
+* **Google / Apple Identity Providers:** autenticación federada opcional.
+* **Gemini API:** inferencia para respuestas reflexivas y resúmenes emocionales.
+* **FCM / APNs:** entrega de notificaciones móviles.
+* **Google Calendar / Outlook Calendar:** sincronización opcional de citas del psicólogo.
+* **Pasarela de pago:** cobros de citas y suscripciones Premium, con confirmación firmada; SafeDiary no almacena datos completos de tarjeta.
+* **Pasarela de retiro:** transferencias y confirmación de retiros profesionales.
+* **Proveedor de videollamadas:** reuniones privadas y accesos temporales de participantes autorizados.
+* **Recursos de ayuda en crisis:** canales externos de contacto mostrados en la aplicación, sin asumir atención de emergencia dentro de SafeDiary.
+
+![Diagrama C4 de despliegue de SafeDiary](../assets/images/chap2/software-architecture/SafeDiaryDeployment.png)
 
 Código en **Structurizr DSL (C4 Model)**:
 
 ```text
-workspace "SafeDiary - Deployment" "C4 Deployment Diagram de la plataforma SafeDiary" {
+workspace "SafeDiary - Deployment" "C4 Deployment Diagram de SafeDiary" {
 
     model {
+        patient = person "Paciente" "Usa SafeDiary desde su dispositivo móvil."
+        psychologist = person "Psicólogo" "Usa SafeDiary desde su dispositivo móvil."
+
         safeDiary = softwareSystem "SafeDiary" {
-            landingPage    = container "Landing Page" "Sitio web informativo y de captación pública." "HTML5 / TailwindCSS / Vercel"
-            mobileApp      = container "SafeDiary Mobile App" "Interfaz cliente nativa multiplataforma para registro emocional, interacción reflexiva por texto y participación social." "Flutter / Dart (iOS & Android)"
-            apiGateway     = container "API Gateway" "Punto único de entrada inverso, terminación TLS, validación inicial de JWT, rate limiting y enrutamiento hacia microservicios." "Reverse Proxy / Envoy"
+            mobileApp = container "SafeDiary Mobile App" "Única interfaz móvil para paciente y psicólogo." "Flutter / Dart"
+            apiGateway = container "API Gateway" "TLS, validación inicial de tokens y enrutamiento." "Proxy inverso"
 
-            iamApi         = container "IAM Service" "Gestiona cuentas, biometría, contratos de consentimiento y auditoría de accesos." "ASP.NET Core / Node.js Web API"
-            profilesApi    = container "Profiles Service" "Gestiona perfiles personales, alias anónimos y directorio de especialistas." "ASP.NET Core / Node.js Web API"
-            assistantAiApi = container "AssistantAI Service" "Soporte conversacional en texto, detección de distorsiones cognitivas y alertas de riesgo." "ASP.NET Core / Python Web API"
-            diaryApi       = container "Diary Service" "Core domain: entradas de texto/voz, mood check-ins, recordatorios y rachas." "ASP.NET Core / Node.js Web API"
-            communitiesApi = container "Communities Service" "Gestiona foros de apoyo anónimos, publicaciones y moderación." "ASP.NET Core / Node.js Web API"
-            roomsApi       = container "Rooms Service" "Salas efímeras de apoyo en tiempo real, señalización WebRTC y moderación." "Node.js / WebSockets / WebRTC"
-            rutinesApi     = container "Rutines Service" "Catálogo de hábitos de bienestar, ejercicios de regulación y seguimiento." "ASP.NET Core / Node.js Web API"
+            iamApi = container "IAM Service" "Identidad, roles, consentimiento y auditoría." "Servicio de API"
+            profilesApi = container "Profiles Service" "Datos personales y preferencias." "Servicio de API"
+            assistantAiApi = container "AssistantAI Service" "Conversación, análisis y resúmenes emocionales." "Servicio de API"
+            diaryApi = container "Diary Service" "Diario privado y estados de ánimo." "Servicio de API"
+            rutinesApi = container "Rutines Service" "Rutinas y recordatorios." "Servicio de API"
+            directoryApi = container "Clinician Directory Service" "Verificación, fichas, tarifas y reseñas." "Servicio de API"
+            schedulingApi = container "Care Scheduling Service" "Contacto, agenda, reservas y sesiones." "Servicio de API"
+            paymentsApi = container "Payments & Payouts Service" "Cobros, Premium, comisiones y retiros." "Servicio de API"
 
-            iamDb          = container "IAM Database" "Persiste cuentas, tokens y consentimientos." "PostgreSQL 15" "Database"
-            profilesDb     = container "Profiles Database" "Persiste perfiles y directorio de terapeutas." "PostgreSQL 15" "Database"
-            assistantAiDb  = container "AssistantAI Database" "Persiste sesiones de texto y evaluaciones de riesgo." "PostgreSQL 15" "Database"
-            diaryDb        = container "Diary Database" "Persiste entradas de diario, factores y rachas." "PostgreSQL 15" "Database"
-            communitiesDb  = container "Communities Database" "Persiste hilos comunitarios y comentarios." "PostgreSQL 15" "Database"
-            roomsDb        = container "Rooms Database & Cache" "Estado en memoria de salas activas y señalización." "Redis 7 / PostgreSQL" "Database"
-            rutinesDb      = container "Rutines Database" "Persiste hábitos programados y cumplimiento." "PostgreSQL 15" "Database"
+            iamDb = container "IAM Database" "Identidad, consentimiento y auditoría." "PostgreSQL" "Database"
+            profilesDb = container "Profiles Database" "Perfiles y preferencias." "PostgreSQL" "Database"
+            assistantAiDb = container "AssistantAI Database" "Conversaciones y análisis." "PostgreSQL" "Database"
+            diaryDb = container "Diary Database" "Entradas y estados de ánimo." "PostgreSQL" "Database"
+            rutinesDb = container "Rutines Database" "Actividades y cumplimiento." "PostgreSQL" "Database"
+            directoryDb = container "Clinician Directory Database" "Fichas, verificación y reseñas." "PostgreSQL" "Database"
+            schedulingDb = container "Care Scheduling Database" "Solicitudes, reservas y citas." "PostgreSQL" "Database"
+            paymentsDb = container "Payments & Payouts Database" "Pagos, suscripciones y retiros." "PostgreSQL" "Database"
 
-            eventBus       = container "Event Bus" "Broker de eventos asíncrono para publicar y suscribir eventos de dominio." "RabbitMQ / Apache Kafka" "Queue"
-            objectStorage  = container "Cloud Object Storage" "Almacenamiento de blobs cifrado en reposo para notas de voz." "AWS S3 / Google Cloud Storage" "Storage"
+            eventBus = container "Event Bus" "Eventos de integración." "RabbitMQ" "Queue"
+            objectStorage = container "Object Storage" "Notas de voz y archivos autorizados cifrados." "Almacenamiento de objetos" "Storage"
         }
 
-        oauthProvider = softwareSystem "Google / Apple Identity Providers" "Autenticación federada OpenID Connect." "External System"
-        vertexAi      = softwareSystem "Google Cloud Vertex AI (Gemini API)" "Inferencia de modelos fundacionales de LLM." "External System"
-        pushService   = softwareSystem "Firebase Cloud Messaging (FCM)" "Servicio push para dispositivos móviles." "External System"
-        crisisHotline = softwareSystem "Línea de Crisis 113 / 988" "Atención telefónica de emergencia." "External System"
+        identityProvider = softwareSystem "Google / Apple Identity Providers" "Autenticación federada opcional." "External System"
+        gemini = softwareSystem "Gemini API" "Procesamiento de lenguaje." "External System"
+        notifications = softwareSystem "FCM / APNs" "Notificaciones móviles." "External System"
+        calendars = softwareSystem "Google Calendar / Outlook Calendar" "Sincronización opcional de citas." "External System"
+        paymentGateway = softwareSystem "Pasarela de pago" "Cobros de citas y Premium." "External System"
+        payoutGateway = softwareSystem "Pasarela de retiro" "Retiros profesionales." "External System"
+        videoProvider = softwareSystem "Proveedor de videollamadas" "Reuniones privadas." "External System"
+        crisisResources = softwareSystem "Recursos de ayuda en crisis" "Canales externos de contacto." "External System"
 
-        # Relaciones del Software System
-        mobileApp      -> apiGateway     "Peticiones de API REST y canales WebSocket" "HTTPS / WSS"
-        apiGateway     -> iamApi         "Enruta /api/v1/iam/*" "HTTPS/JSON"
-        apiGateway     -> profilesApi    "Enruta /api/v1/profiles/*" "HTTPS/JSON"
-        apiGateway     -> assistantAiApi "Enruta /api/v1/assistant/*" "HTTPS/JSON"
-        apiGateway     -> diaryApi       "Enruta /api/v1/diary/*" "HTTPS/JSON"
-        apiGateway     -> communitiesApi "Enruta /api/v1/communities/*" "HTTPS/JSON"
-        apiGateway     -> roomsApi       "Enruta /api/v1/rooms/*" "WSS / HTTPS"
-        apiGateway     -> rutinesApi     "Enruta /api/v1/rutines/*" "HTTPS/JSON"
+        patient -> mobileApp "Usa la aplicación móvil" "Interfaz móvil"
+        psychologist -> mobileApp "Usa la aplicación móvil" "Interfaz móvil"
+        mobileApp -> apiGateway "Solicitudes autenticadas" "HTTPS"
+        apiGateway -> iamApi "Identidad y consentimiento" "HTTPS"
+        apiGateway -> profilesApi "Perfiles" "HTTPS"
+        apiGateway -> assistantAiApi "IA" "HTTPS"
+        apiGateway -> diaryApi "Diario" "HTTPS"
+        apiGateway -> rutinesApi "Rutinas" "HTTPS"
+        apiGateway -> directoryApi "Directorio" "HTTPS"
+        apiGateway -> schedulingApi "Agenda y citas" "HTTPS"
+        apiGateway -> paymentsApi "Pagos y retiros" "HTTPS"
 
-        iamApi         -> iamDb          "Lee y escribe cuentas" "SQL/TCP"
-        profilesApi    -> profilesDb     "Lee y escribe perfiles" "SQL/TCP"
-        assistantAiApi -> assistantAiDb  "Lee y escribe sesiones" "SQL/TCP"
-        diaryApi       -> diaryDb        "Lee y escribe entradas" "SQL/TCP"
-        communitiesApi -> communitiesDb  "Lee y escribe foros" "SQL/TCP"
-        roomsApi       -> roomsDb        "Lee y escribe estado de salas" "Redis RESP / SQL"
-        rutinesApi     -> rutinesDb      "Lee y escribe hábitos" "SQL/TCP"
+        iamApi -> iamDb "Datos de identidad" "SQL"
+        profilesApi -> profilesDb "Datos personales" "SQL"
+        assistantAiApi -> assistantAiDb "Análisis y conversaciones" "SQL"
+        diaryApi -> diaryDb "Entradas" "SQL"
+        rutinesApi -> rutinesDb "Hábitos" "SQL"
+        directoryApi -> directoryDb "Fichas y reseñas" "SQL"
+        schedulingApi -> schedulingDb "Citas" "SQL"
+        paymentsApi -> paymentsDb "Cobros y retiros" "SQL"
 
-        diaryApi       -> eventBus       "Publica DiaryEntryCreated, MoodCheckInLogged" "AMQP"
-        assistantAiApi -> eventBus       "Publica RiskLevelCriticalDetected" "AMQP"
-        iamApi         -> eventBus       "Publica ConsentGranted, AccountDeactivated" "AMQP"
-        eventBus       -> assistantAiApi "Consume DiaryEntryCreated" "AMQP"
-        eventBus       -> rutinesApi     "Consume MoodCheckInLogged" "AMQP"
+        directoryApi -> iamApi "Valida rol" "HTTPS"
+        schedulingApi -> directoryApi "Consulta ficha verificada y tarifa" "HTTPS"
+        diaryApi -> iamApi "Valida consentimiento" "HTTPS"
+        assistantAiApi -> iamApi "Valida acceso a resumen" "HTTPS"
+        schedulingApi -> iamApi "Valida consentimiento" "HTTPS"
+        schedulingApi -> paymentsApi "Solicita cobro de reserva" "HTTPS"
+        schedulingApi -> assistantAiApi "Consulta resumen autorizado" "HTTPS"
 
-        iamApi         -> oauthProvider  "Valida tokens federados OAuth2" "HTTPS/JSON"
-        assistantAiApi -> vertexAi       "Invoca inferencia de texto (Gemini)" "HTTPS/gRPC"
-        assistantAiApi -> crisisHotline  "Deriva atención ante ideación suicida" "Teléfono / Deep link"
-        diaryApi       -> objectStorage  "Guarda notas de voz cifradas" "HTTPS / S3 API"
-        diaryApi       -> pushService    "Programa recordatorios push" "HTTPS/JSON"
-        rutinesApi     -> pushService    "Programa alertas de hábitos" "HTTPS/JSON"
+        diaryApi -> eventBus "DiaryEntryCreated" "AMQP"
+        assistantAiApi -> eventBus "ReflectionGenerated" "AMQP"
+        iamApi -> eventBus "ConsentRevoked" "AMQP"
+        schedulingApi -> eventBus "ReservationHeld, SessionCompleted" "AMQP"
+        paymentsApi -> eventBus "PaymentApproved, PaymentFailed, SubscriptionActivated" "AMQP"
+        eventBus -> assistantAiApi "Entrada y estado de plan" "AMQP"
+        eventBus -> diaryApi "Reflexión generada" "AMQP"
+        eventBus -> schedulingApi "Resultado de pago" "AMQP"
+        eventBus -> directoryApi "Sesión completada" "AMQP"
+        eventBus -> profilesApi "Estado Premium" "AMQP"
 
-        # Deployment Environment
+        iamApi -> identityProvider "Autenticación federada" "HTTPS"
+        assistantAiApi -> gemini "Análisis y reflexión" "HTTPS"
+        mobileApp -> crisisResources "Enlace de ayuda externa" "Teléfono"
+        rutinesApi -> notifications "Recordatorios" "HTTPS"
+        schedulingApi -> notifications "Avisos de cita" "HTTPS"
+        schedulingApi -> calendars "Sincroniza citas" "HTTPS"
+        schedulingApi -> videoProvider "Crea reunión privada" "HTTPS"
+        paymentsApi -> paymentGateway "Solicita cobros" "HTTPS"
+        paymentGateway -> paymentsApi "Confirma cobros" "HTTPS"
+        paymentsApi -> payoutGateway "Solicita retiros" "HTTPS"
+        payoutGateway -> paymentsApi "Confirma retiros" "HTTPS"
+        diaryApi -> objectStorage "Notas de voz cifradas" "HTTPS"
+        schedulingApi -> objectStorage "Archivos de cita autorizados" "HTTPS"
+
         production = deploymentEnvironment "Production" {
-            deploymentNode "Client Tier" "Dispositivos y clientes finales de usuario" {
-                deploymentNode "Mobile Device" "Dispositivo móvil inteligente del usuario" "Google Android 12+ / Apple iOS 16+" {
+            deploymentNode "Dispositivos móviles" "Teléfonos de Paciente y Psicólogo" {
+                deploymentNode "Mobile Device" "Dispositivo Android o iOS" "Android / iOS" {
                     containerInstance mobileApp
-                }
-                deploymentNode "User Web Browser" "Navegador web del usuario" "Chrome, Safari, Edge, Firefox" {
-                    containerInstance landingPage
                 }
             }
 
-            deploymentNode "Cloud Tier" "Infraestructura Cloud de alta disponibilidad" "Google Cloud Platform / AWS" {
-                deploymentNode "Frontend Hosting" "Servicio de distribución de contenido estático y CDN" "GitHub Pages / Vercel CDN" {
-                    containerInstance landingPage
-                }
-
-                deploymentNode "Backend Layer" "Clúster de contenedores de aplicación" "Managed Kubernetes / Cloud Run" {
-                    deploymentNode "API Gateway Container" "Proxy inverso perimetral con terminación TLS" "Envoy Proxy / Docker" {
+            deploymentNode "Infraestructura de SafeDiary" "Entorno de producción administrado" "Nube" {
+                deploymentNode "Servicios de aplicación" "Contenedores aislados por servicio" "Contenedores" {
+                    deploymentNode "API Gateway Node" "Entrada de solicitudes móviles" "Proxy inverso" {
                         containerInstance apiGateway
                     }
-                    deploymentNode "Microservices Containers" "Contenedores Docker independientes por Bounded Context" "Docker Engine / Linux Alpine" {
+                    deploymentNode "Domain Services Node" "Ocho servicios de dominio" "Contenedores" {
                         containerInstance iamApi
                         containerInstance profilesApi
                         containerInstance assistantAiApi
                         containerInstance diaryApi
-                        containerInstance communitiesApi
-                        containerInstance roomsApi
                         containerInstance rutinesApi
+                        containerInstance directoryApi
+                        containerInstance schedulingApi
+                        containerInstance paymentsApi
                     }
                 }
 
-                deploymentNode "Data Layer" "Capa de persistencia administrada y almacenamiento de alta disponibilidad" "Cloud Managed Services" {
-                    deploymentNode "Relational Database Server" "Servidor de base de datos relacional administrada" "Google Cloud SQL / AWS RDS (PostgreSQL 15)" {
+                deploymentNode "Persistencia" "Datos aislados por contexto y mensajería" "Servicios administrados" {
+                    deploymentNode "Managed PostgreSQL" "Ocho bases lógicamente aisladas" "PostgreSQL" {
                         containerInstance iamDb
                         containerInstance profilesDb
                         containerInstance assistantAiDb
                         containerInstance diaryDb
-                        containerInstance communitiesDb
                         containerInstance rutinesDb
+                        containerInstance directoryDb
+                        containerInstance schedulingDb
+                        containerInstance paymentsDb
                     }
-                    deploymentNode "In-Memory & Cache Server" "Servidor de caché volátil y broker de mensajería" "Cloud Memorystore (Redis 7) & CloudAMQP (RabbitMQ)" {
-                        containerInstance roomsDb
+                    deploymentNode "Message Broker" "Entrega de eventos de integración" "RabbitMQ" {
                         containerInstance eventBus
                     }
-                    deploymentNode "Cloud Storage Service" "Almacenamiento de objetos cifrado en reposo" "Google Cloud Storage / AWS S3" {
+                    deploymentNode "Object Storage Node" "Archivos cifrados" "Almacenamiento de objetos" {
                         containerInstance objectStorage
                     }
                 }
             }
 
-            deploymentNode "External Services Tier" "Plataformas y servicios externos integrados" "Third-Party Cloud APIs" {
-                deploymentNode "OAuth Identity Provider" "Servidores de autenticación federada" "Google & Apple OAuth2" {
-                    softwareSystemInstance oauthProvider
+            deploymentNode "Servicios externos" "Proveedores integrados a SafeDiary" {
+                deploymentNode "Identity Provider Node" "Autenticación federada" {
+                    softwareSystemInstance identityProvider
                 }
-                deploymentNode "AI Cloud Platform" "Plataforma de modelos fundacionales" "Google Cloud Vertex AI" {
-                    softwareSystemInstance vertexAi
+                deploymentNode "AI Provider Node" "Inferencia de lenguaje" {
+                    softwareSystemInstance gemini
                 }
-                deploymentNode "Push Notification Gateway" "Infraestructura de mensajería push" "Firebase Cloud Messaging" {
-                    softwareSystemInstance pushService
+                deploymentNode "Push Provider Node" "Entrega de notificaciones" {
+                    softwareSystemInstance notifications
                 }
-                deploymentNode "Emergency Contact Service" "Central telefónica y telemática de urgencias" "Línea 113 / 988" {
-                    softwareSystemInstance crisisHotline
+                deploymentNode "Calendar Provider Node" "Sincronización de agenda" {
+                    softwareSystemInstance calendars
+                }
+                deploymentNode "Payment Gateway Node" "Cobros de citas y Premium" {
+                    softwareSystemInstance paymentGateway
+                }
+                deploymentNode "Payout Gateway Node" "Retiros profesionales" {
+                    softwareSystemInstance payoutGateway
+                }
+                deploymentNode "Video Provider Node" "Videollamadas privadas" {
+                    softwareSystemInstance videoProvider
+                }
+                deploymentNode "Crisis Resource Node" "Canales externos de ayuda" {
+                    softwareSystemInstance crisisResources
                 }
             }
         }
@@ -1641,7 +1693,7 @@ workspace "SafeDiary - Deployment" "C4 Deployment Diagram de la plataforma SafeD
 
 ## 2.6. Tactical-Level Domain-Driven Design
 
-El diseño a nivel táctico de Domain-Driven Design (DDD) traduce las decisiones estratégicas, los límites de contexto y los flujos de mensajería analizados en las secciones previas en modelos de software concretos, desacoplados y altamente cohesivos. Para garantizar una separación estricta de responsabilidades, independencia tecnológica y alta mantenibilidad, cada uno de los siete Bounded Contexts identificados en SafeDiary se estructura siguiendo los principios de la Arquitectura Limpia (Clean / Onion Architecture), complementada con el patrón CQRS (Command Query Responsibility Segregation) para la orquestación de operaciones transaccionales y de consulta.
+El diseño a nivel táctico de Domain-Driven Design (DDD) traduce las decisiones estratégicas y los flujos de mensajería en modelos de software. Cada contexto se describe mediante sus elementos de dominio, interfaces, aplicación, infraestructura y diagramas de arquitectura.
 
 A nivel de diseño e implementación, cada Bounded Context se desarrolla de manera uniforme bajo los siguientes seis apartados:
 
@@ -1652,13 +1704,13 @@ A nivel de diseño e implementación, cada Bounded Context se desarrolla de mane
 5. **Bounded Context Software Architecture Component Level Diagrams (C4 Nivel 3):** Representación arquitectónica modular que detalla la organización interna de los componentes del servicio.
 6. **Bounded Context Software Architecture Code Level Diagrams (C4 Nivel 4):** Modelos detallados de clases del dominio (`Domain Layer Class Diagrams`) en notación Mermaid y modelos de bases de datos relacionales (`Database Design Diagrams`).
 
-A continuación, se detalla la especificación táctica completa para cada uno de los Bounded Contexts de la plataforma SafeDiary:
+A continuación, se detalla la especificación táctica de los ocho bounded contexts de SafeDiary: IAM, Profiles, AssistantAI, Diary, Rutines, Clinician Directory, Care Scheduling y Payments & Payouts.
 
 ---
 
 ### 2.6.1. Bounded Context: IAM
 
-**IAM (Identity & Access Management)** es el contexto que sostiene la seguridad y el consentimiento de SafeDiary: administra la cuenta, la autenticación (correo, biometría, Google/Apple), la recuperación y eliminación de cuenta, la bóveda privada y, sobre todo, el consentimiento explícito y revocable que un paciente otorga a un especialista para acceder a su historial (US-001, US-003, US-009, US-015, US-016, US-023, US-025, US-033, US-045, US-046, TS-001, TS-002, TS-007). Ningún otro bounded context almacena credenciales, permisos de compartición o el registro de auditoría: todos consultan a IAM a través de su API para validar identidad o alcance de consentimiento (patrón Open Host Service / Published Language descrito en la futura sección 2.5.2 de Context Mapping).
+**IAM (Identity & Access Management)** es el contexto que sostiene la seguridad y el consentimiento de SafeDiary: administra la cuenta, la autenticación (correo, biometría, Google/Apple), la recuperación y eliminación de cuenta, la bóveda privada y, sobre todo, el consentimiento explícito y revocable que un paciente otorga a un psicólogo para acceder a su historial (US-001, US-003, US-009, US-015, US-016, US-023, US-025, US-033, US-045, US-046, TS-001, TS-002, TS-007). Ningún otro bounded context almacena credenciales, permisos de compartición o el registro de auditoría: todos consultan a IAM a través de su API para validar identidad o alcance de consentimiento (Open Host Service / Published Language, sección 2.5.2).
 
 #### 2.6.1.1. Domain Layer
 
@@ -1866,87 +1918,157 @@ erDiagram
 
 ### 2.6.2. Bounded Context: Profiles
 
-**Profiles** administra las distintas "caras" con las que un mismo Account (definido en IAM) se presenta dentro de SafeDiary: el perfil personal del paciente, su alias comunitario anónimo y la ficha profesional del especialista, incluyendo su solicitud de verificación (US-002, US-006, US-036, US-041, US-042). Profiles **no** almacena credenciales ni consentimiento —eso es responsabilidad exclusiva de IAM—; solo referencia el `accountId` y confía en IAM para validar la identidad. De igual forma, Profiles publica los datos de la ficha profesional (especialidades, tarifa, disponibilidad declarada) pero no gestiona la reserva transaccional de una cita, que corresponde a un futuro contexto de agendamiento.
-
-Los mockups de la aplicación confirman y afinan tres detalles del modelo: (1) la pantalla *Home* muestra el `displayName` en el saludo ("Good morning, Elena") y el `avatarUrl` en la cabecera, tal como se modeló en `PersonalProfile`; (2) la pantalla *Support* expone en cada tarjeta de especialista credencial académica, título profesional, años de experiencia, la etiqueta "Accepts Insurance", un resumen de calificación (p. ej. "4.9 (140+)") y un ícono de marcador/favorito, información que **no** estaba en la primera versión del `ClinicianProfile` y que se incorpora a continuación; y (3) la pantalla *Community* indica "Voice Masking Active: Pitch Shift: Soft Whisper", confirmando que el `CommunityAlias` necesita una preferencia de enmascaramiento de voz que Rooms aplicará en tiempo real.
+**Profiles** administra los datos personales, la foto y las preferencias de la aplicación para Paciente y Psicólogo. Identifica a cada titular mediante el accountId de IAM y muestra el estado Básico/Premium recibido desde Payments & Payouts; no autentica, decide consentimientos, verifica credenciales profesionales ni publica fichas o tarifas. Estas últimas pertenecen a Clinician Directory.
 
 #### 2.6.2.1. Domain Layer
 
 **Entities y Aggregates**
-- **PersonalProfile (Aggregate Root):** id, accountId, displayName, avatarUrl, aiTonePreference, proactiveFollowUpEnabled, savedClinicianProfileIds[] (especialistas guardados/marcados desde el directorio — ícono de marcador en *Support*).
-- **CommunityAlias (Aggregate Root):** id, accountId, aliasHandle, active, rotatedAt, voiceMaskPreset — identidad seudónima usada en Communities/Rooms, separada de la identidad clínica (ver Ubiquitous Language, sección 2.3.6). El `voiceMaskPreset` (p. ej. "Soft Whisper") es la preferencia que Rooms consulta para aplicar el efecto de voz sin exponer el tono real del usuario.
-- **ClinicianProfile (Aggregate Root):** id, accountId, credential, title, specialties[], yearsOfExperience, bio, hourlyRate, currency, sessionDurationMinutes, insuranceAccepted, verificationStatus, publishedInDirectory, ratingAverage, reviewCount. Los dos últimos campos son un **read model** cacheado: Profiles no calcula reseñas ni confianza (eso pertenece a un futuro contexto de Pagos/Reseñas, ver Ubiquitous Language "Payments, Reviews & Trust"), solo los refleja en la ficha para no depender de una llamada síncrona cada vez que se lista el directorio.
-- **AvailabilityWindow:** bloque recurrente (día, hora de inicio/fin, zona horaria) que el especialista publica como disponible. La "próxima disponibilidad" que muestra la tarjeta del directorio ("Next available: Today, 4:30 PM") es un valor compuesto a partir de estas ventanas y de los horarios ya reservados en el futuro contexto de agendamiento, no un campo propio de Profiles.
-- **ClinicianVerification:** solicitud de verificación con sus documentos de credencial y su estado (PENDING, APPROVED, REJECTED).
 
-**Value Objects**
-- **DisplayName, AvatarUrl, AliasHandle:** identificadores de presentación.
-- **Specialty, HourlyRate (Money), Timezone:** datos de la ficha profesional.
-- **Credential, ProfessionalTitle:** p. ej. "Psy.D.", "LMFT", "MD" y "Licensed Clinical Psychologist" respectivamente.
-- **RatingSummary:** ratingAverage + reviewCount, recibido por evento de integración.
-- **VoiceMaskPreset:** NONE, SOFT_WHISPER, DEEP_TONE, ROBOTIC.
-- **VerificationStatus:** PENDING, APPROVED, REJECTED.
+* **PersonalProfile (Aggregate Root):** id, accountId, displayName, avatarRef, locale, timezone y preferencias de presentación. Mantiene referencias a psicólogos guardados, sin duplicar sus fichas.
+* **AppPreferences (Value Object):** configuración de notificaciones, recordatorios y tono del asistente.
+* **PlanStatusProjection (Read Model):** plan Básico/Premium y fecha de actualización recibidos por evento de Payments & Payouts; no constituye la fuente de verdad de la suscripción.
 
 **Domain Events**
-- PersonalProfileUpdated, SpecialistSaved, SpecialistUnsaved, CommunityAliasRotated, VoiceMaskPresetUpdated, ClinicianVerificationRequested, ClinicianVerificationApproved, ClinicianVerificationRejected, ClinicianProfilePublished, ClinicianAvailabilityPublished.
 
-**Commands**
-- UpdatePersonalProfileCommand, SaveSpecialistCommand, RemoveSavedSpecialistCommand, RotateCommunityAliasCommand, UpdateVoiceMaskPresetCommand, SubmitClinicianVerificationCommand, ReviewClinicianVerificationCommand, UpdateClinicianProfileCommand, PublishAvailabilityWindowsCommand, ApplyClinicianRatingSummaryCommand (interna, disparada al recibir el evento de integración del contexto de Reseñas).
+* PersonalProfileCreated, PersonalProfileUpdated, AppPreferencesUpdated, ClinicianBookmarked, ClinicianUnbookmarked.
 
-**Queries**
-- GetPersonalProfileByAccountIdQuery, GetSavedSpecialistsByAccountIdQuery, GetCommunityAliasByAccountIdQuery, SearchClinicianProfilesQuery (por especialidad, tarifa, seguro y disponibilidad — soporta US-002), GetClinicianProfileByIdQuery, GetClinicianVerificationStatusQuery.
+**Commands y Queries**
 
-**Domain Services (Contratos)**
-- **ClinicianDirectoryPublicationService:** decide si `publishedInDirectory = true` (requiere verificación aprobada y al menos una disponibilidad publicada).
-- **AliasGenerationService:** genera y rota alias sin exponer la identidad clínica.
+* UpdatePersonalProfileCommand, UpdateAppPreferencesCommand, BookmarkClinicianCommand, RemoveClinicianBookmarkCommand.
+* GetPersonalProfileQuery, GetAppPreferencesQuery, GetBookmarkedCliniciansQuery, GetPlanStatusQuery.
+
+**Business Decisions**
+
+* El accountId debe pertenecer al usuario autenticado en IAM.
+* Una referencia a un psicólogo guardado no concede acceso a su agenda ni a datos clínicos.
+* Profiles no activa Premium: solo actualiza su proyección tras SubscriptionActivated.
 
 #### 2.6.2.2. Interface Layer
 
-**Controllers**
-- **PersonalProfilesController:** edición de nombre, foto y preferencias (US-006, US-026).
-- **SpecialistBookmarksController:** guarda y elimina especialistas marcados desde el directorio (ícono de marcador en *Support*).
-- **CommunityAliasesController:** genera, rota el alias comunitario y actualiza su preferencia de enmascaramiento de voz (pantalla *Community*).
-- **ClinicianProfilesController:** publica y busca fichas profesionales (US-002, US-036, US-042).
-- **ClinicianVerificationsController:** recibe y consulta solicitudes de verificación (US-041).
-
-**Resources (Request/Response DTOs)**
-- **PersonalProfile:** UpdatePersonalProfileResource, AiTonePreferenceResource.
-- **SpecialistBookmark:** SaveSpecialistResource, SavedSpecialistListResource.
-- **CommunityAlias:** CommunityAliasResource, VoiceMaskPresetResource.
-- **ClinicianProfile:** UpdateClinicianProfileResource, ClinicianSearchResource, ClinicianProfileResource (incluye credential, title, yearsOfExperience, insuranceAccepted, ratingAverage, reviewCount), AvailabilityWindowResource.
-- **ClinicianVerification:** SubmitVerificationResource, VerificationStatusResource.
+* **PersonalProfilesController:** consulta y modifica nombre, avatar y zona horaria.
+* **AppPreferencesController:** modifica preferencias personales y de notificación.
+* **ClinicianBookmarksController:** guarda o quita referencias a fichas del directorio.
+* **PlanStatusController:** devuelve la proyección de plan para la aplicación móvil.
+* **Resources:** PersonalProfileResource, UpdateProfileResource, AppPreferencesResource, BookmarkedClinicianResource, PlanStatusResource.
 
 #### 2.6.2.3. Application Layer
 
-**Command Handlers**
-- **PersonalProfileCommandServiceImpl:** UpdatePersonalProfileCommand.
-- **SpecialistBookmarkCommandServiceImpl:** SaveSpecialistCommand, RemoveSavedSpecialistCommand.
-- **CommunityAliasCommandServiceImpl:** RotateCommunityAliasCommand, UpdateVoiceMaskPresetCommand.
-- **ClinicianProfileCommandServiceImpl:** UpdateClinicianProfileCommand, PublishAvailabilityWindowsCommand.
-- **ClinicianVerificationServiceImpl:** SubmitClinicianVerificationCommand, ReviewClinicianVerificationCommand.
-- **ClinicianRatingSyncServiceImpl:** ApplyClinicianRatingSummaryCommand, ejecutado al consumir el evento de integración `ClinicianRatingSummaryUpdated` publicado por el futuro contexto de Reseñas.
-
-**Query Handlers**
-- **PersonalProfileQueryServiceImpl:** GetPersonalProfileByAccountIdQuery, GetSavedSpecialistsByAccountIdQuery.
-- **ClinicianDirectoryQueryServiceImpl:** SearchClinicianProfilesQuery, GetClinicianProfileByIdQuery, GetClinicianVerificationStatusQuery.
+* **UpdatePersonalProfileHandler:** valida titularidad, guarda cambios y emite PersonalProfileUpdated.
+* **UpdatePreferencesHandler:** aplica las preferencias configuradas por el titular.
+* **BookmarkClinicianHandler:** registra una referencia única al psicólogo; consulta su identificador público en Clinician Directory.
+* **SubscriptionActivatedHandler:** actualiza idempotentemente PlanStatusProjection a partir del evento publicado por Payments & Payouts.
+* **ProfileQueryService:** entrega perfil, preferencias, referencias guardadas y estado de plan.
 
 #### 2.6.2.4. Infrastructure Layer
 
-**Repositories**
-- **PersonalProfileRepository:** consultas por accountId.
-- **SavedSpecialistRepository:** consultas de especialistas guardados por accountId; valida duplicados.
-- **CommunityAliasRepository:** consultas por accountId; valida unicidad del alias activo.
-- **ClinicianProfileRepository:** búsqueda por especialidad, tarifa, seguro y disponibilidad; filtra solo fichas publicadas para el directorio; ordena por calificación cacheada.
-- **ClinicianVerificationRepository:** consultas por estado y por clinicianProfileId.
-
-**Adaptadores externos**
-- **DocumentStorageAdapter:** almacena las credenciales de verificación cifradas (bucket privado, acceso restringido a revisión administrativa).
-- **ImageStorageAdapter:** almacena fotos de perfil y avatares.
-- **ReviewsIntegrationEventListener:** consume `ClinicianRatingSummaryUpdated` desde el Event Bus y actualiza el read model de calificación de `ClinicianProfile` (Profiles solo lee este dato, nunca lo calcula).
+* **PersonalProfileRepository, PreferencesRepository y PlanProjectionRepository:** persistencia exclusiva de Profiles.
+* **IamIdentityClient:** valida identidad y rol sin acceder a credenciales.
+* **DirectoryReferenceClient:** comprueba que la ficha referenciada existe y está publicada.
+* **SubscriptionEventConsumer:** consume el cambio de plan; evita aplicar dos veces el mismo evento.
+* **AvatarStorageAdapter:** guarda la imagen del titular en almacenamiento privado.
 
 #### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-![structurizr-Profiles-BC](../assets/images/chap2/boundedcontexts/Profiles_Components-dark.png)
+**Diagrama C4 de componentes en Structurizr DSL:**
+
+```text
+workspace "SafeDiary - Profiles" "C4 Component Diagram del bounded context Profiles" {
+    model {
+        patient = person "Paciente" "Actualiza sus datos personales, preferencias y psicólogos guardados."
+        psychologist = person "Psicólogo" "Actualiza sus datos personales y preferencias de la aplicación."
+
+        safeDiary = softwareSystem "SafeDiary" {
+            profilesApi = container "Profiles Service" "Administra perfiles personales, preferencias, favoritos y la proyección del plan." "Servicio de API" {
+                profilesController = component "PersonalProfilesController" "Consulta y actualiza los datos personales del titular." "Interface"
+                preferencesController = component "AppPreferencesController" "Consulta y actualiza preferencias personales y de notificación." "Interface"
+                bookmarksController = component "ClinicianBookmarksController" "Guarda o elimina referencias a psicólogos del directorio." "Interface"
+                planController = component "PlanStatusController" "Expone el estado Básico o Premium recibido desde Payments & Payouts." "Interface"
+                profileService = component "PersonalProfileApplicationService" "Orquesta consulta y actualización del perfil." "Application"
+                preferencesService = component "PreferencesApplicationService" "Orquesta la actualización de preferencias." "Application"
+                bookmarksService = component "ClinicianBookmarkApplicationService" "Orquesta el guardado de referencias a fichas publicadas." "Application"
+                planProjectionHandler = component "SubscriptionEventHandler" "Actualiza la proyección al recibir SubscriptionActivated." "Application"
+                identityClient = component "IamIdentityClient" "Valida identidad y rol sin gestionar credenciales." "ACL"
+                directoryClient = component "DirectoryReferenceClient" "Comprueba que la ficha profesional existe y está publicada." "ACL"
+                profileRepository = component "PersonalProfileRepository" "Persiste datos personales y referencias del titular." "Repository"
+                preferencesRepository = component "PreferencesRepository" "Persiste preferencias de la aplicación." "Repository"
+                planRepository = component "PlanProjectionRepository" "Persiste el estado de plan como modelo de lectura." "Repository"
+                avatarAdapter = component "AvatarStorageAdapter" "Almacena la imagen de perfil en almacenamiento privado." "Infrastructure"
+            }
+            profilesDb = container "Profiles Database" "Perfiles personales, preferencias, favoritos y proyección del plan." "PostgreSQL" "Database"
+            eventBus = container "Event Bus" "Eventos de integración entre bounded contexts." "RabbitMQ" "Queue"
+        }
+        iam = softwareSystem "IAM" "Provee identidad autenticada y rol del titular." "External System"
+        directory = softwareSystem "Clinician Directory" "Provee referencias de fichas profesionales publicadas." "External System"
+        payments = softwareSystem "Payments & Payouts" "Publica cambios confirmados de suscripción." "External System"
+        objectStorage = softwareSystem "Object Storage" "Almacena imágenes de perfil de forma privada." "External System"
+
+        patient -> profilesController "Consulta y actualiza su perfil" "HTTPS"
+        patient -> preferencesController "Gestiona preferencias" "HTTPS"
+        patient -> bookmarksController "Guarda o elimina psicólogos" "HTTPS"
+        patient -> planController "Consulta su plan" "HTTPS"
+        psychologist -> profilesController "Consulta y actualiza su perfil" "HTTPS"
+        psychologist -> preferencesController "Gestiona preferencias" "HTTPS"
+
+        profilesController -> profileService
+        preferencesController -> preferencesService
+        bookmarksController -> bookmarksService
+        planController -> planRepository
+        profileService -> identityClient
+        preferencesService -> identityClient
+        bookmarksService -> identityClient
+        bookmarksService -> directoryClient
+        profileService -> profileRepository
+        preferencesService -> preferencesRepository
+        bookmarksService -> profileRepository
+        profileService -> avatarAdapter
+        planProjectionHandler -> planRepository
+
+        identityClient -> iam "Valida identidad y rol" "HTTPS"
+        directoryClient -> directory "Valida ficha publicada" "HTTPS"
+        payments -> eventBus "Publica SubscriptionActivated" "AMQP"
+        eventBus -> planProjectionHandler "Entrega eventos de suscripción" "AMQP"
+        avatarAdapter -> objectStorage "Guarda y recupera avatar privado" "HTTPS"
+        profileRepository -> profilesDb "Lee y escribe" "SQL"
+        preferencesRepository -> profilesDb "Lee y escribe" "SQL"
+        planRepository -> profilesDb "Lee y escribe" "SQL"
+    }
+    views {
+        component profilesApi "ProfilesComponents" {
+            include *
+            autoLayout
+        }
+        styles {
+            element "Person" {
+                shape Person
+                background #08427b
+                color #ffffff
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "Container" {
+                background #438dd5
+                color #ffffff
+            }
+            element "Component" {
+                background #85bbf0
+                color #000000
+            }
+            element "Database" {
+                shape Cylinder
+                background #2e7d32
+                color #ffffff
+            }
+            element "Queue" {
+                shape Pipe
+                background #6a1b9a
+                color #ffffff
+            }
+        }
+    }
+}
+```
 
 #### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
 
@@ -1955,68 +2077,27 @@ Los mockups de la aplicación confirman y afinan tres detalles del modelo: (1) l
 ```mermaid
 classDiagram
     class PersonalProfile {
-        +String id
-        +String accountId
+        +UUID id
+        +UUID accountId
         +String displayName
-        +String avatarUrl
-        +String aiTonePreference
-        +Boolean proactiveFollowUpEnabled
-        +List~String~ savedClinicianProfileIds
-        +update()
-        +saveSpecialist(clinicianProfileId)
-        +removeSavedSpecialist(clinicianProfileId)
-    }
-    class CommunityAlias {
-        +String id
-        +String accountId
-        +String aliasHandle
-        +Boolean active
-        +VoiceMaskPreset voiceMaskPreset
-        +rotate()
-        +updateVoiceMaskPreset(preset)
-    }
-    class ClinicianProfile {
-        +String id
-        +String accountId
-        +String credential
-        +String title
-        +List~String~ specialties
-        +Int yearsOfExperience
-        +String bio
-        +Money hourlyRate
-        +Int sessionDurationMinutes
-        +Boolean insuranceAccepted
-        +VerificationStatus verificationStatus
-        +Boolean publishedInDirectory
-        +Decimal ratingAverage
-        +Int reviewCount
-        +updateProfile()
-        +publishAvailability()
-        +applyRatingSummary(ratingAverage, reviewCount)
-    }
-    class AvailabilityWindow {
-        +String id
-        +String dayOfWeek
-        +Time startTime
-        +Time endTime
+        +String avatarRef
         +String timezone
+        +update()
+        +bookmarkClinician()
     }
-    class ClinicianVerification {
-        +String id
-        +String clinicianProfileId
-        +List~String~ documentRefs
-        +VerificationStatus status
-        +submit()
-        +review()
+    class AppPreferences {
+        +Boolean notificationsEnabled
+        +String assistantTone
+        +String locale
     }
-    class ClinicianDirectoryPublicationService {
-        +evaluate(ClinicianProfile) Boolean
+    class PlanStatusProjection {
+        +UUID accountId
+        +String plan
+        +DateTime updatedAt
+        +applySubscriptionActivated()
     }
-
-    ClinicianProfile "1" --> "0..*" AvailabilityWindow : publica
-    ClinicianProfile "1" --> "1" ClinicianVerification : requiere
-    PersonalProfile "0..*" ..> ClinicianProfile : guarda como favorito
-    ClinicianDirectoryPublicationService ..> ClinicianProfile : evalúa
+    PersonalProfile "1" *-- "1" AppPreferences
+    PersonalProfile "1" --> "0..1" PlanStatusProjection : muestra
 ```
 
 ##### 2.6.2.6.2. Bounded Context Database Design Diagram
@@ -2025,68 +2106,31 @@ classDiagram
 erDiagram
     PERSONAL_PROFILES {
         uuid id PK
-        uuid account_id FK
+        uuid account_id UK
         string display_name
-        string avatar_url
-        string ai_tone_preference
-        boolean proactive_follow_up_enabled
-    }
-    SAVED_SPECIALISTS {
-        uuid id PK
-        uuid personal_profile_id FK
-        uuid clinician_profile_id FK
-        datetime saved_at
-    }
-    COMMUNITY_ALIASES {
-        uuid id PK
-        uuid account_id FK
-        string alias_handle
-        boolean active
-        string voice_mask_preset
-        datetime rotated_at
-    }
-    CLINICIAN_PROFILES {
-        uuid id PK
-        uuid account_id FK
-        string credential
-        string title
-        int years_of_experience
-        string bio
-        float hourly_rate
-        string currency
-        int session_duration_minutes
-        boolean insurance_accepted
-        string verification_status
-        boolean published_in_directory
-        float rating_average
-        int review_count
-    }
-    CLINICIAN_SPECIALTIES {
-        uuid id PK
-        uuid clinician_profile_id FK
-        string specialty_name
-    }
-    CLINICIAN_AVAILABILITY_WINDOWS {
-        uuid id PK
-        uuid clinician_profile_id FK
-        string day_of_week
-        time start_time
-        time end_time
+        string avatar_ref
+        string locale
         string timezone
     }
-    CLINICIAN_VERIFICATIONS {
-        uuid id PK
-        uuid clinician_profile_id FK
-        string status
-        datetime submitted_at
-        datetime reviewed_at
+    APP_PREFERENCES {
+        uuid profile_id PK
+        boolean notifications_enabled
+        string assistant_tone
     }
-
-    PERSONAL_PROFILES ||--o{ SAVED_SPECIALISTS : "bookmarks"
-    CLINICIAN_PROFILES ||--o{ SAVED_SPECIALISTS : "is bookmarked in"
-    CLINICIAN_PROFILES ||--o{ CLINICIAN_SPECIALTIES : "has specialties"
-    CLINICIAN_PROFILES ||--o{ CLINICIAN_AVAILABILITY_WINDOWS : "publishes"
-    CLINICIAN_PROFILES ||--|| CLINICIAN_VERIFICATIONS : "requires"
+    BOOKMARKED_CLINICIANS {
+        uuid profile_id FK
+        uuid clinician_id
+        datetime saved_at
+    }
+    PLAN_STATUS_PROJECTIONS {
+        uuid account_id PK
+        string plan
+        datetime updated_at
+        string source_event_id UK
+    }
+    PERSONAL_PROFILES ||--|| APP_PREFERENCES : configura
+    PERSONAL_PROFILES ||--o{ BOOKMARKED_CLINICIANS : guarda
+    PERSONAL_PROFILES ||--o| PLAN_STATUS_PROJECTIONS : muestra
 ```
 
 
@@ -2213,7 +2257,7 @@ workspace "SafeDiary - AssistantAI (Component Diagram)" "C4 Component Diagram de
         }
 
         diaryContext    = softwareSystem "Diary (Bounded Context externo)" "Provee entradas de diario y recibe reflexiones generadas."
-        clinicalContext = softwareSystem "Professional Care (Bounded Context externo)" "Recibe resúmenes clínicos para la preparación de consultas."
+        careContext     = softwareSystem "Care Scheduling (Bounded Context externo)" "Consulta resúmenes emocionales mínimos después de validar el consentimiento en IAM."
         geminiApi       = softwareSystem "Google Gemini API (External System)" "Modelo fundacional LLM para análisis de lenguaje natural y generación."
         crisisService   = softwareSystem "Línea de Crisis 988 (External System)" "Servicio telefónico y digital de emergencia y contención humana."
 
@@ -2262,7 +2306,7 @@ workspace "SafeDiary - AssistantAI (Component Diagram)" "C4 Component Diagram de
         clinicalSummaryAggregate -> eventBus "Publica ClinicalSummaryGenerated"
 
         # Integraciones entre bounded contexts
-        eventBus     -> clinicalContext         "Entrega ClinicalSummaryGenerated"
+        eventBus     -> careContext             "Entrega ClinicalSummaryGenerated"
         eventBus     -> diaryContext            "Entrega ReflectionGenerated"
         diaryContext -> conversationsController "Sincroniza entradas para contexto" "HTTPS/JSON"
     }
@@ -2424,529 +2468,9 @@ erDiagram
 
 
 
-### 2.6.4. Bounded Context: Communities
+### 2.6.4. Bounded Context: Diary
 
-**Communities** es el contexto nuclear que gobierna la experiencia de apoyo comunitario anónimo de SafeDiary: administra la programación y el ciclo de vida de las salas, el ingreso como oyente, las solicitudes de turno de palabra, las reacciones de apoyo y las decisiones de moderación, reporte y bloqueo (US-004, US-005, US-034, US-035, TS-004, TS-005). Su objetivo es que una persona pueda recibir compañía o participar en una conversación sin revelar su identidad personal, clínica ni el contenido de su diario.
-
-La frontera del contexto separa deliberadamente tres responsabilidades. **Profiles** es dueño de `CommunityAlias` y de la preferencia de enmascaramiento de voz; **IAM** valida la cuenta y las restricciones de acceso; **Rooms** establece y finaliza la conexión WebRTC. Communities consume esos contratos mediante puertos, pero es el único responsable de decidir si una sala puede abrirse, quién puede entrar, cuándo un oyente puede convertirse en orador y qué acción de moderación corresponde. El audio crudo no forma parte del modelo de Communities y no se conserva por defecto.
-
-La máquina de estados de participación es `BROWSING -> JOINED_AS_LISTENER -> REQUESTING_SPEAKER -> SPEAKING -> LEFT`, con ramas excepcionales `MUTED`, `REMOVED` y `BLOCKED`. Un fallo de WebRTC no modifica por sí solo el estado del agregado: la operación puede reintentarse o compensarse sin duplicar participantes ni acciones de moderación.
-
-#### 2.6.4.1. Domain Layer
-
-**Entities y Aggregates**
-- **CommunitySession (Aggregate Root):** id, topic, description, tags[], moderatorAliasId, scheduledAt, openedAt, closedAt, lifecycle (SCHEDULED, OPEN, CLOSED, CANCELLED), participationMode, capacity, participants[], speakerRequests[] y version. Representa la sesión social de apoyo y protege las invariantes de aforo, ciclo de vida y roles. Expone los comportamientos `schedule()`, `open()`, `joinAsListener()`, `leave()`, `requestSpeaker()`, `approveSpeaker()`, `rejectSpeaker()`, `sendReaction()`, `muteParticipant()`, `removeParticipant()` y `close()`.
-- **ParticipantSession:** id, communitySessionId, communityAliasId, role (LISTENER, SPEAKER, MODERATOR), status (ACTIVE, MUTED, REMOVED, LEFT), joinedAt, leftAt. La identidad visible es exclusivamente el alias; `accountId`, nombre, correo y datos clínicos nunca ingresan al agregado.
-- **SpeakerRequest:** id, communitySessionId, participantSessionId, requestedAt, resolvedAt, status (PENDING, APPROVED, REJECTED, CANCELLED), resolvedByAliasId. Solo puede existir una solicitud pendiente por participante y únicamente el moderador puede resolverla.
-- **ModerationCase (Aggregate Root):** id, communitySessionId, reporterAliasId, reportedAliasId, reason, description, status (OPEN, UNDER_REVIEW, RESOLVED, DISMISSED), action, createdAt, resolvedAt. Conserva la trazabilidad del incidente sin almacenar audio crudo ni revelar el denunciante a la comunidad.
-- **BlockRelation (Aggregate Root):** id, blockerAliasId, blockedAliasId, createdAt, active. Impide nuevas interacciones entre ambos alias y permite aplicar el bloqueo más allá de una sala concreta.
-
-**Value Objects**
-- **CommunitySessionId, ParticipantSessionId, SpeakerRequestId, ModerationCaseId, BlockRelationId:** identificadores fuertemente tipados.
-- **CommunityAliasRef:** referencia opaca al alias validado por Profiles; no contiene datos personales ni clínicos.
-- **SessionTopic:** título, descripción y etiquetas normalizadas; rechaza títulos vacíos o fuera de los límites permitidos.
-- **SessionCapacity:** límite positivo de participantes y operación `hasAvailableSlot(currentParticipants)`.
-- **SessionLifecycle:** SCHEDULED, OPEN, CLOSED, CANCELLED.
-- **ParticipantRole:** LISTENER, SPEAKER, MODERATOR.
-- **ParticipationStatus:** BROWSING, JOINED_AS_LISTENER, REQUESTING_SPEAKER, SPEAKING, MUTED, REMOVED, BLOCKED, LEFT.
-- **ReactionType:** HUG, SUPPORT, THANKS, EMPATHY; restringe las reacciones a un catálogo seguro, sin texto libre.
-- **ReportReason:** HARASSMENT, HATE_SPEECH, SEXUAL_CONTENT, SELF_HARM_RISK, SPAM, OTHER.
-- **ModerationAction:** NONE, MUTE, REMOVE, BLOCK.
-
-**Invariantes y reglas de negocio**
-- Una sala solo acepta participantes cuando está `OPEN`, tiene capacidad disponible y el alias no está bloqueado.
-- Toda incorporación comienza con el rol `LISTENER` y el micrófono silenciado; hablar requiere una `SpeakerRequest` aprobada.
-- Solo el moderador de la sala puede aprobar turnos, silenciar, retirar participantes o cerrar la sala.
-- Los comandos repetidos de unión, salida, bloqueo o cierre son idempotentes y no duplican sesiones ni eventos.
-- Reportes, bloqueos y acciones de moderación producen un registro auditable; nunca exponen el alias del denunciante a otros participantes.
-- El cierre de una sala finaliza todas las participaciones activas y solicita a Rooms liberar las sesiones de audio.
-- Communities no persiste audio, transcripciones, emociones inferidas, nombres reales, credenciales ni contenido del diario.
-
-**Domain Events**
-- CommunitySessionScheduled, CommunitySessionOpened, CommunitySessionClosed, CommunitySessionCancelled.
-- ParticipantJoinedAsListener, ParticipantLeft, SpeakerRequested, SpeakerRequestApproved, SpeakerRequestRejected, ParticipantPromotedToSpeaker.
-- ReactionSent, ModerationCaseOpened, ParticipantMuted, ParticipantRemoved, ParticipantBlocked, ModerationCaseResolved.
-
-**Commands**
-- ScheduleCommunitySessionCommand, OpenCommunitySessionCommand, JoinCommunitySessionAsListenerCommand, LeaveCommunitySessionCommand.
-- RequestSpeakerTurnCommand, ApproveSpeakerTurnCommand, RejectSpeakerTurnCommand, SendSupportReactionCommand.
-- ReportParticipantCommand, MuteParticipantCommand, RemoveParticipantCommand, BlockParticipantCommand, ResolveModerationCaseCommand, CloseCommunitySessionCommand.
-
-**Queries**
-- GetOpenCommunitySessionsQuery, GetCommunitySessionByIdQuery, GetSessionParticipantsQuery, GetPendingSpeakerRequestsQuery.
-- GetParticipantStateQuery, GetModerationCasesQuery, GetModerationCaseByIdQuery, IsAliasBlockedQuery.
-
-**Domain Services (Contratos)**
-- **CommunitySessionAccessPolicy:** decide si un alias puede entrar considerando vigencia, estado de la sesión, capacidad, bloqueos y una participación activa previa.
-- **SpeakerTurnPolicy:** garantiza que la promoción a orador respete el orden de solicitud, el estado del participante y la autorización del moderador.
-- **ModerationPolicy:** determina qué acciones están permitidas para cada rol y exige motivo y auditoría para retirar o bloquear.
-- **CommunityModerationService:** coordina la apertura de un caso, la aplicación idempotente de la acción y la publicación de eventos cuando la decisión involucra más de un agregado.
-
-#### 2.6.4.2. Interface Layer
-
-**Controllers**
-- **CommunitySessionsController:** programa, abre, consulta y cierra sesiones comunitarias; expone el listado de sesiones abiertas y su capacidad (US-004).
-- **CommunityParticipationController:** permite entrar como oyente, salir, consultar el estado de participación, solicitar turno y enviar reacciones (US-005).
-- **SpeakerQueueController:** permite al moderador consultar y resolver solicitudes pendientes de palabra.
-- **CommunityModerationController:** registra reportes y bloqueos y permite silenciar o retirar participantes (US-034, US-035).
-
-**Resources (Request/Response DTOs)**
-- **Sessions:** ScheduleCommunitySessionResource, OpenCommunitySessionResource, CommunitySessionResource, CommunitySessionSummaryResource, SessionCapacityResource.
-- **Participation:** JoinAsListenerResource, ParticipantSessionResource, RequestSpeakerTurnResource, SpeakerRequestResource, SendReactionResource.
-- **Moderation:** ReportParticipantResource, ApplyModerationActionResource, ModerationCaseResource, BlockRelationResource.
-
-Los recursos públicos solo incluyen `communityAlias`, rol y estado comunitario. Los identificadores internos de cuenta, datos clínicos y detalles de auditoría permanecen fuera de las respuestas dirigidas a participantes.
-
-#### 2.6.4.3. Application Layer
-
-**Command Handlers**
-- **CommunitySessionCommandServiceImpl:** ScheduleCommunitySessionCommand, OpenCommunitySessionCommand y CloseCommunitySessionCommand.
-- **CommunityParticipationCommandServiceImpl:** JoinCommunitySessionAsListenerCommand, LeaveCommunitySessionCommand, RequestSpeakerTurnCommand y SendSupportReactionCommand.
-- **SpeakerQueueCommandServiceImpl:** ApproveSpeakerTurnCommand y RejectSpeakerTurnCommand.
-- **CommunityModerationCommandServiceImpl:** ReportParticipantCommand, MuteParticipantCommand, RemoveParticipantCommand, BlockParticipantCommand y ResolveModerationCaseCommand.
-
-**Query Handlers**
-- **CommunitySessionQueryServiceImpl:** GetOpenCommunitySessionsQuery y GetCommunitySessionByIdQuery.
-- **CommunityParticipationQueryServiceImpl:** GetSessionParticipantsQuery, GetParticipantStateQuery y GetPendingSpeakerRequestsQuery.
-- **CommunityModerationQueryServiceImpl:** GetModerationCasesQuery, GetModerationCaseByIdQuery e IsAliasBlockedQuery.
-
-**Event Handlers**
-- **CommunitySessionOpenedEventHandler:** solicita a Rooms la creación de la sesión WebRTC y publica la disponibilidad de la sala.
-- **ParticipantPromotedToSpeakerEventHandler:** concede temporalmente capacidad de publicación de audio mediante `AudioSessionPort`.
-- **ParticipantRemovedEventHandler:** revoca el permiso de audio, actualiza la presencia y registra la acción en auditoría.
-- **CommunitySessionClosedEventHandler:** finaliza conexiones activas y notifica a los participantes sin reabrir el agregado si la notificación falla.
-- **ModerationCaseOpenedEventHandler:** remite el caso al servicio de Audit/Moderation para revisión asíncrona.
-
-Cada handler utiliza claves de idempotencia compuestas por `commandId`, `communitySessionId` y `aliasId`. La persistencia del agregado y del evento saliente se realiza mediante el patrón Transactional Outbox para evitar estados confirmados sin notificación o eventos duplicados.
-
-#### 2.6.4.4. Infrastructure Layer
-
-**Repositories**
-- **CommunitySessionRepository:** persistencia optimista del agregado y búsqueda por estado, horario y etiquetas.
-- **ModerationCaseRepository:** persistencia append-friendly de reportes, decisiones y evidencias estructuradas.
-- **BlockRelationRepository:** consulta eficiente de bloqueos activos entre alias.
-- **CommunityOutboxRepository:** almacena eventos pendientes de publicación en el Event Bus.
-
-**Adaptadores externos**
-- **ProfilesAliasAdapter:** valida que `CommunityAliasRef` exista, esté activo y obtiene el `voiceMaskPreset` sin recuperar la identidad clínica.
-- **IamEligibilityAdapter:** confirma que la cuenta asociada pueda usar la comunidad y no esté suspendida; la respuesta se reduce a un resultado de elegibilidad opaco.
-- **RoomsAudioSessionAdapter:** implementa `AudioSessionPort` para crear/cerrar sesiones WebRTC, mantener el micrófono silenciado por defecto y conceder o revocar el rol de orador (TS-004).
-- **AuditModerationAdapter:** registra reportes y acciones sensibles para revisión y cumplimiento, sin copiar audio ni datos clínicos (TS-005).
-- **CommunityNotificationAdapter:** envía avisos de apertura, aprobación de turno, moderación y cierre.
-
-Los adaptadores aplican timeout, reintento acotado y circuit breaker. Si Rooms no responde durante una apertura, la sala permanece `SCHEDULED` o se marca como apertura fallida; si falla una notificación, el evento queda en Outbox sin revertir una decisión de dominio ya confirmada.
-
-#### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
-
-![structurizr-Communities-BC](../assets/images/chap2/boundedcontexts/Communities_Components.svg)
-
-Código en **Structurizr DSL (C4 Model)** para el componente Communities:
-
-```text
-workspace "SafeDiary - Communities (Component Diagram)" "C4 Component Diagram del bounded context Communities" {
-    model {
-        participant = person "Participante" "Escucha, solicita turno, reacciona, reporta o bloquea mediante su alias comunitario."
-        moderator   = person "Moderador / Anfitrión" "Conduce la sala y aplica acciones de seguridad autorizadas."
-
-        safeDiary = softwareSystem "SafeDiary" {
-            communitiesApi = container "Communities API" "Gobierna salas comunitarias, participación, turnos y moderación." "ASP.NET Core" {
-                sessionsController      = component "CommunitySessionsController" "Endpoints del ciclo de vida y consulta de sesiones comunitarias." "REST Controller"
-                participationController = component "CommunityParticipationController" "Endpoints de ingreso, salida, turno y reacciones." "REST Controller"
-                speakerQueueController  = component "SpeakerQueueController" "Endpoints de la cola de solicitudes de palabra." "REST Controller"
-                moderationController    = component "CommunityModerationController" "Endpoints de reporte, bloqueo, silencio y retiro." "REST Controller"
-
-                sessionCmdService       = component "CommunitySessionCommandServiceImpl" "Orquesta programación, apertura y cierre." "Application Service"
-                sessionQryService       = component "CommunitySessionQueryServiceImpl" "Consulta sesiones abiertas y detalle." "Application Service"
-                participationCmdService = component "CommunityParticipationCommandServiceImpl" "Orquesta ingreso, salida, turno y reacciones." "Application Service"
-                participationQryService = component "CommunityParticipationQueryServiceImpl" "Consulta presencia y cola de turnos." "Application Service"
-                moderationCmdService    = component "CommunityModerationCommandServiceImpl" "Coordina reportes y acciones de seguridad." "Application Service"
-
-                communitySessionAggregate = component "CommunitySession Aggregate" "Invariantes de ciclo de vida, aforo, roles y turnos." "Domain Model (DDD)"
-                moderationCaseAggregate = component "ModerationCase Aggregate" "Ciclo auditable de un reporte comunitario." "Domain Model (DDD)"
-                blockRelationAggregate  = component "BlockRelation Aggregate" "Restricción persistente entre alias." "Domain Model (DDD)"
-                sessionAccessPolicy     = component "CommunitySessionAccessPolicy" "Valida alias, capacidad, estado y bloqueos." "Domain Service"
-                moderationPolicy        = component "ModerationPolicy" "Autoriza y limita acciones del moderador." "Domain Service"
-
-                sessionRepo         = component "CommunitySessionRepository" "Persistencia del agregado de sesión comunitaria." "Repository"
-                moderationRepo      = component "ModerationCaseRepository" "Persistencia de casos de moderación." "Repository"
-                blockRepo           = component "BlockRelationRepository" "Persistencia y consulta de bloqueos." "Repository"
-                profilesAdapter     = component "ProfilesAliasAdapter" "Valida alias y preferencia de máscara." "Infrastructure Adapter"
-                iamAdapter          = component "IamEligibilityAdapter" "Valida elegibilidad sin exponer identidad." "Infrastructure Adapter"
-                roomsAdapter        = component "RoomsAudioSessionAdapter" "Administra permisos de sesión WebRTC." "Infrastructure Adapter"
-                auditAdapter        = component "AuditModerationAdapter" "Registra decisiones y casos auditables." "Infrastructure Adapter"
-                notificationAdapter = component "CommunityNotificationAdapter" "Envía avisos comunitarios." "Infrastructure Adapter"
-            }
-
-            postgres = container "Communities Database" "Salas, participaciones, turnos, reportes, bloqueos y Outbox." "PostgreSQL 15"
-            eventBus = container "Event Bus" "Distribuye eventos comunitarios y de moderación." "RabbitMQ / Kafka"
-        }
-
-        profilesContext = softwareSystem "Profiles (Bounded Context externo)" "Es dueño de CommunityAlias y voiceMaskPreset."
-        iamContext      = softwareSystem "IAM (Bounded Context externo)" "Valida cuenta y restricciones de acceso."
-        roomsContext    = softwareSystem "Rooms (Bounded Context externo)" "Provee transporte de audio WebRTC en tiempo real."
-        auditContext    = softwareSystem "Audit & Moderation" "Conserva trazabilidad y soporta revisión de incidentes."
-        notifications   = softwareSystem "Notifications" "Entrega avisos push e in-app."
-
-        participant -> sessionsController      "Consulta y crea sesiones comunitarias" "HTTPS/JSON"
-        participant -> participationController "Entra, sale, solicita turno y reacciona" "HTTPS/JSON"
-        participant -> moderationController    "Reporta o bloquea" "HTTPS/JSON"
-        moderator   -> speakerQueueController  "Resuelve solicitudes de palabra" "HTTPS/JSON"
-        moderator   -> moderationController    "Silencia o retira participantes" "HTTPS/JSON"
-
-        sessionsController      -> sessionCmdService       "Envía comandos"
-        sessionsController      -> sessionQryService       "Envía queries"
-        participationController -> participationCmdService "Envía comandos"
-        participationController -> participationQryService "Envía queries"
-        speakerQueueController  -> participationCmdService "Resuelve turnos"
-        moderationController    -> moderationCmdService    "Envía comandos"
-
-        sessionCmdService       -> communitySessionAggregate "Modifica ciclo de vida"
-        participationCmdService -> communitySessionAggregate "Modifica participantes y turnos"
-        participationCmdService -> sessionAccessPolicy       "Valida acceso"
-        moderationCmdService    -> moderationCaseAggregate "Abre y resuelve casos"
-        moderationCmdService    -> blockRelationAggregate  "Aplica bloqueos"
-        moderationCmdService    -> moderationPolicy        "Autoriza acción"
-
-        sessionCmdService       -> sessionRepo    "Persiste"
-        sessionQryService       -> sessionRepo    "Consulta"
-        participationCmdService -> sessionRepo    "Persiste"
-        moderationCmdService    -> moderationRepo "Persiste"
-        moderationCmdService    -> blockRepo      "Persiste/consulta"
-        sessionRepo    -> postgres "CRUD" "SQL/TCP"
-        moderationRepo -> postgres "CRUD" "SQL/TCP"
-        blockRepo      -> postgres "CRUD" "SQL/TCP"
-
-        participationCmdService -> profilesAdapter "Valida CommunityAliasRef"
-        participationCmdService -> iamAdapter      "Valida elegibilidad"
-        sessionCmdService       -> roomsAdapter    "Crea o cierra sesión de audio"
-        participationCmdService -> roomsAdapter    "Concede o revoca publicación de audio"
-        moderationCmdService    -> auditAdapter    "Registra caso y acción"
-
-        profilesAdapter -> profilesContext "Consulta alias activo" "HTTPS/JSON"
-        iamAdapter      -> iamContext      "Consulta elegibilidad" "HTTPS/JSON"
-        roomsAdapter    -> roomsContext    "Administra sesión WebRTC" "HTTPS/gRPC"
-        auditAdapter    -> auditContext    "Publica registro auditable" "Event/HTTPS"
-
-        communitySessionAggregate -> eventBus "Publica eventos de sesión comunitaria y participación"
-        moderationCaseAggregate -> eventBus "Publica eventos de moderación"
-        eventBus -> notifications "Entrega eventos notificables"
-    }
-
-    views {
-        component communitiesApi "Communities_Components" {
-            include *
-            autoLayout
-        }
-        styles {
-            element "Person" {
-                shape Person
-                background #08427b
-                color #ffffff
-            }
-            element "Software System" {
-                background #1168bd
-                color #ffffff
-            }
-            element "Container" {
-                background #438dd5
-                color #ffffff
-            }
-            element "Component" {
-                background #85bbf0
-                color #000000
-            }
-        }
-    }
-}
-```
-
-#### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
-
-
-##### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
-
-Código en **Mermaid Class Diagram**:
-
-```mermaid
-classDiagram
-    class CommunitySession {
-        +UUID id
-        +SessionTopic topic
-        +CommunityAliasRef moderatorAliasId
-        +DateTime scheduledAt
-        +SessionLifecycle lifecycle
-        +SessionCapacity capacity
-        +int version
-        +schedule()
-        +open()
-        +joinAsListener(alias)
-        +leave(participantId)
-        +requestSpeaker(participantId)
-        +approveSpeaker(requestId, moderatorAlias)
-        +sendReaction(participantId, reaction)
-        +muteParticipant(participantId)
-        +removeParticipant(participantId)
-        +close()
-    }
-    class ParticipantSession {
-        +UUID id
-        +UUID communitySessionId
-        +CommunityAliasRef aliasId
-        +ParticipantRole role
-        +ParticipationStatus status
-        +DateTime joinedAt
-        +DateTime leftAt
-        +promoteToSpeaker()
-        +mute()
-        +leave()
-    }
-    class SpeakerRequest {
-        +UUID id
-        +UUID participantSessionId
-        +DateTime requestedAt
-        +SpeakerRequestStatus status
-        +approve(moderatorAlias)
-        +reject(moderatorAlias)
-    }
-    class ModerationCase {
-        +UUID id
-        +UUID communitySessionId
-        +CommunityAliasRef reporterAliasId
-        +CommunityAliasRef reportedAliasId
-        +ReportReason reason
-        +ModerationCaseStatus status
-        +ModerationAction action
-        +DateTime createdAt
-        +resolve(action)
-        +dismiss()
-    }
-    class BlockRelation {
-        +UUID id
-        +CommunityAliasRef blockerAliasId
-        +CommunityAliasRef blockedAliasId
-        +Boolean active
-        +DateTime createdAt
-        +deactivate()
-    }
-    class CommunitySessionAccessPolicy {
-        +canJoin(alias, room, blocks) Boolean
-    }
-    class SpeakerTurnPolicy {
-        +canApprove(request, moderator, room) Boolean
-    }
-    class ModerationPolicy {
-        +canApply(actor, target, action) Boolean
-    }
-    class AudioSessionPort {
-        <<interface>>
-        +createSession(communitySessionId)
-        +grantSpeaker(communitySessionId, participantId)
-        +revokeSpeaker(communitySessionId, participantId)
-        +closeSession(communitySessionId)
-    }
-
-    CommunitySession "1" *-- "0..*" ParticipantSession : contiene
-    CommunitySession "1" *-- "0..*" SpeakerRequest : gestiona
-    ParticipantSession "1" --> "0..1" SpeakerRequest : solicita
-    CommunitySession "1" --> "0..*" ModerationCase : origina
-    ModerationCase "0..*" --> "0..1" BlockRelation : puede crear
-    CommunitySessionAccessPolicy ..> CommunitySession : valida
-    CommunitySessionAccessPolicy ..> BlockRelation : consulta
-    SpeakerTurnPolicy ..> SpeakerRequest : valida
-    ModerationPolicy ..> ModerationCase : gobierna
-    CommunitySession ..> AudioSessionPort : usa
-```
-
-
-##### 2.6.4.6.2. Bounded Context Database Design Diagram
-
-Código en **Mermaid ER Diagram** para la base de datos relacional de Communities:
-
-```mermaid
-erDiagram
-    COMMUNITY_SESSIONS {
-        uuid id PK
-        uuid moderator_alias_id
-        string title
-        text description
-        string participation_mode
-        string lifecycle
-        int max_participants
-        datetime scheduled_at
-        datetime opened_at
-        datetime closed_at
-        int version
-    }
-    COMMUNITY_SESSION_TAGS {
-        uuid community_session_id FK
-        string tag
-    }
-    PARTICIPANT_SESSIONS {
-        uuid id PK
-        uuid community_session_id FK
-        uuid community_alias_id
-        string role
-        string status
-        datetime joined_at
-        datetime left_at
-    }
-    SPEAKER_REQUESTS {
-        uuid id PK
-        uuid community_session_id FK
-        uuid participant_session_id FK
-        uuid resolved_by_alias_id
-        string status
-        datetime requested_at
-        datetime resolved_at
-    }
-    SUPPORT_REACTIONS {
-        uuid id PK
-        uuid community_session_id FK
-        uuid participant_session_id FK
-        string reaction_type
-        datetime sent_at
-    }
-    MODERATION_CASES {
-        uuid id PK
-        uuid community_session_id FK
-        uuid reporter_alias_id
-        uuid reported_alias_id
-        string reason
-        text description
-        string status
-        string action
-        datetime created_at
-        datetime resolved_at
-    }
-    BLOCK_RELATIONS {
-        uuid id PK
-        uuid blocker_alias_id
-        uuid blocked_alias_id
-        boolean active
-        datetime created_at
-        datetime deactivated_at
-    }
-    COMMUNITY_OUTBOX {
-        uuid id PK
-        string aggregate_type
-        uuid aggregate_id
-        string event_type
-        text payload
-        datetime occurred_at
-        datetime published_at
-    }
-
-    COMMUNITY_SESSIONS ||--o{ COMMUNITY_SESSION_TAGS : "classified by"
-    COMMUNITY_SESSIONS ||--o{ PARTICIPANT_SESSIONS : "contains"
-    COMMUNITY_SESSIONS ||--o{ SPEAKER_REQUESTS : "manages"
-    PARTICIPANT_SESSIONS ||--o{ SPEAKER_REQUESTS : "creates"
-    COMMUNITY_SESSIONS ||--o{ SUPPORT_REACTIONS : "receives"
-    PARTICIPANT_SESSIONS ||--o{ SUPPORT_REACTIONS : "sends"
-    COMMUNITY_SESSIONS ||--o{ MODERATION_CASES : "originates"
-    MODERATION_CASES }o--o| BLOCK_RELATIONS : "may produce"
-```
-
-
-
-### 2.6.5. Bounded Context: Rooms
-
-**Rooms** es el contexto técnico que encapsula la infraestructura de comunicación de voz en tiempo real dentro de SafeDiary: administra la inicialización de las sesiones en el servidor de medios, la emisión de tokens de acceso, la negociación de señalización WebRTC y el control de los flujos de audio (silenciar/activar micrófono) (US-005, TS-004). Su objetivo es garantizar una conexión de audio estable, de baja latencia y segura, aislando la complejidad técnica del manejo de streams del resto de los flujos de negocio. La frontera del contexto es puramente técnica; delega todas las decisiones lógicas al contexto de *Communities*. El audio crudo nunca se graba ni se persiste en disco, actuando exclusivamente como un puente de transporte efímero.
-
-La máquina de estados de un participante de medios es `DISCONNECTED` -> `CONNECTING` -> `CONNECTED` -> `DISCONNECTED`, con los sub-estados de flujo de audio `AUDIO_MUTED` y `AUDIO_UNMUTED`. Un fallo de conexión dispara mecanismos de reconexión ICE sin alterar el estado del participante en el dominio superior de *Communities*.
-
-#### 2.6.5.1. Domain Layer
-
-**Entities y Aggregates**
-
-* **MediaRoom (Aggregate Root):** id, externalCommunitySessionId, status (INITIALIZED, ACTIVE, CLOSED), maxCapacity, activePeers[], createdAt, closedAt, version. Representa la sesión física alojada en el servidor WebRTC. Protege las invariantes de aforo técnico y ciclo de vida del socket (ej. solo acepta peers si está ACTIVE y tiene capacidad; se cierra por inactividad tras un periodo de gracia). Expone los comportamientos `initialize()`, `registerPeer()`, `mutePeerAudio()`, `unmutePeerAudio()` y `close()`.
-* **MediaPeer:** id, mediaRoomId, externalParticipantId, connectionState (DISCONNECTED, CONNECTING, CONNECTED), audioState (MUTED, UNMUTED), joinedAt. La identidad es un identificador opaco proporcionado por *Communities*; no almacena alias, roles ni datos personales. Ingresa por defecto con el `audioState` en MUTED para proteger la privacidad (TS-004).
-
-**Value Objects**
-
-* **MediaRoomId, MediaPeerId:** identificadores únicos del dominio.
-* **AudioToken:** JWT o credencial segura generada temporalmente para el handshake.
-* **SignalingPayload:** estructuras de datos para `SdpOffer`, `SdpAnswer` y `IceCandidate`.
-* **MediaRoomStatus:** INITIALIZED, ACTIVE, CLOSED.
-* **PeerConnectionState:** DISCONNECTED, CONNECTING, CONNECTED.
-
-**Domain Events**
-
-* MediaRoomInitialized, MediaRoomClosed, PeerConnected, PeerDisconnected, PeerAudioMuted, PeerAudioUnmuted, AudioTokenIssued.
-
-**Commands**
-
-* InitializeMediaRoomCommand, CloseMediaRoomCommand, GenerateAudioTokenCommand, MutePeerAudioCommand, UnmutePeerAudioCommand.
-
-**Queries**
-
-* GetMediaRoomHealthStatusQuery, GetActivePeersQuery, GetPeerConnectionStateQuery.
-
-**Domain Services (Contratos)**
-
-* **MediaTokenIssuerPolicy:** orquesta la generación y firma criptográfica de los tokens de un solo uso que el cliente móvil presentará al servidor WebRTC para unirse.
-* **ConnectionLifecycleService:** evalúa los *heartbeats* (latidos de conexión) para limpiar peers caídos (zombie peers) y mantener la precisión de la métrica de capacidad.
-
-#### 2.6.5.2. Interface Layer
-
-**Controllers**
-
-* **MediaRoomController:** recibe llamadas S2S (Server-to-Server) internas para inicializar y destruir las sesiones de medios cuando el dominio lo requiere.
-* **MediaTokenController:** expone endpoints seguros para emitir el token de acceso de medios una vez que *Communities* autorizó al participante (US-005).
-* **SignalingController:** mantiene la conexión WebSocket y expone APIs REST para el intercambio inicial de candidatos ICE y negociación SDP entre el cliente y el servidor de medios.
-
-**Resources (Request/Response DTOs)**
-
-* **Media Management:** InitializeMediaRoomResource, MediaRoomHealthResource.
-* **Signaling & Auth:** AudioTokenResource, SignalingPayloadResource, PeerStateResource. (Los recursos devueltos son estrictamente técnicos; omiten cualquier detalle clínico, de moderación o de identidad comunitaria).
-
-#### 2.6.5.3. Application Layer
-
-**Command Handlers**
-
-* **MediaRoomCommandServiceImpl:** InitializeMediaRoomCommand, CloseMediaRoomCommand.
-* **MediaPeerCommandServiceImpl:** GenerateAudioTokenCommand, MutePeerAudioCommand, UnmutePeerAudioCommand.
-
-**Query Handlers**
-
-* **MediaRoomQueryServiceImpl:** GetMediaRoomHealthStatusQuery, GetActivePeersQuery.
-
-**Event Handlers**
-
-* **CommunitySessionClosedEventHandler:** escucha el evento externo proveniente de *Communities* y dispara reactivamente el `CloseMediaRoomCommand` para tumbar la infraestructura asociada y evitar fugas de recursos (resource leaks).
-* **PeerDroppedEventHandler:** detecta la pérdida de paquetes o caída de WebSocket y actualiza el agregado `MediaPeer` a DISCONNECTED.
-
-#### 2.6.5.4. Infrastructure Layer
-
-**Repositories**
-
-* **MediaRoomRepository:** utiliza almacenamiento en memoria de acceso ultra-rápido (Redis) para persistir el estado transitorio del agregado y la lista de `activePeers`. Los datos de la sesión de red son efímeros y se descartan tras el cierre.
-* **MediaOutboxRepository:** almacena eventos técnicos temporalmente mediante el patrón *Transactional Outbox* antes de ser despachados al Event Bus, empleando claves de idempotencia para evitar crear la sala WebRTC dos veces.
-
-**Adaptadores externos**
-
-* **WebRtcMediaServerAdapter (ACL):** traduce los comandos del dominio a llamadas propietarias del proveedor de infraestructura WebRTC (ej. LiveKit SDK, Agora o un servidor nativo Mediasoup). Administra el enrutamiento SFU y la asignación de pistas de audio, aplicando circuit breakers ante fallos externos (TS-004).
-* **SignalingWebsocketAdapter:** gestiona el pool de conexiones WebSocket entrantes de los clientes móviles.
-
-
-#### 2.6.5.5. Bounded Context Software Architecture Component Level Diagrams
-
-![ROOMS_COMPONENT](../assets/images/bounded-context/rooms/rooms-components.png)
-
-
-#### 2.6.5.6. Bounded Context Software Architecture Code Level Diagrams
-
-
-##### 2.6.5.6.1. Bounded Context Domain Layer Class Diagrams
-
-![ROOMS_CLASS](../assets/images/bounded-context/rooms/rooms-class-diagram.png)
-
-##### 2.6.5.6.2. Bounded Context Database Design Diagram
-
-![ROOMS_DATABASE](../assets/images/bounded-context/rooms/rooms-database-diagram.png)
-
-### 2.6.6. Bounded Context: Diary
-
-**Diary (Diario Emocional)** es el contexto nuclear (*core domain*) que administra el registro personal, confidencial y cronológico de los pacientes en SafeDiary. Modela la experiencia clásica de un diario íntimo enriquecida para el entorno móvil, permitiendo al usuario capturar sus vivencias cotidianas mediante **texto libre o notas de voz** grabadas directamente desde el frontend (US-008). Asimismo, gobierna el registro rápido del estado anímico (*Mood Check-In*, US-010), la asociación de factores contextuales externos como sueño, energía y estrés (US-031), la configuración de recordatorios de escritura (US-024), el cálculo de rachas e insignias por constancia emocional (US-029), la selección de recuerdos retrospectivos (US-032) y la exportación estructurada del historial a formato PDF (US-028). 
+**Diary (Diario Emocional)** es el contexto nuclear (*core domain*) que administra el registro personal, confidencial y cronológico de los pacientes en SafeDiary. Modela la experiencia clásica de un diario íntimo enriquecida para el entorno móvil, permitiendo al usuario capturar sus vivencias cotidianas mediante **texto libre o notas de voz** grabadas directamente desde el frontend (US-008). Asimismo, gobierna el registro rápido del estado anímico (*Mood Check-In*, US-010), la asociación de factores contextuales externos como sueño, energía y estrés (US-031), la configuración de recordatorios de escritura (US-024), el cálculo de rachas e insignias por constancia emocional (US-029), la selección de recuerdos retrospectivos (US-032) y la exportación estructurada del historial a formato PDF (US-028).
 
 Para salvaguardar la intimidad del paciente y mantener una separación de responsabilidades estricta, Diary opera bajo los siguientes límites arquitectónicos:
 1. **Identidad y Bóveda Privada:** Diary no gestiona credenciales ni evalúa biometría; referencia el `accountId` provisto por IAM. Las entradas que el usuario traslada a su "Bóveda Privada" (US-025) son marcadas como protegidas (`isVaulted = true`), excluyéndose automáticamente de las consultas y vistas ordinarias del historial; la autorización de apertura y el PIN secundario residen exclusivamente en IAM.
@@ -2954,7 +2478,7 @@ Para salvaguardar la intimidad del paciente y mantener una separación de respon
 3. **Audio e Inteligencia Artificial:** Diary recibe y almacena las referencias al archivo de audio crudo (`audioUrl`, duración, formato) generado desde el dispositivo móvil. Sin embargo, **no** realiza la transcripción fonética, ni el análisis de sentimientos, ni la generación de reflexiones terapéuticas asistidas; cuando una entrada de voz o texto se crea, Diary publica el evento `DiaryEntryCreated`, el cual es consumido de forma asíncrona por el contexto **AssistantAI** para procesar la transcripción y sugerir etiquetas emocionales sin bloquear la persistencia del diario clásico.
 4. **Coherencia con los Mockups Móviles:** La interfaz de SafeDiary refleja este modelo en tres componentes clave: la pantalla *Home* (selector rápido de emociones de 1 toque con escala de valencia), la pantalla *Diary* (línea de tiempo cronológica, filtros por etiquetas, reproductor embebido de notas de voz y botón flotante de grabación), y la ventana modal de *Exportación* (que permite seleccionar rangos temporales y excluye por defecto entradas sensibles).
 
-#### 2.6.6.1. Domain Layer
+#### 2.6.4.1. Domain Layer
 
 **Entities y Aggregates**
 - **DiaryEntry (Aggregate Root):** id, accountId, title, content (cuerpo textual o transcripción final), entryType (TEXT, AUDIO, HYBRID), audioMetadata (referencia al archivo de voz grabado en el dispositivo), primaryEmotion, emotionalIntensity (escala 1-5), tags[], externalFactors, status (DRAFT, PUBLISHED, ARCHIVED), isSensitive, isVaulted, createdAt, updatedAt. Invariantes del agregado: una entrada debe contener obligatoriamente texto significativo o una referencia de audio válida (US-008); las entradas marcadas como `isVaulted = true` solo son legibles si la consulta incluye un token de autorización emitido por IAM.
@@ -2991,7 +2515,7 @@ Para salvaguardar la intimidad del paciente y mantener una separación de respon
 - **RetrospectiveMemoryService:** recupera entradas pasadas significativas (p. ej. de hace 30, 90 o 365 días) garantizando que ninguna entrada marcada como `isSensitive` o `isVaulted` sea expuesta en recordatorios automáticos (US-032).
 - **DiaryExportPreparationService:** filtra, sanitiza y compila las entradas seleccionadas por el paciente para generar el informe PDF, excluyendo rigurosamente el material protegido en bóveda (US-028).
 
-#### 2.6.6.2. Interface Layer
+#### 2.6.4.2. Interface Layer
 
 **Controllers**
 - **DiaryEntriesController:** expone los endpoints REST para registrar entradas de texto y notas de voz (`multipart/form-data` o URL de blob pre-cargado), listar el historial cronológico con filtros paginados, actualizar y eliminar entradas (US-008, US-025).
@@ -3009,7 +2533,7 @@ Para salvaguardar la intimidad del paciente y mantener una separación de respon
 - **DiaryExport:** RequestPdfExportResource, ExportStatusResource, ExportDownloadResource.
 - **SpecialistShared:** SharedEntryResource, SharedHistoryScopeResource.
 
-#### 2.6.6.3. Application Layer
+#### 2.6.4.3. Application Layer
 
 **Command Handlers**
 - **DiaryEntryCommandServiceImpl:** orquesta `CreateTextDiaryEntryCommand`, `CreateVoiceDiaryEntryCommand`, `UpdateDiaryEntryCommand`, `DeleteDiaryEntryCommand` y `ToggleEntryVaultStatusCommand`. Valida la no vacuidad del contenido, gestiona la subida de audio al repositorio de infraestructura y despacha `DiaryEntryCreated`.
@@ -3024,7 +2548,7 @@ Para salvaguardar la intimidad del paciente y mantener una separación de respon
 - **DiaryStreakQueryServiceImpl:** resuelve `GetDiaryStreakByAccountQuery`.
 - **SpecialistSharedDiaryQueryServiceImpl:** resuelve `GetAuthorizedDiaryEntriesForSpecialistQuery`, invocando previamente al adaptador de IAM para corroborar que el especialista solicitante cuenta con un `Consent` vigente.
 
-#### 2.6.6.4. Infrastructure Layer
+#### 2.6.4.4. Infrastructure Layer
 
 **Repositories**
 - **DiaryEntryRepository:** implementación en PostgreSQL / EF Core o TypeORM. Indexado por `account_id` y `created_at` descendente; soporte de búsquedas por texto completo y etiquetas (`JSONB` o tabla relacional indexada).
@@ -3038,7 +2562,7 @@ Para salvaguardar la intimidad del paciente y mantener una separación de respon
 - **NotificationSchedulingAdapter:** se comunica con el servicio de mensajería push móvil (Firebase Cloud Messaging / Apple APNs) para despachar recordatorios configurados (US-024).
 - **IamConsentClientAdapter:** cliente HTTP/gRPC que consulta la API de IAM para validar si una solicitud de especialista cumple las condiciones de `SharingPermission` (US-045, US-046).
 
-#### 2.6.6.5. Bounded Context Software Architecture Component Level Diagrams
+#### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
 
 El siguiente código en **Structurizr DSL (C4 Model)** puede pegarse en [structurizr.com/dsl](https://structurizr.com/dsl) o en el [Structurizr Lite](https://docs.structurizr.com/lite) para generar el diagrama de componentes de Diary:
 
@@ -3159,9 +2683,9 @@ workspace "SafeDiary - Diary (Component Diagram)" "C4 Component Diagram del boun
 
 ![Diary Components](../assets/images/bounded-context/diary/diary-c4-diagramDiaryComponents.png)
 
-#### 2.6.6.6. Bounded Context Software Architecture Code Level Diagrams
+#### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
 
-##### 2.6.6.6.1. Bounded Context Domain Layer Class Diagrams
+##### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
 
 Código en **Mermaid** (puede pegarse en [mermaid.live](https://mermaid.live) para visualizarlo):
 
@@ -3249,7 +2773,7 @@ classDiagram
 
 ![Class Diagram](../assets/images/bounded-context/diary/diary-class-diagram.png)
 
-##### 2.6.6.6.2. Bounded Context Database Design Diagram
+##### 2.6.4.6.2. Bounded Context Database Design Diagram
 
 Código en **Mermaid ER Diagram** (también puede importarse en [dbdiagram.io](https://dbdiagram.io) adaptando la sintaxis):
 
@@ -3320,19 +2844,19 @@ erDiagram
 
 
 
-### 2.6.7. Bounded Context: DailyCare (Routines)
+### 2.6.5. Bounded Context: Rutines
 
-**DailyCare (Routines)** es el contexto que apoya el bienestar constante del usuario: administra la configuración de rutinas diarias personalizadas, la asignación y respuesta de prompts de escritura reflexiva, el inicio de ejercicios de regulación rápida (SOS / Respiración) y el envío autónomo de recordatorios. Su objetivo es fomentar hábitos de autocuidado y proporcionar herramientas de contención inmediata, interactuando con el usuario mediante un motor de notificaciones en horarios que respeten su conveniencia temporal.
+**Rutines** es el contexto que apoya el bienestar constante del paciente: administra rutinas diarias personalizadas, prompts de escritura reflexiva, ejercicios de regulación rápida (SOS / respiración) y recordatorios. Gestiona hábitos de autocuidado sin almacenar el contenido privado del diario.
 
 La frontera del contexto separa la gestión de hábitos diarios del historial clínico estructurado o del diario emocional principal. Un ejercicio SOS o un prompt completado pertenecen al ámbito del cuidado diario, y su orquestación es en gran medida autónoma a través de un *Scheduler* interno.
 
 La máquina de estados de una notificación programada es `PENDING` -> `SENT` o `FAILED`. La máquina de estados de un prompt de escritura es `ASSIGNED` -> `COMPLETED`. Si una notificación falla por problemas de red externos, el sistema registra el fallo sin corromper la rutina base, la cual sigue activa para el día siguiente.
 
-#### 2.6.7.1. Domain Layer
+#### 2.6.5.1. Domain Layer
 
 **Entities y Aggregates**
 
-* **User (Aggregate Root):** id, devicePushToken, preferredTimezone. Orquesta la configuración de rutinas y centraliza las preferencias necesarias para que el sistema respete los husos horarios del usuario al interactuar.
+* **RoutineSettings (Aggregate Root):** accountId, devicePushTokenRef, preferredTimezone. Conserva únicamente la configuración necesaria para programar hábitos; IAM sigue siendo dueño de la cuenta.
 * **DailyRoutine (Aggregate Root):** id, userId, title, targetTime, isActive, createdAt. Representa el hábito o actividad programada. Protege las invariantes de creación y expone los comportamientos `updateTargetTime()`, `deactivate()` y `generateNextNotification()`.
 * **ScheduledNotification (Entity):** id, routineId, scheduledFor, status (PENDING, SENT, FAILED), sentAt. Es la instancia transaccional individual del recordatorio que se disparará.
 * **WritingPrompt (Aggregate Root):** id, userId, question, answerText, status (ASSIGNED, COMPLETED), assignedAt, answeredAt. Ejercicio guiado asignado al usuario que este debe responder y guardar en el sistema.
@@ -3362,7 +2886,7 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 
 * **UserConvenienceSchedulePolicy:** valida y determina el momento exacto (`DateTime`) del envío de notificaciones evaluando la hora objetivo (`targetTime`) contra la zona horaria del usuario (`preferredTimezone`), garantizando que los recordatorios se programen a conveniencia y no generen intrusión.
 
-#### 2.6.7.2. Interface Layer
+#### 2.6.5.2. Interface Layer
 
 **Controllers**
 
@@ -3376,7 +2900,7 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 * **Prompts:** AnswerPromptResource, WritingPromptResource.
 * **Exercises:** InitiateExerciseResource, SosExerciseLogResource.
 
-#### 2.6.7.3. Application Layer
+#### 2.6.5.3. Application Layer
 
 **Command Handlers**
 
@@ -3396,7 +2920,7 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 * **RoutineCreatedEventHandler:** reacciona a la creación de una nueva rutina para calcular e insertar en la base de datos la primera instancia de `ScheduledNotification` utilizando la política de husos horarios.
 * **NotificationTriggeredEventHandler:** solicita al adaptador de infraestructura el formateo y despacho del payload hacia el dispositivo móvil del usuario.
 
-#### 2.6.7.4. Infrastructure Layer
+#### 2.6.5.4. Infrastructure Layer
 
 **Repositories**
 
@@ -3410,17 +2934,893 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 * **PushNotificationAdapter (ACL):** adaptador para formatear y enviar payloads al "Servicio de Notificaciones Push" externo (ej. Firebase Cloud Messaging - FCM o APNs). Traduce las respuestas técnicas, gestiona reintentos en caso de indisponibilidad temporal del proveedor y actualiza el estado de la notificación a `FAILED` si los tokens del dispositivo ya no son válidos.
 
 
-#### 2.6.7.5. Bounded Context Software Architecture Component Level Diagrams
+#### 2.6.5.5. Bounded Context Software Architecture Component Level Diagrams
 
 ![RUTINES_COMPONENT](../assets/images/bounded-context/rutines/rutines-components.png)
 
-#### 2.6.7.6. Bounded Context Software Architecture Code Level Diagrams
+#### 2.6.5.6. Bounded Context Software Architecture Code Level Diagrams
 
 
-##### 2.6.7.6.1. Bounded Context Domain Layer Class Diagrams
+##### 2.6.5.6.1. Bounded Context Domain Layer Class Diagrams
 
 ![RUTINES_CLASS](../assets/images/bounded-context/rutines/rutines-class-diagram.png)
 
-##### 2.6.7.6.2. Bounded Context Database Design Diagram
+##### 2.6.5.6.2. Bounded Context Database Design Diagram
 
 ![RUTINES_DATABASE](../assets/images/bounded-context/rutines/rutines-database-diagram.png)
+
+### 2.6.6. Bounded Context: Clinician Directory
+
+**Clinician Directory** es dueño de la verificación profesional, la ficha pública, el banner, las especialidades, las tarifas, las reseñas y el puntaje de confianza de psicólogos (EP-04; US-002, US-036, US-039, US-041, US-042 y US-054). Recibe la identidad y el rol de IAM, pero no almacena credenciales de inicio de sesión. Care Scheduling consulta la ficha verificada y la tarifa; el directorio no reserva horarios ni procesa pagos.
+
+#### 2.6.6.1. Domain Layer
+
+**Entities y Aggregates**
+
+* **ClinicianProfile (Aggregate Root):** clinicianId, accountId, especialidades, descripción, banner, tarifas, verificationStatus y publicationStatus.
+* **VerificationRequest (Aggregate Root):** solicitud, referencias privadas a documentos, fecha y resultado de la revisión.
+* **Review (Aggregate Root):** cita completada, paciente, psicólogo, calificación y texto; una sola reseña por cita y paciente.
+* **RatingSummary (Read Model):** promedio y número de reseñas elegibles, calculados dentro de Clinician Directory.
+* **TrustScore (Read Model):** puntaje y desglose de factores verificables, como reseñas y atención completada, sin exponer la identidad ni información emocional de pacientes.
+
+**Value Objects**
+
+* **ProfessionalCredential:** identificación profesional y especialidad sometidas a verificación.
+* **ConsultationRate:** importe, moneda y duración; la reserva conserva una copia del importe acordado.
+* **VerificationStatus:** PENDING, APPROVED o REJECTED.
+* **PublicationStatus:** DRAFT, PUBLISHED o HIDDEN.
+
+**Domain Events**
+
+* VerificationRequested, ClinicianVerified, VerificationRejected, ProfessionalProfilePublished, ProfessionalProfileUpdated, ReviewPublished, RatingRecalculated, TrustScoreRecalculated.
+
+**Commands y Queries**
+
+* RequestVerificationCommand, ReviewCredentialsCommand, PublishProfileCommand, UpdateBannerAndRatesCommand, PublishReviewCommand.
+* SearchCliniciansQuery, GetClinicianProfileQuery, GetVerificationStatusQuery, GetRatingSummaryQuery, GetTrustScoreBreakdownQuery.
+
+**Business Decisions**
+
+* Solo una ficha con verificación aprobada puede publicarse y aparecer en búsquedas.
+* Publicar una tarifa nueva no modifica el importe de reservas ya aceptadas.
+* Una reseña exige el evento SessionCompleted de Care Scheduling para esa cita y paciente; no revela datos clínicos.
+* El puntaje explica sus componentes y muestra un estado sin valoración cuando no hay actividad suficiente; no recompensa solo el volumen de citas.
+* Los documentos de verificación permanecen privados y no forman parte de la ficha pública.
+
+#### 2.6.6.2. Interface Layer
+
+* **VerificationController:** recibe solicitudes y expone su estado al psicólogo.
+* **ProfessionalProfileController:** publica y edita ficha, banner y tarifas.
+* **ClinicianSearchController:** busca, filtra y consulta fichas verificadas.
+* **ReviewsController:** recibe reseñas elegibles y muestra calificación agregada.
+* **TrustScoreController:** expone al psicólogo el puntaje y el desglose de factores, o el estado de información insuficiente.
+* **Resources:** VerificationRequestResource, ProfessionalProfileResource, ConsultationRateResource, ClinicianSearchResource, ReviewResource, RatingSummaryResource y TrustScoreResource.
+
+#### 2.6.6.3. Application Layer
+
+* **RequestVerificationHandler:** asocia la solicitud al accountId autenticado y almacena referencias privadas a documentos.
+* **ReviewCredentialsHandler:** aplica el resultado de la revisión de credenciales y emite ClinicianVerified o VerificationRejected.
+* **PublishProfessionalProfileHandler:** comprueba verificación aprobada antes de publicar.
+* **UpdateBannerAndRatesHandler:** versiona los importes publicados.
+* **PublishReviewHandler:** valida elegibilidad contra una sesión completada y unicidad por cita, publica la reseña y recalcula RatingSummary y TrustScore.
+* **SessionCompletedHandler:** registra la elegibilidad y actualiza factores agregados del puntaje sin importar contenido de la sesión.
+
+#### 2.6.6.4. Infrastructure Layer
+
+* **ClinicianProfileRepository, VerificationRequestRepository, ReviewRepository, RatingSummaryRepository y TrustScoreRepository:** persistencia propia del directorio.
+* **IamRoleClient:** consulta identidad y rol, sin acceso a contraseñas.
+* **CareSessionEventConsumer:** consume SessionCompleted de Care Scheduling.
+* **CredentialStorageAdapter y BannerStorageAdapter:** separan documentos privados de material público.
+* **DirectoryEventPublisher:** publica verificación, ficha y tarifa vigentes para consumidores autorizados.
+
+#### 2.6.6.5. Bounded Context Software Architecture Component Level Diagrams
+
+**Diagrama C4 de componentes en Structurizr DSL:**
+
+```text
+workspace "SafeDiary - Clinician Directory" "C4 Component Diagram del bounded context Clinician Directory" {
+    model {
+        patient = person "Paciente" "Busca psicólogos, consulta fichas y publica reseñas tras una sesión completada."
+        psychologist = person "Psicólogo" "Solicita verificación, administra su ficha y consulta su puntaje de confianza."
+
+        safeDiary = softwareSystem "SafeDiary" {
+            directoryApi = container "Clinician Directory Service" "Verificación, fichas, tarifas, reseñas y puntaje de confianza." "Servicio de API" {
+                verificationController = component "VerificationController" "Recibe solicitud de verificación y devuelve su estado." "Interface"
+                profileController = component "ProfessionalProfileController" "Publica y edita ficha, banner y tarifas." "Interface"
+                searchController = component "ClinicianSearchController" "Busca y consulta psicólogos verificados." "Interface"
+                reviewController = component "ReviewsController" "Publica reseñas elegibles y consulta valoraciones." "Interface"
+                trustController = component "TrustScoreController" "Consulta puntaje y desglose de confianza." "Interface"
+                verificationService = component "VerificationApplicationService" "Gestiona envío y revisión de credenciales." "Application"
+                profileService = component "ProfessionalProfileApplicationService" "Gestiona publicación y cambios de perfil." "Application"
+                reviewService = component "ReviewApplicationService" "Valida sesión completada, unicidad y publicación de reseña." "Application"
+                trustService = component "TrustScoreApplicationService" "Recalcula y explica los factores de confianza." "Application"
+                publicationPolicy = component "DirectoryPublicationPolicy" "Solo permite publicar perfiles con verificación aprobada." "Domain"
+                verificationRepo = component "VerificationRequestRepository" "Persiste solicitudes y estado de verificación." "Repository"
+                profileRepo = component "ClinicianProfileRepository" "Persiste fichas y tarifas versionadas." "Repository"
+                reviewRepo = component "ReviewRepository" "Persiste reseñas y aplica unicidad por cita y paciente." "Repository"
+                trustRepo = component "TrustScoreRepository" "Persiste agregados de valoración y confianza." "Repository"
+                iamClient = component "IamRoleClient" "Valida identidad y rol del titular." "ACL"
+                sessionConsumer = component "SessionCompletedConsumer" "Consume eventos de Care Scheduling para elegibilidad de reseñas." "Integration"
+                eventPublisher = component "DirectoryEventPublisher" "Publica verificación, ficha, tarifa y valoración vigentes." "Integration"
+                credentialStorage = component "CredentialStorageAdapter" "Guarda documentos de verificación en espacio privado." "Infrastructure"
+                bannerStorage = component "BannerStorageAdapter" "Guarda recursos públicos de ficha." "Infrastructure"
+            }
+            directoryDb = container "Clinician Directory Database" "Fichas, verificaciones, tarifas, reseñas y agregados." "PostgreSQL" "Database"
+            eventBus = container "Event Bus" "Eventos de integración." "RabbitMQ" "Queue"
+        }
+        iam = softwareSystem "IAM" "Provee identidad autenticada y rol." "External System"
+        care = softwareSystem "Care Scheduling" "Publica el evento SessionCompleted para habilitar reseñas." "External System"
+        privateStorage = softwareSystem "Private Document Storage" "Almacena documentos de credenciales con acceso restringido." "External System"
+
+        patient -> searchController "Busca y consulta fichas" "HTTPS"
+        patient -> reviewController "Publica reseña elegible" "HTTPS"
+        psychologist -> verificationController "Solicita verificación" "HTTPS"
+        psychologist -> profileController "Edita ficha y tarifas" "HTTPS"
+        psychologist -> trustController "Consulta el desglose de confianza" "HTTPS"
+        verificationController -> verificationService
+        profileController -> profileService
+        searchController -> profileRepo
+        reviewController -> reviewService
+        trustController -> trustService
+        verificationService -> iamClient
+        profileService -> publicationPolicy
+        profileService -> profileRepo
+        verificationService -> verificationRepo
+        verificationService -> credentialStorage
+        profileService -> bannerStorage
+        reviewService -> reviewRepo
+        reviewService -> trustService
+        trustService -> trustRepo
+        iamClient -> iam "Valida identidad y rol" "HTTPS"
+        care -> eventBus "Publica SessionCompleted" "AMQP"
+        eventBus -> sessionConsumer "Entrega SessionCompleted" "AMQP"
+        sessionConsumer -> reviewService
+        eventPublisher -> eventBus "Publica eventos del directorio" "AMQP"
+        verificationRepo -> directoryDb "Lee y escribe" "SQL"
+        profileRepo -> directoryDb "Lee y escribe" "SQL"
+        reviewRepo -> directoryDb "Lee y escribe" "SQL"
+        trustRepo -> directoryDb "Lee y escribe" "SQL"
+        credentialStorage -> privateStorage "Guarda documentos cifrados" "HTTPS"
+    }
+    views {
+        component directoryApi "ClinicianDirectoryComponents" {
+            include *
+            autoLayout
+        }
+        styles {
+            element "Person" {
+                shape Person
+                background #08427b
+                color #ffffff
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "Container" {
+                background #438dd5
+                color #ffffff
+            }
+            element "Component" {
+                background #85bbf0
+                color #000000
+            }
+            element "Database" {
+                shape Cylinder
+                background #2a6f97
+                color #ffffff
+            }
+            element "Queue" {
+                shape Pipe
+                background #014f86
+                color #ffffff
+            }
+            element "External System" {
+                background #6c757d
+                color #ffffff
+            }
+        }
+    }
+}
+```
+
+#### 2.6.6.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 2.6.6.6.1. Bounded Context Domain Layer Class Diagrams
+
+```mermaid
+classDiagram
+    class ClinicianProfile {
+        +UUID clinicianId
+        +UUID accountId
+        +VerificationStatus verificationStatus
+        +PublicationStatus publicationStatus
+        +publish()
+        +updateRate()
+    }
+    class VerificationRequest {
+        +UUID id
+        +UUID clinicianId
+        +String documentRef
+        +VerificationStatus status
+        +review()
+    }
+    class ConsultationRate {
+        +Decimal amount
+        +String currency
+        +Integer minutes
+    }
+    class Review {
+        +UUID id
+        +UUID appointmentId
+        +UUID patientId
+        +Integer rating
+        +publish()
+    }
+    class RatingSummary {
+        +Decimal average
+        +Integer reviewCount
+        +recalculate()
+    }
+    class TrustScore {
+        +Decimal score
+        +String factorBreakdown
+        +Boolean sufficientData
+        +recalculate()
+    }
+    ClinicianProfile "1" --> "0..*" ConsultationRate : publica
+    ClinicianProfile "1" --> "0..*" VerificationRequest : acredita
+    ClinicianProfile "1" --> "0..*" Review : recibe
+    ClinicianProfile "1" --> "1" RatingSummary : muestra
+    ClinicianProfile "1" --> "1" TrustScore : explica
+```
+
+##### 2.6.6.6.2. Bounded Context Database Design Diagram
+
+```mermaid
+erDiagram
+    CLINICIAN_PROFILES {
+        uuid clinician_id PK
+        uuid account_id UK
+        string bio
+        string banner_ref
+        string verification_status
+        string publication_status
+    }
+    CLINICIAN_SPECIALTIES {
+        uuid id PK
+        uuid clinician_id FK
+        string specialty_name
+    }
+    VERIFICATION_REQUESTS {
+        uuid id PK
+        uuid clinician_id FK
+        string document_ref
+        string status
+        datetime reviewed_at
+    }
+    CONSULTATION_RATES {
+        uuid id PK
+        uuid clinician_id FK
+        decimal amount
+        string currency
+        int duration_minutes
+        datetime effective_at
+    }
+    REVIEWS {
+        uuid id PK
+        uuid clinician_id FK
+        uuid appointment_id
+        uuid patient_id
+        int rating
+        string review_text
+    }
+    RATING_SUMMARIES {
+        uuid clinician_id PK
+        decimal average
+        int review_count
+    }
+    TRUST_SCORES {
+        uuid clinician_id PK
+        decimal score
+        string factor_breakdown
+        boolean sufficient_data
+    }
+    CLINICIAN_PROFILES ||--o{ VERIFICATION_REQUESTS : solicita
+    CLINICIAN_PROFILES ||--o{ CLINICIAN_SPECIALTIES : declara
+    CLINICIAN_PROFILES ||--o{ CONSULTATION_RATES : publica
+    CLINICIAN_PROFILES ||--o{ REVIEWS : recibe
+    CLINICIAN_PROFILES ||--|| RATING_SUMMARIES : muestra
+    CLINICIAN_PROFILES ||--|| TRUST_SCORES : explica
+```
+
+### 2.6.7. Bounded Context: Care Scheduling
+
+**Care Scheduling** coordina la solicitud de contacto, el chat para acordar una fecha, la propuesta y aceptación del horario, la retención de una hora, la cita y la sesión por videollamada (EP-06; US-038, US-043, US-044, US-048, US-049 y US-050). Es dueño de la disponibilidad reservable. Consulta en Clinician Directory la ficha y la tarifa vigentes; solicita el cobro a Payments & Payouts, pero no crea intentos de pago ni contabiliza ingresos. El acceso a datos emocionales se valida en IAM y se limita a lo autorizado por el paciente.
+
+#### 2.6.7.1. Domain Layer
+
+**Entities y Aggregates**
+
+* **ContactRequest (Aggregate Root):** paciente, psicólogo, estado y mensajes de coordinación. El contacto no constituye una cita ni autoriza acceso al diario.
+* **Appointment (Aggregate Root):** paciente, psicólogo, horario acordado, importe fijado, estado, holdId y paymentReference.
+* **SlotHold (Entity):** intervalo bloqueado temporalmente, creado tras aceptar ambas partes el horario y con expiración de una hora.
+* **ClinicalSession (Aggregate Root):** referencia a cita confirmada, participantes autorizados, inicio, fin y resultado operativo.
+* **AuthorizedSummaryAccess (Audit Record):** referencia a consentimiento, alcance y momento de consulta, sin copiar el diario completo.
+
+**Value Objects**
+
+* **AppointmentSlot:** inicio, fin y zona horaria.
+* **AppointmentStatus:** REQUESTED, HELD, CONFIRMED, CANCELLED, EXPIRED o COMPLETED.
+* **AgreedAmount:** importe y moneda capturados al aceptar el horario.
+* **MeetingAccessWindow:** ventana en la que paciente y psicólogo pueden entrar a la reunión.
+
+**Domain Events**
+
+* ContactRequestSent, ScheduleProposed, ScheduleAccepted, SlotHeld, HoldExpired, AppointmentConfirmed, AppointmentCancelled, SessionStarted, SessionCompleted.
+
+**Commands y Queries**
+
+* SendContactRequestCommand, SendCoordinationMessageCommand, ProposeScheduleCommand, AcceptScheduleCommand, HoldSlotCommand, ConfirmAfterPaymentCommand, CancelAppointmentCommand, JoinSessionCommand, CompleteSessionCommand.
+* GetClinicianAgendaQuery, GetPatientAppointmentsQuery, GetContactRequestQuery, GetBookableSlotsQuery, GetSessionDetailsQuery.
+
+**Business Decisions**
+
+* Solo una reserva activa puede ocupar el mismo horario de un psicólogo.
+* El hold vence una hora después de su creación. Solo PaymentApproved para esa reserva vigente confirma la cita; la duplicación del evento no confirma otra cita.
+* El pago tardío no reabre un horario liberado: se informa a Payments & Payouts para conciliación o devolución.
+* Solo los dos participantes autenticados entran a la reunión durante su ventana autorizada.
+* El resumen o las entradas autorizadas se consultan después de validar el consentimiento vigente en IAM.
+
+#### 2.6.7.2. Interface Layer
+
+* **ContactRequestsController:** solicitud y mensajes de coordinación entre paciente y psicólogo.
+* **ScheduleController:** propuestas, aceptación, disponibilidad reservable y agenda profesional.
+* **AppointmentsController:** reserva, consulta, cancelación y estado de pago recibido.
+* **SessionsController:** acceso temporal, cierre de atención y archivos autorizados.
+* **AuthorizedSummaryController:** solicitud de resumen con alcance de consentimiento validado.
+* **Resources:** ContactRequestResource, CoordinationMessageResource, ScheduleProposalResource, SlotHoldResource, AppointmentResource, SessionAccessResource y AuthorizedSummaryResource.
+
+#### 2.6.7.3. Application Layer
+
+* **ContactRequestHandler:** crea la solicitud y notifica al psicólogo sin trasladar datos del diario.
+* **ScheduleAgreementHandler:** registra propuesta y aceptación; captura la tarifa del directorio en AgreedAmount.
+* **HoldSlotHandler:** comprueba conflictos y crea un hold de una hora de manera idempotente.
+* **PaymentResultHandler:** verifica reservaId, importe y estado; confirma la cita tras PaymentApproved o libera el hold al fallar o vencer.
+* **ExpireHoldHandler:** expira reservas sin pago y libera el horario.
+* **SessionHandler:** obtiene acceso temporal del proveedor de videollamadas, registra inicio y cierre.
+* **AuthorizedSummaryHandler:** valida identidad y consentimiento en IAM antes de solicitar el resumen mínimo a AssistantAI o entradas autorizadas a Diary.
+* **SessionCompletedPublisher:** publica el cierre para habilitar una reseña en Clinician Directory.
+
+#### 2.6.7.4. Infrastructure Layer
+
+* **ContactRequestRepository, AppointmentRepository, SlotHoldRepository y ClinicalSessionRepository:** persistencia exclusiva de agenda y atención; índice único para impedir solapamientos activos.
+* **ClinicianDirectoryClient:** obtiene psicólogo verificado, identificador y tarifa actual.
+* **PaymentsClient y PaymentResultConsumer:** solicitan cobro asociado al hold y consumen confirmaciones firmadas publicadas por Payments & Payouts.
+* **IamConsentClient y EmotionalSummaryClient (ACL):** traducen autorización y resúmenes sin importar modelos internos ajenos.
+* **VideoProviderAdapter y CalendarSyncAdapter:** acceso a reunión y sincronización opcional de agenda.
+* **NotificationPublisher y SessionFileStorageAdapter:** avisos operativos y archivos permitidos de la cita.
+
+#### 2.6.7.5. Bounded Context Software Architecture Component Level Diagrams
+
+**Diagrama C4 de componentes en Structurizr DSL:**
+
+```text
+workspace "SafeDiary - Care Scheduling" "C4 Component Diagram del bounded context Care Scheduling" {
+    model {
+        patient = person "Paciente" "Envía solicitud, acuerda horario, paga y asiste a la cita."
+        psychologist = person "Psicólogo" "Coordina solicitudes, propone horarios y atiende sesiones."
+
+        safeDiary = softwareSystem "SafeDiary" {
+            schedulingApi = container "Care Scheduling Service" "Contacto, agenda reservable, reservas, citas y sesiones." "Servicio de API" {
+                contactController = component "ContactRequestsController" "Gestiona solicitudes y mensajes de coordinación." "Interface"
+                scheduleController = component "ScheduleController" "Propone, acepta y consulta horarios." "Interface"
+                appointmentController = component "AppointmentsController" "Crea, consulta y cancela citas y holds." "Interface"
+                sessionController = component "SessionsController" "Gestiona acceso y estado operativo de sesiones." "Interface"
+                summaryController = component "AuthorizedSummaryController" "Solicita datos emocionales con consentimiento vigente." "Interface"
+                contactService = component "ContactRequestApplicationService" "Coordina solicitud y conversación privada." "Application"
+                scheduleService = component "ScheduleAgreementApplicationService" "Registra propuesta y aceptación del horario y tarifa." "Application"
+                holdService = component "SlotHoldApplicationService" "Retiene el horario una hora y lo libera al expirar." "Application"
+                paymentHandler = component "PaymentResultHandler" "Confirma cita solo tras pago aprobado para hold vigente." "Application"
+                sessionService = component "ClinicalSessionApplicationService" "Inicia y completa la atención profesional." "Application"
+                accessPolicy = component "SessionAccessPolicy" "Autoriza participantes y ventana temporal de acceso." "Domain"
+                contactRepo = component "ContactRequestRepository" "Persiste solicitudes y mensajes." "Repository"
+                appointmentRepo = component "AppointmentRepository" "Persiste citas y bloquea solapamientos." "Repository"
+                holdRepo = component "SlotHoldRepository" "Persiste expiración y estado de holds." "Repository"
+                sessionRepo = component "ClinicalSessionRepository" "Persiste el resultado operativo de la sesión." "Repository"
+                directoryClient = component "ClinicianDirectoryClient" "Obtiene ficha verificada y tarifa vigente." "ACL"
+                paymentsClient = component "PaymentsClient" "Solicita el cobro asociado a una reserva." "ACL"
+                iamClient = component "IamConsentClient" "Valida identidad y consentimiento vigente." "ACL"
+                summaryClient = component "EmotionalSummaryClient" "Solicita datos mínimos autorizados a Diary o AssistantAI." "ACL"
+                paymentConsumer = component "PaymentResultConsumer" "Procesa PaymentApproved o PaymentFailed de forma idempotente." "Integration"
+                sessionPublisher = component "SessionCompletedPublisher" "Publica el cierre de sesión para elegibilidad de reseña." "Integration"
+                videoAdapter = component "VideoProviderAdapter" "Genera accesos temporales para citas confirmadas." "Infrastructure"
+                calendarAdapter = component "CalendarSyncAdapter" "Sincroniza citas si el psicólogo lo habilitó." "Infrastructure"
+            }
+            schedulingDb = container "Care Scheduling Database" "Solicitudes, mensajes, holds, citas, sesiones y auditoría de acceso." "PostgreSQL" "Database"
+            eventBus = container "Event Bus" "Eventos de integración." "RabbitMQ" "Queue"
+        }
+        directory = softwareSystem "Clinician Directory" "Provee ficha profesional verificada y tarifa." "External System"
+        payments = softwareSystem "Payments & Payouts" "Procesa y confirma el pago de la reserva." "External System"
+        iam = softwareSystem "IAM" "Provee identidad y autorización de consentimiento." "External System"
+        diary = softwareSystem "Diary" "Provee entradas expresamente autorizadas." "External System"
+        assistant = softwareSystem "AssistantAI" "Provee resúmenes emocionales autorizados." "External System"
+        videoProvider = softwareSystem "Video Provider" "Crea reuniones privadas y accesos temporales." "External System"
+        calendarProvider = softwareSystem "Google Calendar / Outlook Calendar" "Sincroniza agenda si está habilitado." "External System"
+
+        patient -> contactController "Envía solicitud y mensajes" "HTTPS"
+        patient -> scheduleController "Acepta horario" "HTTPS"
+        patient -> appointmentController "Paga, consulta o cancela reserva" "HTTPS"
+        patient -> sessionController "Ingresa a cita confirmada" "HTTPS"
+        psychologist -> contactController "Responde solicitud" "HTTPS"
+        psychologist -> scheduleController "Propone horario" "HTTPS"
+        psychologist -> sessionController "Atiende y cierra la sesión" "HTTPS"
+        contactController -> contactService
+        scheduleController -> scheduleService
+        appointmentController -> holdService
+        sessionController -> sessionService
+        summaryController -> iamClient
+        summaryController -> summaryClient
+        contactService -> contactRepo
+        scheduleService -> directoryClient
+        scheduleService -> appointmentRepo
+        holdService -> appointmentRepo
+        holdService -> holdRepo
+        holdService -> paymentsClient
+        paymentConsumer -> paymentHandler
+        paymentHandler -> appointmentRepo
+        paymentHandler -> holdRepo
+        sessionService -> accessPolicy
+        sessionService -> sessionRepo
+        sessionService -> videoAdapter
+        sessionService -> sessionPublisher
+        directoryClient -> directory "Consulta verificación y tarifa" "HTTPS"
+        paymentsClient -> payments "Solicita cobro de reserva" "HTTPS"
+        payments -> eventBus "Publica resultado de pago" "AMQP"
+        eventBus -> paymentConsumer "Entrega PaymentApproved o PaymentFailed" "AMQP"
+        iamClient -> iam "Valida identidad y consentimiento" "HTTPS"
+        summaryClient -> diary "Solicita entradas autorizadas" "HTTPS"
+        summaryClient -> assistant "Solicita resumen autorizado" "HTTPS"
+        sessionPublisher -> eventBus "Publica SessionCompleted" "AMQP"
+        videoAdapter -> videoProvider "Crea reunión" "HTTPS"
+        calendarAdapter -> calendarProvider "Sincroniza cita autorizada" "HTTPS"
+        contactRepo -> schedulingDb "Lee y escribe" "SQL"
+        appointmentRepo -> schedulingDb "Lee y escribe" "SQL"
+        holdRepo -> schedulingDb "Lee y escribe" "SQL"
+        sessionRepo -> schedulingDb "Lee y escribe" "SQL"
+    }
+    views {
+        component schedulingApi "CareSchedulingComponents" {
+            include *
+            autoLayout
+        }
+        styles {
+            element "Person" {
+                shape Person
+                background #08427b
+                color #ffffff
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "Container" {
+                background #438dd5
+                color #ffffff
+            }
+            element "Component" {
+                background #85bbf0
+                color #000000
+            }
+            element "Database" {
+                shape Cylinder
+                background #2a6f97
+                color #ffffff
+            }
+            element "Queue" {
+                shape Pipe
+                background #014f86
+                color #ffffff
+            }
+            element "External System" {
+                background #6c757d
+                color #ffffff
+            }
+        }
+    }
+}
+```
+
+#### 2.6.7.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 2.6.7.6.1. Bounded Context Domain Layer Class Diagrams
+
+```mermaid
+classDiagram
+    class ContactRequest {
+        +UUID id
+        +UUID patientId
+        +UUID clinicianId
+        +String status
+        +sendMessage()
+    }
+    class Appointment {
+        +UUID id
+        +UUID patientId
+        +UUID clinicianId
+        +AppointmentSlot slot
+        +AgreedAmount amount
+        +AppointmentStatus status
+        +String paymentReference
+        +confirm()
+        +cancel()
+    }
+    class SlotHold {
+        +UUID id
+        +DateTime expiresAt
+        +String status
+        +expire()
+    }
+    class ClinicalSession {
+        +UUID id
+        +UUID appointmentId
+        +DateTime startedAt
+        +DateTime endedAt
+        +complete()
+    }
+    ContactRequest "1" --> "0..1" Appointment : acuerda
+    Appointment "1" --> "0..1" SlotHold : retiene
+    Appointment "1" --> "0..1" ClinicalSession : origina
+```
+
+##### 2.6.7.6.2. Bounded Context Database Design Diagram
+
+```mermaid
+erDiagram
+    CONTACT_REQUESTS {
+        uuid id PK
+        uuid patient_id
+        uuid clinician_id
+        string status
+        datetime created_at
+    }
+    COORDINATION_MESSAGES {
+        uuid id PK
+        uuid contact_request_id FK
+        uuid sender_id
+        string body_ref
+        datetime sent_at
+    }
+    APPOINTMENTS {
+        uuid id PK
+        uuid contact_request_id FK
+        uuid patient_id
+        uuid clinician_id
+        datetime starts_at
+        datetime ends_at
+        string timezone
+        decimal agreed_amount
+        string currency
+        string status
+        string payment_reference
+    }
+    SLOT_HOLDS {
+        uuid id PK
+        uuid appointment_id FK
+        datetime expires_at
+        string status
+    }
+    CLINICAL_SESSIONS {
+        uuid id PK
+        uuid appointment_id FK
+        string provider_room_ref
+        datetime started_at
+        datetime ended_at
+        string status
+    }
+    SUMMARY_ACCESS_AUDIT {
+        uuid id PK
+        uuid appointment_id FK
+        string consent_ref
+        datetime accessed_at
+    }
+    CONTACT_REQUESTS ||--o{ COORDINATION_MESSAGES : contiene
+    CONTACT_REQUESTS ||--o| APPOINTMENTS : acuerda
+    APPOINTMENTS ||--o| SLOT_HOLDS : retiene
+    APPOINTMENTS ||--o| CLINICAL_SESSIONS : origina
+    APPOINTMENTS ||--o{ SUMMARY_ACCESS_AUDIT : registra
+```
+
+### 2.6.8. Bounded Context: Payments & Payouts
+
+**Payments & Payouts** administra los cobros de citas y del plan Premium como operaciones diferentes, además de comprobantes, comisiones, balance e ingresos y retiros del psicólogo (EP-07; US-037, US-047, US-051, US-052 y US-053). La pasarela confirma resultados; el contexto no almacena tarjetas completas. Care Scheduling conserva la cita, mientras Payments & Payouts es dueño del pago y de la vigencia de la suscripción.
+
+#### 2.6.8.1. Domain Layer
+
+**Entities y Aggregates**
+
+* **PaymentIntent (Aggregate Root):** propósito APPOINTMENT o SUBSCRIPTION, referencia de reserva o plan, importe, moneda, clave idempotente, referencia de pasarela y estado.
+* **Subscription (Aggregate Root):** paciente, plan Básico/Premium, vigencia y estado; Premium se activa solo con un pago de suscripción aprobado.
+* **ProfessionalLedger (Aggregate Root):** movimientos de ingresos de citas, comisión de plataforma, saldo disponible y retiros comprometidos.
+* **PayoutRequest (Aggregate Root):** psicólogo, importe, método tokenizado, estado y referencia de pasarela.
+* **Receipt (Entity):** comprobante emitido para un cobro aprobado, vinculado a su PaymentIntent.
+
+**Value Objects**
+
+* **Money:** importe no negativo y moneda.
+* **PaymentPurpose:** APPOINTMENT o SUBSCRIPTION.
+* **PaymentStatus:** CREATED, PENDING, APPROVED, FAILED o REFUNDED.
+* **PayoutStatus:** REQUESTED, PROCESSING, COMPLETED o REJECTED.
+* **IdempotencyKey:** evita cargos duplicados para una misma operación.
+
+**Domain Events**
+
+* PaymentIntentCreated, PaymentApproved, PaymentFailed, ReceiptIssued, SubscriptionActivated, ProfessionalIncomeRecorded, PayoutRequested, PayoutCompleted, PayoutRejected.
+
+**Commands y Queries**
+
+* CreateAppointmentChargeCommand, SelectPremiumPlanCommand, CreateSubscriptionChargeCommand, ConfirmChargeResultCommand, RegisterPayoutMethodCommand, RequestPayoutCommand, ConfirmPayoutResultCommand.
+* GetPaymentStatusQuery, GetReceiptQuery, GetSubscriptionQuery, GetProfessionalBalanceQuery, GetPaymentMovementsQuery, GetPayoutsQuery.
+
+**Business Decisions**
+
+* Una reserva genera a lo sumo un cobro aprobado; reintentos y notificaciones repetidas reutilizan la misma clave idempotente.
+* PaymentApproved de una cita incluye reservationId para Care Scheduling; un cobro de Premium nunca confirma una cita.
+* Solo una confirmación válida de la pasarela activa Premium y emite comprobante.
+* Las suscripciones no se suman al saldo retirable del psicólogo. Solo el ingreso neto por sesiones elegibles integra su balance.
+* El retiro no supera el saldo disponible y su resultado se aplica una sola vez tras confirmación de la pasarela de retiro.
+
+#### 2.6.8.2. Interface Layer
+
+* **PaymentsController:** inicia cobros y consulta estados y comprobantes.
+* **SubscriptionsController:** muestra planes y consulta la suscripción vigente.
+* **ProfessionalBalanceController:** muestra ingresos, comisiones y saldo retirable.
+* **PayoutsController:** registra método tokenizado y solicita o consulta retiros.
+* **ProviderNotificationsController:** recibe y valida resultados firmados de pasarelas de cobro y retiro.
+* **Resources:** PaymentIntentResource, PaymentResultResource, ReceiptResource, SubscriptionResource, BalanceResource, PayoutMethodResource y PayoutResource.
+
+#### 2.6.8.3. Application Layer
+
+* **CreatePaymentIntentHandler:** valida propósito e importe y crea un intento idempotente para cita o Premium.
+* **ConfirmPaymentHandler:** comprueba firma y referencia de pasarela, actualiza estado una sola vez, emite recibo y publica PaymentApproved o PaymentFailed.
+* **ActivateSubscriptionHandler:** activa Premium solo después de aprobarse el cobro específico de suscripción y publica SubscriptionActivated a Profiles y AssistantAI.
+* **RecordProfessionalIncomeHandler:** ante un cobro de cita aprobado, registra ingreso y comisión sin mezclar ingresos de suscripciones.
+* **RequestPayoutHandler:** valida saldo, reserva el importe y solicita el retiro.
+* **ConfirmPayoutHandler:** aplica de forma idempotente el resultado firmado de la pasarela de retiro.
+* **PaymentQueries:** responde estados, recibos, plan, movimientos y balance según el rol.
+
+#### 2.6.8.4. Infrastructure Layer
+
+* **PaymentIntentRepository, SubscriptionRepository, LedgerRepository, PayoutRepository y ReceiptRepository:** persistencia exclusiva de Payments & Payouts.
+* **PaymentGatewayAdapter y PayoutGatewayAdapter:** integración con pasarelas externas; verifican firma y evitan procesar duplicados.
+* **CareReservationClient:** comprueba referencia, vigencia e importe de la reserva antes de crear el cobro.
+* **IamIdentityClient:** identifica al titular del pago o del balance, sin duplicar credenciales.
+* **PaymentsEventPublisher:** publica resultados de cobro, cambios de plan y retiro con identificadores de correlación.
+
+#### 2.6.8.5. Bounded Context Software Architecture Component Level Diagrams
+
+**Diagrama C4 de componentes en Structurizr DSL:**
+
+```text
+workspace "SafeDiary - Payments and Payouts" "C4 Component Diagram del bounded context Payments & Payouts" {
+    model {
+        patient = person "Paciente" "Paga citas, consulta comprobantes y administra su plan Premium."
+        psychologist = person "Psicólogo" "Consulta sus ingresos, registra método y solicita retiros."
+
+        safeDiary = softwareSystem "SafeDiary" {
+            paymentsApi = container "Payments & Payouts Service" "Cobros, suscripciones, comprobantes, comisiones, balance y retiros." "Servicio de API" {
+                paymentsController = component "PaymentsController" "Inicia cobros de citas y consulta su estado." "Interface"
+                subscriptionsController = component "SubscriptionsController" "Consulta planes y suscripción vigente." "Interface"
+                balanceController = component "ProfessionalBalanceController" "Consulta ingresos, comisiones y saldo retirable." "Interface"
+                payoutsController = component "PayoutsController" "Registra método tokenizado y solicita retiros." "Interface"
+                providerController = component "ProviderNotificationsController" "Recibe resultados firmados de cobro y retiro." "Interface"
+                intentService = component "PaymentIntentApplicationService" "Crea intentos idempotentes para cita o suscripción." "Application"
+                confirmationService = component "PaymentConfirmationApplicationService" "Valida y aplica el resultado de cobro una sola vez." "Application"
+                subscriptionService = component "SubscriptionApplicationService" "Activa Premium tras confirmar el cobro de plan." "Application"
+                ledgerService = component "ProfessionalLedgerApplicationService" "Registra el neto de sesiones y la comisión." "Application"
+                payoutService = component "PayoutApplicationService" "Valida saldo y tramita retiros profesionales." "Application"
+                idempotencyPolicy = component "PaymentIdempotencyPolicy" "Evita cargos duplicados por reintentos o avisos repetidos." "Domain"
+                intentRepo = component "PaymentIntentRepository" "Persiste intentos y referencias de pasarela." "Repository"
+                subscriptionRepo = component "SubscriptionRepository" "Persiste plan y vigencia." "Repository"
+                ledgerRepo = component "ProfessionalLedgerRepository" "Persiste movimientos y saldo disponible." "Repository"
+                payoutRepo = component "PayoutRepository" "Persiste métodos tokenizados y solicitudes de retiro." "Repository"
+                receiptRepo = component "ReceiptRepository" "Persiste referencias de comprobantes." "Repository"
+                careClient = component "CareReservationClient" "Valida reserva, vigencia e importe acordado." "ACL"
+                iamClient = component "IamIdentityClient" "Valida titular, identidad y rol." "ACL"
+                paymentGatewayAdapter = component "PaymentGatewayAdapter" "Procesa pagos y valida confirmaciones firmadas." "Infrastructure"
+                payoutGatewayAdapter = component "PayoutGatewayAdapter" "Procesa retiros y valida confirmaciones firmadas." "Infrastructure"
+                eventPublisher = component "PaymentsEventPublisher" "Publica resultado de cobro, plan y retiro." "Integration"
+            }
+            paymentsDb = container "Payments & Payouts Database" "Intentos, suscripciones, comprobantes, movimientos y retiros." "PostgreSQL" "Database"
+            eventBus = container "Event Bus" "Eventos de integración." "RabbitMQ" "Queue"
+        }
+        care = softwareSystem "Care Scheduling" "Provee referencia e importe de reservas temporales." "External System"
+        iam = softwareSystem "IAM" "Provee identidad autenticada y rol." "External System"
+        paymentGateway = softwareSystem "Pasarela de pago" "Procesa pagos de citas y suscripciones." "External System"
+        payoutGateway = softwareSystem "Pasarela de retiro" "Transfiere fondos al psicólogo." "External System"
+        profiles = softwareSystem "Profiles" "Consume estado de plan para presentarlo al usuario." "External System"
+        assistant = softwareSystem "AssistantAI" "Consume estado de plan para aplicar beneficios." "External System"
+
+        patient -> paymentsController "Inicia cobro y consulta comprobante" "HTTPS"
+        patient -> subscriptionsController "Consulta o contrata Premium" "HTTPS"
+        psychologist -> balanceController "Consulta balance profesional" "HTTPS"
+        psychologist -> payoutsController "Registra método y solicita retiro" "HTTPS"
+        providerController -> confirmationService "Entrega resultado firmado"
+        paymentsController -> intentService
+        subscriptionsController -> intentService
+        balanceController -> ledgerService
+        payoutsController -> payoutService
+        intentService -> careClient
+        intentService -> idempotencyPolicy
+        intentService -> intentRepo
+        intentService -> paymentGatewayAdapter
+        confirmationService -> intentRepo
+        confirmationService -> subscriptionService
+        confirmationService -> ledgerService
+        confirmationService -> receiptRepo
+        confirmationService -> eventPublisher
+        subscriptionService -> subscriptionRepo
+        ledgerService -> ledgerRepo
+        payoutService -> payoutRepo
+        payoutService -> payoutGatewayAdapter
+        intentService -> iamClient
+        payoutService -> iamClient
+        careClient -> care "Valida reserva e importe" "HTTPS"
+        iamClient -> iam "Valida identidad y rol" "HTTPS"
+        paymentGatewayAdapter -> paymentGateway "Solicita cobro" "HTTPS"
+        paymentGateway -> providerController "Confirma resultado de cobro" "Notificación firmada"
+        payoutGatewayAdapter -> payoutGateway "Solicita retiro" "HTTPS"
+        payoutGateway -> providerController "Confirma resultado de retiro" "Notificación firmada"
+        eventPublisher -> eventBus "Publica eventos de pago" "AMQP"
+        eventBus -> profiles "SubscriptionActivated" "AMQP"
+        eventBus -> assistant "SubscriptionActivated" "AMQP"
+        intentRepo -> paymentsDb "Lee y escribe" "SQL"
+        subscriptionRepo -> paymentsDb "Lee y escribe" "SQL"
+        ledgerRepo -> paymentsDb "Lee y escribe" "SQL"
+        payoutRepo -> paymentsDb "Lee y escribe" "SQL"
+        receiptRepo -> paymentsDb "Lee y escribe" "SQL"
+    }
+    views {
+        component paymentsApi "PaymentsPayoutsComponents" {
+            include *
+            autoLayout
+        }
+        styles {
+            element "Person" {
+                shape Person
+                background #08427b
+                color #ffffff
+            }
+            element "Software System" {
+                background #1168bd
+                color #ffffff
+            }
+            element "Container" {
+                background #438dd5
+                color #ffffff
+            }
+            element "Component" {
+                background #85bbf0
+                color #000000
+            }
+            element "Database" {
+                shape Cylinder
+                background #2a6f97
+                color #ffffff
+            }
+            element "Queue" {
+                shape Pipe
+                background #014f86
+                color #ffffff
+            }
+            element "External System" {
+                background #6c757d
+                color #ffffff
+            }
+        }
+    }
+}
+```
+
+#### 2.6.8.6. Bounded Context Software Architecture Code Level Diagrams
+
+##### 2.6.8.6.1. Bounded Context Domain Layer Class Diagrams
+
+```mermaid
+classDiagram
+    class PaymentIntent {
+        +UUID id
+        +PaymentPurpose purpose
+        +UUID subjectId
+        +Money amount
+        +String idempotencyKey
+        +PaymentStatus status
+        +approve()
+        +fail()
+    }
+    class Subscription {
+        +UUID patientId
+        +String plan
+        +DateTime activeUntil
+        +activatePremium()
+    }
+    class ProfessionalLedger {
+        +UUID clinicianId
+        +Money availableBalance
+        +recordIncome()
+        +reservePayout()
+    }
+    class PayoutRequest {
+        +UUID id
+        +UUID clinicianId
+        +Money amount
+        +PayoutStatus status
+        +complete()
+        +reject()
+    }
+    class Receipt {
+        +UUID id
+        +UUID paymentIntentId
+        +String fileRef
+        +issue()
+    }
+    PaymentIntent "1" --> "0..1" Receipt : emite
+    PaymentIntent "0..*" --> "0..1" Subscription : activa
+    PaymentIntent "0..*" --> "0..1" ProfessionalLedger : registra
+    ProfessionalLedger "1" --> "0..*" PayoutRequest : financia
+```
+
+##### 2.6.8.6.2. Bounded Context Database Design Diagram
+
+```mermaid
+erDiagram
+    PAYMENT_INTENTS {
+        uuid id PK
+        string purpose
+        uuid subject_id
+        uuid payer_id
+        decimal amount
+        string currency
+        string idempotency_key UK
+        string provider_reference UK
+        string status
+    }
+    SUBSCRIPTIONS {
+        uuid id PK
+        uuid patient_id UK
+        string plan
+        datetime active_until
+        string status
+    }
+    RECEIPTS {
+        uuid id PK
+        uuid payment_intent_id FK
+        string file_ref
+        datetime issued_at
+    }
+    PROFESSIONAL_LEDGER_MOVEMENTS {
+        uuid id PK
+        uuid clinician_id
+        uuid appointment_id
+        decimal gross_amount
+        decimal commission_amount
+        decimal net_amount
+        string status
+    }
+    PAYOUT_METHODS {
+        uuid id PK
+        uuid clinician_id
+        string provider_token_ref
+        string status
+    }
+    PAYOUT_REQUESTS {
+        uuid id PK
+        uuid clinician_id
+        uuid payout_method_id FK
+        decimal amount
+        string status
+        string provider_reference
+    }
+    PAYMENT_INTENTS ||--o| RECEIPTS : genera
+    PAYOUT_METHODS ||--o{ PAYOUT_REQUESTS : recibe
+```

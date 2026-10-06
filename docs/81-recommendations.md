@@ -1,6 +1,6 @@
 # Recomendaciones
 
-Para los siguientes avances de **SafeDiary**, se recomienda priorizar el desarrollo de las funcionalidades principales del sistema, comenzando por **IAM y Diary**, para asegurar primero el registro de usuarios, la privacidad y el funcionamiento del diario emocional antes de incorporar funcionalidades más complejas como **Communities** y **Rooms**.
+Para los siguientes avances de **SafeDiary**, se recomienda priorizar **IAM y Diary** para asegurar el registro, la privacidad y el diario emocional antes de ampliar el directorio profesional, las citas y los pagos.
 
 Se recomienda implementar una arquitectura **Offline-First** para permitir que los usuarios puedan registrar sus emociones y entradas del diario incluso cuando no tengan conexión a internet, sincronizando la información posteriormente. También se debe priorizar la protección de la información mediante autenticación, biometría y mecanismos adecuados de privacidad para la **Private Vault**.
 

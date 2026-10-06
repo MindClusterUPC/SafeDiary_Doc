@@ -172,4 +172,117 @@ El proceso de despliegue asegura que cada pieza del sistema esté disponible en 
 - **Canal de Distribución:** Publicación del instalable APK en la sección **Releases** del repositorio oficial de GitHub de SafeDiary y distribución complementaria mediante Firebase App Distribution.
 - **Integración con Backend:** Configuración del cliente HTTP móvil (`dio` / `http`) apuntando de forma segura mediante HTTPS al dominio público del backend desplegado en Render.
 
+## 4.2. Landing Page & Mobile Application Implementation
+
+> **Plantilla para TB1.** Esta sección debe completarse con evidencias reales del Sprint 1. No declarar una funcionalidad como implementada si no existe commit, prueba y evidencia de ejecución.
+
+### 4.2.1. Sprint 1
+
+#### 4.2.1.1. Sprint Planning 1
+
+| Campo | Valor |
+|---|---|
+| Sprint | Sprint 1 |
+| Fecha | [YYYY-MM-DD] |
+| Hora | [HH:MM] |
+| Ubicación | [presencial / virtual] |
+| Preparado por | [nombre] |
+| Asistentes | [nombres] |
+| Sprint Goal | [objetivo medible] |
+| Velocity | [story points] |
+| Story Points incluidos | [suma] |
+
+**Resumen del sprint anterior:** [si aplica].
+
+**Retrospectiva del sprint anterior:** [si aplica].
+
+#### 4.2.1.2. Aspect Leaders and Collaborators
+
+| Integrante | Aspecto / responsabilidad | User Stories o tareas relacionadas | Evidencia |
+|---|---|---|---|
+| [nombre] | [responsabilidad] | [US-xxx / task] | [enlace o commit] |
+
+#### 4.2.1.3. Sprint Backlog 1
+
+| User Story ID | Título | Work-item / Task | Descripción | Horas | Responsable | Estado |
+|---|---|---|---|---:|---|---|
+| [US-xxx] | [título] | [TASK-xxx] | [detalle] | [n] | [nombre] | [To-do / In Process / To Review / Done] |
+
+**URL del tablero:** [enlace público].
+
+#### 4.2.1.4. Development Evidence for Sprint Review
+
+Describir los incrementos logrados en Landing Page, aplicación móvil y servicios.
+
+| Repositorio | Rama | Commit | Mensaje | Fecha | Relación con User Story |
+|---|---|---|---|---|---|
+| [owner/repo] | [feature/...] | [sha] | [conventional commit] | [YYYY-MM-DD] | [US-xxx] |
+
+**Capturas:** [insertar capturas de implementación y explicar qué se evidencia].
+
+#### 4.2.1.5. Testing Suite Evidence for Sprint Review
+
+| Tipo de prueba | User Story | Caso / clase | Resultado | Commit / ruta |
+|---|---|---|---|---|
+| Unit | [US-xxx] | [caso] | [passed/failed] | [enlace] |
+| Integration | [US-xxx] | [endpoint / adaptador] | [resultado] | [enlace] |
+| Acceptance / BDD | [US-xxx] | [archivo .feature] | [resultado] | [enlace] |
+
+**Criterios de prueba y datos utilizados:** [describir sin exponer datos personales reales].
+
+#### 4.2.1.6. Execution Evidence for Sprint Review
+
+| Funcionalidad demostrada | Dispositivo / entorno | Resultado | Evidencia |
+|---|---|---|---|
+| [flujo] | [modelo, versión] | [resultado] | [captura / video] |
+
+**Video de demostración:** [URL].
+
+#### 4.2.1.7. Services Documentation Evidence for Sprint Review
+
+| Servicio / Endpoint | Método | Ruta | Parámetros | Response esperado | Documentación |
+|---|---|---|---|---|---|
+| [servicio] | GET/POST/... | `/api/v1/...` | [detalle] | [ejemplo JSON] | [Swagger / URL] |
+
+#### 4.2.1.8. Software Deployment Evidence for Sprint Review
+
+Describir configuración y evidencias del despliegue del Landing Page, backend al 70 % y los entornos de prueba móvil.
+
+| Producto | Plataforma | URL / versión | Fecha | Evidencia |
+|---|---|---|---|---|
+| Landing Page | [Vercel / otra] | [URL] | [fecha] | [captura] |
+| Backend | [Render / otra] | [URL Swagger] | [fecha] | [captura] |
+| Mobile | [emulador / dispositivo] | [versión] | [fecha] | [video] |
+
+#### 4.2.1.9. Team Collaboration Insights during Sprint
+
+Explicar cómo se distribuyó el trabajo y adjuntar capturas de commits, tablero, pull requests y revisiones. Los datos deben coincidir con el Registro de Versiones del Informe y el Participant Performance Report.
+
+## 4.3. Validation Interviews
+
+### 4.3.1. Diseño de Entrevistas
+
+**Objetivo:** [validar facilidad de uso, comprensión, confianza y cumplimiento del flujo seleccionado].
+
+**Participantes:** [segmento, cantidad y criterios de selección].
+
+**Tareas evaluadas:** [tareas concretas del prototipo o aplicación].
+
+**Guion:** [preguntas y orden].
+
+### 4.3.2. Registro de Entrevistas
+
+| Participante | Segmento | Fecha | Tareas ejecutadas | Hallazgos principales | Evidencia |
+|---|---|---|---|---|---|
+| [P01] | [paciente / psicólogo] | [fecha] | [tareas] | [hallazgos] | [enlace] |
+
+### 4.3.3. Evaluaciones según heurísticas
+
+| # | Problema | Severidad (1-4) | Heurística / principio | Recomendación | Estado |
+|---:|---|---:|---|---|---|
+| 1 | [problema] | [1-4] | [heurística] | [recomendación] | [pendiente / corregido] |
+
+**Capturas de problemas:** [insertar una captura por problema relevante].
+
+
 ---
