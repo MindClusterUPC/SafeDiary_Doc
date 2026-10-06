@@ -1,0 +1,191 @@
+# Capítulo III: Solution UI/UX Design
+
+> **Plantilla para TB1.** Reemplazar los textos entre corchetes por decisiones y evidencias propias de SafeDiary. Cada artefacto debe incluir una imagen legible, una explicación de las decisiones y la relación con las historias de usuario.
+
+## 3.1. Product design
+
+En esta sección se explica cómo el diseño de SafeDiary transforma los requisitos priorizados del Capítulo II en una experiencia coherente para pacientes jóvenes y, cuando corresponda, profesionales de salud mental.
+
+**Alcance de esta entrega:** [indicar qué pantallas y flujos se presentan en TB1 y cuáles quedan para los siguientes sprints].
+
+**Historias de usuario cubiertas:** [US-xxx, US-xxx].
+
+**Criterios transversales:** privacidad por defecto, consentimiento explícito, lenguaje no diagnóstico, accesibilidad y estados de error.
+
+### 3.1.1. Style Guidelines
+
+#### 3.1.1.1. General Style Guidelines
+
+##### Branding
+
+- **Nombre y propuesta de valor:** SafeDiary como puente seguro entre reflexión privada, hábitos de autocuidado y atención profesional.
+- **Personalidad de marca:** [serena / cercana / no sentenciosa / clínicamente responsable].
+- **Logo y usos permitidos:** [insertar logo, área de protección y usos incorrectos].
+
+##### Typography
+
+| Uso | Familia | Peso | Tamaño | Ejemplo |
+|---|---|---:|---:|---|
+| Título principal | [fuente] | [peso] | [px] | [texto] |
+| Encabezado de sección | [fuente] | [peso] | [px] | [texto] |
+| Texto de cuerpo | [fuente] | [peso] | [px] | [texto] |
+| Etiqueta / ayuda | [fuente] | [peso] | [px] | [texto] |
+
+##### Colors
+
+| Token | Valor | Uso | Contraste validado |
+|---|---|---|---|
+| `color.background` | [hex] | Fondo principal | [AA/AAA] |
+| `color.surface` | [hex] | Tarjetas y formularios | [AA/AAA] |
+| `color.primary` | [hex] | Acciones principales | [AA/AAA] |
+| `color.secondary` | [hex] | Acciones secundarias | [AA/AAA] |
+| `color.text` | [hex] | Texto principal | [AA/AAA] |
+| `color.danger` | [hex] | Estados de riesgo o error | [AA/AAA] |
+
+##### Spacing, grid and components
+
+- **Grid:** [número de columnas / márgenes / ancho base del dispositivo].
+- **Escala de espaciado:** [4, 8, 12, 16, 24, 32 ...].
+- **Radio y elevación:** [valores definidos].
+- **Componentes reutilizables:** [botones, tarjetas, campos, chips emocionales, navegación, tarjetas de especialistas, estados vacíos].
+- **Estados:** default, pressed, disabled, loading, success, error, offline y contenido no disponible.
+
+##### Voice and tone
+
+SafeDiary utiliza microcopy claro, cálido y no diagnóstico. No promete monitoreo permanente ni reemplazo de terapia. Ante una señal de crisis, ofrece recursos humanos y de emergencia locales sin ejecutar contactos automáticos.
+
+### 3.1.2. Information Architecture
+
+#### 3.1.2.1. Organization Systems
+
+Describir cómo se agrupa la información para cada rol.
+
+| Rol | Necesidad principal | Secciones accesibles |
+|---|---|---|
+| Paciente | Registrar, comprender y buscar apoyo | Home, Rutinas, Diario, Psicólogos, Citas |
+| Psicólogo | Gestionar perfil, disponibilidad y citas | [portal o vista por rol pendiente de definir] |
+| Administrador | Revisar verificaciones profesionales | [fuera del alcance móvil si corresponde] |
+
+**Decisión de alcance:** [confirmar si la navegación de cinco pantallas es exclusivamente para pacientes. Si se implementan historias del rol Psicólogo, agregar un flujo o declarar esas historias como alcance futuro].
+
+#### 3.1.2.2. Labelling Systems
+
+| Término visible | Definición | Evitar |
+|---|---|---|
+| Diario | Registro privado de experiencias y emociones | Historial clínico, diagnóstico |
+| Psicólogos | Directorio de profesionales verificados | Terapia garantizada |
+| Citas | Reservas, pagos y sesiones profesionales | Agenda pública |
+| Compartir con mi psicólogo | Autorización limitada y revocable | Compartir historial completo |
+
+#### 3.1.2.3. SEO Tags and Meta Tags
+
+Completar para la landing page.
+
+| Página | Title | Description | Keywords |
+|---|---|---|---|
+| Inicio | [texto] | [texto] | [palabras clave] |
+| Psicólogos / soporte | [texto] | [texto] | [palabras clave] |
+| Privacidad | [texto] | [texto] | [palabras clave] |
+
+#### 3.1.2.4. Searching Systems
+
+Describir la búsqueda del directorio de psicólogos y sus filtros. Incluir especialidad, disponibilidad, tarifa, seguro aceptado y estado de verificación, además de estados sin resultados y error de red.
+
+**Evidencia:** [captura del flujo de búsqueda y filtros].
+
+#### 3.1.2.5. Navigation Systems
+
+Documentar la navegación principal y las rutas críticas.
+
+```text
+Paciente
+  Home -> Rutinas -> Diario -> Psicólogos -> Citas
+  Diario -> Compartir con psicólogo -> Consentimiento -> Resumen autorizado
+  Psicólogos -> Perfil verificado -> Horario -> Reserva -> Pago -> Videollamada
+  Citas -> Reserva pendiente -> Pago -> Cita confirmada -> Videollamada
+```
+
+**Regla:** el usuario siempre puede volver sin perder una entrada, una selección de consentimiento ni el estado de una reserva.
+
+### 3.1.3. Landing Page UI Design
+
+#### 3.1.3.1. Landing Page Wireframe
+
+**Objetivo:** [explicar qué debe comprender y hacer un visitante].
+
+> **Insertar aquí:** imagen legible del Landing Page Wireframe.
+
+**Explicación del wireframe:** [secciones, jerarquía, CTA, prueba social, privacidad y responsive behavior].
+
+#### 3.1.3.2. Landing Page Mock-up
+
+> **Insertar aquí:** imagen legible del Landing Page Mock-up.
+
+**Decisiones visuales y funcionales:** [explicar cómo el mock-up aplica las guías de estilo y cómo enlaza con el registro o descarga].
+
+### 3.1.4. Mobile Applications UX/UI Design
+
+#### 3.1.4.1. Mobile Applications Wireframes
+
+Presentar wireframes de las cinco pantallas de la vista del paciente:
+
+1. Home.
+2. Rutinas.
+3. Diario.
+4. Psicólogos.
+5. Citas.
+
+También incluir las vistas auxiliares imprescindibles: detalle de psicólogo, reserva, consentimiento, pago, videollamada y estados de error.
+
+| Pantalla | Historias relacionadas | Estado cubierto | Evidencia |
+|---|---|---|---|
+| Home | [US-xxx] | [normal / vacío / offline] | [imagen] |
+| Rutinas | US-007, US-024, US-030 | [normal / recordatorio fallido] | [imagen] |
+| Diario | US-008, US-010, US-011 | [normal / transcripción fallida] | [imagen] |
+| Psicólogos | US-002, US-009, US-014, US-037 | [sin resultados / horario ocupado / pago fallido] | [imagen] |
+| Citas | US-014, US-037, US-038 | [reserva vencida / pago fallido] | [imagen] |
+
+#### 3.1.4.2. Mobile Applications Wireflow Diagrams
+
+Elaborar un wireflow por recorrido prioritario:
+
+- Registro emocional -> reflexión -> guardado.
+- Búsqueda de psicólogo -> reserva -> consentimiento -> pago.
+- Reserva temporal -> pago -> confirmación -> acceso a la sesión.
+
+> **Insertar aquí:** imagen legible del Mobile Applications Wireflow.
+
+#### 3.1.4.3. Mobile Applications Mock-ups
+
+> **Insertar aquí:** imagen legible de los Mobile Applications Mock-ups.
+
+Explicar cada mock-up y relacionarlo con sus User Stories y criterios de aceptación.
+
+#### 3.1.4.4. Mobile Applications User Flow Diagrams
+
+```mermaid
+flowchart TD
+    A[Paciente abre SafeDiary] --> B{¿Qué necesita?}
+    B -->|Registrar| C[Diario]
+    B -->|Regular| D[Rutinas]
+    B -->|Buscar atención| E[Psicólogos]
+    B -->|Revisar cita| F[Citas]
+    E --> G[Perfil verificado]
+    G --> H[Horario disponible]
+    H --> I[Consentimiento opcional]
+    I --> J[Pago]
+    J --> K[Reserva confirmada]
+    K --> L[Videollamada]
+```
+
+**Reglas de seguridad del flujo:** [describir consentimiento, revocación, acceso mínimo y qué ocurre si falla el pago o la conexión].
+
+#### 3.1.4.5. Mobile Applications Prototyping
+
+**Enlace al prototipo:** [URL pública de Figma].
+
+**Alcance interactivo:** [pantallas navegables y limitaciones conocidas].
+
+**Prueba rápida:** [participantes, tareas, hallazgos y cambios realizados].
+
+**Criterios de entrega:** el prototipo debe permitir demostrar el flujo principal del Sprint 1 y mantener consistencia con las historias y el Product Backlog.
