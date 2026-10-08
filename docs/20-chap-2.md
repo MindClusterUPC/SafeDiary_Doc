@@ -42,7 +42,7 @@ El análisis permite comprender cómo las soluciones existentes acompañan a las
 | --- | --- | --- | --- | --- |
 | Productos y servicios | Diario por texto o voz con transcripción, reflexión asistida, etiquetas emocionales y extracción de palabras clave; historial confidencial, gráficos de evolución y resúmenes por período. Directorio de psicólogos verificados con especialidad, disponibilidad y tarifa; reserva de citas, videollamadas y pago de sesiones. Sistema de confianza con reseñas y criterios transparentes sobre la actividad profesional. | Sesión semanal, mensajería, grupos de apoyo, herramientas de hábitos y diario. | Meditaciones, recursos de sueño, ejercicios y Ebb; sesiones con profesionales mediante su oferta de terapia. | Chat con Pía, diario con texto, imágenes y notas de voz, cuestionarios de autoexploración, objetivos, hábitos, cartas al futuro y logros. |
 | Registro y continuidad entre sesiones | Conserva experiencias cuando ocurren, incluyendo detalles que pueden olvidarse al llegar a consulta. Propone organizar entradas por período y mostrar emociones predominantes, posibles detonantes y variaciones a lo largo del tiempo. El paciente revisa el resumen, elige qué compartir y puede revocar el acceso. El psicólogo recibe contexto complementario para la conversación clínica, sin exponer el resto del diario. | Permite escribir y compartir entradas del diario con el terapeuta, además de actualizar objetivos y hábitos. | Conversación y reflexión mediante Ebb. Disponibilidad de un diario por voz con resumen compartible: por confirmar. | Historial de conversaciones y diario para revisar experiencias y avances. Integración de resúmenes autorizados con un psicólogo: por confirmar. |
-| Precios y costos | Modelo freemium con una versión gratuita y planes de pago que amplían las funcionalidades disponibles. Se cobrará a los psicólogos una pequeña comisión por las citas gestionadas a través de la plataforma. Como vía adicional de comercialización, se contempla ofrecer convenios y planes institucionales a universidades, colegios, clínicas, empresas y otras organizaciones para facilitar el acceso de sus estudiantes y colaboradores a SafeDiary. | En Estados Unidos: **US$70–100 por semana** sin seguro, variable según ubicación y condiciones. No constituye una tarifa para Perú. | Suscripción de autocuidado con Ebb: **US$69.99 al año** después de la prueba. La terapia tiene costos separados según cobertura y ubicación. | Compras dentro de la aplicación. Pía Plus ofrece suscripción mensual o anual; importe vigente por confirmar. |
+| Precios y costos | Modelo freemium con un plan gratuito (**Básico**) y un nivel de pago (**Premium**) con dos opciones de facturación: **Terra** a **US$19.99 mensual** y **Astrum** a **US$100 anual** (aprox. US$8.33 al mes, un 58% de ahorro frente a la opción mensual). Ambas opciones desbloquean los mismos beneficios Premium (Diarito ilimitado con memoria compartida, cuatro personalidades, rutinas guiadas, recordatorios, resumen emocional semanal, bóveda privada y exportación en PDF). Las sesiones con psicólogos se pagan por separado, por sesión, cobrándose a los profesionales una pequeña comisión por cita gestionada en la plataforma. Como vía adicional de comercialización, se contempla ofrecer convenios y planes institucionales a universidades, colegios, clínicas, empresas y otras organizaciones para facilitar el acceso de sus estudiantes y colaboradores a SafeDiary. | En Estados Unidos: **US$70–100 por semana** sin seguro, variable según ubicación y condiciones. No constituye una tarifa para Perú. | Suscripción de autocuidado con Ebb: **US$69.99 al año** después de la prueba. La terapia tiene costos separados según cobertura y ubicación. | Compras dentro de la aplicación. Pía Plus ofrece suscripción mensual o anual; importe vigente por confirmar. |
 | Canales de distribución | Distribución prevista mediante App Store para iOS, Google Play Store para Android y acceso web desde el navegador. | Servicio online mediante web y aplicación. | Aplicación Headspace y sitio web de suscripción y acceso a terapia. | Aplicaciones para Android e iOS y acceso web al chat con Pía. |
 
 
@@ -373,7 +373,7 @@ La matriz reúne las seis tareas más importantes de cada segmento y las prioriz
 
 * **Payment (Pago):** Transacción asociada a una cita o una suscripción; cada propósito se procesa de forma idempotente y conserva su estado verificable.
 * **Receipt (Comprobante):** Constancia digital emitida después de un pago aprobado y disponible para consulta del usuario.
-* **Subscription (Suscripción):** Derecho temporal al plan Premium que se activa solo tras un pago confirmado y se gestiona por separado del pago de una cita.
+* **Subscription (Suscripción):** Derecho temporal al plan Premium (disponible en dos opciones de facturación: Terra a US$19.99 mensual o Astrum a US$100 anual) que se activa solo tras un pago confirmado y se gestiona por separado del pago de una cita.
 * **Payout (Retiro):** Transferencia de saldo profesional disponible hacia el método de retiro verificado del psicólogo.
 * **Refund (Reembolso):** Devolución total o parcial de un pago que actualiza de forma trazable el estado financiero de la cita.
 
@@ -390,7 +390,7 @@ La matriz reúne las seis tareas más importantes de cada segmento y las prioriz
 | EP-04 | Directorio de psicólogos verificados y reputación | **Como** paciente que busca atención profesional,<br>**Quiero** encontrar fichas verificadas con tarifas y reseñas confiables,<br>**Para** elegir a quién contactar con información transparente. Incluye la verificación y publicación de la ficha por el psicólogo y la revisión de credenciales por administración; no gestiona citas ni cobros. |
 | EP-05 | Landing page, comunicación y adquisición | **Como** visitante,<br>**Quiero** conocer la propuesta, funcionalidades, precios y equipo de SafeDiary,<br>**Para** evaluar el producto antes de registrarme o descargarlo. |
 | EP-06 | Contacto, agenda y sesiones profesionales | **Como** paciente y psicólogo verificado,<br>**Quiero** coordinar por chat, acordar un horario, retenerlo temporalmente y acceder a la sesión solo tras la confirmación del pago,<br>**Para** evitar conflictos de agenda y realizar la atención de forma segura. Care Scheduling no procesa el cobro. |
-| EP-07 | Pagos de sesiones, suscripciones y retiros | **Como** paciente o psicólogo,<br>**Quiero** pagar sesiones o un plan Premium y consultar ingresos o retiros según mi rol,<br>**Para** contar con operaciones trazables, comprobantes y saldos correctos. El pago de sesión y la suscripción son propósitos distintos; Premium no forma parte del saldo retirable del psicólogo. |
+| EP-07 | Pagos de sesiones, suscripciones y retiros | **Como** paciente o psicólogo,<br>**Quiero** pagar sesiones o un plan Premium (Terra mensual o Astrum anual) y consultar ingresos o retiros según mi rol,<br>**Para** contar con operaciones trazables, comprobantes y saldos correctos. El pago de sesión y la suscripción son propósitos distintos; Premium no forma parte del saldo retirable del psicólogo. |
 
 
 **User Stories**
@@ -574,7 +574,7 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
 <tr><td colspan="4"><strong>Como</strong> visitante de la landing page,<br><strong>Quiero</strong> comparar los planes disponibles de SafeDiary,<br><strong>Para</strong> evaluar qué opción se ajusta a mis necesidades y presupuesto.</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Comparación de planes</strong><br><strong>Given</strong> que el visitante se encuentra en la sección de precios<br><strong>When</strong> consulta las opciones disponibles<br><strong>Then</strong> el sistema muestra el precio y las funciones incluidas en cada plan<br><strong>And</strong> diferencia claramente el plan gratuito del plan premium<br><br><strong>Scenario 2: Selección de un plan</strong><br><strong>Given</strong> que el visitante eligió una opción disponible<br><strong>When</strong> selecciona su botón de acción<br><strong>Then</strong> el sistema lo dirige al flujo correspondiente de registro o adquisición<br><strong>And</strong> mantiene visible el plan seleccionado</td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Comparación de planes</strong><br><strong>Given</strong> que el visitante se encuentra en la sección de precios<br><strong>When</strong> consulta las opciones disponibles<br><strong>Then</strong> el sistema muestra tres tarjetas con sus funciones incluidas: Básico gratis, Terra US$19.99/mes y Astrum US$100/año<br><strong>And</strong> diferencia claramente el plan gratuito Básico de las opciones del plan Premium (Terra mensual y Astrum anual)<br><br><strong>Scenario 2: Selección de un plan</strong><br><strong>Given</strong> que el visitante eligió una de las tres tarjetas disponibles (Básico gratis, Terra US$19.99/mes o Astrum US$100/año)<br><strong>When</strong> selecciona su botón de acción<br><strong>Then</strong> el sistema lo dirige al flujo correspondiente de registro o adquisición<br><strong>And</strong> mantiene visible el plan seleccionado</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
@@ -824,7 +824,7 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
 <tr><td colspan="4"><strong>Como</strong> psicólogo verificado,<br><strong>Quiero</strong> consultar el saldo disponible, los pagos de sesiones, las comisiones y los retiros pendientes,<br><strong>Para</strong> controlar mis ingresos antes de solicitar un retiro.</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Balance y movimientos visibles</strong><br><strong>Given</strong> que existen pagos de sesiones y comisiones registradas<br><strong>When</strong> el psicólogo abre Payments &amp; Payouts<br><strong>Then</strong> el sistema muestra importes brutos, comisiones, netos, saldo disponible y retiros en proceso<br><strong>And</strong> relaciona cada ingreso con su cita sin mostrar datos financieros sensibles del paciente<br><br><strong>Scenario 2: Importe no disponible</strong><br><strong>Given</strong> que un cobro está pendiente, reembolsado o ya comprometido para retiro<br><strong>When</strong> se calcula el balance<br><strong>Then</strong> el sistema excluye ese importe del saldo retirable<br><strong>And</strong> nunca incorpora ingresos de suscripciones Premium de pacientes al balance del psicólogo</td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Balance y movimientos visibles</strong><br><strong>Given</strong> que existen pagos de sesiones y comisiones registradas<br><strong>When</strong> el psicólogo abre Payments &amp; Payouts<br><strong>Then</strong> el sistema muestra importes brutos, comisiones, netos, saldo disponible y retiros en proceso<br><strong>And</strong> relaciona cada ingreso con su cita sin mostrar datos financieros sensibles del paciente<br><br><strong>Scenario 2: Importe no disponible</strong><br><strong>Given</strong> que un cobro está pendiente, reembolsado o ya comprometido para retiro<br><strong>When</strong> se calcula el balance<br><strong>Then</strong> el sistema excluye ese importe del saldo retirable<br><strong>And</strong> nunca incorpora ingresos de suscripciones Premium (Terra mensual o Astrum anual) de pacientes al balance del psicólogo</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
@@ -862,9 +862,9 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 <tr><td style="text-align:center">US-051</td><td style="text-align:center">Paciente</td><td style="text-align:center">Media</td><td style="text-align:center">EP-07</td></tr>
 <tr><td><strong>Title</strong></td><td colspan="3">Suscripción al plan Premium</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
-<tr><td colspan="4"><strong>Como</strong> paciente con plan Básico,<br><strong>Quiero</strong> consultar el precio vigente y contratar Premium dentro de la aplicación,<br><strong>Para</strong> acceder a los beneficios del plan después de un pago aprobado.</td></tr>
+<tr><td colspan="4"><strong>Como</strong> paciente con plan Básico,<br><strong>Quiero</strong> consultar los precios vigentes y contratar el plan Premium eligiendo la opción Terra o Astrum dentro de la aplicación,<br><strong>Para</strong> acceder a los beneficios del plan después de un pago aprobado.</td></tr>
 <tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
-<tr><td colspan="4"><strong>Scenario 1: Suscripción aprobada</strong><br><strong>Given</strong> que el paciente eligió Premium y aceptó su precio y condiciones vigentes<br><strong>When</strong> la pasarela confirma el pago de la suscripción<br><strong>Then</strong> Payments &amp; Payouts activa Premium una sola vez y emite un comprobante<br><strong>And</strong> publica el estado del plan a Profiles y AssistantAI sin crear una cita ni ingreso retirable del psicólogo<br><br><strong>Scenario 2: Pago fallido o pendiente</strong><br><strong>Given</strong> que el paciente inició el cambio de plan<br><strong>When</strong> el pago falla, queda pendiente o se recibe una notificación duplicada<br><strong>Then</strong> el sistema conserva el plan anterior hasta confirmar el cobro y evita cargos duplicados<br><strong>And</strong> mantiene disponibles las funciones gratuitas y los recursos de crisis</td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Suscripción aprobada</strong><br><strong>Given</strong> que el paciente eligió la opción Terra o Astrum del plan Premium y aceptó su precio y condiciones vigentes<br><strong>When</strong> la pasarela confirma el pago de la suscripción<br><strong>Then</strong> Payments &amp; Payouts activa el plan Premium en la modalidad seleccionada una sola vez y emite un comprobante<br><strong>And</strong> publica el estado del plan a Profiles y AssistantAI sin crear una cita ni ingreso retirable del psicólogo<br><br><strong>Scenario 2: Pago fallido o pendiente</strong><br><strong>Given</strong> que el paciente inició la suscripción a Terra o Astrum<br><strong>When</strong> el pago falla, queda pendiente o se recibe una notificación duplicada<br><strong>Then</strong> el sistema conserva el plan anterior hasta confirmar el cobro y evita cargos duplicados<br><strong>And</strong> mantiene disponibles las funciones gratuitas y los recursos de crisis<br><br><strong>Scenario 3: Cambio entre Terra y Astrum</strong><br><strong>Given</strong> que el paciente cuenta con una suscripción Premium activa y solicita cambiar entre las opciones Terra y Astrum<br><strong>When</strong> confirma la modificación de su período de facturación<br><strong>Then</strong> el cambio entra en vigor al finalizar el período actual facturado, sin generar cobros duplicados<br><strong>And</strong> el sistema actualiza la fecha de renovación y el comprobante del nuevo ciclo según la modalidad elegida</td></tr>
 </table>
 
 <table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
@@ -932,7 +932,7 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 
 El Product Backlog reúne y prioriza las historias de usuario (US) y las historias técnicas (TS) definidas en la sección 2.4.1, ordenándolas según el valor que aportan al negocio y la complejidad técnica que implica su desarrollo. La priorización combina dos criterios:
 
-* **Valor de negocio por Épica:** EP-01 (identidad y privacidad) y EP-02 (diario, IA y autocuidado) constituyen la base del producto. EP-04 (directorio verificado), EP-06 (contacto, agenda y sesiones) y EP-07 (cobros, Premium y retiros) forman el recorrido de atención profesional y monetización. EP-05 (landing page) apoya la adquisición.
+* **Valor de negocio por Épica:** EP-01 (identidad y privacidad) y EP-02 (diario, IA y autocuidado) constituyen la base del producto. EP-04 (directorio verificado), EP-06 (contacto, agenda y sesiones) y EP-07 (cobros, Premium (Terra mensual o Astrum anual) y retiros) forman el recorrido de atención profesional y monetización. EP-05 (landing page) apoya la adquisición.
 * **Estimación de esfuerzo:** los Story Points siguen la escala de Fibonacci (1, 2, 3, 5, 8) y reflejan complejidad, riesgo y dependencias.
 
 El orden de la tabla sigue las dependencias de registro, directorio, contacto, propuesta, reserva, pago y sesión.
@@ -1043,7 +1043,7 @@ Coordina la solicitud de contacto, la conversación para acordar el horario, la 
 
 ![Candidate Context Discovery, fase 1: Payments & Payouts](../assets/images/chap2/candidate-contexts/candidate-payments-payouts.jpg)
 
-Gestiona dos cobros distintos: la sesión profesional y la suscripción de la aplicación (Básico a Premium). Crea intentos de pago idempotentes, registra el resultado confirmado por la pasarela y emite comprobantes. Tras el cobro de una sesión registra el ingreso profesional y la comisión de la plataforma; el psicólogo puede solicitar un retiro sujeto al saldo disponible y a la confirmación de la pasarela de retiro. Una suscripción Premium se activa únicamente después de confirmarse su pago y no aumenta el saldo retirable del psicólogo. El contexto no almacena contenido del diario ni datos completos de tarjetas.
+Gestiona dos cobros distintos: la sesión profesional y la suscripción de la aplicación (de Básico al plan Premium, con dos períodos de facturación: MONTHLY para Terra y YEARLY para Astrum). Crea intentos de pago idempotentes, registra el resultado confirmado por la pasarela y emite comprobantes. Tras el cobro de una sesión registra el ingreso profesional y la comisión de la plataforma; el psicólogo puede solicitar un retiro sujeto al saldo disponible y a la confirmación de la pasarela de retiro. Una suscripción Premium (Terra mensual o Astrum anual) se activa únicamente después de confirmarse su pago y no aumenta el saldo retirable del psicólogo. El contexto no almacena contenido del diario ni datos completos de tarjetas.
 
 ##### Diary
 
@@ -1127,7 +1127,7 @@ Care Scheduling coordina el contacto, el acuerdo de horario, la reserva temporal
 
 ![paymentspayouts-bcc](../assets/images/chap2/boundedcontexts/paymentspayouts-bcc.png)
 
-Payments & Payouts procesa por separado los pagos de citas y suscripciones Premium, emite comprobantes y registra ingresos y comisiones. También administra el saldo y los retiros del psicólogo sin mezclar los ingresos por suscripciones.
+Payments & Payouts procesa por separado los pagos de citas y suscripciones del plan Premium (con dos períodos de facturación: MONTHLY para Terra y YEARLY para Astrum), emite comprobantes y registra ingresos y comisiones. También administra el saldo y los retiros del psicólogo sin mezclar los ingresos por suscripciones.
 
 ### 2.5.2. Context Mapping
 
@@ -1145,9 +1145,9 @@ Se elaboraron dos mapas: un candidato inicial que concentra responsabilidades y 
 
 3. **¿Qué pasaría si fusionamos Clinician Directory, Care Scheduling y Payments & Payouts?** La búsqueda y las reseñas, la concurrencia de reservas y la conciliación financiera requieren reglas y ciclos de cambio diferentes. Una sola frontera haría que la publicación de una ficha dependiera de operaciones de agenda o de pasarela. **Decisión:** mantener los tres bounded contexts separados. La solicitud de contacto inicia el flujo de Care Scheduling; la reserva temporal solicita el cobro a Payments & Payouts; únicamente el pago aprobado confirma la cita.
 
-4. **¿Qué pasaría si movemos el cobro de la cita a Care Scheduling?** El agendamiento conocería intentos de pago, comprobantes, comisiones y retiros, además de sus propias reglas de disponibilidad. **Decisión:** Payments & Payouts es dueño de los intentos idempotentes y del resultado de la pasarela. Care Scheduling solo conserva la referencia de la reserva y el estado necesario para confirmar o liberar el horario. El cobro Premium constituye otra operación y no confirma citas ni incrementa el saldo retirable del psicólogo.
+4. **¿Qué pasaría si movemos el cobro de la cita a Care Scheduling?** El agendamiento conocería intentos de pago, comprobantes, comisiones y retiros, además de sus propias reglas de disponibilidad. **Decisión:** Payments & Payouts es dueño de los intentos idempotentes y del resultado de la pasarela. Care Scheduling solo conserva la referencia de la reserva y el estado necesario para confirmar o liberar el horario. El cobro del plan Premium (Terra mensual o Astrum anual) constituye otra operación y no confirma citas ni incrementa el saldo retirable del psicólogo.
 
-5. **¿Qué pasaría si duplicamos información para reducir dependencias?** Una copia local del consentimiento en Diary o Care Scheduling permitiría lecturas posteriores a una revocación. En cambio, una proyección del estado Básico/Premium en Profiles o AssistantAI puede actualizarse por evento, pues el pago y la vigencia siguen siendo propiedad de Payments & Payouts. **Decisión:** no duplicar el consentimiento como fuente de autorización; validar su vigencia en IAM antes de compartir información sensible. Distribuir el estado de plan solo como proyección de lectura, sin conceder beneficios hasta la confirmación del cobro.
+5. **¿Qué pasaría si duplicamos información para reducir dependencias?** Una copia local del consentimiento en Diary o Care Scheduling permitiría lecturas posteriores a una revocación. En cambio, una proyección del estado Básico/Premium (Terra mensual o Astrum anual) en Profiles o AssistantAI puede actualizarse por evento, pues el pago y la vigencia siguen siendo propiedad de Payments & Payouts. **Decisión:** no duplicar el consentimiento como fuente de autorización; validar su vigencia en IAM antes de compartir información sensible. Distribuir el estado de plan solo como proyección de lectura, sin conceder beneficios hasta la confirmación del cobro.
 
 6. **¿Qué pasaría si usamos un servicio compartido para las notificaciones?** Rutines envía recordatorios, Care Scheduling informa cambios de cita y AssistantAI presenta avisos vinculados con sus flujos. Replicar la integración de envío en cada contexto duplicaría infraestructura. **Decisión:** utilizar un servicio genérico de notificaciones: cada bounded context decide cuándo emitir su aviso y el servicio únicamente lo entrega. Las decisiones de negocio no pasan al servicio compartido.
 
@@ -1171,7 +1171,7 @@ Las consultas de identidad y consentimiento son síncronas cuando una decisión 
 
 **F. Care Scheduling ↔ Payments & Payouts.** Patrón: **Customer/Supplier / Published Language** con contratos en ambos sentidos. Care Scheduling envía la referencia, el importe y el vencimiento de la reserva; Payments & Payouts gestiona un único intento de cobro por clave idempotente y publica su resultado. Care Scheduling confirma la cita solo ante un pago aprobado para una reserva vigente; si falla o expira, libera el horario. Un pago tardío se concilia o devuelve sin recrear una cita sobre un horario liberado.
 
-**G. Payments & Payouts (upstream) → Profiles y AssistantAI (downstream).** Patrón: **Published Language**. El evento de suscripción confirmada actualiza las proyecciones de plan en ambos consumidores. La pasarela, el comprobante y la vigencia de Premium permanecen en Payments & Payouts; la suscripción no forma parte del flujo de confirmación de citas.
+**G. Payments & Payouts (upstream) → Profiles y AssistantAI (downstream).** Patrón: **Published Language**. El evento de suscripción confirmada actualiza las proyecciones de plan en ambos consumidores. La pasarela, el comprobante y la vigencia del plan Premium (Terra mensual o Astrum anual) permanecen en Payments & Payouts; la suscripción no forma parte del flujo de confirmación de citas.
 
 **H. AssistantAI (upstream) → Care Scheduling (downstream).** Patrón: **Customer/Supplier + Anticorruption Layer**. Care Scheduling consume solo el resumen emocional necesario para la preparación de una atención, después de comprobar el consentimiento con IAM; no recibe la conversación completa ni modifica el modelo de AssistantAI.
 
@@ -1263,7 +1263,7 @@ El sistema SafeDiary separa el dispositivo móvil, los servicios de aplicación,
 * **Gemini API:** inferencia para respuestas reflexivas y resúmenes emocionales.
 * **FCM / APNs:** entrega de notificaciones móviles.
 * **Google Calendar / Outlook Calendar:** sincronización opcional de citas del psicólogo.
-* **Pasarela de pago:** cobros de citas y suscripciones Premium, con confirmación firmada; SafeDiary no almacena datos completos de tarjeta.
+* **Pasarela de pago:** cobros de citas y suscripciones del plan Premium (Terra mensual o Astrum anual), con confirmación firmada; SafeDiary no almacena datos completos de tarjeta.
 * **Pasarela de retiro:** transferencias y confirmación de retiros profesionales.
 * **Proveedor de videollamadas:** reuniones privadas y accesos temporales de participantes autorizados.
 * **Recursos de ayuda en crisis:** canales externos de contacto mostrados en la aplicación, sin asumir atención de emergencia dentro de SafeDiary.
@@ -1376,7 +1376,7 @@ A continuación, se detalla la especificación táctica de los ocho bounded cont
 
 ### 2.6.2. Bounded Context: Profiles
 
-**Profiles** administra los datos personales, la foto y las preferencias de la aplicación para Paciente y Psicólogo. Identifica a cada titular mediante el accountId de IAM y muestra el estado Básico/Premium recibido desde Payments & Payouts; no autentica, decide consentimientos, verifica credenciales profesionales ni publica fichas o tarifas. Estas últimas pertenecen a Clinician Directory.
+**Profiles** administra los datos personales, la foto y las preferencias de la aplicación para Paciente y Psicólogo. Identifica a cada titular mediante el accountId de IAM y muestra el estado del plan (Básico o Premium en sus opciones Terra mensual o Astrum anual) recibido desde Payments & Payouts; no autentica, decide consentimientos, verifica credenciales profesionales ni publica fichas o tarifas. Estas últimas pertenecen a Clinician Directory.
 
 #### 2.6.2.1. Domain Layer
 
@@ -1384,7 +1384,7 @@ A continuación, se detalla la especificación táctica de los ocho bounded cont
 
 * **PersonalProfile (Aggregate Root):** id, accountId, displayName, avatarRef, locale, timezone y preferencias de presentación. Mantiene referencias a psicólogos guardados, sin duplicar sus fichas.
 * **AppPreferences (Value Object):** configuración de notificaciones, recordatorios y tono del asistente.
-* **PlanStatusProjection (Read Model):** plan Básico/Premium y fecha de actualización recibidos por evento de Payments & Payouts; no constituye la fuente de verdad de la suscripción.
+* **PlanStatusProjection (Read Model):** plan (Básico o Premium en modalidad Terra mensual o Astrum anual) y fecha de actualización recibidos por evento de Payments & Payouts; no constituye la fuente de verdad de la suscripción.
 
 **Domain Events**
 
@@ -1399,7 +1399,7 @@ A continuación, se detalla la especificación táctica de los ocho bounded cont
 
 * El accountId debe pertenecer al usuario autenticado en IAM.
 * Una referencia a un psicólogo guardado no concede acceso a su agenda ni a datos clínicos.
-* Profiles no activa Premium: solo actualiza su proyección tras SubscriptionActivated.
+* Profiles no activa el plan Premium: solo actualiza su proyección tras SubscriptionActivated.
 
 #### 2.6.2.2. Interface Layer
 
@@ -1928,14 +1928,14 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 
 ### 2.6.8. Bounded Context: Payments & Payouts
 
-**Payments & Payouts** administra los cobros de citas y del plan Premium como operaciones diferentes, además de comprobantes, comisiones, balance e ingresos y retiros del psicólogo (EP-07; US-037, US-047, US-051, US-052 y US-053). La pasarela confirma resultados; el contexto no almacena tarjetas completas. Care Scheduling conserva la cita, mientras Payments & Payouts es dueño del pago y de la vigencia de la suscripción.
+**Payments & Payouts** administra los cobros de citas y del plan Premium (Terra mensual o Astrum anual) como operaciones diferentes, además de comprobantes, comisiones, balance e ingresos y retiros del psicólogo (EP-07; US-037, US-047, US-051, US-052 y US-053). La pasarela confirma resultados; el contexto no almacena tarjetas completas. Care Scheduling conserva la cita, mientras Payments & Payouts es dueño del pago y de la vigencia de la suscripción.
 
 #### 2.6.8.1. Domain Layer
 
 **Entities y Aggregates**
 
 * **PaymentIntent (Aggregate Root):** propósito APPOINTMENT o SUBSCRIPTION, referencia de reserva o plan, importe, moneda, clave idempotente, referencia de pasarela y estado.
-* **Subscription (Aggregate Root):** paciente, plan Básico/Premium, vigencia y estado; Premium se activa solo con un pago de suscripción aprobado.
+* **Subscription (Aggregate Root):** paciente, plan (Básico o Premium con dos períodos de facturación: MONTHLY para Terra y YEARLY para Astrum), vigencia y estado; Premium se activa solo con un pago de suscripción aprobado.
 * **ProfessionalLedger (Aggregate Root):** movimientos de ingresos de citas, comisión de plataforma, saldo disponible y retiros comprometidos.
 * **PayoutRequest (Aggregate Root):** psicólogo, importe, método tokenizado, estado y referencia de pasarela.
 * **Receipt (Entity):** comprobante emitido para un cobro aprobado, vinculado a su PaymentIntent.
@@ -1960,15 +1960,15 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 **Business Decisions**
 
 * Una reserva genera a lo sumo un cobro aprobado; reintentos y notificaciones repetidas reutilizan la misma clave idempotente.
-* PaymentApproved de una cita incluye reservationId para Care Scheduling; un cobro de Premium nunca confirma una cita.
-* Solo una confirmación válida de la pasarela activa Premium y emite comprobante.
+* PaymentApproved de una cita incluye reservationId para Care Scheduling; un cobro de Premium (Terra o Astrum) nunca confirma una cita.
+* Solo una confirmación válida de la pasarela activa el plan Premium (Terra mensual o Astrum anual) y emite comprobante.
 * Las suscripciones no se suman al saldo retirable del psicólogo. Solo el ingreso neto por sesiones elegibles integra su balance.
 * El retiro no supera el saldo disponible y su resultado se aplica una sola vez tras confirmación de la pasarela de retiro.
 
 #### 2.6.8.2. Interface Layer
 
 * **PaymentsController:** inicia cobros y consulta estados y comprobantes.
-* **SubscriptionsController:** muestra planes y consulta la suscripción vigente.
+* **SubscriptionsController:** muestra planes (Básico gratis, Terra mensual y Astrum anual) y consulta la suscripción vigente.
 * **ProfessionalBalanceController:** muestra ingresos, comisiones y saldo retirable.
 * **PayoutsController:** registra método tokenizado y solicita o consulta retiros.
 * **ProviderNotificationsController:** recibe y valida resultados firmados de pasarelas de cobro y retiro.
@@ -1976,9 +1976,9 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 
 #### 2.6.8.3. Application Layer
 
-* **CreatePaymentIntentHandler:** valida propósito e importe y crea un intento idempotente para cita o Premium.
+* **CreatePaymentIntentHandler:** valida propósito e importe y crea un intento idempotente para cita o Premium (Terra mensual o Astrum anual).
 * **ConfirmPaymentHandler:** comprueba firma y referencia de pasarela, actualiza estado una sola vez, emite recibo y publica PaymentApproved o PaymentFailed.
-* **ActivateSubscriptionHandler:** activa Premium solo después de aprobarse el cobro específico de suscripción y publica SubscriptionActivated a Profiles y AssistantAI.
+* **ActivateSubscriptionHandler:** activa el plan Premium (Terra o Astrum) solo después de aprobarse el cobro específico de suscripción y publica SubscriptionActivated a Profiles y AssistantAI.
 * **RecordProfessionalIncomeHandler:** ante un cobro de cita aprobado, registra ingreso y comisión sin mezclar ingresos de suscripciones.
 * **RequestPayoutHandler:** valida saldo, reserva el importe y solicita el retiro.
 * **ConfirmPayoutHandler:** aplica de forma idempotente el resultado firmado de la pasarela de retiro.

@@ -152,7 +152,7 @@ Estas pantallas corresponden a los perfiles y datos que pueden configurar los us
 | Pantalla | Historias relacionadas |
 |---|---|
 | Perfil del paciente (Edición de datos) | US-006 |
-| Suscripción y Plan Premium (Paciente) | US-051 |
+| Suscripción y Plan Premium (Terra mensual o Astrum anual) (Paciente) | US-051 |
 | Solicitud de verificación (Psicólogo) | US-041, US-054 |
 | Ficha profesional y tarifas (Psicólogo) | US-036 |
 | Balance e ingresos profesionales (Psicólogo) | US-047 |
@@ -213,7 +213,7 @@ Estas pantallas refieren al procesamiento de pagos dentro de la plataforma, lo c
 |---|---|
 | Pago seguro de sesión | US-037 |
 | Billetera digital e historial de pagos | US-037, US-051 |
-| Suscripción y Plan Premium | US-051 |
+| Suscripción y Plan Premium (Terra mensual o Astrum anual) | US-051 |
 | Balance e ingresos profesionales | US-047 |
 | Registro de método de retiro | US-052 |
 | Solicitud y seguimiento de retiro | US-053 |
