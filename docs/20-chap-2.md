@@ -897,6 +897,36 @@ Cada User Story se documenta con la siguiente estructura: identificador, actor (
 <tr><td colspan="4"><strong>Scenario 1: Credenciales aprobadas</strong><br><strong>Given</strong> que existe una solicitud pendiente con documentos accesibles solo al personal autorizado<br><strong>When</strong> el administrador valida las credenciales y aprueba la solicitud<br><strong>Then</strong> Clinician Directory registra el resultado, el revisor y la fecha, y marca al psicólogo como verificado<br><strong>And</strong> habilita la publicación de su ficha sin publicar los documentos<br><br><strong>Scenario 2: Credenciales rechazadas</strong><br><strong>Given</strong> que la solicitud tiene documentos inválidos o incompletos<br><strong>When</strong> el administrador la rechaza con un motivo<br><strong>Then</strong> Clinician Directory mantiene la ficha fuera del directorio y notifica la corrección necesaria<br><strong>And</strong> conserva una traza auditable sin exponer documentación privada</td></tr>
 </table>
 
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
+<tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+<tr><td style="text-align:center">US-055</td><td style="text-align:center">Usuario autenticado</td><td style="text-align:center">Baja</td><td style="text-align:center">EP-04</td></tr>
+<tr><td><strong>Title</strong></td><td colspan="3">Marcar una reseña como útil</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
+<tr><td colspan="4"><strong>Como</strong> usuario autenticado que consulta el perfil de un especialista,<br><strong>Quiero</strong> marcar una reseña publicada como útil y retirar mi marca si cambio de opinión,<br><strong>Para</strong> ayudar a otras personas a encontrar opiniones relevantes sin exponer mi identidad.</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Marcar o retirar utilidad</strong><br><strong>Given</strong> que el usuario inició sesión y consulta una reseña publicada que no escribió<br><strong>When</strong> marca la reseña como útil o vuelve a pulsar la acción para retirarla<br><strong>Then</strong> Clinician Directory registra como máximo una marca activa por usuario y reseña y actualiza el contador<br><strong>And</strong> muestra el contador sin revelar quién marcó la reseña ni modificar la calificación promedio o el puntaje de confianza<br><br><strong>Scenario 2: Acción no elegible o repetida</strong><br><strong>Given</strong> que la reseña ya no está publicada, pertenece al usuario o la marca ya existe<br><strong>When</strong> el usuario intenta marcarla nuevamente<br><strong>Then</strong> el sistema impide marcas duplicadas o sobre la propia reseña<br><strong>And</strong> mantiene un resultado consistente ante reintentos</td></tr>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
+<tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+<tr><td style="text-align:center">US-056</td><td style="text-align:center">Usuario autenticado</td><td style="text-align:center">Media</td><td style="text-align:center">EP-04</td></tr>
+<tr><td><strong>Title</strong></td><td colspan="3">Denunciar una reseña</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
+<tr><td colspan="4"><strong>Como</strong> usuario autenticado que encuentra una reseña que podría incumplir las normas,<br><strong>Quiero</strong> denunciarla indicando un motivo y, opcionalmente, contexto,<br><strong>Para</strong> ayudar a mantener reseñas confiables y un espacio seguro.</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Denuncia enviada</strong><br><strong>Given</strong> que una reseña está publicada y el usuario selecciona un motivo disponible (contenido ofensivo, información falsa, spam o otro)<br><strong>When</strong> envía la denuncia con un comentario opcional<br><strong>Then</strong> Clinician Directory registra la denuncia como pendiente para revisión autorizada y confirma su recepción<br><strong>And</strong> mantiene privada la identidad del denunciante y no elimina ni altera automáticamente la reseña, sus likes o la calificación agregada<br><br><strong>Scenario 2: Denuncia duplicada o reseña retirada</strong><br><strong>Given</strong> que ya existe una denuncia abierta del usuario para esa reseña o la reseña dejó de estar publicada<br><strong>When</strong> intenta enviar otra denuncia<br><strong>Then</strong> el sistema evita duplicados y no acepta denuncias sobre contenido no publicado<br><strong>And</strong> informa el estado de forma clara sin revelar información de otros usuarios</td></tr>
+</table>
+
+<table border="1" cellpadding="8" cellspacing="0" style="width:100%;border-collapse:collapse">
+<tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr>
+<tr><td style="text-align:center">US-057</td><td style="text-align:center">Paciente</td><td style="text-align:center">Media</td><td style="text-align:center">EP-04</td></tr>
+<tr><td><strong>Title</strong></td><td colspan="3">Eliminar mi reseña</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Description</strong></td></tr>
+<tr><td colspan="4"><strong>Como</strong> paciente que publicó una reseña,<br><strong>Quiero</strong> eliminarla después de revisar una confirmación,<br><strong>Para</strong> retirar mi opinión de la ficha pública y conservar control sobre lo que compartí.</td></tr>
+<tr><td colspan="4" style="text-align:center"><strong>Acceptance Criteria</strong></td></tr>
+<tr><td colspan="4"><strong>Scenario 1: Eliminación confirmada</strong><br><strong>Given</strong> que el usuario es autor de una reseña publicada<br><strong>When</strong> confirma la eliminación después de ver que la acción es irreversible<br><strong>Then</strong> Clinician Directory retira la puntuación y el comentario de la ficha pública, desactiva los likes asociados y recalcula la valoración agregada y los factores de confianza afectados<br><strong>And</strong> conserva solo la traza mínima necesaria para auditoría y no vuelve elegible la misma cita para publicar una segunda reseña<br><br><strong>Scenario 2: Cancelación o reseña ajena</strong><br><strong>Given</strong> que el usuario cancela la confirmación o no es autor de la reseña<br><strong>When</strong> se procesa la acción<br><strong>Then</strong> el sistema conserva la reseña sin cambios y rechaza eliminaciones no autorizadas<br><strong>And</strong> no revela información privada del autor</td></tr>
+</table>
+
 **Technical Stories**
 
 | Story ID | Título | Descripción | Criterios de aceptación | Relacionado con Epic ID |
@@ -1000,6 +1030,9 @@ Enlace de trello: https://trello.com/invite/b/6aad90c13f858f04fc63f833/ATTI8fd9a
 | 55 | US-029 | EP-02 | Insignias por constancia emocional | 2 | 3 |
 | 56 | US-030 | EP-02 | Ejercicios rápidos de regulación | 2 | 3 |
 | 57 | US-032 | EP-02 | Recuerdos de evolución emocional | 2 | 3 |
+| 58 | US-055 | EP-04 | Marcar una reseña como útil | 2 | 3 |
+| 59 | US-056 | EP-04 | Denunciar una reseña | 3 | 3 |
+| 60 | US-057 | EP-04 | Eliminar mi reseña | 3 | 3 |
 
 
 Trelo con el backlog: [Trello SafeDiary](https://trello.com/b/Q2UsNz3t/product-backlog)
@@ -1769,7 +1802,7 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 
 ### 2.6.6. Bounded Context: Clinician Directory
 
-**Clinician Directory** es dueño de la verificación profesional, la ficha pública, el banner, las especialidades, las tarifas, las reseñas y el puntaje de confianza de psicólogos (EP-04; US-002, US-036, US-039, US-041, US-042 y US-054). Recibe la identidad y el rol de IAM, pero no almacena credenciales de inicio de sesión. Care Scheduling consulta la ficha verificada y la tarifa; el directorio no reserva horarios ni procesa pagos.
+**Clinician Directory** es dueño de la verificación profesional, la ficha pública, el banner, las especialidades, las tarifas, las reseñas y el puntaje de confianza de psicólogos (EP-04; US-002, US-036, US-039, US-041, US-042 y US-054 a US-057). Recibe la identidad y el rol de IAM, pero no almacena credenciales de inicio de sesión. Care Scheduling consulta la ficha verificada y la tarifa; el directorio no reserva horarios ni procesa pagos.
 
 #### 2.6.6.1. Domain Layer
 
@@ -1777,7 +1810,9 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 
 * **ClinicianProfile (Aggregate Root):** clinicianId, accountId, especialidades, descripción, banner, tarifas, verificationStatus y publicationStatus.
 * **VerificationRequest (Aggregate Root):** solicitud, referencias privadas a documentos, fecha y resultado de la revisión.
-* **Review (Aggregate Root):** cita completada, paciente, psicólogo, calificación y texto; una sola reseña por cita y paciente.
+* **Review (Aggregate Root):** cita completada, paciente, psicólogo, calificación, texto y estado de publicación; una sola reseña por cita y paciente.
+* **ReviewHelpfulVote (Entity):** usuario y reseña; una sola marca activa por usuario y reseña, sin exponer el autor en el contador público.
+* **ReviewReport (Aggregate Root):** referencia a la reseña, denunciante, motivo, comentario opcional, estado, resolución y auditoría; la identidad del denunciante no se comparte con el autor de la reseña.
 * **RatingSummary (Read Model):** promedio y número de reseñas elegibles, calculados dentro de Clinician Directory.
 * **TrustScore (Read Model):** puntaje y desglose de factores verificables, como reseñas y atención completada, sin exponer la identidad ni información emocional de pacientes.
 
@@ -1790,18 +1825,21 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 
 **Domain Events**
 
-* VerificationRequested, ClinicianVerified, VerificationRejected, ProfessionalProfilePublished, ProfessionalProfileUpdated, ReviewPublished, RatingRecalculated, TrustScoreRecalculated.
+* VerificationRequested, ClinicianVerified, VerificationRejected, ProfessionalProfilePublished, ProfessionalProfileUpdated, ReviewPublished, ReviewDeleted, ReviewReported, ReviewReportResolved, ReviewHelpfulVoteChanged, RatingRecalculated, TrustScoreRecalculated.
 
 **Commands y Queries**
 
-* RequestVerificationCommand, ReviewCredentialsCommand, PublishProfileCommand, UpdateBannerAndRatesCommand, PublishReviewCommand.
-* SearchCliniciansQuery, GetClinicianProfileQuery, GetVerificationStatusQuery, GetRatingSummaryQuery, GetTrustScoreBreakdownQuery.
+* RequestVerificationCommand, ReviewCredentialsCommand, PublishProfileCommand, UpdateBannerAndRatesCommand, PublishReviewCommand, DeleteOwnReviewCommand, ToggleReviewHelpfulVoteCommand, ReportReviewCommand, ResolveReviewReportCommand.
+* SearchCliniciansQuery, GetClinicianProfileQuery, GetVerificationStatusQuery, GetRatingSummaryQuery, GetTrustScoreBreakdownQuery, GetReviewReportsQuery.
 
 **Business Decisions**
 
 * Solo una ficha con verificación aprobada puede publicarse y aparecer en búsquedas.
 * Publicar una tarifa nueva no modifica el importe de reservas ya aceptadas.
 * Una reseña exige el evento SessionCompleted de Care Scheduling para esa cita y paciente; no revela datos clínicos.
+* El contador de utilidad no cambia la calificación promedio ni el puntaje de confianza y nunca identifica a quienes votaron.
+* Una denuncia queda pendiente de moderación y no oculta ni altera automáticamente la reseña; una decisión confirmada se audita y recalcula los agregados afectados.
+* Eliminar una reseña requiere confirmación, retira su puntuación y comentario públicos, desactiva sus votos de utilidad y conserva la unicidad de reseña para esa cita.
 * El puntaje explica sus componentes y muestra un estado sin valoración cuando no hay actividad suficiente; no recompensa solo el volumen de citas.
 * Los documentos de verificación permanecen privados y no forman parte de la ficha pública.
 
@@ -1811,8 +1849,10 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 * **ProfessionalProfileController:** publica y edita ficha, banner y tarifas.
 * **ClinicianSearchController:** busca, filtra y consulta fichas verificadas.
 * **ReviewsController:** recibe reseñas elegibles y muestra calificación agregada.
+* **ReviewActionsController:** registra o retira votos de utilidad, recibe denuncias y permite al autor eliminar su propia reseña.
+* **ReviewModerationController:** permite a moderadores autorizados consultar denuncias pendientes y resolverlas.
 * **TrustScoreController:** expone al psicólogo el puntaje y el desglose de factores, o el estado de información insuficiente.
-* **Resources:** VerificationRequestResource, ProfessionalProfileResource, ConsultationRateResource, ClinicianSearchResource, ReviewResource, RatingSummaryResource y TrustScoreResource.
+* **Resources:** VerificationRequestResource, ProfessionalProfileResource, ConsultationRateResource, ClinicianSearchResource, ReviewResource, ReviewReportResource, ReviewHelpfulVoteResource, RatingSummaryResource y TrustScoreResource.
 
 #### 2.6.6.3. Application Layer
 
@@ -1821,11 +1861,15 @@ La máquina de estados de una notificación programada es `PENDING` -> `SENT` o 
 * **PublishProfessionalProfileHandler:** comprueba verificación aprobada antes de publicar.
 * **UpdateBannerAndRatesHandler:** versiona los importes publicados.
 * **PublishReviewHandler:** valida elegibilidad contra una sesión completada y unicidad por cita, publica la reseña y recalcula RatingSummary y TrustScore.
+* **ToggleReviewHelpfulVoteHandler:** aplica unicidad por usuario/reseña e idempotencia al marcar o retirar utilidad.
+* **ReportReviewHandler:** valida motivo y duplicados abiertos y crea un caso privado de moderación sin modificar la publicación.
+* **ResolveReviewReportHandler:** registra la resolución del moderador y, si corresponde retirar la reseña, recalcula RatingSummary y TrustScore.
+* **DeleteOwnReviewHandler:** valida autoría y confirmación, retira la reseña, desactiva sus votos y recalcula los agregados afectados.
 * **SessionCompletedHandler:** registra la elegibilidad y actualiza factores agregados del puntaje sin importar contenido de la sesión.
 
 #### 2.6.6.4. Infrastructure Layer
 
-* **ClinicianProfileRepository, VerificationRequestRepository, ReviewRepository, RatingSummaryRepository y TrustScoreRepository:** persistencia propia del directorio.
+* **ClinicianProfileRepository, VerificationRequestRepository, ReviewRepository, ReviewReportRepository, ReviewHelpfulVoteRepository, RatingSummaryRepository y TrustScoreRepository:** persistencia propia del directorio.
 * **IamRoleClient:** consulta identidad y rol, sin acceso a contraseñas.
 * **CareSessionEventConsumer:** consume SessionCompleted de Care Scheduling.
 * **CredentialStorageAdapter y BannerStorageAdapter:** separan documentos privados de material público.
