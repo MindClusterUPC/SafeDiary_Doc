@@ -510,6 +510,23 @@ Si el mensaje indica riesgo, Diarito muestra la Línea 113 en lugar de una respu
 
 Si necesita volver a la llamada antes de cerrar, «Volver a la sesión» la retoma.
 
+##### Wireflow 6: Calificación de la sesión y gestión de reseñas
+
+**User Persona:** María (paciente).
+**User goal:** Compartir su experiencia después de una sesión y ayudar a mantener reseñas confiables, conservando su privacidad.
+
+![Wireflow 6 - Calificación de la sesión y gestión de reseñas](../assets/images/chap3/wireflows/wireflow-6.png)
+
+**Explicación del flujo:**
+
+1. Al cerrar una sesión completada, María puede abrir «Califica tu sesión». Selecciona de una a cinco estrellas y puede añadir un título y un comentario opcionales (US-039).
+2. Al enviar la calificación, Clinician Directory la vincula a la cita completada, muestra la reseña de forma anónima en el perfil profesional y actualiza el promedio y el número de reseñas.
+3. Desde el perfil puede consultar la valoración agregada y las reseñas. Puede marcar una reseña ajena como útil; el contador no revela quién votó ni modifica el promedio o el puntaje de confianza (US-055).
+4. Si encuentra contenido que podría incumplir las normas, puede denunciarlo con un motivo y contexto opcional. La denuncia queda pendiente de revisión y no elimina automáticamente la reseña (US-056).
+5. La autora puede retirar su propia reseña después de confirmar que la acción es irreversible. Se quitan la puntuación, el comentario y los likes asociados; se recalculan los agregados afectados y la cita no vuelve a ser elegible para otra reseña (US-057).
+
+**Unhappy paths:** solo se puede calificar una sesión completada y publicar una reseña por cita (US-039). Las reseñas ajenas no se pueden eliminar y los intentos duplicados de marcar utilidad o denunciar se rechazan.
+
 #### 3.1.4.3. Mobile Applications Mock-ups
 
 > **Insertar aquí:** imagen legible de los Mobile Applications Mock-ups.
