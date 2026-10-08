@@ -315,105 +315,6 @@ También incluir las vistas auxiliares imprescindibles: detalle de psicólogo, r
 | Psicólogos | US-002, US-009, US-014, US-037 | [sin resultados / horario ocupado / pago fallido] | [imagen] |
 | Citas | US-014, US-037, US-038 | [reserva vencida / pago fallido] | [imagen] |
 
-6. Perfiles
-
-Estas pantallas corresponden a los perfiles y datos que pueden configurar los usuarios de Safe Diary, tanto pacientes como psicólogos.
-
-| Pantalla | Historias relacionadas |
-|---|---|
-| Perfil del paciente (Edición de datos) | US-006 |
-| Suscripción y Plan Premium (Terra mensual o Astrum anual) (Paciente) | US-051 |
-| Solicitud de verificación (Psicólogo) | US-041, US-054 |
-| Ficha profesional y tarifas (Psicólogo) | US-036 |
-| Balance e ingresos profesionales (Psicólogo) | US-047 |
-| Registro de método de retiro (Psicólogo) | US-052 |
-| Solicitud y seguimiento de retiro (Psicólogo) | US-053 |
-
-**Pacientes:**
-
-<table style="width:100%; border:none; border-collapse:collapse; text-align:center;">
-  <tr>
-    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
-      <img src="../assets/images/chap3/wireframes/profiles-bc/perfil-usuario.png" alt="Perfil y Privacidad del Paciente" width="220"><br>
-      <sub><strong>Perfil y Privacidad</strong></sub>
-    </td>
-    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
-      <img src="../assets/images/chap3/wireframes/profiles-bc/pacient-mail.png" alt="Edición de Correo Electrónico" width="220"><br>
-      <sub><strong>Edición de Correo</strong></sub>
-    </td>
-    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
-      <img src="../assets/images/chap3/wireframes/profiles-bc/pacient-sc.png" alt="Contacto de Soporte Seguro" width="220"><br>
-      <sub><strong>Contacto de Soporte Seguro</strong></sub>
-    </td>
-  </tr>
-</table>
-
-**Psicólogos:**
-
-<table style="width:100%; border:none; border-collapse:collapse; text-align:center;">
-  <tr>
-    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
-      <img src="../assets/images/chap3/wireframes/profiles-bc/perfil-psicologo.png" alt="Perfil Profesional del Especialista" width="220"><br>
-      <sub><strong>Perfil Profesional</strong></sub>
-    </td>
-    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
-      <img src="../assets/images/chap3/wireframes/profiles-bc/psico-bio.png" alt="Enfoque Terapéutico y Biografía" width="220"><br>
-      <sub><strong>Enfoque Terapéutico</strong></sub>
-    </td>
-    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
-      <img src="../assets/images/chap3/wireframes/profiles-bc/psico-costs.png" alt="Tarifas y Modalidades de Atención" width="220"><br>
-      <sub><strong>Tarifas y Modalidades</strong></sub>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
-      <img src="../assets/images/chap3/wireframes/profiles-bc/psico-credential.png" alt="Credenciales Clínicas y Verificación" width="220"><br>
-      <sub><strong>Credenciales Clínicas</strong></sub>
-    </td>
-    <td style="width:33.33%; border:none;"></td>
-    <td style="width:33.33%; border:none;"></td>
-  </tr>
-</table>
-
-7. Payments
-
-Estas pantallas refieren al procesamiento de pagos dentro de la plataforma, lo cuales incluyen a las suscripciones, historial de pagos en ambos segmentos, y los retiros en el segmento de los psicólogos. 
-
-| Pantalla | Historias relacionadas |
-|---|---|
-| Pago seguro de sesión | US-037 |
-| Billetera digital e historial de pagos | US-037, US-051 |
-| Suscripción y Plan Premium (Terra mensual o Astrum anual) | US-051 |
-| Balance e ingresos profesionales | US-047 |
-| Registro de método de retiro | US-052 |
-| Solicitud y seguimiento de retiro | US-053 |
-
-**Pacientes:**
-
-<table style="width:100%; border:none; border-collapse:collapse; text-align:center;">
-  <tr>
-    <td align="center" style="width:50%; vertical-align:top; border:none;">
-      <img src="../assets/images/chap3/wireframes/payments-bc/pacient-payments.png" alt="Billetera Digital e Historial de Pagos" width="220"><br>
-      <sub><strong>Billetera Digital e Historial de Pagos</strong></sub>
-    </td>
-    <td align="center" style="width:50%; vertical-align:top; border:none;">
-      <img src="../assets/images/chap3/wireframes/payments-bc/pacient-session-payment.png" alt="Pago Seguro de Sesión" width="220"><br>
-      <sub><strong>Pago de Sesión Profesional</strong></sub>
-    </td>
-  </tr>
-</table>
-
-**Psicólogos:**
-
-<table style="width:100%; border:none; border-collapse:collapse; text-align:center;">
-  <tr>
-    <td align="center" style="width:100%; vertical-align:top; border:none;">
-      <img src="../assets/images/chap3/wireframes/payments-bc/psico-payments.png" alt="Panel de Pagos, Balance y Retiros" width="220"><br>
-      <sub><strong>Panel de Pagos, Balance y Retiros</strong></sub>
-    </td>
-  </tr>
-</table>
-
 
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
 
@@ -532,6 +433,105 @@ Si necesita volver a la llamada antes de cerrar, «Volver a la sesión» la reto
 > **Insertar aquí:** imagen legible de los Mobile Applications Mock-ups.
 
 Explicar cada mock-up y relacionarlo con sus User Stories y criterios de aceptación.
+
+6. Perfiles
+
+Estas pantallas corresponden a los perfiles y datos que pueden configurar los usuarios de Safe Diary, tanto pacientes como psicólogos.
+
+| Pantalla | Historias relacionadas |
+|---|---|
+| Perfil del paciente (Edición de datos) | US-006 |
+| Suscripción y Plan Premium (Terra mensual o Astrum anual) (Paciente) | US-051 |
+| Solicitud de verificación (Psicólogo) | US-041, US-054 |
+| Ficha profesional y tarifas (Psicólogo) | US-036 |
+| Balance e ingresos profesionales (Psicólogo) | US-047 |
+| Registro de método de retiro (Psicólogo) | US-052 |
+| Solicitud y seguimiento de retiro (Psicólogo) | US-053 |
+
+**Pacientes:**
+
+<table style="width:100%; border:none; border-collapse:collapse; text-align:center;">
+  <tr>
+    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/profiles-bc/perfil-usuario.png" alt="Perfil y Privacidad del Paciente" width="220"><br>
+      <sub><strong>Perfil y Privacidad</strong></sub>
+    </td>
+    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/profiles-bc/pacient-mail.png" alt="Edición de Correo Electrónico" width="220"><br>
+      <sub><strong>Edición de Correo</strong></sub>
+    </td>
+    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/profiles-bc/pacient-sc.png" alt="Contacto de Soporte Seguro" width="220"><br>
+      <sub><strong>Contacto de Soporte Seguro</strong></sub>
+    </td>
+  </tr>
+</table>
+
+**Psicólogos:**
+
+<table style="width:100%; border:none; border-collapse:collapse; text-align:center;">
+  <tr>
+    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/profiles-bc/perfil-psicologo.png" alt="Perfil Profesional del Especialista" width="220"><br>
+      <sub><strong>Perfil Profesional</strong></sub>
+    </td>
+    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/profiles-bc/psico-bio.png" alt="Enfoque Terapéutico y Biografía" width="220"><br>
+      <sub><strong>Enfoque Terapéutico</strong></sub>
+    </td>
+    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/profiles-bc/psico-costs.png" alt="Tarifas y Modalidades de Atención" width="220"><br>
+      <sub><strong>Tarifas y Modalidades</strong></sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/profiles-bc/psico-credential.png" alt="Credenciales Clínicas y Verificación" width="220"><br>
+      <sub><strong>Credenciales Clínicas</strong></sub>
+    </td>
+    <td style="width:33.33%; border:none;"></td>
+    <td style="width:33.33%; border:none;"></td>
+  </tr>
+</table>
+
+7. Payments
+
+Estas pantallas refieren al procesamiento de pagos dentro de la plataforma, lo cuales incluyen a las suscripciones, historial de pagos en ambos segmentos, y los retiros en el segmento de los psicólogos. 
+
+| Pantalla | Historias relacionadas |
+|---|---|
+| Pago seguro de sesión | US-037 |
+| Billetera digital e historial de pagos | US-037, US-051 |
+| Suscripción y Plan Premium (Terra mensual o Astrum anual) | US-051 |
+| Balance e ingresos profesionales | US-047 |
+| Registro de método de retiro | US-052 |
+| Solicitud y seguimiento de retiro | US-053 |
+
+**Pacientes:**
+
+<table style="width:100%; border:none; border-collapse:collapse; text-align:center;">
+  <tr>
+    <td align="center" style="width:50%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/payments-bc/pacient-payments.png" alt="Billetera Digital e Historial de Pagos" width="220"><br>
+      <sub><strong>Billetera Digital e Historial de Pagos</strong></sub>
+    </td>
+    <td align="center" style="width:50%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/payments-bc/pacient-session-payment.png" alt="Pago Seguro de Sesión" width="220"><br>
+      <sub><strong>Pago de Sesión Profesional</strong></sub>
+    </td>
+  </tr>
+</table>
+
+**Psicólogos:**
+
+<table style="width:100%; border:none; border-collapse:collapse; text-align:center;">
+  <tr>
+    <td align="center" style="width:100%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/payments-bc/psico-payments.png" alt="Panel de Pagos, Balance y Retiros" width="220"><br>
+      <sub><strong>Panel de Pagos, Balance y Retiros</strong></sub>
+    </td>
+  </tr>
+</table>
 
 #### 3.1.4.4. Mobile Applications User Flow Diagrams
 
