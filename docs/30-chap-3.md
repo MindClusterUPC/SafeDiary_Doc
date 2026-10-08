@@ -281,17 +281,109 @@ Los pasos de pago, consentimiento y eliminación de reseña muestran el efecto d
 
 #### 3.1.3.1. Landing Page Wireframe
 
-**Objetivo:** [explicar qué debe comprender y hacer un visitante].
+**Objetivo:**  
+El objetivo de la landing page es presentar de manera transparente, empática y atractiva la propuesta de valor de SafeDiary a los nuevos visitantes (principalmente pacientes jóvenes y personas interesadas en su bienestar emocional), cumpliendo los siguientes propósitos:
+1. **Comprender el valor diferencial:** Explicar cómo SafeDiary actúa como un puente entre la introspección privada (diario asistido por IA y rutinas de autocuidado) y la atención clínica profesional con especialistas colegiados y verificados.
+2. **Transmitir confianza y control de la privacidad:** Aclarando que el diario es privado por defecto y que compartir información con un psicólogo es una decisión 100% voluntaria, selectiva y revocable en cualquier momento.
+3. **Claridad en la oferta y precios:** Presentar con total transparencia el modelo Freemium (Plan Básico Gratuito y suscripciones Premium Terra y Astrum), especificando explícitamente que los honorarios de las consultas con psicólogos se abonan por separado del acceso a la plataforma.
+4. **Fomentar la conversión y adopción:** Guiar al visitante a través de llamados a la acción (CTA) directos para probar la aplicación móvil, explorar las funcionalidades clave a través del carrusel interactivo y consultar las políticas éticas y legales del servicio.
 
-> **Insertar aquí:** imagen legible del Landing Page Wireframe.
+**Landing Page y T&C:**
 
-**Explicación del wireframe:** [secciones, jerarquía, CTA, prueba social, privacidad y responsive behavior].
+![Landing Page](../assets/images/chap3/wireframes/landing-page/wireframe-landing-page.png)
+
+![T&C](../assets/images/chap3/wireframes/landing-page/wireframe-terms-page.png)
+
+**Explicación del wireframe:**
+
+1. **Header y Navegación Superior:**
+   * **Identidad de marca:** Logotipo de SafeDiary situado en la esquina superior izquierda como ancla visual.
+   * **Menú de navegación:** Enlaces de ancla directos a secciones clave (`Inicio`, `Diarito`, `Rutinas`, `Planes`, `Términos`).
+   * **CTA primario en barra:** Botón `Ver la app [CTA]` persistente que facilita el acceso inmediato al prototipo o descarga sin forzar al usuario a desplazarse hasta el final de la página.
+
+2. **Hero Section (Propuesta de Valor Principal):**
+   * **Etiqueta temática superior:** `DIARIO EMOCIONAL · ATENCIÓN PROFESIONAL`, sintetizando el núcleo del producto.
+   * **Titular de impacto (H1):** *"Entiende cómo te sientes. Decide qué hacer después."*, enfatizando la autonomía del paciente frente a su salud mental.
+   * **Subtítulo descriptivo:** Resalta la facilidad de registro por texto o voz, la identificación de patrones y la opción de conectar con psicólogos verificados en un espacio seguro.
+   * **Doble llamado a la acción (CTA):** Botón principal contrastado (*"Ver la app →"*) y botón secundario de exploración (*"Conocer funciones"*).
+
+3. **Showcase del Prototipo Móvil ("Conoce las pantallas del prototipo"):**
+   * **Carrusel secuencial (01 a 05):** Muestra las vistas neurálgicas de la aplicación móvil para anticipar la experiencia real al visitante:
+     * *01. Inicio:* Monitoreo cotidiano del estado de ánimo y accesos directos.
+     * *02. Diarito:* Chat reflexivo asistido por IA para desahogo seguro y empático.
+     * *03. Rutinas:* Biblioteca de hábitos y ejercicios SOS guiados.
+     * *04. Psicólogos:* Catálogo de especialistas verificados con tarifas visibles.
+     * *05. Mis citas:* Gestión de reservas, videollamadas y comprobantes de pago.
+   * **Controles de desplazamiento:** Botones de navegación (`←` / `→`) con paginador para una visualización dinámica.
+
+4. **Guía Funcional Paso a Paso ("Cada función tiene un propósito claro"):**
+   * **Paso 01 (Registra lo que sientes):** Demuestra el desahogo por voz o texto manteniendo la privacidad absoluta.
+   * **Paso 02 (Reconoce cambios):** Visualización de patrones e insights emocionales sin emitir etiquetas diagnósticas clínicas.
+   * **Paso 03 (Sostén tus rutinas):** Hábitos breves y pausas de respiración para acompañar el día a día.
+   * **Paso 04 (Busca atención):** Transición fluida para elegir y contactar al especialista adecuado.
+
+5. **Bloque de Privacidad y Consentimiento ("Tu información, bajo tu control"):**
+   * **Privacidad por diseño:** Declaración de que las entradas íntimas jamás formarán parte de perfiles públicos ni entrenarán modelos de IA comerciales.
+   * **Consentimiento informado:** La opción de compartir contexto con el psicólogo es 100% opcional y controlada por el usuario.
+   * **Revocación inmediata:** Capacidad de anular el acceso del psicólogo al resumen clínico con un solo toque desde los ajustes de la cuenta.
+
+6. **Planes, Precios y Transparencia Financiera:**
+   * **Aviso de transparencia:** Se informa con claridad que las sesiones clínicas individuales con especialistas se pagan por separado del uso de la app.
+   * **Estructura de precios:**
+     * *Plan Básico (Gratis):* Diario emocional, pausas SOS, directorio de especialistas y acceso a la línea de ayuda 113.
+     * *Plan Terra (US$ 19.99/mes - Destacado):* Asistente Diarito ilimitado con memoria continua, 4 personalidades reflexivas, resúmenes semanales y bóveda privada con exportación a PDF.
+     * *Plan Astrum (US$ 100/año - Ahorro del 58%):* Todos los beneficios de Terra con respaldo cloud cifrado prioritario y distinción de miembro.
+
+7. **Wireframe de Términos y Condiciones de Uso (T&C):**
+   * **Navegación e índice lateral:** Guía de lectura rápida con 8 cláusulas numeradas para facilitar la auditoría legal por parte del usuario.
+   * **Compromisos de ética digital:**
+     * *Pacto de empatía:* Entorno de desahogo libre de algoritmos invasivos.
+     * *Propiedad intelectual:* Las notas y audios pertenecen al 100% al usuario; SafeDiary no comercializa ni reclama derechos sobre el contenido personal.
+     * *Cero venta de datos:* Protocolo *Zero-Knowledge* y cifrado seguro de extremo a extremo.
+     * *Aviso médico y salud mental:* Advertencia estricta de que la plataforma no sustituye la atención médica de urgencias ni diagnósticos psiquiátricos, enlazando directamente con la Línea 113 (Minsa Perú).
+     * *Derecho al olvido:* Mecanismo de purga y eliminación definitiva de cuenta y registros en un solo clic.
+
+8. **Comportamiento Adaptativo (Responsive Behavior):**
+   * **Versión Desktop:** Disposición estructurada en cuadrícula de 3 a 4 columnas con navegación superior fija y amplias áreas de visualización de medios.
+   * **Versión Mobile:** Colapso fluido a una sola columna vertical, menú hamburguesa táctil, botones de acción de ancho completo (*full-width*) y tipografía escalada para facilitar la lectura y pulsación táctil en teléfonos móviles.
 
 #### 3.1.3.2. Landing Page Mock-up
 
-> **Insertar aquí:** imagen legible del Landing Page Mock-up.
+Tras revisar el wireframe, se realizaron los mockups para las paginas que corresponden a Landing Page y Terminos y Condiciones, esto con el fin de afianzar el diseño de la interfaz del visitante para convencerlo de usar la plataforma.
 
-**Decisiones visuales y funcionales:** [explicar cómo el mock-up aplica las guías de estilo y cómo enlaza con el registro o descarga].
+**Landing Page y T&C:**
+
+![Landing Page](../assets/images/chap3/wireframes/landing-page/mockup-landing-page.png)
+
+![T&C](../assets/images/chap3/wireframes/landing-page/mockup-T&C.png)
+
+**Decisiones visuales y funcionales:**
+
+**1. Aplicación del sistema de diseño y paleta cromática:**
+   * **Color primario y autoridad de marca (`color.primary`):** Se emplea el azul marino profundo (`#01284B`) en la barra de navegación, botones de acción primordial (*«Ver la app»*, *«Elegir Plan Astrum»*), tarjetas de estado de sesión y el banner de cierre pre-footer. Este tono evoca estabilidad, confianza institucional y seguridad técnica en el tratamiento de datos sensibles.
+   * **Color secundario y bienestar emocional (`color.secondary`):** Se incorpora el verde petróleo / verde esmeralda suave (`#0F766E` / `#044E42`) para elementos de éxito, badges temáticos (*«DIARIO EMOCIONAL»*, *«RECOMENDADO»*), micro-interacciones, botones de acción positiva (*«Ver prototipo →»*, *«Elegir Plan Terra»*) y el botón de descarga *«Guardar en PDF»* en los términos legales. Aporta calidez y serenidad sin caer en estéticas clínicas impersonales.
+   * **Superficies y fondos limpios:** El fondo general utiliza un blanco puro con transiciones hacia un gris neutro muy suave (`#F8FAFC`). Las tarjetas y contenedores (`#FFFFFF`) delimitan sus capas mediante un borde tenue de 1 px (`#E3E8F0`) y sombras difusas (`0 4px 16px rgba(1, 40, 75, 0.08)`), otorgando tridimensionalidad sutil sin recargar visualmente.
+   * **Acentos de apoyo temático y alertas:** Se asignan pasteles armónicos a las cuatro etapas de autocuidado (verde menta para registro libre, azul cielo para patrones, amarillo cálido para ejercicios SOS y lila tenue para especialistas). En la página legal, se utiliza el color de advertencia sobrio (`color.danger`) exclusivamente para resaltar la caja de emergencia de la Línea 113 del Minsa, preservando la jerarquía visual de riesgo.
+   
+**2. Tipografía y jerarquía de lectura:**
+   * Se utiliza una fuente geométrica sans-serif moderna de alta legibilidad en pantalla (Inter / Plus Jakarta Sans).
+   * **Encabezados (H1, H2):** Titulares en gran escala con peso semibold/bold, estructurados con saltos intencionales para guiar el ojo hacia la promesa central (*«Entiende cómo te sientes. Decide qué hacer después.»*).
+   * **Eyebrows (Micro-etiquetas):** Etiquetas superiores en mayúsculas compactas con tracking ampliado (`DENTRO DE SAFEDIARY`, `PROPUESTA DE VALOR`, `PRIVACIDAD`, `PLANES & TARIFAS`, `MARCO ÉTICO Y LEGAL`) que anticipan el propósito de cada sección antes de la lectura del bloque principal.
+   * **Precios destacados:** Tratamiento de números en escala display (`US$ 19.99`, `US$ 100`) acompañados de chips de beneficio psicológico (*«AHORRA 58%»*, *«RECOMENDADO»*).
+   
+**3. Materialización de componentes funcionales:**
+   * **Barra de navegación fija:** Integra el logotipo con isotipo de pulso emocional, menú central con estados hover/active, selector de idioma interactivo (`ES | EN`) y botón de llamado a la acción destacado.
+   * **Showcase móvil interactivo:** Representa de manera fidedigna la interfaz móvil que encontrará el usuario dentro de SafeDiary (chips de ánimo como *«Ánimo: Excelente»*, botón de registro rápido *«+ Nueva Nota»*, burbujas del chat de Diarito, tarjeta de ejercicio respiratorio *«Respiración 4-7-8»* y la ficha médica del Dr. Marcus Vance con tarifa visible de *$75 USD*).
+   * **Módulo de Términos y Condiciones:** Diseñado con un panel lateral interactivo tipo índice (*Guía de Lectura*) con 8 cláusulas accesibles que marcan el estado activo, acompañado de tarjetas modulares que transforman el texto legal árido en compromisos legibles con sellos de verificación, candados de cifrado y accesos directos de gestión de cuenta.
+   
+**4. Estrategia de conversión y enlace con el registro/descarga:**
+   * **Múltiples embudos de acceso (Funnels):** El visitante cuenta con oportunidades de conversión directas a lo largo de todo su recorrido visual:
+     * *Arriba del pliegue (Above the fold):* Botón *«Ver la app →»* en el Hero y botón persistente en la barra de navegación para usuarios con alta intención de prueba.
+     * *Exploración funcional:* Botón secundario *«Conocer las funciones»* que realiza un desplazamiento suave (*smooth scroll*) hacia el carrusel de pantallas y la explicación paso a paso.
+     * *Planes de precios:* Botón *«Comenzar gratis»* en el Plan Básico para eliminación total de fricción (sin requerir tarjeta de crédito), y botones directos *«Elegir Plan Terra»* / *«Elegir Plan Astrum»* para adopción inmediata del servicio Premium.
+     * *Cierre pre-footer:* Banner de ancho completo en azul marino con alto contraste que formula una invitación final (*«Conoce SafeDiary por dentro hoy mismo»*) hacia el botón *«Ver prototipo →»*, dirigiendo al prototipo navegable o tienda de aplicaciones.
+   * **Reducción de barreras de adopción:** La inclusión visible del compromiso de *Cero venta de datos*, *Cancelación en cualquier momento* y *Transparencia en tarifas médicas* despeja las dudas del visitante, incentivando el registro seguro y sin presiones.
+
 
 ### 3.1.4. Mobile Applications UX/UI Design
 
@@ -429,6 +521,12 @@ Si necesita volver a la llamada antes de cerrar, «Volver a la sesión» la reto
 **Unhappy paths:** solo se puede calificar una sesión completada y publicar una reseña por cita (US-039). Las reseñas ajenas no se pueden eliminar y los intentos duplicados de marcar utilidad o denunciar se rechazan.
 
 #### 3.1.4.3. Mobile Applications Mock-ups
+
+1. Home.
+2. Rutinas.
+3. Diario.
+4. Psicólogos.
+5. Citas.
 
 > **Insertar aquí:** imagen legible de los Mobile Applications Mock-ups.
 
