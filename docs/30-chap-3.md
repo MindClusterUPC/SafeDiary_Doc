@@ -247,13 +247,98 @@ Estas pantallas refieren al procesamiento de pagos dentro de la plataforma, lo c
 
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
 
-Elaborar un wireflow por recorrido prioritario:
+Los Wireflows se elaboraron en Figma a partir de los wireframes de la sección 3.1.4.1. Cubren un recorrido por cada User goal prioritario de los dos User Persona: María (paciente) y la Dra. Laura Gómez (psicóloga verificada).
 
-- Registro emocional -> reflexión -> guardado.
-- Búsqueda de psicólogo -> reserva -> consentimiento -> pago.
-- Reserva temporal -> pago -> confirmación -> acceso a la sesión.
+En cada diagrama:
 
-> **Insertar aquí:** imagen legible del Mobile Applications Wireflow.
+- **Flecha y recuadro verdes:** la acción del usuario en la pantalla de origen (happy path).
+- **Flechas naranjas:** rutas alternas y unhappy paths.
+- **Paso nuevo:** cuando una interacción cambia el estado de una pantalla, el nuevo estado se representa como un paso adicional con su propio wireframe.
+
+##### Wireflow 1: Registro emocional → reflexión → guardado
+
+**User Persona:** María (paciente).
+**User goal:** Registrar cómo me siento hoy y recibir una reflexión que me ayude a entenderlo.
+
+![Wireflow 1 - Registro emocional, reflexión y guardado](../assets/images/chap3/wireflows/wireflow-1.png)
+
+**Explicación del flujo:**
+
+1. María abre SafeDiary al final del día. En Home registra su ánimo con un toque y entra a «Write in My Diary» para describir lo que pasó.
+2. Al guardar, la entrada queda en su diario (Diary) y su racha aumenta.
+3. Luego abre Diarito desde la barra inferior, elige una sugerencia o escribe, y Diarito responde con una reflexión empática, en su idioma y sin diagnosticar (AssistantAI).
+4. Si se equivocó, puede editar su mensaje y Diarito vuelve a responder (ruta alterna).
+5. Al deslizar a la derecha o tocar ☰ ve el historial, donde la conversación queda guardada para retomarla después.
+
+Si el mensaje indica riesgo, Diarito muestra la Línea 113 en lugar de una respuesta libre.
+
+##### Wireflow 2: Búsqueda de psicólogo → reserva → consentimiento → pago
+
+**User Persona:** María (paciente).
+**User goal:** Encontrar un psicólogo verificado que me inspire confianza, acordar un horario y pagar la sesión.
+
+![Wireflow 2 - Búsqueda de psicólogo, reserva, consentimiento y pago](../assets/images/chap3/wireflows/wireflow-2.png)
+
+**Explicación del flujo:**
+
+1. En el directorio (Clinician Directory), María filtra por especialidad y abre la ficha de una psicóloga verificada, con sus credenciales, tarifa y reseñas.
+2. Envía una solicitud de contacto y coordinan por chat (Care Scheduling) hasta que la psicóloga propone un horario.
+3. Al aceptarlo, el horario queda retenido durante 60 minutos como reserva temporal, lo que evita conflictos de agenda.
+4. María paga la sesión (Payments & Payouts). Solo con el pago aprobado la cita pasa a confirmada.
+5. En la cita confirmada puede elegir, de forma opcional, qué contexto de su diario compartir con la especialista. Es un consentimiento explícito que valida IAM.
+
+**Unhappy paths:**
+
+- Si la pasarela rechaza el pago, la reserva sigue vigente y María puede reintentar o volver a Mis citas.
+- Si cancela la reserva, el horario se libera para otros pacientes.
+
+##### Wireflow 3: Reserva temporal → pago → confirmación → acceso a la sesión
+
+**User Persona:** María (paciente).
+**User goal:** Asistir a mi sesión con la psicóloga de forma privada y a la hora acordada.
+
+![Wireflow 3 - Reserva temporal, pago, confirmación y acceso a la sesión](../assets/images/chap3/wireflows/wireflow-3.png)
+
+**Explicación del flujo:**
+
+1. En Mis citas, María ve sus citas próximas y pendientes. Si una reserva temporal sigue sin pagar, la paga desde la misma tarjeta y la cita pasa a confirmada (ruta alterna).
+2. A la hora de la cita, el botón «Ingresar» solo se habilita dentro de la ventana de acceso de una cita confirmada.
+3. En la sala de espera revisa la cámara y el audio y entra a la videollamada. La videollamada usa un proveedor externo con una sala privada y un token temporal; Care Scheduling no hospeda el video.
+4. Al terminar, la especialista cierra la atención. María ve el recorrido completo de su cita y puede calificar la sesión de forma anónima.
+
+**Unhappy path:** si intenta entrar fuera de horario o sin conexión estable, el sistema no permite el acceso y ofrece reintentar o escribir a la especialista (US-038).
+
+##### Wireflow 4: Solicitud de paciente → propuesta de horario → cita agendada
+
+**User Persona:** Dra. Laura Gómez (psicóloga verificada).
+**User goal:** Responder rápido a una nueva solicitud y acordar un horario sin conflictos en mi agenda.
+
+![Wireflow 4 - Solicitud, propuesta de horario y cita agendada](../assets/images/chap3/wireflows/wireflow-4.png)
+
+**Explicación del flujo:**
+
+1. La Dra. Laura recibe una nueva solicitud en Pacientes y solicitudes, con el motivo y la preferencia horaria del paciente.
+2. Al aceptarla abre la propuesta de horario. La agenda distingue los espacios libres, retenidos, confirmados y ocupados, y ella propone uno disponible.
+3. La coordinación continúa por chat (Care Scheduling).
+4. Cuando el paciente acepta y su pago es aprobado (Payments & Payouts), la cita aparece confirmada en la Agenda clínica.
+
+**Unhappy path:** si la solicitud no corresponde a su especialidad, la rechaza y el paciente recibe la notificación para buscar otra opción en el directorio.
+
+##### Wireflow 5: Atención de la sesión → cierre → ingreso registrado
+
+**User Persona:** Dra. Laura Gómez (psicóloga verificada).
+**User goal:** Atender a mi paciente de forma segura, registrar el cierre de la sesión y ver mi ingreso.
+
+![Wireflow 5 - Atención de la sesión, cierre e ingreso registrado](../assets/images/chap3/wireflows/wireflow-5.png)
+
+**Explicación del flujo:**
+
+1. Desde la Agenda clínica, la Dra. Laura inicia la sesión confirmada. La videollamada usa una sala privada con acceso temporal solo para ella y su paciente.
+2. Al terminar registra el resultado operativo de la cita y cierra la atención (Care Scheduling). El cierre habilita la reseña del paciente.
+3. El pago de la sesión, aprobado antes de la cita, aparece en su Billetera como ingreso menos la comisión de la plataforma (Payments & Payouts).
+4. Desde la Billetera puede solicitar un retiro a su cuenta (ruta alterna).
+
+Si necesita volver a la llamada antes de cerrar, «Volver a la sesión» la retoma.
 
 #### 3.1.4.3. Mobile Applications Mock-ups
 
