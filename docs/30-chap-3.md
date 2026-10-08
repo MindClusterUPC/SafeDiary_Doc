@@ -1,111 +1,281 @@
 # Capítulo III: Solution UI/UX Design
 
-> **Plantilla para TB1.** Reemplazar los textos entre corchetes por decisiones y evidencias propias de SafeDiary. Cada artefacto debe incluir una imagen legible, una explicación de las decisiones y la relación con las historias de usuario.
+>
 
 ## 3.1. Product design
-
-En esta sección se explica cómo el diseño de SafeDiary transforma los requisitos priorizados del Capítulo II en una experiencia coherente para pacientes jóvenes y, cuando corresponda, profesionales de salud mental.
-
-**Alcance de esta entrega:** [indicar qué pantallas y flujos se presentan en TB1 y cuáles quedan para los siguientes sprints].
-
-**Historias de usuario cubiertas:** [US-xxx, US-xxx].
-
-**Criterios transversales:** privacidad por defecto, consentimiento explícito, lenguaje no diagnóstico, accesibilidad y estados de error.
 
 ### 3.1.1. Style Guidelines
 
 #### 3.1.1.1. General Style Guidelines
 
+Esta guía normaliza los patrones visuales observados en los seis wireflows: registro y Diarito (Wireflow 1), directorio y reserva (Wireflow 2), sesión por videollamada (Wireflow 3), vistas del psicólogo (Wireflows 4 y 5) y reseñas (Wireflow 6). Los colores se tomaron como referencia de las capturas y se consolidaron en un conjunto de tokens para las siguientes pantallas. La lámina resume su aplicación:
+
+![Style Guidelines de SafeDiary: marca, tipografía, paleta y componentes](../assets/images/chap3/style-guidelines.png)
+
 ##### Branding
 
 - **Nombre y propuesta de valor:** SafeDiary como puente seguro entre reflexión privada, hábitos de autocuidado y atención profesional.
-- **Personalidad de marca:** [serena / cercana / no sentenciosa / clínicamente responsable].
-- **Logo y usos permitidos:** [insertar logo, área de protección y usos incorrectos].
+- **Personalidad de marca:** serena, cercana, respetuosa de la privacidad y clínicamente responsable. Los mensajes invitan a decidir sin juzgar ni prometer resultados terapéuticos.
+- **Identificador:** icono del diario azul marino con onda verde petróleo y palabra «SafeDiary». En la aplicación se coloca sobre una cabecera blanca, con una separación mínima de 8 px entre icono y texto. El icono conserva una altura mínima de 24 px para ser reconocible.
+- **Uso correcto:** mantener proporciones, contraste y espacio libre alrededor del identificador; usar la versión completa en encabezados y el icono solo en espacios pequeños. Evitar estirar el símbolo, ponerlo sobre fondos visualmente recargados o usarlo como indicador de verificación profesional.
+
+<img src="../assets/images/chap2/SafeDiary_logo.jpeg" alt="Icono de marca de SafeDiary: diario azul marino con onda verde" width="120">
 
 ##### Typography
 
-| Uso | Familia | Peso | Tamaño | Ejemplo |
-|---|---|---:|---:|---|
-| Título principal | [fuente] | [peso] | [px] | [texto] |
-| Encabezado de sección | [fuente] | [peso] | [px] | [texto] |
-| Texto de cuerpo | [fuente] | [peso] | [px] | [texto] |
-| Etiqueta / ayuda | [fuente] | [peso] | [px] | [texto] |
+La interfaz móvil usa **Roboto Flex**. La jerarquía combina títulos compactos, cuerpo legible y etiquetas breves; las cifras de tarifas, horarios y temporizadores usan un peso mayor para facilitar la lectura rápida.
+
+| Uso | Familia | Peso | Tamaño / interlineado | Ejemplo |
+| --- | --- | ---: | --- | --- |
+| Título de pantalla | Roboto Flex | 700 | 24 / 30 px | «Mis citas» |
+| Encabezado de sección | Roboto Flex | 700 | 18 / 24 px | «Valoraciones» |
+| Título de tarjeta | Roboto Flex | 600 | 15 / 21 px | «Dra. Laura Gómez» |
+| Texto de cuerpo | Roboto Flex | 400 | 14 / 20 px | «Tu horario está reservado» |
+| Botón y control | Roboto Flex | 600 | 14 / 20 px | «Confirmar horario» |
+| Etiqueta y ayuda | Roboto Flex | 400–600 | 12 / 16 px | «Reserva temporal» |
+
+Se permite ampliar el texto hasta 200 % sin ocultar acciones ni cifras. Las etiquetas pequeñas de los wireflows se normalizan a un mínimo de 12 px en las pantallas finales.
 
 ##### Colors
 
-| Token | Valor | Uso | Contraste validado |
-|---|---|---|---|
-| `color.background` | [hex] | Fondo principal | [AA/AAA] |
-| `color.surface` | [hex] | Tarjetas y formularios | [AA/AAA] |
-| `color.primary` | [hex] | Acciones principales | [AA/AAA] |
-| `color.secondary` | [hex] | Acciones secundarias | [AA/AAA] |
-| `color.text` | [hex] | Texto principal | [AA/AAA] |
-| `color.danger` | [hex] | Estados de riesgo o error | [AA/AAA] |
+| Token | Valor | Uso | Contraste del par indicado |
+| --- | --- | --- | --- |
+| `color.background` | `#F9F9FF` | Fondo lavanda muy claro de páginas móviles | Con `color.text`: **15.25:1** (AAA) |
+| `color.surface` | `#FFFFFF` | Tarjetas, formularios y cabeceras | Con `color.text`: **15.99:1** (AAA) |
+| `color.surface.soft` | `#F0F3FF` | Paneles secundarios y disponibilidad | Con `color.text`: **14.44:1** (AAA) |
+| `color.primary` | `#01284B` | Botones principales, títulos y estados de sesión | Con blanco: **14.93:1** (AAA) |
+| `color.accent` | `#006B5F` | Selección, navegación activa, progreso y verificación | Con blanco: **6.43:1** (AA) |
+| `color.accent.soft` | `#DFF5EF` | Confirmaciones, privacidad y badges positivos | Con `color.accent`: **5.64:1** (AA) |
+| `color.text` | `#0D2142` | Texto principal | Sobre fondo: **15.25:1** (AAA) |
+| `color.text.muted` | `#64748B` | Ayudas y metadatos | Sobre fondo: **4.54:1** (AA) |
+| `color.border` | `#E3E8F0` | Límites de tarjetas y campos | Decorativo; no usar como texto |
+| `color.danger` | `#C92327` | Eliminar, cancelar y errores que requieren atención | Sobre blanco: **5.60:1** (AA) |
+| `color.focus` | `#5366D6` | Contorno de foco visible | Sobre fondo: **4.72:1** |
+| `color.video` | `#0B192A` | Fondo de la videollamada privada | Con blanco: **17.70:1** (AAA) |
+
+Los ratios se calcularon para los pares indicados. El verde de las flechas y el naranja de las rutas alternas pertenecen a la **anotación de los wireflows**; dentro de la aplicación los estados siempre incluyen texto e icono, además de color.
 
 ##### Spacing, grid and components
 
-- **Grid:** [número de columnas / márgenes / ancho base del dispositivo].
-- **Escala de espaciado:** [4, 8, 12, 16, 24, 32 ...].
-- **Radio y elevación:** [valores definidos].
-- **Componentes reutilizables:** [botones, tarjetas, campos, chips emocionales, navegación, tarjetas de especialistas, estados vacíos].
-- **Estados:** default, pressed, disabled, loading, success, error, offline y contenido no disponible.
+- **Grid móvil:** una columna flexible sobre una referencia de 393 × 852 px, márgenes laterales de 16 px y contenido que respeta las áreas seguras del dispositivo. Las tarjetas principales ocupan el ancho disponible.
+- **Escala de espaciado:** base de 4 px; usar 8 px entre icono y texto, 12 px entre elementos relacionados, 16 px dentro de tarjetas y 24–32 px entre secciones.
+- **Forma:** tarjetas con radio de 16–20 px, campos con 12–14 px y botones o chips tipo píldora con radio completo. Borde de 1 px `color.border` y elevación suave (`0 4px 16px` con azul marino al 8 %) solo para distinguir capas.
+- **Botones:** acción principal de altura mínima 48 px en azul marino con texto blanco; acción secundaria en azul suave con texto marino. Las acciones destructivas usan `color.danger`, explicación de la consecuencia y confirmación. Un botón deshabilitado mantiene su etiqueta y comunica por qué no está disponible.
+- **Tarjetas de especialistas:** avatar, nombre, credencial verificada, especialidad, calificación, disponibilidad y tarifa agrupados de forma estable. «Solicitar contacto» indica que inicia una conversación; una cita se muestra «Confirmada» solo después del pago aprobado.
+- **Campos y selección:** etiqueta visible, ayuda breve, borde neutro y foco `color.focus`. Las opciones elegidas combinan borde o relleno, icono y texto. Las estrellas de calificación muestran visual y verbalmente la puntuación seleccionada.
+- **Navegación por rol:** el paciente usa cinco destinos —Diario, Rutinas, Inicio, Psicólogos y Agenda—; el profesional usa Agenda, Pacientes y Pagos. La sección activa combina icono, etiqueta y verde petróleo. La barra inferior conserva una altura aproximada de 72 px.
+- **Estados:** diseñar default, pressed, focus, selected, disabled, loading, success, error, offline y vacío. Las reservas temporales muestran un contador; los fallos de pago muestran la acción para reintentar y el estado real de la cita. La videollamada usa `color.video` y una acción de colgar claramente destructiva.
+
+Los controles táctiles ofrecen una zona de al menos **48 × 48 px**. Los textos normales mantienen un contraste mínimo de 4.5:1; los iconos y contornos relevantes, 3:1. Las pantallas admiten lector de pantalla, navegación por foco y reducción de movimiento.
 
 ##### Voice and tone
 
-SafeDiary utiliza microcopy claro, cálido y no diagnóstico. No promete monitoreo permanente ni reemplazo de terapia. Ante una señal de crisis, ofrece recursos humanos y de emergencia locales sin ejecutar contactos automáticos.
+SafeDiary utiliza microcopy claro, cálido y no diagnóstico. La interfaz dirigida a pacientes de Perú usa español, fechas legibles, hora de 24 horas y precios en soles (`S/ 120.00`). Evita culpar al usuario por un error: «No se completó el pago. Puedes reintentar» informa el estado y ofrece una salida.
+
+La privacidad aparece junto a la decisión: «Tu diario sigue privado» antes de compartir, «Solo los participantes pueden ingresar» antes de la videollamada y «Tu reseña se muestra de forma anónima» antes de publicar. Las confirmaciones nombran el resultado real: «Horario reservado» durante la retención y «Cita confirmada» tras el pago aprobado. SafeDiary no promete monitoreo permanente ni reemplazo de terapia. Ante una señal de crisis, ofrece recursos humanos y de emergencia locales sin ejecutar contactos automáticos.
 
 ### 3.1.2. Information Architecture
 
+La arquitectura de información organiza SafeDiary según las tareas de María (paciente) y la Dra. Laura Gómez (psicóloga), identificadas en la sección 2.3.2. Separa el espacio personal del paciente, la atención profesional y el contenido público de la landing page. Los seis wireflows de la sección 3.1.4.2 muestran cómo se pasa de una sección a otra; las pantallas de consentimiento, pago, videollamada y reseñas son pasos contextuales de esos recorridos, no destinos principales adicionales.
+
 #### 3.1.2.1. Organization Systems
 
-Describir cómo se agrupa la información para cada rol.
+La información se agrupa por **tarea y rol**. La navegación persistente contiene las áreas de uso frecuente; los pasos que dependen de una cita o de una reseña aparecen dentro de su contexto. La cuenta y la privacidad se abren desde el avatar, para que no compitan con las cinco tareas principales del paciente.
 
-| Rol | Necesidad principal | Secciones accesibles |
+| Espacio | Organización del contenido | Acceso |
 |---|---|---|
-| Paciente | Registrar, comprender y buscar apoyo | Home, Rutinas, Diario, Psicólogos, Citas |
-| Psicólogo | Gestionar perfil, disponibilidad y citas | [portal o vista por rol pendiente de definir] |
-| Administrador | Revisar verificaciones profesionales | [fuera del alcance móvil si corresponde] |
+| Sitio público | Propuesta de valor, funcionamiento, atención profesional, planes, privacidad y acceso a la aplicación | Visitantes; sin datos de pacientes ni citas |
+| Paciente | Inicio, Diario, Rutinas, Psicólogos y Agenda; Perfil y privacidad desde el avatar | Cuenta de paciente autenticada |
+| Psicólogo | Agenda clínica, Pacientes y solicitudes, Pagos; Perfil profesional y verificación desde el avatar | Cuenta profesional; la ficha pública se habilita tras la verificación |
+| Verificación | Solicitudes de credenciales y decisión de revisión | Personal autorizado; fuera de la navegación de pacientes y psicólogos |
 
-**Decisión de alcance:** [confirmar si la navegación de cinco pantallas es exclusivamente para pacientes. Si se implementan historias del rol Psicólogo, agregar un flujo o declarar esas historias como alcance futuro].
+**Mapa jerárquico de la aplicación:**
+
+```text
+SafeDiary
+├─ Acceso y cuenta
+│  ├─ Crear cuenta / Iniciar sesión / Recuperar acceso
+│  └─ Perfil y privacidad → Datos personales / Plan / Permisos de acceso
+├─ Paciente
+│  ├─ Inicio → Registro rápido del ánimo / Próxima cita / Accesos a tareas
+│  ├─ Diario → Nueva entrada (texto o voz) / Historial / Diarito / Resúmenes
+│  │             └─ Compartir contexto → Elegir datos → Confirmar o revocar consentimiento
+│  ├─ Rutinas → Actividades / Recordatorios / Ejercicios breves
+│  ├─ Psicólogos → Buscar y filtrar → Ficha verificada → Valoraciones y reseñas
+│  │                 ├─ Solicitar contacto → Chat de coordinación → Propuesta de horario
+│  │                 └─ Reseña → Marcar útil / Denunciar / Eliminar si es propia
+│  └─ Agenda → Solicitudes / Reservas temporales / Citas confirmadas / Historial
+│               ├─ Reserva temporal → Pago → Confirmación → Consentimiento opcional
+│               └─ Cita confirmada → Sala de espera → Videollamada → Sesión completada
+│                                      └─ Calificar sesión → Reseña publicada
+└─ Psicólogo
+   ├─ Agenda clínica → Disponibilidad / Citas / Sala de espera / Cierre de sesión
+   ├─ Pacientes y solicitudes → Solicitud / Chat / Proponer horario
+   │                            └─ Contexto emocional autorizado, si existe permiso
+   ├─ Pagos → Ingresos / Comisiones / Método de retiro / Solicitar retiro
+   └─ Perfil profesional → Verificación / Ficha pública / Especialidades / Tarifa
+```
+
+Una ficha, reseña o disponibilidad se muestra solo si el profesional está verificado y su ficha sigue publicada (US-002, US-054). El diario, los resúmenes y el chat son espacios privados. El psicólogo solo ve el contexto emocional que el paciente autorizó de forma explícita y vigente (US-009, US-045 y US-046). El pago de una sesión y la suscripción Premium pertenecen a recorridos distintos (US-037 y US-051).
 
 #### 3.1.2.2. Labelling Systems
 
-| Término visible | Definición | Evitar |
+Los rótulos son verbos concretos para las acciones y sustantivos conocidos para los destinos. Se usa **Agenda** en la barra inferior del paciente y **Mis citas** como título de la vista; la barra del profesional distingue **Agenda clínica** de **Pacientes y solicitudes**. El mismo estado conserva el mismo nombre en tarjetas, avisos y detalle.
+
+| Rótulo visible | Significado y ubicación | Regla de uso |
 |---|---|---|
-| Diario | Registro privado de experiencias y emociones | Historial clínico, diagnóstico |
-| Psicólogos | Directorio de profesionales verificados | Terapia garantizada |
-| Citas | Reservas, pagos y sesiones profesionales | Agenda pública |
-| Compartir con mi psicólogo | Autorización limitada y revocable | Compartir historial completo |
+| Inicio | Resumen y accesos rápidos del paciente | No mostrar aquí contenido emocional compartido con terceros |
+| Diario | Entradas privadas de texto o voz, historial y acceso a Diarito | Evitar «historial clínico» o «diagnóstico» |
+| Diarito | Conversación de reflexión asistida | Presentarlo como apoyo, no como terapeuta |
+| Rutinas | Actividades y recordatorios de autocuidado | Distinguir una rutina de una cita clínica |
+| Psicólogos | Directorio de profesionales con ficha verificada | No prometer resultados terapéuticos |
+| Ficha profesional | Credenciales, enfoque, tarifa, disponibilidad y reseñas | Mostrar el estado de verificación junto a la identidad |
+| Solicitar contacto | Inicia la coordinación por chat | No llamarlo «Reservar» antes de acordar un horario |
+| Agenda / Mis citas | Solicitudes, reservas temporales, citas y sesiones anteriores | Usar «Agenda clínica» para la vista profesional |
+| Reserva temporal | Horario retenido mientras se completa el pago | Mostrar vencimiento y aclarar que aún no es una cita confirmada |
+| Cita confirmada | Horario aceptado con pago aprobado | Habilita el acceso a la sesión dentro de su ventana de entrada |
+| Compartir contexto | Selección opcional y revocable de datos del diario | Indicar destinatario, contenido y duración antes de confirmar |
+| Calificar sesión | Valoración posterior a una sesión completada | La reseña se publica de forma anónima; una por cita |
+| Me gusta / Denunciar / Eliminar reseña | Acciones sobre una reseña publicada | «Eliminar» solo para la autora; «Denunciar» no la retira automáticamente |
+| Pagos e ingresos | Balance y retiros del profesional | Diferenciar ingreso por sesión de pago de suscripción |
+
+Las etiquetas de estado usan «Pendiente», «Reserva temporal», «Cita confirmada», «Sesión completada», «Pago fallido» y «Cancelada» según el evento real. Color e icono acompañan el texto; no son la única forma de comunicar el estado.
 
 #### 3.1.2.3. SEO Tags and Meta Tags
 
-Completar para la landing page.
+Esta sección sigue la organización por página pública del [informe de CcaritaTech](https://github.com/CcaritaTech/Report/blob/develop/README.md#3123-seo-tags-and-meta-tags), adaptada a las rutas que existen en la landing de SafeDiary. El SEO web describe la propuesta de valor sin exponer contenido emocional de pacientes. La aplicación móvil, el diario, Diarito, las citas y el chat no son páginas públicas para indexar.
 
-| Página | Title | Description | Keywords |
-|---|---|---|---|
-| Inicio | [texto] | [texto] | [palabras clave] |
-| Psicólogos / soporte | [texto] | [texto] | [palabras clave] |
-| Privacidad | [texto] | [texto] | [palabras clave] |
+**1. Inicio (`index.html`).** Presenta el registro emocional, las rutinas, el control de privacidad y el acceso a profesionales. El documento declara `lang="es"`; su `<head>` actual incluye codificación UTF-8, vista adaptable, título, descripción, color del navegador e icono de marca:
+
+```html
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeDiary — Diario emocional y atención profesional</title>
+<meta name="description" content="Registra emociones, explora tus cambios y conoce psicólogos verificados. En SafeDiary tú decides qué información compartir.">
+<meta name="theme-color" content="#01284B">
+<link rel="icon" type="image/jpeg" href="assets/images/safediary-logo.jpeg">
+```
+
+El H1 visible, «Entiende cómo te sientes. Decide qué hacer después.», comunica la misma propuesta que el título y la descripción. Los términos **diario emocional**, **rutinas**, **privacidad** y **psicólogos verificados** se incorporan en contenido y encabezados pertinentes. «Funciones» (`#respirar`), «Privacidad» (`#privacidad`) y «Planes» (`#planes`) son secciones de esta página, no páginas HTML independientes; comparten sus metadatos.
+
+**2. Términos y Condiciones (`pages/terms.html`).** Esta página informa sobre el uso del servicio y dispone de título y descripción propios:
+
+```html
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeDiary • Términos y Condiciones</title>
+<meta name="description" content="Consulta las condiciones de uso de SafeDiary, tus derechos y las responsabilidades del servicio.">
+<meta name="theme-color" content="#01284B">
+<link rel="icon" type="image/jpeg" href="../assets/images/safediary-logo.jpeg">
+```
+
+Su H1 visible es «Términos y Condiciones de SafeDiary». El título y la descripción distinguen esta ruta legal de Inicio sin presentar condiciones de uso como beneficios clínicos.
+
+Para cada página principal se definen **Title, Description, Keywords y Author**. Los dos primeros ya aparecen en los extractos anteriores. Los valores de `keywords` y `author` que se asignarán son:
+
+| Página | `meta keywords` propuesto | `meta author` propuesto |
+|---|---|---|
+| Inicio (`index.html`) | `diario emocional, autocuidado, rutinas de bienestar, psicólogos verificados, SafeDiary` | `MindCluster` |
+| Términos (`pages/terms.html`) | `SafeDiary, términos y condiciones, condiciones de uso, privacidad` | `MindCluster` |
+
+Estos dos metadatos son una **propuesta documental** y todavía no aparecen en el HTML. La elección de términos también debe reflejarse en el contenido visible, sin tratar la etiqueta `keywords` como garantía de posicionamiento. No se documentan metadatos para una Web Application independiente porque el producto contemplado aquí es una aplicación móvil y la landing solo contiene las dos rutas HTML anteriores.
+
+Para la publicación futura de la app móvil, se proponen los siguientes elementos **ASO (App Store Optimization)**. Son textos para la ficha de la tienda, no etiquetas `<meta>` de la landing:
+
+| Elemento ASO | Valor propuesto |
+|---|---|
+| App Title | `SafeDiary` |
+| App keywords | `diario emocional, bienestar, autocuidado, rutinas, psicólogos, citas` |
+| App subtitle | `Diario emocional y autocuidado` |
+| App description | `Registra cómo te sientes en un diario personal, organiza rutinas de autocuidado y conoce psicólogos verificados. Si decides buscar atención profesional, revisa perfiles y coordina una cita. Tú eliges qué información compartir.` |
+
+La ficha final se ajustará a los límites de texto y políticas de la tienda elegida. No debe prometer diagnóstico, atención de emergencia ni acceso del profesional al diario sin consentimiento.
+
+| Elemento | Estado en la landing | Criterio de evolución |
+|---|---|---|
+| `<title>` y `meta description` | Implementados con texto distinto en las dos páginas | Mantenerlos fieles al contenido visible y revisarlos cuando cambie la propuesta o el texto legal. |
+| Idioma, UTF-8 y `viewport` | Implementados en ambas páginas | Mantener `lang="es"` y una lectura adaptable en móvil. |
+| URL canónica (`rel="canonical"`) | Pendiente | Añadir una URL absoluta distinta por página cuando se defina el dominio público definitivo. |
+| Open Graph y Twitter Card | Pendientes | Usar título, descripción, URL e imagen de marca públicos por página; excluir datos de usuarios, reseñas individuales y capturas con información personal. |
+| `meta keywords` y `meta author` | Valores propuestos arriba; aún no implementados | Incorporarlos al HTML cuando se cierre la implementación web, conservando los valores documentados por página. |
+| Rutas privadas | Fuera de la landing pública | Si se crean páginas web de cuenta, impedir su indexación y protegerlas mediante autenticación y controles de acceso. |
+
+Una futura vista web pública de atención profesional necesitaría contenido, URL, H1, título y descripción propios. Su metadato no debe anunciar una página que aún no existe. Las imágenes informativas del sitio deben conservar textos alternativos acordes con su función; los mockups de la aplicación se muestran como ejemplos del producto, sin datos privados.
 
 #### 3.1.2.4. Searching Systems
 
-Describir la búsqueda del directorio de psicólogos y sus filtros. Incluir especialidad, disponibilidad, tarifa, seguro aceptado y estado de verificación, además de estados sin resultados y error de red.
+El sistema especifica **cómo se encuentran los datos, qué filtros se ofrecen y cómo se presentan los resultados**. SafeDiary combina localización por secciones en el sitio público con búsqueda y filtros dentro de los espacios privados de la aplicación. No se propone una búsqueda global que mezcle información pública con datos personales.
 
-**Evidencia:** [captura del flujo de búsqueda y filtros].
+| Espacio y opción de localización | Entrada y filtros | Presentación después de buscar o filtrar |
+|---|---|---|
+| Landing pública | Menú por secciones y preguntas frecuentes desplegables; no hay búsqueda de texto libre. | Desplazamiento a la sección elegida o respuesta abierta dentro de Preguntas. «Ver la app» muestra el carrusel de mockups. |
+| Directorio de Psicólogos (US-002) | Nombre o especialidad; filtros por especialidad, disponibilidad y rango de tarifa. Verificación aprobada y ficha publicada son condiciones obligatorias. | Tarjetas con nombre, especialidad, distintivo de verificación, valoración, próxima disponibilidad y tarifa; cada tarjeta abre la ficha detallada. |
+| Historial del Diario (US-008) | Consulta de entradas propias en orden cronológico; filtros propuestos por rango de fechas, emoción predominante y etiquetas, según el modelo de Diary del Capítulo II. | Lista privada con fecha, emoción o etiquetas, fragmento de texto o indicador de audio; la entrada completa se abre por separado. Las entradas de la bóveda no aparecen en el historial ordinario. |
+| Mis citas (Wireflow 3) | Pestañas **Próximas**, **Pendientes** e **Historial** para acotar por estado; no se requiere texto libre. | Tarjetas con profesional, fecha, hora, estado y acción pertinente, como «Ver detalle», pagar una reserva vigente o ingresar a una cita confirmada dentro de su ventana de acceso. |
+
+En la landing y en Mis citas, el menú, el acordeón y las pestañas ayudan a **localizar** contenido; no se presentan como motores de búsqueda textual. Los filtros del Diario describen la propuesta móvil sustentada en el modelo de datos y consultas del Capítulo II, no una función de la landing.
+
+**Aplicación móvil.** El sistema de búsqueda definido para el paciente es el directorio de **Psicólogos** (US-002; Wireflow 2). La entrada acepta nombre o especialidad y los filtros ayudan a acotar las fichas antes de abrir un perfil. La interfaz muestra qué filtros están activos y permite volver desde la ficha sin perder la consulta.
+
+| Control o dato | Función en la búsqueda | Regla de origen |
+|---|---|---|
+| Nombre y especialidad | Encontrar profesionales acordes con la necesidad expresada | Clinician Directory consulta las fichas publicadas. |
+| Disponibilidad | Acotar por horario ofrecido | Care Scheduling aporta los horarios; abrir una tarjeta no los reserva. |
+| Rango de tarifa | Comparar costos antes de solicitar contacto | Filtrar con la tarifa vigente de cada ficha profesional. |
+| Verificación | Excluir fichas no elegibles | Solo aparecen profesionales con verificación aprobada y ficha publicada (US-054). No es un filtro que el paciente pueda desactivar. |
+| Valoraciones y reseñas | Ayudar a evaluar una ficha abierta | Se muestran puntuaciones y reseñas vigentes; el texto de las reseñas no es un campo de búsqueda. |
+
+| Estado del directorio | Respuesta de la interfaz |
+|---|---|
+| Inicio | Mostrar profesionales elegibles y permitir abrir una ficha sin escribir una consulta. |
+| Consulta o filtros activos | Mantener texto y selección al entrar en una ficha y volver; ofrecer limpiar un filtro o todos. |
+| Sin coincidencias | Explicar que no hay resultados y ofrecer modificar la consulta o limpiar filtros. |
+| Profesional sin horario | Informar que no hay disponibilidad y no presentar una franja como reservable. |
+| Carga o error de red | Indicar que no se pudo completar la búsqueda y permitir reintentar sin borrar la consulta. |
+| Ficha retirada o verificación perdida | Retirar el resultado o impedir el contacto y regresar al directorio. |
+
+La ficha reúne credenciales, enfoque, tarifa, disponibilidad y valoraciones antes de «Solicitar contacto». Esa acción inicia la coordinación por chat; la cita solo se confirma tras acordar un horario y aprobar el pago. El directorio no busca en el diario, las conversaciones, los motivos de consulta ni la identidad de quien escribió una reseña. El filtro «seguro aceptado» queda fuera de esta versión porque las historias y los wireflows no definen convenios ni reglas de cobertura.
+
+Si el historial del Diario o una pestaña de Mis citas no contiene elementos, la vista muestra un estado vacío específico y una salida útil: cambiar filtros, registrar una entrada o volver a la lista de citas. Los resultados privados se consultan solo con la cuenta autorizada; la búsqueda pública nunca revela entradas, conversaciones ni citas.
 
 #### 3.1.2.5. Navigation Systems
 
-Documentar la navegación principal y las rutas críticas.
+**Landing page.** El encabezado compartido agrupa la marca, los enlaces a secciones, el selector ES/EN y el botón «Ver la app». En pantallas estrechas, los enlaces aparecen en un menú desplegable. El sitio usa anclas dentro de `index.html`; la ruta `pages/terms.html` reutiliza el encabezado y devuelve esos enlaces a la sección correspondiente de Inicio. El pie lleva a Términos y Condiciones. La navegación del sitio no comparte destinos con la barra inferior de la aplicación.
 
-```text
-Paciente
-  Home -> Rutinas -> Diario -> Psicólogos -> Citas
-  Diario -> Compartir con psicólogo -> Consentimiento -> Resumen autorizado
-  Psicólogos -> Perfil verificado -> Horario -> Reserva -> Pago -> Videollamada
-  Citas -> Reserva pendiente -> Pago -> Cita confirmada -> Videollamada
-```
+| Enlace visible | Destino real | Propósito |
+|---|---|---|
+| Marca SafeDiary / Inicio | `index.html` / `#espacio` | Volver al comienzo de la landing. |
+| La app / Ver la app | `#app` | Mostrar el carrusel de cinco pantallas de ejemplo; no abre el inicio de sesión. |
+| Funciones | `#respirar` | Explicar diario, reflexión, rutinas y atención. |
+| Privacidad | `#privacidad` | Explicar el control de los datos compartidos. |
+| Planes | `#planes` | Comparar las opciones presentadas en la landing. |
+| Equipo | `#equipo` | Presentar a MindCluster. |
+| Preguntas | `#faq` | Consultar respuestas en el acordeón. |
+| Términos y Condiciones | `pages/terms.html` | Leer la página legal y volver a Inicio desde su enlace de retorno. |
 
-**Regla:** el usuario siempre puede volver sin perder una entrada, una selección de consentimiento ni el estado de una reserva.
+La sección activa se diferencia visualmente en el menú de escritorio; el menú móvil se cierra al elegir un destino. El selector de idioma cambia los rótulos sin cambiar la estructura de secciones. Los enlaces y botones conservan nombres textuales reconocibles además de iconos.
+
+El visitante puede recorrer **Inicio → Funciones → Privacidad → La app → Planes → Preguntas → Términos**, o saltar directamente a cualquier sección desde el encabezado. El carrusel permite avanzar o retroceder entre mockups; el acordeón de Preguntas muestra una respuesta sin abandonar la página. Estos son mecanismos de exploración del contenido, no pasos obligatorios ni un proceso de contratación.
+
+**Aplicación móvil.** El paciente tiene cinco destinos persistentes, en el orden **Diario, Rutinas, Inicio, Psicólogos y Agenda**. Cada uno usa icono y etiqueta; el activo se señala visualmente. Perfil y notificaciones se abren desde la cabecera. Las pantallas de pago, consentimiento, videollamada y calificación se abren desde su cita o ficha correspondiente; no agregan opciones a la barra inferior. Los wireflows del profesional organizan sus tareas en **Agenda clínica**, **Pacientes y solicitudes** y **Pagos e ingresos**, con perfil y verificación como accesos de cuenta.
+
+| Técnica de navegación | Aplicación en SafeDiary | Señal para orientarse o continuar |
+|---|---|---|
+| Global | Encabezado de la landing y barra inferior por rol en la app. | Etiqueta e icono en el destino; sección o pestaña activa visible. |
+| Contextual | Tarjetas, fichas, reseñas, próximas citas y controles del carrusel. | Acciones nombradas según el objeto: «Solicitar contacto», «Ver detalle», «Calificar sesión». |
+| Secuencial | Coordinación de horario, reserva temporal, pago, consentimiento opcional y acceso a la sesión. | Cada pantalla comunica el estado real y la siguiente acción; el pago aprobado precede a «Cita confirmada». |
+| Retorno y recuperación | Volver a una ficha, al directorio, a Mis citas o al paso anterior tras cancelar o encontrar un error. | Se conserva la selección válida y se muestra una salida concreta para reintentar o continuar. |
+
+| Recorrido | Punto de entrada | Ruta y salida |
+|---|---|---|
+| Reflexión personal (Wireflow 1) | Inicio | Registrar ánimo → Diario → Guardar entrada → Diarito → Historial; volver al Diario o a Inicio |
+| Elección y reserva (Wireflow 2) | Psicólogos | Buscar → Ficha → Solicitar contacto → Chat → Aceptar propuesta → Reserva temporal → Pago → Cita confirmada; desde allí, compartir contexto es opcional |
+| Asistir a la cita (Wireflow 3) | Agenda / Mis citas | Cita confirmada → Sala de espera → Videollamada → Sesión completada; la calificación se ofrece al finalizar |
+| Coordinación profesional (Wireflow 4) | Pacientes y solicitudes | Solicitud → Chat → Proponer horario → Agenda clínica; el rechazo devuelve al paciente una salida hacia Psicólogos |
+| Atención y cobro (Wireflow 5) | Agenda clínica | Cita confirmada → Videollamada → Cerrar sesión → Pagos e ingresos → Retiro opcional |
+| Reseñas (Wireflow 6) | Sesión completada o ficha profesional | Calificar sesión → Reseña en ficha; desde cada reseña elegible: Me gusta, Denunciar o Eliminar si es propia |
+
+Los pasos de pago, consentimiento y eliminación de reseña muestran el efecto de confirmar o cancelar antes de ejecutar la acción. Volver conserva borradores de diario y formulario, consulta y filtros del directorio, selección de consentimiento y el estado real de la reserva; nunca convierte una reserva temporal en cita confirmada sin pago aprobado. Al revocar un consentimiento, la ruta del profesional hacia los datos compartidos deja de estar disponible. Los errores de pago, horario vencido, acceso fuera de hora y conexión ofrecen un regreso concreto al paso anterior o a Mis citas, como muestran los wireflows 2 y 3.
 
 ### 3.1.3. Landing Page UI Design
 
