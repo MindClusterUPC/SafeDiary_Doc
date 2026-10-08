@@ -104,7 +104,7 @@ Proyecto
 | 0.0.24 | 18/09/2026 | Juan Wang | Añadir arquitectura de software C4 (Deployment Diagram) |
 | 0.0.25 | 18/09/2026 | Juan Wang | Redacción de Conclusiones y Recomendaciones del proyecto |
 | 0.0.26 | 18/09/2026 | Andrés Torres | Reestructuración de User Stories |
-
+| 0.1.0 | 7/10/2026 | Marcelo Cuadros | Añadir Wireframes de los bounded contexts respectivos |
 
 # Project Report Collaboration Insights
 
