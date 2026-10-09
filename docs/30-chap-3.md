@@ -389,24 +389,569 @@ Tras revisar el wireframe, se realizaron los mockups para las paginas que corres
 
 #### 3.1.4.1. Mobile Applications Wireframes
 
-Presentar wireframes de las pantallas de la vista del paciente y especialista:
 
-1. Home.
-2. Rutinas.
-3. Diario.
-4. Psicólogos.
-5. Citas.
+La historia principal se reproduce con su identificador, título y descripción Como/Quiero/Para. La relación explica la parte visible en cada pantalla; una captura no acredita por sí sola todos los criterios de aceptación de la historia. Las pantallas que se repiten se conservan en el recorrido al que pertenece cada captura.
 
-También incluir las vistas auxiliares imprescindibles: detalle de psicólogo, reserva, consentimiento, pago, videollamada y estados de error.
 
-| Pantalla | Historias relacionadas | Estado cubierto | Evidencia |
-|---|---|---|---|
-| Home | [US-xxx] | [normal / vacío / offline] | [imagen] |
-| Rutinas | US-007, US-024, US-030 | [normal / recordatorio fallido] | ![Mis Rutinas](../assets/images/chap3/wireframes/rutines-bc/Rutines_01.png) |
-| Diario | US-008, US-010, US-011 | [normal / transcripción fallida] | [imagen] |
-| Psicólogos | US-002, US-009, US-014, US-037 | [sin resultados / horario ocupado / pago fallido] | [imagen] |
-| Citas | US-014, US-037, US-038 | [reserva vencida / pago fallido] | [imagen] |
+##### Paciente: rutinas de autocuidado
 
+###### Mis rutinas diarias
+
+**Historia principal: US-007 — Gestión de rutinas de autocuidado.**
+
+Como usuario de SafeDiary, Quiero crear actividades para mis rutinas diarias, Para organizar hábitos de calma y autocuidado durante el día.
+
+**Historias complementarias:** US-024 — Recordatorios de registro emocional; US-030 — Ejercicios rápidos de regulación.
+
+**Estado representado:** Lista de actividades con horarios, frecuencia y recordatorios activados o desactivados.
+
+**Relación con las historias:** La lista permite consultar las actividades y acceder a la creación de una rutina (US-007). Los horarios y controles de notificación apoyan la gestión de recordatorios (US-024). La ejecución de ejercicios de regulación (US-030) se desarrolla en el Wireflow 7; esta pantalla muestra las actividades programadas.
+
+<img src="../assets/images/chap3/wireframes/rutines-bc/Rutines_01.png" alt="Mis rutinas diarias: lista de actividades, horarios y recordatorios" width="280">
+
+##### Paciente: inicio, reflexión y Diarito
+
+###### WF-M01. Inicio y registro emocional
+
+**Historia principal: US-010 — Registro rápido del estado emocional.**
+
+Como usuario de SafeDiary, Quiero seleccionar rápidamente mi estado emocional actual desde la pantalla principal, Para mantener un registro continuo de mi ánimo sin crear una entrada completa.
+
+**Historias complementarias:** US-008 — Registro de entrada de diario.
+
+**Estado representado:** Ánimo seleccionado y registro confirmado.
+
+**Relación con las historias:** La selección de una emoción registra el ánimo con fecha y hora. El acceso «Write in My Diary» conduce al registro de una vivencia.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m01-inicio-registro-emocional.png" alt="WF-M01. Inicio y registro emocional: Ánimo seleccionado y registro confirmado" width="280">
+
+###### WF-M02. Reflexión diaria
+
+**Historia principal: US-008 — Registro de entrada de diario.**
+
+Como usuario de SafeDiary, Quiero registrar una vivencia mediante texto o una nota de voz, Para expresar mis pensamientos con el medio que me resulte más cómodo.
+
+**Estado representado:** Entrada de texto en edición.
+
+**Relación con las historias:** El campo de reflexión y la acción «Save to Diary» representan el registro de una entrada textual privada.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m02-reflexion-diaria.png" alt="WF-M02. Reflexión diaria: Entrada de texto en edición" width="280">
+
+###### WF-M03. Rutina completada
+
+**Historia principal: US-007 — Gestión de rutinas de autocuidado.**
+
+Como usuario de SafeDiary, Quiero crear actividades para mis rutinas diarias, Para organizar hábitos de calma y autocuidado durante el día.
+
+**Historias complementarias:** US-010 — Registro rápido del estado emocional; US-029 — Insignias por constancia emocional.
+
+**Estado representado:** Actividad completada y racha visible.
+
+**Relación con las historias:** Muestra el resultado de completar una actividad de autocuidado y permite registrar el ánimo después. La racha es una referencia de constancia; aquí no se muestra la creación de rutinas ni el otorgamiento de una insignia.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m03-rutina-completada.png" alt="WF-M03. Rutina completada: Actividad completada y racha visible" width="280">
+
+###### WF-M04. Diarito vacío
+
+**Historia principal: US-011 — Reflexión guiada por voz con IA.**
+
+Como usuario de SafeDiary, Quiero hablar con el asistente de IA y obtener una transcripción, reflexión y etiqueta emocional sugerida, Para procesar mis pensamientos de manera guiada y guardarlos en mi diario.
+
+**Estado representado:** Conversación sin mensajes.
+
+**Relación con las historias:** Las sugerencias y el campo de texto permiten iniciar la reflexión asistida. La captura representa el acceso por texto al asistente.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m04-diarito-vacio.png" alt="WF-M04. Diarito vacío: Conversación sin mensajes" width="280">
+
+###### WF-M05. Conversación con Diarito
+
+**Historia principal: US-011 — Reflexión guiada por voz con IA.**
+
+Como usuario de SafeDiary, Quiero hablar con el asistente de IA y obtener una transcripción, reflexión y etiqueta emocional sugerida, Para procesar mis pensamientos de manera guiada y guardarlos en mi diario.
+
+**Estado representado:** Conversación activa.
+
+**Relación con las historias:** Presenta el mensaje del usuario, una respuesta de apoyo reflexivo y el aviso de que Diarito no reemplaza la atención profesional.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m05-conversacion-diarito.png" alt="WF-M05. Conversación con Diarito: Conversación activa" width="280">
+
+###### WF-M06. Historial de chats con menú
+
+**Historia principal: US-011 — Reflexión guiada por voz con IA.**
+
+Como usuario de SafeDiary, Quiero hablar con el asistente de IA y obtener una transcripción, reflexión y etiqueta emocional sugerida, Para procesar mis pensamientos de manera guiada y guardarlos en mi diario.
+
+**Historias complementarias:** US-026 — Personalización del tono de la IA.
+
+**Estado representado:** Historial abierto y menú contextual visible.
+
+**Relación con las historias:** Permite buscar y retomar conversaciones, iniciar una nueva y abrir la configuración del asistente. US-026 se relaciona con el acceso a configuración; la selección del tono no aparece en esta vista.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m06-historial-chats-menu.png" alt="WF-M06. Historial de chats con menú: Historial abierto y menú contextual visible" width="280">
+
+###### WF-M07. Editar mensaje
+
+**Historia principal: US-011 — Reflexión guiada por voz con IA.**
+
+Como usuario de SafeDiary, Quiero hablar con el asistente de IA y obtener una transcripción, reflexión y etiqueta emocional sugerida, Para procesar mis pensamientos de manera guiada y guardarlos en mi diario.
+
+**Estado representado:** Mensaje en edición.
+
+**Relación con las historias:** Muestra la corrección de un mensaje antes de volver a enviarlo a Diarito. Es una vista auxiliar del recorrido de reflexión asistida.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m07-editar-mensaje-diarito.png" alt="WF-M07. Editar mensaje: Mensaje en edición" width="280">
+
+##### Paciente: directorio y contacto con especialistas
+
+###### WF-M08. Directorio de psicólogos
+
+**Historia principal: US-002 — Búsqueda y consulta de psicólogos verificados.**
+
+Como paciente de SafeDiary, Quiero buscar y filtrar psicólogos verificados y consultar sus fichas y reseñas, Para elegir a quién solicitar contacto con información suficiente.
+
+**Historias complementarias:** US-048 — Solicitud de contacto y chat de coordinación.
+
+**Estado representado:** Resultados y filtros disponibles.
+
+**Relación con las historias:** La búsqueda, los filtros y las tarjetas presentan profesionales verificados con tarifa y disponibilidad. «Contactar» inicia la solicitud de contacto.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m08-directorio-psicologos.png" alt="WF-M08. Directorio de psicólogos: Resultados y filtros disponibles" width="280">
+
+###### WF-M09. Perfil profesional
+
+**Historia principal: US-002 — Búsqueda y consulta de psicólogos verificados.**
+
+Como paciente de SafeDiary, Quiero buscar y filtrar psicólogos verificados y consultar sus fichas y reseñas, Para elegir a quién solicitar contacto con información suficiente.
+
+**Historias complementarias:** US-048 — Solicitud de contacto y chat de coordinación.
+
+**Estado representado:** Ficha verificada y publicada.
+
+**Relación con las historias:** La ficha reúne enfoque, credenciales, tarifa y valoraciones para elegir un profesional. «Solicitar contacto» abre la coordinación sin crear una cita ni un cobro.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m09-perfil-profesional.png" alt="WF-M09. Perfil profesional: Ficha verificada y publicada" width="280">
+
+###### WF-M10. Solicitar contacto
+
+**Historia principal: US-048 — Solicitud de contacto y chat de coordinación.**
+
+Como paciente que encontró una ficha profesional verificada, Quiero solicitar contacto y conversar de forma privada con el psicólogo, Para acordar una posible fecha sin crear ni pagar una cita prematuramente.
+
+**Estado representado:** Solicitud preparada para enviar.
+
+**Relación con las historias:** El paciente redacta el motivo de consulta y envía una solicitud privada al especialista, con la aclaración de que este paso no crea una cita ni un cargo.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m10-solicitar-contacto.png" alt="WF-M10. Solicitar contacto: Solicitud preparada para enviar" width="280">
+
+###### WF-M11. Chat de coordinación
+
+**Historia principal: US-048 — Solicitud de contacto y chat de coordinación.**
+
+Como paciente que encontró una ficha profesional verificada, Quiero solicitar contacto y conversar de forma privada con el psicólogo, Para acordar una posible fecha sin crear ni pagar una cita prematuramente.
+
+**Historias complementarias:** US-049 — Aceptación del horario propuesto.
+
+**Estado representado:** Solicitud enviada y horario propuesto.
+
+**Relación con las historias:** La conversación privada permite acordar la fecha. La tarjeta de propuesta presenta horario, modalidad y tarifa, con las opciones de aceptar o proponer otro horario.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m11-chat-coordinacion-paciente.png" alt="WF-M11. Chat de coordinación: Solicitud enviada y horario propuesto" width="280">
+
+##### Paciente: reserva temporal, pago y cancelación
+
+###### WF-M12. Confirmar horario
+
+**Historia principal: US-049 — Aceptación del horario propuesto.**
+
+Como paciente que acordó una fecha por chat, Quiero aceptar expresamente la propuesta del psicólogo, Para iniciar la retención temporal de ese horario antes de pagar.
+
+**Historias complementarias:** US-014 — Reserva temporal del horario acordado.
+
+**Estado representado:** Confirmación de aceptación abierta.
+
+**Relación con las historias:** Antes de aceptar, el paciente revisa la fecha y la tarifa. La confirmación inicia una retención de una hora y explica que la cita se confirma cuando el pago es aprobado.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m12-confirmar-horario.png" alt="WF-M12. Confirmar horario: Confirmación de aceptación abierta" width="280">
+
+###### WF-M13. Reserva temporal
+
+**Historia principal: US-014 — Reserva temporal del horario acordado.**
+
+Como paciente que aceptó el horario propuesto por un psicólogo verificado, Quiero que el horario quede reservado temporalmente durante una hora, Para completar el pago sin perderlo mientras esté vigente.
+
+**Historias complementarias:** US-037 — Pago seguro de una sesión; US-050 — Cancelación de reserva o cita y liberación del horario.
+
+**Estado representado:** Horario retenido y pago pendiente.
+
+**Relación con las historias:** El contador indica el tiempo restante de la reserva. Se muestran el importe y las acciones para pagar o cancelar, sin presentar todavía una cita confirmada.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m13-reserva-temporal.png" alt="WF-M13. Reserva temporal: Horario retenido y pago pendiente" width="280">
+
+###### WF-M14. Pago de sesión
+
+**Historia principal: US-037 — Pago seguro de una sesión.**
+
+Como paciente con una reserva temporal vigente, Quiero pagar la sesión dentro de SafeDiary y recibir un comprobante, Para confirmar la cita acordada mediante una transacción trazable.
+
+**Estado representado:** Reserva vigente y cobro por confirmar.
+
+**Relación con las historias:** El paciente revisa el método de pago y el total de la sesión antes de pagar. La pantalla aclara que el comprobante y la confirmación dependen del pago aprobado.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m14-pago-sesion.png" alt="WF-M14. Pago de sesión: Reserva vigente y cobro por confirmar" width="280">
+
+###### WF-M15. Cita confirmada
+
+**Historia principal: US-037 — Pago seguro de una sesión.**
+
+Como paciente con una reserva temporal vigente, Quiero pagar la sesión dentro de SafeDiary y recibir un comprobante, Para confirmar la cita acordada mediante una transacción trazable.
+
+**Historias complementarias:** US-038 — Acceso a la videollamada programada; US-009 — Consentimiento para compartir historial.
+
+**Estado representado:** Pago aprobado y cita confirmada.
+
+**Relación con las historias:** Muestra la cita confirmada, el comprobante y la ventana de ingreso. El acceso «Configurar consentimiento» permite iniciar la decisión opcional de compartir contexto; esta captura no muestra la selección de datos ni su confirmación.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m15-cita-confirmada.png" alt="WF-M15. Cita confirmada: Pago aprobado y cita confirmada" width="280">
+
+###### WF-M16. Pago no completado
+
+**Historia principal: US-037 — Pago seguro de una sesión.**
+
+Como paciente con una reserva temporal vigente, Quiero pagar la sesión dentro de SafeDiary y recibir un comprobante, Para confirmar la cita acordada mediante una transacción trazable.
+
+**Historias complementarias:** US-014 — Reserva temporal del horario acordado.
+
+**Estado representado:** Pago fallido y reserva todavía vigente.
+
+**Relación con las historias:** Informa que el pago no se confirmó y mantiene visible el estado pendiente de la reserva, con acciones para reintentar o volver a Mis citas.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m16-pago-no-completado.png" alt="WF-M16. Pago no completado: Pago fallido y reserva todavía vigente" width="280">
+
+###### WF-M17. Cancelar reserva
+
+**Historia principal: US-050 — Cancelación de reserva o cita y liberación del horario.**
+
+Como paciente con una reserva temporal o cita confirmada, Quiero cancelar cuando corresponda y conocer el efecto sobre mi pago, Para liberar el horario y evitar confusiones sobre mi atención.
+
+**Estado representado:** Confirmación de cancelación abierta.
+
+**Relación con las historias:** Explica la liberación del horario y el efecto sobre el cobro antes de cancelar. El paciente puede confirmar o conservar la reserva.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m17-cancelar-reserva.png" alt="WF-M17. Cancelar reserva: Confirmación de cancelación abierta" width="280">
+
+###### WF-M18. Horario liberado
+
+**Historia principal: US-050 — Cancelación de reserva o cita y liberación del horario.**
+
+Como paciente con una reserva temporal o cita confirmada, Quiero cancelar cuando corresponda y conocer el efecto sobre mi pago, Para liberar el horario y evitar confusiones sobre mi atención.
+
+**Estado representado:** Reserva cancelada, horario liberado y sin cargo.
+
+**Relación con las historias:** Confirma la cancelación de una reserva sin pago y ofrece continuar por el mismo chat para acordar otra fecha.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m18-horario-liberado.png" alt="WF-M18. Horario liberado: Reserva cancelada, horario liberado y sin cargo" width="280">
+
+##### Paciente: Mis citas y acceso a la sesión
+
+###### WF-M19. Mis citas
+
+**Historia principal: US-038 — Acceso a la videollamada programada.**
+
+Como usuario con una cita confirmada, Quiero ingresar a una videollamada segura desde SafeDiary, Para recibir atención profesional en el horario reservado.
+
+**Historias complementarias:** US-014 — Reserva temporal del horario acordado; US-037 — Pago seguro de una sesión; US-048 — Solicitud de contacto y chat de coordinación.
+
+**Estado representado:** Reservas temporales, citas confirmadas y chats activos.
+
+**Relación con las historias:** Distingue una reserva pendiente de pago de una cita confirmada. Desde sus tarjetas se puede pagar, consultar el detalle o ingresar a la sesión; también se muestran las conversaciones de coordinación.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m19-mis-citas.png" alt="WF-M19. Mis citas: Reservas temporales, citas confirmadas y chats activos" width="280">
+
+###### WF-M20. Sala de espera
+
+**Historia principal: US-038 — Acceso a la videollamada programada.**
+
+Como usuario con una cita confirmada, Quiero ingresar a una videollamada segura desde SafeDiary, Para recibir atención profesional en el horario reservado.
+
+**Estado representado:** Ventana de acceso abierta.
+
+**Relación con las historias:** Permite revisar cámara y micrófono y muestra los participantes autorizados antes de ingresar a la videollamada privada.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m20-sala-espera.png" alt="WF-M20. Sala de espera: Ventana de acceso abierta" width="280">
+
+###### WF-M21. Sesión en curso
+
+**Historia principal: US-038 — Acceso a la videollamada programada.**
+
+Como usuario con una cita confirmada, Quiero ingresar a una videollamada segura desde SafeDiary, Para recibir atención profesional en el horario reservado.
+
+**Estado representado:** Videollamada iniciada.
+
+**Relación con las historias:** Presenta a la especialista y los controles de micrófono, cámara, chat y salida durante la consulta programada.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m21-sesion-en-curso-paciente.png" alt="WF-M21. Sesión en curso: Videollamada iniciada" width="280">
+
+###### WF-M22. Sesión completada
+
+**Historia principal: US-039 — Calificación del especialista.**
+
+Como usuario que completó una sesión, Quiero calificar al especialista y escribir una reseña opcional, Para compartir mi experiencia y contribuir a una puntuación de confianza transparente.
+
+**Historias complementarias:** US-044 — Gestión de la atención profesional.
+
+**Estado representado:** Atención finalizada y calificación disponible.
+
+**Relación con las historias:** El recorrido de la cita refleja el cierre registrado por la especialista. La acción «Calificar sesión» permite al paciente valorar una atención completada.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m22-sesion-completada-paciente.png" alt="WF-M22. Sesión completada: Atención finalizada y calificación disponible" width="280">
+
+###### WF-M23. Pago de sesión desde Mis citas
+
+**Historia principal: US-037 — Pago seguro de una sesión.**
+
+Como paciente con una reserva temporal vigente, Quiero pagar la sesión dentro de SafeDiary y recibir un comprobante, Para confirmar la cita acordada mediante una transacción trazable.
+
+**Estado representado:** Reserva pendiente de pago.
+
+**Relación con las historias:** Reutiliza la pantalla de pago cuando el paciente inicia el cobro desde una reserva visible en Mis citas.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m23-pago-desde-mis-citas.png" alt="WF-M23. Pago de sesión desde Mis citas: Reserva pendiente de pago" width="280">
+
+###### WF-M24. Cita confirmada después del pago desde Mis citas
+
+**Historia principal: US-037 — Pago seguro de una sesión.**
+
+Como paciente con una reserva temporal vigente, Quiero pagar la sesión dentro de SafeDiary y recibir un comprobante, Para confirmar la cita acordada mediante una transacción trazable.
+
+**Historias complementarias:** US-038 — Acceso a la videollamada programada; US-009 — Consentimiento para compartir historial.
+
+**Estado representado:** Pago aprobado y acceso programado.
+
+**Relación con las historias:** La confirmación devuelve al paciente una cita pagada con comprobante y acceso programado, junto con el punto de entrada al consentimiento opcional.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m24-confirmacion-desde-mis-citas.png" alt="WF-M24. Cita confirmada después del pago desde Mis citas: Pago aprobado y acceso programado" width="280">
+
+##### Especialista: solicitudes y agenda profesional
+
+###### WF-M25. Pacientes y solicitudes
+
+**Historia principal: US-043 — Gestión de solicitudes y agenda profesional.**
+
+Como psicólogo verificado que recibió una solicitud de contacto, Quiero conversar con el paciente y proponer o rechazar horarios desde mi agenda, Para acordar una sesión sin conflictos de disponibilidad.
+
+**Estado representado:** Solicitudes nuevas y pacientes activos.
+
+**Relación con las historias:** Presenta las solicitudes recibidas, las preferencias horarias y las acciones para atender la coordinación desde la lista de pacientes.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m25-pacientes-solicitudes.png" alt="WF-M25. Pacientes y solicitudes: Solicitudes nuevas y pacientes activos" width="280">
+
+###### WF-M26. Proponer horario
+
+**Historia principal: US-043 — Gestión de solicitudes y agenda profesional.**
+
+Como psicólogo verificado que recibió una solicitud de contacto, Quiero conversar con el paciente y proponer o rechazar horarios desde mi agenda, Para acordar una sesión sin conflictos de disponibilidad.
+
+**Estado representado:** Horario libre seleccionado.
+
+**Relación con las historias:** La agenda distingue espacios libres, retenidos, confirmados y ocupados. La especialista selecciona un espacio disponible y envía una propuesta al paciente.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m26-proponer-horario.png" alt="WF-M26. Proponer horario: Horario libre seleccionado" width="280">
+
+###### WF-M27. Chat de coordinación del recorrido de solicitudes
+
+**Historia principal: US-043 — Gestión de solicitudes y agenda profesional.**
+
+Como psicólogo verificado que recibió una solicitud de contacto, Quiero conversar con el paciente y proponer o rechazar horarios desde mi agenda, Para acordar una sesión sin conflictos de disponibilidad.
+
+**Historias complementarias:** US-048 — Solicitud de contacto y chat de coordinación; US-049 — Aceptación del horario propuesto.
+
+**Estado representado:** Propuesta de horario enviada.
+
+**Relación con las historias:** La conversación muestra la propuesta enviada por la especialista y las opciones de respuesta del paciente. Esta captura conserva los controles y la navegación de la vista del paciente.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m27-chat-coordinacion-solicitudes.png" alt="WF-M27. Chat de coordinación del recorrido de solicitudes: Propuesta de horario enviada" width="280">
+
+###### WF-M28. Agenda clínica
+
+**Historia principal: US-043 — Gestión de solicitudes y agenda profesional.**
+
+Como psicólogo verificado que recibió una solicitud de contacto, Quiero conversar con el paciente y proponer o rechazar horarios desde mi agenda, Para acordar una sesión sin conflictos de disponibilidad.
+
+**Historias complementarias:** US-044 — Gestión de la atención profesional.
+
+**Estado representado:** Agenda diaria con citas y espacios de atención.
+
+**Relación con las historias:** El calendario y la línea de tiempo permiten revisar las citas del día. La acción de iniciar sesión conecta la agenda con la atención profesional.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m28-agenda-clinica-solicitudes.png" alt="WF-M28. Agenda clínica: Agenda diaria con citas y espacios de atención" width="280">
+
+###### WF-M29. Listado de solicitudes
+
+**Historia principal: US-043 — Gestión de solicitudes y agenda profesional.**
+
+Como psicólogo verificado que recibió una solicitud de contacto, Quiero conversar con el paciente y proponer o rechazar horarios desde mi agenda, Para acordar una sesión sin conflictos de disponibilidad.
+
+**Estado representado:** Listado de pacientes y solicitudes.
+
+**Relación con las historias:** Reutiliza la vista de pacientes y solicitudes para revisar nuevas consultas y acceder a la coordinación de horarios.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m29-listado-solicitudes.png" alt="WF-M29. Listado de solicitudes: Listado de pacientes y solicitudes" width="280">
+
+##### Especialista: atención, cierre e ingresos
+
+###### WF-M30. Agenda clínica para iniciar la atención
+
+**Historia principal: US-044 — Gestión de la atención profesional.**
+
+Como especialista con una cita confirmada, Quiero ingresar a la videollamada y registrar el resultado operativo de la cita, Para mantener actualizado el historial de atención.
+
+**Historias complementarias:** US-043 — Gestión de solicitudes y agenda profesional.
+
+**Estado representado:** Cita próxima en la agenda.
+
+**Relación con las historias:** La especialista identifica una cita confirmada en su agenda y utiliza la acción de inicio para acceder a la atención dentro del horario permitido.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m30-agenda-clinica-atencion.png" alt="WF-M30. Agenda clínica para iniciar la atención: Cita próxima en la agenda" width="280">
+
+###### WF-M31. Sesión en curso en el recorrido de atención
+
+**Historia principal: US-044 — Gestión de la atención profesional.**
+
+Como especialista con una cita confirmada, Quiero ingresar a la videollamada y registrar el resultado operativo de la cita, Para mantener actualizado el historial de atención.
+
+**Historias complementarias:** US-038 — Acceso a la videollamada programada.
+
+**Estado representado:** Videollamada activa.
+
+**Relación con las historias:** La captura de videollamada se reutiliza en el recorrido de atención de la especialista. Representa los controles durante la sesión, aunque conserva la identidad y la navegación de la vista del paciente.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m31-sesion-en-curso-atencion.png" alt="WF-M31. Sesión en curso en el recorrido de atención: Videollamada activa" width="280">
+
+###### WF-M32. Cerrar la atención
+
+**Historia principal: US-044 — Gestión de la atención profesional.**
+
+Como especialista con una cita confirmada, Quiero ingresar a la videollamada y registrar el resultado operativo de la cita, Para mantener actualizado el historial de atención.
+
+**Estado representado:** Resultado operativo por registrar.
+
+**Relación con las historias:** La especialista registra atención completada, inasistencia o sesión no realizada. El cierre actualiza el estado de la cita y habilita la reseña cuando corresponde.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m32-cerrar-atencion.png" alt="WF-M32. Cerrar la atención: Resultado operativo por registrar" width="280">
+
+###### WF-M33. Billetera SafeVault y tarifas
+
+**Historia principal: US-047 — Consulta de pagos e ingresos profesionales.**
+
+Como psicólogo verificado, Quiero consultar el saldo disponible, los pagos de sesiones, las comisiones y los retiros pendientes, Para controlar mis ingresos antes de solicitar un retiro.
+
+**Historias complementarias:** US-036 — Publicación y edición de la ficha profesional; US-053 — Solicitud y seguimiento de retiro.
+
+**Estado representado:** Balance, movimientos y tarifas visibles.
+
+**Relación con las historias:** Reúne saldo, ingresos, retiros pendientes y movimientos profesionales. También permite editar y publicar las tarifas de la ficha y acceder a la solicitud de retiro.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m33-billetera-safevault-tarifas.png" alt="WF-M33. Billetera SafeVault y tarifas: Balance, movimientos y tarifas visibles" width="280">
+
+##### Especialista: pagos y método de retiro
+
+###### WF-M34. Pagos y métodos de retiro
+
+**Historia principal: US-047 — Consulta de pagos e ingresos profesionales.**
+
+Como psicólogo verificado, Quiero consultar el saldo disponible, los pagos de sesiones, las comisiones y los retiros pendientes, Para controlar mis ingresos antes de solicitar un retiro.
+
+**Historias complementarias:** US-052 — Registro del método de retiro.
+
+**Estado representado:** Balance e historial con métodos guardados.
+
+**Relación con las historias:** Presenta el saldo, los pagos recibidos y el acceso para añadir una cuenta o billetera. US-052 se relaciona con la gestión del método de retiro; su formulario y validaciones no aparecen en la captura.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m34-pagos-metodos-retiro.png" alt="WF-M34. Pagos y métodos de retiro: Balance e historial con métodos guardados" width="280">
+
+**Observación de trazabilidad:** la captura conserva una referencia a suscripción dentro del historial. Según US-047, los pagos del plan Premium del paciente no se incorporan al saldo retirable de la especialista.
+
+##### Paciente: calificación y gestión de reseñas
+
+###### WF-M35. Eliminar reseña
+
+**Historia principal: US-057 — Eliminar mi reseña.**
+
+Como paciente que publicó una reseña, Quiero eliminarla después de revisar una confirmación, Para retirar mi opinión de la ficha pública y conservar control sobre lo que compartí.
+
+**Estado representado:** Confirmación de eliminación.
+
+**Relación con las historias:** La autora revisa su reseña y confirma una acción irreversible. La pantalla advierte que también se retirarán los likes asociados y permite cancelar.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m35-eliminar-resena.png" alt="WF-M35. Eliminar reseña: Confirmación de eliminación" width="280">
+
+###### WF-M36. Valoraciones y listado de reseñas
+
+**Historia principal: US-002 — Búsqueda y consulta de psicólogos verificados.**
+
+Como paciente de SafeDiary, Quiero buscar y filtrar psicólogos verificados y consultar sus fichas y reseñas, Para elegir a quién solicitar contacto con información suficiente.
+
+**Historias complementarias:** US-055 — Marcar una reseña como útil; US-056 — Denunciar una reseña; US-057 — Eliminar mi reseña.
+
+**Estado representado:** Valoración agregada y reseñas publicadas.
+
+**Relación con las historias:** El paciente consulta la distribución de puntuaciones y las reseñas. Las acciones permiten marcar utilidad, denunciar reseñas ajenas o eliminar la propia.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m36-valoraciones-listado-resenas.png" alt="WF-M36. Valoraciones y listado de reseñas: Valoración agregada y reseñas publicadas" width="280">
+
+**Observación de trazabilidad:** US-055 solo permite marcar reseñas ajenas como útiles. La captura también muestra «Me gusta» junto a «Tu reseña»; ese control debe deshabilitarse u omitirse en la implementación de la reseña propia.
+
+###### WF-M37. Denunciar reseña
+
+**Historia principal: US-056 — Denunciar una reseña.**
+
+Como usuario autenticado que encuentra una reseña que podría incumplir las normas, Quiero denunciarla indicando un motivo y, opcionalmente, contexto, Para ayudar a mantener reseñas confiables y un espacio seguro.
+
+**Estado representado:** Motivo de denuncia seleccionado.
+
+**Relación con las historias:** El usuario elige un motivo y puede añadir contexto antes de enviar la denuncia para revisión. Esta vista muestra el formulario, no una confirmación de recepción.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m37-denunciar-resena.png" alt="WF-M37. Denunciar reseña: Motivo de denuncia seleccionado" width="280">
+
+###### WF-M38. Perfil profesional con acceso a valoraciones
+
+**Historia principal: US-002 — Búsqueda y consulta de psicólogos verificados.**
+
+Como paciente de SafeDiary, Quiero buscar y filtrar psicólogos verificados y consultar sus fichas y reseñas, Para elegir a quién solicitar contacto con información suficiente.
+
+**Historias complementarias:** US-048 — Solicitud de contacto y chat de coordinación.
+
+**Estado representado:** Ficha verificada con resumen de reseñas.
+
+**Relación con las historias:** La ficha muestra la valoración agregada y una reseña anónima como apoyo a la elección del profesional, además de la acción para solicitar contacto.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m38-perfil-profesional-resenas.png" alt="WF-M38. Perfil profesional con acceso a valoraciones: Ficha verificada con resumen de reseñas" width="280">
+
+###### WF-M39. Sesión completada antes de calificar
+
+**Historia principal: US-039 — Calificación del especialista.**
+
+Como usuario que completó una sesión, Quiero calificar al especialista y escribir una reseña opcional, Para compartir mi experiencia y contribuir a una puntuación de confianza transparente.
+
+**Historias complementarias:** US-044 — Gestión de la atención profesional.
+
+**Estado representado:** Sesión completada y reseña todavía pendiente.
+
+**Relación con las historias:** La pantalla confirma el fin de la atención y ofrece abrir el formulario de valoración anónima de la sesión completada.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m39-sesion-completada-calificacion.png" alt="WF-M39. Sesión completada antes de calificar: Sesión completada y reseña todavía pendiente" width="280">
+
+###### WF-M40. Calificar sesión
+
+**Historia principal: US-039 — Calificación del especialista.**
+
+Como usuario que completó una sesión, Quiero calificar al especialista y escribir una reseña opcional, Para compartir mi experiencia y contribuir a una puntuación de confianza transparente.
+
+**Estado representado:** Puntuación seleccionada y comentario opcional.
+
+**Relación con las historias:** El paciente selecciona de una a cinco estrellas y puede añadir título y comentario. La acción de envío publica una reseña asociada a la sesión completada.
+
+<img src="../assets/images/chap3/wireframes/mobile-applications/wf-m40-calificar-sesion.png" alt="WF-M40. Calificar sesión: Puntuación seleccionada y comentario opcional" width="280">
 
 #### 3.1.4.2. Mobile Applications Wireflow Diagrams
 
