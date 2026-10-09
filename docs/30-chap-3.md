@@ -402,7 +402,7 @@ También incluir las vistas auxiliares imprescindibles: detalle de psicólogo, r
 | Pantalla | Historias relacionadas | Estado cubierto | Evidencia |
 |---|---|---|---|
 | Home | [US-xxx] | [normal / vacío / offline] | [imagen] |
-| Rutinas | US-007, US-024, US-030 | [normal / recordatorio fallido] | [imagen] |
+| Rutinas | US-007, US-024, US-030 | [normal / recordatorio fallido] | ![Mis Rutinas](../assets/images/chap3/wireframes/rutines-bc/Rutines_01.png) |
 | Diario | US-008, US-010, US-011 | [normal / transcripción fallida] | [imagen] |
 | Psicólogos | US-002, US-009, US-014, US-037 | [sin resultados / horario ocupado / pago fallido] | [imagen] |
 | Citas | US-014, US-037, US-038 | [reserva vencida / pago fallido] | [imagen] |
@@ -520,10 +520,91 @@ Si necesita volver a la llamada antes de cerrar, «Volver a la sesión» la reto
 
 **Unhappy paths:** solo se puede calificar una sesión completada y publicar una reseña por cita (US-039). Las reseñas ajenas no se pueden eliminar y los intentos duplicados de marcar utilidad o denunciar se rechazan.
 
+##### Wireflow 7: Gestión de rutinas, ejercicios SOS y reflexión diaria
+
+**User Persona:** Elena (paciente).
+**User goal:** Configurar sus hábitos diarios, acceder a herramientas de contención emocional inmediata (ejercicios SOS) y documentar su estado de ánimo post-actividad.
+
+![Wireflow 7 - Gestión de rutinas y ejercicios](../assets/images/chap3/wireflows/wireflow-7.png)
+
+**Explicación del flujo:**
+
+1. Desde la pantalla principal ("Home"), Elena tiene una vista general de sus hábitos diarios, reflexiones pendientes y un acceso rápido a ejercicios de alivio inmediato (SOS). Al interactuar con la sección de hábitos, navega a «Mis Rutinas» para visualizar y gestionar (activar/desactivar notificaciones) sus actividades programadas (US-010, US-011).
+2. Desde la lista de rutinas, Elena puede presionar «Create New Routine» para abrir el formulario donde define el título de la actividad, la hora de alerta, una descripción y la frecuencia de días en la semana (US-012).
+3. A la hora programada, el sistema dispara una notificación emergente ("Time for Morning Meditation"). Elena puede posponerla o iniciarla directamente haciendo clic en «Start Routine» (US-013).
+4. Ya sea a través de una notificación o desde el acceso rápido de la pantalla principal, Elena ingresa a un ejercicio SOS (como Respiración Profunda con temporizador o un ejercicio de Grounding paso a paso). Avanza siguiendo las instrucciones en pantalla hasta finalizar (US-030, US-031).
+5. Al finalizar el ejercicio, se muestra una pantalla de éxito («Routine Completed!») que celebra su progreso y muestra su racha de días. Desde allí, puede elegir «Log How You Feel Now», lo que la dirige a la pantalla de «Reflexión Diaria» para escribir y guardar sus pensamientos sobre la actividad o su nivel de tensión (US-014, US-020).
+
+**Unhappy paths:** Si Elena intenta crear una rutina sin completar campos obligatorios (como el título o los días), el sistema no le permitirá guardarla (US-012). Si selecciona «Exit Exercise» en medio de un ejercicio SOS o una meditación, el progreso se descarta, la rutina no se marca como completada y no se suma a su racha de días (US-030). Asimismo, al llegar a la reflexión diaria, si presiona «Discard», la respuesta no se guarda y queda como pendiente (US-020).
+
 #### 3.1.4.3. Mobile Applications Mock-ups
 
 1. Home.
 2. Rutinas.
+
+Estas pantallas corresponden a las herramientas terapéuticas y preventivas que los pacientes pueden configurar y utilizar en Safe Diary, gestionadas a través del Bounded Context de Rutinas.
+
+| Pantalla | Historias relacionadas |
+|---|---|
+| Lista y gestión de Rutinas Diarias | US-010, US-011 |
+| Creación de nueva Rutina (Configuración de días y alertas) | US-012 |
+| Ejecución y Notificaciones push de Rutinas | US-013 |
+| Confirmación de Rutina Completada | US-014 |
+| Ejercicios SOS: Respiración (Deep Breathing) | US-030 |
+| Ejercicios SOS: Enraizamiento (Grounding) por pasos | US-031 |
+| Reflexión Diaria (Prompt Reflection) | US-020 |
+
+**Gestión de Rutinas Diarias:**
+
+<table style="width:100%; border:none; border-collapse:collapse; text-align:center;">
+  <tr>
+    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/rutines-bc/Rutines_01.png" alt="Lista de Rutinas y Notificaciones" width="220"><br>
+      <sub><strong>Mis Rutinas Diarias</strong></sub>
+    </td>
+    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/rutines-bc/Rutines_02.png" alt="Formulario de Creación de Rutina" width="220"><br>
+      <sub><strong>Crear Nueva Rutina</strong></sub>
+    </td>
+    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/rutines-bc/Rutines_06.png" alt="Notificación Push de Rutina" width="220"><br>
+      <sub><strong>Alerta de Rutina</strong></sub>
+    </td>
+  </tr>
+</table>
+
+**Ejercicios SOS de Emergencia:**
+
+<table style="width:100%; border:none; border-collapse:collapse; text-align:center;">
+  <tr>
+    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/rutines-bc/Rutines_03.png" alt="Ejercicio de Respiración Profunda" width="220"><br>
+      <sub><strong>Ejercicio de Respiración</strong></sub>
+    </td>
+    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/rutines-bc/Rutines_04.png" alt="Ejercicio de Grounding por Pasos" width="220"><br>
+      <sub><strong>Ejercicio de Grounding</strong></sub>
+    </td>
+    <td style="width:33.33%; border:none;"></td>
+  </tr>
+</table>
+
+**Reflexión Diaria y Seguimiento:**
+
+<table style="width:100%; border:none; border-collapse:collapse; text-align:center;">
+  <tr>
+    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/rutines-bc/Rutines_05.png" alt="Pantalla de Reflexión Diaria" width="220"><br>
+      <sub><strong>Reflexión Diaria Pendiente</strong></sub>
+    </td>
+    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
+      <img src="../assets/images/chap3/wireframes/rutines-bc/Rutines_07.png" alt="Confirmación de Actividad Completada" width="220"><br>
+      <sub><strong>Rutina / Ejercicio Completado</strong></sub>
+    </td>
+    <td style="width:33.33%; border:none;"></td>
+  </tr>
+</table>
+
 3. Diario.
 4. Psicólogos.
 5. Citas.
