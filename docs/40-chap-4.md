@@ -320,6 +320,22 @@ Los servicios del backend se documentan con OpenAPI (springdoc). La documentaci�
 | Care Scheduling | GET / POST | `/api/v1/schedule/clinicians/{clinicianId}/slots`, `/proposals`, `/proposals/{appointmentId}/acceptance` | horario propuesto | 200: horarios libres / reserva temporal | Desplegado |
 | Payments | POST / GET | `/api/v1/payments/subscriptions/checkout`, `/current`, `/cancel` | body: plan (Terra o Astrum) | 200: sesión de pago y suscripción vigente | Desplegado |
 
+**Interacción con la documentación desplegada (datos de muestra):**
+
+Las siguientes capturas muestran la ejecución de endpoints desde Swagger UI sobre el backend en Render (v0.2.1), usando datos ficticios.
+
+1. **`GET /api/v1/crisis-resources`:** sin parámetros. Responde `200` con las líneas de ayuda que la app muestra ante un riesgo alto: Línea 113 (opción 5) y SAMU 106.
+
+![GET crisis-resources en Swagger](../assets/images/chap4/swagger-crisis-resources.png)
+
+2. **`POST /api/v1/daily-routines`:** el body indica el paciente, el título de la rutina, los días de la semana y si se activan los recordatorios. Responde `201` con la rutina creada, su id y el estado de notificación `ENABLED`.
+
+![POST daily-routines en Swagger](../assets/images/chap4/swagger-daily-routines-post.png)
+
+3. **`GET /api/v1/patients/{id}`:** con el parámetro de ruta `id = 1`. Responde `200` con el perfil del paciente y su contacto de apoyo.
+
+![GET patients por id en Swagger](../assets/images/chap4/swagger-patients-get.png)
+
 #### 4.2.1.8. Software Deployment Evidence for Sprint Review
 
 La configuración de cada despliegue se describe en la sección 4.1.4. La Landing Page se publica en GitHub Pages desde `main`; el backend se despliega en Render como servicio Docker desde `main`. La versión v0.1.0 (5 de octubre) publicó AssistantAI y la versión v0.2.0 (9 de octubre) integró Profiles, Rutines, Clinician Directory, Care Scheduling y Payments, de modo que los ocho grupos de endpoints del sprint están disponibles en Swagger; la aplicación móvil se prueba como APK en emuladores y dispositivos Android apuntando al backend de Render.
