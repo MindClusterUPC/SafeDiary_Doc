@@ -287,13 +287,15 @@ En el Sprint 1 la aplicación móvil alcanzó el flujo principal del asistente D
 |---|---|---|---|
 | Inicio de Diarito con sugerencias y navegación inferior | Emulador Pixel 10 Pro, Android 17 · APK release 1.0 | Correcto | Captura 1 |
 | Conversación con Diarito: respuesta del backend en Render con acciones de copiar, editar y regenerar | Emulador Pixel 10 Pro, Android 17 · APK release 1.0 | Correcto | Captura 2 |
-| Configuración: personalidades Sol, Luma, Kai y Nara, idioma y botón de la Línea 113 | Emulador Pixel 10 Pro, Android 17 · APK release 1.0 | Correcto | Captura 3 |
+| Historial de conversaciones sincronizado con el backend, con búsqueda y opciones de renombrar y eliminar | Emulador Pixel 10 Pro, Android 17 · APK release 1.0 | Correcto | Captura 3 |
+| Configuración: personalidades Sol, Luma, Kai y Nara, idioma y botón de la Línea 113 | Emulador Pixel 10 Pro, Android 17 · APK release 1.0 | Correcto | Captura 4 |
 
 <table>
 <tr>
-<td align="center"><img src="../assets/images/chap4/app-diarito-inicio.png" width="220"><br>Captura 1. Inicio de Diarito</td>
-<td align="center"><img src="../assets/images/chap4/app-diarito-respuesta.png" width="220"><br>Captura 2. Respuesta de Diarito</td>
-<td align="center"><img src="../assets/images/chap4/app-configuracion.png" width="220"><br>Captura 3. Configuración</td>
+<td align="center"><img src="../assets/images/chap4/app-diarito-inicio.png" width="180"><br>Captura 1. Inicio de Diarito</td>
+<td align="center"><img src="../assets/images/chap4/app-diarito-respuesta.png" width="180"><br>Captura 2. Respuesta de Diarito</td>
+<td align="center"><img src="../assets/images/chap4/app-historial.png" width="180"><br>Captura 3. Historial</td>
+<td align="center"><img src="../assets/images/chap4/app-configuracion.png" width="180"><br>Captura 4. Configuración</td>
 </tr>
 </table>
 
