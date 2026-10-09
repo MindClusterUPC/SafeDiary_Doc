@@ -393,22 +393,6 @@ Tras revisar el wireframe, se realizaron los mockups para las paginas que corres
 La historia principal se reproduce con su identificador, título y descripción Como/Quiero/Para. La relación explica la parte visible en cada pantalla; una captura no acredita por sí sola todos los criterios de aceptación de la historia. Las pantallas que se repiten se conservan en el recorrido al que pertenece cada captura.
 
 
-##### Paciente: rutinas de autocuidado
-
-###### Mis rutinas diarias
-
-**Historia principal: US-007 — Gestión de rutinas de autocuidado.**
-
-Como usuario de SafeDiary, Quiero crear actividades para mis rutinas diarias, Para organizar hábitos de calma y autocuidado durante el día.
-
-**Historias complementarias:** US-024 — Recordatorios de registro emocional; US-030 — Ejercicios rápidos de regulación.
-
-**Estado representado:** Lista de actividades con horarios, frecuencia y recordatorios activados o desactivados.
-
-**Relación con las historias:** La lista permite consultar las actividades y acceder a la creación de una rutina (US-007). Los horarios y controles de notificación apoyan la gestión de recordatorios (US-024). La ejecución de ejercicios de regulación (US-030) se desarrolla en el Wireflow 7; esta pantalla muestra las actividades programadas.
-
-<img src="../assets/images/chap3/wireframes/rutines-bc/Rutines_01.png" alt="Mis rutinas diarias: lista de actividades, horarios y recordatorios" width="280">
-
 ##### Paciente: inicio, reflexión y Diarito
 
 ###### WF-M01. Inicio y registro emocional
