@@ -334,6 +334,21 @@ La configuración de cada despliegue se describe en la sección 4.1.4. La Landin
 
 #### 4.2.1.9. Team Collaboration Insights during Sprint
 
-Explicar cómo se distribuyó el trabajo y adjuntar capturas de commits, tablero, pull requests y revisiones. Los datos deben coincidir con el Registro de Versiones del Informe y el Participant Performance Report.
+Durante el desarrollo del Sprint 1, el equipo implementó una dinámica de trabajo colaborativa, transparente y continua a través de los repositorios que conforman la solución en la organización de GitHub. La asignación y avance de actividades se gestionó de forma sincronizada mediante el tablero del sprint, manteniendo una correspondencia directa entre los ítems priorizados y los incrementos de software desarrollados para la Landing Page, la aplicación móvil y la plataforma de servicios backend.
+
+Para asegurar la calidad y estabilidad de la base de código, se adoptó el flujo de trabajo GitFlow, organizando el desarrollo en ramas por funcionalidad (*feature branches*). Cada componente o bounded context fue abordado de forma modular, permitiendo el avance simultáneo de los diferentes módulos del sistema sin generar bloqueos mutuos. La integración hacia las ramas compartidas se realizó mediante *Pull Requests* y revisiones entre pares (*code reviews*), verificando la consistencia arquitectural, el cumplimiento de pruebas automatizadas y el seguimiento de estándares de codificación y *Conventional Commits*.
+
+##### Resumen de Actividad y Flujo de Integración (Pulse)
+
+El seguimiento de actividad refleja un ciclo de desarrollo activo y coordinado a lo largo del periodo del sprint. La gestión de ramas y solicitudes de extracción permitió incorporar los cambios validados de manera progresiva, asegurando que las entregas funcionales y configuraciones de despliegue se consolidaran de forma continua y ordenada.
+
+![Resumen de actividad y commits durante el Sprint](../assets/images/insights/committers.png)
+
+##### Distribución de Contribuciones en el Repositorio (Contributions)
+
+Las métricas de contribución evidencian una participación distribuida y complementaria a lo largo del sprint, con aportes continuos enfocados en la implementación de nuevas funcionalidades, la refactorización arquitectural y la estabilización de los componentes previo al cierre del ciclo. Las curvas de adición y ajuste de código reflejan el esfuerzo conjunto en la construcción de los servicios de backend, las interfaces de usuario y la documentación técnica, garantizando una propiedad colectiva del código y el cumplimiento integral de los objetivos del sprint.
+
+![Distribución de contribuciones durante el Sprint](../assets/images/insights/contributions.png)
+
 
 ---

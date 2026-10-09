@@ -117,6 +117,7 @@ Proyecto
 | 0.1.10 | 09/10/2026 | Juan Wang | Añadir User Flow Diagrams, reglas de seguridad del flujo y sección de Prototyping |
 | 0.1.11 | 09/10/2026 | Juan Wang | Actualizar Registro de Versiones y Project Report Collaboration Insights del TB1 |
 | 0.1.12 | 09/10/2026 | Juan Wang | Añadir Sprint Backlog 1, evidencias de desarrollo, pruebas, servicios y despliegue (backend v0.2.0 en Render), anexos y video del prototipo del paciente |
+| 0.1.13 | 09/10/2026 | Marcelo Cuadros | Insights del Proyecto |
 
 # Project Report Collaboration Insights
 
