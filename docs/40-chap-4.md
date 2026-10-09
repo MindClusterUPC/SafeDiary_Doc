@@ -159,18 +159,19 @@ El proceso de despliegue asegura que cada pieza del sistema esté disponible en 
 - **Características:** Certificados SSL/TLS gestionados automáticamente, compresión gzip/brotli y distribución a través de CDN global.
 
 #### 2. Despliegue del Backend RESTful API (`safediary-platform`)
-- **Plataforma Cloud:** Render Cloud Platform / Railway PaaS.
-- **Base de Datos:** Instancia gestionada de PostgreSQL 15 en la nube con pooling de conexiones HikariCP y soporte SSL.
+- **Plataforma Cloud:** Render (servicio web Docker definido en `render.yaml`, despliegue automático desde `main`).
+- **Base de Datos:** PostgreSQL externo (filess.io) con pool de conexiones HikariCP; perfil `prod` de Spring.
 - **Estrategia de Ejecución:**
-  - Empaquetado en artefacto ejecutable `.jar` mediante Maven (`mvn clean package -DskipTests`).
-  - El contenedor en la nube arranca el servicio mediante `java -jar app.jar` asignando dinámicamente el puerto expuesto por la variable `PORT`.
+  - Imagen Docker construida con el `Dockerfile` del repositorio (build Maven `package -DskipTests` y ejecución del `.jar`).
+  - El servicio lee el puerto de la variable `PORT` y verifica su salud con `/v3/api-docs`.
   - Gestión segura de credenciales sensibles (cadenas de conexión JDBC, usuario y contraseña de base de datos) a través de variables de entorno seguras en el panel cloud.
-- **Documentación Interactiva Pública:** Interfaz Swagger UI activa en `/swagger-ui/index.html` para pruebas de endpoints por parte del equipo móvil y evaluadores.
+- **Documentación Interactiva Pública:** [Swagger UI](https://safediary-platform.onrender.com/swagger-ui/index.html) para pruebas de endpoints por parte del equipo móvil y evaluadores.
 
 #### 3. Despliegue de la Aplicación Móvil (`safediary-mobile`)
-- **Empaquetado Release:** Compilación de binarios APK optimizados para arquitectura ARM64 (`flutter build apk --release --split-per-abi`).
-- **Canal de Distribución:** Publicación del instalable APK en la sección **Releases** del repositorio oficial de GitHub de SafeDiary y distribución complementaria mediante Firebase App Distribution.
-- **Integración con Backend:** Configuración del cliente HTTP móvil (`dio` / `http`) apuntando de forma segura mediante HTTPS al dominio público del backend desplegado en Render.
+- **Tecnología:** aplicación nativa Android en Kotlin con Jetpack Compose (minSdk 24, targetSdk 37).
+- **Empaquetado Release:** APK firmado generado con Gradle (`./gradlew assembleRelease`); la firma se lee de un archivo local fuera del repositorio.
+- **Canal de Distribución:** instalación del APK en dispositivos y emuladores Android del equipo para las pruebas del sprint.
+- **Integración con Backend:** la URL base se define por tipo de build en `BuildConfig.API_BASE_URL`: el build debug apunta al backend local y el release al backend desplegado en Render por HTTPS.
 
 ## 4.2. Landing Page & Mobile Application Implementation
 
@@ -225,13 +226,31 @@ El Sprint Backlog 1 se gestiona en Trello. Contiene las 12 historias de priorida
 
 #### 4.2.1.4. Development Evidence for Sprint Review
 
-Describir los incrementos logrados en Landing Page, aplicación móvil y servicios.
+Durante el Sprint 1 se implementaron incrementos en los tres repositorios de código. Los cambios se integran en `develop` mediante ramas `feature/*` (GitFlow) y los mensajes siguen Conventional Commits. La tabla resume los commits más representativos.
 
 | Repositorio | Rama | Commit | Mensaje | Fecha | Relación con User Story |
 |---|---|---|---|---|---|
-| [owner/repo] | [feature/...] | [sha] | [conventional commit] | [YYYY-MM-DD] | [US-xxx] |
+| SafeDiary_Landing_Page | feature | [`7a1779f`](https://github.com/MindClusterUPC/SafeDiary_Landing_Page/commit/7a1779f) | feat(pages): add accessible landing page and terms & conditions views | 2026-10-04 | US-017, US-018 |
+| SafeDiary_Landing_Page | feature | [`fdd6311`](https://github.com/MindClusterUPC/SafeDiary_Landing_Page/commit/fdd6311) | feat(i18n-js): add reactive i18n engine and interactive UI modules | 2026-10-04 | US-017, US-018 |
+| SafeDiary_Landing_Page | feature/pricing | [`3eeb6f7`](https://github.com/MindClusterUPC/SafeDiary_Landing_Page/commit/3eeb6f7) | feat: add pricing plans section | 2026-10-07 | US-020 |
+| SafeDiary_Landing_Page | main | [`a5cdb7e`](https://github.com/MindClusterUPC/SafeDiary_Landing_Page/commit/a5cdb7e) | feat: refresh landing and interactive screen carousel | 2026-10-08 | US-018, US-019 |
+| safediary-platform | feature | [`24b01e5`](https://github.com/MindClusterUPC/safediary-platform/commit/24b01e5) | feat(assistantai): support regenerating the last assistant reply | 2026-10-04 | US-011 |
+| safediary-platform | feature | [`1c89084`](https://github.com/MindClusterUPC/safediary-platform/commit/1c89084) | build: add dockerfile and render blueprint for deployment | 2026-10-04 | Despliegue |
+| safediary-platform | feature/Profile | [`0e63f5f`](https://github.com/MindClusterUPC/safediary-platform/commit/0e63f5f) | Merge branch 'feature/Profile' into develop | 2026-10-08 | US-006 |
+| safediary-platform | feature/clinician-directory | [`df1a0d8`](https://github.com/MindClusterUPC/safediary-platform/commit/df1a0d8) | feat(cliniciandirectory): expose rest endpoints and development iam integration | 2026-10-09 | Directorio de psicólogos |
+| safediary-platform | feature/rutines | [`b8789ae`](https://github.com/MindClusterUPC/safediary-platform/commit/b8789ae) | Rutines interface layer implementation | 2026-10-09 | Rutinas |
+| safediary-platform | feature/payments | [`31337c1`](https://github.com/MindClusterUPC/safediary-platform/commit/31337c1) | feat(payments): expose REST controllers, ACL facade, and add automated tests | 2026-10-09 | US-020 (planes) |
+| safediary-platform | feature/care-scheduling | [`0f6fe75`](https://github.com/MindClusterUPC/safediary-platform/commit/0f6fe75) | feat(care-scheduling): expose REST controllers and development payment simulation | 2026-10-09 | Citas |
+| SafeDiary-Android | feature | [`8ea54d4`](https://github.com/MindClusterUPC/SafeDiary-Android/commit/8ea54d4) | feat(assistantai): persist personality and include in prompt request | 2026-10-04 | US-011 |
+| SafeDiary-Android | feature | [`5d03796`](https://github.com/MindClusterUPC/SafeDiary-Android/commit/5d03796) | feat(assistantai): show crisis support card with local hotlines in the chat | 2026-10-04 | US-011 |
+| SafeDiary-Android | feature | [`800ef71`](https://github.com/MindClusterUPC/SafeDiary-Android/commit/800ef71) | feat: match chat, drawer and navigation to the design | 2026-10-06 | US-011 |
+| SafeDiary-Android | feature | [`13f92e6`](https://github.com/MindClusterUPC/SafeDiary-Android/commit/13f92e6) | feat: add offline cache and swipe navigation | 2026-10-06 | US-011 |
 
-**Capturas:** [insertar capturas de implementación y explicar qué se evidencia].
+**Incrementos logrados:**
+
+- **Landing Page:** hero, funcionalidades, carrusel de pantallas de la app, testimonios, planes (Básico, Terra y Astrum), preguntas frecuentes, equipo y Términos y Condiciones, en español e inglés.
+- **Backend:** AssistantAI (chat con Diarito, historial, edición y regeneración de mensajes, evaluación de riesgo y recursos de crisis) desplegado en Render; en `develop` se integraron Profiles, Rutines, Clinician Directory, Care Scheduling y Payments.
+- **Aplicación móvil:** chat con Diarito conectado al backend, personalidades, historial lateral, tarjeta de crisis con la Línea 113, caché offline y navegación por deslizamiento.
 
 #### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
@@ -253,19 +272,34 @@ Describir los incrementos logrados en Landing Page, aplicación móvil y servici
 
 #### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
-| Servicio / Endpoint | Método | Ruta | Parámetros | Response esperado | Documentación |
+Los servicios del backend se documentan con OpenAPI (springdoc). La documentación interactiva está publicada en [Swagger UI](https://safediary-platform.onrender.com/swagger-ui/index.html) y cada bounded context describe sus endpoints en la carpeta `docs/` del repositorio [safediary-platform](https://github.com/MindClusterUPC/safediary-platform).
+
+| Servicio | Método | Ruta | Parámetros | Response esperado | Estado |
 |---|---|---|---|---|---|
-| [servicio] | GET/POST/... | `/api/v1/...` | [detalle] | [ejemplo JSON] | [Swagger / URL] |
+| Assistant Chat | POST | `/api/v1/assistant/chat` | body: mensaje, `conversationId` opcional, idioma y personalidad | 200: respuesta de Diarito, nivel de riesgo y recursos de crisis | Desplegado |
+| Assistant Chat | GET | `/api/v1/assistant/conversations` | — | 200: conversaciones de la cuenta, más recientes primero | Desplegado |
+| Assistant Chat | GET / PATCH / DELETE | `/api/v1/assistant/conversations/{conversationId}` | path: `conversationId`; body PATCH: título | 200: conversación con mensajes / renombrada / eliminada | Desplegado |
+| Assistant Chat | PUT | `/api/v1/assistant/conversations/{conversationId}/messages/{messageId}` | body: nuevo contenido | 200: mensaje editado y diálogo regenerado | Desplegado |
+| Assistant Chat | POST | `/api/v1/assistant/conversations/{conversationId}/regenerate` | path: `conversationId` | 200: nueva respuesta de Diarito | Desplegado |
+| Conversation Sessions | POST / GET | `/api/v1/conversation-sessions`, `/active`, `/{sessionId}` | cuenta y `sessionId` | 200: sesión de conversación | Desplegado |
+| Crisis Alerts | GET | `/api/v1/crisis-resources` | — | 200: líneas de ayuda (Línea 113, SAMU 106) | Desplegado |
+| Clinical Summaries | POST / GET | `/api/v1/clinical-summaries` | cuenta y semana | 200: resumen emocional semanal | Desplegado |
+| Profiles | POST / GET | `/api/v1/patients`, `/api/v1/patients/{id}` | body: datos del paciente | 201 / 200: perfil del paciente | En `develop` |
+| Profiles | PUT | `/api/v1/patients/{id}/emergency-contact` | body: contacto de apoyo | 200: contacto actualizado | En `develop` |
+| Rutines | POST / GET / PUT / PATCH | `/api/v1/daily-routines`, `/patient/{patientId}`, `/{id}/toggle-active` | body: rutina y recordatorio | 201 / 200: rutina | En `develop` |
+| Clinician Directory | GET | `/api/v1/clinicians/{id}`, `/{id}/reviews`, `/{id}/rating` | path: `id` | 200: ficha, reseñas y calificación | En `develop` |
+| Care Scheduling | GET / POST | `/api/v1/schedule/clinicians/{clinicianId}/slots`, `/proposals`, `/proposals/{appointmentId}/acceptance` | horario propuesto | 200: horarios libres / reserva temporal | En `develop` |
+| Payments | POST / GET | `/api/v1/payments/subscriptions/checkout`, `/current`, `/cancel` | body: plan (Terra o Astrum) | 200: sesión de pago y suscripción vigente | En `develop` |
 
 #### 4.2.1.8. Software Deployment Evidence for Sprint Review
 
-Describir configuración y evidencias del despliegue del Landing Page, backend al 70 % y los entornos de prueba móvil.
+La configuración de cada despliegue se describe en la sección 4.1.4. La Landing Page se publica en GitHub Pages desde `main`; el backend se despliega en Render como servicio Docker desde `main` (versión v0.1.0, con AssistantAI); la aplicación móvil se prueba como APK en emuladores y dispositivos Android apuntando al backend de Render.
 
 | Producto | Plataforma | URL / versión | Fecha | Evidencia |
 |---|---|---|---|---|
-| Landing Page | Github Pages | [https://mindclusterupc.github.io/SafeDiary_Landing_Page/](https://mindclusterupc.github.io/SafeDiary_Landing_Page/index.html) | [2026-10-1] | ![Landing-Page](../assets/images/chap4/evidence-landing.png) |
-| Backend | [Render / otra] | [URL Swagger] | [fecha] | [captura] |
-| Mobile | [emulador / dispositivo] | [versión] | [fecha] | [video] |
+| Landing Page | GitHub Pages | [https://mindclusterupc.github.io/SafeDiary_Landing_Page/](https://mindclusterupc.github.io/SafeDiary_Landing_Page/index.html) | 2026-10-08 | ![Landing-Page](../assets/images/chap4/evidence-landing.png) |
+| Backend | Render (Docker) | [Swagger UI](https://safediary-platform.onrender.com/swagger-ui/index.html) · v0.1.0 | 2026-10-05 | Servicio activo; `/v3/api-docs` responde 200 |
+| Mobile | Emulador y dispositivo Android | APK release 1.0 | 2026-10-06 | Build firmado apuntando a Render |
 
 #### 4.2.1.9. Team Collaboration Insights during Sprint
 

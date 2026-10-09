@@ -154,8 +154,8 @@ Durante el TP1 el trabajo se distribuyó en cuatro repositorios de la organizaci
 | :--- | :--- |
 | **Cuadros Villanueva, Marcelo Fabio** | Wireframes por bounded context, mockups de Landing Page y Términos y Condiciones, orden de los Mock-ups móviles; desarrollo de la Landing Page y del bounded context Profiles en el backend. |
 | **Diaz Martinez, Alexther Kamil** | Actualización de EventStorming, Candidate Context Discovery, Bounded Context Canvases y diagramas C4; historias de reseñas y moderación; Style Guidelines, Information Architecture y wireflow de reseñas; rediseño de la Landing Page. |
-| **Torres Lavandera, Andres Rodrigo** | [completar] |
-| **Vargas Alarcon, Santiago Enrique** | [completar] |
+| **Torres Lavandera, Andres Rodrigo** | Desarrollo del bounded context Care Scheduling en el backend: modelo de dominio de solicitudes, citas y sesiones, servicios CQRS, persistencia JPA, adaptadores ACL con Clinician Directory y Payments, controladores REST, pruebas de dominio e integración y documentación de endpoints. |
+| **Vargas Alarcon, Santiago Enrique** | Desarrollo del bounded context Rutines en el backend: capas de dominio, aplicación, infraestructura e interfaces REST, con sus pruebas. |
 | **Wang Chen, Juan Sung Jau** | Software Configuration Management (4.1), diseño táctico de AssistantAI, planes Terra y Astrum, Wireflows, User Flow Diagrams y Prototyping; desarrollo de la aplicación móvil (Diarito, caché offline, navegación) y del backend AssistantAI desplegado en Render; sección de planes de la Landing Page. |
 
 ---
