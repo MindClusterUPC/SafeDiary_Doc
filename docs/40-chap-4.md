@@ -251,7 +251,7 @@ Durante el Sprint 1 se implementaron incrementos en los tres repositorios de có
 **Incrementos logrados:**
 
 - **Landing Page:** hero, funcionalidades, carrusel de pantallas de la app, testimonios, planes (Básico, Terra y Astrum), preguntas frecuentes, equipo y Términos y Condiciones, en español e inglés.
-- **Backend:** AssistantAI (chat con Diarito, historial, edición y regeneración de mensajes, evaluación de riesgo y recursos de crisis) desplegado en Render; en `develop` se integraron Profiles, Rutines, Clinician Directory, Care Scheduling y Payments.
+- **Backend:** AssistantAI (chat con Diarito, historial, edición y regeneración de mensajes, evaluación de riesgo y recursos de crisis), Profiles, Rutines, Clinician Directory, Care Scheduling y Payments, desplegados en Render con la versión v0.2.0.
 - **Aplicación móvil:** chat con Diarito conectado al backend, personalidades, historial lateral, tarjeta de crisis con la Línea 113, caché offline y navegación por deslizamiento.
 
 #### 4.2.1.5. Testing Suite Evidence for Sprint Review
@@ -301,21 +301,21 @@ Los servicios del backend se documentan con OpenAPI (springdoc). La documentaci�
 | Conversation Sessions | POST / GET | `/api/v1/conversation-sessions`, `/active`, `/{sessionId}` | cuenta y `sessionId` | 200: sesión de conversación | Desplegado |
 | Crisis Alerts | GET | `/api/v1/crisis-resources` | — | 200: líneas de ayuda (Línea 113, SAMU 106) | Desplegado |
 | Clinical Summaries | POST / GET | `/api/v1/clinical-summaries` | cuenta y semana | 200: resumen emocional semanal | Desplegado |
-| Profiles | POST / GET | `/api/v1/patients`, `/api/v1/patients/{id}` | body: datos del paciente | 201 / 200: perfil del paciente | En `develop` |
-| Profiles | PUT | `/api/v1/patients/{id}/emergency-contact` | body: contacto de apoyo | 200: contacto actualizado | En `develop` |
-| Rutines | POST / GET / PUT / PATCH | `/api/v1/daily-routines`, `/patient/{patientId}`, `/{id}/toggle-active` | body: rutina y recordatorio | 201 / 200: rutina | En `develop` |
-| Clinician Directory | GET | `/api/v1/clinicians/{id}`, `/{id}/reviews`, `/{id}/rating` | path: `id` | 200: ficha, reseñas y calificación | En `develop` |
-| Care Scheduling | GET / POST | `/api/v1/schedule/clinicians/{clinicianId}/slots`, `/proposals`, `/proposals/{appointmentId}/acceptance` | horario propuesto | 200: horarios libres / reserva temporal | En `develop` |
-| Payments | POST / GET | `/api/v1/payments/subscriptions/checkout`, `/current`, `/cancel` | body: plan (Terra o Astrum) | 200: sesión de pago y suscripción vigente | En `develop` |
+| Profiles | POST / GET | `/api/v1/patients`, `/api/v1/patients/{id}` | body: datos del paciente | 201 / 200: perfil del paciente | Desplegado |
+| Profiles | PUT | `/api/v1/patients/{id}/emergency-contact` | body: contacto de apoyo | 200: contacto actualizado | Desplegado |
+| Rutines | POST / GET / PUT / PATCH | `/api/v1/daily-routines`, `/patient/{patientId}`, `/{id}/toggle-active` | body: rutina y recordatorio | 201 / 200: rutina | Desplegado |
+| Clinician Directory | GET | `/api/v1/clinicians/{id}`, `/{id}/reviews`, `/{id}/rating` | path: `id` | 200: ficha, reseñas y calificación | Desplegado |
+| Care Scheduling | GET / POST | `/api/v1/schedule/clinicians/{clinicianId}/slots`, `/proposals`, `/proposals/{appointmentId}/acceptance` | horario propuesto | 200: horarios libres / reserva temporal | Desplegado |
+| Payments | POST / GET | `/api/v1/payments/subscriptions/checkout`, `/current`, `/cancel` | body: plan (Terra o Astrum) | 200: sesión de pago y suscripción vigente | Desplegado |
 
 #### 4.2.1.8. Software Deployment Evidence for Sprint Review
 
-La configuración de cada despliegue se describe en la sección 4.1.4. La Landing Page se publica en GitHub Pages desde `main`; el backend se despliega en Render como servicio Docker desde `main` (versión v0.1.0, con AssistantAI); la aplicación móvil se prueba como APK en emuladores y dispositivos Android apuntando al backend de Render.
+La configuración de cada despliegue se describe en la sección 4.1.4. La Landing Page se publica en GitHub Pages desde `main`; el backend se despliega en Render como servicio Docker desde `main`. La versión v0.1.0 (5 de octubre) publicó AssistantAI y la versión v0.2.0 (9 de octubre) integró Profiles, Rutines, Clinician Directory, Care Scheduling y Payments, de modo que los ocho grupos de endpoints del sprint están disponibles en Swagger; la aplicación móvil se prueba como APK en emuladores y dispositivos Android apuntando al backend de Render.
 
 | Producto | Plataforma | URL / versión | Fecha | Evidencia |
 |---|---|---|---|---|
 | Landing Page | GitHub Pages | [https://mindclusterupc.github.io/SafeDiary_Landing_Page/](https://mindclusterupc.github.io/SafeDiary_Landing_Page/index.html) | 2026-10-08 | ![Landing-Page](../assets/images/chap4/evidence-landing.png) |
-| Backend | Render (Docker) | [Swagger UI](https://safediary-platform.onrender.com/swagger-ui/index.html) · v0.1.0 | 2026-10-05 | Servicio activo; `/v3/api-docs` responde 200 |
+| Backend | Render (Docker) | [Swagger UI](https://safediary-platform.onrender.com/swagger-ui/index.html) · v0.2.0 | 2026-10-09 | ![Swagger del backend en Render](../assets/images/chap4/evidence-backend-swagger.png) |
 | Mobile | Emulador y dispositivo Android | APK release 1.0 | 2026-10-06 | Build firmado apuntando a Render |
 
 #### 4.2.1.9. Team Collaboration Insights during Sprint
