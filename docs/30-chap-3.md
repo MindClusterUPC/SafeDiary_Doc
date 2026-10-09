@@ -633,29 +633,195 @@ Estas pantallas refieren al procesamiento de pagos dentro de la plataforma, lo c
 
 #### 3.1.4.4. Mobile Applications User Flow Diagrams
 
+Los User Flow Diagrams describen la secuencia de decisiones y estados de cada User goal definido en los Wireflows (3.1.4.2), incluyendo el happy path y los unhappy paths. La notación es la siguiente:
+
+- **Rectángulos:** pantallas o acciones.
+- **Rombos:** decisiones del usuario o del sistema.
+- **Nodos rojos:** finales o desvíos por error.
+- **Nodos verdes:** cumplimiento del objetivo.
+
+##### User Flow 1: Registro emocional → reflexión → guardado (María)
+
 ```mermaid
 flowchart TD
-    A[Paciente abre SafeDiary] --> B{¿Qué necesita?}
-    B -->|Registrar| C[Diario]
-    B -->|Regular| D[Rutinas]
-    B -->|Buscar atención| E[Psicólogos]
-    B -->|Revisar cita| F[Citas]
-    E --> G[Perfil verificado]
-    G --> H[Horario disponible]
-    H --> I[Consentimiento opcional]
-    I --> J[Pago]
-    J --> K[Reserva confirmada]
-    K --> L[Videollamada]
+    A([Abre SafeDiary]) --> B[Home]
+    B --> C[Registra su ánimo con un toque]
+    C --> D[Write in My Diary]
+    D --> E{¿Texto válido?}
+    E -->|No: entrada vacía| D
+    E -->|Sí| F[Guarda la entrada y aumenta la racha]
+    F --> G[Abre Diarito]
+    G --> H[Escribe o elige una sugerencia]
+    H --> I{¿Hay conexión?}
+    I -->|No| J[Mensaje guardado como pendiente]:::bad
+    J -->|Vuelve la conexión| K
+    I -->|Sí| K{¿Riesgo alto o crítico?}
+    K -->|Sí| L[Respuesta de contención y Línea 113]:::bad
+    K -->|No| M[Diarito responde con una reflexión]
+    M --> N{¿Quiere corregir su mensaje?}
+    N -->|Sí| O[Edita el mensaje y Diarito vuelve a responder] --> M
+    N -->|No| P([Conversación guardada en el historial]):::ok
+    classDef ok fill:#d1fae5,stroke:#047857;
+    classDef bad fill:#fee2e2,stroke:#b91c1c;
 ```
 
-**Reglas de seguridad del flujo:** [describir consentimiento, revocación, acceso mínimo y qué ocurre si falla el pago o la conexión].
+##### User Flow 2: Búsqueda de psicólogo → reserva → consentimiento → pago (María)
+
+```mermaid
+flowchart TD
+    A([Abre Psychologist]) --> B[Directorio filtrado por especialidad]
+    B --> C[Ficha profesional verificada]
+    C --> D[Solicitar contacto]
+    D --> E[Chat de coordinación]
+    E --> F{¿Acepta el horario propuesto?}
+    F -->|No| E
+    F -->|Sí| G[Reserva temporal por 60 min]
+    G --> H{¿Paga antes del vencimiento?}
+    H -->|Cancela| I[Horario liberado]:::bad
+    H -->|Vence la reserva| I
+    H -->|Sí| J[Pago de la sesión]
+    J --> K{¿Pago aprobado?}
+    K -->|No| L[Pago no completado]:::bad
+    L -->|Reintenta| J
+    L -->|Vuelve a Mis citas| M[Mis citas]
+    K -->|Sí| N[Cita confirmada]
+    N --> O{¿Comparte contexto de su diario?}
+    O -->|Sí, con consentimiento explícito| P([Cita confirmada con contexto compartido]):::ok
+    O -->|No| Q([Cita confirmada sin compartir datos]):::ok
+    classDef ok fill:#d1fae5,stroke:#047857;
+    classDef bad fill:#fee2e2,stroke:#b91c1c;
+```
+
+##### User Flow 3: Reserva temporal → pago → acceso a la sesión (María)
+
+```mermaid
+flowchart TD
+    A([Abre Scheduling]) --> B[Mis citas]
+    B --> C{¿La cita está confirmada?}
+    C -->|No: reserva sin pagar| D[Pago de la sesión] --> C
+    C -->|Sí| E{¿Está dentro de la ventana de acceso?}
+    E -->|No| F[Acceso bloqueado: reintentar o escribir a la especialista]:::bad
+    E -->|Sí| G[Sala de espera: prueba de cámara y audio]
+    G --> H{¿Conexión estable?}
+    H -->|No| F
+    H -->|Sí| I[Sesión en videollamada privada]
+    I --> J[La especialista cierra la atención]
+    J --> K([Sesión completada y opción de calificar]):::ok
+    classDef ok fill:#d1fae5,stroke:#047857;
+    classDef bad fill:#fee2e2,stroke:#b91c1c;
+```
+
+##### User Flow 4: Solicitud de paciente → propuesta de horario → cita agendada (Dra. Laura)
+
+```mermaid
+flowchart TD
+    A([Abre Patients]) --> B[Nueva solicitud con motivo y preferencia horaria]
+    B --> C{¿Corresponde a su especialidad?}
+    C -->|No| D[Rechaza; el paciente es notificado]:::bad
+    C -->|Sí| E[Proponer horario libre de su agenda]
+    E --> F[Chat de coordinación]
+    F --> G{¿El paciente acepta?}
+    G -->|No| E
+    G -->|Sí| H{¿Pago aprobado dentro de la reserva?}
+    H -->|No| I[El horario se libera]:::bad
+    H -->|Sí| J([Cita confirmada en la Agenda clínica]):::ok
+    classDef ok fill:#d1fae5,stroke:#047857;
+    classDef bad fill:#fee2e2,stroke:#b91c1c;
+```
+
+##### User Flow 5: Atención de la sesión → cierre → ingreso registrado (Dra. Laura)
+
+```mermaid
+flowchart TD
+    A([Abre Schedule]) --> B[Agenda clínica]
+    B --> C[Start Encrypted Session]
+    C --> D{¿El paciente se conectó?}
+    D -->|No| E[Registra inasistencia al cerrar la atención]:::bad
+    D -->|Sí| F[Sesión en videollamada privada]
+    F --> G[Cerrar la atención]
+    G --> H{¿Confirma el cierre?}
+    H -->|Volver a la sesión| F
+    H -->|Sí| I[Resultado registrado y reseña habilitada]
+    E --> J
+    I --> J[Billetera: ingreso menos comisión]
+    J --> K{¿Retira su saldo?}
+    K -->|Sí| L([Solicitud de retiro a su cuenta]):::ok
+    K -->|No| M([Ingreso visible en su historial]):::ok
+    classDef ok fill:#d1fae5,stroke:#047857;
+    classDef bad fill:#fee2e2,stroke:#b91c1c;
+```
+
+##### User Flow 6: Calificación de la sesión y gestión de reseñas (María)
+
+```mermaid
+flowchart TD
+    A([Sesión completada]) --> B{¿Ya calificó esta cita?}
+    B -->|Sí| C[Calificación no disponible: una reseña por cita]:::bad
+    B -->|No| D[Califica de 1 a 5 estrellas y comenta]
+    D --> E[Reseña anónima publicada; se recalcula el promedio]
+    E --> F{¿Qué hace después?}
+    F -->|Marca una reseña ajena como útil| G{¿Ya la había marcado?}
+    G -->|Sí| H[Acción duplicada rechazada]:::bad
+    G -->|No| I([Contador de utilidad actualizado]):::ok
+    F -->|Denuncia una reseña| J([Denuncia pendiente de moderación]):::ok
+    F -->|Retira su propia reseña| K([Reseña retirada y agregados recalculados]):::ok
+    classDef ok fill:#d1fae5,stroke:#047857;
+    classDef bad fill:#fee2e2,stroke:#b91c1c;
+```
+
+**Reglas de seguridad del flujo:**
+
+- **Consentimiento:** compartir el contexto del diario con una especialista es opcional y explícito. Se elige en la cita confirmada y lo valida IAM. Sin consentimiento vigente, la especialista no accede a ninguna entrada.
+- **Revocación:** el paciente puede revocar el consentimiento en cualquier momento desde su perfil. A partir de ese momento las lecturas se bloquean y las proyecciones locales no conservan copias.
+- **Acceso mínimo:**
+  - La especialista solo ve las entradas autorizadas y el resumen semanal permitido, nunca las conversaciones con Diarito.
+  - Las entradas de la bóveda privada nunca se comparten.
+- **Falla del pago:** el horario sigue retenido mientras la reserva temporal esté vigente. La cita no se confirma sin un pago aprobado; si la reserva vence o el paciente cancela, el horario se libera y no se generan cobros duplicados.
+- **Falla de conexión:**
+  - Los mensajes a Diarito se guardan como pendientes y se envían al volver la conexión.
+  - La videollamada solo se habilita dentro de la ventana de acceso; si la conexión falla, se ofrece reintentar o contactar a la especialista.
+- **Riesgo:** ante un riesgo alto o crítico, Diarito no genera una respuesta libre y muestra recursos de ayuda inmediata (Línea 113, opción 5, y SAMU 106).
 
 #### 3.1.4.5. Mobile Applications Prototyping
 
-**Enlace al prototipo:** [URL pública de Figma].
+El prototipo interactivo se elaboró en Figma con las mismas pantallas de los Wireframes y Wireflows. Se presenta en un marco de dispositivo Android compacto y está organizado en dos flujos navegables, uno por cada User Persona.
 
-**Alcance interactivo:** [pantallas navegables y limitaciones conocidas].
+| Flujo | Página en Figma | Punto de inicio | Enlace |
+|---|---|---|---|
+| SafeDiary · paciente | Prototipo Cliente | Inicio de sesión | [Abrir prototipo del paciente](https://www.figma.com/proto/MLDzy0eLPVfy9dQKYsYkKw/safeDiary?node-id=214-4&starting-point-node-id=214%3A4&scaling=scale-down) |
+| SafeDiary · psicólogo | Prototipo Psico | Inicio de sesión | [Abrir prototipo del psicólogo](https://www.figma.com/proto/MLDzy0eLPVfy9dQKYsYkKw/safeDiary?node-id=237-3&starting-point-node-id=237%3A3&scaling=scale-down) |
 
-**Prueba rápida:** [participantes, tareas, hallazgos y cambios realizados].
+**Prototipo del paciente:**
 
-**Criterios de entrega:** el prototipo debe permitir demostrar el flujo principal del Sprint 1 y mantener consistencia con las historias y el Product Backlog.
+![Prototipo del paciente ejecutándose en Figma](../assets/images/chap3/prototype/prototipo-paciente.jpg)
+
+**Prototipo del psicólogo:**
+
+![Prototipo del psicólogo ejecutándose en Figma](../assets/images/chap3/prototype/prototipo-psicologo.jpg)
+
+**Alcance interactivo:**
+
+- **Paciente:**
+  - **Acceso:** inicio de sesión, registro y recuperación de contraseña.
+  - **Barra inferior:** navegación entre Diarito, Rutines, Home, Psychologist y Scheduling.
+  - **Diarito:** historial lateral, edición de mensajes y configuración de las personalidades.
+  - **Home:** registro del diario.
+  - **Rutines:** rutinas guiadas.
+  - **Psychologist:** búsqueda en el directorio, solicitud de contacto, coordinación, reserva temporal, pago, cita confirmada, sala de espera y sesión.
+  - **Perfil del usuario:** edición del correo, contacto de apoyo, foto y recordatorio diario.
+- **Psicólogo:**
+  - **Acceso:** inicio de sesión y solicitud de verificación profesional.
+  - **Barra inferior:** navegación entre Agenda clínica, Pacientes y Billetera.
+  - **Citas:** propuesta de horario, chat de coordinación, sesión y cierre de la atención.
+  - **Perfil profesional:** tarifas, horario, enfoque terapéutico, credenciales, perfil público y retiros.
+- **Transiciones:** deslizamiento lateral para avanzar, disolución para cambiar de pestaña y regreso con la flecha o con los botones de cancelar y guardar.
+
+**Limitaciones conocidas:**
+
+- **Conservación de datos:** los formularios no guardan datos. Los textos de chat y de pago son estáticos.
+- **Barra inferior en las pantallas de citas del psicólogo:** las pantallas de citas que comparten ambos roles (proponer horario, chat y sesión) conservan la barra inferior del paciente.
+- **Ficha del paciente:** la «Patient File» de la agenda todavía no tiene una pantalla de destino.
+
+**Prueba rápida:** pendiente de realizar con usuarios del segmento. Los participantes, tareas, hallazgos y cambios se registrarán en la sección 4.3 (Validation Interviews).
+
+**Criterios de entrega:** el prototipo permite demostrar el flujo principal del Sprint 1 y mantiene consistencia con las historias y el Product Backlog.
