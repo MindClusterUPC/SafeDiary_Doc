@@ -24,7 +24,7 @@
 
 | Tipo | Enlace |
 | :--- | :--- |
-| Prototipo del paciente (TP1) | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318609_upc_edu_pe/IQBV3BVjPB2yRZp9c5tZpiZbAeFxRfzOJcNEgN4F5J5rvNU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=lf6efQ) |
+| Prototipo del paciente (TB1) | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318609_upc_edu_pe/IQBV3BVjPB2yRZp9c5tZpiZbAeFxRfzOJcNEgN4F5J5rvNU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=lf6efQ) |
 
 ## Anexo D. Videos de exposiciones
 

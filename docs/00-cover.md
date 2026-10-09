@@ -115,7 +115,7 @@ Proyecto
 | 0.1.8 | 08/10/2026 | Kamil Diaz | Añadir wireflow de calificación de la sesión y gestión de reseñas |
 | 0.1.9 | 08/10/2026 | Marcelo Cuadros | Añadir mockup de Landing Page y Términos y Condiciones, y ordenar los Mock-ups móviles |
 | 0.1.10 | 09/10/2026 | Juan Wang | Añadir User Flow Diagrams, reglas de seguridad del flujo y sección de Prototyping |
-| 0.1.11 | 09/10/2026 | Juan Wang | Actualizar Registro de Versiones y Project Report Collaboration Insights del TP1 |
+| 0.1.11 | 09/10/2026 | Juan Wang | Actualizar Registro de Versiones y Project Report Collaboration Insights del TB1 |
 
 # Project Report Collaboration Insights
 
@@ -136,9 +136,9 @@ A continuación, se detalla el enlace al repositorio oficial del proyecto en Git
 | **Vargas Alarcon, Santiago Enrique** | Domain Specialist & QA | Entrevistas a psicólogos, refinamiento de perfiles de integrantes, Bounded Context Rutines (DailyCare). |
 | **Wang Chen, Juan Sung Jau** | Lead Architect & UX Analyst | Lean UX Process (Problem Statements, Assumptions, Hypotheses, Lean UX Canvas), Journey Maps, Big Picture EventStorming, Arquitectura C4 (Context y Container Diagrams), Candidate Context Discovery y Domain Message Flows. |
 
-### Entrega TP1 (19/09/2026 – 09/10/2026)
+### Entrega TB1 (19/09/2026 – 09/10/2026)
 
-Durante el TP1 el trabajo se distribuyó en cuatro repositorios de la organización [MindClusterUPC](https://github.com/MindClusterUPC):
+Durante el TB1 el trabajo se distribuyó en cuatro repositorios de la organización [MindClusterUPC](https://github.com/MindClusterUPC):
 
 | Repositorio | Contenido |
 | :--- | :--- |
@@ -147,10 +147,10 @@ Durante el TP1 el trabajo se distribuyó en cuatro repositorios de la organizaci
 | [SafeDiary-Android](https://github.com/MindClusterUPC/SafeDiary-Android) | Aplicación móvil Android (Kotlin, Jetpack Compose) |
 | [safediary-platform](https://github.com/MindClusterUPC/safediary-platform) | Backend RESTful (Spring Boot) |
 
-![Insights TP1 - Contributors](../assets/images/others/insights-tp1-contributors.png)
-![Insights TP1 - Pulse](../assets/images/others/insights-tp1-pulse.png)
+![Insights TB1 - Contributors](../assets/images/others/insights-tb1-contributors.png)
+![Insights TB1 - Pulse](../assets/images/others/insights-tb1-pulse.png)
 
-| Integrante | Principales aportes en el TP1 |
+| Integrante | Principales aportes en el TB1 |
 | :--- | :--- |
 | **Cuadros Villanueva, Marcelo Fabio** | Wireframes por bounded context, mockups de Landing Page y Términos y Condiciones, orden de los Mock-ups móviles; desarrollo de la Landing Page y del bounded context Profiles en el backend. |
 | **Diaz Martinez, Alexther Kamil** | Actualización de EventStorming, Candidate Context Discovery, Bounded Context Canvases y diagramas C4; historias de reseñas y moderación; Style Guidelines, Information Architecture y wireflow de reseñas; rediseño de la Landing Page. |
