@@ -1068,20 +1068,435 @@ Si necesita volver a la llamada antes de cerrar, «Volver a la sesión» la reto
 
 #### 3.1.4.3. Mobile Applications Mock-ups
 
-1. Home.
-2. Rutinas.
 
-Estas pantallas corresponden a las herramientas terapéuticas y preventivas que los pacientes pueden configurar y utilizar en Safe Diary, gestionadas a través del Bounded Context de Rutinas.
+
+##### Paciente: inicio, diario y Diarito
+
+###### MU-M01. Inicio y registro emocional
+
+**Historia principal: US-010 — Registro rápido del estado emocional.**
+
+Como usuario de SafeDiary, Quiero seleccionar rápidamente mi estado emocional actual desde la pantalla principal, Para mantener un registro continuo de mi ánimo sin crear una entrada completa.
+
+**Historias complementarias:** US-008 — Registro de entrada de diario.
+
+**Estado representado:** Ánimo seleccionado y registro confirmado.
+
+**Relación con las historias:** La selección de una emoción registra el ánimo con fecha y hora. El acceso «Write in My Diary» conduce al registro de una vivencia.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m01-inicio-registro-emocional.png" alt="MU-M01. Inicio y registro emocional: Ánimo seleccionado y registro confirmado" width="280">
+
+###### MU-M02. Reflexión diaria
+
+**Historia principal: US-008 — Registro de entrada de diario.**
+
+Como usuario de SafeDiary, Quiero registrar una vivencia mediante texto o una nota de voz, Para expresar mis pensamientos con el medio que me resulte más cómodo.
+
+**Estado representado:** Entrada de texto en edición.
+
+**Relación con las historias:** El campo de reflexión y la acción «Save to Diary» representan el registro de una entrada textual privada.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m02-reflexion-diaria.png" alt="MU-M02. Reflexión diaria: Entrada de texto en edición" width="280">
+
+###### MU-M03. Rutina completada
+
+**Historia principal: US-007 — Gestión de rutinas de autocuidado.**
+
+Como usuario de SafeDiary, Quiero crear actividades para mis rutinas diarias, Para organizar hábitos de calma y autocuidado durante el día.
+
+**Historias complementarias:** US-010 — Registro rápido del estado emocional; US-029 — Insignias por constancia emocional.
+
+**Estado representado:** Actividad completada y racha visible.
+
+**Relación con las historias:** Muestra el resultado de completar una actividad de autocuidado y permite registrar el ánimo después. La racha es una referencia de constancia; aquí no se muestra la creación de rutinas ni el otorgamiento de una insignia.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m03-rutina-completada.png" alt="MU-M03. Rutina completada: Actividad completada y racha visible" width="280">
+
+###### MU-M04. Diarito vacío
+
+**Historia principal: US-011 — Reflexión guiada por voz con IA.**
+
+Como usuario de SafeDiary, Quiero hablar con el asistente de IA y obtener una transcripción, reflexión y etiqueta emocional sugerida, Para procesar mis pensamientos de manera guiada y guardarlos en mi diario.
+
+**Estado representado:** Conversación sin mensajes.
+
+**Relación con las historias:** Las sugerencias y el campo de texto permiten iniciar la reflexión asistida. La captura representa el acceso por texto al asistente.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m04-diarito-vacio.png" alt="MU-M04. Diarito vacío: Conversación sin mensajes" width="280">
+
+###### MU-M05. Conversación con Diarito
+
+**Historia principal: US-011 — Reflexión guiada por voz con IA.**
+
+Como usuario de SafeDiary, Quiero hablar con el asistente de IA y obtener una transcripción, reflexión y etiqueta emocional sugerida, Para procesar mis pensamientos de manera guiada y guardarlos en mi diario.
+
+**Estado representado:** Conversación activa.
+
+**Relación con las historias:** Presenta el mensaje del usuario, una respuesta de apoyo reflexivo y el aviso de que Diarito no reemplaza la atención profesional.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m05-conversacion-diarito.png" alt="MU-M05. Conversación con Diarito: Conversación activa" width="280">
+
+###### MU-M06. Historial de chats con menú
+
+**Historia principal: US-011 — Reflexión guiada por voz con IA.**
+
+Como usuario de SafeDiary, Quiero hablar con el asistente de IA y obtener una transcripción, reflexión y etiqueta emocional sugerida, Para procesar mis pensamientos de manera guiada y guardarlos en mi diario.
+
+**Historias complementarias:** US-026 — Personalización del tono de la IA.
+
+**Estado representado:** Historial abierto y menú contextual visible.
+
+**Relación con las historias:** Permite buscar y retomar conversaciones, iniciar una nueva y abrir la configuración del asistente. US-026 se relaciona con el acceso a configuración; la selección del tono no aparece en esta vista.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m06-historial-chats-menu.png" alt="MU-M06. Historial de chats con menú: Historial abierto y menú contextual visible" width="280">
+
+###### MU-M07. Editar mensaje
+
+**Historia principal: US-011 — Reflexión guiada por voz con IA.**
+
+Como usuario de SafeDiary, Quiero hablar con el asistente de IA y obtener una transcripción, reflexión y etiqueta emocional sugerida, Para procesar mis pensamientos de manera guiada y guardarlos en mi diario.
+
+**Estado representado:** Mensaje en edición.
+
+**Relación con las historias:** Muestra la corrección de un mensaje antes de volver a enviarlo a Diarito. Es una vista auxiliar del recorrido de reflexión asistida.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m07-editar-mensaje-diarito.png" alt="MU-M07. Editar mensaje: Mensaje en edición" width="280">
+
+##### Paciente: directorio, contacto, reserva y pago
+
+###### MU-M08. Directorio de psicólogos
+
+**Historia principal: US-002 — Búsqueda y consulta de psicólogos verificados.**
+
+Como paciente de SafeDiary, Quiero buscar y filtrar psicólogos verificados y consultar sus fichas y reseñas, Para elegir a quién solicitar contacto con información suficiente.
+
+**Historias complementarias:** US-048 — Solicitud de contacto y chat de coordinación.
+
+**Estado representado:** Resultados y filtros disponibles.
+
+**Relación con las historias:** La búsqueda, los filtros y las tarjetas presentan profesionales verificados con tarifa y disponibilidad. «Contactar» inicia la solicitud de contacto.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m08-directorio-psicologos.png" alt="MU-M08. Directorio de psicólogos: Resultados y filtros disponibles" width="280">
+
+###### MU-M09. Perfil profesional
+
+**Historia principal: US-002 — Búsqueda y consulta de psicólogos verificados.**
+
+Como paciente de SafeDiary, Quiero buscar y filtrar psicólogos verificados y consultar sus fichas y reseñas, Para elegir a quién solicitar contacto con información suficiente.
+
+**Historias complementarias:** US-048 — Solicitud de contacto y chat de coordinación.
+
+**Estado representado:** Ficha verificada y publicada.
+
+**Relación con las historias:** La ficha reúne enfoque, credenciales, tarifa y valoraciones para elegir un profesional. «Solicitar contacto» abre la coordinación sin crear una cita ni un cobro.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m09-perfil-profesional.png" alt="MU-M09. Perfil profesional: Ficha verificada y publicada" width="280">
+
+###### MU-M10. Solicitar contacto
+
+**Historia principal: US-048 — Solicitud de contacto y chat de coordinación.**
+
+Como paciente que encontró una ficha profesional verificada, Quiero solicitar contacto y conversar de forma privada con el psicólogo, Para acordar una posible fecha sin crear ni pagar una cita prematuramente.
+
+**Estado representado:** Solicitud preparada para enviar.
+
+**Relación con las historias:** El paciente redacta el motivo de consulta y envía una solicitud privada al especialista, con la aclaración de que este paso no crea una cita ni un cargo.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m10-solicitar-contacto.png" alt="MU-M10. Solicitar contacto: Solicitud preparada para enviar" width="280">
+
+###### MU-M11. Chat de coordinación
+
+**Historia principal: US-048 — Solicitud de contacto y chat de coordinación.**
+
+Como paciente que encontró una ficha profesional verificada, Quiero solicitar contacto y conversar de forma privada con el psicólogo, Para acordar una posible fecha sin crear ni pagar una cita prematuramente.
+
+**Historias complementarias:** US-049 — Aceptación del horario propuesto.
+
+**Estado representado:** Solicitud enviada y horario propuesto.
+
+**Relación con las historias:** La conversación privada permite acordar la fecha. La tarjeta de propuesta presenta horario, modalidad y tarifa, con las opciones de aceptar o proponer otro horario.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m11-chat-coordinacion-paciente.png" alt="MU-M11. Chat de coordinación: Solicitud enviada y horario propuesto" width="280">
+
+###### MU-M12. Confirmar horario
+
+**Historia principal: US-049 — Aceptación del horario propuesto.**
+
+Como paciente que acordó una fecha por chat, Quiero aceptar expresamente la propuesta del psicólogo, Para iniciar la retención temporal de ese horario antes de pagar.
+
+**Historias complementarias:** US-014 — Reserva temporal del horario acordado.
+
+**Estado representado:** Confirmación de aceptación abierta.
+
+**Relación con las historias:** Antes de aceptar, el paciente revisa la fecha y la tarifa. La confirmación inicia una retención de una hora y explica que la cita se confirma cuando el pago es aprobado.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m12-confirmar-horario.png" alt="MU-M12. Confirmar horario: Confirmación de aceptación abierta" width="280">
+
+###### MU-M13. Reserva temporal
+
+**Historia principal: US-014 — Reserva temporal del horario acordado.**
+
+Como paciente que aceptó el horario propuesto por un psicólogo verificado, Quiero que el horario quede reservado temporalmente durante una hora, Para completar el pago sin perderlo mientras esté vigente.
+
+**Historias complementarias:** US-037 — Pago seguro de una sesión; US-050 — Cancelación de reserva o cita y liberación del horario.
+
+**Estado representado:** Horario retenido y pago pendiente.
+
+**Relación con las historias:** El contador indica el tiempo restante de la reserva. Se muestran el importe y las acciones para pagar o cancelar, sin presentar todavía una cita confirmada.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m13-reserva-temporal.png" alt="MU-M13. Reserva temporal: Horario retenido y pago pendiente" width="280">
+
+###### MU-M14. Pago de sesión
+
+**Historia principal: US-037 — Pago seguro de una sesión.**
+
+Como paciente con una reserva temporal vigente, Quiero pagar la sesión dentro de SafeDiary y recibir un comprobante, Para confirmar la cita acordada mediante una transacción trazable.
+
+**Estado representado:** Reserva vigente y cobro por confirmar.
+
+**Relación con las historias:** El paciente revisa el método de pago y el total de la sesión antes de pagar. La pantalla aclara que el comprobante y la confirmación dependen del pago aprobado.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m14-pago-sesion.png" alt="MU-M14. Pago de sesión: Reserva vigente y cobro por confirmar" width="280">
+
+###### MU-M15. Cita confirmada
+
+**Historia principal: US-037 — Pago seguro de una sesión.**
+
+Como paciente con una reserva temporal vigente, Quiero pagar la sesión dentro de SafeDiary y recibir un comprobante, Para confirmar la cita acordada mediante una transacción trazable.
+
+**Historias complementarias:** US-038 — Acceso a la videollamada programada; US-009 — Consentimiento para compartir historial.
+
+**Estado representado:** Pago aprobado y cita confirmada.
+
+**Relación con las historias:** Muestra la cita confirmada, el comprobante y la ventana de ingreso. El acceso «Configurar consentimiento» permite iniciar la decisión opcional de compartir contexto; esta captura no muestra la selección de datos ni su confirmación.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m15-cita-confirmada.png" alt="MU-M15. Cita confirmada: Pago aprobado y cita confirmada" width="280">
+
+###### MU-M16. Pago no completado
+
+**Historia principal: US-037 — Pago seguro de una sesión.**
+
+Como paciente con una reserva temporal vigente, Quiero pagar la sesión dentro de SafeDiary y recibir un comprobante, Para confirmar la cita acordada mediante una transacción trazable.
+
+**Historias complementarias:** US-014 — Reserva temporal del horario acordado.
+
+**Estado representado:** Pago fallido y reserva todavía vigente.
+
+**Relación con las historias:** Informa que el pago no se confirmó y mantiene visible el estado pendiente de la reserva, con acciones para reintentar o volver a Mis citas.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m16-pago-no-completado.png" alt="MU-M16. Pago no completado: Pago fallido y reserva todavía vigente" width="280">
+
+###### MU-M17. Cancelar reserva
+
+**Historia principal: US-050 — Cancelación de reserva o cita y liberación del horario.**
+
+Como paciente con una reserva temporal o cita confirmada, Quiero cancelar cuando corresponda y conocer el efecto sobre mi pago, Para liberar el horario y evitar confusiones sobre mi atención.
+
+**Estado representado:** Confirmación de cancelación abierta.
+
+**Relación con las historias:** Explica la liberación del horario y el efecto sobre el cobro antes de cancelar. El paciente puede confirmar o conservar la reserva.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m17-cancelar-reserva.png" alt="MU-M17. Cancelar reserva: Confirmación de cancelación abierta" width="280">
+
+###### MU-M18. Horario liberado
+
+**Historia principal: US-050 — Cancelación de reserva o cita y liberación del horario.**
+
+Como paciente con una reserva temporal o cita confirmada, Quiero cancelar cuando corresponda y conocer el efecto sobre mi pago, Para liberar el horario y evitar confusiones sobre mi atención.
+
+**Estado representado:** Reserva cancelada, horario liberado y sin cargo.
+
+**Relación con las historias:** Confirma la cancelación de una reserva sin pago y ofrece continuar por el mismo chat para acordar otra fecha.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m18-horario-liberado.png" alt="MU-M18. Horario liberado: Reserva cancelada, horario liberado y sin cargo" width="280">
+
+##### Paciente: citas y videollamada
+
+###### MU-M19. Mis citas
+
+**Historia principal: US-038 — Acceso a la videollamada programada.**
+
+Como usuario con una cita confirmada, Quiero ingresar a una videollamada segura desde SafeDiary, Para recibir atención profesional en el horario reservado.
+
+**Historias complementarias:** US-014 — Reserva temporal del horario acordado; US-037 — Pago seguro de una sesión; US-048 — Solicitud de contacto y chat de coordinación.
+
+**Estado representado:** Reservas temporales, citas confirmadas y chats activos.
+
+**Relación con las historias:** Distingue una reserva pendiente de pago de una cita confirmada. Desde sus tarjetas se puede pagar, consultar el detalle o ingresar a la sesión; también se muestran las conversaciones de coordinación.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m19-mis-citas.png" alt="MU-M19. Mis citas: Reservas temporales, citas confirmadas y chats activos" width="280">
+
+###### MU-M20. Sala de espera
+
+**Historia principal: US-038 — Acceso a la videollamada programada.**
+
+Como usuario con una cita confirmada, Quiero ingresar a una videollamada segura desde SafeDiary, Para recibir atención profesional en el horario reservado.
+
+**Estado representado:** Ventana de acceso abierta.
+
+**Relación con las historias:** Permite revisar cámara y micrófono y muestra los participantes autorizados antes de ingresar a la videollamada privada.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m20-sala-espera.png" alt="MU-M20. Sala de espera: Ventana de acceso abierta" width="280">
+
+###### MU-M21. Sesión en curso
+
+**Historia principal: US-038 — Acceso a la videollamada programada.**
+
+Como usuario con una cita confirmada, Quiero ingresar a una videollamada segura desde SafeDiary, Para recibir atención profesional en el horario reservado.
+
+**Estado representado:** Videollamada iniciada.
+
+**Relación con las historias:** Presenta a la especialista y los controles de micrófono, cámara, chat y salida durante la consulta programada.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m21-sesion-en-curso-paciente.png" alt="MU-M21. Sesión en curso: Videollamada iniciada" width="280">
+
+###### MU-M22. Sesión completada
+
+**Historia principal: US-039 — Calificación del especialista.**
+
+Como usuario que completó una sesión, Quiero calificar al especialista y escribir una reseña opcional, Para compartir mi experiencia y contribuir a una puntuación de confianza transparente.
+
+**Historias complementarias:** US-044 — Gestión de la atención profesional.
+
+**Estado representado:** Atención finalizada y calificación disponible.
+
+**Relación con las historias:** El recorrido de la cita refleja el cierre registrado por la especialista. La acción «Calificar sesión» permite al paciente valorar una atención completada.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m22-sesion-completada-paciente.png" alt="MU-M22. Sesión completada: Atención finalizada y calificación disponible" width="280">
+
+###### MU-M23. Calificar sesión
+
+**Historia principal: US-039 — Calificación del especialista.**
+
+Como usuario que completó una sesión, Quiero calificar al especialista y escribir una reseña opcional, Para compartir mi experiencia y contribuir a una puntuación de confianza transparente.
+
+**Estado representado:** Puntuación seleccionada y comentario opcional.
+
+**Relación con las historias:** El paciente selecciona de una a cinco estrellas y puede añadir título y comentario. La acción de envío publica una reseña asociada a la sesión completada.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m23-calificar-sesion.png" alt="MU-M23. Calificar sesión: Puntuación seleccionada y comentario opcional" width="280">
+
+##### Paciente: valoraciones y reseñas
+
+###### MU-M24. Valoraciones y listado de reseñas
+
+**Historia principal: US-002 — Búsqueda y consulta de psicólogos verificados.**
+
+Como paciente de SafeDiary, Quiero buscar y filtrar psicólogos verificados y consultar sus fichas y reseñas, Para elegir a quién solicitar contacto con información suficiente.
+
+**Historias complementarias:** US-055 — Marcar una reseña como útil; US-056 — Denunciar una reseña; US-057 — Eliminar mi reseña.
+
+**Estado representado:** Valoración agregada y reseñas publicadas.
+
+**Relación con las historias:** El paciente consulta la distribución de puntuaciones y las reseñas. Las acciones permiten marcar utilidad, denunciar reseñas ajenas o eliminar la propia.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m24-valoraciones-listado-resenas.png" alt="MU-M24. Valoraciones y listado de reseñas: Valoración agregada y reseñas publicadas" width="280">
+
+**Alcance de US-055:** «Me gusta» solo corresponde a reseñas ajenas. La captura también presenta el control en la reseña propia; esa variante visual no representa una acción permitida por la historia.
+
+###### MU-M25. Denunciar reseña
+
+**Historia principal: US-056 — Denunciar una reseña.**
+
+Como usuario autenticado que encuentra una reseña que podría incumplir las normas, Quiero denunciarla indicando un motivo y, opcionalmente, contexto, Para ayudar a mantener reseñas confiables y un espacio seguro.
+
+**Estado representado:** Motivo de denuncia seleccionado.
+
+**Relación con las historias:** El usuario elige un motivo y puede añadir contexto antes de enviar la denuncia para revisión. Esta vista muestra el formulario, no una confirmación de recepción.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m25-denunciar-resena.png" alt="MU-M25. Denunciar reseña: Motivo de denuncia seleccionado" width="280">
+
+###### MU-M26. Eliminar reseña
+
+**Historia principal: US-057 — Eliminar mi reseña.**
+
+Como paciente que publicó una reseña, Quiero eliminarla después de revisar una confirmación, Para retirar mi opinión de la ficha pública y conservar control sobre lo que compartí.
+
+**Estado representado:** Confirmación de eliminación.
+
+**Relación con las historias:** La autora revisa su reseña y confirma una acción irreversible. La pantalla advierte que también se retirarán los likes asociados y permite cancelar.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m26-eliminar-resena.png" alt="MU-M26. Eliminar reseña: Confirmación de eliminación" width="280">
+
+##### Especialista: solicitudes, agenda y cierre de atención
+
+###### MU-M27. Pacientes y solicitudes
+
+**Historia principal: US-043 — Gestión de solicitudes y agenda profesional.**
+
+Como psicólogo verificado que recibió una solicitud de contacto, Quiero conversar con el paciente y proponer o rechazar horarios desde mi agenda, Para acordar una sesión sin conflictos de disponibilidad.
+
+**Estado representado:** Solicitudes nuevas y pacientes activos.
+
+**Relación con las historias:** Presenta las solicitudes recibidas, las preferencias horarias y las acciones para atender la coordinación desde la lista de pacientes.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m27-pacientes-solicitudes.png" alt="MU-M27. Pacientes y solicitudes: Solicitudes nuevas y pacientes activos" width="280">
+
+###### MU-M28. Proponer horario
+
+**Historia principal: US-043 — Gestión de solicitudes y agenda profesional.**
+
+Como psicólogo verificado que recibió una solicitud de contacto, Quiero conversar con el paciente y proponer o rechazar horarios desde mi agenda, Para acordar una sesión sin conflictos de disponibilidad.
+
+**Estado representado:** Horario libre seleccionado.
+
+**Relación con las historias:** La agenda distingue espacios libres, retenidos, confirmados y ocupados. La especialista selecciona un espacio disponible y envía una propuesta al paciente.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m28-proponer-horario.png" alt="MU-M28. Proponer horario: Horario libre seleccionado" width="280">
+
+###### MU-M29. Agenda clínica
+
+**Historia principal: US-043 — Gestión de solicitudes y agenda profesional.**
+
+Como psicólogo verificado que recibió una solicitud de contacto, Quiero conversar con el paciente y proponer o rechazar horarios desde mi agenda, Para acordar una sesión sin conflictos de disponibilidad.
+
+**Historias complementarias:** US-044 — Gestión de la atención profesional.
+
+**Estado representado:** Agenda diaria con citas y espacios de atención.
+
+**Relación con las historias:** El calendario y la línea de tiempo permiten revisar las citas del día. La acción de iniciar sesión conecta la agenda con la atención profesional.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m29-agenda-clinica-solicitudes.png" alt="MU-M29. Agenda clínica: Agenda diaria con citas y espacios de atención" width="280">
+
+###### MU-M30. Cerrar la atención
+
+**Historia principal: US-044 — Gestión de la atención profesional.**
+
+Como especialista con una cita confirmada, Quiero ingresar a la videollamada y registrar el resultado operativo de la cita, Para mantener actualizado el historial de atención.
+
+**Estado representado:** Resultado operativo por registrar.
+
+**Relación con las historias:** La especialista registra atención completada, inasistencia o sesión no realizada. El cierre actualiza el estado de la cita y habilita la reseña cuando corresponde.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m30-cerrar-atencion.png" alt="MU-M30. Cerrar la atención: Resultado operativo por registrar" width="280">
+
+##### Especialista: balance y tarifas
+
+###### MU-M31. Billetera SafeVault y tarifas
+
+**Historia principal: US-047 — Consulta de pagos e ingresos profesionales.**
+
+Como psicólogo verificado, Quiero consultar el saldo disponible, los pagos de sesiones, las comisiones y los retiros pendientes, Para controlar mis ingresos antes de solicitar un retiro.
+
+**Historias complementarias:** US-036 — Publicación y edición de la ficha profesional; US-053 — Solicitud y seguimiento de retiro.
+
+**Estado representado:** Balance, movimientos y tarifas visibles.
+
+**Relación con las historias:** Reúne saldo, ingresos, retiros pendientes y movimientos profesionales. También permite editar y publicar las tarifas de la ficha y acceder a la solicitud de retiro.
+
+<img src="../assets/images/chap3/mockups/mobile-applications/mu-m31-billetera-safevault-tarifas.png" alt="MU-M31. Billetera SafeVault y tarifas: Balance, movimientos y tarifas visibles" width="280">
+
+##### Rutinas y ejercicios: vistas complementarias
+
+Estas vistas complementarias muestran la creación de actividades, sus avisos y los ejercicios de autocuidado. Las referencias se alinean con las historias vigentes de la sección 2.4.1: crear rutinas corresponde a US-007 y los ejercicios de respiración y grounding a US-030. US-024 se relaciona con los recordatorios de registro emocional; la notificación genérica de una rutina es una vista de apoyo y no acredita por sí sola toda esa historia.
 
 | Pantalla | Historias relacionadas |
 |---|---|
-| Lista y gestión de Rutinas Diarias | US-010, US-011 |
-| Creación de nueva Rutina (Configuración de días y alertas) | US-012 |
-| Ejecución y Notificaciones push de Rutinas | US-013 |
-| Confirmación de Rutina Completada | US-014 |
-| Ejercicios SOS: Respiración (Deep Breathing) | US-030 |
-| Ejercicios SOS: Enraizamiento (Grounding) por pasos | US-031 |
-| Reflexión Diaria (Prompt Reflection) | US-020 |
+| Lista y gestión de rutinas diarias | US-007 — Gestión de rutinas de autocuidado; US-024 — Recordatorios de registro emocional |
+| Creación de una rutina y configuración de alertas | US-007 — Gestión de rutinas de autocuidado; US-024 — Recordatorios de registro emocional |
+| Notificación de una rutina programada | US-007 — Gestión de rutinas de autocuidado; US-024 — Recordatorios de registro emocional |
+| Ejercicio de respiración profunda | US-030 — Ejercicios rápidos de regulación |
+| Ejercicio de grounding por pasos | US-030 — Ejercicios rápidos de regulación |
 
 **Gestión de Rutinas Diarias:**
 
@@ -1118,31 +1533,7 @@ Estas pantallas corresponden a las herramientas terapéuticas y preventivas que 
   </tr>
 </table>
 
-**Reflexión Diaria y Seguimiento:**
-
-<table style="width:100%; border:none; border-collapse:collapse; text-align:center;">
-  <tr>
-    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
-      <img src="../assets/images/chap3/wireframes/rutines-bc/Rutines_05.png" alt="Pantalla de Reflexión Diaria" width="220"><br>
-      <sub><strong>Reflexión Diaria Pendiente</strong></sub>
-    </td>
-    <td align="center" style="width:33.33%; vertical-align:top; border:none;">
-      <img src="../assets/images/chap3/wireframes/rutines-bc/Rutines_07.png" alt="Confirmación de Actividad Completada" width="220"><br>
-      <sub><strong>Rutina / Ejercicio Completado</strong></sub>
-    </td>
-    <td style="width:33.33%; border:none;"></td>
-  </tr>
-</table>
-
-3. Diario.
-4. Psicólogos.
-5. Citas.
-
-> **Insertar aquí:** imagen legible de los Mobile Applications Mock-ups.
-
-Explicar cada mock-up y relacionarlo con sus User Stories y criterios de aceptación.
-
-6. Perfiles
+##### Perfiles y configuración: vistas complementarias
 
 Estas pantallas corresponden a los perfiles y datos que pueden configurar los usuarios de Safe Diary, tanto pacientes como psicólogos.
 
@@ -1202,7 +1593,7 @@ Estas pantallas corresponden a los perfiles y datos que pueden configurar los us
   </tr>
 </table>
 
-7. Payments
+##### Pagos y métodos: vistas complementarias
 
 Estas pantallas refieren al procesamiento de pagos dentro de la plataforma, lo cuales incluyen a las suscripciones, historial de pagos en ambos segmentos, y los retiros en el segmento de los psicólogos. 
 
@@ -1215,17 +1606,15 @@ Estas pantallas refieren al procesamiento de pagos dentro de la plataforma, lo c
 | Registro de método de retiro | US-052 |
 | Solicitud y seguimiento de retiro | US-053 |
 
+El pago de la sesión se presenta una sola vez en **MU-M14. Pago de sesión**, junto con US-037 y su estado de reserva vigente.
+
 **Pacientes:**
 
 <table style="width:100%; border:none; border-collapse:collapse; text-align:center;">
   <tr>
-    <td align="center" style="width:50%; vertical-align:top; border:none;">
+    <td align="center" style="width:100%; vertical-align:top; border:none;">
       <img src="../assets/images/chap3/wireframes/payments-bc/pacient-payments.png" alt="Billetera Digital e Historial de Pagos" width="220"><br>
       <sub><strong>Billetera Digital e Historial de Pagos</strong></sub>
-    </td>
-    <td align="center" style="width:50%; vertical-align:top; border:none;">
-      <img src="../assets/images/chap3/wireframes/payments-bc/pacient-session-payment.png" alt="Pago Seguro de Sesión" width="220"><br>
-      <sub><strong>Pago de Sesión Profesional</strong></sub>
     </td>
   </tr>
 </table>
@@ -1240,6 +1629,23 @@ Estas pantallas refieren al procesamiento de pagos dentro de la plataforma, lo c
     </td>
   </tr>
 </table>
+
+##### Verificación de capturas repetidas
+
+Se compararon tanto los archivos como los píxeles decodificados para identificar copias idénticas. Las variantes con contenido o estados distintos se conservaron. La siguiente tabla registra las capturas no insertadas como una segunda pantalla:
+
+| Pantalla | Archivo conservado | Copia o variante no insertada | Criterio |
+|---|---|---|---|
+| MU-M09. Perfil profesional | Directorio · Ficha profesional (1).png | Directorio · Ficha profesional (2).png | Archivo y píxeles idénticos |
+| MU-M11. Chat de coordinación | Scheduling · Chat de coordinación.png | Scheduling · Chat de coordinación (1).png | Archivo y píxeles idénticos |
+| MU-M14. Pago de sesión | Scheduling · Pago de sesión.png | Scheduling · Pago de sesión (1).png | Archivo y píxeles idénticos |
+| MU-M15. Cita confirmada | Scheduling · Cita confirmada.png | Scheduling · Cita confirmada (1).png | Archivo y píxeles idénticos |
+| MU-M21. Sesión en curso | Scheduling · Sesión iniciada.png | Scheduling · Sesión iniciada (1).png | Archivo y píxeles idénticos |
+| MU-M27. Pacientes y solicitudes | Html → Body (1).png | Html → Body (2).png | Archivo y píxeles idénticos |
+| MU-M29. Agenda clínica | Html → Body.png | Html → Body (3).png | Archivo y píxeles idénticos |
+| MU-M22. Sesión completada | Scheduling · Sesión completada.png | Scheduling · Sesión completada (1).png | Mismo estado y contenido; pequeñas diferencias visuales y de altura |
+
+La depuración afecta únicamente a las imágenes mostradas en el informe; los archivos originales de la carpeta proporcionada se conservan.
 
 #### 3.1.4.4. Mobile Applications User Flow Diagrams
 
