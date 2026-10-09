@@ -281,11 +281,21 @@ La suite de pruebas del Sprint 1 combina tres niveles. Las pruebas unitarias usa
 
 #### 4.2.1.6. Execution Evidence for Sprint Review
 
+En el Sprint 1 la aplicación móvil alcanzó el flujo principal del asistente Diarito conectado al backend desplegado en Render. El usuario puede iniciar una conversación desde sugerencias o texto libre, recibir una reflexión no clínica, copiar, editar o regenerar mensajes, consultar y renombrar su historial, elegir la personalidad de Diarito y acceder a la Línea 113 desde la configuración. Las conversaciones se guardan en caché local (Room) para consultarlas sin conexión. Las pestañas Rutines, Home, Psychologist y Scheduling ya forman parte de la navegación inferior, pero sus pantallas se implementarán en los siguientes sprints junto con IAM y Diary.
+
 | Funcionalidad demostrada | Dispositivo / entorno | Resultado | Evidencia |
 |---|---|---|---|
-| [flujo] | [modelo, versión] | [resultado] | [captura / video] |
+| Inicio de Diarito con sugerencias y navegación inferior | Emulador Pixel 10 Pro, Android 17 · APK release 1.0 | Correcto | Captura 1 |
+| Conversación con Diarito: respuesta del backend en Render con acciones de copiar, editar y regenerar | Emulador Pixel 10 Pro, Android 17 · APK release 1.0 | Correcto | Captura 2 |
+| Configuración: personalidades Sol, Luma, Kai y Nara, idioma y botón de la Línea 113 | Emulador Pixel 10 Pro, Android 17 · APK release 1.0 | Correcto | Captura 3 |
 
-**Video de demostración:** [URL].
+<table>
+<tr>
+<td align="center"><img src="../assets/images/chap4/app-diarito-inicio.png" width="220"><br>Captura 1. Inicio de Diarito</td>
+<td align="center"><img src="../assets/images/chap4/app-diarito-respuesta.png" width="220"><br>Captura 2. Respuesta de Diarito</td>
+<td align="center"><img src="../assets/images/chap4/app-configuracion.png" width="220"><br>Captura 3. Configuración</td>
+</tr>
+</table>
 
 #### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
