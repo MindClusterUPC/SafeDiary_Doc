@@ -318,6 +318,10 @@ La configuración de cada despliegue se describe en la sección 4.1.4. La Landin
 | Backend | Render (Docker) | [Swagger UI](https://safediary-platform.onrender.com/swagger-ui/index.html) · v0.2.0 | 2026-10-09 | ![Swagger del backend en Render](../assets/images/chap4/evidence-backend-swagger.png) |
 | Mobile | Emulador y dispositivo Android | APK release 1.0 | 2026-10-06 | Build firmado apuntando a Render |
 
+**Despliegue del backend en Render:** el servicio `safediary-platform` (Docker, rama `main`) está en estado *Live* con el commit `da151c7`, correspondiente al merge de la versión v0.2.0.
+
+![Despliegue v0.2.0 del backend en Render](../assets/images/chap4/evidence-backend-render.png)
+
 #### 4.2.1.9. Team Collaboration Insights during Sprint
 
 Explicar cómo se distribuyó el trabajo y adjuntar capturas de commits, tablero, pull requests y revisiones. Los datos deben coincidir con el Registro de Versiones del Informe y el Participant Performance Report.
