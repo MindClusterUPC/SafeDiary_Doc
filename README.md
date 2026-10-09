@@ -15,6 +15,17 @@
 
 ---
 
+## Generar el informe en PDF
+
+1. Desde la raíz del repositorio, une los capítulos en un solo archivo:
+   ```bash
+   python scripts/build_report.py
+   ```
+   Se crea `docs/SafeDiary-Report.md`, que git ignora, con los capítulos en orden y saltos de página entre ellos.
+2. Abre ese archivo en VS Code y ejecuta **Markdown PDF: Export (pdf)** (extensión *Markdown PDF*).
+
+---
+
 ## Índice General de Contenidos
 
 Haga clic en cualquiera de las secciones para navegar directamente al contenido correspondiente en los documentos:

@@ -104,8 +104,18 @@ Proyecto
 | 0.0.24 | 18/09/2026 | Juan Wang | Añadir arquitectura de software C4 (Deployment Diagram) |
 | 0.0.25 | 18/09/2026 | Juan Wang | Redacción de Conclusiones y Recomendaciones del proyecto |
 | 0.0.26 | 18/09/2026 | Andrés Torres | Reestructuración de User Stories |
-| 0.1.0 | 7/10/2026 | Marcelo Cuadros | Añadir Wireframes de los bounded contexts respectivos |
-| 0.1.1 | 8/10/2026 | Marcelo Cuadros | Añadir mockup de Landing Page y Terminos y Condiciones |
+| 0.1.0 | 03/10/2026 | Juan Wang | Añadir la sección 4.1 Software Configuration Management y actualizar el índice del README |
+| 0.1.1 | 06/10/2026 | Kamil Diaz | Actualizar Big Picture EventStorming, Candidate Context Discovery y Bounded Context Canvases de Clinician Directory, Care Scheduling y Payments & Payouts |
+| 0.1.2 | 06/10/2026 | Kamil Diaz | Reemplazar diagramas C4, añadir flujo Directory–Scheduling–Payments, Impact Map de María, imágenes de bounded contexts y plantilla del capítulo 3 |
+| 0.1.3 | 06/10/2026 | Juan Wang | Actualizar el diseño táctico de AssistantAI (2.6.3) a la implementación actual, con nuevos diagramas de componentes, clases y base de datos |
+| 0.1.4 | 07/10/2026 | Marcelo Cuadros | Añadir Wireframes de los bounded contexts respectivos |
+| 0.1.5 | 07/10/2026 | Juan Wang | Añadir los planes de suscripción Terra (mensual) y Astrum (anual) |
+| 0.1.6 | 07/10/2026 | Juan Wang | Añadir Mobile Applications Wireflow Diagrams (wireflows 1 al 5) |
+| 0.1.7 | 08/10/2026 | Kamil Diaz | Documentar historias de reseñas y moderación, Style Guidelines e Information Architecture |
+| 0.1.8 | 08/10/2026 | Kamil Diaz | Añadir wireflow de calificación de la sesión y gestión de reseñas |
+| 0.1.9 | 08/10/2026 | Marcelo Cuadros | Añadir mockup de Landing Page y Términos y Condiciones, y ordenar los Mock-ups móviles |
+| 0.1.10 | 09/10/2026 | Juan Wang | Añadir User Flow Diagrams, reglas de seguridad del flujo y sección de Prototyping |
+| 0.1.11 | 09/10/2026 | Juan Wang | Actualizar Registro de Versiones y Project Report Collaboration Insights del TP1 |
 
 # Project Report Collaboration Insights
 
@@ -125,6 +135,28 @@ A continuación, se detalla el enlace al repositorio oficial del proyecto en Git
 | **Torres Lavandera, Andres Rodrigo** | Systems Architect & Backend Dev | Entrevistas y empathy map de psicólogos, Product Backlog inicial, Bounded Contexts IAM & Profiles, Context Mapping DDD. |
 | **Vargas Alarcon, Santiago Enrique** | Domain Specialist & QA | Entrevistas a psicólogos, refinamiento de perfiles de integrantes, Bounded Context Rutines (DailyCare). |
 | **Wang Chen, Juan Sung Jau** | Lead Architect & UX Analyst | Lean UX Process (Problem Statements, Assumptions, Hypotheses, Lean UX Canvas), Journey Maps, Big Picture EventStorming, Arquitectura C4 (Context y Container Diagrams), Candidate Context Discovery y Domain Message Flows. |
+
+### Entrega TP1 (19/09/2026 – 09/10/2026)
+
+Durante el TP1 el trabajo se distribuyó en cuatro repositorios de la organización [MindClusterUPC](https://github.com/MindClusterUPC):
+
+| Repositorio | Contenido |
+| :--- | :--- |
+| [SafeDiary_Doc](https://github.com/MindClusterUPC/SafeDiary_Doc) | Informe del proyecto |
+| [SafeDiary_Landing_Page](https://github.com/MindClusterUPC/SafeDiary_Landing_Page) | Landing Page |
+| [SafeDiary-Android](https://github.com/MindClusterUPC/SafeDiary-Android) | Aplicación móvil Android (Kotlin, Jetpack Compose) |
+| [safediary-platform](https://github.com/MindClusterUPC/safediary-platform) | Backend RESTful (Spring Boot) |
+
+![Insights TP1 - Contributors](../assets/images/others/insights-tp1-contributors.png)
+![Insights TP1 - Pulse](../assets/images/others/insights-tp1-pulse.png)
+
+| Integrante | Principales aportes en el TP1 |
+| :--- | :--- |
+| **Cuadros Villanueva, Marcelo Fabio** | Wireframes por bounded context, mockups de Landing Page y Términos y Condiciones, orden de los Mock-ups móviles; desarrollo de la Landing Page y del bounded context Profiles en el backend. |
+| **Diaz Martinez, Alexther Kamil** | Actualización de EventStorming, Candidate Context Discovery, Bounded Context Canvases y diagramas C4; historias de reseñas y moderación; Style Guidelines, Information Architecture y wireflow de reseñas; rediseño de la Landing Page. |
+| **Torres Lavandera, Andres Rodrigo** | [completar] |
+| **Vargas Alarcon, Santiago Enrique** | [completar] |
+| **Wang Chen, Juan Sung Jau** | Software Configuration Management (4.1), diseño táctico de AssistantAI, planes Terra y Astrum, Wireflows, User Flow Diagrams y Prototyping; desarrollo de la aplicación móvil (Diarito, caché offline, navegación) y del backend AssistantAI desplegado en Render; sección de planes de la Landing Page. |
 
 ---
 
