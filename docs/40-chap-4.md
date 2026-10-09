@@ -153,9 +153,9 @@ En `safediary-platform`, el código fuente se divide modularmente por Bounded Co
 El proceso de despliegue asegura que cada pieza del sistema esté disponible en entornos cloud con alta disponibilidad, seguridad TLS/SSL y monitoreo constante:
 
 #### 1. Despliegue de la Landing Page (`safediary-landing-page`)
-- **Plataforma de Hosting:** Vercel / GitHub Pages.
+- **Plataforma de Hosting:** GitHub Pages.
 - **Pipeline de Despliegue:** Integración continua automática (CI/CD) vinculada al branch `main`. Cada pull request aprobado e integrado desencadena un nuevo build y publicación.
-- **URL Pública:** `https://safediary-landing.vercel.app/`
+- **URL Pública:** [https://mindclusterupc.github.io/SafeDiary_Landing_Page/](https://mindclusterupc.github.io/SafeDiary_Landing_Page/index.html)
 - **Características:** Certificados SSL/TLS gestionados automáticamente, compresión gzip/brotli y distribución a través de CDN global.
 
 #### 2. Despliegue del Backend RESTful API (`safediary-platform`)
@@ -183,24 +183,24 @@ El proceso de despliegue asegura que cada pieza del sistema esté disponible en 
 | Campo | Valor |
 |---|---|
 | Sprint | Sprint 1 |
-| Fecha | [YYYY-MM-DD] |
-| Hora | [HH:MM] |
-| Ubicación | [presencial / virtual] |
-| Preparado por | [nombre] |
-| Asistentes | [nombres] |
-| Sprint Goal | [objetivo medible] |
-| Velocity | [story points] |
-| Story Points incluidos | [suma] |
-
-**Resumen del sprint anterior:** [si aplica].
-
-**Retrospectiva del sprint anterior:** [si aplica].
+| Fecha | 2026-09-26 |
+| Hora | 17:00 |
+| Ubicación | Virtual - Discord |
+| Preparado por | Kamil Diaz |
+| Asistentes | Marcelo Cuadros, Andres Torres, Juan Wang, Santiago Vargas |
+| Sprint Goal | **Nuestro foco está en** desplegar la landing page pública informativa y entregar el núcleo funcional de la aplicación móvil para autenticación segura (incluyendo acceso biométrico) y registro del diario emocional asistido por voz con inteligencia artificial.<br><br>**Creemos que brinda** un canal de captación transparente y un espacio íntimo, confiable y libre de fricción a los **pacientes jóvenes** para que comiencen a expresar y procesar sus vivencias cotidianas con total control de su privacidad.<br><br>**Esto se confirmará cuando** un nuevo usuario pueda informarse en la landing page, registrarse e iniciar sesión en la app (vía correo, Google/Apple o biometría), marcar su estado de ánimo y guardar exitosamente una primera entrada de diario con reflexión generada por voz e IA. |
+| Velocity | 35 |
+| Story Points incluidos | 32 |
 
 #### 4.2.1.2. Aspect Leaders and Collaborators
 
-| Integrante | Aspecto / responsabilidad | User Stories o tareas relacionadas | Evidencia |
-|---|---|---|---|
-| [nombre] | [responsabilidad] | [US-xxx / task] | [enlace o commit] |
+| Team Member (Last Name, First Name) | GitHub Username | IAM Leader (L) / Collaborator (C) | Profile Leader (L) / Collaborator (C) | Diary Leader (L) / Collaborator (C) | AssistantAI Leader (L) / Collaborator (C) | Clinician Directory Leader (L) / Collaborator (C) | Care Scheduling Leader (L) / Collaborator (C) | Payment and Payouts Leader (L) / Collaborator (C) | Rutines Leader (L) / Collaborator (C) |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Cuadros Villanueva, Marcelo Fabio | Marcelo-alt-lab | C | L | C | C | C | C | L | C |
+| Diaz Martinez, Alexther Kamil | kamil-tron | C | C | C | C | L | C | C | C |
+| Torres Lavandera, Andres Rodrigo | AndresTorres202312557 | L | C | C | C | C | L | C | C |
+| Vargas Alarcon, Santiago Enrique | SanVargasAl | C | C | C | C | C | C | C | L |
+| Wang Chen, Juan Sung Jau | jwd3t | C | C | L | L | C | C | C | C |
 
 #### 4.2.1.3. Sprint Backlog 1
 
@@ -263,39 +263,12 @@ Describir configuración y evidencias del despliegue del Landing Page, backend a
 
 | Producto | Plataforma | URL / versión | Fecha | Evidencia |
 |---|---|---|---|---|
-| Landing Page | [Vercel / otra] | [URL] | [fecha] | [captura] |
+| Landing Page | Github Pages | [https://mindclusterupc.github.io/SafeDiary_Landing_Page/](https://mindclusterupc.github.io/SafeDiary_Landing_Page/index.html) | [2026-10-1] | ![Landing-Page](../assets/images/chap4/evidence-landing.png) |
 | Backend | [Render / otra] | [URL Swagger] | [fecha] | [captura] |
 | Mobile | [emulador / dispositivo] | [versión] | [fecha] | [video] |
 
 #### 4.2.1.9. Team Collaboration Insights during Sprint
 
 Explicar cómo se distribuyó el trabajo y adjuntar capturas de commits, tablero, pull requests y revisiones. Los datos deben coincidir con el Registro de Versiones del Informe y el Participant Performance Report.
-
-## 4.3. Validation Interviews
-
-### 4.3.1. Diseño de Entrevistas
-
-**Objetivo:** [validar facilidad de uso, comprensión, confianza y cumplimiento del flujo seleccionado].
-
-**Participantes:** [segmento, cantidad y criterios de selección].
-
-**Tareas evaluadas:** [tareas concretas del prototipo o aplicación].
-
-**Guion:** [preguntas y orden].
-
-### 4.3.2. Registro de Entrevistas
-
-| Participante | Segmento | Fecha | Tareas ejecutadas | Hallazgos principales | Evidencia |
-|---|---|---|---|---|---|
-| [P01] | [paciente / psicólogo] | [fecha] | [tareas] | [hallazgos] | [enlace] |
-
-### 4.3.3. Evaluaciones según heurísticas
-
-| # | Problema | Severidad (1-4) | Heurística / principio | Recomendación | Estado |
-|---:|---|---:|---|---|---|
-| 1 | [problema] | [1-4] | [heurística] | [recomendación] | [pendiente / corregido] |
-
-**Capturas de problemas:** [insertar una captura por problema relevante].
-
 
 ---
