@@ -254,13 +254,28 @@ Durante el Sprint 1 se implementaron incrementos en los tres repositorios de có
 
 #### 4.2.1.5. Testing Suite Evidence for Sprint Review
 
-| Tipo de prueba | User Story | Caso / clase | Resultado | Commit / ruta |
-|---|---|---|---|---|
-| Unit | [US-xxx] | [caso] | [passed/failed] | [enlace] |
-| Integration | [US-xxx] | [endpoint / adaptador] | [resultado] | [enlace] |
-| Acceptance / BDD | [US-xxx] | [archivo .feature] | [resultado] | [enlace] |
+La suite de pruebas del Sprint 1 combina tres niveles. Las pruebas unitarias usan **JUnit 5** y **Mockito** (repositorios y servicios externos simulados), las de integración levantan el contexto de Spring Boot con **MockMvc** sobre una base H2 en memoria, y las de aceptación se escriben en Gherkin con **Karate**, que llama a la API real en un puerto aleatorio. **JaCoCo** mide la cobertura y un **Jenkinsfile** ejecuta todo en integración continua.
 
-**Criterios de prueba y datos utilizados:** [describir sin exponer datos personales reales].
+**Resultado de la ejecución (`./mvnw clean verify`, rama `develop`):** 121 pruebas en el backend, 0 fallos, 0 errores; cobertura de líneas de 58,9 %. En la aplicación móvil (`./gradlew testDebugUnitTest`): 19 pruebas, 0 fallos.
+
+| Tipo de prueba | User Story / contexto | Caso / clase | Resultado | Ruta |
+|---|---|---|---|---|
+| Unit (Mockito) | US-006 · Profiles | `ProfileCommandServiceImplTest` (7), `ProfileQueryServiceImplTest` (6) | 13 passed | [profiles](https://github.com/MindClusterUPC/safediary-platform/tree/develop/src/test/java/com/mindcluster/safediary/profiles) |
+| Unit (Mockito) | Rutines | `RoutineCommandServiceImplTest` (7), `RoutineQueryServiceImplTest` (6) | 13 passed | [rutines](https://github.com/MindClusterUPC/safediary-platform/tree/develop/src/test/java/com/mindcluster/safediary/rutines) |
+| Unit (Mockito) | US-011 · AssistantAI | `ConversationCommandServiceImplTest` (6), `ConversationQueryServiceImplTest` (5) | 11 passed | [assistantai](https://github.com/MindClusterUPC/safediary-platform/tree/develop/src/test/java/com/mindcluster/safediary/assistantai/application) |
+| Unit (dominio) | US-011 · AssistantAI | `ConversationSessionTest`, `RiskPolicyServiceTest`, `RiskAssessmentTest`, `EmotionClassifierServiceTest`, `CognitiveDistortionServiceTest`, `ClinicalSummaryTest`, `ClinicalSummarySynthesizerServiceTest`, assembler | 37 passed | [assistantai/domain](https://github.com/MindClusterUPC/safediary-platform/tree/develop/src/test/java/com/mindcluster/safediary/assistantai/domain) |
+| Unit (dominio) | Care Scheduling · Payments | `AppointmentTest`, `BookableSlotCalculatorTest`, `SubscriptionTest`, `SubscriptionCommandServiceTest` | 20 passed | [carescheduling](https://github.com/MindClusterUPC/safediary-platform/tree/develop/src/test/java/com/mindcluster/safediary/carescheduling), [payments](https://github.com/MindClusterUPC/safediary-platform/tree/develop/src/test/java/com/mindcluster/safediary/payments) |
+| Integration | Clinician Directory | `DirectoryApiIntegrationTest`, `DevelopmentIamRoleClientTest` | 15 passed | [cliniciandirectory](https://github.com/MindClusterUPC/safediary-platform/tree/develop/src/test/java/com/mindcluster/safediary/cliniciandirectory) |
+| Integration | Care Scheduling | `CareSchedulingApiIntegrationTest` | 4 passed | [carescheduling](https://github.com/MindClusterUPC/safediary-platform/tree/develop/src/test/java/com/mindcluster/safediary/carescheduling) |
+| Acceptance / BDD (Karate) | US-006 · Profiles | `patients.feature`: registrar paciente, consultar por id y actualizar contacto de emergencia; id inexistente | 2 passed | [patients.feature](https://github.com/MindClusterUPC/safediary-platform/tree/develop/src/test/resources/karate/profiles/patients.feature) |
+| Acceptance / BDD (Karate) | Rutines | `daily-routines.feature`: crear, listar por paciente y activar o desactivar; payload inválido | 2 passed | [daily-routines.feature](https://github.com/MindClusterUPC/safediary-platform/tree/develop/src/test/resources/karate/rutines/daily-routines.feature) |
+| Acceptance / BDD (Karate) | US-011 · seguridad | `crisis-resources.feature`: líneas de ayuda con la Línea 113 | 1 passed | [crisis-resources.feature](https://github.com/MindClusterUPC/safediary-platform/tree/develop/src/test/resources/karate/assistantai/crisis-resources.feature) |
+| Acceptance / BDD (Karate) | Clinician Directory | `clinicians.feature`: búsqueda y psicólogo inexistente | 2 passed | [clinicians.feature](https://github.com/MindClusterUPC/safediary-platform/tree/develop/src/test/resources/karate/cliniciandirectory/clinicians.feature) |
+| Unit (móvil) | US-011 · Diarito | `AiConversationAggregateTest` (10), `DiaritoPersonalityTest` (5), `OfflineChatTest` (3) | 18 passed | [app/src/test](https://github.com/MindClusterUPC/SafeDiary-Android/tree/develop/app/src/test) |
+
+**Pipeline de integración continua:** el `Jenkinsfile` del backend define las etapas *Compile*, *Unit Tests* (excluye los runners de Karate), *Acceptance Tests* (Karate), *Coverage* (reporte y umbral de JaCoCo) y *Package*. Publica los reportes de Surefire, el sitio de JaCoCo y el reporte HTML de Karate.
+
+**Criterios de prueba y datos utilizados:** se usan datos ficticios (nombres, correos `@example.com` y teléfonos de prueba) en una base H2 en memoria que se crea en cada ejecución; el proveedor de IA se reemplaza por un doble de prueba, por lo que ninguna prueba llama a servicios externos ni usa datos personales reales. Las historias US-001, US-003, US-015 y US-016 (IAM) y US-008 y US-010 (Diary) aún no tienen endpoints en el backend; sus escenarios de aceptación son los criterios en Gherkin del capítulo 2 y se automatizarán cuando esos contextos se implementen.
 
 #### 4.2.1.6. Execution Evidence for Sprint Review
 
