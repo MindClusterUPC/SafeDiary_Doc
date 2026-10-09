@@ -338,7 +338,7 @@ Las siguientes capturas muestran la ejecución de endpoints desde Swagger UI sob
 
 #### 4.2.1.8. Software Deployment Evidence for Sprint Review
 
-La configuración de cada despliegue se describe en la sección 4.1.4. La Landing Page se publica en GitHub Pages desde `main`; el backend se despliega en Render como servicio Docker desde `main`. La versión v0.1.0 (5 de octubre) publicó AssistantAI y la versión v0.2.0 (9 de octubre) integró Profiles, Rutines, Clinician Directory, Care Scheduling y Payments, de modo que los ocho grupos de endpoints del sprint están disponibles en Swagger; la aplicación móvil se prueba como APK en emuladores y dispositivos Android apuntando al backend de Render.
+La configuración de cada despliegue se describe en la sección 4.1.4. La Landing Page se publica en GitHub Pages desde `main`; el backend se despliega en Render como servicio Docker desde `main`. La versión v0.1.0 (5 de octubre) publicó AssistantAI y la versión v0.2.0 (9 de octubre) integró Profiles, Rutines, Clinician Directory, Care Scheduling y Payments, de modo que los endpoints del sprint están disponibles en Swagger. La versión v0.2.1 corrigió la creación de los schemas de cada contexto en PostgreSQL; la aplicación móvil se prueba como APK en emuladores y dispositivos Android apuntando al backend de Render.
 
 | Producto | Plataforma | URL / versión | Fecha | Evidencia |
 |---|---|---|---|---|
