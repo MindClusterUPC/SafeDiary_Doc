@@ -1411,6 +1411,8 @@ El prototipo interactivo se elaboró en Figma con las mismas pantallas de los Wi
 
 ![Prototipo del psicólogo ejecutándose en Figma](../assets/images/chap3/prototype/prototipo-psicologo.jpg)
 
+**Video del prototipo del psicologo:** [Prototipo del psicologo en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202422890_upc_edu_pe/IQDrYcL-JtOxSZTe9BDmUGlwAa8cw8ppdIIeSJLADYLpWoo?e=xUchqh&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+
 **Alcance interactivo:**
 
 - **Paciente:**
