@@ -1842,6 +1842,6 @@ El prototipo interactivo se elaboró en Figma con las mismas pantallas de los Wi
 - **Barra inferior en las pantallas de citas del psicólogo:** las pantallas de citas que comparten ambos roles (proponer horario, chat y sesión) conservan la barra inferior del paciente.
 - **Ficha del paciente:** la «Patient File» de la agenda todavía no tiene una pantalla de destino.
 
-**Prueba rápida:** pendiente de realizar con usuarios del segmento. Los participantes, tareas, hallazgos y cambios se registrarán en la sección 4.3 (Validation Interviews).
+**Prueba rápida:** pendiente de realizar con usuarios del segmento. Se realizará en un siguiente sprint.
 
 **Criterios de entrega:** el prototipo permite demostrar el flujo principal del Sprint 1 y mantiene consistencia con las historias y el Product Backlog.
