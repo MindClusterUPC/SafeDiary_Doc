@@ -30,3 +30,4 @@
 
 | Entrega | Enlace de exposición |
 | :--- | :--- |
+| TB1 | [Ver exposición del TB1](https://upcedupe-my.sharepoint.com/:f:/g/personal/u202318609_upc_edu_pe/IgA9Kr43jQZbSqsL_bUw4B6xAVTRg0CjEqzkYlzAw4N6f7k?e=qFZmFR) |
