@@ -13,7 +13,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
-OUTPUT = DOCS / "SafeDiary-Report.md"
+OUTPUT = DOCS / "upc-pre-202620-1acc0238-4948-mindcluster-report-tb1.md"
 
 # Chapters are numbered (00-cover.md, 10-chap-1.md, ...): file name order is report order.
 CHAPTER_PATTERN = re.compile(r"^\d{2}-.+\.md$")
@@ -33,9 +33,45 @@ def normalize(text):
     return CROSS_FILE_LINK.sub(lambda m: "](" + (m.group(1) or "#") + ")", text)
 
 
+def add_section_breaks(text, levels):
+    """Start each heading of the given levels on a new page."""
+    out = []
+    in_code = False
+    last_heading_level = None
+    for line in text.split("\n"):
+        if line.lstrip().startswith("```"):
+            in_code = not in_code
+        level = len(line) - len(line.lstrip("#"))
+        is_heading = not in_code and 0 < level <= 6 and line[level:level + 1] == " "
+        # Break only between sibling sections, so a section stays on the page of its parent's introduction.
+        sibling = last_heading_level is not None and last_heading_level >= level
+        if is_heading and level in levels and (sibling or (level == 1 and any(o.strip() for o in out))):
+            out.append(PAGE_BREAK.strip("\n"))
+            out.append("")
+        if is_heading:
+            last_heading_level = level
+        out.append(line)
+    return "\n".join(out)
+
+
+# Heading levels that start a new page in each file; files not listed only break between files.
+SECTION_BREAKS = {
+    "00-cover.md": {1},
+    "10-chap-1.md": {2},
+    "20-chap-2.md": {2},
+    "30-chap-3.md": {2, 3},
+    "40-chap-4.md": {2, 3},
+}
+
+
 def main():
     files = chapter_files()
-    parts = [normalize(f.read_text(encoding="utf-8")).strip() for f in files]
+    parts = []
+    for f in files:
+        text = normalize(f.read_text(encoding="utf-8")).strip()
+        if f.name in SECTION_BREAKS:
+            text = add_section_breaks(text, SECTION_BREAKS[f.name])
+        parts.append(text)
     OUTPUT.write_text(PAGE_BREAK.join(parts) + "\n", encoding="utf-8")
     print(f"Merged {len(files)} files into {OUTPUT.relative_to(ROOT)}:")
     for f in files:
