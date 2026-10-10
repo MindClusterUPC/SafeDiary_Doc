@@ -189,7 +189,7 @@ El proceso de despliegue asegura que cada pieza del sistema esté disponible en 
 | Ubicación | Virtual - Discord |
 | Preparado por | Kamil Diaz |
 | Asistentes | Marcelo Cuadros, Andres Torres, Juan Wang, Santiago Vargas |
-| Sprint Goal | **Nuestro foco está en** desplegar la landing page pública informativa y entregar el núcleo funcional de la aplicación móvil para autenticación segura (incluyendo acceso biométrico) y registro del diario emocional asistido por voz con inteligencia artificial.<br><br>**Creemos que brinda** un canal de captación transparente y un espacio íntimo, confiable y libre de fricción a los **pacientes jóvenes** para que comiencen a expresar y procesar sus vivencias cotidianas con total control de su privacidad.<br><br>**Esto se confirmará cuando** un nuevo usuario pueda informarse en la landing page, registrarse e iniciar sesión en la app (vía correo, Google/Apple o biometría), marcar su estado de ánimo y guardar exitosamente una primera entrada de diario con reflexión generada por voz e IA. |
+| Sprint Goal | **Nuestro foco está en** desplegar la Landing Page pública informativa y la infraestructura base del Backend en el entorno de producción. <br><br> **Creemos que esto habilitará** un canal inicial de captación para pacientes jóvenes y dejará operativa la arquitectura de servicios necesaria para procesar y gestionar la información de la plataforma con total privacidad. <br><br> **Esto se confirmará cuando** las pruebas técnicas verifiquen el procesamiento y la persistencia correcta de datos en la Base de Datos en producción, y la Landing Page comience a captar y registrar a los primeros usuarios interesados. |
 | Velocity | 35 |
 | Story Points incluidos | 32 |
 
