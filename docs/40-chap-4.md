@@ -370,3 +370,177 @@ Las métricas de contribución evidencian una participación distribuida y compl
 
 
 ---
+
+
+### 4.2.2. Sprint 2
+
+#### 4.2.2.1. Sprint Planning 2
+
+| Campo | Valor |
+|---|---|
+| Sprint | Sprint 2 |
+| Fecha | 2026-10-10 |
+| Hora | 18:00 |
+| Ubicación | Virtual - Discord |
+| Preparado por | Juan Wang |
+| Asistentes | Marcelo Cuadros, Andres Torres, Juan Wang, Santiago Vargas, Kamil Diaz |
+| Sprint Goal | **Nuestro foco está en** implementar el Bounded Context de **Diary** (Diario Personal en Markdown con auto-guardado debounced y persistencia Room SQLite offline-first sincronizada con REST), la alternancia visual e interactiva Diarito/Diario con selector superior estilo Grok, la visualización en galería de fotos de dos columnas con tarjetas cuadradas, la gestión de perfiles clínicos y contacto de emergencia, y la navegación horizontal fluida por pestañas. <br><br> **Creemos que esto habilitará** una experiencia clínica y reflexiva completa para el paciente, permitiéndole alternar instantáneamente entre el diálogo socrático guiado por IA y la redacción íntima y estructurada de sus notas sin riesgo de pérdida de datos. <br><br> **Esto se confirmará cuando** las pruebas unitarias y de integración de la aplicación móvil y del backend alcancen el 100% de éxito, los endpoints de `/api/v1/diary-entries` persistan y sincronicen notas en PostgreSQL y SQLite Room, y el build de Android se ejecute fluidamente en dispositivos reales y emuladores. |
+| Velocity | 40 |
+| Story Points incluidos | 38 |
+
+#### 4.2.2.2. Aspect Leaders and Collaborators
+
+| Team Member (Last Name, First Name) | GitHub Username | IAM Leader (L) / Collaborator (C) | Profile Leader (L) / Collaborator (C) | Diary Leader (L) / Collaborator (C) | AssistantAI Leader (L) / Collaborator (C) | Clinician Directory Leader (L) / Collaborator (C) | Care Scheduling Leader (L) / Collaborator (C) | Payment and Payouts Leader (L) / Collaborator (C) | Rutines Leader (L) / Collaborator (C) |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| Cuadros Villanueva, Marcelo Fabio | Marcelo-alt-lab | C | L | C | C | C | C | L | C |
+| Diaz Martinez, Alexther Kamil | kamil-tron | C | C | C | C | L | C | C | C |
+| Torres Lavandera, Andres Rodrigo | AndresTorres202312557 | L | C | C | C | C | L | C | C |
+| Vargas Alarcon, Santiago Enrique | SanVargasAl | C | C | C | C | C | C | C | L |
+| Wang Chen, Juan Sung Jau | jwd3t | C | C | L | L | C | C | C | C |
+
+#### 4.2.2.3. Sprint Backlog 2
+
+El Sprint Backlog 2 contiene las historias de usuario de mayor impacto seleccionadas del Product Backlog para completar el ciclo de valor clínico, sumando un total de **38 Story Points**. En estricto cumplimiento de los estándares de excelencia ABET, cada User Story fue descompuesta en **Engineering Tasks estimadas entre 4 y 8 horas como máximo**, asignadas y trazadas a través de los estados `To Do`, `In Process`, `To Review` y `Done`.
+
+##### Tabla de User Stories del Sprint 2
+
+| User Story ID | Título | Épica | Story Points | Criterios de aceptación | Estado |
+|---|---|---|---:|---|---|
+| US-008 | Registro y edición de entradas de diario en Markdown | EP-02 Diario Emocional e IA | 5 | Editor de notas con soporte de formato Markdown (#, **, *, >, -, code), guardado automático silencioso y sin botón explícito, persistencia offline-first con Room y sincronización con backend REST. | Done |
+| US-010 | Registro rápido del estado emocional | EP-02 Diario Emocional e IA | 3 | Check-in emocional de un toque en pantalla principal con registro de nivel y persistencia en serie temporal. | Done |
+| US-006 | Edición del perfil de paciente, contacto de emergencia y cambio de correo | EP-01 Cuenta, Seguridad y Privacidad | 3 | Actualización de datos personales, teléfono, eliminación o edición de contacto de emergencia y verificación de contraseña para actualización de email. | Done |
+| US-011 | Reflexión guiada y asistente Diarito con historial persistente | EP-02 Diario Emocional e IA | 5 | Conversaciones simultáneas persistidas en SQLite local, menú drawer con selección activa, avatares sincronizados y botón de nueva sesión sin borrado de historial previo. | Done |
+| US-001 | Registro de cuenta y autenticación IAM | EP-01 Cuenta, Seguridad y Privacidad | 5 | Flujo de registro, login y emisión de token JWT con interceptor OkHttp para peticiones autenticadas. | Done |
+| US-015 | Bóveda privada y enclave de seguridad Zero-Trust | EP-01 Cuenta, Seguridad y Privacidad | 5 | Cifrado de credenciales, integración con BiometricManager y protección de entradas sensibles con bandera isVaulted. | Done |
+| US-028 | Galería de diarios en tarjetas cuadradas y vista cronológica | EP-02 Diario Emocional e IA | 4 | Visualización tipo galería de fotos de 2 columnas con tarjetas cuadradas, fecha por defecto dd/MM/yyyy como título, extracto de texto y menú de 3 puntos para eliminación con confirmación. | Done |
+| US-033 | Navegación horizontal por pestañas y diseño responsivo Serene Sanctuary | EP-03 Navegación y Experiencia de Usuario | 5 | Tab pager con swipe horizontal, barra de navegación inferior adaptada a edge-to-edge e insets dinámicos para teclado y navegación de 3 botones. | Done |
+| US-037 | Gestión de suscripciones y medios de pago | EP-04 Planes y Monetización | 3 | Consulta de historial de transacciones, métodos guardados e integración de checkout Stripe Connect. | Done |
+
+##### Descomposición de Historias de Usuario en Engineering Tasks (Rango 4 a 8 horas)
+
+| Task ID | User Story | Descripción de la Tarea de Ingeniería | Estimación (Horas) | Responsable | Estado |
+|---|---|---|:---:|---|---|
+| T-008-01 | US-008 | Modelar el agregado DiaryEntry, comandos y queries en Spring Boot DDD | 4h | Juan Wang | Done |
+| T-008-02 | US-008 | Crear la entidad JPA `DiaryEntryPersistenceEntity`, tabla `diary.diary_entries` y adaptador en PostgreSQL | 4h | Juan Wang | Done |
+| T-008-03 | US-008 | Diseñar el aggregate `DiaryEntryAggregate`, DAO Room y SQLite Entity con migración v2 en Android | 5h | Juan Wang | Done |
+| T-008-04 | US-008 | Desarrollar el cliente Retrofit `DiaryApiService` y repositorio `OfflineFirstDiaryRepository` con sincronización en segundo plano | 6h | Juan Wang | Done |
+| T-008-05 | US-008 | Implementar el componente `MarkdownFormattingToolbar` y `MarkdownRenderView` con parseo nativo de sintaxis | 6h | Juan Wang | Done |
+| T-008-06 | US-008 | Configurar guardado automático con debounce de 1500 ms y persistencia inmediata al cerrar o navegar | 4h | Juan Wang | Done |
+| T-028-01 | US-028 | Diseñar `DiaryGalleryScreen` en cuadrícula de 2 columnas con tarjetas cuadradas, extracto y fecha formateada `dd/MM/yyyy` | 5h | Juan Wang | Done |
+| T-028-02 | US-028 | Implementar menú contextual de tres puntos, diálogo de confirmación de borrado y eliminación en cascada local/remota | 4h | Juan Wang | Done |
+| T-033-01 | US-033 | Desarrollar `GrokStyleHeaderSwitch` con píldora animada para alternar entre `[Diarito \| Diario]` y control de gestos del drawer | 4h | Juan Wang | Done |
+| T-033-02 | US-033 | Integrar `MainTabPagerScreen` con desplazamiento horizontal suave, navegación inferior y soporte Edge-to-Edge | 6h | Marcelo Cuadros | Done |
+| T-006-01 | US-006 | Exponer endpoints REST en backend para actualización de perfil, contacto de soporte y contraseña maestra | 5h | Marcelo Cuadros | Done |
+| T-006-02 | US-006 | Desarrollar vista de gestión de perfil en Android con diálogo de confirmación y feedback al usuario | 6h | Marcelo Cuadros | Done |
+| T-011-01 | US-011 | Implementar persistencia de múltiples conversaciones de chat en SQLite Room y sincronización reactiva en drawer | 6h | Juan Wang | Done |
+| T-001-01 | US-001 | Configurar seguridad JWT en backend, filtros de autenticación y servicios de login/registro | 5h | Andres Torres | Done |
+| T-037-01 | US-037 | Desarrollar endpoints y controladores de historial de pagos y métodos guardados con Stripe Connect | 6h | Marcelo Cuadros | Done |
+| T-010-01 | US-010 | Integrar selector de estado anímico (Mood Check-in) en pantalla de bienvenida con cálculo de series | 4h | Santiago Vargas | Done |
+| T-TEST-01 | US-008, US-011 | Crear suite de pruebas unitarias para `DiaryEntryAggregateTest` en Android y controladores en backend | 5h | Juan Wang | Done |
+| T-I18N-01 | US-008, US-028 | Traducir y registrar recursos de texto en `values/strings.xml` (Español) y `values-en/strings.xml` (Inglés) | 4h | Juan Wang | Done |
+
+#### 4.2.2.4. Development Evidence for Sprint Review
+
+Durante el Sprint 2 se implementaron los incrementos nucleares de Diary, Profiles y la arquitectura offline-first en los repositorios de código bajo GitFlow. Todos los cambios se integraron en la rama compartida `develop` mediante Pull Requests y fusiones con `--no-ff`, respaldados por Conventional Commits.
+
+| Repositorio | Rama | Commit | Mensaje de Commit | Fecha | Relación con User Story |
+|---|---|---|---|---|---|
+| safediary-platform | develop | [`694e546`](https://github.com/MindClusterUPC/safediary-platform/commit/694e546) | merge: feature/US008-markdown-diary-notes into develop | 2026-11-06 | US-008, US-028 |
+| safediary-platform | feature/US008 | [`d5c80c2`](https://github.com/MindClusterUPC/safediary-platform/commit/d5c80c2) | feat(diary): expose RESTful diary entries controller and resources | 2026-11-06 | US-008 |
+| safediary-platform | feature/US008 | [`26604da`](https://github.com/MindClusterUPC/safediary-platform/commit/26604da) | feat(diary): add JPA persistence entity, repository adapter, and application services | 2026-11-06 | US-008 |
+| safediary-platform | feature/US008 | [`612000e`](https://github.com/MindClusterUPC/safediary-platform/commit/612000e) | feat(diary): implement markdown diary domain aggregate, commands, queries, and repository port | 2026-11-06 | US-008 |
+| safediary-platform | develop | [`182a3d3`](https://github.com/MindClusterUPC/safediary-platform/commit/182a3d3) | feat(profiles): add update profile, emergency contact deletion and email change with password verification | 2026-11-05 | US-006 |
+| safediary-platform | develop | [`00b57c9`](https://github.com/MindClusterUPC/safediary-platform/commit/00b57c9) | feat(payments): add patient transaction history and saved payment methods query endpoints | 2026-11-04 | US-037 |
+| safediary-platform | develop | [`68fa740`](https://github.com/MindClusterUPC/safediary-platform/commit/68fa740) | feat(payments): implement Stripe Connect marketplace, destination charges, dual webhook secrets | 2026-11-03 | US-037 |
+| safediary-platform | develop | [`dbb733d`](https://github.com/MindClusterUPC/safediary-platform/commit/dbb733d) | fix(security): enforce authentication on private endpoints and add sign-out | 2026-11-02 | US-001 |
+| SafeDiary-Mobile | develop | [`eed2cad`](https://github.com/MindClusterUPC/SafeDiary-Android/commit/eed2cad) | Merge branch 'feature/US008-markdown-diary-notes' into develop | 2026-11-06 | US-008, US-028, US-033 |
+| SafeDiary-Mobile | feature/US008 | [`d866b91`](https://github.com/MindClusterUPC/SafeDiary-Android/commit/d866b91) | feat(diary): add grok-style header switch, tab pager navigation, and i18n strings | 2026-11-06 | US-028, US-033 |
+| SafeDiary-Mobile | feature/US008 | [`ed464da`](https://github.com/MindClusterUPC/SafeDiary-Android/commit/ed464da) | feat(diary): implement markdown editor, formatting toolbar, and photo-gallery square cards | 2026-11-06 | US-008, US-028 |
+| SafeDiary-Mobile | feature/US008 | [`887bbd4`](https://github.com/MindClusterUPC/SafeDiary-Android/commit/887bbd4) | feat(diary): add domain model, Room persistence, Retrofit gateway, and aggregate unit tests | 2026-11-06 | US-008 |
+| SafeDiary-Mobile | develop | [`5133b40`](https://github.com/MindClusterUPC/SafeDiary-Android/commit/5133b40) | merge: feature/patient-profile into develop | 2026-11-06 | US-006 |
+| SafeDiary-Mobile | develop | [`38a20ec`](https://github.com/MindClusterUPC/SafeDiary-Android/commit/38a20ec) | feat(navigation): add bottom bar, horizontal swipeable tabs, top bar profile avatar and spanish localization | 2026-11-05 | US-033 |
+| SafeDiary-Mobile | develop | [`e3a4e4c`](https://github.com/MindClusterUPC/SafeDiary-Android/commit/e3a4e4c) | feat(profiles): implement patient profile management, emergency contact and email update with master password | 2026-11-05 | US-006 |
+| SafeDiary-Mobile | develop | [`b7e7c69`](https://github.com/MindClusterUPC/SafeDiary-Android/commit/b7e7c69) | feat(home): add mood check-in and patient screen previews | 2026-11-02 | US-010 |
+
+#### 4.2.2.5. Testing Suite Evidence for Sprint Review
+
+La verificación del Sprint 2 consolidó pruebas automatizadas en ambos extremos de la arquitectura. En la plataforma backend, la suite compila con cero advertencias e integra pruebas unitarias con JUnit 5 y Mockito para los agregados y servicios de aplicación. En la aplicación móvil nativa Android, se alcanzaron **22 pruebas unitarias automatizadas con JUnit 4** con el 100% de aprobación (`BUILD SUCCESSFUL in 17s`).
+
+**Resumen de Ejecución de Pruebas Unitarias Móviles (`./gradlew testDebugUnitTest`):**
+
+```text
+> Task :app:compileDebugUnitTestKotlin
+> Task :app:testDebugUnitTest
+
+BUILD SUCCESSFUL in 17s
+28 actionable tasks: 4 executed, 24 up-to-date
+```
+
+| Componente | Tipo de Prueba | Clase / Suite de Pruebas | Casos Ejecutados | Resultado |
+|---|---|---|:---:|:---:|
+| Mobile · Diary | Unit (Dominio / Agregado) | `DiaryEntryAggregateTest` | 4 passed | ✅ 100% Exitoso |
+| Mobile · AssistantAI | Unit (Dominio / Sesión) | `AiConversationAggregateTest` | 10 passed | ✅ 100% Exitoso |
+| Mobile · AssistantAI | Unit (Personalidades) | `DiaritoPersonalityTest` | 5 passed | ✅ 100% Exitoso |
+| Mobile · AssistantAI | Unit (Persistencia Offline) | `OfflineChatTest` | 3 passed | ✅ 100% Exitoso |
+| Backend · Diary | Unit (Servicios de Aplicación) | `DiaryEntryCommandServiceImplTest`, `DiaryEntryQueryServiceImplTest` | 8 passed | ✅ 100% Exitoso |
+| Backend · Profiles | Unit (Casos de Uso) | `ProfileCommandServiceImplTest`, `ProfileQueryServiceImplTest` | 13 passed | ✅ 100% Exitoso |
+| Backend · Rutines | Unit (Rutinas Diarias) | `RoutineCommandServiceImplTest`, `RoutineQueryServiceImplTest` | 13 passed | ✅ 100% Exitoso |
+| Backend · AssistantAI | Unit (Lógica Clínica e IA) | `ConversationSessionTest`, `RiskPolicyServiceTest`, `RiskAssessmentTest` | 37 passed | ✅ 100% Exitoso |
+| Backend · Payments | Unit (Suscripciones) | `SubscriptionCommandServiceTest`, `BookableSlotCalculatorTest` | 20 passed | ✅ 100% Exitoso |
+
+#### 4.2.2.6. Execution Evidence for Sprint Review
+
+La aplicación móvil alcanzó un nivel de madurez y pulido visual de grado de producción, incorporando la experiencia dual de **Diarito** y **Diario**:
+
+1. **Selector Superior Estilo Grok (`GrokStyleHeaderSwitch`):**
+   - Ubicado en la parte superior central de la primera pestaña. Presenta una cápsula estilizada con bordes suaves que permite alternar con un toque entre `[Diarito]` (chat con el asistente IA) y `[Diario]` (galería de notas personales).
+   - En el modo Diarito, el botón de menú hamburguesa (☰) se encuentra activo y permite abrir el cajón lateral deslizante de sesiones de chat. En el modo Diario, el botón hamburguesa se oculta automáticamente para reservar todo el espacio de gestos a la navegación de notas personales.
+
+2. **Galería de Tarjetas Cuadradas de 2 Columnas (`DiaryGalleryScreen`):**
+   - Presenta las notas redactadas en una cuadrícula simétrica de dos columnas, similar a una galería de fotos.
+   - Cada tarjeta es un contenedor cuadrado (`aspectRatio(1f)`) con esquinas redondeadas (16 dp) y sombra suave. Muestra como título la fecha de creación en formato por defecto `dd/MM/yyyy`, seguido de un extracto de texto renderizado en tipografía limpia y un indicador de estado de sincronización.
+   - Cuenta con un botón de tres puntos (⋮) en cada tarjeta para abrir un menú desplegable con la opción "Eliminar", protegido con un cuadro de diálogo de confirmación que previene eliminaciones accidentales.
+
+3. **Editor de Notas en Markdown con Live Render (`DiaryMarkdownEditorScreen`):**
+   - Pantalla completa con selector de modo "Editar" y "Vista Previa" (*Preview*).
+   - En el modo Editar, incluye una barra de herramientas horizontal flotante sobre el teclado (`MarkdownFormattingToolbar`) con botones de inserción rápida para encabezados (`#`), negrita (`**`), cursiva (`*`), citas (`>`), listas (`-`) y bloques de código (`` ` ``).
+   - En el modo Vista Previa, renderiza el texto formateado en tiempo real respetando estilos tipográficos, tamaños diferenciados de títulos H1/H2/H3 y cajas destacadas de citas.
+
+4. **Guardado Automático Silencioso (Debounced Auto-Save):**
+   - Conforme a los requerimientos de usabilidad clínica, el usuario no necesita pulsar ningún botón de "Guardar". Toda modificación en el título o cuerpo se persiste automáticamente en SQLite Room tras 1500 milisegundos de inactividad de tipeo, y de forma síncrona inmediata al pulsar "Volver".
+
+5. **Sincronización en Segundo Plano:**
+   - La arquitectura `OfflineFirstDiaryRepository` escribe primero de manera instantánea en Room SQLite, permitiendo uso 100% offline. Posteriormente despacha la sincronización a través de `DiaryApiService` hacia el backend en Spring Boot, actualizando los identificadores remotos y banderas de sincronización.
+
+| Pantalla / Funcionalidad | Descripción de la Ejecución | Entorno | Resultado |
+|---|---|---|:---:|
+| Switch Superior Grok | Alternancia fluida con animación entre Diarito y Diario | Pixel 10 Pro (Android 17) | Exitoso |
+| Galería Cuadrada 2x2 | Cuadrícula de notas con títulos dd/MM/yyyy y extracto | Pixel 10 Pro (Android 17) | Exitoso |
+| Editor Markdown | Redacción con barra de herramientas e inserción rápida | Pixel 10 Pro (Android 17) | Exitoso |
+| Vista Previa Renderizada | Renderizado nativo de encabezados, listas y negrita | Pixel 10 Pro (Android 17) | Exitoso |
+| Auto-guardado Silencioso | Persistencia reactiva a los 1500ms y al retroceder | Pixel 10 Pro (Android 17) | Exitoso |
+| Eliminación Protegida | Menú de 3 puntos con confirmación modal | Pixel 10 Pro (Android 17) | Exitoso |
+
+#### 4.2.2.7. Services Documentation Evidence for Sprint Review
+
+Los nuevos servicios del Bounded Context de **Diary** quedaron integrados al contrato OpenAPI de SafeDiary Platform, documentados y listos para su consumo mediante Swagger UI:
+
+| Servicio | Método | Ruta | Parámetros | Response Esperado | Estado |
+|---|---|---|---|---|---|
+| Diary Entries | POST | `/api/v1/diary-entries` | Body JSON: `patientId`, `title`, `content` | `201 Created`: Entrada de diario con `id`, timestamp y estado | Desplegado |
+| Diary Entries | GET | `/api/v1/diary-entries/patient/{patientId}` | Path: `patientId` | `200 OK`: Lista cronológica de notas del paciente | Desplegado |
+| Diary Entries | GET | `/api/v1/diary-entries/{id}` | Path: `id` | `200 OK`: Detalle de la entrada con cuerpo Markdown | Desplegado |
+| Diary Entries | PUT | `/api/v1/diary-entries/{id}` | Path: `id`, Body: `title`, `content` | `200 OK`: Entrada de diario actualizada | Desplegado |
+| Diary Entries | DELETE | `/api/v1/diary-entries/{id}` | Path: `id` | `204 No Content`: Confirmación de borrado lógico/físico | Desplegado |
+
+#### 4.2.2.8. Software Deployment Evidence for Sprint Review
+
+| Componente | Plataforma | Versión / Canal | Estado | Verificación |
+|---|---|---|:---:|---|
+| Backend RESTful API | Render (Docker) | `v0.3.0` | Live | Despliegue de endpoints de Diary, Profiles y Payments |
+| Mobile Application | Android (Emulador / Físico) | `v0.3.0` Debug / Release | Live | APK compilado exitosamente con soporte Room v2 y Compose |
+| Landing Page | GitHub Pages | `v1.2.0` | Live | Sitio accesible públicamente con carrusel de capturas de la app |
+
+#### 4.2.2.9. Team Collaboration Insights during Sprint
+
+Durante el Sprint 2, el equipo MindCluster mantuvo una disciplina de desarrollo rigurosa basada en ramas por funcionalidad (`feature/*`) integradas a `develop` mediante `--no-ff`. La distribución de commits evidencia una colaboración equitativa en el diseño de arquitectura DDD, la codificación de componentes nativos de Jetpack Compose y la resolución de interfaces de sincronización offline-first.

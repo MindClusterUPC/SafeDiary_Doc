@@ -118,6 +118,8 @@ Proyecto
 | 0.1.11 | 09/10/2026 | Juan Wang | Actualizar Registro de Versiones y Project Report Collaboration Insights del TB1 |
 | 0.1.12 | 09/10/2026 | Juan Wang | Añadir Sprint Backlog 1, evidencias de desarrollo, pruebas, servicios y despliegue (backend v0.2.0 en Render), anexos y video del prototipo del paciente |
 | 0.1.13 | 09/10/2026 | Marcelo Cuadros | Insights del Proyecto |
+| 0.2.0 | 06/11/2026 | Juan Wang | Implementación del Bounded Context Diary en backend y móvil, auto-guardado silencioso y switch estilo Grok |
+| 0.2.1 | 06/11/2026 | Juan Wang | Redacción de la sección 4.2.2 Sprint 2 (Sprint Planning, Backlog con Engineering Tasks de 4 a 8h, Evidencias y Servicios) para entrega AV2 |
 
 # Project Report Collaboration Insights
 

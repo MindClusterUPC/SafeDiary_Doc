@@ -13,7 +13,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
-OUTPUT = DOCS / "upc-pre-202620-1acc0238-4948-mindcluster-report-tb1.md"
+OUTPUT_TB1 = DOCS / "upc-pre-202620-1acc0238-4948-mindcluster-report-tb1.md"
+OUTPUT_AV2 = DOCS / "upc-pre-202620-1acc0238-4948-mindcluster-report-av2.md"
 
 # Chapters are numbered (00-cover.md, 10-chap-1.md, ...): file name order is report order.
 CHAPTER_PATTERN = re.compile(r"^\d{2}-.+\.md$")
@@ -72,8 +73,10 @@ def main():
         if f.name in SECTION_BREAKS:
             text = add_section_breaks(text, SECTION_BREAKS[f.name])
         parts.append(text)
-    OUTPUT.write_text(PAGE_BREAK.join(parts) + "\n", encoding="utf-8")
-    print(f"Merged {len(files)} files into {OUTPUT.relative_to(ROOT)}:")
+    full_content = PAGE_BREAK.join(parts) + "\n"
+    OUTPUT_TB1.write_text(full_content, encoding="utf-8")
+    OUTPUT_AV2.write_text(full_content, encoding="utf-8")
+    print(f"Merged {len(files)} files into {OUTPUT_AV2.relative_to(ROOT)} and {OUTPUT_TB1.relative_to(ROOT)}:")
     for f in files:
         print(f"  - {f.name}")
 
