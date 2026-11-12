@@ -17,6 +17,7 @@
 | Backend (Swagger UI) | https://safediary-platform.onrender.com/swagger-ui/index.html |
 | Product Backlog (Trello) | https://trello.com/b/Q2UsNz3t/product-backlog |
 | Sprint Backlog 1 (Trello) | https://trello.com/b/UgUM8rrn/sprint-backlog-1 |
+| Sprint Backlog 2 (Trello) | https://trello.com/b/mN57scXQ/mindcluster-sprint-2 |
 | Prototipo del paciente (Figma) | https://www.figma.com/proto/MLDzy0eLPVfy9dQKYsYkKw/safeDiary?node-id=214-4&starting-point-node-id=214%3A4&scaling=scale-down |
 | Prototipo del psicólogo (Figma) | https://www.figma.com/proto/MLDzy0eLPVfy9dQKYsYkKw/safeDiary?node-id=237-3&starting-point-node-id=237%3A3&scaling=scale-down |
 

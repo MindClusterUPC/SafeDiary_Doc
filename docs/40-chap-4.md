@@ -175,8 +175,6 @@ El proceso de despliegue asegura que cada pieza del sistema esté disponible en 
 
 ## 4.2. Landing Page & Mobile Application Implementation
 
-> **Plantilla para TB1.** Esta sección debe completarse con evidencias reales del Sprint 1. No declarar una funcionalidad como implementada si no existe commit, prueba y evidencia de ejecución.
-
 ### 4.2.1. Sprint 1
 
 #### 4.2.1.1. Sprint Planning 1
@@ -401,6 +399,8 @@ Las métricas de contribución evidencian una participación distribuida y compl
 #### 4.2.2.3. Sprint Backlog 2
 
 El Sprint Backlog 2 contiene las historias de usuario de mayor impacto seleccionadas del Product Backlog para completar el ciclo de valor clínico, sumando un total de **38 Story Points**. En estricto cumplimiento de los estándares de excelencia ABET, cada User Story fue descompuesta en **Engineering Tasks estimadas entre 4 y 8 horas como máximo**, asignadas y trazadas a través de los estados `To Do`, `In Process`, `To Review` y `Done`.
+
+**URL del tablero:** [Sprint Backlog 2 en Trello](https://trello.com/b/mN57scXQ/mindcluster-sprint-2)
 
 ##### Tabla de User Stories del Sprint 2
 
