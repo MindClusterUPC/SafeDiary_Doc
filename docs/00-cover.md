@@ -120,6 +120,7 @@ Proyecto
 | 0.2.0 | 06/11/2026 | Juan Wang | Implementación del Bounded Context Diary en backend y móvil, auto-guardado silencioso y switch estilo Grok |
 | 0.2.1 | 06/11/2026 | Juan Wang | Redacción de la sección 4.2.2 Sprint 2 (Sprint Planning, Backlog con Engineering Tasks de 4 a 8h, Evidencias y Servicios) para entrega AV2 |
 | 0.2.2 | 12/11/2026 | Marcelo Cuadros | Actualización de portada, tabla de contenidos, Collaboration Insights, Student Outcome, conclusiones, bibliografía y anexos para AV2 (Sprint 2) |
+| 0.2.3 | 12/11/2026 | Juan Wang | Corregir la sección 4.2.2 Sprint 2 con las historias, tareas, commits, pruebas y estado de despliegue reales; añadir 4.3 Validation Interviews y 4.4 Video About-the-Product |
 
 # Project Report Collaboration Insights
 
@@ -168,11 +169,11 @@ Durante el AV2 (Sprint 2) el equipo consolidó la implementación de los flujos 
 
 | Integrante | Principales aportes en el AV2 (Sprint 2) |
 | :--- | :--- |
-| **Cuadros Villanueva, Marcelo Fabio** | Endpoints REST y vistas Android de gestión de perfil de paciente, contacto de emergencia y cambio de correo con verificación de contraseña (US-006); endpoints de historial de transacciones y métodos guardados con Stripe Connect (US-037); integración de `MainTabPagerScreen` con navegación horizontal y soporte Edge-to-Edge (US-033); actualización de portada, índices, Student Outcome, conclusiones y anexos del informe para AV2. |
-| **Diaz Martinez, Alexther Kamil** | Coordinación de Sprint Review, seguimiento del tablero y alineamiento de los contextos y estándares de documentación en `SafeDiary_Doc`. |
-| **Torres Lavandera, Andres Rodrigo** | Configuración de seguridad JWT en backend, filtros de autenticación, servicios de login/registro y cumplimiento de autenticación en endpoints privados con cierre de sesión (US-001). |
-| **Vargas Alarcon, Santiago Enrique** | Integración del selector de estado anímico (*Mood Check-in*) en la pantalla de bienvenida de la aplicación móvil con cálculo de series temporales (US-010). |
-| **Wang Chen, Juan Sung Jau** | Implementación integral del Bounded Context Diary en backend (agregado `DiaryEntry`, persistencia JPA en PostgreSQL, endpoints REST `/api/v1/diary-entries`) y en Android (Room SQLite v2 offline-first, editor Markdown con vista previa en vivo, auto-guardado debounced a 1500 ms, galería de 2 columnas, switch estilo Grok, múltiples sesiones de Diarito, pruebas unitarias e i18n); redacción de la sección 4.2.2 Sprint 2 del informe. |
+| **Cuadros Villanueva, Marcelo Fabio** | Backend de Profiles (actualización de perfil, contacto de emergencia y cambio de correo con verificación de contraseña) y de Payments (Stripe Connect con destination charges y webhooks, historial de pagos y métodos guardados); en la app, flujo de autenticación, gestión de perfil, pagos y navegación por pestañas (US-001, US-006, US-037); actualización de portada, Student Outcome, conclusiones, bibliografía y anexos del informe. |
+| **Diaz Martinez, Alexther Kamil** | Vistas del paciente en la app: check-in de ánimo, directorio y ficha de psicólogos, solicitud de contacto y chat de coordinación, rutinas y ejercicios (US-010, US-002, US-048, US-007); persistencia de rutinas editables en el backend, horarios flexibles, aislamiento del historial heredado de Diarito, fotos de perfil y recuperación de sesiones inválidas. |
+| **Torres Lavandera, Andres Rodrigo** | Bounded Context IAM en el backend (dominio de cuentas y consentimientos, seguridad JWT, BCrypt, controladores y pruebas de integración) e integración de Care Scheduling con IAM; en la app, carga del directorio desde la API y conexión de Care Scheduling con el backend (US-001, US-002, US-014, US-043, US-049). |
+| **Vargas Alarcon, Santiago Enrique** | Conexión de las rutinas de autocuidado y de los ejercicios SOS de la app con el backend de Rutines, y sus pruebas de conexión (US-007, US-030). |
+| **Wang Chen, Juan Sung Jau** | Bounded Context Diary en backend y app (agregado `DiaryEntry`, JPA, Room offline-first, galería de notas y editor de diario con formato visual y preguntas guía); varias sesiones de Diarito por cuenta; restricción de todos los endpoints a la cuenta autenticada y aislamiento de datos locales por cuenta; pruebas Karate autenticadas; release `v0.3.0` del backend; redacción de la sección 4.2.2, 4.3 y 4.4 del informe (US-001, US-008, US-011, US-013). |
 
 ---
 
@@ -257,6 +258,11 @@ Durante el AV2 (Sprint 2) el equipo consolidó la implementación de los flujos 
   - 4.2. Landing Page & Mobile Application Implementation
     - 4.2.1. Sprint 1
     - 4.2.2. Sprint 2
+  - 4.3. Validation Interviews
+    - 4.3.1. Diseño de Entrevistas
+    - 4.3.2. Registro de Entrevistas
+    - 4.3.3. Evaluaciones según heurísticas
+  - 4.4. Video About-the-Product
 - Conclusiones
 - Recomendaciones
 - Bibliografía

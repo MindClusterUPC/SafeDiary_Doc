@@ -26,6 +26,9 @@
 | Tipo | Enlace |
 | :--- | :--- |
 | Prototipo del paciente (TB1) | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318609_upc_edu_pe/IQBV3BVjPB2yRZp9c5tZpiZbAeFxRfzOJcNEgN4F5J5rvNU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=lf6efQ) |
+| App Validation (AV2) | Pendiente de publicación |
+| About-the-Product (AV2) | Pendiente de publicación |
+| About-the-Team (AV2) | Pendiente de publicación |
 
 ## Anexo D. Videos de exposiciones
 
