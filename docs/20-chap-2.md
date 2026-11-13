@@ -1270,7 +1270,7 @@ La solución sigue una **arquitectura de servicios desacoplados** alineada con l
 
 #### 2.5.3.3. Software Architecture Deployment Diagrams
 
-El diagrama de despliegue ubica la aplicación móvil, los ocho servicios de dominio, sus almacenes de datos y las integraciones externas en un entorno de producción. Paciente y Psicólogo acceden mediante la misma aplicación móvil, con funciones diferenciadas por rol.
+El diagrama de despliegue representa el diseño de producción de los servicios de dominio, sus almacenes de datos y las integraciones externas. En la implementación del Sprint 2, el paciente utiliza la aplicación nativa Android y el psicólogo utiliza SafeDiary Clinical en Flutter. Ambas aplicaciones se conectan al mismo backend; la separación por rol se mantiene también en la autorización del servidor.
 
 **Descripción del Deployment Diagram**
 
@@ -1278,7 +1278,10 @@ El sistema SafeDiary separa el dispositivo móvil, los servicios de aplicación,
 
 **Client Tier (Clientes):**
 
-* **Mobile Device:** dispositivo Android o iOS donde Paciente y Psicólogo utilizan SafeDiary Mobile App (Flutter). El rol determina las funciones disponibles dentro de la misma aplicación.
+* **Dispositivo del paciente:** aplicación Android desarrollada en Kotlin con Jetpack Compose, en el repositorio [SafeDiary-Android](https://github.com/MindClusterUPC/SafeDiary-Android).
+* **Dispositivo del psicólogo:** aplicación SafeDiary Clinical desarrollada en Flutter y Dart, con ejecución Android documentada en el Sprint 2, en el repositorio [SafeDiary_Flutter](https://github.com/MindClusterUPC/SafeDiary_Flutter). Su navegación profesional incluye Agenda, Pacientes y Pagos.
+
+La representación móvil unificada del diagrama resume el nivel de diseño. Los dos clientes separados y su configuración de ejecución se detallan en las secciones 4.1.2, 4.1.4 y 4.2.2.
 
 **Cloud Tier (Infraestructura en la Nube):**
 

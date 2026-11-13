@@ -29,16 +29,17 @@ Con la finalidad de optimizar la productividad y garantizar la compatibilidad en
 
 ### 4.1.2. Source Code Management
 
-El código fuente de SafeDiary se encuentra descentralizado y organizado en **cuatro repositorios independientes** dentro de la organización oficial de GitHub del equipo, permitiendo el desacoplamiento de despliegues y la asignación eficiente de responsabilidades:
+El código fuente y el informe de SafeDiary se organizan en **cinco repositorios independientes** dentro de la organización oficial de GitHub del equipo. La aplicación nativa Android atiende a pacientes y la aplicación Flutter atiende a psicólogos; ambas consumen los contratos del mismo backend.
 
 <div align="center">
 
 | Producto Digital | Repositorio Oficial en GitHub | Tecnología y Propósito |
 | :--- | :--- | :--- |
 | **Documentación del Proyecto** | [MindClusterUPC/SafeDiary_Doc](https://github.com/MindClusterUPC/SafeDiary_Doc) | Docs-as-Code (Markdown / Pandoc). Alberga el informe técnico del proyecto, actas y evidencias. |
-| **Landing Page Web App** | [MindClusterUPC/safediary-landing-page](https://github.com/MindClusterUPC/safediary-landing-page) | HTML5, CSS3, JavaScript y Tailwind CSS. Sitio web público orientado a la adquisición y presentación de valor. |
+| **Landing Page Web App** | [MindClusterUPC/SafeDiary_Landing_Page](https://github.com/MindClusterUPC/SafeDiary_Landing_Page) | HTML5, CSS3, JavaScript y Tailwind CSS. Sitio web público orientado a la adquisición y presentación de valor. |
 | **Backend RESTful API** | [MindClusterUPC/safediary-platform](https://github.com/MindClusterUPC/safediary-platform) | Java 21, Spring Boot y PostgreSQL. API de microservicios modulares DDD para lógica de negocio y persistencia. |
-| **Mobile Client Application** | [MindClusterUPC/safediary-mobile](https://github.com/MindClusterUPC/safediary-mobile) | Flutter / Dart con Material Design 3. Aplicación móvil multiplataforma para pacientes y especialistas. |
+| **Aplicación móvil para pacientes** | [MindClusterUPC/SafeDiary-Android](https://github.com/MindClusterUPC/SafeDiary-Android) | Kotlin y Jetpack Compose. Diario personal, Diarito, rutinas y recorrido de atención del paciente. |
+| **Aplicación móvil para psicólogos** | [MindClusterUPC/SafeDiary_Flutter](https://github.com/MindClusterUPC/SafeDiary_Flutter) | Flutter y Dart con Material Design 3. Agenda clínica, pacientes, chat de coordinación, perfil profesional y configuración de cobros. |
 
 </div>
 
@@ -167,11 +168,20 @@ El proceso de despliegue asegura que cada pieza del sistema esté disponible en 
   - Gestión segura de credenciales sensibles (cadenas de conexión JDBC, usuario y contraseña de base de datos) a través de variables de entorno seguras en el panel cloud.
 - **Documentación Interactiva Pública:** [Swagger UI](https://safediary-platform.onrender.com/swagger-ui/index.html) para pruebas de endpoints por parte del equipo móvil y evaluadores.
 
-#### 3. Despliegue de la Aplicación Móvil (`safediary-mobile`)
+#### 3. Despliegue de la Aplicación para Pacientes (`SafeDiary-Android`)
 - **Tecnología:** aplicación nativa Android en Kotlin con Jetpack Compose (minSdk 24, targetSdk 37).
 - **Empaquetado Release:** APK firmado generado con Gradle (`./gradlew assembleRelease`); la firma se lee de un archivo local fuera del repositorio.
 - **Canal de Distribución:** instalación del APK en dispositivos y emuladores Android del equipo para las pruebas del sprint.
 - **Integración con Backend:** la URL base se define por tipo de build en `BuildConfig.API_BASE_URL`: el build debug apunta al backend local y el release al backend desplegado en Render por HTTPS.
+
+#### 4. Despliegue de la Aplicación para Psicólogos (`SafeDiary_Flutter`)
+
+- **Repositorio:** [MindClusterUPC/SafeDiary_Flutter](https://github.com/MindClusterUPC/SafeDiary_Flutter), rama `develop`.
+- **Tecnología y versión:** Flutter y Dart; paquete `safediary_clinical`, versión `1.0.0+1` declarada en `pubspec.yaml` e identificador Android `com.mindcluster.safediary_clinical`. Se instala junto a la app del paciente.
+- **Canal del sprint:** APK para pruebas locales en Android. La compilación debug utiliza `flutter build apk --debug --target-platform android-x64`; la compilación release utiliza `flutter build apk --release --dart-define=API_BASE_URL=https://TU_BACKEND` con la URL HTTPS del entorno correspondiente.
+- **Integración con Backend:** `API_BASE_URL` se configura mediante `--dart-define`. El valor predeterminado `http://10.0.2.2:8080` conecta el emulador con el backend local. La app usa autenticación Bearer y cuentas con rol `PSYCHOLOGIST`.
+- **Distribución:** el canal de pruebas no equivale a una publicación en tienda ni en Firebase App Distribution. La configuración versionada de release usa la clave debug; antes de una distribución de producción debe configurarse la firma propia.
+- **Proveedores externos:** la videollamada se abre en el navegador tras obtener autorización del backend. La configuración de cobros abre Stripe Connect y requiere las credenciales de ese proveedor en el servidor.
 
 ## 4.2. Landing Page & Mobile Application Implementation
 

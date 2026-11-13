@@ -7,7 +7,8 @@
 | Informe del proyecto | https://github.com/MindClusterUPC/SafeDiary_Doc |
 | Landing Page | https://github.com/MindClusterUPC/SafeDiary_Landing_Page |
 | Backend RESTful API | https://github.com/MindClusterUPC/safediary-platform |
-| Aplicación móvil Android | https://github.com/MindClusterUPC/SafeDiary-Android |
+| Aplicación móvil para pacientes en Android | https://github.com/MindClusterUPC/SafeDiary-Android |
+| Aplicación móvil para psicólogos en Flutter | https://github.com/MindClusterUPC/SafeDiary_Flutter |
 
 ## Anexo B. Recursos desplegados
 
