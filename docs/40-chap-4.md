@@ -737,6 +737,28 @@ Cada entrevista se registra con la siguiente ficha. Las entrevistas se realizan 
 | Tareas completadas sin ayuda | |
 | Principales hallazgos | |
 
+| Campo | Valor |
+|---|---|
+| Entrevistado | José Asto |
+| Segmento | Paciente |
+| Edad / Distrito | 20 años, San Miguel|
+| Fecha y duración |13/11/2026 / 07:57|
+| Entrevistador |Kamil |
+| Enlace a la grabación |https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412316_upc_edu_pe/IQCw3-vVH8CMSrNBGjcoUU_oAUPiDtfk1T7GePS3m02U2qc?e=hbKSPv&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| Tareas completadas sin ayuda | El entrevistador navegó y explicó la aplicación; el entrevistado solo respondió preguntas.|
+| Principales hallazgos |Lo más fácil fue el apartado de "notas". Lo más difícil fue entender completamente la funcionalidad de "rutinas". Sugirió agregar videollamadas con psicólogos directamente en la aplicación. Considera útil la IA "diarito" como recordatorio y complemento a la terapia. |
+
+| Campo | Valor |
+|---|---|
+| Entrevistado | Gabriel Ramirez Gutierrez |
+| Segmento | Paciente |
+| Edad / Distrito | 19 años, Puente Piedra |
+| Fecha y duración | 12/11/2026 / 05:39|
+| Entrevistador | Santiago |
+| Enlace a la grabación | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412316_upc_edu_pe/IQD6mGtFEBafTaZT7Q5ZX12EAbvGxgIXGwXhcFjE-6b_M28?e=dMU3CO|
+| Tareas completadas sin ayuda |No se muestra interacción con la aplicación, el entrevistado responde preguntas sobre su experiencia previa con ella. |
+| Principales hallazgos | Tuvo confusión inicial con las opciones de la app y sugirió un pequeño tutorial. Cree que se necesita una confirmación de que la información otorgada a la IA no esta siendo usada para alimentarla y se mantiene en privado. Le gustaría un modo oscuro |
+
 ### 4.3.3. Evaluaciones según heurísticas
 
 Los hallazgos se clasifican con las 10 heurísticas de usabilidad de Nielsen y una escala de severidad de 0 a 4 (0: no es un problema, 1: cosmético, 2: menor, 3: mayor, 4: catastrófico).
