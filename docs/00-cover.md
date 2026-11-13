@@ -121,6 +121,8 @@ Proyecto
 | 0.2.1 | 06/11/2026 | Juan Wang | Redacción de la sección 4.2.2 Sprint 2 (Sprint Planning, Backlog con Engineering Tasks de 4 a 8h, Evidencias y Servicios) para entrega AV2 |
 | 0.2.2 | 12/11/2026 | Marcelo Cuadros | Actualización de portada, tabla de contenidos, Collaboration Insights, Student Outcome, conclusiones, bibliografía y anexos para AV2 (Sprint 2) |
 | 0.2.3 | 12/11/2026 | Juan Wang | Corregir la sección 4.2.2 Sprint 2 con las historias, tareas, commits, pruebas y estado de despliegue reales; añadir 4.3 Validation Interviews y 4.4 Video About-the-Product |
+| 0.2.4 | 13/11/2026 | Kamil Diaz | Corrección de repositorios y separación de las aplicaciones Android para pacientes y Flutter para psicólogos en arquitectura, configuración y anexos. |
+| 0.2.5 | 13/11/2026 | Kamil Diaz | Incorporación de SafeDiary Clinical al Sprint 2 con alcance, incrementos, commits, contratos, capturas y verificación de 15 pruebas Flutter aprobadas. |
 
 # Project Report Collaboration Insights
 
@@ -176,6 +178,10 @@ Durante el AV2 (Sprint 2) el equipo consolidó la implementación de los flujos 
 | **Wang Chen, Juan Sung Jau** | Bounded Context Diary en backend y app (agregado `DiaryEntry`, JPA, Room offline-first, galería de notas y editor de diario con formato visual y preguntas guía); varias sesiones de Diarito por cuenta; restricción de todos los endpoints a la cuenta autenticada y aislamiento de datos locales por cuenta; pruebas Karate autenticadas; releases `v0.3.0` y `v0.4.0` del backend y migración de la base de datos de producción a Neon; redacción de la sección 4.2.2, 4.3 y 4.4 del informe (US-001, US-008, US-011, US-013). |
 
 ---
+
+### Entrega AV2 y aplicación profesional Flutter
+
+En la actualización del Sprint 2 se incorpora el quinto repositorio de la solución, [SafeDiary_Flutter](https://github.com/MindClusterUPC/SafeDiary_Flutter), para la aplicación de psicólogos. Kamil Diaz documenta sus módulos de Agenda, Pacientes y Pagos, la ficha profesional, los contratos del backend y los límites de privacidad y cobros. La sección 4.2.2 incluye los commits de implementación del 9 al 12 de noviembre, cinco capturas del entorno de prueba y la ejecución del 13 de noviembre con 15 pruebas Flutter aprobadas. Las aplicaciones del paciente y del profesional se describen como clientes separados del mismo backend.
 
 # Tabla de contenidos
 

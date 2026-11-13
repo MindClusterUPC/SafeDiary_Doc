@@ -21,8 +21,8 @@
    ```bash
    python scripts/build_report.py
    ```
-   Se crea `docs/SafeDiary-Report.md`, que git ignora, con los capítulos en orden y saltos de página entre ellos.
-2. Abre ese archivo en VS Code y ejecuta **Markdown PDF: Export (pdf)** (extensión *Markdown PDF*).
+   Se crean `docs/upc-pre-202620-1acc0238-4948-mindcluster-report-tb1.md` y `docs/upc-pre-202620-1acc0238-4948-mindcluster-report-av2.md`, que git ignora, con los capítulos en orden y saltos de página entre ellos. Ambos contienen la versión actual de los capítulos.
+2. Para la entrega AV2, abre `docs/upc-pre-202620-1acc0238-4948-mindcluster-report-av2.md` en VS Code y ejecuta **Markdown PDF: Export (pdf)** (extensión *Markdown PDF*).
 
 ---
 
@@ -124,6 +124,8 @@ Haga clic en cualquiera de las secciones para navegar directamente al contenido 
   - [4.1.3. Source Code Style Guide & Conventions](docs/40-chap-4.md#413-source-code-style-guide--conventions)
   - [4.1.4. Software Deployment Configuration](docs/40-chap-4.md#414-software-deployment-configuration)
   - [4.2. Landing Page & Mobile Application Implementation](docs/40-chap-4.md#42-landing-page--mobile-application-implementation)
+    - [4.2.1. Sprint 1](docs/40-chap-4.md#421-sprint-1)
+    - [4.2.2. Sprint 2 y aplicación profesional Flutter](docs/40-chap-4.md#422-sprint-2)
   - [4.3. Validation Interviews](docs/40-chap-4.md#43-validation-interviews)
 
 ---

@@ -161,7 +161,7 @@ El proceso de despliegue asegura que cada pieza del sistema esté disponible en 
 
 #### 2. Despliegue del Backend RESTful API (`safediary-platform`)
 - **Plataforma Cloud:** Render (servicio web Docker definido en `render.yaml`, despliegue automático desde `main`).
-- **Base de Datos:** PostgreSQL externo (filess.io) con pool de conexiones HikariCP; perfil `prod` de Spring.
+- **Base de Datos:** PostgreSQL externo en Neon con pool de conexiones HikariCP; perfil `prod` de Spring.
 - **Estrategia de Ejecución:**
   - Imagen Docker construida con el `Dockerfile` del repositorio (build Maven `package -DskipTests` y ejecución del `.jar`).
   - El servicio lee el puerto de la variable `PORT` y verifica su salud con `/v3/api-docs`.
@@ -396,6 +396,14 @@ Las métricas de contribución evidencian una participación distribuida y compl
 | Velocity | 43 |
 | Story Points incluidos | 62 |
 
+##### Ampliación del alcance con la aplicación profesional
+
+Para la entrega AV2 se incorpora **SafeDiary Clinical**, la aplicación para psicólogos desarrollada en Flutter y Dart en [SafeDiary_Flutter](https://github.com/MindClusterUPC/SafeDiary_Flutter/tree/develop). Los commits del 9 al 12 de noviembre complementan los avances del cliente Android del paciente y del backend ya registrados. El objetivo de esta ampliación es permitir al profesional gestionar disponibilidad, solicitudes, conversaciones y citas desde una aplicación propia, conectada a los mismos datos de `safediary-platform`.
+
+El alcance incluye los destinos **Agenda, Pacientes y Pagos**, además de autenticación profesional, ficha y verificación, propuestas de horario, acceso autorizado a la sesión y consulta del resumen compartido. La aceptación de la propuesta y el pago de la cita corresponden al paciente. El diario permanece privado y el resumen requiere consentimiento vigente.
+
+Los **62 Story Points** del backlog del paciente y del backend se mantienen como referencia de la planificación registrada. Los incrementos Flutter se registran por separado a continuación, sin asignarles estimaciones retrospectivas ni declarar completadas historias que también requieren trabajo en otros clientes o servicios.
+
 #### 4.2.2.2. Aspect Leaders and Collaborators
 
 | Team Member (Last Name, First Name) | GitHub Username | IAM Leader (L) / Collaborator (C) | Profile Leader (L) / Collaborator (C) | Diary Leader (L) / Collaborator (C) | AssistantAI Leader (L) / Collaborator (C) | Clinician Directory Leader (L) / Collaborator (C) | Care Scheduling Leader (L) / Collaborator (C) | Payment and Payouts Leader (L) / Collaborator (C) | Rutines Leader (L) / Collaborator (C) |
@@ -405,6 +413,8 @@ Las métricas de contribución evidencian una participación distribuida y compl
 | Torres Lavandera, Andres Rodrigo | AndresTorres202312557 | L | C | C | C | C | L | C | C |
 | Vargas Alarcon, Santiago Enrique | SanVargasAl | C | C | C | C | C | C | C | L |
 | Wang Chen, Juan Sung Jau | jwd3t | C | C | L | L | C | C | C | C |
+
+La implementación del cliente profesional Flutter estuvo a cargo de **Diaz Martinez, Alexther Kamil (`kamil-tron`)**, según los commits del repositorio. Esta contribución conecta las interfaces de agenda, pacientes y cobros con los contratos de Care Scheduling, Clinician Directory, IAM y Payments del backend compartido.
 
 #### 4.2.2.3. Sprint Backlog 2
 
@@ -468,9 +478,22 @@ De los 62 Story Points comprometidos, **43 quedaron en Done** y 19 en estado par
 | T-030-01 | US-030 | Integrar los ejercicios SOS guiados con el backend | 5h | Santiago Vargas | Done |
 | T-TEST-01 | Transversal | Autenticar las pruebas de aceptación Karate con token IAM y agregar escenarios de aislamiento | 5h | Juan Wang | Done |
 
+##### Incrementos del cliente profesional Flutter
+
+Estos incrementos documentan el trabajo realizado en el cliente profesional y su relación con las historias del Product Backlog. El estado corresponde al alcance Flutter descrito, no al cierre completo de cada historia entre todos los componentes de la solución.
+
+| Incremento | Historias relacionadas | Alcance implementado en Flutter | Responsable | Estado del alcance |
+|---|---|---|---|---|
+| FL-01 | US-001, US-036, US-041 | Acceso y registro con rol `PSYCHOLOGIST`, sesión segura, edición de ficha y tarifa, consulta y solicitud de verificación, publicación y ocultación del perfil. | Kamil Diaz | Implementado; la aprobación de credenciales corresponde al personal autorizado. |
+| FL-02 | US-043 | Calendario semanal, selección de fecha, consulta de citas y edición de disponibilidad semanal con confirmación de reemplazo. | Kamil Diaz | Implementado en el cliente profesional. |
+| FL-03 | US-043, US-048 | Solicitudes de contacto, aceptación o rechazo, filtros de pacientes, chat de coordinación y envío de propuestas con horarios del servidor. | Kamil Diaz | Implementado; aceptación del horario y pago desde el paciente. |
+| FL-04 | US-038, US-044, US-050 | Detalle de cita, cancelación, consulta del estado de sesión, apertura de videollamada autorizada y cierre operativo. | Kamil Diaz | Interfaces implementadas; el servidor valida estado y ventana de acceso. |
+| FL-05 | US-045, US-046 | Consulta a demanda del resumen autorizado y su alcance, sin descargar el diario ni conservar el resumen en disco. | Kamil Diaz | Implementado con consentimiento vigente validado por el backend. |
+| FL-06 | US-047, US-052 | Consulta del estado de Stripe Connect, apertura del onboarding y edición de la tarifa de la ficha. | Kamil Diaz | Parcial: no incluye saldo, historial de ingresos ni solicitudes de retiro. |
+
 #### 4.2.2.4. Development Evidence for Sprint Review
 
-Durante el Sprint 2 cada historia se trabajó en su propia rama `feature/*` o `fix/*` y se integró a `develop` con `--no-ff`, siguiendo Conventional Commits. La tabla resume los commits principales de cada integrante.
+En el backend y el cliente Android del paciente, cada historia se trabajó en su propia rama `feature/*` o `fix/*` y se integró a `develop` con `--no-ff`, siguiendo Conventional Commits. La tabla resume los commits principales de cada integrante. Los commits del cliente profesional Flutter se presentan en una tabla independiente.
 
 | Repositorio | Commit | Mensaje de Commit | Autor | Fecha | User Story |
 |---|---|---|---|---|---|
@@ -502,6 +525,22 @@ Durante el Sprint 2 cada historia se trabajó en su propia rama `feature/*` o `f
 | SafeDiary-Android | [`c7206f3`](https://github.com/MindClusterUPC/SafeDiary-Android/commit/c7206f3) | feat(routines): support persistent editing deletion and daily progress | Kamil Diaz | 2026-11-09 | US-007 |
 | SafeDiary-Android | [`b979941`](https://github.com/MindClusterUPC/SafeDiary-Android/commit/b979941) | feat(profile): persist account photos and share avatars across screens | Kamil Diaz | 2026-11-09 | US-006 |
 
+##### Evidencia de desarrollo de SafeDiary Clinical
+
+Repositorio: [MindClusterUPC/SafeDiary_Flutter](https://github.com/MindClusterUPC/SafeDiary_Flutter), rama `develop`. La siguiente tabla registra commits existentes del cliente profesional, cuyo autor es `kamil-tron`.
+
+| Commit | Mensaje de commit | Fecha | Incremento documentado |
+|---|---|---|---|
+| [`201f898`](https://github.com/MindClusterUPC/SafeDiary_Flutter/commit/201f898) | feat(app): bootstrap the Flutter psychologist application | 2026-11-09 | Inicio del cliente profesional con autenticación, agenda, pacientes, chat, perfil y cobros. |
+| [`4394b3f`](https://github.com/MindClusterUPC/SafeDiary_Flutter/commit/4394b3f) | refactor(shared): centralize session, profile, and UI foundations | 2026-11-09 | Sesión, ficha profesional, cliente HTTP y componentes compartidos. |
+| [`037fa0d`](https://github.com/MindClusterUPC/SafeDiary_Flutter/commit/037fa0d) | refactor(agenda): isolate scheduling models, repository, and views | 2026-11-09 | Módulo de agenda, disponibilidad, propuestas y atención. |
+| [`e749bca`](https://github.com/MindClusterUPC/SafeDiary_Flutter/commit/e749bca) | refactor(patients): isolate contact requests and coordination chat | 2026-11-09 | Módulo de solicitudes, pacientes y conversaciones. |
+| [`48c3a21`](https://github.com/MindClusterUPC/SafeDiary_Flutter/commit/48c3a21) | refactor(payments): isolate connected accounts and payout views | 2026-11-09 | Módulo de estado de cuenta conectada y configuración de cobros; no acredita retiros implementados. |
+| [`978850b`](https://github.com/MindClusterUPC/SafeDiary_Flutter/commit/978850b) | test(architecture): verify context isolation and document module boundaries | 2026-11-09 | Pruebas de separación por contexto y documentación de contratos. |
+| [`918940b`](https://github.com/MindClusterUPC/SafeDiary_Flutter/commit/918940b) | fix(chat): keep schedule actions docked above the composer | 2026-11-12 | Acciones de coordinación visibles sobre el campo de mensaje, también con el teclado abierto. |
+
+La estructura del cliente separa `agenda`, `patients` y `payments` en modelos y contratos de dominio, adaptadores REST y presentación con modelos de vista. `shared` contiene identidad, perfil, almacenamiento seguro de sesión y UI; `app` compone los módulos. Las dependencias y los límites se describen en [BOUNDED_CONTEXTS.md](https://github.com/MindClusterUPC/SafeDiary_Flutter/blob/develop/docs/BOUNDED_CONTEXTS.md).
+
 #### 4.2.2.5. Testing Suite Evidence for Sprint Review
 
 Al cierre del sprint, ambas suites se ejecutan sin fallos sobre la rama `develop`.
@@ -524,6 +563,19 @@ Al cierre del sprint, ambas suites se ejecutan sin fallos sobre la rama `develop
 | Backend · Rutines | Unitaria, integración y Karate | `RoutineCommandServiceImplTest`, `RoutineQueryServiceImplTest`, `RoutineAccountIsolationIntegrationTest`, `RoutinesKarateTest` | 19 | Aprobado |
 | Backend · Payments | Dominio y unitaria | `SubscriptionTest`, `SubscriptionCommandServiceTest`, `MarketplaceConnectPaymentsTest` | 16 | Aprobado |
 
+##### Verificación automatizada del cliente Flutter
+
+El **13/11/2026** se ejecutó `flutter test --reporter expanded` sobre el cliente profesional en el commit `918940b`. El resultado fue **15 pruebas aprobadas**, con el mensaje `All tests passed!`.
+
+| Suite | Casos aprobados | Comportamiento verificado |
+|---|:---:|---|
+| [api_and_session_test.dart](https://github.com/MindClusterUPC/SafeDiary_Flutter/blob/918940b/test/api_and_session_test.dart) | 8 | Hora de Lima, rol profesional, token Bearer, contratos de propuestas y disponibilidad, respuestas de sesiones anteriores, limpieza por 401 y ventana de acceso a la cita. |
+| [bounded_contexts_test.dart](https://github.com/MindClusterUPC/SafeDiary_Flutter/blob/918940b/test/bounded_contexts_test.dart) | 4 | Aislamiento de módulos, actualización independiente ante errores, limpieza al salir y descarte de resultados de fechas anteriores. |
+| [clinical_ui_test.dart](https://github.com/MindClusterUPC/SafeDiary_Flutter/blob/918940b/test/clinical_ui_test.dart) | 3 | Navegación en teléfono pequeño, acceso y registro con texto ampliado y acciones del chat visibles con y sin teclado. |
+| **Total** | **15** | **Todas aprobadas.** |
+
+Las pruebas anteriores usan datos de prueba y un cliente HTTP simulado; no acreditan cobros reales ni una sesión de videollamada completa. El repositorio también contiene [clinical_app_test.dart](https://github.com/MindClusterUPC/SafeDiary_Flutter/blob/develop/integration_test/clinical_app_test.dart), una prueba de navegación contra el backend para acceso, agenda, pacientes, chat, pagos y perfil. Las capturas conservadas de ese recorrido se presentan en la siguiente sección; esta actualización no declara una nueva ejecución de esa prueba de integración.
+
 #### 4.2.2.6. Execution Evidence for Sprint Review
 
 La aplicación muestra el recorrido principal del paciente conectado al backend:
@@ -543,6 +595,32 @@ La aplicación muestra el recorrido principal del paciente conectado al backend:
 | Diarito | Varias sesiones por cuenta y ofrecimiento de ayuda ante riesgo | Emulador Android | Exitoso |
 | Directorio y citas | Solicitud de contacto, chat de coordinación, propuesta y reserva | Emulador Android | Exitoso |
 | Rutinas y ejercicios SOS | Edición, eliminación y progreso diario sincronizados | Emulador Android | Exitoso |
+
+##### Ejecución de la aplicación profesional Flutter
+
+Las siguientes capturas proceden de la aplicación ejecutada en Android con una **cuenta profesional ficticia de prueba**. Muestran los datos del entorno de desarrollo y complementan las evidencias del cliente Android del paciente.
+
+**Agenda clínica.** El profesional selecciona un día, consulta sus citas y accede a la próxima atención. Los horarios se presentan en hora de Lima y la disponibilidad se configura desde este destino. En la captura, el día seleccionado no tiene citas y la próxima atención aparece por separado.
+
+<img src="../assets/images/chap4/flutter-clinical/01-agenda.png" alt="SafeDiary Clinical en Android con calendario semanal y próxima atención" width="280">
+
+**Pacientes y solicitudes.** La aplicación permite alternar entre contactos activos, solicitudes y conversaciones archivadas. Los pacientes se identifican por su ID; la pantalla no consulta sus nombres privados ni concede acceso al diario.
+
+<img src="../assets/images/chap4/flutter-clinical/02-pacientes.png" alt="Lista de pacientes de prueba y filtros de solicitudes en la app Flutter" width="280">
+
+**Chat de coordinación.** La conversación reúne los mensajes del contacto y una tarjeta con el estado de la cita. Los mensajes marcados como simulación pertenecen al entorno de prueba. El profesional propone horarios; la aceptación y el pago se completan desde la app del paciente. El ajuste del commit `918940b` mantiene las acciones sobre el compositor cuando corresponden al estado de la conversación.
+
+<img src="../assets/images/chap4/flutter-clinical/03-chat.png" alt="Conversación de prueba con una tarjeta de cita y el campo de mensaje" width="280">
+
+**Pagos.** Se consulta el estado de la cuenta conectada y se ofrece configurar cobros con Stripe Connect. La captura muestra el estado real de la cuenta de prueba, **Por configurar**, y la tarifa pública. No presenta un saldo, un historial de ingresos ni retiros disponibles.
+
+<img src="../assets/images/chap4/flutter-clinical/04-pagos.png" alt="Cuenta de cobros de prueba por configurar y tarifa pública del psicólogo" width="280">
+
+**Perfil profesional.** La ficha muestra especialidad, tarifa y estados de verificación y publicación de la cuenta de demostración. Permite editar la ficha, consultar la verificación y ocultar la publicación, conservando el diario del paciente fuera del acceso automático del profesional.
+
+<img src="../assets/images/chap4/flutter-clinical/05-perfil.png" alt="Perfil ficticio de la psicóloga de prueba con acciones de edición y publicación" width="280">
+
+Las interfaces de atención consultan el estado de la cita antes de abrir la URL de videollamada en el navegador. El resumen autorizado se obtiene a demanda, se descarta al pasar a segundo plano y se vuelve a validar al regresar. Estas acciones dependen de las reglas de acceso y del consentimiento que verifica el servidor; las capturas anteriores no constituyen evidencia de una llamada completada ni de un cobro de producción.
 
 #### 4.2.2.7. Services Documentation Evidence for Sprint Review
 
@@ -567,13 +645,29 @@ El backend `v0.4.0` está desplegado en Render con una base PostgreSQL en Neon, 
 | Rutines | PATCH | `/api/v1/sos-exercises/{id}/advance`, `/api/v1/sos-exercises/{id}/complete` | Avance y cierre de un ejercicio SOS | `200 OK` |
 | Payments | GET | `/api/v1/payments/history`, `/api/v1/payments/methods` | Historial y métodos guardados del paciente | `200 OK` |
 
+##### Contratos consumidos por el cliente profesional
+
+Flutter consume la misma API REST que la app del paciente y envía `Authorization: Bearer <token>`. La documentación del contrato y sus límites está disponible en [API_CONTRACT.md](https://github.com/MindClusterUPC/SafeDiary_Flutter/blob/develop/docs/API_CONTRACT.md). La tabla identifica contratos usados por el cliente; no implica que todos los endpoints se hayan creado durante este sprint.
+
+| Flujo profesional | Métodos y rutas principales | Condición de uso |
+|---|---|---|
+| Identidad, ficha y verificación | `POST /api/v1/authentication/sign-in`, `POST /api/v1/authentication/sign-up`, `GET /api/v1/clinicians/me`, `POST /api/v1/clinicians/{id}/verification-requests` | Cuenta profesional autenticada; el servidor decide la aprobación de credenciales. |
+| Solicitudes y conversación | `GET /api/v1/contact-requests`, `PATCH /api/v1/contact-requests/{id}/decision`, `GET / POST /api/v1/contact-requests/{id}/messages` | Contactos de la cuenta autenticada; sin acceso al diario. |
+| Disponibilidad y propuestas | `GET /api/v1/schedule/agenda`, `PUT /api/v1/schedule/availability`, `GET /api/v1/schedule/clinicians/{id}/slots`, `POST /api/v1/schedule/proposals` | Disponibilidad del servidor, control de conflictos e instantes enviados en UTC. |
+| Atención y cancelación | `GET /api/v1/appointments/{id}/session`, `POST /api/v1/appointments/{id}/session/access`, `POST /api/v1/appointments/{id}/session/closure`, `POST /api/v1/appointments/{id}/cancellation` | Estado de cita, participantes y ventana temporal validados por el servidor. |
+| Contexto compartido | `GET /api/v1/appointments/{id}/authorized-summary` | Consentimiento explícito y vigente; sin descarga del diario completo. |
+| Cuenta de cobros | `GET /api/v1/payments/connect/accounts/{accountId}`, `POST /api/v1/payments/connect/accounts` | Configuración de Stripe Connect en el backend; no hay contratos de saldo, historial ni retiro profesional. |
+
 #### 4.2.2.8. Software Deployment Evidence for Sprint Review
 
 | Componente | Plataforma | Versión | Estado | Verificación |
 |---|---|---|:---:|---|
 | Backend RESTful API | Render (Docker) + PostgreSQL en Neon | [`v0.4.0`](https://github.com/MindClusterUPC/safediary-platform/releases/tag/v0.4.0) | En línea | [Swagger UI](https://safediary-platform.onrender.com/swagger-ui/index.html) responde; prueba de humo en producción el 12/11/2026: registro `201`, `GET /patients/me` `200`, acceso a datos de otra cuenta `403`, sin token `401` |
 | Aplicación móvil | Android (APK) | `develop` | Compilado | APK de depuración generado y probado en emulador; la distribución a validadores se hará por Firebase App Distribution |
+| SafeDiary Clinical para psicólogos | Flutter en Android | `1.0.0+1` / pruebas locales | APK de pruebas | APK debug disponible y capturas de ejecución; no se declara publicación en tienda ni en Firebase App Distribution. |
 | Landing Page | GitHub Pages | `main` (`6ddb5ae`) | En línea | [https://mindclusterupc.github.io/SafeDiary_Landing_Page/](https://mindclusterupc.github.io/SafeDiary_Landing_Page/) responde `200 OK` |
+
+El cliente Flutter utiliza un identificador Android distinto al del paciente y se instala como aplicación independiente. La configuración de URL, firma y proveedores externos se detalla en la sección 4.1.4. La evidencia local incluye el APK debug en `build/app/outputs/flutter-apk/app-debug.apk`; este binario generado no se incorpora al repositorio de documentación.
 
 #### 4.2.2.9. Team Collaboration Insights during Sprint
 
@@ -588,6 +682,10 @@ El equipo trabajó con una rama por historia o corrección, integradas a `develo
 | Wang Chen, Juan Sung Jau | 13 | 23 | Diary, AssistantAI, aislamiento por cuenta y pruebas |
 
 El principal aprendizaje del sprint fue la integración: varias funcionalidades se construyeron primero con datos locales y luego se conectaron al backend, lo que expuso que algunos endpoints aceptaban identificadores enviados por el cliente. El equipo corrigió esto restringiendo cada endpoint a la cuenta autenticada y lo cubrió con pruebas de aislamiento.
+
+Durante el Sprint 2 se registraron avances en el backend, el cliente Android del paciente y el nuevo cliente Flutter del psicólogo. Las evidencias del backend y de Android se muestran en sus tablas de commits; la aplicación profesional incorpora siete commits de `kamil-tron`, del 9 al 12 de noviembre, disponibles en `develop`. Esta trazabilidad identifica los aportes sin asumir una distribución equitativa del trabajo ni un mecanismo de integración no acreditado para Flutter.
+
+En el cliente profesional, Kamil Diaz implementó la aplicación inicial, separó los módulos de Agenda, Pacientes y Pagos, incorporó pruebas de aislamiento y ajustó las acciones del chat con el teclado. La integración reutiliza los contratos del backend del equipo y mantiene separados los datos personales del paciente y las tareas clínicas. Los límites de cobros, consentimiento y verificación se documentan junto a las funciones para distinguir el incremento entregado de las capacidades aún pendientes.
 
 ## 4.3. Validation Interviews
 
