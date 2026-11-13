@@ -663,11 +663,11 @@ Flutter consume la misma API REST que la app del paciente y envía `Authorizatio
 | Componente | Plataforma | Versión | Estado | Verificación |
 |---|---|---|:---:|---|
 | Backend RESTful API | Render (Docker) + PostgreSQL en Neon | [`v0.4.0`](https://github.com/MindClusterUPC/safediary-platform/releases/tag/v0.4.0) | En línea | [Swagger UI](https://safediary-platform.onrender.com/swagger-ui/index.html) responde; prueba de humo en producción el 12/11/2026: registro `201`, `GET /patients/me` `200`, acceso a datos de otra cuenta `403`, sin token `401` |
-| Aplicación móvil | Android (APK) | `develop` | Compilado | APK de depuración generado y probado en emulador; la distribución a validadores se hará por Firebase App Distribution |
-| SafeDiary Clinical para psicólogos | Flutter en Android | `1.0.0+1` / pruebas locales | APK de pruebas | APK debug disponible y capturas de ejecución; no se declara publicación en tienda ni en Firebase App Distribution. |
+| Aplicación móvil del paciente | Android (APK) en Firebase App Distribution | [`v0.3.1`](https://github.com/MindClusterUPC/safediary-mobile/releases/tag/v0.3.1) | Publicada | APK release firmado apuntando al backend de producción (`https://safediary-platform.onrender.com/`), publicado en Firebase App Distribution el 13/11/2026 y probado en emulador: registro, diario, Diarito, directorio de psicólogos y reserva de cita |
+| SafeDiary Clinical para psicólogos | Flutter en Android (APK) en Firebase App Distribution | `v0.1.0` | Publicada | APK release apuntando al backend de producción, publicado en Firebase App Distribution el 13/11/2026 y probado en emulador: registro profesional, creación de ficha, solicitud de verificación, disponibilidad y chat de coordinación |
 | Landing Page | GitHub Pages | `main` (`6ddb5ae`) | En línea | [https://mindclusterupc.github.io/SafeDiary_Landing_Page/](https://mindclusterupc.github.io/SafeDiary_Landing_Page/) responde `200 OK` |
 
-El cliente Flutter utiliza un identificador Android distinto al del paciente y se instala como aplicación independiente. La configuración de URL, firma y proveedores externos se detalla en la sección 4.1.4. La evidencia local incluye el APK debug en `build/app/outputs/flutter-apk/app-debug.apk`; este binario generado no se incorpora al repositorio de documentación.
+Ambas aplicaciones se publican como artefactos release en Firebase App Distribution, dentro del proyecto Firebase del equipo; la invitación a los validadores se realiza desde la consola antes de cada sesión de validación. El cliente Flutter utiliza un identificador Android distinto al del paciente (`com.mindcluster.safediary_clinical`) y se instala como aplicación independiente. La configuración de URL, firma y proveedores externos se detalla en la sección 4.1.4.
 
 #### 4.2.2.9. Team Collaboration Insights during Sprint
 
