@@ -536,7 +536,7 @@ La aplicación muestra el recorrido principal del paciente conectado al backend:
 
 #### 4.2.2.7. Services Documentation Evidence for Sprint Review
 
-Todos los servicios se documentan con OpenAPI y se pueden probar en Swagger UI ([https://safediary-platform.onrender.com/swagger-ui/index.html](https://safediary-platform.onrender.com/swagger-ui/index.html)). Los endpoints privados requieren el encabezado `Authorization: Bearer <token>` y responden `401` sin token y `403` cuando el recurso pertenece a otra cuenta. Los servicios incorporados o modificados en el Sprint 2 son:
+El backend `v0.4.0` está desplegado en Render con una base PostgreSQL en Neon, que reemplazó a filess.io porque su plan gratuito solo permitía 10 MB. Todos los servicios se documentan con OpenAPI y se pueden probar en Swagger UI ([https://safediary-platform.onrender.com/swagger-ui/index.html](https://safediary-platform.onrender.com/swagger-ui/index.html)). Los endpoints privados requieren el encabezado `Authorization: Bearer <token>` y responden `401` sin token y `403` cuando el recurso pertenece a otra cuenta. Los servicios incorporados o modificados en el Sprint 2 son:
 
 | Bounded Context | Método | Ruta | Descripción | Respuesta esperada |
 |---|---|---|---|---|
@@ -561,7 +561,7 @@ Todos los servicios se documentan con OpenAPI y se pueden probar en Swagger UI (
 
 | Componente | Plataforma | Versión | Estado | Verificación |
 |---|---|---|:---:|---|
-| Backend RESTful API | Render (Docker) + PostgreSQL | `v0.3.0` (etiquetado en `main`) | Pendiente de despliegue | El servicio en línea aún ejecuta la versión del Sprint 1; la nueva versión requiere configurar `IAM_JWT_SECRET` en Render antes del despliegue manual |
+| Backend RESTful API | Render (Docker) + PostgreSQL en Neon | [`v0.4.0`](https://github.com/MindClusterUPC/safediary-platform/releases/tag/v0.4.0) | En línea | [Swagger UI](https://safediary-platform.onrender.com/swagger-ui/index.html) responde; prueba de humo en producción el 12/11/2026: registro `201`, `GET /patients/me` `200`, acceso a datos de otra cuenta `403`, sin token `401` |
 | Aplicación móvil | Android (APK) | `develop` | Compilado | APK de depuración generado y probado en emulador; la distribución a validadores se hará por Firebase App Distribution |
 | Landing Page | GitHub Pages | `main` (`6ddb5ae`) | En línea | [https://mindclusterupc.github.io/SafeDiary_Landing_Page/](https://mindclusterupc.github.io/SafeDiary_Landing_Page/) responde `200 OK` |
 
