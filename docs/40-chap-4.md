@@ -761,11 +761,33 @@ Cada entrevista se registra con la siguiente ficha. Las entrevistas se realizan 
 
 ### 4.3.3. Evaluaciones según heurísticas
 
-Los hallazgos se clasifican con las 10 heurísticas de usabilidad de Nielsen y una escala de severidad de 0 a 4 (0: no es un problema, 1: cosmético, 2: menor, 3: mayor, 4: catastrófico).
+#### Tareas Evaluadas:
+1. Acceso y navegación por la pantalla principal.
+2. Exploración y redacción de notas en el módulo de Diario ("Notas").
+3. Interacción dialógica con el asistente de IA "Diarito".
+4. Exploración y configuración del módulo de Rutinas de autocuidado.
+5. Consulta de profesionales y revisión de la agenda de citas.
+
+#### Tareas no evaluadas en esta versión:
+1. Entrada de diario por voz en tiempo real con transcripción continua.
+2. Pasarela de pago y cobro directo con tarjeta dentro de la aplicación móvil.
+3. Videollamada clínica bidireccional integrada.
+
+Los hallazgos observados durante las sesiones de validación fueron analizados y ponderados bajo la escala de severidad reglamentaria del Anexo E:
+* **Nivel 1 (Problema superficial):** De baja frecuencia o fácilmente superable; no requiere atención inmediata.
+* **Nivel 2 (Problema menor):** Causa ligera duda o fricción; prioridad baja para resolver de cara al siguiente release.
+* **Nivel 3 (Problema mayor):** Causa confusión significativa o desconfianza; debe asignársele alta prioridad.
+* **Nivel 4 (Problema muy grave):** Impide al usuario continuar con el uso de la aplicación.
+
+#### Tabla Resumen de Evaluación Heurística
 
 | # | Problema observado | Heurística incumplida | Severidad | Recomendación |
 |:---:|---|---|:---:|---|
-| 1 | | | | |
+| 1 | **Falta de claridad conceptual en el módulo de Rutinas:** Al usuario le resultó difícil comprender el propósito clínico y el funcionamiento de las actividades de bienestar, requiriendo explicación guiada para entender cuándo y cómo completarlas (Hallazgo de José Asto). | Arquitectura de Información: Claridad en el etiquetado y modelo conceptual / Usabilidad: Reconocimiento antes que recuerdo | 2 (Menor) | Añadir descripciones breves introductorias, tarjetas explicativas de beneficios y etiquetas de acción claras (ej. "Técnica de respiración de 3 min", "Pausa de gratitud") antes de iniciar cada ejercicio. |
+| 2 | **Confusión inicial y ausencia de recorrido de inducción (Onboarding):** Ante la variedad de opciones en la pantalla inicial y la barra de navegación, el usuario experimentó desorientación inicial sobre qué acción tomar en su primer ingreso (Hallazgo de Gabriel Ramirez). | Usabilidad: Ayuda y documentación (Nielsen #10) / Diseño Inclusivo: Prevención de la sobrecarga cognitiva | 2 (Menor) | Implementar un tutorial breve de bienvenida (*onboarding tour* o tooltips de 3 pasos) que oriente al usuario en sus primeras acciones clave: check-in emocional, redacción en diario y chat con Diarito. |
+| 3 | **Incertidumbre sobre el uso de datos personales por el asistente de IA:** El usuario expresó preocupación por no tener certeza visible de que sus vivencias y conversaciones privadas con Diarito no sean utilizadas para entrenar modelos externos de inteligencia artificial (Hallazgo de Gabriel Ramirez). | Usabilidad: Visibilidad del estado del sistema (Nielsen #1) / Diseño Inclusivo: Generación de confianza y seguridad psicológica | 3 (Mayor) | Incorporar una insignia o aviso destacado de privacidad cifrada en la cabecera de Diarito ("Conversación privada y protegida: tus datos no entrenan modelos de IA") con acceso directo a la política de consentimiento. |
+| 4 | **Falta de soporte para tema oscuro (Dark Mode):** La interfaz actual solo ofrece una paleta clara (*Serene Sanctuary*), generando incomodidad visual en usuarios que acceden en horarios nocturnos para registrar emociones o insomnio (Hallazgo de Gabriel Ramirez). | Diseño Inclusivo: Ofrecer elección y flexibilidad / Usabilidad: Flexibilidad y eficiencia de uso (Nielsen #7) | 2 (Menor) | Implementar un selector de tema (Claro / Oscuro / Automático del sistema) en la configuración de la app, adaptando los colores de fondo y texto para reducir la fatiga visual nocturna. |
+| 5 | **Desconexión en el acceso a la atención psicológica virtual:** El usuario esperaba poder iniciar o integrarse a la videollamada con su especialista directamente dentro de la aplicación móvil sin depender de herramientas externas (Hallazgo de José Asto). | Usabilidad: Correspondencia entre el sistema y el mundo real (Nielsen #2) / Arquitectura de Información: Continuidad del flujo de servicio | 2 (Menor) | Incorporar un botón de acceso directo ("Entrar a sala segura") en la tarjeta de cita confirmada que enlace a una sala privada embebida con token temporal, unificando la experiencia en la misma app. |
 
 ## 4.4. Video About-the-Product
 
@@ -774,5 +796,5 @@ El video *About-the-Product* presenta el problema que resuelve SafeDiary, la pro
 | Campo | Valor |
 |---|---|
 | Versión | Primera versión (AV2) |
-| Duración | |
-| Enlace | Pendiente de publicación |
+| Duración | 3:03 |
+| Enlace | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416706_upc_edu_pe/IQCPOYuPyTOlRaF7NKb_1XQ-ATV8uLyLPWzo1TkCDMhMzv4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dEHgPd |
