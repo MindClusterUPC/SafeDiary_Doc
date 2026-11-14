@@ -769,8 +769,8 @@ Cada entrevista se registra con la siguiente ficha. Las entrevistas se realizan 
 | Fecha y duración | 13/11/2026 / 14:25 |
 | Entrevistador | Juan Wang |
 | Enlace a la grabación | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412316_upc_edu_pe/IQClWdqv9OTiQ6dOEOswVP-7AXtEk0W3Cf5EhZ-M9kNt5sQ?e=nveo8G |
-| Tareas completadas sin ayuda | Por completar |
-| Principales hallazgos | Por completar |
+| Tareas completadas sin ayuda | El entrevistado no tenía la aplicación instalada; el entrevistador la manejó y le mostró el flujo profesional completo: registro, perfil profesional, envío de credenciales a verificación, publicación de la ficha, configuración de disponibilidad, chat de coordinación, propuesta de horario y cita confirmada con enlace de videollamada. El entrevistado observó, hizo preguntas y respondió las preguntas de validación. |
+| Principales hallazgos | Valoró que los psicólogos pasen por una verificación de credenciales (colegiatura, especialidad y documento) antes de publicar su ficha. Lo más difícil fue el calendario de disponibilidad, cuyos textos le parecieron muy pequeños. Echó en falta una guía o tutorial, tanto en la app de pacientes como en la de psicólogos, que explique dónde reservar una cita, cuándo se confirma, cuándo se recibe el pago y cuándo se habilita el acceso a la sesión. Su mayor preocupación era cómo se atienden los casos de riesgo, como tendencias suicidas; al ver que Diarito detecta la crisis y ofrece llamar de inmediato a la línea 113, consideró que el tema estaba bien resuelto. En general, describió la aplicación como interesante y novedosa. |
 
 ### 4.3.3. Evaluaciones según heurísticas
 
