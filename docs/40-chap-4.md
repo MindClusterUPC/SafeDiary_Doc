@@ -761,9 +761,9 @@ Cada entrevista se registra con la siguiente ficha. Las entrevistas se realizan 
 
 | Campo | Valor |
 |---|---|
-| Entrevistado | Josué Castro |
+| Entrevistado | Josué Castro Barreta |
 | Segmento | Psicólogo |
-| Edad / Distrito | Por completar |
+| Edad / Distrito | 23 años, La Perla |
 | Fecha y duración | 13/11/2026 / Por completar |
 | Entrevistador | Juan Wang |
 | Enlace a la grabación | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412316_upc_edu_pe/IQClWdqv9OTiQ6dOEOswVP-7AXtEk0W3Cf5EhZ-M9kNt5sQ?e=nveo8G |
