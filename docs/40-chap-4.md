@@ -759,6 +759,8 @@ Cada entrevista se registra con la siguiente ficha. Las entrevistas se realizan 
 | Tareas completadas sin ayuda |No se muestra interacción con la aplicación, el entrevistado responde preguntas sobre su experiencia previa con ella. |
 | Principales hallazgos | Tuvo confusión inicial con las opciones de la app y sugirió un pequeño tutorial. Cree que se necesita una confirmación de que la información otorgada a la IA no esta siendo usada para alimentarla y se mantiene en privado. Le gustaría un modo oscuro |
 
+![Captura de la entrevista de validación al psicólogo Josué Castro](../assets/images/chap4/validacion-psicologo-josue.png)
+
 | Campo | Valor |
 |---|---|
 | Entrevistado | Josué Castro Barreta |
