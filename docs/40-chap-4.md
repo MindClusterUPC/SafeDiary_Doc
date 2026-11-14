@@ -815,4 +815,14 @@ El video *About-the-Product* presenta el problema que resuelve SafeDiary, la pro
 |---|---|
 | Versión | Primera versión (AV2) |
 | Duración | 3:03 |
-| Enlace | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416706_upc_edu_pe/IQCPOYuPyTOlRaF7NKb_1XQ-ATV8uLyLPWzo1TkCDMhMzv4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dEHgPd |
+| Enlace | [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416706_upc_edu_pe/IQCPOYuPyTOlRaF7NKb_1XQ-ATV8uLyLPWzo1TkCDMhMzv4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=dEHgPd](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416706_upc_edu_pe/IQCPOYuPyTOlRaF7NKb_1XQ-ATV8uLyLPWzo1TkCDMhMzv4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=3NuoWw) |
+
+## 4.5. Video About-the-Team
+
+El video *About-the-Team* presenta la experiencia de los involucrados detras de SafeDiary, incluyendo aprendizajes, reflexiones y oportunidades de mejora
+
+| Campo | Valor |
+|---|---|
+| Versión | Primera versión (AV2) |
+| Duración | 7:07 |
+| Enlace | [https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416706_upc_edu_pe/IQCgiPAv72SeRbzI9Ugdqj9iAUHn_EXumDTcq7MNsRgqSLk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=mgIv8f](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202416706_upc_edu_pe/IQCgiPAv72SeRbzI9Ugdqj9iAUHn_EXumDTcq7MNsRgqSLk?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=LvZaTk) |
