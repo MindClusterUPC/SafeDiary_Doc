@@ -759,6 +759,17 @@ Cada entrevista se registra con la siguiente ficha. Las entrevistas se realizan 
 | Tareas completadas sin ayuda |No se muestra interacción con la aplicación, el entrevistado responde preguntas sobre su experiencia previa con ella. |
 | Principales hallazgos | Tuvo confusión inicial con las opciones de la app y sugirió un pequeño tutorial. Cree que se necesita una confirmación de que la información otorgada a la IA no esta siendo usada para alimentarla y se mantiene en privado. Le gustaría un modo oscuro |
 
+| Campo | Valor |
+|---|---|
+| Entrevistado | Josué Castro |
+| Segmento | Psicólogo |
+| Edad / Distrito | Por completar |
+| Fecha y duración | 13/11/2026 / Por completar |
+| Entrevistador | Juan Wang |
+| Enlace a la grabación | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412316_upc_edu_pe/IQClWdqv9OTiQ6dOEOswVP-7AXtEk0W3Cf5EhZ-M9kNt5sQ?e=nveo8G |
+| Tareas completadas sin ayuda | Por completar |
+| Principales hallazgos | Por completar |
+
 ### 4.3.3. Evaluaciones según heurísticas
 
 #### Tareas Evaluadas:
