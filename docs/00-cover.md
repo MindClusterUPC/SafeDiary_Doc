@@ -30,40 +30,13 @@ Proyecto
 
 **Integrantes**
 
-<div style="text-align: center;">
-<div style="display: inline-block;">
-<table style="width: auto; border-collapse: collapse; text-align: center;">
-  <thead>
-    <tr>
-      <th style="padding: 8px; border: 1px solid #666; text-align: center;">Código</th>
-      <th style="padding: 8px; border: 1px solid #666; text-align: center;">Apellidos y nombres</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">U202422890</td>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">Cuadros Villanueva, Marcelo Fabio</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">U202412316</td>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">Diaz Martinez, Alexther Kamil</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">U202312557</td>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">Torres Lavandera, Andres Rodrigo</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">U202416706</td>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">Vargas Alarcon, Santiago Enrique</td>
-    </tr>
-    <tr>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">U202318609</td>
-      <td style="padding: 8px; border: 1px solid #666; text-align: center;">Wang Chen, Juan Sung Jau</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
+<p>
+  Cuadros Villanueva, Marcelo Fabio (U202422890)<br>
+  Diaz Martinez, Alexther Kamil (U202412316)<br>
+  Torres Lavandera, Andres Rodrigo (U202312557)<br>
+  Vargas Alarcon, Santiago Enrique (U202416706)<br>
+  Wang Chen, Juan Sung Jau (U202318609)
+</p>
 
 **Período 2026-02**
 
