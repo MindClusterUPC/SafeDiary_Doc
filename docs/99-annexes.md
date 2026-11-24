@@ -27,9 +27,9 @@
 | Tipo | Enlace |
 | :--- | :--- |
 | Prototipo del paciente (TB1) | [Ver video](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318609_upc_edu_pe/IQBV3BVjPB2yRZp9c5tZpiZbAeFxRfzOJcNEgN4F5J5rvNU?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=lf6efQ) |
-| App Validation (AV2) | Pendiente de publicación |
-| About-the-Product (AV2) | Pendiente de publicación |
-| About-the-Team (AV2) | Pendiente de publicación |
+| App Validation (AV2) | [Entrevista con paciente 1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412316_upc_edu_pe/IQCw3-vVH8CMSrNBGjcoUU_oAUPiDtfk1T7GePS3m02U2qc?e=hbKSPv&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) · [Entrevista con paciente 2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412316_upc_edu_pe/IQD6mGtFEBafTaZT7Q5ZX12EAbvGxgIXGwXhcFjE-6b_M28?e=dMU3CO) · [Entrevista con psicólogo](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202412316_upc_edu_pe/IQClWdqv9OTiQ6dOEOswVP-7AXtEk0W3Cf5EhZ-M9kNt5sQ?e=nveo8G) |
+| About-the-Product (AV2) | [Ver video](https://mindclusterupc.github.io/SafeDiary_Landing_Page/#about-product) |
+| About-the-Team (AV2) | [Ver video](https://mindclusterupc.github.io/SafeDiary_Landing_Page/#about-team) |
 
 ## Anexo D. Videos de exposiciones
 
